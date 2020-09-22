@@ -13,6 +13,8 @@ GitHub ID | Role | Projects
 
 ## Office hours
 
-The CNCF tech docs team holds office hours on the fourth Wednesday of every month at 10am Pacific time. The first office hours date is [30 September 2020](office-hours/2020-09-30.md).
+The CNCF tech docs team holds office hours on the [last Wednesday of every month at 10am Pacific time](https://www.cncf.io/calendar/) (1700 UTC). The first office hours date is 30 September 2020.
 
-You can read the notes for a particular date in the [office hours](office-hours/) folder.
+## Meeting notes
+
+We store ongoing meeting notes in a [Google doc](https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/). 
