@@ -1,8 +1,8 @@
-# Technical documentation office hours
+# CNCF TechDocs office hours
 
 This repository holds team information and meeting notes for tech docs office hours.
 
-## CNCF tech doc team
+## CNCF TechDocs team
 
 GitHub ID | Role | Projects
 ---|---|---
