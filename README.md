@@ -4,12 +4,12 @@ This repository holds team information and meeting notes for tech docs office ho
 
 ## CNCF TechDocs team
 
-GitHub ID | Role | Projects
+GitHub ID | Role
 ---|---|---
-@zacharysarah | Lead technical writer | Kubernetes, CNCF Sandbox
-@celestehorgan | Senior technical writer | Kubernetes, CNCF Sandbox
-@pchalin | Senior technical writer | gRPC
-@hackabletype | Docs advocate | CNCF Sandbox
+@zacharysarah | Lead technical writer
+@celestehorgan | Senior technical writer
+@pchalin | Senior technical writer
+@hackabletype | Dev advocate + tech writing
 
 ## Office hours
 
