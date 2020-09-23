@@ -5,7 +5,7 @@ This repository holds team information and meeting notes for tech docs office ho
 ## CNCF TechDocs team
 
 GitHub ID | Role
----|---|---
+---|---
 @zacharysarah | Lead technical writer
 @celestehorgan | Senior technical writer
 @pchalin | Senior technical writer
