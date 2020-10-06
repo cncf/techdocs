@@ -9,7 +9,7 @@ GitHub ID | Role
 @zacharysarah | Lead technical writer
 @celestehorgan | Senior technical writer
 @pchalin | Senior technical writer
-@hackabletype | Dev advocate + tech writing
+@nate-double-u | Dev advocate + tech writing
 
 ## Office hours
 
