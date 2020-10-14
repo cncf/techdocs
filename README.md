@@ -6,10 +6,10 @@ This repository holds team information and meeting notes for tech docs office ho
 
 GitHub ID | Role
 ---|---
-@zacharysarah | Lead technical writer
-@celestehorgan | Senior technical writer
-@pchalin | Senior technical writer
-@hackabletype | Dev advocate + tech writing
+[@zacharysarah](https://github.com/zacharysarah) | Lead technical writer
+[@celestehorgan](https://github.com/celestehorgan) | Senior technical writer
+[@chalin](https://github.com/chalin) | Senior technical writer
+[@nate-double-u](https://github.com/nate-double-u) | Dev advocate + tech writing
 
 ## Office hours
 
