@@ -72,21 +72,6 @@ Examples of poorly scoped projects:
 
 **What we need from you:** A ‘point person’ or maintainer knowledgeable in the area they’re being asked to work on to ask questions to be available 1-5 hours/week for the duration of the project. 
 
-
-## Contractor funding 
-
-**What it is:** The CNCF hires a contractor for either web design/development work or a contract technical writer to do intensive work on your project.
-
-It’s a good idea to ask for a Docs assessment first (even if you’ve had one in the past) and come up with a project plan based on that.
-
-**Prerequisites:** A completed documentation assessment which outlines the need for contractor funding.
-
-**Goals:** Help your project accomplish a well-scoped but large/extra-large project that might take one or more quarters to accomplish, but would be difficult to do without a dedicated resource.
-
-**What we need from you:** A well-scoped draft project proposal when you make a formal request. Bear in mind that this project proposal will convert to the statement of work for a contractor and plan accordingly. 
-
-> Note: All contractor funding is subject to approval by the CNCF, and availability is not guaranteed. 
-
 ## Longer technical writer engagements
 
 **What it is:** A CNCF technical writer embeds with your project for 3-6 months and works on it full-time.
