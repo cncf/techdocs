@@ -9,6 +9,7 @@ GitHub ID | Role
 [@celestehorgan](https://github.com/celestehorgan) | Senior technical writer
 [@chalin](https://github.com/chalin) | Senior technical writer
 [@nate-double-u](https://github.com/nate-double-u) | Dev advocate + tech writing
+[@kapunahelewong](https://github.com/kapunahelewong) | Dev advocate
 
 ## Office hours
 
