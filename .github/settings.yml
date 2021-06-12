@@ -1,0 +1,131 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+repository:
+  # See https://developer.github.com/v3/repos/#edit for all available settings.
+
+  # The name of the repository. Changing this will rename the repository
+  name: techdocs
+
+  # A short description of the repository that will show up on GitHub
+  description: CNCF TechDocs Team 
+
+  # A URL with more information about the repository
+  homepage: https://www.cncf.io
+
+  # A comma-separated list of topics to set on the repository
+  topics: documentation, cncf
+
+  # Either `true` to make the repository private, or `false` to make it public.
+  private: false
+
+  # Either `true` to enable issues for this repository, `false` to disable them.
+  has_issues: true
+
+  # Either `true` to enable projects for this repository, or `false` to disable them.
+  # If projects are disabled for the organization, passing `true` will cause an API error.
+  has_projects: true
+
+  # Either `true` to enable the wiki for this repository, `false` to disable it.
+  has_wiki: false
+
+  # Either `true` to enable downloads for this repository, `false` to disable them.
+  has_downloads: false
+
+  # Updates the default branch for this repository.
+  default_branch: main
+
+  # Either `true` to allow squash-merging pull requests, or `false` to prevent
+  # squash-merging.
+  allow_squash_merge: true
+
+  # Either `true` to allow merging pull requests with a merge commit, or `false`
+  # to prevent merging pull requests with merge commits.
+  allow_merge_commit: true
+
+  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
+  # rebase-merging.
+  allow_rebase_merge: true
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+  - name: p0-critical
+    color: B60205
+  - name: p1-high
+    color: D93F0B
+  - name: p2-medium
+    color: FBCA04
+  - name: p3-low
+    color: FEF2C0
+  - name: e0-minutes
+    description: "Effort: < 60 min"
+    color: e6ccb3
+  - name: e1-hours
+    description: "Effort: < 8 hrs"
+    color: d9b38c
+  - name: e2-days
+    description: "Effort: < 5 days"
+    color: cc9966
+  - name: e3-weeks
+    description: "Effort: < 4 weeks"
+    color: bf8040
+  - name: e4-months
+    description: "Effort: 1+ months"
+    color: 996633
+  # Default new repo labels
+  - name: bug
+    description: "Something isn't working"
+    color: d73a4a
+  - name: documentation
+    description: Improvements or additions to documentation
+    color: 0075ca
+  - name: duplicate
+    description: This issue or pull request already exists
+    color: cfd3d7
+  - name: enhancement
+    description: New feature or request
+    color: a2eeef
+  - name: good first issue
+    description: Good for newcomers
+    color: 7057ff
+  - name: help wanted
+    description: Extra attention is needed
+    color: 008672
+  - name: invalid
+    description: "This doesn't seem right"
+    color: e4e669
+  - name: question
+    description: Further information is requested
+    color: d876e3
+  - name: wontfix
+    description: This will not be worked on
+    color: ffffff
+
+# Collaborators: give specific users access to this repository.
+# See https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator for available options
+collaborators:
+    # Note: Only valid on organization-owned repositories.
+    # The permission to grant the collaborator. Can be one of:
+    # * `pull` - can pull, but not push to or administer this repository.
+    # * `push` - can pull and push, but not administer this repository.
+    # * `admin` - can pull, push and administer this repository.
+    # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
+    # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
+
+  # Administrators
+  - username: amye
+    permission: admin
+  - username: caniszczyk
+    permission: admin
+
+  # Maintainers
+  - username: celestehorgan
+    permission: maintain
+  - username: chalin
+    permission: maintain
+  - username: idvoretskyi
+    permission: maintain
+  - username: kapunahelewong
+    permission: maintain
+  - username: nate-double-u
+    permission: maintain
+
