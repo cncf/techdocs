@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Prepared by: Celeste Horgan (@celestehorgan)
+Prepared by: Celeste Horgan ([@celestehorgan](https://github.com/celestehorgan))
 Date: March 2021
 
 This is an assessment of your project documentation and website (if present), prepared for you and your project by the CNCF techdocs team.
@@ -12,7 +12,7 @@ This document aims to:
 - Measure existing documentation quality against the CNCF’s standards
 - Recommend specific and general improvements
 - Provide examples of great documentation as reference 
-Identify key areas which will net the largest improvement if addressed 
+- Identify key areas which will net the largest improvement if addressed 
 
 ## How this document works
 
@@ -37,9 +37,9 @@ Within each section you receive a rating on different criteria. The full definit
 ### Comments
 
 - **Information Architecture**: 
-    - Doucmentation is feature complete!
-    - A clear "About" or "What is Countour?" page is missing. It partially exists on (Architecture)[https://projectcontour.io/docs/v1.13.1/architecture/] and (Philosophy)[https://projectcontour.io/resources/philosophy/], but it's hard to navigate for a new user.
-    - Task and concept documentation for indivdual features (configurations and deployment options) are both feature complete. 
+    - Documentation is feature complete!
+    - A clear "About" or "What is Contour?" page is missing. It partially exists on (Architecture)[https://projectcontour.io/docs/v1.13.1/architecture/] and (Philosophy)[https://projectcontour.io/resources/philosophy/], but it's hard to navigate for a new user.
+    - Task and concept documentation for individual features (configurations and deployment options) are both feature complete. 
         - Because documentation for this project involves long examples, it might be useful to have a reference table of different config options and the expected data types for each value. 
     - There's lots of great examples for different configuration and deployment options, but there's no clear "happy path" through the content. I'm a new user and I've decided I want to use Contour. What's considered a "basic" Contour setup and how can I get there?
     - Your API reference looks great, but some internal navigation on the reference page (hashlinks and a submenu) would be helpful.
@@ -47,7 +47,7 @@ Within each section you receive a rating on different criteria. The full definit
     - The only place troubleshooting is mentioned is (in the getting started guide)[https://projectcontour.io/getting-started/#troubleshooting]. It's worth emphasizing this elsewhere (i.e. a page in the docs or a mention on the docs landing page). This will help as the project grows and people start using GitHub as a support portal :) 
 
 - **New user content**:
-    - You have a great, clearly labeled [Getting Started](https://projectcontour.io/getting-started/) page, which is awesome! However the getting started guide is fairly high level and doesn't answer some of the following questions:
+    - You have a great, clearly labelled [Getting Started](https://projectcontour.io/getting-started/) page, which is awesome! However the getting started guide is fairly high level and doesn't answer some of the following questions:
         - What else do I need aside from Contour (i.e. the expectation is that the cluster is running Envoy as well)
         - What's the next doc I should read _after_ this to understand Contour and how to customize it for my use case? 
          
@@ -83,7 +83,7 @@ Within each section you receive a rating on different criteria. The full definit
     - **About Contour**: As mentioned above, working with a technical writer to revise/move some of the content to create a clearer "What is Contour?" section for beginners would be useful.
 
 - **Content creation processes**: 
-    - Docment your content creation processes, answering the questions outlined above. This is a great first issue for a new contributor!
+    - Document your content creation processes, answering the questions outlined above. This is a great first issue for a new contributor!
 
 
 ## Contributor documentation 
@@ -98,9 +98,9 @@ Within each section you receive a rating on different criteria. The full definit
 
 ### Comments
 
-On the whole, Project Contour does an excellent job of documenting things for new contributors and making the process as smooth as possible. No major feedback in this area, but some minor suggestions to imrpove an already good process.
+On the whole, Project Contour does an excellent job of documenting things for new contributors and making the process as smooth as possible. No major feedback in this area, but some minor suggestions to improve an already good process.
 
-Project governance is clearly documented in the communtiy repo, new contributor documentation is clearly signposted on the website, in the docs section of the website, and in the repo. Great job team!
+Project governance is clearly documented in the community repo, new contributor documentation is clearly signposted on the website, in the docs section of the website, and in the repo. Great job team!
 
 - This is another area where a Docs+Code monorepo might prove difficult to maintain. Because docs issues are interspersed with code issues, it's easy for it to look like there's no code issues.
 
@@ -127,14 +127,14 @@ Project governance is clearly documented in the communtiy repo, new contributor 
 - **Case studies/social proof**: Project Contour's [resources page](https://projectcontour.io/resources/) lists a number of great talks given on the project and shows that it's an active member of the cloud native community. While ideally we would see a logo wall of users or case studies, for a project of contour's size this is a great addition to the site.
 
 - **Maitenence planning**: 
-    - **Monorepos**: Having a docs+code monorepo is risky in the long term, as it couples all docs builds with code builds and vice versa. If docs CI fails because Netlify is temporarily down, for example, this means that all your code builds can potentially fail as well. Coupling docs in a repository with code can also make a code repo's size expand expoentially, especially as projects pick up steam, write more blog posts (with images), and add other multimedia.
+    - **Monorepos**: Having a docs+code monorepo is risky in the long term, as it couples all docs builds with code builds and vice versa. If docs CI fails because Netlify is temporarily down, for example, this means that all your code builds can potentially fail as well. Coupling docs in a repository with code can also make a code repo's size expand exponentially, especially as projects pick up steam, write more blog posts (with images), and add other multimedia.
 
 ### Recommendations
 
 - **Branding and design**: one extremely small styling suggestion which would make a great first issue:
-    - for `<h2>` elements on documentation pages, change the margin from `margin-bottom: 2rem` to `margin-top: 1rem; margin-bottom: 1rem` or (preferred) `margin-top: 1.5rem; margin-bottom: 0.5rem;`. In general it's better to have padding above an h2 rather than below it, as this helps seperate each section of a page.
+    - for `<h2>` elements on documentation pages, change the margin from `margin-bottom: 2rem` to `margin-top: 1rem; margin-bottom: 1rem` or (preferred) `margin-top: 1.5rem; margin-bottom: 0.5rem;`. In general it's better to have padding above an h2 rather than below it, as this helps separate each section of a page.
 
-- **Maitenence planning**: Unless you have very good reasons for staying in a docs+code monorepo, we strongly suggest migrating documentation to its own repository and maintaining it seperately.
+- **Maitenence planning**: Unless you have very good reasons for staying in a docs+code monorepo, we strongly suggest migrating documentation to its own repository and maintaining it separately.
 
 
 ## Final Recommendations
@@ -187,7 +187,7 @@ Docs+Code combined repositories are a long-term risk. We strongly recommend deco
 
 1. Figure out any code-related dependencies, i.e. API documentation that might be autogenerated, and figure out how to decouple this.
 
-2. Create a seperate documentation repository and move the Netlify configuration & docs code into it. 
+2. Create a separate documentation repository and move the Netlify configuration & docs code into it. 
 
-3. Develop a maintainers list/maitenence plan for the documentation and its repository. 
+3. Develop a maintainers list/maintenance plan for the documentation and its repository. 
 
