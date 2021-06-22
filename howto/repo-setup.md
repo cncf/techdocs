@@ -14,14 +14,13 @@ For more information:
 
 CLA/DCO should be set up for a project as a part of their project onboarding.
 
-## Licence files 
+## License files 
 
-Unless otherwise specified, documentation for CNCF projects is licenced under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Code is licenced under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+Unless otherwise specified, documentation for CNCF projects is licensed under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/). Code is licensed under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-Most CNCF documentation repositories are a mix of code (website code) and documentation itself, so they need two licence files.
+Most CNCF documentation repositories are a mix of code (website code) and documentation itself, so they need two license files.
 
 For documentation this means you must: 
-
 
 1. Add copyright notices for both the code and the docs to the repository's `README` and the website's footer
 
