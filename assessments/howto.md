@@ -26,7 +26,8 @@ The aim of a documentation assessment is to:
 ## Assessment criteria and examples 
 
 See [Assessment definitions and reference examples](criteria.md).
-Doing an assessment
+
+**Doing an assessment**
 
 When doing an assessment:
 
