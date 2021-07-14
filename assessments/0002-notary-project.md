@@ -76,7 +76,7 @@ The notaryproject.dev site should primarily focus on the V2 work, but V1 needs t
 - V1 content seems quite good, but looks like it was developed for a site that no longer uses it.
 - For MVP, I'd suggest focusing on V2 content, and linking out to the existing V1 documentation in the location that is currently rather than incorporating it right off the bat.
 
-Eventually I'd expect that V1 would be moved to the Notary Project org, but that is a project level consideration. Even if the whole repo doesn't get moved, there may be value in moving the docs out of TUF's notary repo and into the notaryproject/notaryproject.dev repo.
+We recommend moving any relevant version 1 content to the notary project org, relieving your users of the need to bounce between two repositories to find information.
 
 ## Contributor documentation 
 
@@ -172,5 +172,4 @@ Let's design an Information Architecture that can grow with the project and buil
 I see no issue with the CNCF working with the Notary Project maintainers to build a website that will serve their needs as the project grows.
 
 https://github.com/notaryproject/notaryproject.dev
-
 
