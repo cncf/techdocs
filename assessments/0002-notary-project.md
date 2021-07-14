@@ -117,7 +117,7 @@ _Provide comments for each rating above, 1-2 sentences max, bullet point list_
 Most of the issues in this section are a function of not having a website yet, and the project still being in a building phase.
 - As the website build process starts, put together a skeleton IA that can be filled in as the project grows.
 
-Regarding beginner friendliness, as we move through the project, we should consider processes/documents for:
+Regarding beginner friendliness, consider processes/documents for:
 * Triaging docs issues
 * Clearly marking a way for new contributors to make code or documentation contributions (i.e. a “good first issue” label), and define what makes a good first issue
 * Maintaining issues for staleness
