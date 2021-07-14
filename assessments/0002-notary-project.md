@@ -115,7 +115,7 @@ _Provide comments for each rating above, 1-2 sentences max, bullet point list_
 ### Recommendations
 
 Most of the issues in this section are a function of not having a website yet, and the project still being in a building phase.
-- As we go through the site build project, we should put together a skeleton IA that can be filled in as the project grows.
+- As the website build process starts, put together a skeleton IA that can be filled in as the project grows.
 
 Regarding beginner friendliness, as we move through the project, we should consider processes/documents for:
 * Triaging docs issues
@@ -172,4 +172,3 @@ Let's design an Information Architecture that can grow with the project and buil
 I see no issue with the CNCF working with the Notary Project maintainers to build a website that will serve their needs as the project grows.
 
 https://github.com/notaryproject/notaryproject.dev
-
