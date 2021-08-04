@@ -190,6 +190,6 @@ We recommend reorganizing your content in the following way:
 - Remove any references to Docker (the original home of  the documentation), for example "the Docker Notary documentation".
 - Even if the V1 Notary repo isn't moved, the website MVP should link to V1 notary where it is now, with no changes.
 - Docs+Code combined repositories are a long-term risk. We strongly recommend decoupling these into their own repositories
-   - As the website is being built, we recommend the existing V2 documentation be moved out of the https://github.com/notaryproject/notaryproject repo, and into the new documentation repository: https://github.com/notaryproject/notaryproject.dev
+   - As you build the website, move the existing v2 documentation from https://github.com/notaryproject/notaryproject to https://github.com/notaryproject/notaryproject.dev
       - Include the Notary v2 CLI prototype documentation (https://github.com/notaryproject/nv2) in this migration
    - After building the website MVP, migrate all relevant documentation from v1 to the website/documentation repository.
