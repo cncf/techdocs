@@ -75,13 +75,13 @@ Normally, a **website** section would also be a part of a document assessment, b
 
 #### Content maintainability
 
-- Regarding searchability, as the documentation is all in GitHub currently, it is searchable; however, as a part of setting up a website, we recommend using a tool like Google, Algolia, or Lunr to provide search functionality. 
+- As the documentation is in GitHub it is searchable. When setting up a website, we recommend using Google, Algolia, or Lunr to provide search functionality. 
   
 - Is the Notary Project planning on localization/internationalization? If so, we recommend starting the site with a directory structure which supports localization (Hugo supports this very well out of the box).
 
-- Regarding versioning, does V1 lead directly to V2?
-   - If not, then V1 and V2 should be brought in as separate document sets, and V2 should be set up with a versioning process (allowing V1 to exist as a sort of archive).
-   - If so, then V1 can act as a base for the site and no separation of versions need be applied.
+- Is any of the content from version 1 relevant to version 2? 
+  - If so, import v1 into the site, and "version" by copying the content into a new directory for v2 and updating only what needs to change or be added.
+  - If not, upload v1 and v2 into the site as separate document sets. 
 
 #### Content creation processes
 
@@ -98,10 +98,10 @@ Normally, a **website** section would also be a part of a document assessment, b
 #### Information Architecture
 
 The assumption is that V2 is the primary project moving forward, and that a Minimum Viable Product (MVP) for a website/documentation will focus on Notary V2 users.
-- Bring the nv2 cli prototype documentation into the main documentation when conosolidating the content on the website.
-- V1 Docs will need to be reworked once an information architecture (IA) is setup for the new site. The new site IA can likely be informed by the existing V1 docs.
+- Bring the Notary v2 CLI prototype documentation into the main documentation when consolidating the content on the website.
+- Rework the v1 Docs  once an information architecture (IA) is set up for the new site. Set up the new site IA based on the structure of the v1 docs unless an alternative is proposed.
 
-The [Service Mesh Interface website](https://smi-spec.io/) handles its specification tab very well -- linking directly to the relevant markdown folder in GitHub, allowing website users to find the specification work where it is happening, and giving new users an opportunity to participate.
+- Separate specifications from user-centered documentation. For example, how [Service Mesh Interface website](https://smi-spec.io/) handles its specification.
 
 
 ## Contributor documentation 
@@ -120,12 +120,12 @@ Criteria
 
 ### Comments & recommendations
 
-- Most of the issues in this section are a function of not having a website yet, and the project still being in a building phase.
+- Most of the issues in this section are a function of not having a website yet.
   - As the website build process starts, put together a skeleton IA that can be filled in as the project grows.
 
-- There are documented community communication methods, but it could be collected and expanded during the site development process. Prometheus has a good example of a community page: https://prometheus.io/community/. 
+- Communication methods are documented but could be further centralized and expanded during the site development process, with an end result comparable to https://prometheus.io/community/. 
 
-- Regarding beginner friendliness, consider processes/documents for:
+- There is no documentation for:
    - Triaging docs issues
    - Clearly marking a way for new contributors to make code or documentation contributions (i.e. a “good first issue” label), and define what makes a good first issue
    - Set up a process for maintaining/pruning stale issues
@@ -152,7 +152,7 @@ _Note_: [Notary Project branding artwork](https://github.com/cncf/artwork/tree/m
 
 ### Information Architecture
 
-The content to be written could have the following structure (as a start - modifications will need to be made as development continues):
+We recommend reorganizing your content in the following way: 
 
 **Site structure**
 
@@ -175,7 +175,7 @@ The content to be written could have the following structure (as a start - modif
    - Getting Started
       - This section to be planned with the Notary Maintainers team
 
-**Topnav**
+**Top nav**
 
 - Docs/Specification (Specification initially, then Docs as development progresses)
 - Version 1 Docs (https://github.com/theupdateframework/notary/tree/master/docs initially, then /docs/v1/(latest?))
@@ -186,10 +186,10 @@ The content to be written could have the following structure (as a start - modif
 
 ### Moving and consolidating existing documentation
 
-- We recommend that the V1 Notary Project that is currently housed in the [The Update Framework](https://github.com/theupdateframework/notary/) GitHub organization be moved into the [Notary Project](https://github.com/notaryproject) GitHub organization.
-- The V1 documentation makes reference to Docker (which was the original home of the documentation). As the V1 docs are moved from their original location, references to things like "the Docker Notary documenation" should be removed.
+- We recommend moving the v1 Notary Project project from the [The Update Framework](https://github.com/theupdateframework/notary/) GitHub organization to the [Notary Project](https://github.com/notaryproject) GitHub organization.
+- Remove any references to Docker (the original home of  the documentation), for example "the Docker Notary documentation".
 - Even if the V1 Notary repo isn't moved, the website MVP should link to V1 notary where it is now, with no changes.
 - Docs+Code combined repositories are a long-term risk. We strongly recommend decoupling these into their own repositories
    - As the website is being built, we recommend the existing V2 documentation be moved out of the https://github.com/notaryproject/notaryproject repo, and into the new documentation repository: https://github.com/notaryproject/notaryproject.dev
-      - Include the nv2 cli prototype documentation (https://github.com/notaryproject/nv2) in this migration
-   - Once the website MVP is completed, and regardless if the V1 Notary Project repo has been moved, all relevant docs from V1 should be migrated into the website/documentation repo
+      - Include the Notary v2 CLI prototype documentation (https://github.com/notaryproject/nv2) in this migration
+   - After building the website MVP, migrate all relevant documentation from v1 to the website/documentation repository.
