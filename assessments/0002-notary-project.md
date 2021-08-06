@@ -53,17 +53,17 @@ Normally, a **website** section would also be a part of a document assessment, b
 - The [V1 Notary Overview](https://github.com/theupdateframework/notary#overview) is reasonable and explanatory.
 - The [Notary V2 Overview](https://github.com/notaryproject/notaryproject#notary-v2-overview) provides a good explanation of the V2 project, but which is aimed at the specification writers/developers.
 
-- Is the documentation feature complete? (i.e., each product feature is documented)
+- Is the documentation feature complete, as in each product feature is documented?
    - As the project is in ongoing development, not every feature is completed and so there are some holes in the documentation.
    - The https://github.com/notaryproject/nv2 repository contains the nv2 prototype cli as well as the documentation about how to use it. Again, since the project is in development it seems like there are some holes. 
 
 - Are there step-by-step instructions (tasks, tutorials) documented for features?
-   - Since V2's documentation is so conceptual at this point (consisting mostly of specification), it may be best to leave it as is -- linking to it directly during the development process, and planning documentation along side the development of the system as a whole.
+   - Since V2's documentation is so conceptual at this point (consisting mostly of specification), it may be best to leave it as is &mdash; linking to it directly during the development process, and planning documentation along side the development of the system as a whole.
 
-- Is the “happy path”/most common use case documented.
-   - The V1 getting started guide is very good, will V2 be able to draw from it?
+- Is the “happy path”/most common use case documented?
+   - The V1 Getting Started Guide is very good. Will V2 be able to draw from it?
 
-- If the documentation does not suffice, is there a clear escalation path for users needing more help? (FAQ, Troubleshooting)
+- If the documentation does not suffice, is there a clear escalation path for users needing more help, such as an FAQ or Troubleshooting section?
    - This is an area for improvement on both V1 and V2 docs. Potentially consider reorganizing the whole docset with users in mind: dividing the content in a concepts, tasks, and tutorials model. 
 
 #### New user content
