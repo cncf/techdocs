@@ -55,7 +55,7 @@ Normally, a **website** section would also be a part of a document assessment, b
 
 - Is the documentation feature complete, as in each product feature is documented?
    - As the project is in ongoing development, not every feature is completed and so there are some holes in the documentation.
-   - The https://github.com/notaryproject/nv2 repository contains the nv2 prototype cli as well as the documentation about how to use it. Again, since the project is in development it seems like there are some holes. 
+   - The [https://github.com/notaryproject/nv2](https://github.com/notaryproject/nv2) repository contains the nv2 prototype cli as well as the documentation about how to use it. Again, since the project is in development it seems like there are some holes. 
 
 - Are there step-by-step instructions (tasks, tutorials) documented for features?
    - Since V2's documentation is so conceptual at this point (consisting mostly of specification), it may be best to leave it as is &mdash; linking to it directly during the development process, and planning documentation along side the development of the system as a whole.
@@ -68,8 +68,8 @@ Normally, a **website** section would also be a part of a document assessment, b
 
 #### New user content
 
-- Getting Started Guide is clearly labelled: https://github.com/theupdateframework/notary#getting-started-with-the-notary-cli though notably only in v1 of their docs, not v2. How does one get started with v2?
-- The v2 overview has getting started/CLI steps for an entirely different set of functions: https://github.com/notaryproject/notaryproject#notary-v2-overview. Are these in addition to or in replacement of the v1 getting started steps?
+- Getting Started Guide is clearly labelled: [https://github.com/theupdateframework/notary#getting-started-with-the-notary-cli](https://github.com/theupdateframework/notary#getting-started-with-the-notary-cli) though notably only in v1 of their docs, not v2. How does one get started with v2?
+- The v2 overview has getting started/CLI steps for an entirely different set of functions: [https://github.com/notaryproject/notaryproject#notary-v2-overview](https://github.com/notaryproject/notaryproject#notary-v2-overview). Are these in addition to or in replacement of the v1 getting started steps?
 - Where do users go after the getting started steps? Is there anything else about the tool they need to understand?
 - Sample code looks great!
 
@@ -79,7 +79,7 @@ Normally, a **website** section would also be a part of a document assessment, b
   
 - Is the Notary Project planning on localization/internationalization? If so, we recommend starting the site with a directory structure which supports localization (Hugo supports this very well out of the box).
 
-- Is any of the content from version 1 relevant to version 2? 
+- Is any of the content from v1 relevant to v2? 
   - If so, import v1 into the site, and "version" by copying the content into a new directory for v2 and updating only what needs to change or be added.
   - If not, upload v1 and v2 into the site as separate document sets. 
 
