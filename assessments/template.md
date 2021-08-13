@@ -3,6 +3,7 @@
 Prepared by: `Name`
 Date: `Date`
 
+
 ## Introduction
 
 This document assesses the quality and completeness of a project's documentation and website (if present).
@@ -14,6 +15,7 @@ This document:
 - Provides examples of great documentation as reference 
 - Identifies key improvements with the largest return on investment
 
+
 ## How this document works
 
 The assessment is divided into three sections: 
@@ -24,15 +26,20 @@ The assessment is divided into three sections:
 
 Each section rates content based on different [criteria](criteria.md).
 
+
 ## Project documentation 
 
-
-| Criteria | 1 = (Is not present or requires significant work) | 2 | 3 = (is present, but needs work) | 4 | 5 = (is executed extremely well or no improvement required) |
-| ---                       | --- | --- | --- | --- | --- |
-| Information architecture  |     |     |     |     |     |
-| New user content          |     |     |     |     |     |
-| Content maintainability   |     |     |     |     |     |
+| Criteria                   | 1   | 2   | 3   | 4   | 5   |
+| ---                        | --- | --- | --- | --- | --- |
+| Information architecture   |     |     |     |     |     |
+| New user content           |     |     |     |     |     |
+| Content maintainability    |     |     |     |     |     |
 | Content creation processes |     |     |     |     |     |
+
+Scale: 
+- 1 = (Is not present or requires significant work)
+- 3 = (Is present, but needs work)
+- 5 = (Is executed extremely well or no improvement required)
 
 **Comments**
 
@@ -42,15 +49,20 @@ _Provide comments for each rating above, 1-2 sentences max, bullet point list_
 
 _Provide a list of recommendations to improve in this area_
 
+
 ## Contributor documentation 
 
+| Criteria                                  | 1   | 2   | 3   | 4   | 5   |
+| ---                                       | --- | --- | --- | --- | --- |
+| Communication methods documented          |     |     |     |     |     |
+| Beginner friendly issue backlog           |     |     |     |     |     |
+| “New contributor” getting started content |     |     |     |     |     |
+| Project governance documentation          |     |     |     |     |     |
 
-| Criteria | 1 = (Is not present or requires significant work) | 2 | 3 = (is present, but needs work) | 4 | 5 = (is executed extremely well or no improvement required) |
-| ---                       | --- | --- | --- | --- | --- |
-| Communication methods documented  |     |     |     |     |     |
-| Beginner friendly issue backlog         |     |     |     |     |     |
-| “New contributor” getting started content  |     |     |     |     |     |
-| Project governance documentation |     |     |     |     |     |
+Scale: 
+- 1 = (Is not present or requires significant work)
+- 3 = (Is present, but needs work)
+- 5 = (Is executed extremely well or no improvement required) |
 
 **Comments**
 
@@ -63,12 +75,16 @@ _Provide a list of recommendations to improve in this area_
 
 ## Website
 
-
-| Criteria | 1 = (Is not present or requires significant work) | 2 | 3 = (is present, but needs work) | 4 | 5 = (is executed extremely well or no improvement required) |
+| Criteria                  | 1   | 2   | 3   | 4   | 5   |
 | ---                       | --- | --- | --- | --- | --- |
-| Branding and design  |     |     |     |     |     |
+| Branding and design       |     |     |     |     |     |
 | Case studies/social proof |     |     |     |     |     |
-| Maintenance planning |     |     |     |     |     |
+| Maintenance planning      |     |     |     |     |     |
+
+Scale: 
+- 1 = (Is not present or requires significant work)
+- 3 = (Is present, but needs work)
+- 5 = (Is executed extremely well or no improvement required) |
 
 **Comments**
 
@@ -84,6 +100,4 @@ _Provide a list of recommendations to improve in this area_
 _From the recommendations above, lis the top 1-3 concerns for this particular project and expand on them in enough detail that you could either:_
     - _Pass the work off to a contractor or other member of the CNCF techdocs team_
     - _Write a GitHub issue for the project team and place it in the backlog and someone not involved in the docs assessment process could execute on it_
-
-
 
