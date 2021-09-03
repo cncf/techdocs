@@ -62,7 +62,7 @@ _Provide a list of recommendations to improve in this area_
 Scale: 
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
-- 5 = (Is executed extremely well or no improvement required) |
+- 5 = (Is executed extremely well or no improvement required)
 
 **Comments**
 
@@ -84,7 +84,7 @@ _Provide a list of recommendations to improve in this area_
 Scale: 
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
-- 5 = (Is executed extremely well or no improvement required) |
+- 5 = (Is executed extremely well or no improvement required)
 
 **Comments**
 
