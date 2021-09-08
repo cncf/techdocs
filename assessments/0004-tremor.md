@@ -33,6 +33,7 @@ Each section rates content based on different [criteria](criteria.md).
 | New user content          |     |  ✅   |     |     |     |
 | Content maintainability   |     |   ✅  |     |     |     |
 | Content creation processes |  ✅  |     |     |     |     |
+
 Scale: 
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
@@ -67,9 +68,9 @@ Scale:
     - The [scripts](https://github.com/tremor-rs/tremor-www-docs/tree/main/python_scripts) which generate certain pieces of documentation introduce fragility into the system: if the location of files, names of repos, etc. change then the documentation pipeline breaks. This also makes it hard for non-"technical" users to make changes to these pages, and to reorganize these pages if needed.
         - The automation benefits might be worth it however. 
     - Your [release process](https://github.com/tremor-rs/tremor-www-docs/blob/main/RELEASE_PROCESS.md) is documented, which is great to see!
-    - Your site is only partially serachable, with sections not within /docs inaccessible by search.
+    - Your site is only partially searchable, with sections not within /docs inaccessible by search.
     
-**Content creation processes:** There are no content creation processes documented and no CONTRIBUTING.md file for the main docs repository. Some things to think about:
+- **Content creation processes:** There are no content creation processes documented and no CONTRIBUTING.md file for the main docs repository. Some things to think about:
     - If I write documentation, who verifies that it's technically accurate? 
     - If I'm not a native English speaker, who can I ask for help with grammar and language review? 
     - If I'm a trained technical writer and want to rearrange, create new, or split existing topics, who do I tag in issues/on Slack for comment?
@@ -106,7 +107,6 @@ Scale:
         - [Architecture Overview](https://docs.tremor.rs/overview/) (note: you could break out each of the "Model" sections into their own subpages) 
         - [History](https://docs.tremor.rs/history/), and I would consider titling this "Release log" or something similar
         - [Understanding Data](https://www.tremor.rs/getting-started/codecs/)
-        - 
 
 - **Audit for colloquial/casual language, abbreviations, and other "basic" English:** 
     - This recommendation has less to do with casual language or abbreviations being _bad_, and more to do with the perception of professionalism for the project. 
@@ -129,6 +129,7 @@ Scale:
 | Beginner friendly issue backlog         |     |     |     |     |  ✅   |
 | “New contributor” getting started content  |     |     |     |   ✅  |     |
 | Project governance documentation |     |     |     |     |     |
+
 Scale: 
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
@@ -136,15 +137,15 @@ Scale:
 
 **Comments**
 
-**Communication methods documented:** [Contributing](https://docs.tremor.rs/Contributing/) documents these, but it would be useful to pull these up to the Community page
+- **Communication methods documented:** [Contributing](https://docs.tremor.rs/Contributing/) documents these, but it would be useful to pull these up to the Community page
 
-**Beginner friendly issue backlog:** You document your [GitHub best practices](https://docs.tremor.rs/Contributing/#pull-requests) and [issues for new users are tagged](https://github.com/tremor-rs/tremor-www-docs/issues?q=is%3Aissue+is%3Aclosed). Great work! 
+- **Beginner friendly issue backlog:** You document your [GitHub best practices](https://docs.tremor.rs/Contributing/#pull-requests) and [issues for new users are tagged](https://github.com/tremor-rs/tremor-www-docs/issues?q=is%3Aissue+is%3Aclosed). Great work! 
     - One thing to note is when tagging an issue [as a good first issue](https://github.com/tremor-rs/tremor-www-docs/issues/101), assume the reader knows nothing and must be hand-held through the entire process. [This issue](https://github.com/kubernetes/website/issues/28621) is a great example of the granularity needed by a first time contributor.
 
-**New contributor getting started content:** The [Community](https://www.tremor.rs/community/) page exists but doesn't provide much guidance for new users. How do I get involved? When do community meetings happen? Where do I find the team on Discord or Slack? 
+- **New contributor getting started content:** The [Community](https://www.tremor.rs/community/) page exists but doesn't provide much guidance for new users. How do I get involved? When do community meetings happen? Where do I find the team on Discord or Slack? 
     - As mentioned above, [Development](https://docs.tremor.rs/development/) and [Governance](https://docs.tremor.rs/CodeOfConduct/) are targeted at contributor users and should be under the community section.
 
-**Governance documentation:** Your [Project Governance](https://www.tremor.rs/governance/) is linked front and center, which I love! The only critique I have is that as a new user I am unlikely to click through to all of the links available. It would be lovely to distill these documents into something Tremor maintains at some point in the future.
+- **Governance documentation:** Your [Project Governance](https://www.tremor.rs/governance/) is linked front and center, which I love! The only critique I have is that as a new user I am unlikely to click through to all of the links available. It would be lovely to distill these documents into something Tremor maintains at some point in the future.
 
 **Recommendations**
 
@@ -164,6 +165,7 @@ Scale:
 | Branding and design  |     |     |     |   ✅  |     |
 | Case studies/social proof |  ✅    |     |     |     |     |
 | Maintenance planning |     |   ✅  |     |     |     |
+
 Scale: 
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
@@ -171,7 +173,7 @@ Scale:
 
 **Comments**
 
-**Branding and design:**
+- **Branding and design:**
     - On the whole, the Tremor docs site looks professional, if a little plain. 
     - Because of the way the site deploys (from different repositories via GitHub pages), navigation is disjointed: if you're in the RFCs, you don't have the full site's navigation available to you and clicking the logo takes you back to https://rfcs.tremor.rs, with similar behavior occurring in the docs. This is a bad user experience.
     - Tremor could do a bit more selling on its homepage: 
@@ -179,15 +181,14 @@ Scale:
         - Are there any known use cases you can talk about or use the logos of? 
         - Have you given any talks on Tremor, or is there other (particularly video) content you can showcase about the project?
 
-**Case studies/social proof**: None available. 
+- **Case studies/social proof**: None available. 
     - Case studies/talks/generally showing that other projects use Tremor is one of the most powerful ways to gain new users. People love real-world examples of a codebase in action.
     - Because Tremor was developed by Wayfair, we suggest documenting Wayfair's use as a "use case" or case study, and then adding a section on the website which allows people to submit their own use cases!
 
-**Maintenance planning:** In general, we recommend that projects keep their documentation all in one repository. Tremor's documentation currently deploys from https://github.com/tremor-rs/tremor-www-main, https://github.com/tremor-rs/tremor-rfcs, and https://github.com/tremor-rs/tremor-www-docs.
+- **Maintenance planning:** In general, we recommend that projects keep their documentation all in one repository. Tremor's documentation currently deploys from https://github.com/tremor-rs/tremor-www-main, https://github.com/tremor-rs/tremor-rfcs, and https://github.com/tremor-rs/tremor-www-docs.
     - It's confusing for contributors who don't know where to file issues, open pull requests, or whom to tag for reviews (and where). 
     - The easiest fix for this pain point is to deploy everything using  and Hugo. 
     - In general, we prefer sites to deploy via Netlify. 
-
 
 **Recommendations**
 
@@ -212,7 +213,7 @@ Scale:
     - Glossary
     - FAQ (moved from top level navigation)
 
-**Reorganize the top-level navigation of the site:**, once again, as mentioned previously: 
+**Reorganize the top-level navigation of the site:** once again, as mentioned previously: 
 
 - Getting Started 
 - Docs
