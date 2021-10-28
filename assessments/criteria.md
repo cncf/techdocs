@@ -140,7 +140,7 @@ Examples:
 
 Source files for _all website pages_ should reside in a single repo, ideally in
 the website repo itself, otherwise be brought into the website repo via [git
-submodules][]. This avoids having source files in two places,
+submodules][]. This avoids having source files in two places. If a project chooses to keep source files in multiple locations, they need a clearly documented strategy for managing these locations and new contributions. 
 
 [git submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
