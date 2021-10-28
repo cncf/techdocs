@@ -1,4 +1,4 @@
-# Assessment template 
+# Assessment template
 
 Prepared by: `Name`
 Date: `Date`
@@ -12,13 +12,13 @@ This document:
 
 - Measures existing documentation quality against the CNCF’s standards
 - Recommends specific and general improvements
-- Provides examples of great documentation as reference 
+- Provides examples of great documentation as reference
 - Identifies key improvements with the largest return on investment
 
 
 ## How this document works
 
-The assessment is divided into three sections: 
+The assessment is divided into three sections:
 
 - **Project documentation:** for end users of the project; aimed at people who intend to use it
 - **Contributor documentation:** for new and existing contributors to the project
@@ -27,7 +27,7 @@ The assessment is divided into three sections:
 Each section rates content based on different [criteria](criteria.md).
 
 
-## Project documentation 
+## Project documentation
 
 | Criteria                   | 1   | 2   | 3   | 4   | 5   |
 | ---                        | --- | --- | --- | --- | --- |
@@ -36,7 +36,7 @@ Each section rates content based on different [criteria](criteria.md).
 | Content maintainability    |     |     |     |     |     |
 | Content creation processes |     |     |     |     |     |
 
-Scale: 
+Scale:
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
@@ -50,7 +50,7 @@ _Provide comments for each rating above, 1-2 sentences max, bullet point list_
 _Provide a list of recommendations to improve in this area_
 
 
-## Contributor documentation 
+## Contributor documentation
 
 | Criteria                                  | 1   | 2   | 3   | 4   | 5   |
 | ---                                       | --- | --- | --- | --- | --- |
@@ -59,7 +59,7 @@ _Provide a list of recommendations to improve in this area_
 | “New contributor” getting started content |     |     |     |     |     |
 | Project governance documentation          |     |     |     |     |     |
 
-Scale: 
+Scale:
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
@@ -75,13 +75,17 @@ _Provide a list of recommendations to improve in this area_
 
 ## Website
 
-| Criteria                  | 1   | 2   | 3   | 4   | 5   |
-| ---                       | --- | --- | --- | --- | --- |
-| Branding and design       |     |     |     |     |     |
-| Case studies/social proof |     |     |     |     |     |
-| Maintenance planning      |     |     |     |     |     |
+| Criteria                     | 1   | 2   | 3   | 4   | 5   |
+| ---                          | --- | --- | --- | --- | --- |
+| Single-source for all files  |     |     |     |     |     |
+| Branding and design          |     |     |     |     |     |
+| Case studies/social proof    |     |     |     |     |     |
+| Maintenance planning         |     |     |     |     |     |
+| A11y plan & implementation   |     |     |     |     |     |
+| Mobile-first plan & impl.    |     |     |     |     |     |
+| HTTPS access & HTTP redirect |     |     |     |     |     |
 
-Scale: 
+Scale:
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
