@@ -138,10 +138,19 @@ Examples:
 
 ## Single-source requirement
 
-Source files for _all website pages_ should reside in a single repo, ideally in
-the website repo itself, otherwise be brought into the website repo via [git
-submodules][]. This avoids having source files in two places. If a project chooses to keep source files in multiple locations, they need a clearly documented strategy for managing these locations and new contributions. 
+Source files for _all website pages_ should reside in a _single_ repo.
+Otherwise, having source files in two places will confuse contributors (who
+won't know which file(s) to update) and you'll run the risk of losing updates
+&mdash; [as has happened already][otel-changes-lost].
 
+Ideally, all website files should be in the **website repo** itself.
+Alternatively, files should be brought into the website repo via [git
+submodules][].
+
+If a project chooses to keep source files in multiple repos, they need a clearly
+documented strategy for managing mirrored files and new contributions.
+
+[otel-changes-lost]: https://github.com/open-telemetry/opentelemetry.io/issues/673
 [git submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 ## Usability, accessibility and devices
