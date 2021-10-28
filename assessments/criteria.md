@@ -34,27 +34,27 @@ New users are the most avid users of documentation, and need content specificall
 
 Examples:
 
-* https://falco.org/docs/getting-started/ 
+* https://falco.org/docs/getting-started/
 
 
 ## Content maintainability & site mechanics
 
-As a project scales, concerns like localized (translated) content and versioning become large maintenance burdens, particularly if you don’t plan for them.  
+As a project scales, concerns like localized (translated) content and versioning become large maintenance burdens, particularly if you don’t plan for them.
 
 We evaluate on the following:
 
 * Is your documentation searchable?
 * Are you planning for localization/internationalization with regards to site directory structure? Is a localization framework present?
-* Do you have a clearly documented method for versioning your content? 
+* Do you have a clearly documented method for versioning your content?
 
- 
+
 Examples:
 
-* https://kubernetes.io/docs/ 
+* https://kubernetes.io/docs/
 
 ## Content creation processes
 
-Documentation is only as useful as it is accurate and well-maintained, and requires the same kind of review and approval processes as code. 
+Documentation is only as useful as it is accurate and well-maintained, and requires the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
@@ -66,17 +66,17 @@ We evaluate on the following:
 Examples:
 
 * https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly documented maintainers)
-* https://thanos.io/tip/contributing/how-to-contribute-to-docs.md/ 
+* https://thanos.io/tip/contributing/how-to-contribute-to-docs.md/
 
 
 ## Inclusive language
 
-Creating inclusive project communities is a key goal for all CNCF projects. 
+Creating inclusive project communities is a key goal for all CNCF projects.
 
 We evaluate on the following:
 
 * Are there any customer-facing utilities, endpoints, class names, or feature names that use non-recommended words as documented by the [Inclusive Naming Initiative](https://inclusivenaming.org) website?
-* Does the project use language like "simple", "easy", etc.? 
+* Does the project use language like "simple", "easy", etc.?
 
 # Contributor documentation
 
@@ -88,12 +88,12 @@ We evaluate on the following:
 
 * Is there a Slack/Discord/Discourse/etc. community and is it prominently linked from your website?
 * Is there a direct link to your GitHub organization/repository?
-* Are weekly/monthly project meetings documented? Is it clear how someone can join those meetings? 
-* Are mailing lists documented? 
+* Are weekly/monthly project meetings documented? Is it clear how someone can join those meetings?
+* Are mailing lists documented?
 
 Examples:
 
-* https://prometheus.io/community/ 
+* https://prometheus.io/community/
 
 ## Beginner friendly issue backlog
 
@@ -120,15 +120,15 @@ We evaluate on the following:
 
 Examples:
 
-* https://github.com/helm/community 
+* https://github.com/helm/community
 
 ## Project governance documentation
 
-One of the CNCF’s core project values is open governance. 
+One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-* Is project governance clearly documented? 
+* Is project governance clearly documented?
 
 Examples:
 
@@ -136,29 +136,71 @@ Examples:
 
 # Website
 
-## Branding 
+## Single-source requirement
 
-CNCF seeks to support enterprise-ready open source software. A key aspect of this is branding and marketing. 
+Source files for _all website pages_ should reside in a _single_ repo.
+Otherwise, having source files in two places will confuse contributors (who
+won't know which file(s) to update) and you'll run the risk of losing updates
+&mdash; [as has happened already][otel-changes-lost].
+
+Ideally, all website files should be in the **website repo** itself.
+Alternatively, files should be brought into the website repo via [git
+submodules][].
+
+If a project chooses to keep source files in multiple repos, they need a clearly
+documented strategy for managing mirrored files and new contributions.
+
+[otel-changes-lost]: https://github.com/open-telemetry/opentelemetry.io/issues/673
+[git submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+## Usability, accessibility and devices
+
+Most CNCF websites are accessed from mobile and other non-desktop devices at
+least 10-20% of the time. Planning for this early in your website's design will
+be much less effort than retrofitting a desktop-first design.
+
+* Is the website usable from mobile?
+* Are doc pages readable?
+* Are all / most website features accessible from mobile -- such as the top-nav,
+  site search and in-page table of contents?
+* Might a [mobile-first] design make sense for your project?
+
+[mobile-first]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
+
+Plan for suitable [accessibility][] measures for your website. For example:
+
+* Are color contrasts significant enough for color-impaired readers?
+* Are most website features usable using a keyboard only?
+* Does text-to-speech offer listeners a good experience?
+
+It is up to each project to set their own guidelines.
+
+[accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
+## Branding
+
+CNCF seeks to support enterprise-ready open source software. A key aspect of
+this is branding and marketing.
 
 We evaluate on the following:
 
-* Is there an easily recognizable brand for the project (logo + color scheme) clearly identifiable?
-* Is the brand used across the website consistently? 
+* Is there an easily recognizable brand for the project (logo + color scheme)
+  clearly identifiable?
+* Is the brand used across the website consistently?
 * Is the website’s typography clean and well-suited for reading?
 
 Examples:
 
-* https://helm.sh/ 
+* https://helm.sh/
 
 ## Case studies/social proof
 
-One of the best ways to advertise an open source project is to show other organizations using it. 
+One of the best ways to advertise an open source project is to show other organizations using it.
 
 We evaluate on the following:
 
 * Are there case studies available for the project and are they documented on the website?
 * Are there user testimonials available?
-* Is there an active project blog? 
+* Is there an active project blog?
 * Are there community talks for the project and are they present on the website?
 * Is there a logo wall of users/participating organizations?
 
@@ -174,11 +216,17 @@ Website maintenance is an important part of project success, especially when pro
 
 We evaluate on the following:
 
-* Is your website tooling well supported by the community (i.e., Hugo with the Docsy theme) or commonly used by CNCF projects (our recommended tech stack?) 
+* Is your website tooling well supported by the community (i.e., Hugo with the
+  Docsy theme) or commonly used by CNCF projects (our recommended tech stack?)
 * Are you actively cultivating website maintainers from within the community?
 * Are site build times reasonable?
 * Do site maintainers have adequate permissions?
 
 Examples:
 
-* http://kubernetes.io 
+* http://kubernetes.io
+
+## Other
+
+* Is your website accessible via HTTPS?
+* Does HTTP access, if any, redirect to HTTPS?
