@@ -1,8 +1,7 @@
 # Assessment template
 
-Prepared by: `Name`
-Date: `Date`
-
+Prepared by: \<name> ([@add-link-to-your-github-id](https://github.com/cncf/techdocs))<br>
+Date: 2021-mm-dd
 
 ## Introduction
 
