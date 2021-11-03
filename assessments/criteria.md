@@ -1,8 +1,8 @@
 # Assessment criteria and examples
 
-# Project documentation
+## Project documentation
 
-## Information architecture
+### Information architecture
 
 The overall structure (pages/subpages/sections/subsections) of your project documentation. We evaluate on the following:
 
@@ -21,7 +21,7 @@ Examples:
 * https://prometheus.io/docs/
 
 
-## New user content
+### New user content
 
 New users are the most avid users of documentation, and need content specifically for them. We evaluate on the following:
 
@@ -37,7 +37,7 @@ Examples:
 * https://falco.org/docs/getting-started/
 
 
-## Content maintainability & site mechanics
+### Content maintainability & site mechanics
 
 As a project scales, concerns like localized (translated) content and versioning become large maintenance burdens, particularly if you don’t plan for them.
 
@@ -52,7 +52,7 @@ Examples:
 
 * https://kubernetes.io/docs/
 
-## Content creation processes
+### Content creation processes
 
 Documentation is only as useful as it is accurate and well-maintained, and requires the same kind of review and approval processes as code.
 
@@ -68,8 +68,7 @@ Examples:
 * https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly documented maintainers)
 * https://thanos.io/tip/contributing/how-to-contribute-to-docs.md/
 
-
-## Inclusive language
+### Inclusive language
 
 Creating inclusive project communities is a key goal for all CNCF projects.
 
@@ -78,9 +77,9 @@ We evaluate on the following:
 * Are there any customer-facing utilities, endpoints, class names, or feature names that use non-recommended words as documented by the [Inclusive Naming Initiative](https://inclusivenaming.org) website?
 * Does the project use language like "simple", "easy", etc.?
 
-# Contributor documentation
+## Contributor documentation
 
-## Communication methods documented
+### Communication methods documented
 
 One of the easiest ways to attract new contributors is making sure they know how to reach you.
 
@@ -95,7 +94,7 @@ Examples:
 
 * https://prometheus.io/community/
 
-## Beginner friendly issue backlog
+### Beginner friendly issue backlog
 
 We evaluate on the following:
 
@@ -108,7 +107,7 @@ Examples:
 
 * https://github.com/opentracing/opentracing.io/issues (all of open tracing’s backlogs are well maintained!)
 
-## New contributor getting started content
+### New contributor getting started content
 
 Open source is complex and projects have many processes to manage that. Are processes easy to understand and written down so that new contributors can jump in easily?
 
@@ -122,7 +121,7 @@ Examples:
 
 * https://github.com/helm/community
 
-## Project governance documentation
+### Project governance documentation
 
 One of the CNCF’s core project values is open governance.
 
@@ -134,9 +133,9 @@ Examples:
 
 * Any graduated CNCF project
 
-# Website
+## Website
 
-## Single-source requirement
+### Single-source requirement
 
 Source files for _all website pages_ should reside in a _single_ repo.
 Otherwise, having source files in two places will confuse contributors (who
@@ -153,7 +152,7 @@ documented strategy for managing mirrored files and new contributions.
 [otel-changes-lost]: https://github.com/open-telemetry/opentelemetry.io/issues/673
 [git submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
-## Usability, accessibility and devices
+### Usability, accessibility and devices
 
 Most CNCF websites are accessed from mobile and other non-desktop devices at
 least 10-20% of the time. Planning for this early in your website's design will
@@ -176,7 +175,7 @@ Plan for suitable [accessibility][] measures for your website. For example:
 It is up to each project to set their own guidelines.
 
 [accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
-## Branding
+### Branding
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
@@ -192,7 +191,7 @@ Examples:
 
 * https://helm.sh/
 
-## Case studies/social proof
+### Case studies/social proof
 
 One of the best ways to advertise an open source project is to show other organizations using it.
 
@@ -210,7 +209,7 @@ Examples:
 * https://goharbor.io/ (logo wall)
 * https://blog.rook.io/ (blog)
 
-## Maintenance planning
+### Maintenance planning
 
 Website maintenance is an important part of project success, especially when project maintainers aren’t web developers.
 
@@ -226,7 +225,7 @@ Examples:
 
 * http://kubernetes.io
 
-## Other
+### Other
 
 * Is your website accessible via HTTPS?
 * Does HTTP access, if any, redirect to HTTPS?
