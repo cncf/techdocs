@@ -152,6 +152,51 @@ documented strategy for managing mirrored files and new contributions.
 [otel-changes-lost]: https://github.com/open-telemetry/opentelemetry.io/issues/673
 [git submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
+### Minimal website requirements
+
+Listed here are the _minimal_ website requirements for projects based on their
+[maturity level][]: sandbox, incubating, graduated and archived.
+
+Except for archived projects, requirements are cumulative through project
+maturity levels so, for example, incubating projects must satisfy the
+requirements for sandbox projects.
+
+- **Sandbox**
+  - [Website guidelines][]: majority of the guidelines are satisfied
+  - [Docs assessment][]: consider [submitting a request][service desk] for an
+    assessment as early as possible to avoid documentation and website rework.
+  - **Project documentation** may or may not be present -- it is acceptable at
+    this maturity level to link out to documentation that hasn't yet been
+    integrated into the website
+  - _Example_: website with a single homepage, without any documentation or, as
+    was mentioned above, linking out to an external (preexisting) source for
+    docs
+- **Incubating**
+  - [Website guidelines][]: all guidelines are satisfied.
+  - [Docs assessment][]: request an (re-)assessment through the CNCF [service
+    desk][]
+  - **Project documentation**:
+    - Stakeholders / personas are identified and their core needs (in terms of
+      docs) documented
+    - Hosted directly on the website (also see [Single-source requirement])
+    - Comprehensive, addressing most stakeholder needs
+- **Graduated**
+  - [Docs assessment][]: follow-through actions from any assessment are complete
+  - **Project documentation** fully addresses the needs of key stakeholders
+- **Archived**
+  - The website repo is in an [archived state][]
+  - The archived status of the project must be obvious to those visiting the
+    website, such as through the use of a prominent banner.
+  - If a successor project exists, link to it's website and/or migration
+    documentation.
+
+[archived state]: https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
+[docs assessment]: /assessments/howto.md
+[maturity level]: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
+[service desk]: https://servicedesk.cncf.io
+[single-source requirement]: #single-source-requirement
+[website guidelines]: /howto/website-guidelines-checklist.md
+
 ### Usability, accessibility and devices
 
 Most CNCF websites are accessed from mobile and other non-desktop devices at

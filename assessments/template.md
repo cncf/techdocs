@@ -74,15 +74,16 @@ _Provide a list of recommendations to improve in this area_
 
 ## Website
 
-| Criteria                     | 1   | 2   | 3   | 4   | 5   |
-| ---                          | --- | --- | --- | --- | --- |
-| Single-source for all files  |     |     |     |     |     |
-| Branding and design          |     |     |     |     |     |
-| Case studies/social proof    |     |     |     |     |     |
-| Maintenance planning         |     |     |     |     |     |
-| A11y plan & implementation   |     |     |     |     |     |
-| Mobile-first plan & impl.    |     |     |     |     |     |
-| HTTPS access & HTTP redirect |     |     |     |     |     |
+| Criteria                                    | 1   | 2   | 3   | 4   | 5   |
+| ---                                         | --- | --- | --- | --- | --- |
+| Single-source for all files                 |     |     |     |     |     |
+| Meets min website req. (for maturity level) |     |     |     |     |     |
+| Branding and design                         |     |     |     |     |     |
+| Case studies/social proof                   |     |     |     |     |     |
+| Maintenance planning                        |     |     |     |     |     |
+| A11y plan & implementation                  |     |     |     |     |     |
+| Mobile-first plan & impl.                   |     |     |     |     |     |
+| HTTPS access & HTTP redirect                |     |     |     |     |     |
 
 Scale:
 - 1 = (Is not present or requires significant work)
