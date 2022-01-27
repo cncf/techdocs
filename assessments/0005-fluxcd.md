@@ -1,7 +1,7 @@
 # Assessment template
 
-Prepared by: \Celeste Horgan ([@celestehorgan](https://github.com/cncf/techdocs))<br>
-Date: 2021-mm-dd
+Prepared by: Celeste Horgan ([@celestehorgan](https://github.com/cncf/techdocs))<br>
+Date: 2021-11-30
 
 ## Introduction
 
