@@ -118,8 +118,6 @@ collaborators:
     permission: admin
 
   # Maintainers
-  - username: celestehorgan
-    permission: maintain
   - username: chalin
     permission: maintain
   - username: idvoretskyi
