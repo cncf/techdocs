@@ -99,6 +99,8 @@ labels:
   - name: wontfix
     description: This will not be worked on
     color: ffffff
+  - name: Jira
+    description: This issue has a related Jira ticket
 
 # Collaborators: give specific users access to this repository.
 # See https://developer.github.com/v3/repos/collaborators/#add-user-as-a-collaborator for available options
