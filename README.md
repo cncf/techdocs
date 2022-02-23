@@ -7,7 +7,7 @@ This repository holds team information and meeting notes for tech docs office ho
 GitHub ID | Role
 ---|---
 [@chalin](https://github.com/chalin) | Senior technical writer
-[@nate-double-u](https://github.com/nate-double-u) | Dev advocate + tech writing
+[@nate-double-u](https://github.com/nate-double-u) | Developer advocate & technical writing
 
 ## Office hours
 
