@@ -56,7 +56,7 @@ We have a great, clearly labelled [Getting Started](https://gateway-api.sigs.k8s
 
 **Content maintainability**:
 
-Our documentation is searchable, which is great! Also, we have a clearly documented method for [versioning](https://gateway-api.sigs.k8s.io/references/releases/#versioning) our content.
+Our documentation is searchable, which is great!
 
 **Content creation processes**:
 
