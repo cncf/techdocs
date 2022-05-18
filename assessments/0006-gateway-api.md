@@ -69,7 +69,7 @@ The [Contributing Guide](https://gateway-api.sigs.k8s.io/contributing/devguide/)
 
 - The main task with information architecture is conceptualization and development as the documents are currently in different places. The following areas would establish a foundation:
 
-    –TODO: need to oragize the subsections–
+    –TODO: need to organize the subsections–
 
     **Update: prepared a miro board [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
 
