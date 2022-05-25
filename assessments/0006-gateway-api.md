@@ -69,16 +69,17 @@ The [Contributing Guide](https://gateway-api.sigs.k8s.io/contributing/devguide/)
 
 - The main task with information architecture is conceptualization and development as the documents are currently in different places. The following areas would establish a foundation:
 
-    –TODO: need to organize the subsections–
-
-    **Update: prepared a miro board [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
-
     * Introduction
     * Quick Start
     * Concepts
     * Tutorials
     * Reference
     * Contribute 
+
+- **Prepared a miro board: [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
+
+    ![information_architecture](/images/gapi_info_arch.png)
+
 
 - There are improvements we could make:
     * With the collection of guided, step-by-step instructions (tasks, hands-on tutorials) documented for features, it would be easy to learn and explore this project.
@@ -89,7 +90,7 @@ The [Contributing Guide](https://gateway-api.sigs.k8s.io/contributing/devguide/)
 - We need to add some information regarding “**How do we update the code for new versions?**”, and “**How do we update the documentation when a new version is released?**”. 
 
 - In short, we need to write up the process for versioning the documentation. \
-Reference: [https://cluster-api.sigs.k8s.io/contributing#versioning](https://cluster-api.sigs.k8s.io/contributing#versioning) \
+Reference: [https://cluster-api.sigs.k8s.io/contributing#versioning](https://cluster-api.sigs.k8s.io/contributing#versioning)
 
 
 **Content creation processes**: 
@@ -136,7 +137,7 @@ Project [governance](https://github.com/kubernetes/community/blob/master/governa
 
 **Beginner-friendly issue backlog**:
 
-Please ensure that the issue contains sufficient context and information about what exactly needs to be done so that a new contributor can pick it up with almost 0 barrier to entry. The guidelines for good-first-issues can be found [here](https://github.com/kubernetes/community/blob/master/contributors/guide/help-wanted.md#good-first-issue). \
+Please ensure that the issue contains sufficient context and information about what exactly needs to be done so that a new contributor can pick it up with almost 0 barrier to entry. The guidelines for good-first-issues can be found [here](https://github.com/kubernetes/community/blob/master/contributors/guide/help-wanted.md#good-first-issue).
 
 **“New contributor” getting started content**:
 
@@ -186,7 +187,7 @@ Having a docs+code monorepo is risky in the long term, as it couples all docs bu
 
 **A11y plan & implementation**:
 
-The website meets the basic a11y requirements. The doc pages are readable. It is quite suitable as most website features are usable using a keyboard only. \
+The website meets the basic a11y requirements. The doc pages are readable. It is quite suitable as most website features are usable using a keyboard only.
 
 **Mobile-first plan & impl.**:
 
@@ -202,7 +203,7 @@ The [website](https://gateway-api.sigs.k8s.io/) is accessible via HTTPS.
 **Branding and design**:
 
 * We can add a _Copyright_ notice present at bottom of the page. \
-Copyright should be to the project authors or to CNCF, not the origin company. For details, see [Copyright notices](https://github.com/cncf/foundation/blob/master/copyright-notices.md). \
+Copyright should be to the project authors or to CNCF, not the origin company. For details, see [Copyright notices](https://github.com/cncf/foundation/blob/master/copyright-notices.md).
 
 * CNCF Branding elements
     *  “We are a Cloud Native Computing Foundation project.” or “We are a Cloud Native Computing Foundation sandbox project.” are present (depending on status)
@@ -233,7 +234,7 @@ In addition to the suggestions above, I recommend an overall reorganization of t
 
 ### Revamping documentation for new users and new contributors
 
-Moving to Hugo is highly recommended, for content organization and also if you decide to localize (translate) your content, as it has localization support built-in. 
+Moving to [Docsy](https://www.docsy.dev/), a Hugo theme, is highly recommended, for content organization and also if you decide to localize (translate) your content, as it has localization support built-in. In addition, it provides a lot of functionality that we'd be looking for (and it's the theme that [kubernetes.io](https://kubernetes.io/) uses).
 
 We can use one of the plugins that allow us to keep old versions of the site/documentation. This will make doing a fully-versioned site like the main Kubernetes site much easier.
 
