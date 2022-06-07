@@ -161,8 +161,11 @@ version = "v1.19"
 githubbranch = "v1.19.4"
 docsbranch = "release-1.19"
 url = "https://v1-19.docs.kubernetes.io"
+
 ⋮
+
 ```
+
 Bannister et al. (2020, L180-L192)<sup>[1](#footnote1)</sup>
 
 ## Summary
