@@ -71,6 +71,9 @@ labels:
   - name: e4-months
     description: "Effort: 1+ months"
     color: 996633
+  - name: docs-assessment
+    description: "CNCF TechDocs Assessments"
+    color: c2e0c6
   # Default new repo labels
   - name: bug
     description: "Something isn't working"
