@@ -8,6 +8,7 @@ GitHub ID | Role
 ---|---
 [@chalin](https://github.com/chalin) | Senior technical writer
 [@nate-double-u](https://github.com/nate-double-u) | Developer advocate & technical writer
+[@thisisobate](https://github.com/thisisobate) | Developer advocate
 
 ## Office hours
 
