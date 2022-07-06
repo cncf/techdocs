@@ -84,6 +84,10 @@ _Provide a list of recommendations to improve in this area_
 | A11y plan & implementation                  |     |     |     |     |     |
 | Mobile-first plan & impl.                   |     |     |     |     |     |
 | HTTPS access & HTTP redirect                |     |     |     |     |     |
+| Google Analytics 4 for production only      |     |     |     |     |     |
+| Indexing allowed for production server only |     |     |     |     |     |
+| Intra-site / local search                   |     |     |     |     |     |
+| Account custodians are documented           |     |     |     |     |     |
 
 Scale:
 - 1 = (Is not present or requires significant work)
@@ -93,6 +97,7 @@ Scale:
 **Comments**
 
 _Provide comments for each rating above, 1-2 sentences max, bullet point list_
+_Include a list of the top 404s, as reported through analytics or a search console._
 
 **Recommendations**
 
