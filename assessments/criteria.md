@@ -254,6 +254,26 @@ Examples:
 * https://goharbor.io/ (logo wall)
 * https://blog.rook.io/ (blog)
 
+### SEO, Analytics and site-local search
+
+SEO helps users find your project and it's documentation, and analytics helps
+you monitor site traffic and diagnose issues like page 404s. Intra-site search,
+while optional, can offer your readers a site-focused search results.
+
+We evaluate on the following:
+
+* Analytics:
+  - Is analytics enabled for the production server?
+  - Is analytics disabled for all other deploys?
+  - If your project used Google Analytics, have you migrated to GA4?
+  - Can Page-not-found (404) reports easily be generated from you site
+    analytics? Provide a sample of the site's current top-10 404s.
+* Is site indexing supported for the production server, while disabled for
+  website previews and builds for non-default branches?
+* Is local intra-site search available from the website?
+* Are the current custodian(s) of the following accounts clearly documented:
+  analytics, Google Search Console, site-search (such as Google CSE or Algolia)
+
 ### Maintenance planning
 
 Website maintenance is an important part of project success, especially when project maintainers aren’t web developers.
