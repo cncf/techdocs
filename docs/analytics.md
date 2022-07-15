@@ -32,15 +32,19 @@ process below. Adapt it to your needs. Useful resources to consider include:
     Analytics 4" and link to [Issue #108][]. For example, see the [etcd.io issue
     #595][].
 
-2.  Create a GA4 site tag and [connect][] it to the existing UA id.
+2.  Visit [analytics.google.com](https://analytics.google.com) and open your
+    project's UA property.
 
-    From your project's UA console:
+3.  Rename your property by adding the `- UA` suffix:
 
     - Select **Admin** (bottom of left-nav)
     - Select **Property Settings**
     - Change the property name (which usually matches the project name), by
-      adding the following suffix: `- UA`
-    - Go back to the **Admin** level settings
+      adding the following suffix, if it doesn't have one already: `- UA`.
+
+4.  Create a GA4 site tag and [connect][] it to the existing UA id.
+
+    - Select **Admin** (bottom of left-nav)
     - Select **GA4 Setup Assistant**
     - Select **I want to create a new Google Analytics 4 property > Get
       started**
@@ -50,7 +54,7 @@ process below. Adapt it to your needs. Useful resources to consider include:
     - 📋 Copy the **MEASUREMENT ID**, we'll need it later, and past it into the
       appropriate row of the [status table][]
 
-3.  Configure your new GA4 tag:
+5.  Configure your new GA4 tag:
 
     - If your site is using `gtag.js`, then you have nothing more to do. Proceed
       to the next step.
@@ -59,7 +63,7 @@ process below. Adapt it to your needs. Useful resources to consider include:
       (while keeping the current `analytics.js` configuration). Once this is
       done, proceed to the next step.
 
-4.  Ensure that the new GA4 site tag is receiving data.
+6.  Ensure that the new GA4 site tag is receiving data.
 
     From GA4 console home, you should see **active users** in realtime --
     roughly the same number and distribution of active users reported by the UA
