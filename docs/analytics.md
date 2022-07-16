@@ -1,3 +1,5 @@
+<!-- cSpell:ignore chalin gtag opentelemetry -->
+
 # Analytics
 
 This page describes how to setup or upgrade Google Analytics (GA) for your CNCF
@@ -28,21 +30,25 @@ process below. Adapt it to your needs. Useful resources to consider include:
 
 ### Phase 1 - create and activate a GA4 site tag
 
-1.  Create an issue over the project's website with the title "Setup Google
+1.  **Create an issue** over the project's website with the title "Setup Google
     Analytics 4" and link to [Issue #108][]. For example, see the [etcd.io issue
     #595][].
 
-2.  Visit [analytics.google.com](https://analytics.google.com) and open your
-    project's UA property.
+2.  Determine which **analytics library** your project's website is using, and
+    upgrade to [gtag.js][], if possible.
 
-3.  Rename your property by adding the `- UA` suffix:
+    - Visit your project's website.
+    - View the page source of any website page.
+    - Search for "`<script async src="https://www.google`".
+    - If the script's `src` attribute ends with [analytics.js][], then your site
+      is using the older (pre 2017) analytics library. Upgrade to [gtag.js][] if
+      you can, since this will reduce the number of manual steps required in
+      this phase.
 
-    - Select **Admin** (bottom of left-nav)
-    - Select **Property Settings**
-    - Change the property name (which usually matches the project name), by
-      adding the following suffix, if it doesn't have one already: `- UA`.
+3.  **Open the analytics console** of your project's UA property by visiting
+    [analytics.google.com](https://analytics.google.com).
 
-4.  Create a GA4 site tag and [connect][] it to the existing UA id.
+4.  **Create a GA4 site tag** and [connect][] it to the existing UA property.
 
     - Select **Admin** (bottom of left-nav)
     - Select **GA4 Setup Assistant**
@@ -54,20 +60,34 @@ process below. Adapt it to your needs. Useful resources to consider include:
     - 📋 Copy the **MEASUREMENT ID**, we'll need it later, and past it into the
       appropriate row of the [status table][]
 
-5.  Configure your new GA4 tag:
+    > **Note**: The setup assistant will automatically [connect][] your UA and
+    > GA4 tags only if your site is using [gtag.js][]. Otherwise, you'll have to
+    > manually connect them, as described below.
 
-    - If your site is using `gtag.js`, then you have nothing more to do. Proceed
-      to the next step.
-    - If your site is using `analytics.js`, then consider upgrading to `gtag.js`
-      or at least adding a `gtag.js` configuration for the new GA4 site tag
-      (while keeping the current `analytics.js` configuration). Once this is
-      done, proceed to the next step.
+5.  Rename your UA property by adding the `- UA` suffix:
 
-6.  Ensure that the new GA4 site tag is receiving data.
+    - Select **Admin** (bottom of left-nav)
+    - Select **Property Settings**
+    - Change the property name (which usually matches the project name), by
+      adding the following suffix, if it doesn't have one already: `- UA`.
 
-    From GA4 console home, you should see **active users** in realtime --
-    roughly the same number and distribution of active users reported by the UA
-    console.
+6.  If your site is using [analytics.js][] (as determined in step 2), then
+    you'll need to **manually connect your UA ID to your GA4 tag**. If your site
+    is using [gtag.js][], then skip this step.
+
+    - Open your project's GA4 analytics console.
+    - Select **Admin** (bottom of left-nav)
+    - Select **Data streams**
+    - Open the data stream (there will be only one)
+    - Under **Additional Settings**, open **Manage connected site tags**
+    - Add your site's UA tag to the field **Enter ID of tag to connect**
+    - Click **Connect**
+
+8.  Ensure that the new GA4 site tag is receiving data.
+
+    From GA4 console home, you should immediately see **active users** in
+    realtime (provided that there are active users). You should see roughly the
+    same number and distribution of active users reported by the UA console.
 
 ### Phase 2 - configure the GA4 ID as the main GA ID
 
@@ -84,6 +104,7 @@ to upstream changes in 22Q3).
 
 [adding analytics]:
   https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
+[analytics.js]: https://support.google.com/analytics/answer/10268458
 [connect]: https://support.google.com/analytics/answer/9973999
 [etcd.io issue #595]: https://github.com/etcd-io/website/issues/595
 [docsy]: https://www.docsy.dev
@@ -91,6 +112,7 @@ to upstream changes in 22Q3).
 [ga4]: https://support.google.com/analytics/answer/10089681
 [ga4+ua-dev]:
   https://developers.google.com/analytics/devguides/migration/measurement/add-ga4
+[gtag.js]: https://support.google.com/analytics/answer/10220869
 [issue #108]: https://github.com/cncf/techdocs/issues/108
 [migration-help]: https://support.google.com/analytics/answer/10759417
 [opentelemetry.io/layouts/partials/google-analytics.html]:
