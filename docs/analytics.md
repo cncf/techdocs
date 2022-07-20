@@ -28,7 +28,7 @@ process below. Adapt it to your needs. Useful resources to consider include:
 - **Help center** resource: [Migrate from Universal Analytics to Google
   Analytics 4][migration-help]
 
-### Phase 1 - create and activate a GA4 site tag
+### Stage 1 - create and activate a GA4 site tag
 
 1.  **Create an issue** over the project's website with the title "Setup Google
     Analytics 4" and link to [Issue #108][]. For example, see the [etcd.io issue
@@ -54,6 +54,12 @@ process below. Adapt it to your needs. Useful resources to consider include:
     - Select **GA4 Setup Assistant**
     - Select **I want to create a new Google Analytics 4 property > Get
       started**
+    - Select the **Enable data collection using your existing global site
+      tag(s)** checkbox.
+      <br>
+      **Note**: The checkbox will be enabled only if your site uses [gtag.js][].
+      Cancel the dialog and upgrade your site to [gtag.js][] if you forgot to do
+      so earlier. Otherwise, you'll have to manually connect your site tags.
     - Select **Go to your GA4 property**
     - Select **Admin** > **Data stream**
     - Select the (only) data stream
@@ -89,7 +95,7 @@ process below. Adapt it to your needs. Useful resources to consider include:
     realtime (provided that there are active users). You should see roughly the
     same number and distribution of active users reported by the UA console.
 
-### Phase 2 - configure the GA4 ID as the main GA ID
+### Stage 2 - configure the GA4 ID as the main GA ID
 
 - Ensure that the website supports the GA configuration of more than one id. If
   it doesn't, consider using a project-specific layout like the following:
@@ -97,7 +103,7 @@ process below. Adapt it to your needs. Useful resources to consider include:
   https://github.com/open-telemetry/opentelemetry.io/pull/1544)
 - Set the GA4 ID as the main GA ID
 
-### Phase 3 - switch to native Docsy or Hugo support for GA
+### Stage 3 - switch to native Docsy or Hugo support for GA
 
 Eventually migrate to using the Docsy or Hugo support for GA IDs (@chalin plans
 to upstream changes in 22Q3).
