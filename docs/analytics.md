@@ -28,22 +28,13 @@ process below. Adapt it to your needs. Useful resources to consider include:
 - **Help center** resource: [Migrate from Universal Analytics to Google
   Analytics 4][migration-help]
 
-### Stage 1 - create a GA4 site tag
+### Stage 0 - preparation
 
-Objectives:
+In preparation for the migration, follow these steps:
 
-- The main objective of this stage is to **create a GA4 site tag** using the GA4
-  setup assistant from your existing UA console.
-- A secondary goal is ensure that the new GA4 site tag can process data along
-  side the UA site tag. This won't be possible unless your project's website
-  already uses or can be upgraded to use the `gtag.js` analytics library.
-  Details follow.
-
-Follow these steps:
-
-1.  **Create an issue** over the project's website with the title "Setup Google
-    Analytics 4" and link to [Issue #108][]. For example, see the issues opened
-    for the pilot projects listed in #108.
+1.  **Create an issue** over your project's website with the title "Migrate to
+    Google Analytics 4 (GA4)", and link to [Issue #108][]. For example, see the
+    issues opened for the pilot projects listed in #108.
 
 2.  Determine which **analytics library** your project's website is using.
 
@@ -58,19 +49,33 @@ Follow these steps:
     - Take note of which library or libraries (some sites use both) your site is
       using.
 
-3.  (Optional) **Switch to using the [gtag.js][]** analytics library if your
-    project's website isn't already -- as determined by the previous step. Doing
-    so now will simplify the migration process by requiring fewer manual steps.
+### Stage 1 - create a GA4 site tag
+
+Objectives:
+
+- The main objective of this stage is to **create a GA4 site tag** using the GA4
+  setup assistant from your existing UA console.
+- A secondary goal is ensure that the new GA4 site tag can process data along
+  side the UA site tag. This won't be possible unless your project's website
+  already uses or can be upgraded to use the `gtag.js` analytics library.
+  Details follow.
+
+Follow these steps:
+
+1.  (Optional) **Switch to using the [gtag.js][]** analytics library if your
+    project's website isn't already -- as determined in the previous stage.
+    Doing so now will simplify the migration process by requiring fewer manual
+    steps.
 
     How you switch will depend on the static-site generation tooling you use.
     For details, see [Stage 2][]. If you know how to switch and it is easy to do
     so, then switch your project to [gtag.js][], otherwise defer the switch to
     [stage 2][].
 
-3.  **Open the analytics console** of your project's UA property by visiting
+2.  **Open the analytics console** of your project's UA property by visiting
     [analytics.google.com](https://analytics.google.com).
 
-4.  **Create a GA4 site tag**:
+3.  **Create a GA4 site tag**:
 
     - Select **Admin** (bottom of left-nav)
     - Select **GA4 Setup Assistant**
@@ -104,7 +109,7 @@ Follow these steps:
     - Change the property name (which usually matches the project name), by
       adding the following suffix, if it doesn't have one already: `- UA`.
 
-8.  Ensure that the new GA4 site tag is receiving data.
+6.  Ensure that the new GA4 site tag is receiving data.
 
     If your project's site is **not** using [gtag.js][], then skip this step and
     move on to the next stage.
@@ -162,8 +167,7 @@ course, this may require you to upgrade the version of [Docsy][] and/or Hugo
 that your project is using.
 
 [add gtag.js to your site]: https://developers.google.com/analytics/devguides/collection/gtagjs/
-[adding analytics]:
-  https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
+[adding analytics]: https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
 [analytics.js]: https://support.google.com/analytics/answer/10268458
 [connect]: https://support.google.com/analytics/answer/9973999
 [etcd.io issue #595]: https://github.com/etcd-io/website/issues/595
@@ -171,14 +175,11 @@ that your project is using.
 [docusaurus]: https://docusaurus.io/
 [ga4-dev]: https://developers.google.com/analytics/devguides/migration
 [ga4]: https://support.google.com/analytics/answer/10089681
-[ga4+ua-dev]:
-  https://developers.google.com/analytics/devguides/migration/measurement/add-ga4
+[ga4+ua-dev]: https://developers.google.com/analytics/devguides/migration/measurement/add-ga4
 [gtag.js]: https://support.google.com/analytics/answer/10220869
 [issue #108]: https://github.com/cncf/techdocs/issues/108
 [migration-help]: https://support.google.com/analytics/answer/10759417
-[opentelemetry.io/layouts/partials/google-analytics.html]:
-  https://github.com/open-telemetry/opentelemetry.io/blob/3d8a59ea508b46497500297f334a079a4f91e293/layouts/partials/google-analytics.html
+[opentelemetry.io/layouts/partials/google-analytics.html]: https://github.com/open-telemetry/opentelemetry.io/blob/3d8a59ea508b46497500297f334a079a4f91e293/layouts/partials/google-analytics.html
 [stage 2]: #stage-2
-[status table]:
-  https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
+[status table]: https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
 [ua]: https://support.google.com/analytics/answer/11583528
