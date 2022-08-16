@@ -86,10 +86,6 @@ Follow these steps:
       [gtag.js][].
     - Select **Create property**. This will create your projects GA4 site tag.
 
-    > **Note**: If you were able to select the **Enable data collection using
-    > your existing global site tag(s)** option, then the GA4 setup assistant
-    > will automatically [connect][] your GA4 site tag from your UA config.
-
 4.  **Open the analytics console onto your GA4 site tag** and copy the
     measurement ID. Continuing from the previous step:
 
@@ -99,8 +95,8 @@ Follow these steps:
       remaining steps from your GA4 console.
     - Select **Admin** > **Data stream**
     - Select the (only) data stream to view its details.
-    - 📋 Copy the **measurement ID**, we'll need it later, and paste it into the
-      appropriate row of the [status table][].
+    - 📋 **Copy the __measurement ID__**, you'll need it later, and paste it
+      into the appropriate row of the [status table][].
 
 5.  Rename your UA property by adding the `- UA` suffix. From the UA console:
 
@@ -109,7 +105,28 @@ Follow these steps:
     - Change the property name (which usually matches the project name), by
       adding the following suffix, if it doesn't have one already: `- UA`.
 
-6.  Ensure that the new GA4 site tag is receiving data.
+6.  **Ensure that your GA4 site tag is connected _from_ your UA config.** You
+    can skip this step if you were previously able (in step 3) to select the
+    **Enable data collection using your existing global site tag(s)** option,
+    since the GA4 setup assistant will then have automatically [connected][]
+    your GA4 site tag from your UA config. If you aren't sure, then you can
+    check as follows:
+
+    - **Open** the analytics console for the **UA site tag**
+    - Under **Admin** > **GA4 Setup Assistant**, look for your GA4 property in
+      the **Connected Property** table.
+
+    If you can't find your GA4 property, then you'll have to manually add it as
+    follows:
+
+    - Open **Admin** > **Tracking Info** > **Tracking Code**.
+    - Open **Connected Site Tags**.
+    - In **Enter ID of tag to connect**: enter your GA site tag (the ID starting with `G-`).
+    - In **Nickname**, optionally add the name of the domain, for example,
+      `kubernetes.io`.
+    - Click **Connect**.
+
+7.  Ensure that the new GA4 site tag is receiving data.
 
     If your project's site is **not** using [gtag.js][], then skip this step and
     move on to the next stage.
@@ -119,6 +136,7 @@ Follow these steps:
     number and distribution of active users reported by the UA console.
 
 <a name="stage-2"></a>
+
 ### Stage 2 - configure the GA4 ID as the main analytics ID
 
 GA4 only works when your project's website is configured using the [gtag.js][]
@@ -169,7 +187,7 @@ that your project is using.
 [add gtag.js to your site]: https://developers.google.com/analytics/devguides/collection/gtagjs/
 [adding analytics]: https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
 [analytics.js]: https://support.google.com/analytics/answer/10268458
-[connect]: https://support.google.com/analytics/answer/9973999
+[connected]: https://support.google.com/analytics/answer/9973999
 [etcd.io issue #595]: https://github.com/etcd-io/website/issues/595
 [docsy]: https://www.docsy.dev
 [docusaurus]: https://docusaurus.io/
