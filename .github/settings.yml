@@ -74,6 +74,9 @@ labels:
   - name: docs-assessment
     description: "CNCF TechDocs Assessments"
     color: c2e0c6
+  - name: suggested doc
+    description: "New doc suggestions for the docs/ section"
+    color: d93f0b
   # Default new repo labels
   - name: bug
     description: "Something isn't working"
