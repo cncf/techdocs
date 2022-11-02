@@ -122,13 +122,13 @@ collaborators:
     permission: admin
   - username: caniszczyk
     permission: admin
+  - username: nate-double-u
+    permission: admin
 
   # Maintainers
   - username: chalin
     permission: maintain
   - username: idvoretskyi
-    permission: maintain
-  - username: nate-double-u
     permission: maintain
   - username: thisisobate
     permission: maintain
