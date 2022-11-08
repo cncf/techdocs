@@ -3,9 +3,9 @@ Documentation (docs) search is an important part of developer experience. It mak
 
 Here at CNCF,we’ve explored different search tools and we’ve decided to narrow our options to this 3:
 
-1. Docsearch by Algolia
-1. Google search
 1. Lunr
+1. Google search
+1. Docsearch by Algolia
 
 # Pros And Cons
 
@@ -38,6 +38,7 @@ Here at CNCF,we’ve explored different search tools and we’ve decided to narr
 
 
 ### Cons
+- Google search [does not work in various countries](https://techcrunch.com/2010/04/19/google-censorship/).
 - Shows ads in between search results
 - Works only on deployed, production version of your site
 - Hard to customize
@@ -56,12 +57,12 @@ Here at CNCF,we’ve explored different search tools and we’ve decided to narr
 
 
 ### Cons
-- Difficult to configure and setup
+- Can be difficult to configure and setup. If a team is already using hugo/docsy, this should be *very* easy to setup.
 - Requires javascript knowledge
 
 # When Is It Best To Use One Over Another?
 If you are looking to create a search capability for your open source project without having to depend on a 3rd party service, then you should consider using [Lunr](https://lunrjs.com/). You can take a look at [this](https://github.com/vitessio/website/pull/1119) pull request to see how we used Lunr to implement search in Vitess docs website.  
 
-If you are looking for a quick and easy way to setup search without caring too much about cost, customization, and 3rd party dependency, then you should consider going for [Docsearch by Algolia](https://docsearch.algolia.com/).  
+If you are looking to setup search without caring too much about cost, customization, and 3rd party dependency, then you should consider going for [Docsearch by Algolia](https://docsearch.algolia.com/).  
 
 If you are looking to create a search for documentation irrespective of where it’s hosted (separate site), then you should consider the [Programmable Search Engine (Google search)](https://developers.google.com/custom-search/docs/overview).
