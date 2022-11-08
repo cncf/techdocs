@@ -57,7 +57,7 @@ Here at CNCF,we’ve explored different search tools and we’ve decided to narr
 
 
 ### Cons
-- Can be difficult to configure and setup. If a team is already using hugo/docsy, this should be *very* easy to setup.
+- Can be difficult to configure and setup (If a team is already using hugo/docsy, this should be *very* easy to setup).
 - Requires javascript knowledge
 
 # When Is It Best To Use One Over Another?
