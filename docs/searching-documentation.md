@@ -14,8 +14,6 @@ This page describes some common alternatives for static site search.
 - Support for multi-language search.
 
 ## Cons
-- The search index is wholly managed and hosted on Algolia servers
-- Hard to customize search
 - Not entirely free- Limited to 10k records
 - Limited access to features.
 
@@ -33,10 +31,6 @@ This page describes some common alternatives for static site search.
 
 
 ## Cons
-- Google search [does not work in various countries](https://www.makeuseof.com/countries-google-doesnt-dominate/).
-- Shows ads in between search results
-- Works only on deployed, production version of your site
-- Hard to customize
 - Search index is completely managed and hosted on Google servers.
 
 # Lunr
@@ -53,7 +47,7 @@ This page describes some common alternatives for static site search.
 
 
 ## Cons
-- Can be difficult to configure and setup (If a team is already using hugo/docsy, this should be *very* easy to setup).
+- Can be complex to configure and setup (If a team is already using hugo/docsy, this should be *very* easy to setup).
 - Depending on site setup, may require javascript knowledge
 
 # When Is It Best To Use One Over Another?
