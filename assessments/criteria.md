@@ -162,7 +162,7 @@ maturity levels so, for example, incubating projects must satisfy the
 requirements for sandbox projects.
 
 - **Sandbox**
-  - [Website guidelines][]: majority of the guidelines are satisfied
+  - [Website guidelines](../docs/website-guidelines-checklist.md): majority of the guidelines are satisfied
   - [Docs assessment][]: consider [submitting a request][service desk] for an
     assessment as early as possible to avoid documentation and website rework.
   - **Project documentation** may or may not be present -- it is acceptable at
