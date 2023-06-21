@@ -71,9 +71,12 @@ labels:
   - name: e4-months
     description: "Effort: 1+ months"
     color: 996633
-  - name: docs-assessment
+  - name: Docs Assessment
     description: "CNCF TechDocs Assessments"
     color: c2e0c6
+  - name: Website Update
+    description: "CNCF Help request for project website updates"
+    color: BFAFE3
   - name: suggested doc
     description: "New doc suggestions for the docs/ section"
     color: 89E295
@@ -85,7 +88,7 @@ labels:
     description: "Something isn't working"
     color: d73a4a
   - name: documentation
-    description: Improvements or additions to documentation
+    description: Improvements or additions to the TechDocs documentation
     color: 0075ca
   - name: duplicate
     description: This issue or pull request already exists
