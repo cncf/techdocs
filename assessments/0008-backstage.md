@@ -262,9 +262,9 @@ Scale:
 
 #### Single-source requirement
 
-The source files for the technical documentation reside in a single directory of the Backstage GitHub repo. There is no separate **website repo**. It's not immediately clear whether this includes the entire website or just the **Docs** section. TBD
+The source files for the website and technical documentation reside in a single directory of the Backstage GitHub repo. There is no separate **website repo**. 
 
-The strategy for **generating the docs** is documented but obscure. Again, it's not clear if this is for the **Documentation** section only. TBD
+The strategy for **generating the docs** is documented but obscure. 
 
 #### Minimal website requirements
 
@@ -335,7 +335,7 @@ The **website tooling** (Docusaurus static site build) is well supported.
 
 Cultivation of website maintainers from within the community is unknown. TBD
 
-As far as I know, **site build times** are reasonable and site maintainers have sufficient **permissions**. TBD
+I tested the instructions for using `yarn` to build the website. The **site build time** was under 30 seconds for a local build on a Mac M1. Maintainers have sufficient **permissions** to download and build the doc. Checking in the doc no doubt requires a PR and approval from a project maintainer.
 
 Examples:
 
@@ -356,8 +356,8 @@ Backstage is probably not a good candidate for a **[mobile-first] design**.
 
 #### HTTPS and HTTP redirect
 
-The website is served via **HTTPS**. I don't know if **HTTP** access redirects. TBD
-
+The website is served via **HTTPS**. **HTTP** redirects automatically to HTTPS.
+ 
 #### Other
 
 **Google Analytics** production only TBD
@@ -380,4 +380,4 @@ The top documentation concerns for this project are:
 - Completing instructional documentation for all stakeholder roles, including project contributors.
 - Organizing and "signposting" documentation by role and task so that stakeholders can find documentation that supports their roles' activities.
 
-(Analysis to actionable tasks and issues TBD)
+(Analysis to actionable tasks and issues )
