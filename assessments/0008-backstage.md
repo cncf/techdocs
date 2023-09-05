@@ -311,23 +311,19 @@ Examples:
 
 TBD
 
-SEO helps users find your project and it's documentation, and analytics helps
-you monitor site traffic and diagnose issues like page 404s. Intra-site search,
-while optional, can offer your readers a site-focused search results.
-
 We evaluate on the following:
 
 * Analytics:
-  - Is analytics enabled for the production server?
-  - Is analytics disabled for all other deploys?
-  - If your project used Google Analytics, have you migrated to GA4?
+  - Is analytics enabled for the production server? *It doesn't look like the site has the Docusaurus `plugin-sitemap` plugin installed.*
+  - Is analytics disabled for all other deploys? *TBD. See below*
+  - If your project used Google Analytics, have you migrated to GA4? TBD
   - Can Page-not-found (404) reports easily be generated from you site
-    analytics? Provide a sample of the site's current top-10 404s.
+    analytics? Provide a sample of the site's current top-10 404s. TBD
 * Is site indexing supported for the production server, while disabled for
-  website previews and builds for non-default branches?
-* Is local intra-site search available from the website?
+  website previews and builds for non-default branches? *Apparently that's automatic with* `plugin-sitemap`.
+* Is local intra-site search available from the website? *Yes*
 * Are the current custodian(s) of the following accounts clearly documented:
-  analytics, Google Search Console, site-search (such as Google CSE or Algolia)
+  analytics, Google Search Console, site-search (such as Google CSE or Algolia) *No*
 
 #### Maintenance planning
 
