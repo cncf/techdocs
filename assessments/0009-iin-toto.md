@@ -241,7 +241,7 @@ Move as much user doc as possible from GitHub  into a tool such as Read-the-Docs
 
 - Contributor doc priorities 
    - Add Documentation as a contribution area, clarify process.
-   - Specify a documentation "champion" -- Justin Cappos?
+   - Specify a documentation "champion" to review and approve doc PRs, decide doc issue priorities -- Justin Cappos?
    - Develop doc standards (style guide, page templates, locations)
    - Develop and document a doc versioning/update process 
 
