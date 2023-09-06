@@ -252,12 +252,12 @@ Every page should be explicitly addressed to a specific audience. Readers with t
    DOC NEEDS: 
    Evaluators need good high-level technical overview, identification of user roles, setup overview, workflow overview.
 - **End users**  new and experienced 
-   - *Project owner* defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata. 
+   - *Project owner* defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata.
+      - DOC NEEDS: New users need overview, demo, templates, basic instructions. Experienced users need deeper architectural info, use cases, examples
    - *Functionaries* perform the intended actions and produce link metadata for each step.
-
-   DOC NEEDS: 
-   New users need overview, demo, templates, basic instructions
-   Experienced users need deeper architectural info, use cases, examples
+      - DOC NEEDS:  *?? do these users read in-toto doc at all, or is the project owner responsible for
+          instructing them in how to sign and verify their steps??* 
+   
 - **Contributors** : *code*
     These are members of the community who:
         - *make code changes*: these can be for feature additions or bug fixes to in-toto implementations 
