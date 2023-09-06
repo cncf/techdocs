@@ -267,6 +267,7 @@ Readers with the following roles are potential audiences for project documentati
    
 - **Contributors** : *code*
    - These are members of the community who:
+
         - *make code changes*: these can be for feature additions or bug fixes to in-toto implementations 
         - *submit changes to specifications*: these can be direct changes if they are trivial or as new in-toto Enhancements (ITEs)
         - *create new integrations*: in these cases, other projects are updated to generate or use in-toto metadata as appropriate, and these integrations are noted in in-toto/friends 
