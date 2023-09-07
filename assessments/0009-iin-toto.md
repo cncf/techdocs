@@ -224,6 +224,8 @@ _Include a list of the top 404s, as reported through analytics or a search conso
 **Recommendations**
 
 _Provide a list of recommendations to improve in this area_
+// should we include status of maturity-level requirements? Like this one:
+// https://hackmd.io/@cncf-tech-docs/S1-7wvcah#Minimal-website-requirements
 
 ## Recommendation Summary
 
