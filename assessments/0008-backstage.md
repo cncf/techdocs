@@ -243,14 +243,14 @@ The only recommendation here is to disentagle the contributor documentation from
 | Meets min website req. (for maturity level) |     |  :heavy_check_mark:   |     |     |     |
 | Branding and design                         |     |     |     |  :heavy_check_mark:   |     |
 | Case studies/social proof                   |     |     |  :heavy_check_mark:   |     |     |
-| SEO, Analytics, and site-local search                        |     |    |     |     |     |
+| SEO, Analytics, and site-local search       |     |     |     |     |  :heavy_check_mark:   |
 | Maintenance planning                        |     |     |   :heavy_check_mark:  |     |     |
 | A11y plan & implementation                  |     |     |     |   :heavy_check_mark:  |     |
 | Mobile-first plan & impl.                   |     |     |  :heavy_check_mark:  |     |     |
-| HTTPS access & HTTP redirect                |     |     |     |     |     |
-| Google Analytics 4 for production only      |     |     |     |     |     |
-| Indexing allowed for production server only |     |     |     |     |     |
-| Intra-site / local search                   |     |     |     |     |     |
+| HTTPS access & HTTP redirect                |     |     |     |     |  :heavy_check_mark:   |
+| Google Analytics 4 for production only      |     |     |     |     |  :heavy_check_mark:    |
+| Indexing allowed for production server only |     |     |     |     |  :heavy_check_mark:    |
+| Intra-site / local search                   |     |     |     |     |  :heavy_check_mark:    |
 | Account custodians are documented           |  :heavy_check_mark:     |  |     |     |     |
 
 Scale:
@@ -309,18 +309,16 @@ Examples:
 
 #### SEO, Analytics and site-local search
 
-TBD
-
 We evaluate on the following:
 
 * Analytics:
-  - Is analytics enabled for the production server? *It doesn't look like the site has the Docusaurus `plugin-sitemap` plugin installed.*
-  - Is analytics disabled for all other deploys? *TBD. See below*
-  - If your project used Google Analytics, have you migrated to GA4? TBD
+  - Is analytics enabled for the production server? *Yes, GA4 is enabled in production.*
+  - Is analytics disabled for all other deploys? *Yes*
+  - If your project used Google Analytics, have you migrated to GA4? *Yes*
   - Can Page-not-found (404) reports easily be generated from you site
-    analytics? Provide a sample of the site's current top-10 404s. TBD
+    analytics? Provide a sample of the site's current top-10 404s. *Yes, Page-not-found reports can be generated using GA4*
 * Is site indexing supported for the production server, while disabled for
-  website previews and builds for non-default branches? *Apparently that's automatic with* `plugin-sitemap`.
+  website previews and builds for non-default branches? *Yes, that's automatic with* `plugin-sitemap`.
 * Is local intra-site search available from the website? *Yes*
 * Are the current custodian(s) of the following accounts clearly documented:
   analytics, Google Search Console, site-search (such as Google CSE or Algolia) *No*
@@ -356,13 +354,20 @@ The website is served via **HTTPS**. **HTTP** redirects automatically to HTTPS.
  
 #### Other
 
-**Google Analytics** production only TBD
+**Google Analytics** 
 
-**Indexing** allowed for production only TBD
+Google Analytics 4 (GA4) is enabled and works as expected.
 
-**Intra-site and local search** TBD
+**Indexing** 
 
-Documentation **account custodians are not documented** in the [OWNERS file](https://github.com/backstage/backstage/blob/master/OWNERS.md).
+Site is well indexed; supported on production.
+
+**Intra-site and local search** 
+
+Backstage.io uses algolia for intra-site and local search.
+
+**Account custodians** 
+Account custodians are not documented in the [OWNERS file](https://github.com/backstage/backstage/blob/master/OWNERS.md).
 
 ### Recommendations
 
