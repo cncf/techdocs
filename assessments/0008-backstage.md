@@ -344,7 +344,7 @@ Backstage is probably not a good candidate for a **[mobile-first] design**.
 
 [mobile-first]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
 
-[Accessibility][] has not yet been assessed. TBD
+In terms of accessibility, Backstage.io is partially conformant with [WCAG 2.1 level AA](https://www.w3.org/WAI/WCAG21/Understanding/).
 
 [accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
 
@@ -371,7 +371,11 @@ Account custodians are not documented in the [OWNERS file](https://github.com/ba
 
 ### Recommendations
 
-TBD
+**Accessibility**
+
+Website is accessible but needs more improvement in these areas:
+1. Images: images must have alternative text
+2. Links: Links must have discernible text
 
 ## Recommendations
 
