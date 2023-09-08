@@ -61,7 +61,7 @@ The main issues with the Backstage documentation are:
 1. Lack of organization around user roles, and
 2. Lack of instructional content that defines tasks for each role and provides explicit instructions to accomplish these tasks.
 
-The [Overview](https://backstage.io/docs/overview/what-is-backstage) contains valuable high-level conceptual information, including a list of [benefits](https://backstage.io/docs/overview/what-is-backstage#benefits) to particular user roles (engineering managers, developers, platform engineers). This demonstrates awareness of user roles that needs to be extended throughout the documentation.
+For example, the [Overview](https://backstage.io/docs/overview/what-is-backstage) contains valuable high-level conceptual information, including a list of [benefits](https://backstage.io/docs/overview/what-is-backstage#benefits) to particular user roles (engineering managers, developers, platform engineers). This demonstrates awareness of user roles that needs to be extended throughout the documentation.
 
 There are installation and configuration instructions in [Getting Started](https://backstage.io/docs/getting-started/). However:
 1. The instructions describe a local installation.
@@ -75,9 +75,13 @@ The following sections contain brief assessments of each element of the Project 
 
 The documentation seems **feature complete**. All software features are documented.
 
-**Instructional content** is a weakness of the Backstage docs: tasks required of each role are missing, as are instructions for completing these roles. Instructional material for at least the most common use cases (**"happy path"**) should support learning (tutorials) as well as doing (procedures).
+**Instructional content** is a weakness of the Backstage docs. In many cases, tasks required of each role are missing, as are instructions for completing these roles. Instructional material for at least the most common use cases (**"happy path"**) should support learning (tutorials) as well as doing (procedures). Where instructional content exists, it is often:
 
-**Escalation** options (FAQs, Troubleshooting docs) exists for most Backstage functionality. As well, the contributor community provides robust support (GitHub issues and discussion channels).
+- Not aimed at a defined user,
+- Not clearly identified as instructional content, or
+- Intermingled or confused with reference information (for example, many configuration "how-tos" are in the form of a list of YAML properties).
+
+**Escalation** options (FAQs, Troubleshooting docs) exist for most Backstage functionality. As well, the contributor community provides robust support (GitHub issues and discussion channels).
 
 **Reference information** exists, including for **APIs**, but is scattered throughout the documentation.
 
@@ -239,7 +243,7 @@ The only recommendation here is to disentagle the contributor documentation from
 
 | Criteria                                    | 1   | 2   | 3   | 4   | 5   |
 | ---                                         | --- | --- | --- | --- | --- |
-| Single-source for all files                 |     |     |  :heavy_check_mark:   |     |     |
+| Single source for all files                 |     |     |  :heavy_check_mark:   |     |     |
 | Meets min website req. (for maturity level) |     |  :heavy_check_mark:   |     |     |     |
 | Branding and design                         |     |     |     |  :heavy_check_mark:   |     |
 | Case studies/social proof                   |     |     |  :heavy_check_mark:   |     |     |
@@ -262,7 +266,7 @@ Scale:
 
 #### Single-source requirement
 
-The source files for the website and technical documentation reside in a single directory of the Backstage GitHub repo. There is no separate **website repo**. 
+The source files for the website and technical documentation reside in two separate directories of the Backstage GitHub repo, built as a single unit by *Docusaurus*. There is no separate **website repo**. 
 
 The strategy for **generating the docs** is documented but obscure. 
 
@@ -285,6 +289,7 @@ Listed and acknowledged below are the (cumulative) _minimal_ website requirement
 | Archived | Archived status of the project is obvious to site visitors | n/a |
 | Archived | Link to successor project website and/or migration documentation (if it exists) | n/a |
 
+
 #### Branding and design
 
 The Backstage **brand** is easily recognizable through the logo and color scheme. The scheme is **used consistently** across the website and docs.
@@ -294,6 +299,7 @@ The website **typography** is easy to read.
 Examples:
 
 * https://helm.sh/
+
 
 #### Case studies/social proof
 
@@ -307,29 +313,35 @@ Examples:
 * https://goharbor.io/ (logo wall)
 * https://blog.rook.io/ (blog)
 
+
 #### SEO, Analytics and site-local search
 
-We evaluate on the following:
+**Analytics**
 
-* Analytics:
-  - Is analytics enabled for the production server? *Yes, GA4 is enabled in production.*
-  - Is analytics disabled for all other deploys? *Yes*
-  - If your project used Google Analytics, have you migrated to GA4? *Yes*
-  - Can Page-not-found (404) reports easily be generated from you site
-    analytics? Provide a sample of the site's current top-10 404s. *Yes, Page-not-found reports can be generated using GA4*
-* Is site indexing supported for the production server, while disabled for
-  website previews and builds for non-default branches? *Yes, that's automatic with* `plugin-sitemap`.
-* Is local intra-site search available from the website? *Yes*
-* Are the current custodian(s) of the following accounts clearly documented:
-  analytics, Google Search Console, site-search (such as Google CSE or Algolia) *No*
+  - **Analytics** is enabled for the production server using **GA4**.
+  - Analytics is **disabled for all other deploys**? 
+  - **Page-not-found (404) reports** are easily generated from the site.
+
+**Site indexing**
+
+ **Indexing** is supported for the **production server**. Indexing is **disabled for previews non-default builds** automatically with `plugin-sitemap`.
+
+**Search**
+
+Local intra-site **search** is available from the website.
+
+**Custodians**
+
+The current **custodian(s)** of the following accounts are **not** clearly documented: analytics, Google Search Console, site-search (such as Google CSE or Algolia).
+
 
 #### Maintenance planning
 
 The **website tooling** (Docusaurus static site build) is well supported.
 
-Cultivation of website maintainers from within the community is unknown. TBD
+**Cultivation of website maintainers** from within the community is inadequate.
 
-I tested the instructions for using `yarn` to build the website. The **site build time** was under 30 seconds for a local build on a Mac M1. Maintainers have sufficient **permissions** to download and build the doc. Checking in the doc no doubt requires a PR and approval from a project maintainer.
+I tested the instructions for using `yarn` to build the website. The **site build time** was under 30 seconds for a local build on a Mac M1. Maintainers have sufficient **permissions** to download and build the doc. Checking in the doc requires a PR and approval from a project maintainer.
 
 Examples:
 
@@ -337,45 +349,48 @@ Examples:
 
 #### Usability, accessibility and devices
 
-The website is **usable from mobile**. Doc pages **are readable**.
-Most navigation features are **accessible from mobile**.
-
-Backstage is probably not a good candidate for a **[mobile-first] design**.
-
-[mobile-first]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
-
-In terms of accessibility, Backstage.io is partially conformant with [WCAG 2.1 level AA](https://www.w3.org/WAI/WCAG21/Understanding/).
+Backstage.io is partially conformant with [WCAG 2.1 level AA](https://www.w3.org/WAI/WCAG21/Understanding/) with respect to **accessibility**.
 
 [accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
 
-#### HTTPS and HTTP redirect
-
-The website is served via **HTTPS**. **HTTP** redirects automatically to HTTPS.
- 
-#### Other
-
-**Google Analytics** 
-
-Google Analytics 4 (GA4) is enabled and works as expected.
-
-**Indexing** 
-
-Site is well indexed; supported on production.
-
-**Intra-site and local search** 
-
-Backstage.io uses algolia for intra-site and local search.
-
-**Account custodians** 
-Account custodians are not documented in the [OWNERS file](https://github.com/backstage/backstage/blob/master/OWNERS.md).
 
 ### Recommendations
 
-**Accessibility**
+#### Single-source repo
 
-Website is accessible but needs more improvement in these areas:
-1. Images: images must have alternative text
-2. Links: Links must have discernible text
+The documentation is adequately isolated from the code by virtue of being in its own directories; however, its location and build instructions are obscure. Write explicit instructions for contributing to documentation. Emphasize the importance of keeping the documentation directories separate. Make these instructions prominent in the contributor guidelines.
+
+
+#### Minimum website requirements for maturity level
+
+To meet the maturity level standards for a graduated project, update the following aspects as described in [Project documentation](Project-documentation):
+
+- Identify the project and product stakeholder roles.
+- Analyze stakeholder needs.
+- Update and reorganize the documentation with respect to user orientation and task-based support of use cases.
+
+
+#### Case studies/social proof
+
+Implement a **logo wall** of participating organizations, with links to testimonials and/or case studies.
+
+
+#### SEO, Analytics and site-local search
+
+Add documentation and website custodians to the project maintainer lists in `OWNERS.md` and wherever else project maintainers are documented.
+
+
+#### Maintenance planning
+
+Add a prominent call for website and documentation maintainers in the project introduction alongside the call for code maintainers.
+
+
+#### Accessibility
+
+Improve compliance in these areas:
+- **Images** must have alternative text.
+- **Links** must have discernible text.
+
 
 ## Recommendations
 
@@ -385,4 +400,4 @@ The top documentation concerns for this project are:
 - Completing instructional documentation for all stakeholder roles, including project contributors.
 - Organizing and "signposting" documentation by role and task so that stakeholders can find documentation that supports their roles' activities.
 
-(Analysis to actionable tasks and issues )
+(Analysis to actionable tasks and issues)
