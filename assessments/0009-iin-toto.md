@@ -189,16 +189,16 @@ Scale:
 | ---                                         | --- | --- | --- | --- | --- |
 | Single-source for all files                 |     |     |     |  x  |     |
 | Meets min website req. (for maturity level) |     |  x  |     |     |     |
-| Branding and design                         |     |     |     |     |     |
+| Branding and design                         |     |     |     |  x  |     |
 | Case studies/social proof                   |     |     |  x  |     |     |
-| Maintenance planning                        |     |     |     |     |     |
-| A11y plan & implementation                  |     |     |     |     |     |
-| Mobile-first plan & impl.                   |     |     |     |     |     |
+| Maintenance planning                        |     |     |  x  |     |     |
+| A11y plan & implementation                  |     |     |  x  |     |     |
+| Mobile-first plan & impl.                   |     |     |     |     |  x  |
 | HTTPS access & HTTP redirect                |     |     |     |     | x   |
-| Google Analytics 4 for production only      |     |     |     |     |     |
-| Indexing allowed for production server only |     |     |     |     |     |
+| Google Analytics 4 for production only      |  x  |     |     |     |     |
+| Indexing allowed for production server only |     |     |     |     |  x  |
 | Intra-site / local search                   |     |  x  |     |     |     |
-| Account custodians are documented           |     |     |     |     |     |
+| Account custodians are documented           |  x  |     |     |     |     |
 
 Scale:
 
@@ -212,7 +212,13 @@ Scale:
 
 - **Meets min website req. (for Incubating):** Doc assessment in progress. Very little documentation is published directly on the website. Most docs are in GitHub, only a few of those are directly linked from the website.
 
+- **Branding and design:** Brand is evident across the website but the button component is an exception; it does not conform to the in-toto design/brand.
+
 - **Case studies/social proof:** Menu item **About > Adoptions & Integrations** links to GitHub repo with folders created and maintained by adopters. No icons or listing of adopters on the web site.
+
+- **Maintenance planning:** Website runs on Hugo, which is well supported by the community. Hard to tell who maintains what. Inotherwords, there are no custodians for website maintenance.
+
+- **A11y plan & implementation:** The in-toto website is accessible but lacks in some vital areas such as: element naming, color contrast, and internationalization.
 
 - **HTTPS access & HTTP redirect:** HTTPS is the default, HTTP redirects correctly.
 
@@ -226,6 +232,18 @@ _Include a list of the top 404s, as reported through analytics or a search conso
 _Provide a list of recommendations to improve in this area_
 // should we include status of maturity-level requirements? Like this one:
 // https://hackmd.io/@cncf-tech-docs/S1-7wvcah#Minimal-website-requirements
+
+**A11y plan & implementation**
+The following needs to be improved:
+1. Images: Image elements must have an `alt` attribute.
+2. Color contrast: Button background and foreground colors does not have enough contrast. Primary recommendation is to use a darker color as background and lighter color as foreground. Please note that background color must match with the project's brand color.
+3. Internationalization: The `HTML` tag must have a `lang` attribute set.
+
+**Google Analytics 4 for production only**
+Website must have analytics added to it to help monitor site traffic and diagonise issues like 404. We recommend you use the [Google Analytics 4 (GA4)](https://github.com/cncf/techdocs/blob/main/docs/analytics.md) tool. Please note that project must be added to the CNCF's GA4 account. Feel free to reach out to the CNCF team via the Servicedesk platform for further assistance.
+
+**Account custodians are documented**
+Setup an `OWNERS.md` document outlining each maintainer and their respective area of ownership.
 
 ## Recommendation Summary
 
