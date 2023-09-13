@@ -43,6 +43,17 @@ Scale:
 
 ### Comments
 
+This assessment evaluates the website and technical documentation for the Backstage open source software (OSS) project owned by the Cloud Native Computing Foundation (CNCF). 
+
+#### Scope of Assessment
+
+The assessed documentation includes the entire contents of the website at https://backstage.io (which also contains the technical docs at https://backstage.io/docs), as well as documentation for contributors and users on the Backstage GitHub repository at https://github.com/backstage/backstage. The assessment does not include Spotify's Backstage website at https://backstage.spotify.com/.
+
+The Backstage website and documentation are written in Markdown and are compiled using the Docusaurus static site generator. The site's code is stored on the Backstage GitHub repo.
+
+#### Introduction
+
+
 Backstage is a platform for organizing and managing software projects. This complicates the documentation, because it can be difficult to distinguish among several levels of involvement with Backstage:
 
 1. Use of Backstage as an organizational contributor (coder, DevOp, tech writer) to catalog, create, or document software.
@@ -85,6 +96,8 @@ The documentation seems **feature complete**. All software features are document
 
 **Reference information** exists, including for **APIs**, but is scattered throughout the documentation.
 
+**Organizing individual pages**: As I survey the existing documentation, I'm noticing a general issue with many individual pages: trying to include too much information on one page. Often a task is mixed with reference information or with more conceptual information than is necessary to support the task. It's usually a good idea to focus on one type of information per page, especially when presenting instructional content: the page should present only what information is necessary to do the task, and nothing else. Examples of information that should be on a different (but linked) page: Explanations of the task's purpose; command references (except the exact commands needed to complete the task); and examples, such as config file entries (again, except as necessary). 
+
 It's not clear that the documentation is completely **up to date**, although [release notes](https://backstage.io/docs/releases/v1.17.0) exist and are easily findable.
 
 Examples:
@@ -114,7 +127,7 @@ There does not seem to be any mechanism for **versioning** documentation content
 
 Examples:
 
-* https://kubernetes.io/docs/contribute/
+* https://github.com/kubernetes/website
 
 #### Content creation processes
 
@@ -219,6 +232,8 @@ The Backstage OSS **community** is visible and accessible on a [community page](
 
 **Help** is available in any of the discussion groups and through a [community page](https://github.com/backstage/community) on GitHub. Help resources are not linked from the Getting Started documentation.
 
+Backstage is listed in the [Clotributor](https://clotributor.dev/) tool.
+
 Examples:
 
 * https://github.com/helm/community
@@ -319,7 +334,7 @@ Examples:
 **Analytics**
 
   - **Analytics** is enabled for the production server using **GA4**.
-  - Analytics is **disabled for all other deploys**? 
+  - Analytics is **disabled for all other deploys**.
   - **Page-not-found (404) reports** are easily generated from the site.
 
 **Site indexing**
