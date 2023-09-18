@@ -50,6 +50,93 @@ Similarly, the depth and detail of introductory conceptual material should be cl
 
 Readers planning to extend the tools or implement the specification require more depth of information about the architectural intentions and decision criteria, which would just be confusing and unnecessary to other reader populations.  
 
+**Actionable items**
+
+The goal is to move all the docs to a single platform like read-the-docs (RTD) and organize it with a good ToC, conceptual material that introduces  information in context, and where appropriate, indexes for specific audiences or subject areas. That will take some time to accomplish, and in the meantime, we recommend that a guide to existing docs be created on the new Doc home page.
+
+1. To be immediately useful, the new **Doc home page** should provide a **top-level roadmap** to existing docs. This is a necessary step in raising the maturity level of this project. 
+
+   Review [CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for the project home page and architecture. Consult with CNCF TechDocs or other professional technical documentation specialists to develop an appropriate information architecture based on the different user populations and their specific tasks and information needs.
+
+- The new **Doc home page** should probably be the landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc. Tech overviews addressed to specific audiences should be added to RTD as text-only pages, organized by intended audience. 
+
+- The new **Doc home page** should initially describe and provide access to the Specification, the basic demo, and the read-the-docs reference material, and provide an overview of the git repo structure.
+  
+   -  As a stop-gap, add a top-level TOC for the Spec to show what is in it, and also point to the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) for detailed reference information for the Python reference implementation.
+   
+   - A more comprehensive fix is to move important sections out of the spec into separate documents, and add them to the Doc home-page TOC. More on that in the New Users section below.
+
+   - The doc-update standard should mandate that the Doc home page be updated to reflect any changes to the doc locations and structure. 
+
+2. A **doc index** on the Doc home page should identify information aimed at particular audiences, much of which is currently in READMEs. For instance, the [ITE spec](https://github.com/in-toto/ITE/blob/master/ITE/1/README.adoc) that describes the ITE process is two levels down from main in the [ITE repo](https://github.com/in-toto/ITE/).
+
+3. **High-level technical overviews** of increasing depth are needed, addressed to specific audiences; evaluators, new users, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...).
+
+- A basic intro, possibly suitable for evaluators, is already surfaced directly on the [home page About tab](https://in-toto.io/in-toto/).
+- The About page has a link to the [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md), which contains a more comprehensive overview. This intro should immediately be surfaced as a Technical Overview document in RTD. It could be linked to the basic one as "Read more...".
+   (The [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf) is broken. This should be fixed or removed.)
+  
+- Determine whether the Tech Overview currently in the spec is suitable for new users or for contributors, and adapt or create another version of suitable depth for the other audience. The most in-depth overview should also point to academic papers for further architectural detail:
+https://www.usenix.org/system/files/sec19-torres-arias.pdf 
+https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias 
+
+3. **Reference material**
+
+- Decide where reference docs for different implementations should live in the doc structure and where their sources live in the repo structure.
+
+- The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation.
+
+- The doc roadmap should also list and link reference docs for other implementations, such as auto-generated docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang. (This doc is not at all parallel with the Python RTD reference doc - it is all in GitHub, and has no introductory or explanatory content, or navigational aids.)
+
+- As noted below, policy and procedures for documenting implementations need to be decided and published for contributors.
+
+4. **New user content**
+
+- The [README for the main repo](https://github.com/in-toto/in-toto) looks like the intended starting place. This content should be surfaced as a separate **"Getting Started" document**, with a prominent pointer on the home page, such as the top menu item in the "Get Started" menu. We recommend moving all of this the doc to a documentation platform such as RTD. Put some brief introductory notes in the README that points the user to the documentation.
+
+- The Getting Started content should explicitly point new users to, for example, a [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology), [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview), and [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description) which are currently embedded in the Specification, as well as the basic [demo](https://github.com/in-toto/demo).
+
+- Include a [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) tailored to new users as the intro to new users.
+
+- The [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) should be surfaced as a separate document and formatted in an alphabetized table for easy reference.
+
+- The [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description) in the spec identifies the different user roles. Adapt this to a separate document that also points to the appropriate doc for each role, which would be particularly helpful to new users.
+
+5. **Content creation process**
+
+- The [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) has an [Edit the Doc button](https://github.com/in-toto/in-toto/blob/develop/doc/source/index.rst). Instead of pointing directly to the source files, it should point to a page with instructions for [doc contributors](https://github.com/in-toto/community/blob/main/CONTRIBUTING.md), and a link to the [governance policies](https://github.com/in-toto/community/blob/main/GOVERNANCE.md).
+
+**Potential Readers**
+
+Every page should be explicitly addressed to a specific audience, and the organization and navigation for the site should explicitly direct users of different types to relevant sections. 
+Readers with the following roles are potential audiences for project documentation. 
+- *Evaluators* determine whether in-toto meets their needs and can be implemented in their organization. 
+    - Evaluators need good high-level technical overview, identification of user roles, setup overview, workflow overview.
+- *End users*  (new and experienced)
+    - **Project owner** defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata. 
+       - New users need overview, demo, templates, basic instructions
+       - Experienced users need deeper architectural info, use cases, examples
+    - **Functionaries** perform the intended actions and produce link metadata for each step.  
+       - New users need basic instructions for verifying the step for which they are responsible.
+       - Experienced users need ?? examples? troubleshooting advice?
+
+- *Contributors* : code  
+   - make code changes: these can be for feature additions or bug fixes to in-toto implementations 
+   - submit changes to specifications: these can be direct changes if they are trivial or as new in-toto Enhancements (ITEs)
+   - create new integrations: in these cases, other projects are updated to generate or use in-toto metadata as appropriate, and these integrations are noted in in-toto/friends 
+   - submit issues, feature requests and more: these are typically implementation or sub-project specific, and can be submitted to the corresponding GitHub repositories
+     
+   *doc needs* These contributors need to understand the GitHub repo structure, the contribution policies and procedures, coding and naming standards and conventions.
+
+- *Contributors* : doc (to be added)
+    -Should use Documentation and Good First Issue tags
+    - Should be responsible for updating doc roadmaps/ToCs, etc.
+
+    *doc needs*  These contributors need clear doc contribution standards, naming and style conventions, and clear instructions on how to create or edit existing doc, and where documents should go (what should go on the website or in GitHub, where a subject fits in the doc architecture)
+
+
+   
+
 ## Project documentation assessment
 
 | Criteria                   | 1   | 2   | 3   | 4   | 5   |
@@ -79,66 +166,13 @@ Scale:
 
 **Information Architecture**
 
-The goal is to move all the docs to a single platform like read-the-docs (RTD) and organize it with a good ToC, conceptual material that introduces  information in context, and where appropriate, indexes for specific audiences or subject areas. That will take some time to accomplish, and in the meantime, we recommmend that a guide to existing docs be created on the new Doc home page.
-
-**Actionable items**
-
-- To be immediately useful, the new **Doc home page** should provide a **top-level roadmap** to existing docs. This is a necessary step in raising the maturity level of this project. 
-
-   Review [CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for the project home page and architecture. Consult with CNCF TechDocs or other professional technical documentation specialists to develop an appropriate information architecture based on the different user populations and their specific tasks and information needs. 
-
-- The new **Doc home page** should initially describe and provide access to the Specification, the basic demo, and the read-the-docs reference material, and provide an overview of the git repo structure. 
-  
-   -  As a stop-gap, add a top-level TOC for the Spec to show what is in it, and also point to the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) for detailed reference information for the Python reference implementation.
-   
-   - A more comprehensive fix is to move important sections out of the spec into separate documents, and add them to the Doc home-page TOC. More on that in the New Users section below.
-
-   - The doc-update standard should mandate that the Doc home page be updated to reflect any changes to the doc locations and structure. 
-
-- The purpose of specific GitHub repos and folders is not obvious and doesn't seem to be described anywhere. This makes it difficult to find doc and doc sources.
+The purpose of specific GitHub repos and folders is not obvious and doesn't seem to be described anywhere. This makes it difficult to find doc and doc sources.
    - The [docs repo](https://github.com/in-toto/docs) contains the spec, which is a very good spec, but is also apparently standing in for user documentation. The README for this repo does not (despite the name) say anthing explicitly about documentation, or explain what is supposed to go in the repo. 
    - The  [in-toto/in-toto folder](https://github.com/in-toto/in-toto/tree/develop/in_toto) contains the Python reference implementation, but that is not obvious from the name or placement.
    - The reference-doc sources are not in the docs repo, but are instead in a [doc folder](https://github.com/in-toto/in-toto/tree/develop/doc/source) along with the Python implementation. Is this going to be the policy for reference doc sources?
    - Much documentation is in READMEs for the many repos. 
 
   A combination of renaming and restructuring can resolve some of the discoverability problems. A comprehensive repo map and documentation guide can do more. 
-
-- A **doc index** on the Doc home page should identify information aimed at particular audiences, much of which is currently in READMEs. For instance, the [ITE spec](https://github.com/in-toto/ITE/blob/master/ITE/1/README.adoc) that describes the ITE process is two levels down from main in the [ITE repo](https://github.com/in-toto/ITE/).
-
-**High-level technical overviews** of increasing depth are needed, addressed to specific audiences; evaluators, new users, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...). 
-- A basic intro, possibly suitable for evaluators, is already surfaced directly on the [home page About tab](https://in-toto.io/in-toto/). 
-   The About page has a link to the [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md), which contains a more comprehensive overview. This intro should immediately be surfaced as a Technical Overview document in RTD. It could be linked to the basic one as "Read more...".
-   (The [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf) is broken. This should be fixed or removed.)
-  
-- Determine whether the Tech Overview currently in the spec is suitable for new users or for contributors, and adapt or create another version of suitable depth for the other audience. The most in-depth overview should also point to academic papers for further architectural detail:
-https://www.usenix.org/system/files/sec19-torres-arias.pdf 
-https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias 
-
-- The new Doc home page should probably be the landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc. Tech overviews addressed to specific audiences should be added to RTD as text-only pages, organized by intended audience. 
-
-**Reference docs** for different implementations
-
-- Decide where reference docs for different implementations should live in the doc structure and where their sources live in the repo structure.
-
-- The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation.
-
-- The doc roadmap should also list and link reference docs for other implementations, such as auto-generated docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang. (This doc is not at all parallel with the Python RTD reference doc - it is all in GitHub, and has no introductory or explanatory content, or navigational aids.)
-
-- As noted below, policy and procedures for documenting implementations need to be decided and published for contributors.
-
-**New user content**
-
-- The [README for the main repo](https://github.com/in-toto/in-toto) looks like the intended starting place. This content should be surfaced as a separate **"Getting Started" document**, with a prominent pointer on the home page, such as the top menu item in the "Get Started" menu.
-
-We recommend moving all of this the doc to a documentation platform such as RTD. Put some brief introductory notes in the README that points the user to the documentation.
-
-- The Getting Started content should explicitly point new users to, for example, a [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology), [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview), and [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description) which are currently embedded in the Specification, as well as the basic [demo](https://github.com/in-toto/demo).
-
-- Include a [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) tailored to new users as the intro to new users.
-
-- The [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) should be surfaced as a separate document and formatted in an alphabetized table for easy reference.
-
-- The [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description) in the spec identifies the different user roles. Adapt this to a separate document that also points to the appropriate doc for each role, which would be particularly helpful to new users.
 
 **Content maintainability**
 
@@ -150,8 +184,6 @@ High-level overviews are provided in several places, and mostly embedded in othe
 - A single source for some of the text would help. 
 
 **Content creation processes**
-
-- The [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) has an [Edit the Doc button](https://github.com/in-toto/in-toto/blob/develop/doc/source/index.rst). Instead of pointing directly to the source files, it should point to a page with instructions for [doc contributors](https://github.com/in-toto/community/blob/main/CONTRIBUTING.md), and a link to the [governance policies](https://github.com/in-toto/community/blob/main/GOVERNANCE.md).
 
 Material explicitly addressed to documentation contributions and standards should be added, and accessible from the top-level doc roadmap as well as from the existing contributor pages.
 - Procedures for creating and maintaining docs need to be documented.
