@@ -16,15 +16,41 @@ This document:
 
 ## How this document works
 
-The assessment is divided into three sections:
+The **Overall Recommendations** section provides a summary of actionable recommendations.
+
+Detailed **Assessments** and corresponding specific recommendations are divided into three sections:
 
 - **Project documentation:** for end users of the project; aimed at people who intend to use it
 - **Contributor documentation:** for new and existing contributors to the project
 - **Website:** branding, website structure, and maintainability
 
-Each section rates content based on different [criteria](criteria.md).
+   Each section rates content based on different [criteria](criteria.md).
 
-## Project documentation
+## Overall Recommendations
+
+The maturity level of the project requires that the documentation be available from the in-toto website. We recommend **moving most of the documentation onto the website** so that it can properly indexed and maintained, and adding a **Documentation home page**, accessed from the project home page and a top-level menu or menu-item in the About menu.
+
+The documentation currently living in the various GitHub repos should be brought into the explicit Docs website, as the "source of truth" set of documentation. We recommend moving most of the documentation content into a documentation tool so that it can properly indexed and maintained. Generally, the CNCF TechDocs team suggests a stack of: Hugo - Netlify - Docsy.
+
+Because the reference material for the Python reference implementation is already in read-the-docs (RTD) and available online at https://in-toto.readthedocs.io/, you could continue using that tool. The existing https://in-toto.readthedocs.io/ location can be turned into a Docs home page, and linked prominently under a Documentation button on the home page. The reference material should be a clearly labeled section within that site. The site should be expanded to include the conceptual and instructional material that is now scattered around GitHub and PDF white papers. 
+
+- The reference material currently in RTD is complete and well-structured. However, it is not immediately discoverable, and it is not clear that it applies only to the Python reference implementation. This can be made clear with proper indexing and labeling.
+- There seems to be no plan for supplying similar reference doc for other implementations (such as auto-generated but very differently presented reference docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang). A documentation policy for implementers should be developed.
+
+Documentation should be organized with the reader audience in mind. For example:
+- End-users with specific roles should be clearly directed to instructional material for performing specific tasks.
+- Administrators who are configuring the tool have a different set of tasks, and require different instructions and reference material.
+- Spec implementors are another reader population who need information on how to provide reference doc for their implementations.
+- Contributors should be pointed to the contribution and governance rules, and be able to find good first issues to get started on.
+
+Similarly, the depth and detail of introductory conceptual material should be clearly addressed to and tailored to:
+
+- *Evaluators* who are deciding whether to adopt the tool. This could be on the main website, with a marketing slant.
+- *New users* who will need to either use or configure the tool. This could be the intro that is on or linked prominently from the Doc Home Page.
+
+Readers planning to extend the tools or implement the specification require more depth of information about the architectural intentions and decision criteria, which would just be confusing and unnecessary to other reader populations.  
+
+## Project documentation assessment
 
 | Criteria                   | 1   | 2   | 3   | 4   | 5   |
 | ---                        | --- | --- | --- | --- | --- |
@@ -41,13 +67,11 @@ Scale:
 
 **Comments**
 
-- **Information Architecture:** Content is well-written, clear, and fairly complete, but scattered among the Specification, GitHub READMEs, and read-the-docs.
-
-  The reference information in read-the-docs is complete and well-structured, but not immediately discoverable. It is not clear that it applies only to the Python reference implementation. There seems to be no plan for supplying similar reference doc for other implementations (such as auto-generated but very differently presented reference docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang). 
+- **Information Architecture:** Content is well-written, clear, and fairly complete, but scattered among the Specification, GitHub READMEs, and read-the-docs. Almost all doc content is in GitHub (in README files, the Specification, or comments in demos). Most of it should be surfaced to indexed documents on the website to make it versionable, editable, and localizable. The README files can then provide a quick summary of what is in the repo, and link to the Doc home page (or directly into a relevant section of the web doc) for detailed information.
 
 - **New user content:** Lots of good intro material and get-started demos, but not immediately discoverable or identifiable. The Specification has an excellent high-level overview that includes the expected workflow, identifies user roles, and provides a Glossary. The Get Started menu on the home page points to demos and the spec, but not to the [README for the main repo](https://github.com/in-toto/in-toto), which looks like the intended starting place specifically addressed to new users.
 
-- **Content maintainability:** The scattered docs make specific info hard to find, and lead to duplication that can complicate maintainance.
+- **Content maintainability:** The scattered docs make specific info hard to find, and lead to duplication that can complicate maintainance. Consolidating the docs into a separate, well-structured web site will allow you to have a single "source of truth". and enable versioning and maintenance.
 
 - **Content creation processes:** The [Contributing](https://github.com/in-toto/community/blob/main/CONTRIBUTING.md) and [Governance](https://github.com/in-toto/community/blob/main/GOVERNANCE.md) do not mention changes or additions to documentation as a potential area of contribution.
 
@@ -55,15 +79,15 @@ Scale:
 
 **Information Architecture**
 
-- The maturity level of the project requires that the documentation be available from the in-toto website. We recommend **moving most of the documentation onto the website** so that it can properly indexed and maintained, and adding a **Documentation home page**, accessed from the project home page and a top-level menu or menu-item in the About menu.
+The goal is to move all the docs to a single platform like read-the-docs (RTD) and organize it with a good ToC, conceptual material that introduces  information in context, and where appropriate, indexes for specific audiences or subject areas. That will take some time to accomplish, and in the meantime, we recommmend that a guide to existing docs be created on the new Doc home page.
 
-   The goal is to move all the docs to a single platform like read-the-docs (RTD) and organize it with a good ToC, conceptual material that introduces  information in context, and where appropriate, indexes for specific audiences or subject areas. That will take some time to accomplish, and in the meantime, we recommmend that a guide to existing docs be created on the new Doc home page.
+**Actionable items**
 
-- To be immediately useful, the new Doc home page should provide **top-level roadmap** to existing docs. This is a necessary step in raising the maturity level of this project. 
+- To be immediately useful, the new **Doc home page** should provide a **top-level roadmap** to existing docs. This is a necessary step in raising the maturity level of this project. 
 
-   Review [CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for the project home page and architecture.
+   Review [CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for the project home page and architecture. Consult with CNCF TechDocs or other professional technical documentation specialists to develop an appropriate information architecture based on the different user populations and their specific tasks and information needs. 
 
-  The new **Doc home page** should initially describe and provide access to the Specification, the basic demo, and the read-the-docs reference material, and provide an overview of the git repo structure. 
+- The new **Doc home page** should initially describe and provide access to the Specification, the basic demo, and the read-the-docs reference material, and provide an overview of the git repo structure. 
   
    -  As a stop-gap, add a top-level TOC for the Spec to show what is in it, and also point to the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) for detailed reference information for the Python reference implementation.
    
@@ -81,7 +105,7 @@ Scale:
 
 - A **doc index** on the Doc home page should identify information aimed at particular audiences, much of which is currently in READMEs. For instance, the [ITE spec](https://github.com/in-toto/ITE/blob/master/ITE/1/README.adoc) that describes the ITE process is two levels down from main in the [ITE repo](https://github.com/in-toto/ITE/).
 
-**High-level technical overviews** of increasing depth are needed, addressed to specific audiences; evaluators, new users, experienced users, contributors of different types (ITE proposers, doc writers and editors...). 
+**High-level technical overviews** of increasing depth are needed, addressed to specific audiences; evaluators, new users, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...). 
 - A basic intro, possibly suitable for evaluators, is already surfaced directly on the [home page About tab](https://in-toto.io/in-toto/). 
    The About page has a link to the [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md), which contains a more comprehensive overview. This intro should immediately be surfaced as a Technical Overview document in RTD. It could be linked to the basic one as "Read more...".
    (The [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf) is broken. This should be fixed or removed.)
@@ -164,11 +188,20 @@ Scale:
 
 **Communication methods documented**
 
-- Since most of the documentation is in GitHub, rather than on the web site, the [Contact channels list](https://in-toto.io/contact/) could be usefully added to the READMEs for the [main](https://github.com/in-toto/in-toto) and [community](https://github.com/in-toto/community) repos.
+- Since most of the documentation is currently in GitHub, rather than on the web site, the [Contact channels list](https://in-toto.io/contact/) could be usefully added to the READMEs for the [main](https://github.com/in-toto/in-toto) and [community](https://github.com/in-toto/community) repos.
+- Contact info, which is unlikely to change, can also be duplicated in a clearly labeled section of the new Docs website.
 
 **Beginner friendly issue backlog**
 
 - Documentation would benefit from a backlog of issues labeled with both "Good First Issue" and "Documentation". Use of these labels would have to be strongly encouraged in getting-started content for contributors.
+- CNCF has developed a new tool that can help: https://clotributor.dev/, https://github.com/cncf/clotributor
+   
+   One of the CLOTributor's goals is to surface interesting opportunities for potential contributors to Cloud Native projects, allowing them to find those that suit their skills and interests best. To achieve this, CLOTributor scans periodically hundreds of repositories, indexing issues that match certain criteria:
+
+   - Contain the help wanted label
+   - Their state is OPEN
+   - They are unassigned
+   - Updated within the last year
 
 **“New contributor” getting started content**
 
