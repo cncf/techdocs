@@ -16,28 +16,25 @@ This document:
 
 ## How this document works
 
-The **Overall Recommendations** section provides a summary of actionable recommendations.
+- The **Recommendation Summary** provides a summary of the direction the documentation  organization and architecture should take to improve its effectiveness.
+- The **Recommended Actions** section lists suggested steps for achieving the recommended goals.
 
-Detailed **Assessments** and corresponding specific recommendations are divided into three sections:
+Detailed **Assessments** rate the maturity state of current content based on different [criteria](criteria.md), and provides some corresponding specific recommendations.
+Assessments are divided into three sections:
 
 - **Project documentation:** for end users of the project; aimed at people who intend to use it
 - **Contributor documentation:** for new and existing contributors to the project
 - **Website:** branding, website structure, and maintainability
 
-   Each section rates content based on different [criteria](criteria.md).
-
-## Overall Recommendations
+## Recommendation Summary
 
 The maturity level of the project requires that the documentation be available from the in-toto website. We recommend **moving most of the documentation onto the website** so that it can properly indexed and maintained, and adding a **Documentation home page**, accessed from the project home page and a top-level menu or menu-item in the About menu.
 
 The documentation currently living in the various GitHub repos should be brought into the explicit Docs website, as the "source of truth" set of documentation. We recommend moving most of the documentation content into a documentation tool so that it can properly indexed and maintained. Generally, the CNCF TechDocs team suggests a stack of: Hugo - Netlify - Docsy.
 
-Because the reference material for the Python reference implementation is already in read-the-docs (RTD) and available online at https://in-toto.readthedocs.io/, you could continue using that tool. The existing https://in-toto.readthedocs.io/ location can be turned into a Docs home page, and linked prominently under a Documentation button on the home page. The reference material should be a clearly labeled section within that site. The site should be expanded to include the conceptual and instructional material that is now scattered around GitHub and PDF white papers. 
+- Because the reference material for the Python reference implementation is already in read-the-docs (RTD) and available online at https://in-toto.readthedocs.io/, you could continue using that tool. The existing https://in-toto.readthedocs.io/ location can be turned into a Docs home page, and linked prominently under a Documentation button on the home page. The reference material should be a clearly labeled section within that site. The existing site can be expanded to include the conceptual and instructional material that is now scattered around GitHub and PDF white papers. 
 
-- The reference material currently in RTD is complete and well-structured. However, it is not immediately discoverable, and it is not clear that it applies only to the Python reference implementation. This can be made clear with proper indexing and labeling.
-- There seems to be no plan for supplying similar reference doc for other implementations (such as auto-generated but very differently presented reference docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang). A documentation policy for implementers should be developed.
-
-Documentation should be organized with the reader audience in mind. For example:
+To transfer relevant information to the people who need it as efficiently as possible, documentation should be organized with the reader audience in mind. For example:
 - End-users with specific roles should be clearly directed to instructional material for performing specific tasks.
 - Administrators who are configuring the tool have a different set of tasks, and require different instructions and reference material.
 - Spec implementors are another reader population who need information on how to provide reference doc for their implementations.
@@ -48,11 +45,38 @@ Similarly, the depth and detail of introductory conceptual material should be cl
 - *Evaluators* who are deciding whether to adopt the tool. This could be on the main website, with a marketing slant.
 - *New users* who will need to either use or configure the tool. This could be the intro that is on or linked prominently from the Doc Home Page.
 
-Readers planning to extend the tools or implement the specification require more depth of information about the architectural intentions and decision criteria, which would just be confusing and unnecessary to other reader populations.  
+Readers planning to extend the tools or implement the specification require more depth of information about the architectural intentions and decision criteria, which would just be confusing and unnecessary to other reader populations. See a more detailed analysis of **Reader Roles** and their documentation needs below, following the list of specific actionable items.
+  
+## Recommended Actions 
 
-**Actionable items**
+Primary recommendation is to move as much documentation as possible from GitHub onto the project website, index the rest.
+The goal is to move all the docs to a single platform like read-the-docs (RTD) and organize it with a good ToC, conceptual material that introduces information in context, and where appropriate, indexes for specific audiences or subject areas. That will take some time to accomplish, and in the meantime, we recommend that a guide to existing docs be created on the new Doc home page.
 
-The goal is to move all the docs to a single platform like read-the-docs (RTD) and organize it with a good ToC, conceptual material that introduces  information in context, and where appropriate, indexes for specific audiences or subject areas. That will take some time to accomplish, and in the meantime, we recommend that a guide to existing docs be created on the new Doc home page.
+To begin achieving this goal, we recommend the following general plan.
+
+1. Initial tasks:
+   - Create a Documentation home page on web site, linked prominently from About menu
+   - Include link to Reference Doc (already in read-the-docs) and clarify that it is for the Python reference implementation 
+   - Create a **Getting Started** page on web site from README content for the main repo (https://github.com/in-toto/in-toto.README.md)
+   -- Link as first menu item in Get started menu (currently 1st item is link to demo)
+   - Surface parts of spec as separate named documents on website, as:
+   -- **Technical Overview** 
+(compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
+   -- [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
+   -- [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
+
+2. Create a high-level technical overview on the project home page suitable for evaluators. See "Reader roles" below".
+3. Create an index or map to existing docs in GitHub as a temporary guide, preparatory to moving that information into RTD and integrating it into the doc architecture.
+4. Contributor doc priorities 
+   - Add Documentation as a contribution area, clarify process.
+   - Specify a documentation "champion" to review and approve doc PRs, decide doc issue priorities -- Justin Cappos?
+   - Develop doc standards (style guide, page templates, locations)
+   - Develop and document a doc versioning/update process  
+5. Clearly identify and name the populations of readers and what they need and can reasonably expect from in-toto documentation.
+   The documentation should be organized into sections that are clearly aimed at specific reader types with similar goals and information needs.
+   Every page should be explicitly addressed to a specific audience. 
+ 
+### Specific actionable items
 
 1. To be immediately useful, the new **Doc home page** should provide a **top-level roadmap** to existing docs. This is a necessary step in raising the maturity level of this project. 
 
@@ -80,17 +104,17 @@ The goal is to move all the docs to a single platform like read-the-docs (RTD) a
 https://www.usenix.org/system/files/sec19-torres-arias.pdf 
 https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias 
 
-3. **Reference material**
+4. **Reference material**
 
-- Decide where reference docs for different implementations should live in the doc structure and where their sources live in the repo structure.
+The reference material currently in RTD is complete and well-structured. However, it is not immediately discoverable, and it is not clear that it applies only to the Python reference implementation. This can be made clear with proper indexing and labeling. 
 
-- The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation.
+   - The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation. It should also list and link reference docs for other implementations, such as auto-generated docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang. (This doc is not at all parallel with the Python RTD reference doc - it is all in GitHub, and has no introductory or explanatory content, or navigational aids.)
 
-- The doc roadmap should also list and link reference docs for other implementations, such as auto-generated docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang. (This doc is not at all parallel with the Python RTD reference doc - it is all in GitHub, and has no introductory or explanatory content, or navigational aids.)
+There seems to be no plan for supplying similar reference doc for other implementations (such as auto-generated but very differently presented reference docs for the Go implementation: https://pkg.go.dev/github.com/in-toto/in-toto-golang). A documentation policy for implementers should be developed.
 
-- As noted below, policy and procedures for documenting implementations need to be decided and published for contributors.
+   - Decide where reference docs for different implementations should live in the doc structure and where their sources live in the repo structure. Publish the policy and procedures for developers to document their implementations.
 
-4. **New user content**
+5. **New user content**
 
 - The [README for the main repo](https://github.com/in-toto/in-toto) looks like the intended starting place. This content should be surfaced as a separate **"Getting Started" document**, with a prominent pointer on the home page, such as the top menu item in the "Get Started" menu. We recommend moving all of this the doc to a documentation platform such as RTD. Put some brief introductory notes in the README that points the user to the documentation.
 
@@ -102,40 +126,47 @@ https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias
 
 - The [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description) in the spec identifies the different user roles. Adapt this to a separate document that also points to the appropriate doc for each role, which would be particularly helpful to new users.
 
-5. **Content creation process**
+6. **Content creation process**
 
 - The [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) has an [Edit the Doc button](https://github.com/in-toto/in-toto/blob/develop/doc/source/index.rst). Instead of pointing directly to the source files, it should point to a page with instructions for [doc contributors](https://github.com/in-toto/community/blob/main/CONTRIBUTING.md), and a link to the [governance policies](https://github.com/in-toto/community/blob/main/GOVERNANCE.md).
 
-**Potential Readers**
+### Reader roles
 
-Every page should be explicitly addressed to a specific audience, and the organization and navigation for the site should explicitly direct users of different types to relevant sections. 
+To get the right information to the right reader, each page should be explicitly addressed to a specific audience, and the organization and navigation for the site should explicitly direct users of different types to relevant sections.
+
 Readers with the following roles are potential audiences for project documentation. 
-- *Evaluators* determine whether in-toto meets their needs and can be implemented in their organization. 
-    - Evaluators need good high-level technical overview, identification of user roles, setup overview, workflow overview.
-- *End users*  (new and experienced)
-    - **Project owner** defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata. 
-       - New users need overview, demo, templates, basic instructions
-       - Experienced users need deeper architectural info, use cases, examples
-    - **Functionaries** perform the intended actions and produce link metadata for each step.  
-       - New users need basic instructions for verifying the step for which they are responsible.
-       - Experienced users need ?? examples? troubleshooting advice?
-
-- *Contributors* : code  
-   - make code changes: these can be for feature additions or bug fixes to in-toto implementations 
-   - submit changes to specifications: these can be direct changes if they are trivial or as new in-toto Enhancements (ITEs)
-   - create new integrations: in these cases, other projects are updated to generate or use in-toto metadata as appropriate, and these integrations are noted in in-toto/friends 
-   - submit issues, feature requests and more: these are typically implementation or sub-project specific, and can be submitted to the corresponding GitHub repositories
-     
-   *doc needs* These contributors need to understand the GitHub repo structure, the contribution policies and procedures, coding and naming standards and conventions.
-
-- *Contributors* : doc (to be added)
-    -Should use Documentation and Good First Issue tags
-    - Should be responsible for updating doc roadmaps/ToCs, etc.
-
-    *doc needs*  These contributors need clear doc contribution standards, naming and style conventions, and clear instructions on how to create or edit existing doc, and where documents should go (what should go on the website or in GitHub, where a subject fits in the doc architecture)
-
-
+- **Evaluators** determine whether in-toto meets their needs and can be implemented in their organization.  
+   - DOC NEEDS: Good high-level technical overview w/marketing slant, analysis business benefits, adoption and success stories, and workflow overview.
+- **End users**  new and experienced 
+   - *Project owner* defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata.
+      - DOC NEEDS: New users need overview, demo, templates, basic instructions. Experienced users need deeper architectural info, use cases, examples
+   - *Functionaries* perform the intended actions and produce link metadata for each step.
+      - DOC NEEDS:  *?? do these users read in-toto doc at all, or is the project owner responsible for
+          instructing them in how to sign and verify their steps??* 
    
+- **Contributors** : *code*
+   - These are members of the community who:
+
+        - *make code changes*: these can be for feature additions or bug fixes to in-toto implementations 
+        - *submit changes to specifications*: these can be direct changes if they are trivial or as new in-toto Enhancements (ITEs)
+        - *create new integrations*: in these cases, other projects are updated to generate or use in-toto metadata as appropriate, and these integrations are noted in in-toto/friends 
+        - *submit issues, feature requests and more*: these are typically implementation or sub-project specific, and can be submitted to the corresponding GitHub repositories
+
+   DOC NEEDS: 
+      These contributors need to understand the GitHub repo structure, the contribution policies and procedures, coding and naming standards and conventions.
+      ITE developers and integrators need direction on how and where to document their own additions.
+
+- **Contributors** : *doc* (to be added)\
+   - These are members of the community who use the **Edit** button to make changes to published documents, or create new documentation. 
+        
+   DOC NEEDS: 
+   These contributors need clear doc contribution standards, naming and style conventions, and clear instructions on how to create or edit existing doc, and where documents should go (that is, what should go on the website or in GitHub, where a subject fits in the doc architecture)
+  
+  Contributor docs should:
+  
+   - List reviewers/approvers for doc changes and additions.
+   - Encourage the use of Documentation and Good First Issue tags for issues and PRs.
+   - Make doc contributors responsible for updating doc roadmaps/ToCs, to reflect any changes they make to the doc structure (adding or moving documents).
 
 ## Project documentation assessment
 
@@ -292,7 +323,7 @@ Scale:
 _Provide comments for each rating above, 1-2 sentences max, bullet point list_
 _Include a list of the top 404s, as reported through analytics or a search console._
 
-**Recommendations**
+**Recommendations for website-specific issues**
 
 _Provide a list of recommendations to improve in this area_
 // should we include status of maturity-level requirements? Like this one:
@@ -309,67 +340,3 @@ Website must have analytics added to it to help monitor site traffic and diagoni
 
 **Account custodians are documented**
 Setup an `OWNERS.md` document outlining each maintainer and their respective area of ownership.
-
-## Recommendation Summary
-
-The following sections contain recommendations for improvements to the project documentation. 
-These recommendations are for broad improvements that would greatly increase documentation effectiveness. 
-Further collaboration between technical writers and project leadership is needed to analyze the recommendations into actionable, estimable work efforts.
-
-Primary recommendation is to move as much user doc as possible from GitHub  into a tool such as Read-the-Docs (RTD) and onto the project website, index the rest. 
-1. Initial tasks:
-   - Create a Documentation home page on web site, linked prominently from About menu
-   - Include link to Reference Doc (already in read-the-docs) and clarify that it is for the Python reference implementation 
-   - Create a **Getting Started** page on web site from README content for the main repo (https://github.com/in-toto/in-toto.README.md)
-   -- Link as first menu item in Get started menu (currently 1st item is link to demo)
-   - Surface parts of spec as separate named documents on website, as:
-   -- **Technical Overview** 
-(compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
-   -- [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
-   -- [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
-
-2. Create a high-level technical overview on the project home page suitable for evaluators. See "Reader roles" below".
-3. Create an index or map to existing docs in GitHub as a temporary guide, preparatory to moving that information into RTD and integrating it into the doc architecture.
-4. Contributor doc priorities 
-   - Add Documentation as a contribution area, clarify process.
-   - Specify a documentation "champion" to review and approve doc PRs, decide doc issue priorities -- Justin Cappos?
-   - Develop doc standards (style guide, page templates, locations)
-   - Develop and document a doc versioning/update process  
-5. Clearly identify and name the populations of readers and what they need and can reasonably expect from in-toto documentation.
-   The documentation should be organized into sections that are clearly aimed at specific reader types with similar goals and information needs.
-   Every page should be explicitly addressed to a specific audience.
-
-### Reader roles
-Readers with the following roles are potential audiences for project documentation. 
-- **Evaluators** determine whether in-toto meets their needs and can be implemented in their organization.  
-   - DOC NEEDS: Good high-level technical overview w/marketing slant, analysis business benefits, adoption and success stories, and workflow overview.
-- **End users**  new and experienced 
-   - *Project owner* defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata.
-      - DOC NEEDS: New users need overview, demo, templates, basic instructions. Experienced users need deeper architectural info, use cases, examples
-   - *Functionaries* perform the intended actions and produce link metadata for each step.
-      - DOC NEEDS:  *?? do these users read in-toto doc at all, or is the project owner responsible for
-          instructing them in how to sign and verify their steps??* 
-   
-- **Contributors** : *code*
-   - These are members of the community who:
-
-        - *make code changes*: these can be for feature additions or bug fixes to in-toto implementations 
-        - *submit changes to specifications*: these can be direct changes if they are trivial or as new in-toto Enhancements (ITEs)
-        - *create new integrations*: in these cases, other projects are updated to generate or use in-toto metadata as appropriate, and these integrations are noted in in-toto/friends 
-        - *submit issues, feature requests and more*: these are typically implementation or sub-project specific, and can be submitted to the corresponding GitHub repositories
-
-   DOC NEEDS: 
-      These contributors need to understand the GitHub repo structure, the contribution policies and procedures, coding and naming standards and conventions.
-      ITE developers and integrators need direction on how and where to document their own additions.
-
-- **Contributors** : *doc* (to be added)\
-   - These are members of the community who use the **Edit** button to make changes to published documents, or create new documentation. 
-        
-   DOC NEEDS: 
-   These contributors need clear doc contribution standards, naming and style conventions, and clear instructions on how to create or edit existing doc, and where documents should go (that is, what should go on the website or in GitHub, where a subject fits in the doc architecture)
-  
-  Contributor docs should:
-  
-   - List reviewers/approvers for doc changes and additions.
-   - Encourage the use of Documentation and Good First Issue tags for issues and PRs.
-   - Make doc contributors responsible for updating doc roadmaps/ToCs, to reflect any changes they make to the doc structure (adding or moving documents).
