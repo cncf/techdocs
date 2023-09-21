@@ -5,9 +5,11 @@ Date: 2023-08-29
 
 ## Introduction
 
-This document assesses the quality and completeness of the [in-toto project's](https://in-toto.io/) documentation and website.
+This document assesses the quality and completeness of the in-toto project's documentation and website. Funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects, this document was written to understand the current state of in-toto documentation, and help project leaders identify and resolve the issues leading to documentation improvements. According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. 
 
-This document:
+The documentation assessment is the first step of a CNCF process aimed to assist projects with their documentation efforts. It aims to provide project leaders with an informed understanding of their project documentation, and clarity about what needs to be done..
+
+Towards that end, this document:
 
 - Measures existing documentation quality against the CNCF’s standards
 - Recommends specific and general improvements
