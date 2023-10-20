@@ -1,23 +1,28 @@
-# Backstage Docs Assessment
+# Backstage Docs Analysis
 
 Prepared by: Dave Welsch ([@dwelsch-esi](https://github.com/cncf/techdocs/assessments/0008-backstage.md))<br>
 Date: 2023-09-01
+Most recent update: 10/19/2023
 
 ## Introduction
 
-This document assesses the quality and completeness of the [Backstage](https://backstage.io) project's documentation and website.
+This document discusses the quality and completeness of the [Backstage](https://backstage.io) project's documentation and website.
 
 This document:
 
 - Measures existing documentation quality against the CNCF’s standards
 - Provides examples of great documentation as a reference
 - Recommends a program of key improvements with the largest return on investment
-- Provides guidance to making the recommended improvements actionable TBD
+- Provides guidance to making the recommended improvements actionable
 
 
 ## How this document works
 
-The assessment is divided into three sections:
+The document is split into an analysis and recommendations. 
+- Readers interested only in actionable improvements can skip to the recommendations.
+- Readers interested in the current state of the documenation and the reasoning behind the recommendations should start with the analysis.
+
+The analysis is divided into three sections:
 
 - **Project documentation:** for end users of the project, aimed at people who intend to use it
 - **Contributor documentation:** for new and existing contributors to the project
@@ -30,11 +35,11 @@ Each section begins with a rating based on a rubric with appropriate [criteria](
 
 | Criteria                   | 1   | 2   | 3   | 4   | 5   |
 | ---                        | --- | --- | --- | --- | --- |
-| Information architecture   |     |  :heavy_check_mark:  |  |     |     |
-| New user content           |     |     |     |  :heavy_check_mark:  |     |
-| Content maintainability    |     |   |  :heavy_check_mark:  |     |     |
-| Content creation processes |     |     |  :heavy_check_mark:  |     |     |
-| Inclusive language         |     |     |     |  :heavy_check_mark:  |     |
+| Information architecture   |     |  ✔︎  |  |     |     |
+| New user content           |     |     |     |  ✔︎  |     |
+| Content maintainability    |     |   |  ✔︎  |     |     |
+| Content creation processes |     |     |  ✔︎  |     |     |
+| Inclusive language         |     |     |     |  ✔︎  |     |
 
 Scale:
 - 1 = (Is not present or requires significant work)
@@ -43,11 +48,11 @@ Scale:
 
 ### Comments
 
-This assessment evaluates the website and technical documentation for the Backstage open source software (OSS) project owned by the Cloud Native Computing Foundation (CNCF). 
+This analysis evaluates the website and technical documentation for the Backstage open source software (OSS) project owned by the Cloud Native Computing Foundation (CNCF). 
 
-#### Scope of Assessment
+#### Scope of analysis
 
-The assessed documentation includes the entire contents of the website at https://backstage.io (which also contains the technical docs at https://backstage.io/docs), as well as documentation for contributors and users on the Backstage GitHub repository at https://github.com/backstage/backstage. The assessment does not include Spotify's Backstage website at https://backstage.spotify.com/.
+The assessed documentation includes the entire contents of the website at https://backstage.io (which also contains the technical docs at https://backstage.io/docs), as well as documentation for contributors and users on the Backstage GitHub repository at https://github.com/backstage/backstage. The analysis does not include Spotify's Backstage website at https://backstage.spotify.com/.
 
 The Backstage website and documentation are written in Markdown and are compiled using the Docusaurus static site generator. The site's code is stored on the Backstage GitHub repo.
 
@@ -78,7 +83,7 @@ There are installation and configuration instructions in [Getting Started](https
 1. The instructions describe a local installation.
 2. The user documentation, for the most part, lacks procedural information.
 
-The following sections contain brief assessments of each element of the Project Documentation rubric.
+The following sections contain brief analysiss of each element of the Project Documentation rubric.
 
 #### Information architecture
 
@@ -195,10 +200,10 @@ Reorganizing the site will make the documentation more usable. Not to be overloo
 
 | Criteria                                  | 1   | 2   | 3   | 4   | 5   |
 | ---                                       | --- | --- | --- | --- | --- |
-| Communication methods documented          |     |     |     |  :heavy_check_mark:  |    |
-| Beginner friendly issue backlog           |     |     |     |  :heavy_check_mark:  |     |
-| “New contributor” getting started content |     |     |  :heavy_check_mark:  |     |     |
-| Project governance documentation          |     |     |     |     |  :heavy_check_mark:  |
+| Communication methods documented          |     |     |     |  ✔︎  |    |
+| Beginner friendly issue backlog           |     |     |     |  ✔︎  |     |
+| “New contributor” getting started content |     |     |  ✔︎  |     |     |
+| Project governance documentation          |     |     |     |     |  ✔︎  |
 
 Scale:
 - 1 = (Is not present or requires significant work)
@@ -258,19 +263,19 @@ The only recommendation here is to disentagle the contributor documentation from
 
 | Criteria                                    | 1   | 2   | 3   | 4   | 5   |
 | ---                                         | --- | --- | --- | --- | --- |
-| Single source for all files                 |     |     |  :heavy_check_mark:   |     |     |
-| Meets min website req. (for maturity level) |     |  :heavy_check_mark:   |     |     |     |
-| Branding and design                         |     |     |     |  :heavy_check_mark:   |     |
-| Case studies/social proof                   |     |     |  :heavy_check_mark:   |     |     |
-| SEO, Analytics, and site-local search       |     |     |     |     |  :heavy_check_mark:   |
-| Maintenance planning                        |     |     |   :heavy_check_mark:  |     |     |
-| A11y plan & implementation                  |     |     |     |   :heavy_check_mark:  |     |
-| Mobile-first plan & impl.                   |     |     |  :heavy_check_mark:  |     |     |
-| HTTPS access & HTTP redirect                |     |     |     |     |  :heavy_check_mark:   |
-| Google Analytics 4 for production only      |     |     |     |     |  :heavy_check_mark:    |
-| Indexing allowed for production server only |     |     |     |     |  :heavy_check_mark:    |
-| Intra-site / local search                   |     |     |     |     |  :heavy_check_mark:    |
-| Account custodians are documented           |  :heavy_check_mark:     |  |     |     |     |
+| Single source for all files                 |     |     |  ✔︎   |     |     |
+| Meets min website req. (for maturity level) |     |  ✔︎   |     |     |     |
+| Branding and design                         |     |     |     |  ✔︎   |     |
+| Case studies/social proof                   |     |     |  ✔︎   |     |     |
+| SEO, Analytics, and site-local search       |     |     |     |     |  ✔︎   |
+| Maintenance planning                        |     |     |   ✔︎  |     |     |
+| A11y plan & implementation                  |     |     |     |   ✔︎  |     |
+| Mobile-first plan & impl.                   |     |     |  ✔︎  |     |     |
+| HTTPS access & HTTP redirect                |     |     |     |     |  ✔︎   |
+| Google Analytics 4 for production only      |     |     |     |     |  ✔︎    |
+| Indexing allowed for production server only |     |     |     |     |  ✔︎    |
+| Intra-site / local search                   |     |     |     |     |  ✔︎    |
+| Account custodians are documented           |  ✔︎     |  |     |     |     |
 
 Scale:
 - 1 = (Is not present or requires significant work)
@@ -292,13 +297,13 @@ Listed and acknowledged below are the (cumulative) _minimal_ website requirement
 | Maturity | Requirement | Met? |
 | ---      | ---         | --- |
 | Sandbox  | Majority of [Website guidelines](../docs/website-guidelines-checklist.md) satisfied | yes |
-| Sandbox | [Docs assessment](https://github.com/cncf/techdocs/blob/main/assessments/howto.md) [submitting a request](https://servicedesk.cncf.io) completed. | yes |
+| Sandbox | [Docs analysis](https://github.com/cncf/techdocs/blob/main/assessments/howto.md) [submitting a request](https://servicedesk.cncf.io) completed. | yes |
 | Incubating | All [Website guidelines](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) satisfied | no |
-| Incubating | Request docs (re-)assessment through CNCF [service desk](https://servicedesk.cncf.io) | yes |
+| Incubating | Request docs (re-)analysis through CNCF [service desk](https://servicedesk.cncf.io) | yes |
 | Incubating | **Project doc**: stakeholders (roles) identified and doc needs documented | no |
 | Incubating | **Project doc**: Hosted directly | yes |
 | Incubating | **Project doc**: Comprehensive, addressing most stakeholder needs | no |
-| Graduated | [Docs assessment](https://github.com/cncf/techdocs/blob/main/assessments/howto.md): all assessment follow-through actions are complete | no |
+| Graduated | [Docs analysis](https://github.com/cncf/techdocs/blob/main/assessments/howto.md): all analysis follow-through actions are complete | no |
 | Graduated | **Project doc** fully addresses needs of key stakeholders | no |
 | Archived | The website repo is in an [archived state](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) | n/a |
 | Archived | Archived status of the project is obvious to site visitors | n/a |
@@ -409,10 +414,171 @@ Improve compliance in these areas:
 
 ## Recommendations
 
-The top documentation concerns for this project are:
+The top documentation recommendations for this project are:
 
-- Defining stakeholder roles and disentangling ambiguous roles.
-- Completing instructional documentation for all stakeholder roles, including project contributors.
-- Organizing and "signposting" documentation by role and task so that stakeholders can find documentation that supports their roles' activities.
+- Fill gaps in instructional documentation for all stakeholder roles, including project contributors.
+- Organize and "signpost" documentation by role and task so that stakeholders can find documentation that supports their roles' activities.
 
-(Analysis to actionable tasks and issues)
+### Definitions
+
+These recommendations rely on the following definitions.
+
+#### Organization
+
+These recommendations assume that Backstage is adopted by a medium-to-large *organization* (*org*) made up of a number of *groups*. 
+
+#### Group
+
+A group is defined by its responsibility for one or more software *products* that are manageable in Backstage. 
+
+#### Product
+
+Products can include but are not limited to: internal and external toolkits and APIs; components; databases; and web-based and standalone applications. 
+
+A group needs 1) visibility into the org's entire corpus of products, and 2) to publicize its own software products to the org.
+
+#### Developer
+
+Members of a group can have various functional and organizational roles, including: software engineer; dev-op; QA engineer; software architect; network engineer; engineering manager; and many others. These recommendations refer to a group member generically as a *developer* (*dev*).
+
+#### Contributor
+
+The org has ties to the Backstage open source software (OSS) project in the form of engineers who contribute to the project and who participate in discussions, newsgroups, and other community forums. These OSS participants, regardless of their employer or job function, are called *contributors*.
+
+### User Roles
+
+The only distinctions among Backstage users relevant to these recommendations are among *user roles*. User roles are defined to organize documentation requirements. The following table summarizes the user roles that have been identified, each with its own substantial and unique use cases.
+
+| User Role | Use Cases |
+| --- | --- |
+| Administrator | An IT or DevOps professional responsible for standing up and maintaining an organization's instance of Backstage (the *Backstage app*). |
+| Developer | The Backstage "end user". A developer, part of a group within an organization, who uses Backstage to learn about and use software components within the org and to publish and document their own software. |
+| Integrator | A developer who modifies an org's Backstage app (typically by writing or modifying a plugin) to add functionality required by the org. This modification might or might not then be contributed back to the Backstage OSS project. |
+| Contributor | A developer who supplies a work product (code or documentation, e.g.) to the Backstage open-source project, or who volunteers to participate by providing services (reviews, discussion, or committe membership, e.g.). Much of the contributor documentation is specifically for integrators who contribute plugins or code to the project. |
+
+**A note about adoption champions**: A survey of Backstage adopters entitled "Backstage Insights" was undertaken by Spotify. The survey is summarized briefly in [this document][backstage-insights-summary]. Backstage Insights identifies another role, the *champion*. Due to the complexity and level of commitment required to adopt Backstage, Backstage Insights deems the champion necessary for an organization to successfully adopt Backstage. Adoption and the champion role are not addressed in the Backstage documentation and are beyond the scope of this analysis. They are important considerations, however, that should be addressed by any organization and for which further exploration and documentation would be valuable. 
+
+### Recommendation: Fill gaps in instructional documentation
+
+"Instructional documentation" is a broad category that includes such traditional documentation artifacts as tutorials; getting started guides; procedural recipes or "cookbooks"; runbooks; and how-to guides. We recommend that the project first ensure that basic task documentation is covered, then build out tutorials, cookbooks, and more specialized documentation.
+
+Broadly, the recommendation here is to do this:
+
+1. For every [user role](#user-roles), define the common use cases for each role.
+2. For each use case, develop instructional content, including: 
+    - "happy path" procedures that can be followed by anyone familiar with the product generally
+    - examples
+    - troubleshooting guides
+    - for new users, tutorials
+
+There is instructional content in the Backstage documentaiton. In many cases, it is intermingled with conceptual and reference information. A common example of this is in configuration instructions. Many configurations are embodied in YAML or JSON files, and the documentation web page for the configuration amounts to an explanation of the contents of a particular config file. In such cases, the page should be rewritten as two or three distinct pages: a step-by-step explanation (not just of the file contents, but where to put it, how to load it, and so on); a configuration reference that exhaustively lists all elements that the file can contain; and if necessary an introduction explaining what the configuration controls. 
+
+The sections below give recommendations for the most important instructional documentation improvements to Backstage for each user role.
+
+#### Administrator
+
+The following artifacts need to be written and made findable for administrators.
+
+1. A server installation and setup guide for administrators. Provide clear, step-by-step instructions for downloading and deploying Backstage to an organization. 
+
+    Instructions can also be provided for installing a local, group-level, or test deployment, but these instructions should be separate and clearly labeled as non-production. 
+
+1. An Administrator Guide, with instructions on how to do such things as:
+    - Start and stop the Backstage server
+    - Install and configure Backstage plugins
+    - Manage the many software dependencies for Backstage and its plugins
+    - Maintain the Backstage database
+    - Upgrade and downgrade the Backstage release verison
+    - Troubleshoot common problems
+    - Tune server performance
+
+#### Developer
+
+The following artifacts need to be written and made findable for developers.
+
+1. A getting started guide for developers. Provide a clear work path that describes how to:
+    1. Downloead and install any necessary software components
+    1. Integrate Backstage with an existing development environment
+
+1. A User Guide for developers. Provide clear instructions for these tasks:
+    - Adding an existing product to Backstage
+    - Creating a new product in Backstage
+    - Updating a product in Backstage
+    - Documenting a product in Backstage
+    - Deprecating and retiring a product from Backstage
+    - Searching for a component in Backstage
+
+
+#### Integrator
+
+There are a dizzying array of issues with writing, modifying, and maintaining plugins in Backstage. This is not a detailed recipe for documenting those issues. For integrators, at a high level, a program should be undertaken to:
+
+1. Organize integrator tasks from most basic and common (write a simple plugin; decide between backend and frontend plugin) to more complex (Integrate with external systems; proxies; security).
+2. Where possible, using the exisitng documentation as a starting point, write step-by-step procedures for discrete integration tasks (starting with how to write a basic plugin).
+3. Organize existing reference and conceptual information (such as API references and architecture discussions) into supporting documentation, referenced from the integration tasks.
+
+
+#### Contributor
+
+For a plugin-dependent project like Backstage, it's vital that community members contribute plugins, for two reasons:
+
+1. To expand the base functionality of Backstage by covering common use cases
+2. To provide complete examples of how plugins are structured, written, and added to the project. 
+
+### Organize and "signpost" documentation
+
+Right now different types of documentation (conceptual/architectural; instructional; reference) for different user roles are intermixed throughout the documentation site.
+
+Disentagle the contributor documentation from the product documentation, as described in the [Information architecture recommendations](#recommendations).
+
+**Organize by role and task**
+
+The site should be reorganized based on an overarching principle of grouping together documentation needed by a particular user role for a particular set of tasks. This sounds daunting, but it's the schema behind a traditional developer documentation suite, which can be used as a model. For an example of such a doc suite, see [this blog post](https://expertsupport.com/library/the-ideal-documentation-suite-for-software-developers/). Or [this one](https://expertsupport.com/library/quick-and-easy-document-specifications/) on how to think about a doc specification.
+
+**Provide adequate navigation signals**
+
+Reorganizing the site will make the documentation more usable. Not to be overlooked is the companion task of making the documentation *findable*. This involves creating adequate tables of contents (TOCs), indexes, and a glossary to help navigate the site. Much of this is automated by the static site generator (currently *Docusaurus*), but it's the writer's responsibility to assure that these navigation aids are adequate.
+
+### Recommendation Breakdown - Contributor Documentation
+
+
+### Recommendation Breakdown - Website
+
+
+#### Single-source repo
+
+The documentation is adequately isolated from the code by virtue of being in its own directories; however, its location and build instructions are obscure. Write explicit instructions for contributing to documentation. Emphasize the importance of keeping the documentation directories separate. Make these instructions prominent in the contributor guidelines.
+
+
+#### Minimum website requirements for maturity level
+
+To meet the maturity level standards for a graduated project, update the following aspects as described in [Project documentation](Project-documentation):
+
+- Identify the project and product stakeholder roles.
+- Analyze stakeholder needs.
+- Update and reorganize the documentation with respect to user orientation and task-based support of use cases.
+
+
+#### Case studies/social proof
+
+Implement a **logo wall** of participating organizations, with links to testimonials and/or case studies.
+
+
+#### SEO, Analytics and site-local search
+
+Add documentation and website custodians to the project maintainer lists in `OWNERS.md` and wherever else project maintainers are documented.
+
+
+#### Maintenance planning
+
+Add a prominent call for website and documentation maintainers in the project introduction alongside the call for code maintainers.
+
+
+#### Accessibility
+
+Improve compliance in these areas:
+- **Images** must have alternative text.
+- **Links** must have discernible text.
+
+
+[backstage-insights-summary]: ./backstage-insights-summary.md
