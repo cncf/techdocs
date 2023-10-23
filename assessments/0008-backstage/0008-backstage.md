@@ -6,7 +6,20 @@ Most recent update: 10/22/2023
 
 ## Introduction
 
-This analysis evaluates the website and technical documentation for the [Backstage][backstage-io]  open source software (OSS), a project of the Cloud Native Computing Foundation (CNCF). 
+This document analyzes the quality and completeness of the [Backstage][backstage-io] open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects. 
+
+According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation assessment is the first step of a CNCF process aimed at assisting projects with their documentation efforts. 
+
+### Purpose
+
+This document was written to analyze the current state of Backstage documentation. It aims to provide project leaders with an informed understanding of their project documentation and to outline an actionable plan for improvement.
+
+This document:
+
+- Measures existing documentation quality against the CNCF’s standards
+- Provides examples of great documentation as a reference
+- Recommends a program of key improvements with the largest return on investment
+- Provides guidance to implementing the recommended improvements
 
 ### Scope of analysis
 
@@ -14,17 +27,8 @@ The documentation discussed here includes the entire contents of the website at 
 
 The Backstage website and documentation are written in Markdown and are compiled using the Docusaurus static site generator. The site's code is stored on the Backstage GitHub repo.
 
-### Purpose
 
-This document:
-
-- Measures existing documentation quality against the CNCF’s standards
-- Provides examples of great documentation as a reference
-- Recommends a program of key improvements with the largest return on investment
-- Provides guidance to making the recommended improvements actionable
-
-
-## What this document contains
+## How this document is organized
 
 The document has two parts, *Analysis and recommendations*, and *Implementation*.
 
@@ -440,7 +444,7 @@ Improve compliance in these areas:
 
 This section provides a suggested route to implementing the improvements recommended in the analysis sections. 
 
-The top documentation recommendations for this project are:
+The top-level documentation recommendations for this project are:
 
 - Fill gaps in instructional documentation for all stakeholder roles, including project contributors.
 - Organize and "signpost" documentation by role and task so that stakeholders can find documentation that supports their roles' activities.
@@ -473,10 +477,11 @@ The org has ties to the Backstage open source software (OSS) project through dev
 
 ### User Roles
 
-The only distinctions among Backstage users relevant to this implementation discussion are among *user roles*. User roles are defined to organize documentation requirements. The following table summarizes the user roles that have been identified to have their own substantial and unique use cases.
+The only distinctions among Backstage users relevant to this implementation discussion are among *user roles*. User roles are defined to organize documentation requirements. The following table summarizes the user roles that have been identified for that purpose.
 
 | User Role | Use Cases |
 | --- | --- |
+| Evaluator | Someone who is trying to decide whether to adopt Backstage into an organization. | 
 | Administrator | An IT or DevOps professional responsible for standing up and maintaining an organization's instance of Backstage (the *Backstage app*). |
 | Developer | The Backstage "end user". A developer, part of a group within an organization. Typically but not always a technical contributor, the developer uses Backstage to learn about and use software components within the org and to publish and document their group's software. |
 | Integrator | A developer who modifies an org's Backstage app (typically by writing or modifying a plugin) to add functionality required by the org. This modification might or might not then be contributed back to the Backstage OSS project. |
@@ -500,6 +505,12 @@ Broadly, the recommendation here is to do this:
 There is already some instructional content in the Backstage documentaiton. In many cases, it is intermingled with conceptual and reference information. A common example of this is in configuration instructions. Many configurations are embodied in YAML files, and the documentation web page for the configuration amounts to an explanation of the contents of a particular config file. In such cases, the page should be rewritten as two or three distinct pages: a step-by-step explanation (not just of the file contents, but where to put it, how to load it, and so on); a configuration reference that exhaustively lists all elements that the file can contain; and if necessary an introduction explaining what the configuration controls. 
 
 The sections below give recommendations for the most important instructional documentation improvements to Backstage for each user role.
+
+#### Evaluator
+
+The website guidelines contain elements that are intended to help evaluators decide whether the product is suitable to their needs, such as a logo wall and case studies. 
+
+Technical documentation contains little that is actually geared toward evaluators, but a good technical overview – valuable to all stakeholders – is essential in evaluating the product.
 
 #### Administrator
 
@@ -551,21 +562,77 @@ For a plugin-dependent project like Backstage, it's vital that community members
 1. To expand the base functionality of Backstage by covering common use cases
 2. To provide complete examples of how plugins are structured, written, and added to the project
 
-Contributor documentation should be in README files in the Backstage GitHub repo and should be limited to how to contribute software to the product. "How to write a plugin" documentation should be included in the website-based doc as described above.
+Contributor documentation should be in Markdown files in the Backstage GitHub repo and should be limited to how to contribute software to the product. "How to write a plugin" documentation should be included in the website-based doc as described above.
 
 ### Organize and "signpost" documentation
 
 Right now different types of documentation (conceptual/architectural; instructional; reference) for different user roles are intermixed throughout the documentation site.
 
-Disentagle the contributor documentation from the product documentation, as described in the [User documentation recommendations][proj-doc-rec].
+Disentagle the contributor documentation from the product documentation. 
 
-**Organize by role and task**
+Here is a proposed organization for Backspace by user role. Using exactly this organization is not important. The documentation should reflect the needs of each user role and be organized such that any user has a clear path to learning the software and becoming proficient as quickly as possible.
 
-The site should be reorganized based on an overarching principle of grouping together documentation needed by a particular user role for a particular set of tasks. This sounds daunting, but it's the schema behind a traditional developer documentation suite, which can be used as a model. For an example of such a doc suite, see [this blog post][esi-doc-suite]. Or [this one][esi-doc-spec] on how to think about a doc specification.
+Some documents are for use by more than one user role. These docs are listed first under the heading **Common**.
 
-**Provide adequate navigation signals**
+#### Common
 
-Reorganizing the site will make the documentation more usable. Not to be overlooked is the companion task of making the documentation *findable*. This involves creating adequate tables of contents (TOCs), indexes, and a glossary to help navigate the site. Much of this is automated by the static site generator (currently *Docusaurus*), but it's the writer's responsibility to assure that these navigation aids are adequate.
+| Document | Description |
+| --- | --- |
+| Techncal overview | A discussion of what the product is and what problems it solves. Ideally, the discussion starts with a summary and provides explanations of increasing depth to address to satisfy different audiences (evaluator -> developer -> contributor, e.g.). |
+| Release notes | Release-specific information, including: new features; performance improvements; bugs and known issues; deprecated features; software dependency changes; and experimental or beta features. |
+| Glossary | A dictionary of product-specific terms. Also commonly includes domain- and industry-specific terms that are necessary to understanding the product. |
+| Knowledge base | An encyclopedic collection of related background, conceptual, and reference information that doesn't fit elsewhere in the documentation. Similar to a FAQ, but more structured, more searchable and, therefore, more useful. |
+
+
+#### Evaluator
+
+| Document | Description |
+| --- | --- |
+| Logo wall | Not a technical document, but a *de rigeur* feature on a product website these days. The logo wall shows at a glance an instantly recognizable selection of organizations that use the product. The logos typically link to testimonials or to the organizations' own websites. |
+| Case studies | Another element on a product website that is as much marketing as techncial material, a case study nonetheless helps an evaluator decide whether to adopt the product. A handful of well written case studies is sufficient. |
+
+#### Administrator
+
+| Document | Description |
+| --- | --- |
+| CLI reference | An indexed reference to the command-line interface. The Backstage CLI does a wide variety of tasks and is used both the administrator and by developers. |
+| Installation and configuration guide | A guide to downloading, installing, and configuring an organization-wide Backstage instance ("app"). |
+| Administrator guide | Contains all tasks the administrator requires to maintain the Backstage app: onboarding developers; installing plugins; starting, stopping, upgrading, and troubleshooting the app; using containers; evaluating and tuning server performance.  |
+
+
+#### Developer
+
+| Document | Description |
+| --- | --- |
+| Getting started guide | A document that usually walks a developer through setting up a development environment (for a language or API). In the case of Backstage, this is more of an integration with their existing environment. Nonetheless, this should explain how to configure all the tools the developer needs to begin using Backstage. |
+| Developer guide | Contains all tasks that the developer needs to use the Backstage app under normal circumstances: adding, modifying, and searching for products; writing documentation; using templates. |
+| CLI reference | An indexed reference to the command-line interface. The Backstage CLI does a wide variety of tasks and is used both the administrator and by developers. |
+| Tutorials | Tasks that are good candidates for tutorials are difficult, often-used tasks that must be mastered to use the product effectively. Many of these are probably in daily use by developers. |
+
+| Cookbooks | There might be specialized tasks required of developers by an organization that should be documented, especially if they are performed infrequently. |
+
+
+#### Integrator
+
+| Document | Description |
+| --- | --- |
+| Technical overview | Same as the common technical overview, but an integrator will need more detail about the plugin architecture. |
+| Cookbooks | The integrator will need to write plugins. This encompasses a large body of task knowledge. The best way to document these is as a collection of tasks or procedures explaining how to complete each task. Even with a comprehensive collection of task documents, some creativity is probably required on the integrator's part, since every new plugin by definition is solving a new problem. | 
+
+#### Contributor
+
+| Document | Description |
+| --- | --- |
+| GitHub Instructions | Contributing a plugin to Backstage is essentially an exercise in creating and sheperding a pull request through the Backstage community process. This can be documented entirely in GitHub, or it can be a separate section in the Backstage documentation. Regardless, the contributing instructional material should be separate from the integration/"How to write a plugin" material.  |
+
+
+
+Reference
+Installation, Setup, and Configuration Guide
+Getting Started Guide (“Hello World”)
+Software Design Guide
+Build, Test, Integration and Deployment Guide
+
 
 ### Recommendation Breakdown - Contributor Documentation
 
