@@ -60,8 +60,8 @@ For more context, read the recommendations for each of the three areas of analys
 
 Readers interested in the current state of the documenation and the reasoning behind the recommendations should start with the analyses:
 
-- [Project documentation][proj-doc]
-- [Contributor documentation][def]
+- [Project documentation][project-doc]
+- [Contributor documentation][contrib-doc]
 - [Website][website]
 
 
@@ -623,18 +623,12 @@ Some documents are for use by more than one user role. These docs are listed fir
 
 | Document | Description |
 | --- | --- |
-| GitHub Instructions | Contributing a plugin to Backstage is essentially an exercise in creating and sheperding a pull request through the Backstage community process. This can be documented entirely in GitHub, or it can be a separate section in the Backstage documentation. Regardless, the contributing instructional material should be separate from the integration/"How to write a plugin" material.  |
-
-
-
-Reference
-Installation, Setup, and Configuration Guide
-Getting Started Guide (“Hello World”)
-Software Design Guide
-Build, Test, Integration and Deployment Guide
+| GitHub Instructions | Contributing a plugin to Backstage is essentially an exercise in creating and shepherding a pull request through the Backstage community process. This can be documented entirely in GitHub, or it can be a separate section in the Backstage documentation. Regardless, the contributing instructional material should be separate from the integration/"How to write a plugin" material.  |
 
 
 ### Recommendation Breakdown - Contributor Documentation
+
+Recommendations for contributor documentation are largely the same as for [project documentation][proj-doc-rec], namely, to organize the documentation by user role.
 
 
 ### Recommendation Breakdown - Website
@@ -642,23 +636,18 @@ Build, Test, Integration and Deployment Guide
 
 #### Single-source repo
 
-The documentation is isolated from the code by virtue of being in its own directories; however, its location and build instructions are obscure. Write explicit instructions for contributing to documentation. Emphasize the importance of keeping the documentation directories separate. Make these instructions prominent in the contributor guidelines.
+Move the Backstage documentation out of the [Backstage repo][backstage-github-project] and into its own repo. This repo should be part of the [Backstage project][backstage-backstage]. Write explicit instructions for contributing to documentation and place them in the repo README. 
 
-An even better plan would be to extract the Docusaurus configurations and website documentation to its own repository. The Backstage project already has many repositories. Creating one more for documentation would make the project organization cleaner and make it easier to contribute to the project documentation.
+In the meantime, put references to the documentation contributing and build instructions alongside the project code instructions in the contributor documentation in the Backstage repo.
 
 
 #### Minimum website requirements for maturity level
 
-To meet the maturity level standards for a graduated project, update the following aspects as described in [Project documentation](Project-documentation):
-
-- Identify the project and product stakeholder roles.
-- Analyze stakeholder needs.
-- Update and reorganize the documentation with respect to user orientation and task-based support of use cases.
-
+To meet the maturity level standards for a graduated project, update and reorganize the documentation with respect to user roles as recommended in [*Fill in the gaps*](#implementation-fill-gaps-in-instructional-documentation) and [*Organize and signpost*](#organize-and-signpost-documentation).
 
 #### Case studies/social proof
 
-Implement a **logo wall** of participating organizations, with links to testimonials and/or case studies.
+Implement a **logo wall** of participating organizations, with links to testimonials or the organizations' websites. Write or solicit a handful of representative case studies and link them from the website. 
 
 
 #### SEO, Analytics and site-local search
@@ -674,23 +663,21 @@ Add a prominent call for website and documentation maintainers in the project in
 #### Accessibility
 
 Improve compliance in these areas:
-- **Images** must have alternative text.
-- **Links** must have discernible text.
+- **Images** should have alternative text.
+- **Links** should have discernible text.
 
 
 <!--- References --->
 
 [proj-doc-comments]:              	#comments
-[def]:                            	#contributor-documentation
+[contrib-doc]:                      #contributor-documentation
 [implementation]:                 	#implementation
 [project-doc]:                    	#project-documentation
-[def2]:                           	#recommendations
 [info-arch-recommend]:            	#Recommendations
 [recs-implementation]:            	#recommendations-3
 [contrib-doc-rec]:                	#recommendations-contributor-documentation
 [proj-doc-rec]:                   	#recommendations-user-documentation
 [website-rec]:                    	#recommendations-website
-[proj-doc]:                       	#user-documentation
 [user-roles]:                     	#user-roles
 [website]:                        	#website
 [backstage-io]:                   	https://backstage.io
