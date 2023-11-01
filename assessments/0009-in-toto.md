@@ -9,7 +9,7 @@ This document was written to analyze the current state of in-toto documentation.
 - Provides guidance to implementing the recommended improvements
 
 ## Scope of analysis
-The documentation discussed here includes the contents of the website at https://in-toto.io and https://in-toto.readthedocs.io/, the in-toto Specification, and the documentation for contributors and users in the various GitHub repositories at https://github.com/in-toto.
+The documentation discussed here includes the contents of the website at https://in-toto.io and https://in-toto.readthedocs.io/, the in-toto Specification, and the documentation for contributors and users in the various GitHub repositories at https://github.com/in-toto. See [Survey of existing documentation](#survey-of-existing-documentation) below.
 
 ### How this document is organized
 
@@ -166,15 +166,16 @@ Scale:
 
 **Communication methods documented**
 
-Since most of the documentation is currently in GitHub, rather than on the web site, the Contact channels list could be usefully added to the READMEs for the main and community repos.
-Contact info, which is unlikely to change, can  be linked from a clearly labeled section of the new Docs website.
+   Since most of the documentation is currently in GitHub, rather than on the web site, the Contact channels list could be usefully added to the READMEs for the main and community repos.
+   Contact info, which is unlikely to change, can  be linked from a clearly labeled section of the new Docs website.
 
 **Beginner friendly issue backlog**
 
-Documentation would benefit from a backlog of issues labeled with both "Good First Issue" and "Documentation". 
-Use of these labels would have to be strongly encouraged in getting-started content for contributors.
+   Documentation would benefit from a backlog of issues labeled with both "Good First Issue" and "Documentation". 
+   Use of these labels would have to be strongly encouraged in getting-started content for contributors.
 
-CNCF has developed a new tool, CLOTributor,  that can help orient new contributors: see https://clotributor.dev/ and https://github.com/cncf/clotributor.
+CNCF has developed a new tool, CLOTributor, that can help orient new contributors: see https://clotributor.dev/ and https://github.com/cncf/clotributor.
+
   One of its goals is to surface interesting opportunities for potential contributors to Cloud Native projects, allowing them to find those that suit their skills and interests best. 
   To achieve this, CLOTributor scans periodically hundreds of repositories, indexing issues that match certain criteria:
 
@@ -185,7 +186,7 @@ CNCF has developed a new tool, CLOTributor,  that can help orient new contributo
   
 **“New contributor” getting started content**
 
-The CONTRIBUTING page should have much more explicit instructions for how to submit PRs and how to find good first issues.
+   The CONTRIBUTING page should have much more explicit instructions for how to submit PRs and how to find good first issues.
 
 **Project governance documentation**
 
@@ -241,7 +242,7 @@ Scale:
 
 Reassess these areas after adopting recommendation to transfer most of the documentation to the website.
 
-**A11y plan & implementation **
+**A11y plan & implementation**
 
 The following changes will improve accessibility for all users:
 - Images: Image elements must have an alt attribute.
@@ -306,14 +307,14 @@ To begin achieving the goal of documentation that meets the needs of different u
 1. Initial tasks:
 Create a Documentation home page on web site, linked prominently from About menu. 
 
-Create a **Getting Started** page on web site from README content for the main repo (https://github.com/in-toto/in-toto.README.md)
+   Create a **Getting Started** page on web site from README content for the main repo (https://github.com/in-toto/in-toto.README.md)
 
-Link as first menu item in Get started menu (currently 1st item is link to demo)
+   Link as first menu item in Get started menu (currently 1st item is link to demo)
 
-Expose parts of spec as separate named documents on website, as:
-- [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)  (compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
-- [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
-- [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
+   Expose parts of spec as separate named documents on website, as:
+   - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)  (compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
+   - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
+   - [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
 2. Create a high-level technical overview on the project home page suitable for evaluators (see Reader Roles). This might be one of the existing overviews, or can be adapted from them.
 3. Create an index or map to existing docs as a temporary guide, preparatory to moving that information into RTD and integrating it into a doc architecture.
 4. Encourage documentation contributions:
@@ -330,7 +331,7 @@ Expose parts of spec as separate named documents on website, as:
 
 1. Create **Doc home page** 
 
-The new **Doc home page** can be the landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc. 
+   The new **Doc home page** can be the landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc. 
 
    1.1 To be immediately useful, the landing page should provide a *top-level roadmap* to existing docs. This is a necessary step in raising the maturity level of this project. 
    The roadmap should initially describe and provide access to:
@@ -356,7 +357,7 @@ The new **Doc home page** can be the landing page for the [read-the-docs site](h
 
 3. Sort technical overviews by increasing depth
 
-A basic intro, possibly suitable for evaluators, is already linked directly from the [home page About tab](https://in-toto.io/in-toto/). The short intro links to the [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md), which contains a more comprehensive overview.  (NOTE: The [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf) is broken. This should be fixed or removed.)
+   A basic intro, possibly suitable for evaluators, is already linked directly from the [home page About tab](https://in-toto.io/in-toto/). The short intro links to the [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md), which contains a more comprehensive overview.  (NOTE: The [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf) is broken. This should be fixed or removed.)
 
    3.1 Initially, transfer the tech overview content from the Specification into a top-level Technical Overview document in RTD, and link as "Read more..." from the basic one. 
 
@@ -367,7 +368,7 @@ A basic intro, possibly suitable for evaluators, is already linked directly from
 
 4. Stub in doc architecture  
 
-Arrange and choose content from existing overviews to create **High-level technical overviews** of increasing depth, addressed to specific audiences (evaluators, new users/adopters, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...).  
+   Arrange and choose content from existing overviews to create **High-level technical overviews** of increasing depth, addressed to specific audiences (evaluators, new users/adopters, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...).  
 
    4.1 Add overviews as text-only pages to RTD.
 
@@ -395,3 +396,71 @@ Arrange and choose content from existing overviews to create **High-level techni
      - Usage guidelines for RTD (or other doc tool) and any project-specific usage standards.
      - Current doc architecture plan.
      - Map to documentation source files.
+
+# Survey of existing documentation
+
+The following links are loosely sorted into conceptual categories.
+ 
+**Doc issue from contributor**: https://github.com/in-toto/community/issues/9
+
+**Home page** https://in-toto.io/
+
+**GitHub repo for home page**: https://github.com/in-toto/in-toto.io 
+
+**Specifications**  
+    https://github.com/in-toto/docs/blob/master/in-toto-spec.md 
+(also contains most of the user doc)
+
+ https://github.com/in-toto/attestation 
+
++ language-specific implementations of spec
+
+   https://github.com/in-toto/in-toto-java
+
+   https://github.com/in-toto/in-toto-rs
+
+   https://github.com/in-toto/in-toto-golang
+
++ GitHub repo READMEs
+
+   https://github.com/in-toto/in-toto
+
+   https://github.com/in-toto/demo
+
++ Doc generation repo: https://github.com/in-toto/docs
+
+   + Generated (read-the-docs) for Python reference implementation
+
+   + Installation https://in-toto.readthedocs.io/en/latest/installing.html 
+
+   + CLI  https://in-toto.readthedocs.io/en/latest/command-line-tools/index.html
+
+   + API https://in-toto.readthedocs.io/en/latest/api.html 
+
+   + Metadata model https://in-toto.readthedocs.io/en/latest/model.html
+
+   + Configuration https://in-toto.readthedocs.io/en/latest/configuration.html
+
+   + Layout example https://in-toto.readthedocs.io/en/latest/layout-creation-example.html (+ ptr to demo, not in read-the-docs)
+
++ ITE = in-toto Enhancements (additions to specification)   
+
+   https://github.com/in-toto/ITE/blob/master/README.md
+
+   https://github.com/in-toto/ITE/blob/master/ITE/1/README.adoc#abstract
+
++ Contributor and Community
+
+   https://github.com/in-toto/community/blob/main/README.md
+
+   https://github.com/in-toto/community/blob/main/CONTRIBUTING.md
+
+   https://github.com/in-toto/community/blob/main/CODE-OF-CONDUCT.md
+
+   https://github.com/in-toto/friends (ongoing & complete integrations)
+
++ Academic papers (PDFs)
+
+   https://www.usenix.org/system/files/sec19-torres-arias.pdf 
+
+   https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias 
