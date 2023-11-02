@@ -21,7 +21,7 @@ The following table summarizes Backstage user roles proposed by the Backstage OS
 | User Role | Org Level | Description |
 | --------- | --- |  ----------- |
 | Champion  | Organization |  A combination evangelist/implementer/coordinator dedicated to driving adoption of Backstage at an organization. The champion is vital to removing barriers to developer adoption by, among other things, making the developer experience a delight and by demonstrating Backstage's value. |
-| Administrator | Organization |  An IT or DevOps professional responsible for standing up and maintaining an organization's Backstage app. The administrator might or might not also be the Backstage champion. |
+| Administrator | Organization |  An IT or DevOps professional responsible for setting up and maintaining an organization's Backstage app. The administrator might or might not also be the Backstage champion. |
 | Internal Integrator | Group or Org |  An engineer within an organization who creates or modifies the org's Backstage app (typically by writing or modifying a plugin) to add functionality required by the org. This modification might or might not then be contributed back to the Backstage OSS project. |
 | Group maintainer | Group |  A member of a software group responsible for keeping the group's Backstage entries up to date. |
 | End-user developer | Group |  The "bread and butter" user of Backstage, an end-user developer is part of a group within an organization that uses Backstage to both learn about and use software components within the org and to publish and document its own software.  |
