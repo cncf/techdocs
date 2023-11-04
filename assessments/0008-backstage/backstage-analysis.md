@@ -1,12 +1,11 @@
 ---
 title: Backstage Documentation Analysis
 tags: backstage
+created: 2023-09-01
+modified: 2023-11-03
+author: Dave Welsch (@dwelsch-esi)
 ---
 
-
-Prepared by: Dave Welsch ([@dwelsch-esi][dwelsch-esi-github])<br>
-Date: 2023-09-01
-Most recent update: 11/02/2023
 
 # Introduction
 
@@ -26,7 +25,7 @@ This document:
 
 ## Scope of analysis
 
-The documentation discussed here includes the entire contents of the website (which contains the technical docs, as well as documentation for contributors and users on the Backstage GitHub repository. The analysis does not include Spotify's Backstage website at https://backstage.spotify.com/.
+The documentation discussed here includes the entire contents of the website (which contains the technical docs), as well as documentation for contributors and users on the Backstage GitHub repository. The analysis does not include Spotify's Backstage website at https://backstage.spotify.com/.
 
 The Backstage website and documentation are written in Markdown and are compiled using the Docusaurus static site generator. The site's code is stored on the Backstage GitHub repo.
 
@@ -49,13 +48,13 @@ This document is divided into three sections that represent three major areas of
 
 - **Project documentation:** concerns documentation for users of the Backstage software, aimed at people who intend to use it
 - **Contributor documentation:** concerns documentation for new and existing contributors to the Backstage OSS project
-- **Website:** concerns the mechanics of publishing the documentation; includes branding, website structure, and maintainability
+- **Website:** concerns the mechanics of publishing the documentation, and includes branding, website structure, and maintainability
 
 Each section begins with summary ratings based on a rubric with appropriate [criteria][cncf-doc-criteria] for the section, then proceeds to:
 - **Comments**: observations about the existing documentation, with a focus on how it does or does not help Backstage users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of the documentation. 
 
-An accompanying document, [backstage-implementation.md][implementation-doc], attempts to break the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items should be tracked as a series of Github [issues][backstage-issues].
+An accompanying document, [backstage-implementation.md][implementation-doc], breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items should be tracked as a series of Github [issues][backstage-issues].
 
 
 ## How to use this document
@@ -67,6 +66,8 @@ Readers interested in the current state of the documentation and the reasoning b
 - [Project documentation][proj-doc]
 - [Contributor documentation][contributor-doc]
 - [Website and documentation infrrastructure][website]
+
+Examples of CNCF documentation that demonstrates the analysis criteria are linked from the [Criteria][cncf-doc-criteria] specification. 
 
 
 ### Recommendations, requirements, and best practices
@@ -139,11 +140,6 @@ The documentation seems **feature complete**. All software features are document
 
 It's not clear that the documentation is completely **up to date**, although [release notes][backstage-doc-rn] exist and are easily findable.
 
-Examples:
-
-* https://prometheus.io/docs/introduction/overview/
-* https://kubernetes.io/docs/home/
-
 
 ### New user content
 
@@ -151,21 +147,12 @@ Examples:
 
 There is **example content** available, including tutorials for a variety of tasks and a very nice [demo server][backstage-demo].
 
-Examples:
-
-* https://falco.org/docs/getting-started/
-* https://prometheus.io/docs/introduction/first_steps/
-
 
 ### Content maintainability & site mechanics
 
 The documentation is **searchable**. There does not seem to be a **localization** framework. There doesn't currently seem to be any kind of localization effort.
 
 There does not seem to be any mechanism for **versioning** documentation content.
-
-Examples:
-
-* https://github.com/kubernetes/website
 
 
 ### Content creation processes
@@ -175,11 +162,6 @@ The procedures for duplicating the documentation locally and for contributing do
 These procedures are presumably included in any updates to (and subsequent **release** of) the project code (since the doc is in the same GitHub repo). **Reviewers and approvers** are presumably the Backstage OSS community at large. It would be nice if this situation were made clear explicitly.
 
 The website does not have a clear individual **owner or maintainer**.
-
-Examples:
-
-* https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly documented maintainers)
-* https://thanos.io/tip/contributing/how-to-contribute-to-docs.md/
 
 
 ### Inclusive language
@@ -191,7 +173,7 @@ The website makes occasional use of words like "simple" and "easy", but avoids e
 
 ## Recommendations: project documentation
 
-The following sections contain recommendations for improvements to the Backstage project documentation. These recommendations are for broad improvements that would greatly increase documentation effectiveness. For details, see [Implementation][implementation]
+The following sections contain recommendations for improvements to the Backstage project documentation. These recommendations are for broad improvements that would greatly increase documentation effectiveness. For details, see [Implementation][implementation].
 
 
 ### Clarify user roles and objectives
@@ -209,13 +191,22 @@ Most of the Backstage documentation seems to have evolved from architecture and 
 
 For every user role:
 
-**Define use cases**: Define the common use cases for each role. Some typical examples:
+**Define use cases**
+
+Define the common use cases for each role. Some typical examples:
 
 *Administrator*: Installation; deployment; configuration; maintenance; upgrades; extension (plugins); disaster recovery.
 
 *User (developer)*: Development environment setup; Adding an existing element; creating a new element; creating a template; viewing projects; searching; creating documentation; CI/CD; deploying; reverting a deployment.
 
-**Write procedures**: For each use case, develop instructional content, including: "happy path" procedures that can be followed by anyone familiar with the product generally; examples; troubleshooting guides; and for new users, tutorials.
+**Write procedures**
+
+For each use case, develop instructional content, including: "happy path" procedures that can be followed by anyone familiar with the product generally; examples; troubleshooting guides; and for new users, tutorials.
+
+**Support procedures with conceptual and reference topics**
+
+Much of the existing documentation can and should be re-used when possible. Existing documentation pages should be analyzed by type of content (this analysis has already been done; see the [documentation survey][doc-survey]).  Pages should be rewritten so that each page serves one purpose: conceptual, task, or reference. In some cases this will mean that two pages are extracted from a single existing page. Conversely, some pages may prove to be redundant. The new, more focused pages can then be reorganized as described below.
+
 
 ### Reorganize the documentation site
 
@@ -255,9 +246,6 @@ Communication channels are clearly documented on the [Community][backstage-commu
 
 The **[GitHub][backstage-backstage] repository** is directly linked from the main menu. There are 22 related repositories listed on the [Backstage project page][backstage-github-project]. A little digging is required to suss out the purpose of some of these projects.
 
-Examples:
-https://kubernetes.io/community/
-
 
 ### Beginner friendly issue backlog
 
@@ -275,18 +263,10 @@ The Backstage OSS **community** is visible and accessible on a [community page][
 
 Backstage is listed in the [Clotributor][clotributor] tool.
 
-Examples:
-
-* https://github.com/helm/community
-* https://github.com/backstage/community
 
 ### Project governance documentation
 
 Governance is clearly documented in [GOVERNANCE.md][backstage-governance].
-
-Examples:
-
-* https://github.com/kubernetes/steering
 
 
 ## Recommendations: contributor documentation
@@ -353,22 +333,12 @@ The Backstage **brand** is easily recognizable through the logo and color scheme
 
 The website **typography** is easy to read.
 
-Examples:
-
-* https://helm.sh/
-
 
 ### Case studies/social proof
 
 **Case studies** and **testimonials** are not prominent and are not readily findable from the website. There is no **logo wall** of participating organizations.
 
 The project has an **active blog**. **Community discussions** are available on the website.
-
-Examples:
-
-* https://www.fluentd.org/testimonials (user testimonials)
-* https://goharbor.io/ (logo wall)
-* https://blog.rook.io/ (blog)
 
 
 ### SEO, Analytics and site-local search
@@ -400,9 +370,6 @@ The **website tooling** (Docusaurus static site build) is well supported.
 
 I tested the instructions for using `yarn` to build the website. The **site build time** was under 30 seconds for a local build on a Mac M1. Maintainers have sufficient **permissions** to download and build the doc. Checking in the doc requires a PR and approval from a project maintainer.
 
-Examples:
-
-* http://kubernetes.io
 
 ### Usability, accessibility and devices
 
@@ -470,7 +437,7 @@ Improve compliance in these areas:
 [backstage-io]: https://backstage.io
 [backstage-microsite]: https://github.com/backstage/backstage/tree/master/microsite
 [clotributor]: https://clotributor.dev/
-[cncf-doc-criteria]: criteria.md
+[cncf-doc-criteria]: ../criteria.md
 [cncf-doc-criteria]: https://github.com/cncf/techdocs/blob/main/assessments/criteria.md
 [cncf-docs-howto]: https://github.com/cncf/techdocs/blob/main/assessments/howto.md
 [cncf-maturity-stages]: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations

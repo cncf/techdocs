@@ -86,7 +86,7 @@ Technical documentation contains little that is actually geared toward evaluator
 
 ## Administrator
 
-The following artifacts need to be written and made findable for administrators.
+The following artifacts should be written and made findable for administrators.
 
 1. A server installation and setup guide for administrators. Provide clear, step-by-step instructions for downloading and deploying Backstage to an organization. 
 
@@ -103,7 +103,7 @@ The following artifacts need to be written and made findable for administrators.
 
 ## Developer
 
-The following artifacts need to be written and made findable for developers.
+The following artifacts should be written and made findable for developers.
 
 1. A getting started guide for developers. Provide a clear work path that describes how to:
     1. Downloead and install any necessary software components
@@ -122,7 +122,7 @@ The following artifacts need to be written and made findable for developers.
 
 There are a dizzying array of issues with writing, modifying, and maintaining plugins in Backstage. This is not a detailed recipe for documenting those issues. For integrators, at a high level, a program should be undertaken to:
 
-1. Organize integrator tasks from most basic and common (write a simple plugin; decide between backend and frontend plugin) to more complex (Integrate with external systems; use a proxy; implement authentication).
+1. Organize integrator tasks from most basic and common (write a simple plugin; decide between backend and frontend plugin) to more complex (integrate with external systems; use a proxy; implement authentication).
 2. Where possible, using the exisitng documentation as a starting point, write step-by-step procedures for discrete integration tasks (starting with how to write a basic plugin).
 3. Organize existing reference and conceptual information (such as API references and architecture discussions) into supporting documentation, referenced from the integration tasks.
 
@@ -148,7 +148,7 @@ Some documents are used by more than one user role. These docs are listed first 
 
 | Document | Description |
 | --- | --- |
-| Technical overview | A discussion of what the product is and what problems it solves. Ideally, the discussion starts with a summary and provides explanations of increasing depth to address to satisfy different audiences (evaluator -> developer -> contributor, e.g.). |
+| Technical overview | A discussion of what the product is and what problems it solves. Ideally, the discussion starts with a summary and provides explanations of increasing depth to address different audiences (evaluator -> developer -> contributor, e.g.). |
 | Release notes | Release-specific information, including: new features; performance improvements; bugs and known issues; deprecated features; software dependency changes; and experimental or beta features. |
 | Glossary | A dictionary of product-specific terms. Also commonly includes domain- and industry-specific terms that are necessary to understanding the product. |
 | Knowledge base | An encyclopedic collection of related background, conceptual, and reference information that doesn't fit elsewhere in the documentation. Similar to a FAQ, but more structured, more searchable and, therefore, more useful. |
