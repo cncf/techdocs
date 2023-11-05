@@ -78,12 +78,6 @@ There is already some instructional content in the Backstage documentation. In m
 
 The sections below give recommendations for the most important instructional documentation improvements to Backstage for each user role.
 
-## Evaluator
-
-The website guidelines contain elements that are intended to help evaluators decide whether the product is suitable to their needs, such as a logo wall and case studies. 
-
-Technical documentation contains little that is actually geared toward evaluators, but a good technical overview – valuable to all stakeholders – is essential in evaluating the product.
-
 ## Administrator
 
 The following artifacts should be written and made findable for administrators.
