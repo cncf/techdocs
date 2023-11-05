@@ -78,12 +78,6 @@ There is already some instructional content in the Backstage documentation. In m
 
 The sections below give recommendations for the most important instructional documentation improvements to Backstage for each user role.
 
-## Evaluator
-
-The website guidelines contain elements that are intended to help evaluators decide whether the product is suitable to their needs, such as a logo wall and case studies. 
-
-Technical documentation contains little that is actually geared toward evaluators, but a good technical overview – valuable to all stakeholders – is essential in evaluating the product.
-
 ## Administrator
 
 The following artifacts should be written and made findable for administrators.
@@ -175,7 +169,7 @@ Some documents are used by more than one user role. These docs are listed first 
 | Document | Description |
 | --- | --- |
 | Getting started guide | A document that usually walks a developer through setting up a development environment (for a language or API). In the case of Backstage, this is more of an integration with their existing environment. Nonetheless, this should explain how to configure all the tools the developer needs to begin using Backstage. |
-| Developer guide | Contains all tasks that the developer needs to use the Backstage app under normal circumstances: adding, modifying, and searching for products; writing documentation; using templates. |
+| Developer guide | Contains all tasks that the developer needs to use the Backstage app under normal circumstances: adding products ("catalog population"), modifying, and searching for products; writing documentation; using templates. |
 | CLI reference | An indexed reference to the command-line interface. The Backstage CLI does a wide variety of tasks and is used both the administrator and by developers. |
 | Tutorials | Tasks that are good candidates for tutorials are difficult, often-used tasks that must be mastered to use the product effectively. Many of these are probably in daily use by developers. |
 | Cookbooks | There might be specialized tasks required of developers by an organization that should be documented, especially if they are performed infrequently. |
