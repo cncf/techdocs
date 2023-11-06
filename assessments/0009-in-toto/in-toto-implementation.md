@@ -89,7 +89,7 @@ Create a Documentation home page on web site, linked prominently from About menu
    2.2 As a stop-gap, add a top-level TOC for the existing Specification to show what is in it.  
 
    2.3 Move important sections out of the spec into separate documents, and add them to the Doc home-page TOC. 
-    - Evaluate the depth of the [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) and decide which user population it is most suitable for, or adapt to new tailored versions.
+    - Evaluate the depth of the [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) and decide which user population it is most suitable for, or adapt it to new tailored versions.
    - Expose [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) as a separate document, formatted in an alphabetized table for easy reference.
    - Expose [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description), which identifies the different user roles. Adapt this to a separate document that also points to the appropriate doc for each role, which would be particularly helpful to new users.
 
