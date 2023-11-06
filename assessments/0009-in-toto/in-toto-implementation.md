@@ -18,16 +18,16 @@ Similarly, the depth and detail of introductory conceptual material should be cl
 
 See a more detailed analysis of reader roles and their documentation needs below.
 
-### Reader roles
+### User roles
 To get the right information to the right reader, each page should be explicitly addressed to a specific audience, and the organization and navigation for the site should explicitly direct users of different types to relevant sections.
 
-- The website (both the in-toto home page and the doc home page) should clearly identify and name the populations of readers, and what they need and can reasonably expect from in-toto documentation.
-- The documentation should be organized into sections that are clearly aimed at specific reader types with similar goals and information needs.
-- Every page should be explicitly addressed to a specific audience.
+- The website (both the in-toto home page and the doc home page) should clearly identify and name the user roles, and what users in those roles need and can reasonably expect from in-toto documentation.
+- The documentation should be organized into sections that are clearly aimed at users in specific roles with similar goals and information needs.
+- If a page is useful for users with different roles, it should be linked from the section overviews for all relevant roles.
 
-Readers with the following roles are potential audiences for project documentation.
+Users with the following roles are potential audiences for project documentation.
 
-| Reader Role | Doc needs |
+| User Role | Doc needs |
 | ---                     | --- |
 | **Evaluators** determine whether in-toto meets their needs and can be implemented in their organization. | Good high-level technical overview w/marketing slant, analysis business benefits, adoption and success stories, and workflow overview. |
 | **End users**  can be *Project owners* and *Functionaries*. | End users can be new or experienced. New users need a clear learning path and general examples. Experienced users need reference docs and use-case examples. |
@@ -53,7 +53,7 @@ Create a Documentation home page on web site, linked prominently from About menu
    - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)  (compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
    - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
    - [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
-2. Create a high-level technical overview on the project home page suitable for evaluators (see Reader Roles). This might be one of the existing overviews, or can be adapted from them.
+2. Create a high-level technical overview on the project home page suitable for evaluators (see [User Roles](#user-roles)). This might be one of the existing overviews, or can be adapted from them.
 3. Create an index or map to existing docs as a temporary guide, preparatory to moving that information into RTD and integrating it into a doc architecture.
 4. Encourage documentation contributions:
    - Add Documentation as a contribution area, clarify process. Contributor docs should:  
@@ -83,7 +83,7 @@ Create a Documentation home page on web site, linked prominently from About menu
 
    1.3 Create a doc contributors policy requiring that the Doc home page be updated to reflect any changes to the doc locations and structure. 
 
-3. Expose new-user information 
+2. Expose new-user information 
 
    2.1 Move the content of the [README for the main repo](https://github.com/in-toto/in-toto) to a separate **"Getting Started" document**, with a prominent pointer on the in-toto home page, such as the top menu item in the "Get Started" menu. Replace the README  with brief introductory notes that link to the documentation.
 
@@ -94,8 +94,8 @@ Create a Documentation home page on web site, linked prominently from About menu
    - Expose [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) as a separate document, formatted in an alphabetized table for easy reference.
    - Expose [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description), which identifies the different user roles. Adapt this to a separate document that also points to the appropriate doc for each role, which would be particularly helpful to new users.
 
-4. Sort technical overviews by increasing depth
-
+3. Arrange and choose content from existing overviews to create **High-level technical overviews** of increasing depth, addressed to specific audiences (evaluators, new users/adopters, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...).
+   
    A basic intro, possibly suitable for evaluators, is already linked directly from the [home page About tab](https://in-toto.io/in-toto/). The short intro links to the [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md), which contains a more comprehensive overview.  (NOTE: The [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf) is broken. This should be fixed or removed.)
 
    3.1 Initially, transfer the tech overview content from the Specification into a top-level Technical Overview document in RTD, and link as "Read more..." from the basic one. 
@@ -105,16 +105,17 @@ Create a Documentation home page on web site, linked prominently from About menu
    3.3 The most in-depth overview should also point to academic papers for further architectural detail:
       https://www.usenix.org/system/files/sec19-torres-arias.pdf, https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias 
 
-5. Stub in doc architecture  
-
-   Arrange and choose content from existing overviews to create **High-level technical overviews** of increasing depth, addressed to specific audiences (evaluators, new users/adopters, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...).  
+4. Sort the layered technical overviews by increasing depth, and use that as a guide to create the overall doc architecture.
 
    4.1 Add overviews as text-only pages to RTD.
 
-   4.2 Make each tech overview the introductory page to a section aimed at a specific audience.
-      Include an index to current doc (mostly in GitHub Readme files) relevant to the audience. For example, the [ITE spec](https://github.com/in-toto/ITE/blob/master/ITE/1/README.adoc) that describes the ITE process, which is two levels down from main in the [ITE repo](https://github.com/in-toto/ITE/).
+   4.2 Make each tech overview the introductory page to a section aimed primarily at the appropriate user role or roles.
+   
+   4.3 In each section, include an index to current doc (mostly in GitHub Readme files) relevant to the audience. For example, the [ITE spec](https://github.com/in-toto/ITE/blob/master/ITE/1/README.adoc) that describes the ITE process, which is two levels down from main in the [ITE repo](https://github.com/in-toto/ITE/). The document should be referenced in the section for Contributors, and possibly a subsection sepecifically intended for ITE proposers and developers.
 
-6. Reference material
+   4.4 As documents are transfered from GitHub into the Doc web site, update the index accordingly and adjust the doc architecture as needed.
+
+5. Reference material
 
    5.1 Decide where reference docs for different implementations should live in the doc structure and where their sources live in the repo structure.
       The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation. It should also list and link to reference docs for other implementations. 
@@ -123,11 +124,11 @@ Create a Documentation home page on web site, linked prominently from About menu
       - Develop a documentation policy for implementers.
         For example, the auto-generated doc for the [Go implementation](https://pkg.go.dev/github.com/in-toto/in-toto-golang) is not at all parallel with the Python RTD reference doc - it is all in GitHub, and has no introductory or explanatory content, or navigational aids.
 
-7. Content creation process
+6. Content creation process
 
    6.1 The [read-the-docs site](https://in-toto.readthedocs.io/en/latest/) has an [Edit the Doc button](https://github.com/in-toto/in-toto/blob/develop/doc/source/index.rst). Instead of pointing directly to the source files, make the button point to a page with instructions for [doc contributors](https://github.com/in-toto/community/blob/main/CONTRIBUTING.md), and a link to the [governance policies](https://github.com/in-toto/community/blob/main/GOVERNANCE.md).
 
-   6.2 Decide on a structure for documentation source files in the project doc repo.
+   6.2 Decide on a structure for documentation directories and source files in the project doc repo.
 
    6.3 Make sure the policy pages include or link to:
      - Contact info for maintainer/reviewer for documentation contributions.
