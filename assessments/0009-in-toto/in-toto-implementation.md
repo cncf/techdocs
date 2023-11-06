@@ -1,7 +1,7 @@
 # Implementation
 
 ## Organizational principles
-Review [CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for the project home page and architecture. Consult with CNCF TechDocs or other professional technical documentation specialists to develop an appropriate information architecture based on the different user populations and their specific tasks and information needs.
+Review [the CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for project home page and architecture recommendations. Consult with CNCF TechDocs or other technical documentation specialists to develop an appropriate information architecture based on different user roles and their specific tasks and information needs.
 
 To transfer relevant information to the people who need it as efficiently as possible, documentation should be organized with the reader audience in mind. For example:
 
