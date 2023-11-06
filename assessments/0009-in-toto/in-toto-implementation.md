@@ -15,6 +15,7 @@ Similarly, the depth and detail of introductory conceptual material should be cl
 - *Evaluators* who are deciding whether to adopt the tools and methodology. This could be on the main website, with a marketing slant.
 - *New users* who will need to either integrate or configure the tools. This could be the intro that is on or linked prominently from the Doc Home Page.
 - *Potential contributors* who are planning to extend the tools or implement the specification. These readers require more depth of information about the architectural intentions and decision criteria, which would just be confusing and unnecessary to other reader populations. 
+
 See a more detailed analysis of reader roles and their documentation needs below.
 
 ### Reader roles
