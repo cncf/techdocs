@@ -4,7 +4,7 @@ This document characterizes the effectiveness and completeness of the in-toto op
 The analysis forms the basis for the recommendations and doc plan presented in the companion document, [(../in-toto-implementation.md)].
 
 ## Scope of analysis
-The documentation discussed here includes the contents of the website at https://in-toto.io and https://in-toto.readthedocs.io/, the in-toto Specification, and the documentation for contributors and users in the various GitHub repositories at https://github.com/in-toto. See [Survey of existing documentation](#survey-of-existing-documentation) below.
+The documentation discussed here includes the contents of the website at https://in-toto.io and https://in-toto.readthedocs.io/, the [in-toto Specification](https://github.com/in-toto/docs/tree/master/in-toto-spec.md), and the documentation for contributors and users in the various GitHub repositories at https://github.com/in-toto. See [Survey of existing documentation](../survey-of-existing-documentation).
 
 ### How this document is organized
 
@@ -20,10 +20,11 @@ Each section begins with a summary of current status based on a rubric with appr
 
 - Comments: observations about the existing documentation, with a focus on how it does or does not help in-toto users achieve their goals.
 
-- Recommendations: suggested changes that would improve the effectiveness of the documentation.
+- Recommendations: suggested changes that would improve the effectiveness of the documentation in a specific area. 
 
-This document attempts to break down the recommendations into concrete actions that can be implemented by project contributors. 
-The intention is to drill down to specific, achievable work that can be completed in constrained blocks of time. 
+The companion [Implementation document](../in-toto-implementation) organizes the recommendations into concrete actions that can be implemented by project contributors. 
+
+The intention is to drill down to specific, achievable documentation tasks that can be completed in constrained blocks of time. 
 
 Ultimately, the implementation items should be tracked as a series of Github documentation issues that can be undertaken by contributors.
 
