@@ -1,4 +1,4 @@
-# Introduction
+# Analysis of Existing Documentation
 This document characterizes the effectiveness and completeness of the in-toto open source software (OSS) project's documentation and website as of September 2023. Documentation is analyzed with respect to CNCF criteria for completeness, discoverability, and usability.
 
 The analysis forms the basis for the recommendations and doc plan presented in the companion document, [(../in-toto-implementation.md)].
