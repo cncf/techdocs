@@ -1,13 +1,7 @@
 # Introduction
-This document analyzes the effectiveness  and completeness of the in-toto open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects.
-According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation analysis is the first step of a CNCF process aimed at assisting projects with their documentation efforts.
+This document characterizes the effectiveness and completeness of the in-toto open source software (OSS) project's documentation and website as of September 2023. Documentation is analyzed with respect to CNCF criteria for completeness, discoverability, and usability.
 
-## Purpose
-This document was written to analyze the current state of in-toto documentation. It aims to provide project leaders with an informed understanding of their project documentation and to outline an actionable plan for improvement. This document:
-
-- Analyzes the existing documentation with respect to CNCF criteria for completeness, discoverability, and usability.
-- Recommends a program of key improvements with the largest return on investment
-- Provides guidance to implementing the recommended improvements
+The analysis forms the basis for the recommendations and doc plan presented in the companion document, [(../in-toto-implementation.md)].
 
 ## Scope of analysis
 The documentation discussed here includes the contents of the website at https://in-toto.io and https://in-toto.readthedocs.io/, the in-toto Specification, and the documentation for contributors and users in the various GitHub repositories at https://github.com/in-toto. See [Survey of existing documentation](#survey-of-existing-documentation) below.
@@ -28,7 +22,6 @@ Each section begins with a summary of current status based on a rubric with appr
 
 - Recommendations: suggested changes that would improve the effectiveness of the documentation.
 
-
 This document attempts to break down the recommendations into concrete actions that can be implemented by project contributors. 
 The intention is to drill down to specific, achievable work that can be completed in constrained blocks of time. 
 
@@ -36,7 +29,7 @@ Ultimately, the implementation items should be tracked as a series of Github doc
 
 ## How to use this document
 
-Readers interested only in actionable improvements can skip to the implementation recommendations. For more context, read the recommendations for each of the three areas of analysis:
+Readers interested only in actionable improvements can skip to the [implementation recommendations](../in-toto-implementation.md). For more context, read the recommendations for each of the three areas of analysis:
 
 - [Project documentation recommendations](./assessments#recommendations)
 
