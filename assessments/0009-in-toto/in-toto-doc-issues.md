@@ -20,18 +20,20 @@ These issues identify and classify tasks that contributors can undertake to esta
 
 ## Expose new-user information 
 
-   - [ ] Move the content of the [README for the main repo](https://github.com/in-toto/in-toto) to a separate **"Getting Started" document**, with a prominent pointer on the in-toto home page, such as the top menu item in the "Get Started" menu. Replace the README  with brief introductory notes that link to the documentation.
+   - [ ] Move the content of the [README for the main repo](https://github.com/in-toto/in-toto) to a separate **"Getting Started" document**.
+      - [ ] Add a prominent pointer to the new **"Getting Started" document** on the in-toto home page, such as the top menu item in the "Get Started" menu.
+      - [ ] Replace the README with brief introductory notes that link to the documentation.
 
    - [ ] As a stop-gap, add a top-level TOC for the existing Specification to show what is in it.  
 
    - [ ] Move important sections out of the spec into separate documents, and add them to the Doc home-page TOC. 
-      - Evaluate the depth of the [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) and decide which user population it is most suitable for, or adapt it to new tailored versions.
-      - Expose [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) as a separate document, formatted in an alphabetized table for easy reference.
-      - Expose [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description), which identifies the different user roles. Adapt this to a separate document that also points to the appropriate doc for each role, which would be particularly helpful to new users.
+      - [ ] Evaluate the depth of the [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) and decide which user population it is most suitable for, or adapt it to new tailored versions.
+      - [ ] Expose [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) as a separate document, formatted in an alphabetized table for easy reference.
+      - [ ] Expose [Workflow Description](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.md#51-workflow-description), which identifies the different user roles, as a separate document.
+      - [ ] Adapt the content to point to appropriate doc for each role that would be particularly helpful to new users.
 
 ## Create **High-level technical overviews** of increasing depth
-
-    
+ 
   Arrange and choose content from existing overviews to create a set of overviews addressed to specific audiences:
   evaluators and new users/adopters, experienced users and administrators, contributors of different types (ITE proposers, doc writers and editors...).
   
@@ -58,8 +60,10 @@ These issues identify and classify tasks that contributors can undertake to esta
 
 ## Establish policy for reference material
 
+   The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation. 
+   It should also list and link to reference docs for other implementations. 
+
    - [ ] Decide where reference docs for different implementations should live in the doc structure and where their sources live in the repo structure.
-      The doc roadmap should clearly identify and link to the existing generated pages as *reference* doc for the Python reference implementation. It should also list and link to reference docs for other implementations. 
 
    - [ ] Publish the policy and procedures for developers to document their implementations.
   
@@ -74,7 +78,7 @@ These issues identify and classify tasks that contributors can undertake to esta
 
    - [ ] Make sure the policy pages include or link to:
         - Contact info for maintainer/reviewer for documentation contributions.
-        -  Available doc style guides/templates (as well as code standards)
+        - Available doc style guides/templates (as well as code standards)
         - Usage guidelines for RTD (or other doc tool) and any project-specific usage standards.
         - Current doc architecture plan.
         - Map to documentation source files.
