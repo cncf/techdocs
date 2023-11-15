@@ -25,7 +25,7 @@ To get the right information to the right reader, each page should be explicitly
 - The documentation should be organized into sections that are clearly aimed at users in specific roles with similar goals and information needs.
 - If a page is useful for users with different roles, it should be linked from the section overviews for all relevant roles.
 
-Users with the following roles are potential audiences for project documentation.
+Users with the following roles are potential audiences for in-toto project documentation.
 
 | User Role | Doc needs |
 | ---                     | --- |
