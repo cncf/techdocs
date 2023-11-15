@@ -29,11 +29,11 @@ Users with the following roles are potential audiences for project documentation
 
 | User Role | Doc needs |
 | ---                     | --- |
-| **Evaluators** determine whether in-toto meets their needs and can be implemented in their organization. | Good high-level technical overview w/marketing slant, analysis business benefits, adoption and success stories, and workflow overview. |
+| **Evaluators** determine whether in-toto meets their needs and can be implemented in their organization. | High-level technical overview with a marketing slant, analysis of business benefits, adoption and success stories, and a workflow overview. |
 | **End users**  can be *Project owners* and *Functionaries*. | End users can be new or experienced. New users need a clear learning path and general examples. Experienced users need reference docs and use-case examples. |
-| **Project owner** defines the layout to be followed by, e.g. using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata. | New users need overview, demo, templates, basic instructions. Experienced users need deeper architectural info, use cases, examples. |
+| **Project owners** define the layout to be followed when, e.g., using the in-toto CLI tools. When doing so, they specify who is intended to sign for every piece of link metadata, any sublayouts that may exist, and how to further verify accompanying metadata. | New users need an overview, demos, templates, and basic instructions. Experienced users need deeper architectural info, use cases, and examples. |
 | **Functionaries** perform the intended actions and produce link metadata for each step. | *?? do these users read in-toto doc at all, or is the project owner responsible for instructing them in how to sign and verify their steps??* |
-| **Contributors** can be contributing to the *code* base or to the *documentation*. | |
+| **Contributors** can be contributors to the *code* base and to the *documentation* of the OSS project itself. | Contributors need project standards and instructions, community guidelines, and GitHub instructions specific to the project. This information is often in the repo, and not in the project or product documentation.  |
 | **Code contributors**  are members of the community who: *make code changes*, *submit changes to specifications*, *create new integrations*, and *submit issues, feature requests and more* | These contributors need to understand the GitHub repo structure, the contribution policies and procedures, coding and naming standards and conventions. ITE developers and integrators need direction on how and where to document their own additions. |
 | **Doc contributors**  (to be added) are members of the community who use the **Edit** button to make changes to published documents, or create new documentation. | These contributors need clear doc contribution standards, naming and style conventions, and clear instructions on how to create or edit existing doc, and where documents should go (that is, what should go on the website or in GitHub, where a subject fits in the doc architecture) |
 
@@ -43,20 +43,20 @@ Users with the following roles are potential audiences for project documentation
 To begin achieving the goal of documentation that meets the needs of different user populations and is discoverable by the intended readers, we recommend the following general plan.
 
 1. Initial tasks:
-Create a Documentation home page on web site, linked prominently from About menu. 
+Create a Documentation home page on the [project web site](https://in-toto.io), linked prominently from the About menu. 
 
-   Create a **Getting Started** page on web site from README content for the main repo (https://github.com/in-toto/in-toto.README.md)
+Create a **Getting Started** page on the web site from the existing README content in the [main repo](https://github.com/in-toto/in-toto.README.md).
 
-   Link as first menu item in Get started menu (currently 1st item is link to demo)
+Link **Getting Started** as the first menu item in the **Get started** menu (currently the first item is a link to a demo).
 
-   Expose parts of spec as separate named documents on website, as:
+Expose parts of the product specification as separate named documents on the website, as:
    - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)  (compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
    - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
    - [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
 2. Create a high-level technical overview on the project home page suitable for evaluators (see [User Roles](#user-roles)). This might be one of the existing overviews, or can be adapted from them.
 3. Create an index or map to existing docs as a temporary guide, preparatory to moving that information into RTD and integrating it into a doc architecture.
 4. Encourage documentation contributions:
-   - Add Documentation as a contribution area, clarify process. Contributor docs should:  
+   - Add Documentation as a contribution area, and clarify the process. Contributor docs should: 
       - List reviewers/approvers for doc changes and additions.
       - Encourage the use of Documentation and Good First Issue tags for issues and PRs.
       - Make doc contributors responsible for updating doc roadmaps/ToCs, to reflect any changes they make to the doc structure (adding or moving documents). 
@@ -69,14 +69,14 @@ Create a Documentation home page on web site, linked prominently from About menu
 
 1. Create **Doc home page** 
 
-   The new **Doc home page** can be the landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc. 
+  The landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc, could be expanded and repurposed as the new overall **Doc home page**.
 
    1.1 To be immediately useful, the landing page should provide a *top-level roadmap* to existing docs. See [Survey of existing doc](https://github.com/jbogarthyde/CNCF-techdocs/main/assessments/0009-in-toto/survey-of-existing-doc.md)
 
       This is a necessary step in raising the maturity level of this project. The roadmap should initially describe and provide access to:
    - Specification
    - Basic demo
-   - Python reference implementation along with its reference docs (which need to move into a subdir) 
+   - Python reference implementation along with its reference docs (which need to move into a sub-directory) 
    - Overview of the git repo structure.
 
    1.2 Move the Description and pointer to the Python Reference implementation to an Implementations section, and move the RTD reference docs for it into this section.
