@@ -23,8 +23,4 @@ The analysis and recommendations for the in-toto project documentation are prese
 - [Survey of existing documentation](../survey-of-existing-documentation)  (as of September 2023)
 - [Analysis](../in-toto-analysis.md)
 - [Recommendations and implementation](../in-toto-implementation.md)
-
- 
- 
-
-
+- [Proposed actionable issues](../in-toto-doc-issues.md)
