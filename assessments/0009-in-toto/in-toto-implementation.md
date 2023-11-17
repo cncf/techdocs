@@ -1,7 +1,7 @@
 # Implementation
 
 ## Organizational principles
-Review [the CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for project home page and architecture recommendations. Consult with CNCF TechDocs or other technical documentation specialists to develop an appropriate information architecture based on different user roles and their specific tasks and information needs.
+Review the [CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for project home page and architecture recommendations. Consult with CNCF TechDocs or other technical documentation specialists to develop an appropriate information architecture based on different user roles and their specific tasks and information needs.
 
 To efficiently transfer relevant information to the people who need it, organize documentation with the product users' roles in mind. For example:
 
@@ -43,18 +43,22 @@ Users with the following roles are potential audiences for in-toto project docum
 To begin achieving the goal of documentation that meets the needs of different user populations and is discoverable by the intended readers, we recommend the following general plan.
 
 1. Initial tasks:
-Create a Documentation home page on the [project web site](https://in-toto.io), linked prominently from the About menu. 
 
-Create a **Getting Started** page on the web site from the existing README content in the [main repo](https://github.com/in-toto/in-toto.README.md).
+   a. Create a Documentation home page on the [project web site](https://in-toto.io), linked prominently from the About menu. 
 
-Link **Getting Started** as the first menu item in the **Get started** menu (currently the first item is a link to a demo).
+   b. Create a **Getting Started** page on the web site from the existing README content in the [main repo](https://github.com/in-toto/in-toto.README.md).
 
-Expose parts of the product specification as separate named documents on the website, as:
-   - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)  (compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
-   - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
-   - [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
+   c. Link **Getting Started** as the first menu item in the **Get started** menu (currently the first item is a link to a demo).
+
+   d. Expose parts of the product specification as separate named documents on the website, as:
+     - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)  (compare content to https://in-toto.io/in-toto/README and current website About - create versions of increasing depth to address to specific audiences)
+     - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology) (convert to alphabetized table) 
+     - [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview) (clearly identify user types and point to relevant doc sections)
+
 2. Create a high-level technical overview on the project home page suitable for evaluators (see [User Roles](#user-roles)). This might be one of the existing overviews, or can be adapted from them.
+
 3. Create an index or map to existing docs as a temporary guide, preparatory to moving that information into RTD and integrating it into a doc architecture.
+
 4. Encourage documentation contributions:
    - Add Documentation as a contribution area, and clarify the process. Contributor docs should: 
       - List reviewers/approvers for doc changes and additions.
@@ -69,17 +73,17 @@ Expose parts of the product specification as separate named documents on the web
 
 1. Create **Doc home page** 
 
-  The landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc, could be expanded and repurposed as the new overall **Doc home page**.
+     The landing page for the [read-the-docs site](https://in-toto.readthedocs.io/en/latest/), which currently lands on the auto-generated Python reference doc, could be expanded and repurposed as the new overall **Doc home page**.
 
-   1.1 To be immediately useful, the landing page should provide a *top-level roadmap* to existing docs. See [Survey of existing doc](https://github.com/jbogarthyde/CNCF-techdocs/main/assessments/0009-in-toto/survey-of-existing-doc.md)
+     This is a necessary step in raising the maturity level of this project. Initially, the page should be a roadmap that describes and provides access to:
+         - Specification
+         - Basic demo
+         - Python reference implementation along with its reference docs (which need to move into a sub-directory) 
+         - Overview of the git repo structure.
 
-      This is a necessary step in raising the maturity level of this project. The roadmap should initially describe and provide access to:
-   - Specification
-   - Basic demo
-   - Python reference implementation along with its reference docs (which need to move into a sub-directory) 
-   - Overview of the git repo structure.
-
-   1.2 Move the Description and pointer to the Python Reference implementation to an Implementations section, and move the RTD reference docs for it into this section.
+   1.1 Create a *top-level roadmap* to [existing docs](https://github.com/jbogarthyde/CNCF-techdocs/main/assessments/0009-in-toto/survey-of-existing-doc.md) at the location decided on for the Doc home page.
+   
+   1.2 Move the Description and pointer to the Python Reference implementation to an **Implementations** section, and move the RTD reference docs for it into this section.
 
    1.3 Create a doc contributors policy requiring that the Doc home page be updated to reflect any changes to the doc locations and structure. 
 
