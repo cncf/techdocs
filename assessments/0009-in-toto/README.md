@@ -20,7 +20,7 @@ This is an actionable plan for doc improvement, with specific implementation rec
 
 The analysis and recommendations for the in-toto project documentation are presented in these files: 
 
-- [Survey of existing documentation](./survey-of-existing-documentation)  (as of September 2023)
+- [Survey of existing documentation](./survey-of-existing-doc)  (as of September 2023)
 - [Analysis](./in-toto-analysis.md)
 - [Recommendations and implementation](./in-toto-implementation.md)
 - [Proposed actionable issues](./in-toto-doc-issues.md)
