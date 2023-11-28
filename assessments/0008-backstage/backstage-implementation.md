@@ -13,8 +13,6 @@ For an analysis and general discussion of recommendations on Backstage technical
 
 Notwithstanding the fact that this analysis measures documentation against CNCF project maturity standards, in most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, recommendations are based on documentation best practices as understood by the reviewers. The recommended implementations represent the reviewers' experience with how apply those best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-keywords], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
 
-
-
 The top-level documentation recommendations for this project are:
 
 - Fill gaps in instructional documentation for all stakeholder roles, including project contributors.
@@ -78,15 +76,9 @@ There is already some instructional content in the Backstage documentation. In m
 
 The sections below give recommendations for the most important instructional documentation improvements to Backstage for each user role.
 
-## Evaluator
-
-The website guidelines contain elements that are intended to help evaluators decide whether the product is suitable to their needs, such as a logo wall and case studies. 
-
-Technical documentation contains little that is actually geared toward evaluators, but a good technical overview – valuable to all stakeholders – is essential in evaluating the product.
-
 ## Administrator
 
-The following artifacts need to be written and made findable for administrators.
+The following artifacts should be written and made findable for administrators.
 
 1. A server installation and setup guide for administrators. Provide clear, step-by-step instructions for downloading and deploying Backstage to an organization. 
 
@@ -103,7 +95,7 @@ The following artifacts need to be written and made findable for administrators.
 
 ## Developer
 
-The following artifacts need to be written and made findable for developers.
+The following artifacts should be written and made findable for developers.
 
 1. A getting started guide for developers. Provide a clear work path that describes how to:
     1. Downloead and install any necessary software components
@@ -122,7 +114,7 @@ The following artifacts need to be written and made findable for developers.
 
 There are a dizzying array of issues with writing, modifying, and maintaining plugins in Backstage. This is not a detailed recipe for documenting those issues. For integrators, at a high level, a program should be undertaken to:
 
-1. Organize integrator tasks from most basic and common (write a simple plugin; decide between backend and frontend plugin) to more complex (Integrate with external systems; use a proxy; implement authentication).
+1. Organize integrator tasks from most basic and common (write a simple plugin; decide between backend and frontend plugin) to more complex (integrate with external systems; use a proxy; implement authentication).
 2. Where possible, using the exisitng documentation as a starting point, write step-by-step procedures for discrete integration tasks (starting with how to write a basic plugin).
 3. Organize existing reference and conceptual information (such as API references and architecture discussions) into supporting documentation, referenced from the integration tasks.
 
@@ -148,7 +140,7 @@ Some documents are used by more than one user role. These docs are listed first 
 
 | Document | Description |
 | --- | --- |
-| Technical overview | A discussion of what the product is and what problems it solves. Ideally, the discussion starts with a summary and provides explanations of increasing depth to address to satisfy different audiences (evaluator -> developer -> contributor, e.g.). |
+| Technical overview | A discussion of what the product is and what problems it solves. Ideally, the discussion starts with a summary and provides explanations of increasing depth to address different audiences (evaluator -> developer -> contributor, e.g.). |
 | Release notes | Release-specific information, including: new features; performance improvements; bugs and known issues; deprecated features; software dependency changes; and experimental or beta features. |
 | Glossary | A dictionary of product-specific terms. Also commonly includes domain- and industry-specific terms that are necessary to understanding the product. |
 | Knowledge base | An encyclopedic collection of related background, conceptual, and reference information that doesn't fit elsewhere in the documentation. Similar to a FAQ, but more structured, more searchable and, therefore, more useful. |
@@ -175,7 +167,7 @@ Some documents are used by more than one user role. These docs are listed first 
 | Document | Description |
 | --- | --- |
 | Getting started guide | A document that usually walks a developer through setting up a development environment (for a language or API). In the case of Backstage, this is more of an integration with their existing environment. Nonetheless, this should explain how to configure all the tools the developer needs to begin using Backstage. |
-| Developer guide | Contains all tasks that the developer needs to use the Backstage app under normal circumstances: adding, modifying, and searching for products; writing documentation; using templates. |
+| Developer guide | Contains all tasks that the developer needs to use the Backstage app under normal circumstances: adding products ("catalog population"), modifying, and searching for products; writing documentation; using templates. |
 | CLI reference | An indexed reference to the command-line interface. The Backstage CLI does a wide variety of tasks and is used both the administrator and by developers. |
 | Tutorials | Tasks that are good candidates for tutorials are difficult, often-used tasks that must be mastered to use the product effectively. Many of these are probably in daily use by developers. |
 | Cookbooks | There might be specialized tasks required of developers by an organization that should be documented, especially if they are performed infrequently. |
