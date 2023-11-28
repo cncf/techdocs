@@ -6,7 +6,6 @@ modified: 2023-11-28
 author: Dave Welsch (@dwelsch-esi)
 ---
 
-
 # Introduction
 
 This document analyzes the effectiveness and completeness of the [Backstage][backstage-io] open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects. 
@@ -67,12 +66,7 @@ Readers interested in the current state of the documentation and the reasoning b
 - [Contributor documentation][contributor-doc]
 - [Website and documentation infrrastructure][website]
 
-
-
-
-
-
-of CNCF documentation that demonstrates the analysis criteria are linked from the [Criteria][cncf-doc-criteria] specification. 
+Examples of CNCF documentation that demonstrates the analysis criteria are linked from the [Criteria][cncf-doc-criteria] specification. 
 
 
 ### Recommendations, requirements, and best practices
