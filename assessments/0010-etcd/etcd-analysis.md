@@ -1,39 +1,75 @@
- # etcd CNCF tech docs analysis
+ ---
+title: etcd Documentation Analysis
+tags: etcd
+created: 2023-09-01
+modified: 2023-12-08
+author: Dave Welsch (@dwelsch-esi)
+---
 
-Prepared by: Dave Welsch ([@dwelsch-esi][dwelsch-esi])<br>
-Date: <draft-date>
+# Introduction
 
-## Introduction
+This document analyzes the effectiveness and completeness of the [etcd][etcd-io] open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects. 
 
-This document assesses the quality and completeness of the [etcd][etcd-io] project's documentation and website. 
+According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation analysis is the first step of a CNCF process aimed at assisting projects with their documentation efforts. 
+
+## Purpose
+
+This document was written to analyze the current state of etcd documentation. It aims to provide project leaders with an informed understanding of their project documentation and to outline an actionable plan for improvement.
 
 This document:
 
-- Measures existing documentation quality against the CNCF’s standards
-- Provides examples of great documentation as a reference
+- Analyzes the current etcd technical documentation and website
+- Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
-- Provides guidance to making the recommended improvements actionable TBD
+
+## Scope of analysis
+
+The documentation discussed here includes the entire contents of the website (which contains the technical docs), as well as documentation for contributors and users on the etcd GitHub repository. 
+
+The etcd website and documentation are written in Markdown and are compiled using the Hugo static site generator with the Docsy theme and served from the Netlify platform. The site's code is stored on the etcd GitHub repo.
+
+**In scope:**
+- Website: https://etcd.io
+- Documentation: https://etcd.io/docs
+- Website repo: https://github.com/etcd-io/website
+- Main project contributor info: https://github.com/etcd-io/etcd
+
+**Out of scope:**
+- Other etcd repos: https://github.com/etcd-io/*
 
 
-## How this document works
+## How this document is organized
 
-The assessment is divided into three sections:
+This document is divided into three sections that represent three major areas of concern:
 
-- **Project documentation:** for end users of the project, aimed at people who intend to use it
-- **Contributor documentation:** for new and existing contributors to the project
-- **Website:** for branding, website structure, and maintainability
+- **Project documentation:** concerns documentation for users of the etcd software, aimed at people who intend to use it
+- **Contributor documentation:** concerns documentation for new and existing contributors to the etcd OSS project
+- **Website:** concerns the mechanics of publishing the documentation, and includes branding, website structure, and maintainability
 
-Each section begins with a rating based on a rubric with appropriate [criteria](criteria.md) for the section. The rubric uses the following scale:
+Each section begins with summary ratings based on a rubric with appropriate [criteria][cncf-doc-criteria] for the section, then proceeds to:
+- **Comments**: observations about the existing documentation, with a focus on how it does or does not help etcd users achieve their goals.
+- **Recommendations**: suggested changes that would improve the effectiveness of the documentation. 
 
-| Rating | Meaning |
-| --- | --- |
-| 1 | Is not present |
-| 2 | Needs improvement to meet project maturity standards |
-| 3 | Meets project maturity standards |
-| 4 | Meets or exceeds project maturity standards |
-| 5 | Consistently exceeds project maturity standards |
+An accompanying document, [etcd-implementation.md][implementation-doc], breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items should be tracked as a series of Github [issues][etcd-issues].
 
-The assessment also includes a summary of recommendations at the end.
+
+## How to use this document
+
+Readers interested only in actionable improvements should skip this document and read [etcd-implementation.md][implementation-doc].
+
+Readers interested in the current state of the documentation and the reasoning behind the recommendations should read this document or the section pertaining to their area of concern:
+
+- [Project documentation][proj-doc]
+- [Contributor documentation][contributor-doc]
+- [Website and documentation infrrastructure][website]
+
+Examples of CNCF documentation that demonstrate the analysis criteria are linked from the [Criteria][cncf-doc-criteria] specification. 
+
+
+### Recommendations, requirements, and best practices
+
+Notwithstanding the fact that this analysis measures documentation against CNCF project maturity standards, in most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, recommendations are based on documentation best practices as understood by the reviewers. The recommended implementations represent the reviewers' experience with how apply those best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-keywords], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
+
 
 ## Project documentation
 
@@ -42,7 +78,7 @@ etcd is a **graduated** project of CNCF. This means that the project should have
 | Criterion                  |  Rating (1-5)  |
 | ---                        |    ---   |
 | Information architecture   |     2 - needs improvement    |
-| New user content           |     3 - meets standards    |
+| New user content           |     2 - needs improvement    |
 | Content maintainability    |     3 - meets standards     |
 | Content creation processes |     2 - needs improvement     |
 | Inclusive language         |      2 - needs improvement    |
@@ -60,13 +96,13 @@ The *Learning* section, right before *Developer guide* in the ToC, is a catch-al
 
 - An architectural overview (actually a fairly detailed explanation of how etcd's client and resiliency architectures work).
 - Adoption decision information, in *etcd versus other key-value stores*. 
-- Also a glossary.
+- A glossary.
 
 There is a single paragraph on the [website][etcd-io] landing page with a "Learn more" link that goes to the current documetation table of contents.
 
-As far as I can tell, the documentation is **feature complete**. It lacks an adequate introduction and overview.
+The documentation is not quite **feature complete**. There are a few **undocumented tasks** associated with key features. For example, Kubernetes installation is not fully documented.
 
-There are **instructions** for features. These instructions include:
+There are **instructions** for various features. These instructions include:
 
 - A Quickstart guide
 - Installation instructions
@@ -76,9 +112,9 @@ There are **instructions** for features. These instructions include:
 
 ... and other tasks and procedures.
 
-There might be **undocumented tasks** associated with key features; a more thorough analysis of key use cases is required to make that determination.
+The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. 
 
-The **"happy path"** is not a simple procedure, but I believe that there is sufficient documentation of the most common use cases (configure and run HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented.
+The **"happy path"** for etcd is not a simple procedure, but I believe that there is sufficient documentation of the most common use cases (configure and run HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented.
 
 Task and tutorial content is **clearly named according to user goals**. 
 
@@ -87,11 +123,6 @@ Task and tutorial content is **clearly named according to user goals**.
 The product provides a [**reference for the API**](https://etcd.io/docs/v3.5/learning/api/). The documentation also references many language-specific libraries used to integrate with etcd.
 
 Documentation content is **up to date and is versioned**. The current documentation set is for the stable 3.5 release of etcd. The site also contains a draft version of documentation for the 3.6 release labeled "v3.6-DRAFT".
-
-Examples:
-
-* https://prometheus.io/docs/introduction/overview/
-* https://kubernetes.io/docs/home/
 
 
 #### New user content
@@ -110,11 +141,6 @@ There is no **new user signpost** in the documentation. The closest equivalent i
 
 The examples in the installation, configuration, and other documentation provide ample code to **copy-paste**.
 
-Examples:
-
-* https://falco.org/docs/getting-started/
-* https://prometheus.io/docs/introduction/first_steps/
-
 
 #### Content maintainability & site mechanics
 
@@ -124,9 +150,6 @@ The website content folder contains a **language-specific directory** in its hie
 
 Documentation content is **versioned** with the software. Versions are maintained in separate **directories** in the website content repo. 
 
-Examples:
-
-* https://kubernetes.io/docs/contribute/
 
 #### Content creation processes
 
@@ -136,10 +159,6 @@ It's not immediately clear **who is responsible** for approving documentation PR
 
 The website has a [**list of maintainers and reviewers**](https://github.com/etcd-io/website/blob/main/MAINTAINERS).
 
-Examples:
-
-* https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly documented maintainers)
-* https://thanos.io/tip/contributing/how-to-contribute-to-docs.md/
 
 #### Inclusive language
 
@@ -152,8 +171,7 @@ However, there are isolated instances of somewhat **non-inclusive language**. Fo
 
 ### Recommendations
 
-Lose the animated GIFs of CLI interactions. Especially the multi-window ones. They illustrate nothing and make the reader seasick.
-
+I strongly recommend removing the animated GIFs of CLI interactions. Especially the multi-window ones. They illustrate nothing and make the reader seasick. Depending on their purpose, replace them with code samples and/or flow diagrams.
 
 
 ## Contributor documentation
@@ -180,10 +198,8 @@ There is a link to the **GitHub** repository in the website footer. There are li
 
 The Community page has a schedule, minutes, and recordings of the project's biweekly **meetings**.
 
-There does not seem to be any period broadcast communication like a **mailing list**.
+There does not seem to be any periodic broadcast communication like a **mailing list**.
 
-Examples:
-https://kubernetes.io/community/
 
 #### Beginner friendly issue backlog
 
@@ -191,41 +207,30 @@ There is a label (`area/documentation`) for **documentation issues**. There is a
 
 There are a number of **stale issues**. Here's a summary of the age of open issues for etcd at the time of this writing:
 
+
 | Age | Count | Histogram |
 | --- | ----- | --- |
-| < 1 mo | 16 | *** |
-| 1 mo - 2 mo | 9 | ** |
-| 2 mo - 3 mo | 15 | *** |
-| 3 mo - 6 mo | 35 | ******* |
+| < 1 mo | 22 | **** |
+| 1 mo - 2 mo | 10 | ** |
+| 2 mo - 3 mo | 10 | ** |
+| 3 mo - 6 mo | 38 | ******* |
 | 6 mo - 12 mo | 40 | ******** |
-| > 12 mo | 54 | *********** |
-
-Examples:
-
-* https://github.com/opentracing/opentracing.io/issues (all of open tracing’s backlogs are well maintained!)
+| > 12 mo | 52 | *********** |
 
 
 #### New contributor getting started content
 
-There is a [**Community**][etcd-community] page on the etcd website. There is no dedicated **"first-contributor"** document, but there are multiple resources and pointers in the general contributor instructions. New users should have minimal difficulty **finding help** if they need it.
-
-Examples:
-
-* https://github.com/helm/community
-* https://github.com/backstage/community
+There is a [**Community**][etcd-community] page on the etcd website. There is no dedicated **"first-contributor"** document, but there are multiple resources and pointers in the general contributor instructions. New contributors should have minimal difficulty **finding help** if they need it.
 
 
 #### Project governance documentation
 
 [**Project goverance**][etcd-govern] is clearly documented.
 
-Examples:
-
-* https://github.com/kubernetes/steering
 
 ### Recommendations
 
-
+Create and expose a conspicuous "First contributor start here" document, with links to the other contributor resources.
 
 ## Website
 
@@ -237,16 +242,16 @@ etcd is a **graduated** project of CNCF. This means that the project should have
 | Meets min website req. (for maturity level) |  2  |
 | Usability, accessibility, and design        |  3  |
 | Branding and design                         |  4  |
-| Case studies/social proof                   |    |
+| Case studies/social proof                   |  3  |
 | SEO, Analytics, and site-local search       |    |
 | Maintenance planning                        |    |
 | A11y plan & implementation                  |    |
-| Mobile-first plan & impl.                   |    |
-| HTTPS access & HTTP redirect                |    |
+| Mobile-first plan & impl.                   |  3  |
+| HTTPS access & HTTP redirect                |  4  |
 | Google Analytics 4 for production only      |    |
 | Indexing allowed for production server only |    |
 | Intra-site / local search                   |    |
-| Account custodians are documented           |    |
+| Account custodians are documented           |  4  |
 
 Scale:
 | Rating | Meaning |
@@ -291,17 +296,10 @@ The site is **usable from mobile**. **Doc pages are readable**. Features such as
 
 Most, but not all **color contrasts** seem significant enough for color-impaired readers. For example, there are some light-blue on dark-blue labels on buttons on the landing page. Basic **website features**, including navigation, can be done via **keyboard**. Unknown whether **text-to-speech** is a good user experience for listeners.
 
-Examples:
-
-* https://helm.sh/
 
 #### Branding and design
 
 The website and documentation carry an **easily recognizable brand** for the project based on logo, color scheme, and template layout. The brand is used **consistently** on the site. The text is easily **readable**.
-
-Examples:
-
-* https://helm.sh/
 
 
 #### Case studies/social proof
@@ -310,11 +308,7 @@ The landing page lists a tiny **"logo wall"** of four "Used by" organizations, b
 
 There is a **project blog**, but it is not a site of active discussion; blog post frequency is annual or less. There do not seem to be any **community talks** available on the website. The YouTube channel contains videos of the bi-weekly meetings. 
 
-Examples:
-
-* https://www.fluentd.org/testimonials (user testimonials)
-* https://goharbor.io/ (logo wall)
-* https://blog.rook.io/ (blog)
+There is an ADOPTERS.md file in the etcd-io/etcd repository that lists a number of production users of etcd. Each entry in the file gives some details about the production installation, including when it was launched, the cluster size, what application is using etcd, and the cloud environment. The list of production users in this file is probably not exhaustive.
 
 
 #### SEO, Analytics and site-local search
@@ -337,16 +331,14 @@ Examples:
 
 The website uses Hugo and Docsy, which are the preferred **website tooling** for CNCF projects. 
 
+
 Web maintainers cultivated? ***TBD***
 
 Site build times reasonable? ***TBD***
 
 Site maintainers have **adequate permissions** to update the website. (I assume. ***TBD***).
 
-
-Examples:
-
-* http://kubernetes.io
+Maintainers of the etcd-io/website repository are adequately documented in the OWNERS file in the repo. Approvers and reviewers are listed. 
 
 #### Other
 
@@ -361,10 +353,14 @@ TBD
 
 <!--- References --->
 
-[dwelsch-esi]: https://github.com/dwelsch-esi
-[install]: https://etcd.io/docs/v3.5/install/
-[0010-etcd]: https://github.com/cncf/techdocs/assessments/0010-etcd.md
 [etcd-io]: https://etcd.io
+[cncf-doc-criteria]: ../criteria.md
+[implementation-doc]: ./etcd-implementation.md
+[proj-doc]: ../criteria.md#project-documentation
+[contributor-doc]: ../criteria.md/#contributor-documentation
+[website]: ../criteria.md/#website
+[etcd-issues]: ./etcd-issues.md
+[rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
 [inclusive-naming]: https://inclusivenaming.org
 [install-check]: https://etcd.io/docs/v3.5/install/#installation-check
 [website-min-reqs]: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
@@ -372,9 +368,6 @@ TBD
 [website-guidelines]: https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
 [cncf-servicedesk]: https://servicedesk.cncf.io
 [archiving-repo]: https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
-[mobile-first]: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
-[accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
-[etcd-io]: httpd://etcd.io
 [etcd-community]: https://etcd.io/community/
 [etcd-howtocontrib]: https://github.com/etcd-io/etcd/blob/main/CONTRIBUTING.md
 [etcd-git-discuss]: https://github.com/etcd-io/etcd/discussions
