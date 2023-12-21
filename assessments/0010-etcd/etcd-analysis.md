@@ -33,6 +33,7 @@ The etcd website and documentation are written in Markdown and are compiled usin
 - Documentation: https://etcd.io/docs
 - Website repo: https://github.com/etcd-io/website
 - Main project contributor info: https://github.com/etcd-io/etcd
+- Demo server: http://play.etcd.io
 
 **Out of scope:**
 - Other etcd repos: https://github.com/etcd-io/*
@@ -98,8 +99,6 @@ The *Learning* section, right before *Developer guide* in the ToC, is a catch-al
 - Adoption decision information, in *etcd versus other key-value stores*. 
 - A glossary.
 
-There is a single paragraph on the [website][etcd-io] landing page with a "Learn more" link that goes to the current documetation table of contents.
-
 The documentation is not quite **feature complete**. There are a few **undocumented tasks** associated with key features. For example, Kubernetes installation is not fully documented.
 
 There are **instructions** for various features. These instructions include:
@@ -114,7 +113,7 @@ There are **instructions** for various features. These instructions include:
 
 The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. 
 
-The **"happy path"** for etcd is not a simple procedure, but I believe that there is sufficient documentation of the most common use cases (configure and run HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented.
+The **"happy path"** for etcd is not a simple procedure, but I believe that there is sufficient documentation of the most common use cases (configure and run HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: There is a "TBD" under "Installation as part of Kubernetes installation". 
 
 Task and tutorial content is **clearly named according to user goals**. 
 
@@ -124,10 +123,13 @@ The product provides a [**reference for the API**](https://etcd.io/docs/v3.5/lea
 
 Documentation content is **up to date and is versioned**. The current documentation set is for the stable 3.5 release of etcd. The site also contains a draft version of documentation for the 3.6 release labeled "v3.6-DRAFT".
 
+The [demo-server][demo-server] has an *install* menu item that goes to "an example workflow to install and deploy etcd." However, the page consists of a form containing parameters (with no explanation of each parameter other than the label) followed by a CLI script that varies depending on the installation type you choose. Presumably you're supposed to run the script to do the install, but there are no clear task instructions at all. Novice users will have a hard time with this.
 
 #### New user content
 
-There are **install** and **quick start** entries in the ToC. 
+There is a single paragraph on the [website][etcd-io] landing page with a "Learn more" link that goes to the current documetation table of contents. Better would be if it went to an overview page with "what to do next" options. 
+
+There are **install** and **quick start** entries in the technical documentation ToC. 
 
 The **installation** page gives step-by-step instructions for installing binaries, from source, and using a package manager. Installation as part of a Kubernetes installation is also described on the page, but there is a placeholder under the heading "Installation as part of Kubernetes installation".
 
@@ -144,7 +146,7 @@ The examples in the installation, configuration, and other documentation provide
 
 #### Content maintainability & site mechanics
 
-Documentation is fully **searchable**. Searches are limited to the stable software version.
+Documentation is fully **searchable**. Searches are limited to the current (stable) software version. Search also returns blog entries.
 
 The website content folder contains a **language-specific directory** in its hierarchy, implying a mechanism for doing **internationalization** if necessary. There do not appear to be plans to translate the documentation from English.
 
@@ -344,6 +346,8 @@ Maintainers of the etcd-io/website repository are adequately documented in the O
 
 The website is accessible via **HTTPS**. Requests using **HTTP** are properly redirected to the **HTTPS** URLs.
 
+The [demo server][demo-server] uses unsecured HTTP.
+
 ### Recommendations
 
 TBD
@@ -372,3 +376,4 @@ TBD
 [etcd-howtocontrib]: https://github.com/etcd-io/etcd/blob/main/CONTRIBUTING.md
 [etcd-git-discuss]: https://github.com/etcd-io/etcd/discussions
 [etcd-govern]: https://github.com/etcd-io/etcd/blob/main/GOVERNANCE.md
+[demo-server]: http://play.etcd.io
