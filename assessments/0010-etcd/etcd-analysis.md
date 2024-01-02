@@ -2,7 +2,7 @@
 title: etcd Documentation Analysis
 tags: etcd
 created: 2023-09-01
-modified: 2023-12-08
+modified: 2024-01-02
 author: Dave Welsch (@dwelsch-esi)
 ---
 
@@ -74,7 +74,7 @@ Notwithstanding the fact that this analysis measures documentation against CNCF 
 
 ## Project documentation
 
-etcd is a **graduated** project of CNCF. This means that the project should have [*very high*](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) standards for documentation.
+etcd is a **graduated** project of CNCF. This means that the project should have [*very high*][cncf-doc-criteria] standards for documentation.
 
 | Criterion                  |  Rating (1-5)  |
 | ---                        |    ---   |
@@ -95,8 +95,9 @@ There is **high-level conceptual** and design content, but it is hidden in a *Le
 
 The *Learning* section, right before *Developer guide* in the ToC, is a catch-all for a lot of different types of information:
 
-- An architectural overview (actually a fairly detailed explanation of how etcd's client and resiliency architectures work).
-- Adoption decision information, in *etcd versus other key-value stores*. 
+- An architectural overview (explanations of how etcd's client and resiliency architectures work).
+- Adoption decision information, in *etcd versus other key-value stores*. This information needs updating.
+- An overview of the gRPC-based API.
 - A glossary.
 
 The documentation is not quite **feature complete**. There are a few **undocumented tasks** associated with key features. For example, Kubernetes installation is not fully documented.
@@ -111,11 +112,13 @@ There are **instructions** for various features. These instructions include:
 
 ... and other tasks and procedures.
 
-The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. 
+The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. The adoption path needs more focus. For example, "What's next?" at the end of the Quickstart instructions provides too many unrelated choices.
 
 The **"happy path"** for etcd is not a simple procedure, but I believe that there is sufficient documentation of the most common use cases (configure and run HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: There is a "TBD" under "Installation as part of Kubernetes installation". 
 
-Task and tutorial content is **clearly named according to user goals**. 
+Task and tutorial content is **clearly named according to user goals**.
+
+Tutorials have animated graphics of command line activity that adds nothing of value to the explanation and is very distracting. Replace with a listing of the output if necessary, but remove the animation.
 
 **Escalation paths** are clearly described in [Reporting bugs](https://etcd.io/docs/v3.5/reporting_bugs/) and [Triage](https://etcd.io/docs/v3.5/triage/).
 
@@ -123,7 +126,7 @@ The product provides a [**reference for the API**](https://etcd.io/docs/v3.5/lea
 
 Documentation content is **up to date and is versioned**. The current documentation set is for the stable 3.5 release of etcd. The site also contains a draft version of documentation for the 3.6 release labeled "v3.6-DRAFT".
 
-The [demo-server][demo-server] has an *install* menu item that goes to "an example workflow to install and deploy etcd." However, the page consists of a form containing parameters (with no explanation of each parameter other than the label) followed by a CLI script that varies depending on the installation type you choose. Presumably you're supposed to run the script to do the install, but there are no clear task instructions at all. Novice users will have a hard time with this.
+The [demo-server][demo-server] has an *install* menu item that goes to "an example workflow to install and deploy etcd." However, the page consists of a form containing parameters (with no explanation of each parameter other than the label) followed by a CLI script that varies depending on the installation type you choose. Presumably you're supposed to run the script to do the install, but there are no clear task instructions at all. Novice users will have a hard time with this. Also, why is this information on the demo server at all? Users should be referred to an installation procedure in the documentationa.
 
 #### New user content
 
@@ -133,7 +136,7 @@ There are **install** and **quick start** entries in the technical documentation
 
 The **installation** page gives step-by-step instructions for installing binaries, from source, and using a package manager. Installation as part of a Kubernetes installation is also described on the page, but there is a placeholder under the heading "Installation as part of Kubernetes installation".
 
-There is an example **installation** on the [etcd Play](http://play.etcd.io/install) server.
+There is an example **installation** on the [etcd Play](http://play.etcd.io/install) server. It's not clear how this is useful.
 
 Package manager installation is documented (but not recommended) for Linux and MacOS. **Other OSes** are alluded to but not documented. Supported platforms are documented in the [Operations guide](https://etcd.io/docs/v3.5/op-guide/supported-platform/).
 
@@ -146,7 +149,7 @@ The examples in the installation, configuration, and other documentation provide
 
 #### Content maintainability & site mechanics
 
-Documentation is fully **searchable**. Searches are limited to the current (stable) software version. Search also returns blog entries.
+Documentation is fully **searchable**. Searches are apparently limited to the current (stable) software version, though searching for "upgrade" lists instructions for upgrading 3.3 -> 3.4 in the v3.4 doc, 3.2 -> 3.3 in the 3.3 doc, and so on. Search also returns blog entries.
 
 The website content folder contains a **language-specific directory** in its hierarchy, implying a mechanism for doing **internationalization** if necessary. There do not appear to be plans to translate the documentation from English.
 
@@ -155,11 +158,11 @@ Documentation content is **versioned** with the software. Versions are maintaine
 
 #### Content creation processes
 
-There are instructions for contributing to documentation and for **releasing a new version** of the etcd **documentation** in the `README.md` file in the [website repo](https://github.com/etcd-io/website/blob/main/README.md). The instructions are out of date and seem to require intervention to fix a bad current-version redirect. 
+There are instructions for contributing to documentation and for **releasing a new version** of the etcd **documentation** in the `README.md` file in the [website repo](https://github.com/etcd-io/website/blob/main/README.md). The instructions are out of date. See issues #383, 405, 406, 459.
 
-It's not immediately clear **who is responsible** for approving documentation PRs.
 
-The website has a [**list of maintainers and reviewers**](https://github.com/etcd-io/website/blob/main/MAINTAINERS).
+
+The website has a [**list of maintainers and reviewers**](https://github.com/etcd-io/website/blob/main/OWNERS). Those maintainer **responsible for approving** documentation PRs are listed as "approvers". This list might need to be updated.
 
 
 #### Inclusive language

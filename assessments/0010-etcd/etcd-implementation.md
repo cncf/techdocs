@@ -16,8 +16,8 @@ Notwithstanding the fact that this analysis measures documentation against CNCF 
 The top-level documentation recommendations for this project are:
 
 - Complete documentation for important use cases, such as Kubernetes installation.
-- Rename the "Learning" section to something more descriptive such as "Technical Overview", and move reference information (APIs and Glossary) to a reference-specific page.
-- Reorganize the documentation to make instructional documentation easier to find. 
+- Rename the "Learning" section to something more descriptive such as "Technical Overview", and move reference information (APIs and Glossary) to a reference-specific section.
+- Reorganize the documentation to make instructional documentation (tasks and procedures) easier to find. 
 
 
 # Implementation: Complete documentation for important use cases
