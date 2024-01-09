@@ -2,7 +2,7 @@
 title: etcd Documentation Analysis
 tags: etcd
 created: 2023-09-01
-modified: 2024-01-02
+modified: 2024-01-08
 author: Dave Welsch (@dwelsch-esi)
 ---
 
@@ -58,7 +58,7 @@ An accompanying document, [etcd-implementation.md][implementation-doc], breaks t
 
 Readers interested only in actionable improvements should skip this document and read [etcd-implementation.md][implementation-doc].
 
-Readers interested in the current state of the documentation and the reasoning behind the recommendations should read this document or the section pertaining to their area of concern:
+Readers interested in the current state of the documentation and the reasoning behind the recommendations should read the section of this document pertaining to their area of concern:
 
 - [Project documentation][proj-doc]
 - [Contributor documentation][contributor-doc]
@@ -93,7 +93,7 @@ The following sections contain brief assessments of each element of the Project 
 
 ### Information architecture
 
-There is **high-level conceptual** and design content, but it is hidden in a *Learning* section two-thirds of the way down the TOC. 
+There is **high-level conceptual** and design content, but it is hard to find. Most of it is in a *Learning* section, which is not a conventional label for a system overview. 
 
 The *Learning* section, right before *Developer guide* in the ToC, is a catch-all for a lot of different types of information:
 
@@ -114,19 +114,19 @@ The documentation contains **instructions** for various features. These instruct
 
 ... and other tasks and procedures.
 
-The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. The adoption path needs more focus. For example, "What's next?" at the end of the Quickstart instructions provides too many unrelated choices.
+The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. The adoption path needs more focus and to be split out by user role. For example, "Getting started" should be different for a developer setting up toy server vs. an admin setting up a production server.
 
-The **"happy path"** for etcd is not a simple procedure, but I believe that there is sufficient documentation of the most common use cases (configure and run an HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: The Kubernetes and Linux installation instructions noted above. 
+The **"happy path"** for etcd is not a simple procedure and, again, varies by user role. However, I believe that there is sufficient documentation of the most common use cases (configure and run an HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: The Kubernetes and Linux installation instructions noted above. 
 
-Task and tutorial content are **clearly named according to user goals**. However, using "-ing" verb forms instead of "How to ..." would make headings easier to navigate.
+Task and tutorial content are **clearly named according to user goals**. Using "-ing" verb forms instead of "How to ..." would make headings easier to navigate.
 
-Tutorials have animated graphics of command line activity. 
+Tutorials contain large animated graphics of command line activity. Theser are distracting and degrade the usability of the instructions.
 
 **Escalation paths** are clearly described in [Reporting bugs](https://etcd.io/docs/v3.5/reporting_bugs/) and [Triage][etcdio-triage].
 
 The product provides a [**reference for the API**](https://etcd.io/docs/v3.5/learning/api/). The documentation also references many language-specific libraries used to integrate with etcd.
 
-Documentation content is **up to date and is versioned**. The current documentation set is for the stable 3.5 release of etcd. The site also contains a draft version of documentation for the 3.6 release labeled "v3.6-DRAFT". The site lists several versions of the documentation for down-level releases. These could be archived.
+Documentation content **is versioned**. The current documentation set is for the stable 3.5 release of etcd. The site also contains a draft version of documentation for the 3.6 release labeled "v3.6-DRAFT". The site lists several versions of the documentation for down-level releases. These could be archived.
 
 There are references to previous releases in the documentation. Most of these should probably be removed. 
 
@@ -138,7 +138,7 @@ There is an example **installation** on the [etcd Play](http://play.etcd.io/inst
 
 There is a single paragraph on the [website][etcd-io] landing page with a "Learn more" link that goes to the current documetation table of contents. Better would be if it went to an overview page that laid out learning paths for different users ("Start here"). 
 
-There are **install** and **quick start** entries in the technical documentation ToC. These are good starting points but could be refined.
+There are **install** and **quick start** entries in the technical documentation ToC. These are good starting points but could be refined. User roles are not addressed.
 
 The **installation** page gives step-by-step instructions for installing from binaries, from source, and using a package manager. Installation as part of a Kubernetes installation is also described on the page, but there is a placeholder under the heading "Installation as part of Kubernetes installation". Linux installation is also "TBD", which seems like a big omission.
 
@@ -159,7 +159,7 @@ Documentation content is **versioned** with the software. Versions are maintaine
 
 Documentation is fully **searchable**. Searches are apparently limited to the current (stable) software version, though searching for "upgrade" lists instructions for upgrading 3.3 -> 3.4 in the v3.4 doc, 3.2 -> 3.3 in the 3.3 doc, and so on. Search also returns blog entries.
 
-There are links to docs for previous versions in some of the 3.5 documentation files:
+There are links to docs for previous releases in some of the 3.5 documentation files:
 
 - dev-internal/discovery_protocol.md
 - op-guide/runtime-configuration.md
@@ -196,7 +196,7 @@ However, there are isolated instances of somewhat **non-inclusive language**. Fo
 
 Reorganize the table of contents (ToC) to separate three types of information:
 - **Conceptual**: Information that is necessary to understanding but not directly usable. The main bodies of conceptual information are architecture and system overviews.
-- **Instructional**: How to complete tasks necessary to use the software (this includes programming and integration using APIs). Organize instructional material by user role: for etcd, the two main user roles are 1) developers, and 2) operators or admins responsible for running and maintaining etcd server instances.
+- **Instructional**: How to complete tasks necessary to use the software (this includes programming and integration using APIs). Organize instructional material by user role: for etcd, the two main user roles seem to be 1) developers, and 2) operators or admins responsible for running and maintaining etcd server instances.
 - **Reference**: The details of CLI commands, API metehods and objects, system configuration options, and other information that needs to be looked up in the course of performning a task.
 
 For an excellent and very literal example of this approach, see the [Kubernetes documentation][k8s-doc].
@@ -209,7 +209,7 @@ Use "-ing" verb forms instead of "How to ..." as headings for procedures.
 
 Break procedures out to one per page. For example, instead of every installation case being on one page, create a navigation page explaining the use case for each installation and link to a page whose sole content is step-by-step installation instructions.
 
-Replace animated GIFs of command line activity with static listings of the outputs that can be studied at normal reading speed.
+Replace animated GIFs of command line activity with static listings of the outputs that can be studied and copy/pasted.
 
 Create a Troubleshooting page that helps with common problems. Link to Slack channels and issue and PR submission instructions in the GitHub repo in case more help is needed.
 
@@ -234,11 +234,11 @@ In general, confine release-specific discussion to the Release Notes.
 
 Remove benchmarks for down-level versions in the current documentation if they're no longer relevant.
 
-Consider removing the installation example from the [etcd Play](http://play.etcd.io/install) server and pointing the user to the documentation.
+Consider removing the installation example from the [etcd Play](http://play.etcd.io/install) server and pointing the user to the documentation's installation instructions.
 
 ### New user content
 
-Point "Learn more" links to a Start Here page that provides orientation and sets out paths for different user roles. For example, the Developer path should provide instructions for:
+Point "Learn more" links to a "Start here" page that provides orientation and sets out paths for different user roles. For example, the Developer path should provide instructions for:
 
 1. Installing a local server.
 2. Setting up an environment and testing the server using the CLI.
@@ -252,7 +252,7 @@ Remove getting-started instructions from the main GitHub repo README and instead
 
 ### Content maintainability & site mechanics
 
-Remove links to documentation for previous versions from current documentation version. Going forward, write doc for each release without referring to previous ("In 3.2 this feature was changed ...") or future ("We plan to upgrade this in the next release ..."). Such comments should go only in release notes.
+Remove links to documentation for previous releases from the current documentation version. Going forward, write doc for each release without referring to previous ("In 3.2 this feature was changed ...") or future ("We plan to upgrade this in the next release ..."). Such comments should go only in release notes.
 
 References to previous versions are in the following 3.5 documentation files:
 
@@ -277,7 +277,7 @@ Audit the documentation for non-inclusive language.
 
 # Contributor documentation
 
-etcd is a **graduated** project of CNCF. This means that the project should have [*very high*](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) standards for documentation.
+etcd is a **graduated** project of CNCF. This means that the project should have [*very high*](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) standards for contributor documentation.
 
 | Criterion                                 | Rating (1-5)   |
 | ---                                       | --- | 
@@ -299,7 +299,7 @@ The Community page has a schedule, minutes, and recordings of the project's biwe
 
 There does not seem to be any periodic broadcast communication like a **mailing list**.
 
-[Triage][etcdio-triage] contains instructions for dealing with issues and PRs in the etcd repo. These should be in the repo itself, with a pointer from the documentation at most.
+[Triage][etcdio-triage] contains instructions for dealing with issues and PRs in the etcd repo. These should be in the repo itself, with a pointer from the documentation troubleshooting section.
 
 
 ### Beginner friendly issue backlog
@@ -334,7 +334,7 @@ There is a [**Community**][etcd-community] page on the etcd website. There is no
 
 ### Communication methods documented
 
-Movethe information from the [Triage][etcdio-triage] doc section into the repo itself, with pointers from the documentation Developer and Operations guides.
+Move the information from the [Triage][etcdio-triage] doc section into the repo itself, with pointers from the documentation Troubleshooting guide.
 
 
 ### Beginner friendly issue backlog
@@ -398,7 +398,7 @@ Listed and acknowledged below are the (cumulative) _minimal_ website requirement
 | Incubating | **Project doc**: stakeholders (roles) identified and doc needs documented | No |
 | Incubating | **Project doc**: Hosted directly | Yes |
 | Incubating | **Project doc**: Comprehensive, addressing most stakeholder needs | Yes |
-| Graduated | [Docs assessment][assess-howto]: all assessment follow-through actions are complete |  |
+| Graduated | [Docs assessment][assess-howto]: all assessment follow-through actions are complete | No |
 | Graduated | **Project doc** fully addresses needs of key stakeholders | No |
 | Archived | The website repo is in an [archived state][archiving-repo] | n/a |
 | Archived | Archived status of the project is obvious to site visitors | n/a |
@@ -448,11 +448,11 @@ The website uses Hugo and Docsy, which are the recommended **website tooling** f
 
 Web maintainers cultivated? ***TBD***
 
-Site build times reasonable? ***TBD***
+The website builds in **reasonable time** on a desktop computer.
 
 Site maintainers have **adequate permissions** to update the website. (I assume. ***TBD***).
 
-Maintainers of the etcd-io/website repository are adequately documented in the OWNERS file in the repo. Approvers and reviewers are listed. 
+Maintainers of the [website repository][website-repo] are adequately documented in the OWNERS file in the repo. Approvers and reviewers are listed. 
 
 ### Other
 
@@ -461,11 +461,6 @@ The website is accessible via **HTTPS**. Requests using **HTTP** are properly re
 The [demo server][demo-server] uses unsecured HTTP.
 
 ## Recommendations
-
-
-
-
-
 
 
 ### Single-source requirement
@@ -513,8 +508,6 @@ Consider authorizing contributors to update the website and documentation.
 Consider securing the [demo server][demo-server] using HTTPS.
 
 
-# Recommendations
-
 
 <!--- References --->
 
@@ -544,3 +537,4 @@ Consider securing the [demo server][demo-server] using HTTPS.
 [docs-authentication]: https://etcd.io/docs/v3.5/op-guide/authentication/authentication/
 [etcd-readme]: https://github.com/etcd-io/etcd/blob/main/README.md
 [k8s-doc]: https://kubernetes.io/docs/home/
+[website-repo]: https://github.com/etcd-io/website/tree/main
