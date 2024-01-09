@@ -14,13 +14,13 @@ According to CNCF best practices guidelines, effective documentation is a prereq
 
 ## Purpose
 
-This document was written to analyze the current state of etcd documentation. It aims to provide project leaders with an informed understanding of their project documentation and to outline an actionable plan for improvement.
+This document was written to analyze the current state of etcd documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. The companion document, etcd-impementation.md, outlines an actionable plan for improvement.
 
 This document:
 
 - Analyzes the current etcd technical documentation and website
 - Compares existing documentation against the CNCF’s standards
-- Recommends a program of key improvements with the largest return on investment
+- Recommends a program of key improvements with the largest return on investment. The companion document, etcd-impementation.md, provides specific actionable suggestions and recommendations for overall organization and presentation of documentation
 
 ## Scope of analysis
 
@@ -69,7 +69,7 @@ Examples of CNCF documentation that demonstrate the analysis criteria are linked
 
 ### Recommendations, requirements, and best practices
 
-Notwithstanding the fact that this analysis measures documentation against CNCF project maturity standards, in most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-keywords], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
+This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-keywords], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
 
 
 # Project documentation
@@ -102,7 +102,7 @@ The *Learning* section, right before *Developer guide* in the ToC, is a catch-al
 - An overview of the gRPC-based API.
 - A glossary.
 
-The documentation is not **feature complete**. There are some **undocumented tasks** associated with key features. For example, Kubernetes and Linux installations is not fully documented. The [Authentication][docs-authentication] page is a stub containing only a CLI example.
+The documentation is not **feature complete**. There are some **undocumented tasks** associated with key features. For example, Kubernetes and Linux installations are not fully documented. The [Authentication][docs-authentication] page is a stub containing only a CLI example.
 
 The documentation contains **instructions** for various features. These instructions include:
 
@@ -114,13 +114,13 @@ The documentation contains **instructions** for various features. These instruct
 
 ... and other tasks and procedures.
 
-The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. The adoption path needs more focus and to be split out by user role. For example, "Getting started" should be different for a developer setting up toy server vs. an admin setting up a production server.
+The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. The adoption path needs more focus and to be split out by user role. For example, "Getting started" should be different for a developer setting up a development server vs. an admin setting up a production server.
 
 The **"happy path"** for etcd is not a simple procedure and, again, varies by user role. However, I believe that there is sufficient documentation of the most common use cases (configure and run an HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: The Kubernetes and Linux installation instructions noted above. 
 
 Task and tutorial content are **clearly named according to user goals**. Using "-ing" verb forms instead of "How to ..." would make headings easier to navigate.
 
-Tutorials contain large animated graphics of command line activity. Theser are distracting and degrade the usability of the instructions.
+Tutorials contain large animated graphics of command line activity. These are distracting and degrade the usability of the instructions.
 
 **Escalation paths** are clearly described in [Reporting bugs](https://etcd.io/docs/v3.5/reporting_bugs/) and [Triage][etcdio-triage].
 
@@ -132,11 +132,11 @@ There are references to previous releases in the documentation. Most of these sh
 
 Benchmarks for down-level versions are available in the current documentation. It's not clear why these old benchmarks haven't been removed from the documentation.
 
-There is an example **installation** on the [etcd Play](http://play.etcd.io/install) server that prsents  "an example workflow to install and deploy etcd." This page consists of a form containing parameters (with no explanation of each parameter other than the label) followed by a CLI script that varies depending on the installation type you choose. Presumably you're supposed to run the script to do the install, but there are no clear task instructions at all. It's not clear how this is useful. Novice users will have a hard time with this. Also, why is this information on the demo server at all? Users should be referred to an installation procedure in the documentation. If this represents a separate, automated installation workflow it should be offered as a procedure in the user doc.
+There is an example **installation** on the [etcd Play](http://play.etcd.io/install) server that presents  "an example workflow to install and deploy etcd." This page consists of a form containing parameters (with no explanation of each parameter other than the label) followed by a CLI script that varies depending on the installation type you choose. Presumably you're supposed to run the script to do the install, but there are no clear task instructions at all. It's not clear how this is useful. Novice users will have a hard time with this. Also, why is this information on the demo server at all? Users should be referred to an installation procedure in the documentation. If this represents a separate, automated installation workflow it should be offered as a procedure in the user doc.
 
 ### New user content
 
-There is a single paragraph on the [website][etcd-io] landing page with a "Learn more" link that goes to the current documetation table of contents. Better would be if it went to an overview page that laid out learning paths for different users ("Start here"). 
+There is a single paragraph on the [website][etcd-io] landing page with a "Learn more" link that goes to the current documetation table of contents (ToC). It would be better to link to an overview page that laid out learning paths for different users ("Start here"). 
 
 There are **install** and **quick start** entries in the technical documentation ToC. These are good starting points but could be refined. User roles are not addressed.
 
@@ -146,7 +146,7 @@ Package manager installation is documented (but not recommended) for Linux and M
 
 The *Quickstart* section lists suggested next steps in a *What's next?* heading. However, there is no such section on the *Installation* page, and in neither location is a clear **workflow path** delineated.
 
-There is no **new user signpost** in the documentation. The closest equivalent is the *Quickstart* section, but the Quickstart does not differentiate among user roles (Developer? Operator? Trying to decide whether to adopt?).
+There is no **new user signpost** in the documentation. The closest equivalent is the *Quickstart* section, but the Quickstart does not differentiate among user roles (Developer? Operator? Evaluator trying to decide whether to adopt?).
 
 The examples in the installation, configuration, and other documentation provide ample code to **copy-paste**.
 
