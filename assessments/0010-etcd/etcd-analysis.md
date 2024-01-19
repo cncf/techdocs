@@ -363,14 +363,14 @@ etcd is a **graduated** project of CNCF. This means that the project should have
 | Usability, accessibility, and design        |  3 - meets standards  |
 | Branding and design                         |  4 - meets or exceeds standards  |
 | Case studies/social proof                   |  3 - meets standards  |
-| SEO, Analytics, and site-local search       |    |
-| Maintenance planning                        |    |
-| A11y plan & implementation                  |    |
+| SEO, Analytics, and site-local search       |  5 - exemplary |
+| Maintenance planning                        |  5 - exemplary |
+| A11y plan & implementation                  |  4 - meets or exceeds standards  |
 | Mobile-first plan & impl.                   |  3 - meets standards  |
 | HTTPS access & HTTP redirect                |  4 - meets or exceeds standards  |
-| Google Analytics 4 for production only      |    |
-| Indexing allowed for production server only |    |
-| Intra-site / local search                   |    |
+| Google Analytics 4 for production only      |  5 - exemplary |
+| Indexing allowed for production server only |  5 - exemplary |
+| Intra-site / local search                   |  5 - exemplary |
 | Account custodians are documented           |  4 - meets or exceeds standards  |
 
 
@@ -427,7 +427,7 @@ There is an ADOPTERS.md file in the etcd-io/etcd repository that lists a number 
 
 ### SEO, Analytics and site-local search
 
-***TBD***
+The website has site-wide search, GA4 enabled, and well indexed on popular search engines; matches perfectly to our criteria.
 
 **Analytics:**
 * Is analytics enabled for the production server?
@@ -446,13 +446,14 @@ There is an ADOPTERS.md file in the etcd-io/etcd repository that lists a number 
 The website uses Hugo and Docsy, which are the recommended **website tooling** for CNCF projects. 
 
 
-Web maintainers cultivated? ***TBD***
+Web maintainers cultivated? Maintainers are actively cultivated within the community.
 
 The website builds in **reasonable time** on a desktop computer.
 
-Site maintainers have **adequate permissions** to update the website. (I assume. ***TBD***).
+Site maintainers have **adequate permissions** to update the website. 
 
 Maintainers of the [website repository][website-repo] are adequately documented in the OWNERS file in the repo. Approvers and reviewers are listed. 
+
 
 ### Other
 
@@ -493,14 +494,12 @@ Consider posting updates and news to the blog more regularly.
 
 ### SEO, Analytics and site-local search
 
-***TBD***
+No recommendations.
 
 
 ### Maintenance planning
 
-Consider authorizing contributors to update the website and documentation.
-
-***TBD***
+No recommendations.
 
 
 ### Other
