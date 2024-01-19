@@ -430,16 +430,17 @@ There is an ADOPTERS.md file in the etcd-io/etcd repository that lists a number 
 The website has site-wide search, GA4 enabled, and well indexed on popular search engines; matches perfectly to our criteria.
 
 **Analytics:**
-* Is analytics enabled for the production server?
-* Is analytics disabled for all other deploys?
-* If your project used Google Analytics, have you migrated to GA4?
-* Can Page-not-found (404) reports easily be generated from you site analytics? Provide a sample of the site's current top-10 404s.
+* Analytics is enabled for production site.
+* Analytics is disabled for all other deploys.
+* Project analytics has been migrated to GA4.
+* Page-not-found (404) reports can be easily be generated from the site analytics.
 
 **Indexing and Search:**
-* Is site indexing supported for the production server, while disabled for website previews and builds for non-default branches?
-* Is local intra-site search available from the website?
+* Production site is well indexed.
+* Local intra-site search available from the website.
 
-* Are the current custodian(s) of the following accounts clearly documented: analytics, Google Search Console, site-search (such as Google CSE or Algolia)
+**Account custodians**
+* Account custodians are not clearly documented. 
 
 ### Maintenance planning
 
@@ -452,7 +453,7 @@ The website builds in **reasonable time** on a desktop computer.
 
 Site maintainers have **adequate permissions** to update the website. 
 
-Maintainers of the [website repository][website-repo] are adequately documented in the OWNERS file in the repo. Approvers and reviewers are listed. 
+Maintainers of the [website repository][website-repo] are adequately documented in the OWNERS file in the repo. Approvers and reviewers are listed.
 
 
 ### Other
@@ -494,7 +495,8 @@ Consider posting updates and news to the blog more regularly.
 
 ### SEO, Analytics and site-local search
 
-No recommendations.
+**Account custodians**
+* Areas such as analytics, Google Search Console, site-search (such as Google CSE or Algolia) must have at least one custodian assigned.
 
 
 ### Maintenance planning
