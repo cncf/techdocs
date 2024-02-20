@@ -44,12 +44,13 @@ Name the tasks using gerund phrases ("-ing" form, like "Reading ..." and "Writin
 
 In an "Overview" or "Start here" page, outline etcd's user roles or personas. These probably include:
 - *Evaluator*: Someone trying to determine whether etcd is appropriate for their product, project, or organization.
-- *Admin or Operator*: Someonereponsible for setting up and maintaining a production etcd service.
+- *Admin or Operator*: Someone reponsible for setting up and maintaining a standalone (not installed as the backstore for Kubernetes) production etcd service.
+- *Kubernetes Admin*: Someone responsible for installing and maintaining a Kubernetes cluster that uses etcd as the backstore.
 - *Developer*: Someone incorporating or integrating etcd into an application or service.
 
 ## Write installation instructions for Kubernetes
 
-"Installation as part of Kubernetes installation" is missing. Write and test a procedure for this.
+"Installation as part of Kubernetes installation" is missing. This is a task for the Kubernetes Admin role. The etcd install page can link to Kubernetes documentation, especially in cases where the Kubernetes installation process automatically includes the etcd install. The etcd documentation should include etcd-specific instructions that aren't included in the Kubernetes doc. If in doubt, duplicating instructions between the two products is preferable to omitting documentation.
 
 ## Write Linux installation instructions
 
@@ -57,15 +58,7 @@ Linux installation instructions are missing ("TDB") from the Installation page. 
 
 ## Update quickstart and new user workflows
 
-Write separate "Getting started" workflows for Developer and Operator users.
-
-## Write release notes
-
-Write release notes for each major and minor release going forward. Release notes should include:
-- New and changed features
-- Known issues
-- Updated roadmap information
-- Upgrade procedures
+Write separate "Getting started" workflows for Developer, Standalone Operator, and Kubernetes Admin users. Again, the Kubernetes Admin documentation can link to coverage in the Kubernetes documentation, but the writer should ensure that major use cases are covered, including adding details in the etcd documentation if necessary.
 
 
 # Reorganize the documentation
@@ -80,6 +73,8 @@ Reorganized the documentation to contain the following main elements:
     - Detailed installation and configuration for each user role (Contents of current "Installation" page)
 - Developer guide
 - Operator guide
+  - Standalone etcd installation
+  - Kubernetes Admin
 - Troubleshooting
 - Reference
     - Configuration
@@ -91,21 +86,26 @@ Reorganized the documentation to contain the following main elements:
 
 Following are specific recommendations for each section of the documentation. 
 
-**Quickstart**: Rename to "Quick start" (two words). Add a "Prerequisites" section and revise the "What's next" section to focus on two separate paths, Development and Operations. For the developer path, link to the "Set up a local cluster" page rather than the install page.
+**Quickstart**: Rename to "Quick start" (two words). Add a "Prerequisites" section and revise the "What's next" section to focus on three separate paths:
+- Development
+- Operations
+- Kubernetes backstore
+
+For the developer path, link to the "Set up a local cluster" page rather than the install page.
 
 **Demo**: Redundant with Operations guide > Authentication guides > Authentication. Remove from the ToC.
 
-**Tutorials**: Rename "Tasks". Rename each task by removing "How to" and using "-ing" verb form. Make steps in each task explicit; one-step tasks are okay. Organize by user role: Developer, Operator, or both, or put each roles' tasks in the corresponding guide.
+**Tutorials**: Rename "Tasks". Rename each task by removing "How to" and using "-ing" verb form. Make steps in each task explicit; one-step tasks are okay. Organize by user role: Developer, Operator, or Kubernetes Admin, or put each roles' tasks in the corresponding guide.
 
 **Install**: Rename "Installation" and put each installation on a separate page, collapsible in the ToC. Each should contain Prerequisites, step-by-step instructions, and a "What's next?" section. 
 
 **FAQ**: Move to near the end of the ToC. Longer explanations in the FAQ might be better as part of conceptual information -- for example, in the system or architecture overview.
 
-**Libraries and tools**: Move to the Reference section. Consider organizing by user role , or labeling each tool or library by user role. Move "Projects using etcd" to a logo wall or at least to its own page on the website.
+**Libraries and tools**: Move to the Reference section. Consider organizing by user role, or labeling each tool or library by user role. Move "Projects using etcd" to a logo wall or at least to its own page on the website.
 
 **Metrics**: Move to the Operations Guide.
 
-**Reporting bugs**: Combine with the "Triage" topics and move to the repo. Include references to this contributor informationin the Developer and Operations guides.
+**Reporting bugs**: Combine with the "Triage" topics and move to the repo. Include references to this contributor information in the Developer and Operations guides.
 
 **Tuning**: Move to the Operations Guide.
 
@@ -143,7 +143,7 @@ Following are specific recommendations for each section of the documentation.
 
 ***Why gRPC gateway***: Put the introductory material (that describes why you'd want to use gRPC) in the system overview. Present the rest of as its own sub-guide in the Tasks section or as a guide in the Developer Guide. A complete reference to the options should be available in the Reference section.
 
-***gRPC naming and discovery***: This should go (heh) in a Golang-specific part of the Developer guide.
+***gRPC naming and discovery***: Combine with the gRPC gateway sub-guide (See Why gRPC gateway).
 
 ***etcd features***: Rename "Feature lifecycle" or "Feature maturity". This information might belong in the system overview, but it seems relevant to developers and admins alike. Also, reference this article from the release notes.
 
@@ -151,7 +151,7 @@ Following are specific recommendations for each section of the documentation.
 
 ***API reference: concurrency***: Move to Reference section.
 
-**Operations guide**: In general, consider rewriting sections in this guide to be step-by-step tasks; in many cases it's not immediately clear what to do, even if CLI examples are given. 
+**Operations guide**: Split into guides for two distinct user roles: Operators of standalone etcd installations, and Kubernetes admins using etcd as the Kubernetes backing store. The Kubernetes Admin guide can link to the Kubernetes technical documentation and the standalone Operations guide where necessary; this is usually preferable to duplicating information. The Kubernetes and etcd projects should communicate about how best to document etcd operation in Kubernetes; as far as I can tell this has not been done. In general, consider rewriting sections in this guide to be step-by-step tasks; in many cases it's not immediately clear what to do, even if CLI examples are given. 
 
 ***Authentication Guides***
 
@@ -181,13 +181,24 @@ Following are specific recommendations for each section of the documentation.
 
 ***Data Corruption***: Move to Troubleshooting section.
 
-**Benchmarks**: Mostly redundant with Benchmark section in Operations guide > Performance. Move any non-redundant info to Performance section in Operations guide. Remove benchmarks of unsupported versions. 
+**Benchmarks**: Mostly redundant with Benchmark section in Operations guide > Performance. Move any non-redundant info to the Performance section in the Operations guide. Remove benchmarks of unsupported versions. 
 
 **Upgrading**: Move to the Operations guide. Remove old upgrade paths if they're no longer needed or relevant.
 
 ***Upgrading etcd clusters and applications***: As far as I can tell, this page just lists the upgrade pages and isn't needed.
 
 **Triage**: Suggest putting this information for users and contributors in the repo and providing a link from the documentation to create a cleaner separation of product documentation and project documentation. Put the link in the intro to the Troubleshooting section.
+
+
+## Move release notes
+
+Consider moving release notes to the documentation (from the code repo) on the basis that they are user, rather than contributor, documentation. 
+
+Release notes should include:
+- New and changed features
+- Known issues
+- Updated roadmap information
+- Upgrade procedures
 
 
 
