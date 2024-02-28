@@ -120,6 +120,8 @@ There are **getting started** pages on the main GitHub repo for the following su
 
 These pages list installing KEDA as a prerequisite. Taken together, "Deploying KEDA" and the scenarios in the repo make a complete Getting Started workflow, but they are in two separate places and the scenarios are not findable from the website.
 
+There are also numerous examples available in the [samples repo](https://github.com/kedacore/samples).
+
 KEDA does not require documentation for multiple **operating systems**.
 
 The [Operate](https://keda.sh/docs/2.13/operate/) topic in the TOC provides instructions for using KEDA and the scenarios in the repo provide user instructions. However, new users starting on the website might not **know where to go after installation**. A more explicit **getting started workflow** would be helpful.
@@ -262,11 +264,11 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 | Meets min website req. (for maturity level) |  2 - needs improvement  |
 | Usability, accessibility, and design        |  3 - meets standards  |
 | Branding and design                         |  4 - meets or exceeds standards  |
-| Case studies/social proof                   |  4 - meets or exceeds standards  |
+| Case studies/social proof                   |  3 - meets standards  |
 | SEO, Analytics, and site-local search       |    |
 | Maintenance planning                        |    |
-| A11y plan & implementation                  |    |
-| Mobile-first plan & impl.                   |    |
+| A11y plan & implementation                  |  3 - meets standards  |
+| Mobile-first plan & impl.                   |  n/a  |
 | HTTPS access & HTTP redirect                |  4 - meets or exceeds standards  |
 | Google Analytics 4 for production only      |    |
 | Indexing allowed for production server only |    |
@@ -307,38 +309,35 @@ Listed and acknowledged below are the (cumulative) _minimal_ website requirement
 
 ### Usability, accessibility and devices
 
-The website is **usable from mobile**. Top-nav is reachable only via the hamburger menu, which seems unconventional. There is no in-page TOC or other context.
+The website is **usable from mobile**. Top-nav is reachable only via the hamburger menu on mobile devices. There is no in-page TOC or other context on mobile devices. The footer is identical on all platforms.
 
 **Search** is available from the hamburger menu as well.
 
-Doc pages are **readable**.
+**Doc pages are readable** on all platforms.
 
 A **mobile-first design** does not make sense for this project.
 
-Color contrasts are mostly adequate. Some blue-on-black graphics and text are probably hard to read for color- or contrast-impaired readers.
+**Color contrasts** are mostly adequate. Some blue-on-black graphics and text are probably hard to read for color- or contrast-impaired readers.
 
-Are most website features usable using a keyboard only?
+Website features, *Search* most importantly, are usable using a **keyboard only**.
 
-Does text-to-speech offer listeners a good experience?
+As with any text that contain a lot of code and special characters, **text-to-speech** is **not likely to offer listeners a good experience**.
 
 ### Branding and design
 
-
-**easily recognizable brand** 
-**consistently** 
-easily **readable**
+The website and documentation carry an **easily recognizable brand** for the project based on logo, color scheme, and template layout. The **brand is used consistently** on the site. The website's text is **easily readable**.
 
 
 ### Case studies/social proof
 
-**"logo wall"** o
-**case studies**
-**user testimonials** 
 
+I'm unable to find **case studies** or **user testimonials** for the project. They're probably not as important for KEDA as they are for a more extensive product, though.
 
+There is a **project blog**; posts are infrequent. The last one was in August 2023.
 
-**project blog**
-**community talks** 
+There are **community talks** for the project on YouTube. One talk, from KubeCon 2022, is **present on the website**.
+
+There is a substantial **logo wall of users and participating organizations**. The KEDA project solicits users to register as "listed users."
 
 
 ### SEO, Analytics and site-local search
@@ -361,14 +360,12 @@ easily **readable**
 
 The website uses Hugo and Docsy, which are the recommended **website tooling** for CNCF projects. 
 
+There is no sign that the project is **cultivating website maintainers** from the community. However, the site is small and much of the content is links to community or third-party scalers (plugin components).
 
-Web maintainers cultivated? ***TBD***
+**Build times** for the website are minimal.
 
-The website builds in **reasonable time** on a desktop computer.
+Presumably, **site maintainers have adequate permissions** since the documentation is up to date with the software.
 
-Site maintainers have **adequate permissions**  ***TBD***
-
-Maintainers  **adequately documented** 
 
 ### Other
 
@@ -377,40 +374,43 @@ The website is accessible via **HTTPS**. Requests using **HTTP** are properly re
 
 ## Recommendations
 
-
 ### Single-source requirement
 
-
+No recommendations.
 
 ### Minimal website requirements
 
+Identify stakeholder roles in the user documentation (even if there is only one role).
+
+Update docs per Implementation and Issues recommendations (separate documents). Especially, improve new user documentation.
 
 
 ### Usability, accessibility and devices
 
+No recommendations.
 
 
 ### Branding and design
 
+No recommendations.
 
 
 ### Case studies/social proof
 
+No recommendations.
 
 
 ### SEO, Analytics and site-local search
 
-***TBD***
-
 
 ### Maintenance planning
 
-
-***TBD***
+Explicitly list and solicit maintainers and contributors for documentation.
 
 
 ### Other
 
+No recommendations.
 
 
 <!--- References --->
