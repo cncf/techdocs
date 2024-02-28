@@ -2,7 +2,7 @@
 title: KEDA Documentation Analysis
 tags: kdeda
 created: 2024-02-23
-modified: 2024-02-23
+modified: 2024-02-27
 author: Dave Welsch (@dwelsch-esi)
 ---
 
@@ -232,19 +232,24 @@ There is **CONTRIBUTORS** document in the website/documentation repo with instru
 
 ## Recommendations
 
-
 ### Communication methods documented
 
+If there is a mailing list or other news distribution channel, add it to the community page. 
 
 
 ### Beginner friendly issue backlog
 
+Revisit stale issues if they are not being reviewed.
 
 
 ### New contributor getting started content
 
+No recommendations.
+
 
 ### Project governance documentation
+
+No recommendations.
 
 
 # Website
@@ -253,28 +258,30 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 
 | Criterion                                   | Rating (1-5) | 
 | ---                                         | --- | 
-| Single-source for all files                 |    |
-| Meets min website req. (for maturity level) |    |
-| Usability, accessibility, and design        |    |
-| Branding and design                         |    |
-| Case studies/social proof                   |    |
+| Single-source for all files                 |  3 - meets standards  |
+| Meets min website req. (for maturity level) |  2 - needs improvement  |
+| Usability, accessibility, and design        |  3 - meets standards  |
+| Branding and design                         |  4 - meets or exceeds standards  |
+| Case studies/social proof                   |  4 - meets or exceeds standards  |
 | SEO, Analytics, and site-local search       |    |
 | Maintenance planning                        |    |
 | A11y plan & implementation                  |    |
 | Mobile-first plan & impl.                   |    |
-| HTTPS access & HTTP redirect                |    |
+| HTTPS access & HTTP redirect                |  4 - meets or exceeds standards  |
 | Google Analytics 4 for production only      |    |
 | Indexing allowed for production server only |    |
 | Intra-site / local search                   |    |
-| Account custodians are documented           |    |
+| Account custodians are documented           |  2 - needs improvement  |
 
 
 ## Comments
 
 ### Single-source requirement
 
-**repository**
-**Contributor documentation** 
+Source files for all website pages reside in a **single repo**. However, some user documentation pages (speciifically, "Getting started" topics linked from the main (kedacore/keda) repo) would better serve users if they were moved to the tech docs on the website.
+
+Website files are all in the website repo. 
+
 
 ### Minimal website requirements
 
@@ -284,33 +291,35 @@ Listed and acknowledged below are the (cumulative) _minimal_ website requirement
 
 | Maturity | Requirement | Met? |
 | ---      | ---         | --- |
-| Sandbox  | Majority of [Website guidelines][website-guidelines] satisfied |  |
-| Sandbox | [Docs assessment][assess-howto] [submitting a request][cncf-servicedesk] completed. |  |
-| Sandbox | **Project documentation** exists – somewhere. It is acceptable at this maturity level to link out to documentation that hasn't yet been integrated into the website. (May still be in the project GitHub repo, for example.) |  |
-| Incubating | All [Website guidelines][website-guidelines] satisfied | No - no DCO some repos, incl. doc |
-| Incubating | Request docs (re-)assessment through CNCF [service desk][cncf-servicedesk] |  |
-| Incubating | **Project doc**: stakeholders (roles) identified and doc needs documented |  |
-| Incubating | **Project doc**: Hosted directly |  |
-| Incubating | **Project doc**: Comprehensive, addressing most stakeholder needs |  |
-| Graduated | [Docs assessment][assess-howto]: all assessment follow-through actions are complete |  |
-| Graduated | **Project doc** fully addresses needs of key stakeholders |  |
+| Sandbox  | Majority of [Website guidelines][website-guidelines] satisfied | Yes |
+| Sandbox | [Docs assessment][assess-howto] [submitting a request][cncf-servicedesk] completed. | Yes |
+| Sandbox | **Project documentation** exists – somewhere. It is acceptable at this maturity level to link out to documentation that hasn't yet been integrated into the website. (May still be in the project GitHub repo, for example.) | Yes |
+| Incubating | All [Website guidelines][website-guidelines] satisfied | Yes   |
+| Incubating | Request docs (re-)assessment through CNCF [service desk][cncf-servicedesk] | Yes |
+| Incubating | **Project doc**: stakeholders (roles) identified and doc needs documented | No |
+| Incubating | **Project doc**: Hosted directly | Yes |
+| Incubating | **Project doc**: Comprehensive, addressing most stakeholder needs | Yes |
+| Graduated | [Docs assessment][assess-howto]: all assessment follow-through actions are complete | No |
+| Graduated | **Project doc** fully addresses needs of key stakeholders | No - new user doc needs improvement |
 | Archived | The website repo is in an [archived state][archiving-repo] | n/a |
 | Archived | Archived status of the project is obvious to site visitors | n/a |
 | Archived | Link to successor project website and/or migration documentation (if it exists) | n/a |
 
 ### Usability, accessibility and devices
 
-**usable from mobile**
-**Doc pages are readable**
-**search** and **top-nav** 
-**in-page TOC** 
-A **mobile-first design** 
+The website is **usable from mobile**. Top-nav is reachable only via the hamburger menu, which seems unconventional. There is no in-page TOC or other context.
 
+**Search** is available from the hamburger menu as well.
 
-**color contrasts** 
-**website features**
-**keyboard**
-**text-to-speech** 
+Doc pages are **readable**.
+
+A **mobile-first design** does not make sense for this project.
+
+Color contrasts are mostly adequate. Some blue-on-black graphics and text are probably hard to read for color- or contrast-impaired readers.
+
+Are most website features usable using a keyboard only?
+
+Does text-to-speech offer listeners a good experience?
 
 ### Branding and design
 
