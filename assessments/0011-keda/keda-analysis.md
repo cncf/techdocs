@@ -1,4 +1,4 @@
- ---
+---
 title: KEDA Documentation Analysis
 tags: kdeda
 created: 2024-02-23
