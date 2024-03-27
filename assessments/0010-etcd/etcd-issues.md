@@ -8,14 +8,14 @@ tags: etcd
 Here is an outline of the recommended changes to the etcd documentation. Proposed issues to be added to the project repo follow.
 
 - Complete and update instructional documentation.
-  - Describe etcd's user roles (personas).
+  - Describe etcd's user roles (personas). Split the Operator persona into two: For standalone etcd installations, and for Kubernetes backstore installations.
   - Convert tutorials to tasks. The "tutorials" as presented in the current doc are actually granular tasks. Document key tasks as procedures rather than tutorials.
-  - Document Kubernetes and Linux installation procedures.
+  - Document or link to Kubernetes backstore installation procedures. 
+  - Document Linux installation procedures.
   - Update and clarify quick start and new user workflows.
   - Revise the Installation guide.
   - Make the Developer Guide task-oriented.
   - Make the Operations Guide task-oriented.
-  - Going forward, write release notes for each major and minor release.
 - Reorganize the documentation.
   - Make instructional documentation (tasks and procedures) easier to find by putting them in their own section (like the tutorials currently are). 
   - Move *project* documentation (documentation for OSS contributors) to the etcd GitHub repo. Move *product* documentation (documentation for those who use the etcd software, in any capacity) to the technical documentation in the website repo.
@@ -30,7 +30,8 @@ Here is an outline of the recommended changes to the etcd documentation. Propose
 
 In an "Overview" or "Start here" page, outline etcd's user roles or personas, including:
 - *Evaluator*: Someone trying to determine whether etcd is appropriate for their product, project, or organization.
-- *Admin or Operator*: Someonereponsible for setting up and maintaining a production etcd service.
+- *Admin or Operator*: Someonereponsible for setting up and maintaining a standalone (non-Kubernetes-backstore) production etcd service.
+- *Kubernetes Admin*: Someone responsible for a Kubernetes cluster using etcd as a backstore.
 - *Developer*: Someone incorporating or integrating etcd into an application or service.
 
 In each user role section, provide a link to the beginning of a "getting started" workflow, either a Quick-start or Installation instructions. 
@@ -46,7 +47,7 @@ Rewrite each Tutorial as step-by-step instructions for a single task in an indiv
 
 ## Issue: Write installation instructions for Kubernetes
 
-Write the procedure [Installation as part of Kubernetes installation](install/#installation-as-part-of-kubernetes-installation).
+Write the procedure [Installation as part of Kubernetes installation](install/#installation-as-part-of-kubernetes-installation), or link to Kubernetes documentation that includes etcd installation as backstore. Explain and fill in (on the etcd docs page) any gaps in the procedure.
 
 ## Issue: Write Linux installation instructions
 
@@ -96,6 +97,8 @@ This information is a duplicate of the [Features](https://github.com/etcd-io/etc
 
 The Operations Guide should contain instructional content (tasks, procedures, tutorials) for admins looking set up a production etcd service. In general, rewrite instructional sections in this guide to be step-by-step tasks. Move reference material into an omnibus reference section or into a reference section at the end of the Operations Guide.
 
+Split the Operations guide into two parts for two distinct user roles: one for Operators of standalone installations of etcd, one for Kubernetes Admins using etcd as a backing store. Link from/to page rather than duplicating information common to both. Similarly, link from/to the Kubernetes project documentation in the etcd Kubernetes Admin docs to avoid duplicating documentation if practical; however, duplication is preferable to leaving something undocumented. 
+
 Following are comments on the existing sections within the Operations Guide.
 
 ### Issue: Authentication guides > Authentication
@@ -143,18 +146,6 @@ Combine with [Hardware recommendations](#hardware-recommendations) in a System P
 Rename to "Versioning policy". Move to the top of the version list. Put a link to this version policy in every Release notes.
 
 Add a documentation versioning policy that describes when a new version of the documentation is written (major releases?); when documentation is updated instead (minor releases?); when release notes are written (major and minor releases but not patches?); and when documentation is archived. 
-
-
-## Issue: Add release notes to new releases
-
-Add the production of release notes to the major and minor new release process for contributors. 
-
-Release notes should include:
-- New and changed features
-- Known issues
-- Updated roadmap information
-- Upgrade procedures
-- All release-specific information
 
 
 # Reorganize the documentation
@@ -223,13 +214,25 @@ Pages to be moved as-is, usually under an organizing heading. Links (listed in t
 | integrations/ | quickstart/ | Move to the Reference section. Consider organizing by user role , or labeling each tool or library by user role. |
 | integrations/#projects-using-etcd | quickstart/ | Move to a logo wall or at least to its own page on the website. |
 | reporting_bugs/ | | Combine with the "Triage" topics and move to the repo's Contributor guide. Link from the Troubleshooting guide. |
-|  faq/ | | Move to near the end of the ToC. |
+| faq/ | | Move to near the end of the ToC. |
 | dev-guide/api_reference_v3/ | op-guide/runtime-configuration/ | Move to the Reference section. |
 | dev-guide/api_concurrency_reference_v3/ | | Move to the Reference section. |
 | op-guide/container/ | | Put in the Clustering Guide. |
 | op-guide/configuration/ | quickstart/ | Put in the Reference section. |
 | upgrades/ | | Move to the Operations guide. |
 | triage/ | | Move to the repo and provide a link from the documentation (release notes) to create a cleaner separation of product documentation and project documentation. |
+
+
+## Issue: Move release notes to user documentation
+
+Move the release notes out of the repo and into to the user documentation. 
+
+Release notes should include:
+- New and changed features
+- Known issues
+- Updated roadmap information
+- Upgrade procedures
+- All release-specific information
 
 
 ## Issue: Consolidate all reference information

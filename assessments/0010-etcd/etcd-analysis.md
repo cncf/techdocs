@@ -116,7 +116,7 @@ The documentation contains **instructions** for various features. These instruct
 
 The documentation contains an adequate introduction and overview, but these are buried in the doc and difficult to find. The adoption path needs more focus and to be split out by user role. For example, "Getting started" should be different for a developer setting up a development server vs. an admin setting up a production server.
 
-The **"happy path"** for etcd is not a simple procedure and, again, varies by user role. However, I believe that there is sufficient documentation of the most common use cases (configure and run an HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: The Kubernetes and Linux installation instructions noted above. 
+The **"happy path"** for etcd is not a simple procedure and, again, varies by user role. However, I believe that there is sufficient documentation of the most common use cases (configure and run an HA server cluster; set and get key-value pairs via an API from an application) to argue that it is documented. Exception: The Kubernetes and Linux installation instructions noted above. Also, procedures for Operators using etcd with Kubernetes (a distinct user role) are a separate path and are at least partially covered in the Kubernetes documentation.
 
 Task and tutorial content are **clearly named according to user goals**. Using "-ing" verb forms instead of "How to ..." would make headings easier to navigate.
 
@@ -140,7 +140,7 @@ There is a single paragraph on the [website][etcd-io] landing page with a "Learn
 
 There are **install** and **quick start** entries in the technical documentation ToC. These are good starting points but could be refined. User roles are not addressed.
 
-The **installation** page gives step-by-step instructions for installing from binaries, from source, and using a package manager. Installation as part of a Kubernetes installation is also described on the page, but there is a placeholder under the heading "Installation as part of Kubernetes installation". Linux installation is also "TBD", which seems like a big omission.
+The **installation** page gives step-by-step instructions for installing from binaries, from source, and using a package manager. Installation as part of a Kubernetes installation is also described on the page, but there is a placeholder under the heading "Installation as part of Kubernetes installation". I understand that etcd installation with Kubernetes depends on how you install Kubernetes, and that in some cases it's automatic and/or documented in the Kubernetes tech doc. In any case, there should be a discussion of the options and links to the relevant Kubernetes docs. Linux installation is also "TBD", which seems like a big omission.
 
 Package manager installation is documented (but not recommended) for Linux and MacOS. **Other OSes** are alluded to but not documented. Supported platforms are documented in the [Operations guide](https://etcd.io/docs/v3.5/op-guide/supported-platform/).
 
@@ -203,7 +203,7 @@ For an excellent and very literal example of this approach, see the [Kubernetes 
 
 Much of the conceptual information about etcd is in the "Learning" section. Rename this section and organize it into a primer on the etcd architecture. Move non-conceptual information elsewhere.
 
-Fill in missing instructional documentation. Most notably, write instructions for installing on Kubernetes and Linux, and on using Authentication.
+Fill in missing instructional documentation. Most notably, write (or link to) instructions for installing on Kubernetes and Linux, and on using Authentication.
 
 Use "-ing" verb forms instead of "How to ..." as headings for procedures.
 
@@ -244,9 +244,15 @@ Point "Learn more" links to a "Start here" page that provides orientation and se
 2. Setting up an environment and testing the server using the CLI.
 3. Getting started programming with an API.
 
-Write step-by-step instructions for all installation cases. Clearly describe what each case is for; especially distinguish between development and production installations.
+Write step-by-step instructions for all installation cases. (Or, in the case of a Kubernetes Operator user role, links to relevant Kubernetes docs.) Clearly describe what each case is for; especially distinguish between development and production installations.
 
-Revise the Quick Start guide to indicate which user role it's for: developer, operator/admin, or adoption decision maker (it might need to be split into two or more guides). Focus the options in the "What's next?" section to point to a few (two or three) learning paths for specific persona use cases.
+Revise the Quick Start guide to indicate which user role it's for: 
+- developer,
+- etcd standalone operator/admin,
+- Kubernetes operator/admin, or
+- adoption decision maker
+
+This might require the Quick Start guide to have multiple paths or be split into two or more guides. Again, Kubernetes operators can be referred to the Kubernetes documentation if it substantively covers the etcd topics. Focus the options in the "What's next?" section to point to a few (two or three) learning paths for specific persona use cases.
 
 Remove getting-started instructions from the main GitHub repo README and instead point the user to the documentation.
 
@@ -272,7 +278,7 @@ Move issue and PR submission guidelines from the documentation ("Triage") to the
 
 ### Inclusive language
 
-Audit the documentation for non-inclusive language.
+Audit the documentation for non-inclusive language. See the [Inclusive Naming Initiative](https://inclusivenaming.org/) website.
 
 
 # Contributor documentation
