@@ -12,15 +12,13 @@ GitHub ID | Role
 
 ## Office hours
 
-The CNCF tech docs team generally holds office hours on the [last Wednesday of every month at 8am Pacific time](https://www.cncf.io/calendar/) (1600 UTC).
+The CNCF tech docs team generally holds office hours on the [fourth Wednesday of every month at 8am Pacific time](https://tockify.com/cncf.public.events/monthly?search=CNCF%20Tech%20Writers%20Office%20Hours).
 
 Office hours started on 30 September, 2020.
 
 ### Meeting link
 
-Zoom link: https://zoom.us/j/98293716536?pwd=SElSK2FVMkxCbzJidTB1dXJ1TTNsUT09
-
-Passcode: 77777
+Zoom link: https://zoom-lfx.platform.linuxfoundation.org/meeting/95471930872?password=db1aa715-a60b-444c-8b14-71d44161a42e
 
 ### Meeting notes
 
