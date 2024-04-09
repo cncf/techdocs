@@ -265,14 +265,14 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 | Usability, accessibility, and design        |  3 - meets standards  |
 | Branding and design                         |  4 - meets or exceeds standards  |
 | Case studies/social proof                   |  3 - meets standards  |
-| SEO, Analytics, and site-local search       |    |
-| Maintenance planning                        |    |
+| SEO, Analytics, and site-local search       |  4 - meets or exceeds standards |
+| Maintenance planning                        |  4 - meets or exceeds standards |
 | A11y plan & implementation                  |  3 - meets standards  |
-| Mobile-first plan & impl.                   |  n/a  |
+| Mobile-first plan & impl.                   |  4 - meets or exceeds standards  |
 | HTTPS access & HTTP redirect                |  4 - meets or exceeds standards  |
-| Google Analytics 4 for production only      |    |
-| Indexing allowed for production server only |    |
-| Intra-site / local search                   |    |
+| Google Analytics 4 for production only      |  5 - exemplary |
+| Indexing allowed for production server only |  5 - exemplary |
+| Intra-site / local search                   |  5 - exemplary |
 | Account custodians are documented           |  2 - needs improvement  |
 
 
@@ -342,19 +342,18 @@ There is a substantial **logo wall of users and participating organizations**. T
 
 ### SEO, Analytics and site-local search
 
-***TBD***
-
 **Analytics:**
-* Is analytics enabled for the production server?
-* Is analytics disabled for all other deploys?
-* If your project used Google Analytics, have you migrated to GA4?
-* Can Page-not-found (404) reports easily be generated from you site analytics? Provide a sample of the site's current top-10 404s.
+* Analytics is enabled for production server.
+* Analytics is disabled for all other deploys.
+* The website runs on the new Google Analytics (GA) 4.
+* 404 reports are collected and tracked using GA4.
 
 **Indexing and Search:**
-* Is site indexing supported for the production server, while disabled for website previews and builds for non-default branches?
-* Is local intra-site search available from the website?
+* Production site is well indexed.
+* Local intra-site search available from the website.
 
-* Are the current custodian(s) of the following accounts clearly documented: analytics, Google Search Console, site-search (such as Google CSE or Algolia)
+**Account custodians**
+* There are no records showing the different account custodians; nothing listed on `MAINTAINERS.md` and no `OWNERS.md` found.
 
 ### Maintenance planning
 
@@ -402,6 +401,7 @@ No recommendations.
 
 ### SEO, Analytics and site-local search
 
+The current custodian(s) of the following accounts should be clearly documented: analytics (GA4), site-search (Algolia). You can create an `OWNERS.md` file for this.
 
 ### Maintenance planning
 
