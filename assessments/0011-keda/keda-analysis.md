@@ -2,7 +2,7 @@
 title: KEDA Documentation Analysis
 tags: kdeda
 created: 2024-02-23
-modified: 2024-02-27
+modified: 2024-04-09
 author: Dave Welsch (@dwelsch-esi)
 ---
 
@@ -46,16 +46,16 @@ This document is divided into three sections that represent three major areas of
 - **Contributor documentation:** concerns documentation for new and existing contributors to the KEDA OSS project
 - **Website:** concerns the mechanics of publishing the documentation, and includes branding, website structure, and maintainability
 
-Each section begins with summary ratings based on a rubric with appropriate [criteria][cncf-doc-criteria] for the section, then proceeds to:
+Each section begins with summary ratings based on a rubric with appropriate [criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) for the section, then proceeds to:
 - **Comments**: observations about the existing documentation, with a focus on how it does or does not help KEDA users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of the documentation. 
 
-An accompanying document, [keda-implementation.md][implementation-doc], breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items should be tracked as a series of Github [issues][keda-issues].
+An accompanying document, [keda-implementation.md](./keda-implementation.md), breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items should be tracked as a series of Github [issues]((./keda-issues.md).
 
 
 ## How to use this document
 
-Readers interested only in actionable improvements should skip this document and read [keda-implementation.md](./keday-implementation.md).
+Readers interested only in actionable improvements should skip this document and read [keda-implementation.md](./keda-implementation.md).
 
 Readers interested in the current state of the documentation and the reasoning behind the recommendations should read the section of this document pertaining to their area of concern:
 
@@ -63,17 +63,17 @@ Readers interested in the current state of the documentation and the reasoning b
 - [Contributor documentation](#contributor-documentation)
 - [Website and documentation infrastructure](#website)
 
-Examples of CNCF documentation that demonstrate the analysis criteria are linked from the [Criteria][cncf-doc-criteria] specification. 
+Examples of CNCF documentation that demonstrate the analysis criteria are linked from the [criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) specification. 
 
 
 ### Recommendations, requirements, and best practices
 
-This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-keywords], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
+This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs](https://www.rfc-editor.org/rfc/rfc2119), the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
 
 
 # Project documentation
 
-KEDA is a **graduated** project of CNCF. This means that the project should have [*very high*][cncf-doc-criteria] standards for documentation.
+KEDA is a **graduated** project of CNCF. This means that the project should have [*very high*](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) standards for documentation.
 
 | Criterion                  |  Rating (1-5)              |
 | ---                        |    ---                     |
@@ -166,7 +166,7 @@ Reorganize the Table of Contents. Rename "The KEDA Documentation"; the name is m
 - Create a "Reference" topic at the end of the ToC.
 - Move the FAQ to the Reference section.
 - Add a glossary to the Reference section.
-- Rename "Operate" to "User Guide".
+- Rename "Operate" to "Operator Guide".
 - Move "Troubleshooting" to the end of the User Guide.
 
 Move the scenarios from the KEDA GitHub repo to the user documentation on the website. Link to these from the end of "Deploying KEDA" to create a workflow for new users. 
@@ -236,7 +236,7 @@ There is **CONTRIBUTORS** document in the website/documentation repo with instru
 
 ### Communication methods documented
 
-If there is a mailing list or other news distribution channel, add it to the community page. 
+If there is a mailing list or other news distribution channel, add it to the community page. (Note: As discussed in the [PR](https://github.com/cncf/techdocs/pull/215), there does not seem to be a newsletter. This is OK since there are plenty of other active communication channels.)
 
 
 ### Beginner friendly issue backlog
@@ -289,21 +289,21 @@ Website files are all in the website repo.
 
 Except for archived projects, requirements are cumulative through project maturity levels so, for example, incubating projects must satisfy the requirements for sandbox projects.
 
-Listed and acknowledged below are the (cumulative) _minimal_ website requirements for projects based on their [maturity level][website-min-reqs]: sandbox, incubating, graduated and archived.
+Listed and acknowledged below are the (cumulative) _minimal_ website requirements for projects based on their [maturity level](https://github.com/cncf/toc/tree/main/process#cncf-project-lifecycle--process): sandbox, incubating, graduated and archived.
 
 | Maturity | Requirement | Met? |
 | ---      | ---         | --- |
-| Sandbox  | Majority of [Website guidelines][website-guidelines] satisfied | Yes |
-| Sandbox | [Docs assessment][assess-howto] [submitting a request][cncf-servicedesk] completed. | Yes |
+| Sandbox  | Majority of [Website guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) satisfied | Yes |
+| Sandbox | [Docs assessment](https://github.com/cncf/techdocs/blob/main/assessments/howto.md)  [cncf-servicedesk] completed. | Yes |
 | Sandbox | **Project documentation** exists – somewhere. It is acceptable at this maturity level to link out to documentation that hasn't yet been integrated into the website. (May still be in the project GitHub repo, for example.) | Yes |
-| Incubating | All [Website guidelines][website-guidelines] satisfied | Yes   |
-| Incubating | Request docs (re-)assessment through CNCF [service desk][cncf-servicedesk] | Yes |
+| Incubating | All [Website guidelines](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md#website) satisfied | Yes   |
+| Incubating | Request docs (re-)assessment through CNCF [service desk](https://servicedesk.cncf.io/) | Yes |
 | Incubating | **Project doc**: stakeholders (roles) identified and doc needs documented | No |
 | Incubating | **Project doc**: Hosted directly | Yes |
 | Incubating | **Project doc**: Comprehensive, addressing most stakeholder needs | Yes |
-| Graduated | [Docs assessment][assess-howto]: all assessment follow-through actions are complete | No |
+| Graduated | [Docs assessment](https://github.com/cncf/techdocs/blob/main/assessments/howto.md): all assessment follow-through actions are complete | No |
 | Graduated | **Project doc** fully addresses needs of key stakeholders | No - new user doc needs improvement |
-| Archived | The website repo is in an [archived state][archiving-repo] | n/a |
+| Archived | The website repo is in an [archived state](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) | n/a |
 | Archived | Archived status of the project is obvious to site visitors | n/a |
 | Archived | Link to successor project website and/or migration documentation (if it exists) | n/a |
 
@@ -321,7 +321,7 @@ A **mobile-first design** does not make sense for this project.
 
 Website features, *Search* most importantly, are usable using a **keyboard only**.
 
-As with any text that contain a lot of code and special characters, **text-to-speech** is **not likely to offer listeners a good experience**.
+As with any text that contains a lot of code and special characters, **text-to-speech** is **not likely to offer listeners a good experience**.
 
 ### Branding and design
 
@@ -343,17 +343,17 @@ There is a substantial **logo wall of users and participating organizations**. T
 ### SEO, Analytics and site-local search
 
 **Analytics:**
-* Analytics is enabled for production server.
-* Analytics is disabled for all other deploys.
+* Analytics is enabled for the production server.
+* Analytics is disabled for all other deployments.
 * The website runs on the new Google Analytics (GA) 4.
 * 404 reports are collected and tracked using GA4.
 
 **Indexing and Search:**
-* Production site is well indexed.
-* Local intra-site search available from the website.
+* The production site is well indexed.
+* Local intra-site search available is from the website.
 
 **Account custodians**
-* There are no records showing the different account custodians; nothing listed on `MAINTAINERS.md` and no `OWNERS.md` found.
+* There are no records showing the different account custodians; nothing is listed on `MAINTAINERS.md` and no `OWNERS.md` is found.
 
 ### Maintenance planning
 
@@ -379,7 +379,7 @@ No recommendations.
 
 ### Minimal website requirements
 
-Identify stakeholder roles in the user documentation (even if there is only one role).
+Identify stakeholder roles in the user documentation (even if there is only one role). This could be as minimal as a "who should use this documentation" paragraph in the product introduction.
 
 Update docs per Implementation and Issues recommendations (separate documents). Especially, improve new user documentation.
 

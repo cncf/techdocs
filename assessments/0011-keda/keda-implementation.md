@@ -28,8 +28,8 @@ The documentation recommendations for this project are:
 
 Reorganize the Table of Contents to:
 
-- Better welcome new users
-- Separate user rules (personas), if there are more than one
+- Better welcome and orient new users
+- Separate user rules (personas), if there are more than one 
 - Improve findability and access to tasks and procedures
 - Separate conceptual, task, and reference information
 
@@ -37,80 +37,80 @@ In general, follow these principles when reorganizing the documentation:
 - Put architecture, operating principles, and other conceptual explanations in the technical overview. 
 - Write instructions (in "Using KEDA" and "Getting Started") as step-by-step procedures. Title each procedure using "-ing" verbs; for example "Integrating", "Using", "Migrating".
 - Put purely reference information in the Reference section. Link to this information where relevant from the procedures in the "Using KEDA" and "Getting Started" sections.
-- Separate and/or label information, especially tasks, by which user role it pertains to.
+- Separate and/or label information, especially tasks, by which user role it pertains to (again, if more than one).
 - Include a clear starting point and ramp-up path for new users.
 
 Here is a proposed outline for the tech doc Table of Contents:
 
-* [KEDA Concepts](/docs/2.13/concepts/)
-    * What is KEDA?
-    * How KEDA works
-    * KEDA Architecture
-    * KEDA Custom Resources (CRDs)
-    * [Scaling Deployments, StatefulSets &amp; Custom Resources](/docs/2.13/concepts/scaling-deployments/)
-        * Overview
-        * Scaling Deployments and Stateful Sets
-        * Scaling Custom Resources
-    * [Scaling Jobs](/docs/2.13/concepts/scaling-jobs/)
-    * [Authentication](/docs/2.13/concepts/authentication/)
-    * [External Scalers](/docs/2.13/concepts/external-scalers/)
-    * [Admission Webhooks](/docs/2.13/concepts/admission-webhooks/)
-* [Getting Started (New users start here!)](/docs/2.13/) (rename current "KEDA Documentation" heading)
-    * [Deploying KEDA](/docs/2.13/deploy/)
-        * Prerequisites (https://keda.sh/docs/2.13/operate/cluster/#requirements)
-        * [Deploying with Helm](#helm)
-            - [Installing](#install)
-            - [Uninstalling](#uninstall)
-        * [Deploying with Operator Hub](#operatorhub)
-            - [Installing](#install-1)
-            - [Uninstalling](#uninstall-1)
-        * [Deploying using the deployment YAML files](#yaml)
-            - [Installing](#install-2)
-            - [Uninstalling](#uninstall-2)
-        * [Deploying KEDA on MicroK8s](#microk8s)
-            - [Installing](#install-3)
-            - [Uninstalling](#uninstall-3)
-    * Hello, KEDA (write a procedure for a simplest-possible use case for users to get started on - something like https://github.com/kedacore/sample-hello-world-azure-functions)
-* [Using KEDA](/docs/2.13/operate/) (rename current "Operate")
-    * How to set up a scaler (a more detailed procedure than the example used in Getting Started)
-    * Usage Scenarios
-        * [Scaling with RabbitMQ and Go](https://github.com/kedacore/sample-go-rabbitmq)
-        * [Scaling with Azure Functions and Kafka on Openshift 4](https://github.com/kedacore/sample-azure-functions-on-ocp4)
-        * ... and so on.
-    * [Admission Webhooks](/docs/2.13/operate/admission-webhooks/)
-        * Prevention Rules (https://keda.sh/docs/2.13/concepts/admission-webhooks/#prevention-rules)
-        * Validation Enforcement
-    * [Cluster](/docs/2.13/operate/cluster/) - Except sections that are purely reference info, for example:
-        * https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility
-        * https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity
-        * https://keda.sh/docs/2.13/operate/cluster/#firewall
-    * [Integrating with OpenTelemetry Collector (Experimental)](/docs/2.13/operate/opentelemetry/)
-    * [Integrating with Prometheus](/docs/2.13/operate/prometheus/)
-    * [Using the KEDA Metrics Server](/docs/2.13/operate/metrics-server/)
-        * [Querying Metrics](https://keda.sh/docs/2.13/operate/metrics-server/#querying-metrics-exposed-by-keda-metrics-server)
-        * [Getting Metric Names](https://keda.sh/docs/2.13/operate/metrics-server/#how-to-get-metric-names-from-scaledobject)
-    * [Security](/docs/2.13/operate/security/)
-    * [Migrating to a new release](/docs/2.13/migration/) (current "Migration Guide")
-    * Caching Metrics (https://keda.sh/docs/2.13/concepts/scaling-deployments/#caching-metrics)
-    * Pausing Autoscaling of deployments (https://keda.sh/docs/2.13/concepts/scaling-deployments/#pause-autoscaling)
-    * Pausing Autoscaling of jobs (https://keda.sh/docs/2.13/concepts/scaling-jobs/#pause-autoscaling)
-    * [Troubleshooting](/docs/2.13/concepts/troubleshooting/, /docs/2.13/troubleshooting/)
-* Reference
-    * [Authentication Providers](/docs/2.13/authentication-providers/)
-        * [AWS (IRSA) Pod Identity Webhook](/docs/2.13/authentication-providers/aws/)
-        * ...
-        * [Secret](/docs/2.13/authentication-providers/secret/)
-    * Scaled Object specification (from "Concepts"; https://keda.sh/docs/2.13/concepts/scaling-deployments/#scaledobject-spec)
-    * ScaledJob specification (https://keda.sh/docs/2.13/concepts/scaling-jobs/#scaledjob-spec)
-    * [Events](/docs/2.13/operate/events/)
-    * [Firewall requirements](https://keda.sh/docs/2.13/operate/cluster/#firewall)
-    * ...
-    * [FAQ](/docs/2.13/faq/)
-    * Glossary
-* [Scalers](/docs/2.13/scalers/) 
-    * [ActiveMQ](/docs/2.13/scalers/activemq/)
-    * ...
-    * [Solr](/docs/2.13/scalers/solr/)
+- [KEDA Concepts](/docs/2.13/concepts/)
+  - What is KEDA?
+  - How KEDA works
+  - KEDA Architecture
+  - KEDA Custom Resources (CRDs)
+  - [Scaling Deployments, StatefulSets &amp; Custom Resources](/docs/2.13/concepts/scaling-deployments/)
+    - Overview
+    - Scaling Deployments and Stateful Sets
+    - Scaling Custom Resources
+    - [Scaling Jobs](/docs/2.13/concepts/scaling-jobs/)
+    - [Authentication](/docs/2.13/concepts/authentication/)
+    - [External Scalers](/docs/2.13/concepts/external-scalers/)
+    - [Admission Webhooks](/docs/2.13/concepts/admission-webhooks/)
+- [Getting Started (New users start here!)](/docs/2.13/) (rename current "KEDA Documentation" heading)
+  - [Deploying KEDA](/docs/2.13/deploy/)
+  - Prerequisites (https://keda.sh/docs/2.13/operate/cluster/#requirements)
+  - [Deploying with Helm](#helm)
+    - [Installing](#install)
+    - [Uninstalling](#uninstall)
+  - [Deploying with Operator Hub](#operatorhub)
+    - [Installing](#install-1)
+    - [Uninstalling](#uninstall-1)
+  - [Deploying using the deployment YAML files](#yaml)
+    - [Installing](#install-2)
+    - [Uninstalling](#uninstall-2)
+  - [Deploying KEDA on MicroK8s](#microk8s)
+    - [Installing](#install-3)
+    - [Uninstalling](#uninstall-3)
+  - Hello, KEDA (write a procedure for a simplest-possible use case for users to get started on - something like https://github.com/kedacore/sample-hello-world-azure-functions)
+- [Using KEDA or Operator Guide](/docs/2.13/operate/) (rename current "Operate")
+  - How to set up a scaler (a more detailed procedure than the example used in Getting Started)
+  - Usage Scenarios
+    - [Scaling with RabbitMQ and Go](https://github.com/kedacore/sample-go-rabbitmq)
+    - [Scaling with Azure Functions and Kafka on Openshift 4](https://github.com/kedacore/sample-azure-functions-on-ocp4)
+    - ... and so on.
+  - [Admission Webhooks](/docs/2.13/operate/admission-webhooks/)
+  - Prevention Rules (https://keda.sh/docs/2.13/concepts/admission-webhooks/#prevention-rules)
+  - Validation Enforcement
+  - [Cluster](/docs/2.13/operate/cluster/) - Except sections that are purely reference info, for example:
+  - https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility
+  - https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity
+  - https://keda.sh/docs/2.13/operate/cluster/#firewall
+  - [Integrating with OpenTelemetry Collector (Experimental)](/docs/2.13/operate/opentelemetry/)
+  - [Integrating with Prometheus](/docs/2.13/operate/prometheus/)
+  - [Using the KEDA Metrics Server](/docs/2.13/operate/metrics-server/)
+    - [Querying Metrics](https://keda.sh/docs/2.13/operate/metrics-server/#querying-metrics-exposed-by-keda-metrics-server)
+    - [Getting Metric Names](https://keda.sh/docs/2.13/operate/metrics-server/#how-to-get-metric-names-from-scaledobject)
+  - [Security](/docs/2.13/operate/security/)
+  - [Migrating to a new release](/docs/2.13/migration/) (current "Migration Guide")
+  - Caching Metrics (https://keda.sh/docs/2.13/concepts/scaling-deployments/#caching-metrics)
+  - Pausing Autoscaling of deployments (https://keda.sh/docs/2.13/concepts/scaling-deployments/#pause-autoscaling)
+  - Pausing Autoscaling of jobs (https://keda.sh/docs/2.13/concepts/scaling-jobs/#pause-autoscaling)
+  - [Troubleshooting](/docs/2.13/concepts/troubleshooting/, /docs/2.13/troubleshooting/)
+- Reference
+  - [Authentication Providers](/docs/2.13/authentication-providers/)
+    - [AWS (IRSA) Pod Identity Webhook](/docs/2.13/authentication-providers/aws/)
+    - ...
+    - [Secret](/docs/2.13/authentication-providers/secret/)
+  - Scaled Object specification (from "Concepts"; https://keda.sh/docs/2.13/concepts/scaling-deployments/#scaledobject-spec)
+  - ScaledJob specification (https://keda.sh/docs/2.13/concepts/scaling-jobs/#scaledjob-spec)
+  - [Events](/docs/2.13/operate/events/)
+  - [Firewall requirements](https://keda.sh/docs/2.13/operate/cluster/#firewall)
+  - ...
+  - [FAQ](/docs/2.13/faq/)
+  - Glossary
+- [Scalers](/docs/2.13/scalers/) 
+  - [ActiveMQ](/docs/2.13/scalers/activemq/)
+  - ...
+  - [Solr](/docs/2.13/scalers/solr/)
 
 Among other things, the reorganization includes these changes:
 
@@ -118,7 +118,7 @@ Among other things, the reorganization includes these changes:
 - Create a "Reference" topic at the end of the ToC.
 - Move the FAQ to the Reference section.
 - Add a glossary to the Reference section.
-- Rename "Operate" to "User Guide" (or "Operator Guide"; but since there is really only one user role, the Operator is the only User).
+- Rename "Operate" to "Operator Guide".
 - Move "Troubleshooting" to the end of the User Guide.
 - Separate reference and task information that appears on the same page and move each to the appropriate section.
 
@@ -172,9 +172,14 @@ Remove non-inclusive language throughout the documentation as recommended by the
 
 KEDA seems to have only one explicit user role (or *persona*), namely, an Operator using KEDA to scale resources on a Kubernetes installation. Regardless, this user role should be explicitly distinguished from the project Contributor user role. Use cases are different between the two roles. One strategy for separating the documentation is to confine the Contributor docs to the GitHub repo. 
 
+The definition of the Operator role could be as minimal as a "who should use this documentation" paragraph in the product introduction.
+
+
 # Clarify documentation maintainers
 
-Explicitly list and solicit maintainers and contributors for documentation.
+Create an `OWNERS.md` file to document (on the repo) the current custodian(s) of the following accounts: analytics (GA4), site-search (Algolia). 
+
+Explicitly list and solicit maintainers and contributors for documentation, either in the new OWNERS file or the governance MAINTAINERS file.
 
 
 <!--- References --->
