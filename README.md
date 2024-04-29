@@ -33,7 +33,7 @@ We store ongoing meeting notes in a [Google doc](https://docs.google.com/documen
 
 ## The Technical Documentation Assistance Program
 
-The CNCF Tech Doc team has created a program to assist CNCF-affiliated projects in creating effective documentation. [`TechDoc-Assistance-Program.md`](./TechDoc%20Assistance%20Program%20Outline.md) contains an outline of this program. 
+The CNCF Tech Doc team has created a program to assist CNCF-affiliated projects in creating effective documentation. [`TechDoc-Assistance-Program.md`](./TechDoc-Assistance-Program.md) contains an outline of this program. 
 
 Project maintainers are asked to understand that:
 - Project documentation resources are *always* underestimated.
