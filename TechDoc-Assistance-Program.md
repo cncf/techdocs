@@ -2,14 +2,12 @@
 
 This document outlines the Cloud Native Computing Foundation (CNCF) Technical Documentation Assistance Program (the Program), a service offered by CNCF Tech Docs for evaluating and improving an OSS project's technical documentation. The process is designed to:
 
-1. Provide a baseline analysis of the project's documentation quality measured against the project's [maturity level]. (Often, documentation help is requested when a project requests promotion to a new maturity level.)
+1. Provide a baseline analysis of the project's documentation quality measured against the project's [maturity level](analysis/analysis-tools/criteria.md. (Often, documentation help is requested when a project requests promotion to a new maturity level.)
 1. Recommend changes that will reduce the gap between the documentation and the maturity of the overall project.
 1. Expand on the recommended changes in an implementation plan.
-1. Break down the implementation into a documentation project backlog comprising an Issues (in GitHub) list.
+1. Break down the implementation into a documentation project backlog comprising a GitHub Issues list.
 1. Support the project team's contributors in taking up and completing the issue backlog items.
 1. Leave the project team with an improved understanding and skill base for improving and maintaining the project documentation.
-
-This outline is a working document that presents current aspirations for the Program. It describes both existing elements of the Program and elements that are under discussion. All elements described are existing unless indicated by **TBD**.
 
 ## Phase 0: Training
 
@@ -23,40 +21,35 @@ For this reason, CNCF offers free training on documentation essentials for proje
 
 The training program consists of the following online courses. Anyone can sign up for and complete the courses at their own pace.
 
-1. Open Source Doc Essentials LFC111
-1. 
+1. [Open Source Technical Documentation Essentials (LFC111)](https://training.linuxfoundation.org/training/open-source-technical-documentation-essentials-lfc111/)
+1. [Creating Effective Documentation for Developers (LFC112)](https://training.linuxfoundation.org/training/creating-effective-documentation-for-developers-lfc112/)
 
 ## Phase 1: Documentation Analysis
 
 A technical writer (on CNCF staff or on contract) analyzes the documentation. Based on the standards developed by the CNCF Tech Docs program, the writer:
 
 1. Estimates the maturity level of the documentation compared to the current or desired maturity level of the software project, based on a number of criteria in three categories, using a rubric developed by CNCF. The categories are:
-  1. Project documentation: The end-user documentation for the project's work product, typically (but not always) an application, API, protocol, or some other software product.
-  1. Contributor documentation: Documentation about the project, aimed at project contributors and describing procedures, infrastructure, and customs for doing project work. This includes artifacts that define procedures and governance; recruit, orient, and train project contributors; and name responsible parties (project leaders, often generically called *maintainers*).
-  1. Website: The technical infrastructure behind the documentation and the project's web presence, including website generation, versioning, SEO, analytics, and security.
-1. Collaborates with project leadership to identify user roles and objectives for software users. If leadership
+    1. Project documentation: The end-user documentation for the project's work product, typically (but not always) an application, API, protocol, or some other software product.
+    1. Contributor documentation: Documentation about the project, aimed at project contributors and describing procedures, infrastructure, and customs for doing project work. This includes artifacts that define procedures and governance; recruit, orient, and train project contributors; and name responsible parties (project leaders, often generically called *maintainers*).
+    1. Website: The technical infrastructure behind the documentation and the project's web presence, including website generation, versioning, SEO, analytics, and security.
+1. Collaborates with project leadership to identify user roles and objectives for software users. 
 1. Proposes changes, if necessary, to the organization and content of the documentation to close gaps with the proposed maturity level.
+1. Writes an implementation plan describing improvements that address the gaps identified in the analysis.
 
-## Phase 2: Issues
+## Phase 2: Backlog Creation
 
-Once a high-level improvement plan has been written and approved, the tech writer:
+Once a high-level improvement plan has been written and approved, the tech writer analyzes the proposed changes to create a backlog of actionable, individual writing assignments and other tasks to improve the documentation. These tasks should have two primary characteristics:
+- As much as possible, they should be independent of each other so they can be completed in any order by any combination of contributors; and
+- They should be time-constrained. If possible, large tasks should be broken down into smaller, independent tasks that require hours, not days, to complete.
 
-1. Analyzes the proposed changes to create a roadmap to move the project toward the proposed level.
-2. Creates issues for specific writing assignments and other tasks to improve the documentation. 
+## Phase 3: Documentation Improvement
 
-The issues are graded on two axes:
+Community members work on the issues created in the previous phase. Ideally, tech writers are available to advise contributors and edit work, especially if the contributing community members are not trained technical writers. Remember that the training courses in Phase 0 are available to prepare contributors with general knowledge of the process.
 
-- Impact: How important the issue is to 1) improving the doc effectiveness and 2) moving the doc toward the desired maturity level.
-- Effort: Amount of work the issue is estimated to require to complete. This includes primarily the work of writers and editors, but also SME discussion, review, and approval.
-
-Of course, it's recommended that the project prioritize higher impact and lower effort issues first.
-
-## Phase 3: Implementation
-
-Community members work on the issues created in the previous phase. Ideally, tech writers are available to advise contributors and edit work, especially if the contributing community members are not trained technical writers.
+We know that recruiting contributors to write documentation can be difficult. While this is largely the responsibility of the project leadership, CNCF is actively working on ways to encourage doc contributions. For example, creating a backlog of time-bounded issues is an attempt to lower barriers, both psychological and logistical, to documentation creation and maintenance. 
 
 ## Phase 4: Impact Analysis
 
-To gauge the effectiveness of the documentation effort, we recommend that the project track the documentation issues. Projects are encouraged to collect further metrics on documentation effectiveness. At a minimum though, tracking the issues should provide a guide to progress on leveling the documentation maturity to that of the project.
+Measurement is vital to any process improvement effort, and this is currently the weakest point of the TechDoc Assistance Program. We do no offer any tools to measure the impact of doc improvements, although we can assure you that they are profound. Projects are encouraged to collect metrics on documentation effectiveness. 
 
-
+As a basic gauge the effectiveness of the documentation effort, projects can track the issue backlog. This can provide a guide to progress on leveling the documentation maturity to that of the project.
