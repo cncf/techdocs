@@ -2,7 +2,7 @@
 
 These documents are intended to recommend a direction for the ongoing development of technical documentation for the in-toto open source software (OSS) project. This effort is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects. According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation.
 
-The [CNCF-techdocs](https://github.com/cncf/CNCF-techdocs/tree/main) group is developing a process aimed at assisting cloud-native open-source projects with their documentation efforts. The process has three steps:
+The [CNCF-techdocs](https://github.com/cncf/techdocs) group is developing a process aimed at assisting cloud-native open-source projects with their documentation efforts. The process has three steps:
 1. Analysis
 
    A professional technical writer surveys the current project documentation and website, and analyzes it with respect to CNCF criteria for completeness, discoverability, and usability. 
