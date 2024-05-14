@@ -1,7 +1,7 @@
 # Analysis of Existing Documentation
 This document characterizes the effectiveness and completeness of the in-toto open source software (OSS) project's documentation and website as of September 2023. Documentation is analyzed with respect to CNCF criteria for completeness, discoverability, and usability.
 
-The analysis forms the basis for the recommendations and doc plan presented in the companion document, [(../in-toto-implementation.md)].
+The analysis forms the basis for the recommendations and doc plan presented in the companion [Implementation document](./in-toto-implementation.md).
 
 ## Scope of analysis
 The documentation discussed here includes the contents of the website at https://in-toto.io and https://in-toto.readthedocs.io/, the [in-toto Specification](https://github.com/in-toto/docs/tree/master/in-toto-spec.md), and the documentation for contributors and users in the various GitHub repositories at https://github.com/in-toto. See [Survey of existing documentation](./survey-of-existing-doc.md).
