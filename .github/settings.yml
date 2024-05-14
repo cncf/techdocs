@@ -48,6 +48,11 @@ repository:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: admin
+    color: #d93f0b
+  - name: meta
+    description: Tracker issue
+    color: #0E8A16
   - name: CI/infra
     description: CI & infrastructure
     color: #696969
