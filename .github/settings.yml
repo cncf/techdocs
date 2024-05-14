@@ -7,7 +7,7 @@ repository:
   name: techdocs
 
   # A short description of the repository that will show up on GitHub
-  description: CNCF TechDocs Team 
+  description: CNCF TechDocs Team
 
   # A URL with more information about the repository
   homepage: https://www.cncf.io
@@ -48,6 +48,9 @@ repository:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: CI/infra
+    description: CI & infrastructure
+    color: #696969
   - name: p0-critical
     color: B60205
   - name: p1-high
