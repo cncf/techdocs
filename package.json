@@ -1,0 +1,29 @@
+{
+  "name": "techdocs",
+  "version": "0.0.0",
+  "description": "Resources provided by the CNCF Technical Documentation team.",
+  "scripts": {
+    "_check:format:any": "npx prettier --check --ignore-path ''",
+    "_check:format": "npx prettier --check .",
+    "check:format": "npm run _check:format || (echo '[help] Run: npm run fix:format'; exit 1)",
+    "check:links": "npx markdown-link-check --config .markdown-link-check.json *.md",
+    "check:spelling": "npx cspell --no-progress -c .cspell.yml .",
+    "check": "npm run seq -- $(npm run -s _list:check:*)",
+    "fix:format": "npm run _check:format -- --write",
+    "fix": "npm run seq -- $(npm -s run _list:fix:*)",
+    "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
+    "test": "npm run check"
+  },
+  "author": "CNCF",
+  "license": "CC-BY-4.0",
+  "devDependencies": {
+    "cspell": "^8.8.1",
+    "markdown-link-check": "^3.12.1",
+    "prettier": "^3.2.5"
+  },
+  "private": true,
+  "prettier": {
+    "proseWrap": "always",
+    "singleQuote": true
+  }
+}
