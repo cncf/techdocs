@@ -2,7 +2,7 @@
 
 This document outlines the Cloud Native Computing Foundation (CNCF) Technical Documentation Assistance Program (the Program), a service offered by CNCF Tech Docs for evaluating and improving an OSS project's technical documentation. The process is designed to:
 
-1. Provide a baseline analysis of the project's documentation quality measured against the project's [maturity level](analysis/analysis-tools/criteria.md). Often, projects request an analysis in support of promotion to a new maturity level.
+1. Provide a baseline analysis of the project's documentation quality measured against the project's [maturity level](docs/criteria.md). Often, projects request an analysis in support of promotion to a new maturity level.
 1. Recommend changes that will reduce the gap between the documentation and the maturity of the overall project.
 1. Expand on the recommended changes in an implementation plan.
 1. Break down the implementation into a documentation project backlog comprising a GitHub Issues list.
@@ -29,7 +29,6 @@ The training program consists of the following online courses. Anyone can sign u
 A technical writer (on CNCF staff or on contract) analyzes the documentation. Based on the standards developed as part of the CNCF TechDocs program, the writer:
 
 1. Estimates the maturity level of the documentation compared to the current or desired maturity level of the software project using a rubric developed by CNCF. The rubric is divided into three categories:
-2. ```
     1. Project documentation: The end-user documentation for the project's work product, typically (but not always) an application, API, protocol, or some other software product.
     1. Contributor documentation: Documentation about the project, aimed at project contributors and describing procedures, infrastructure, and customs for doing project work. This includes artifacts that define procedures and governance; recruit, orient, and train project contributors; and name responsible parties (project leaders, often generically called *maintainers*).
     1. Website: The technical infrastructure behind the documentation and the project's web presence, including website generation, versioning, SEO, analytics, and security.
@@ -52,5 +51,3 @@ We know that recruiting contributors to write documentation can be difficult. Wh
 ## Phase 4: Impact analysis
 
 Projects are encouraged to collect metrics (using Google analytics and page feedback data) on documentation usage as a means of assessing the effectiveness of documentation improvements.
-
-As a basic gauge the effectiveness of the documentation effort, projects can track the issue backlog. This can provide a guide to progress on leveling the documentation maturity to that of the project.

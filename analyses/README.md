@@ -1,0 +1,34 @@
+# CNCF TechDocs Analysis for OSS Projects
+
+## Purpose
+
+The goals of a CNCF technical documentation analysis are to:
+
+- Examine the current project technical documentation and website against the CNCF's analysis framework, as described in the doc analysis [criteria](./criteria.md).
+- Compare the documentation against the current or proposed maturity level for the overall project.
+- Recommends a program of key improvements with the largest return on investment. These improvements are documented as *recommendations* in the analysis document and expanded in a companion [implementation plan](./implementation-template.md) and [issues backlog](./umbrella-issue-template.md).
+
+## Audience
+
+Analyses are written for the purpose of improving a project's documentation and are available for anyone to read. Among the intended benefits to project stakeholders are these:
+
+- **Project maintainers** can gain a critical overview of the technical documentation to plan work on the project's documentation. This work can increase the effectiveness of the project software, speed adoption, and improve user satisfaction.
+- **Project contributors** can take on the recommended backlog issues to improve the documentation.
+
+The analyses also provide information of value to organizations with an interest in promoting open source software:
+
+- **CNCF Foundation members** can see what benefits can (and cannot) be expected of a documentation improvement effort.
+- **Members of other open-source software foundations** can use these analyses as a model for their own documentation improvement processes. (Please contact the Cloud Native Computing Foundation to discuss licensing and permission of analysis templates and tools.)
+
+## Contents
+
+This directory contains completed analyses of the technical documentation for selected CNCF incubating and graduated software projects. 
+
+The analyses are in one of two formats depending on when they were written. Earlier analyses (**0001** - **0007**) are Markdown files, each of which is the sole artifact of the analysis.
+
+Subsequent analyses (**0008-** forward) each has its own directory containing three analysis artifacts:
+  - `projectname-analysis.md` evaluates the project documentation and provides comments and recommendations in a manner very similar to the Round 1 tech doc assessments. This document is based on the analysis template and accompanying criteria developed for the Round 1.
+  - `projectname-implementation.md` provides concrete actions that can be implemented by project contributors. Its focus is on specific, achievable work that will have a strong positive impact on document effectiveness.
+  - `projectname-issues.md` is a backlog of improvement actions, meant to be entered as GitHub Issues, derived from `projectname-implementation.md`.
+
+Each directory might also contain other documents, such as CSV-formatted surveys of documentation pages.
