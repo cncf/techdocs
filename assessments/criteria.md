@@ -162,7 +162,7 @@ maturity levels so, for example, incubating projects must satisfy the
 requirements for sandbox projects.
 
 - **Sandbox**
-  - [Website guidelines](../docs/website-guidelines-checklist.md): majority of the guidelines are satisfied
+  - [Website guidelines][]: majority of the guidelines are satisfied
   - [Docs assessment][]: consider [submitting a request][service desk] for an
     assessment as early as possible to avoid documentation and website rework.
   - **Project documentation** may or may not be present -- it is acceptable at
@@ -195,7 +195,7 @@ requirements for sandbox projects.
 [maturity level]: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
 [service desk]: https://servicedesk.cncf.io
 [single-source requirement]: #single-source-requirement
-[website guidelines]: /howto/website-guidelines-checklist.md
+[website guidelines]: ../docs/website-guidelines-checklist.md
 
 ### Usability, accessibility and devices
 
