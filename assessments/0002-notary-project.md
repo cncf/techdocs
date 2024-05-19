@@ -146,7 +146,7 @@ Is it possible plan documentation along side the V2 development? Will the docume
 - [ ] Setup Netlify for hosting/CI
 - [ ] Develop a [maintainers list](https://github.com/notaryproject/notaryproject.dev/blob/main/.github/settings.yml) for the documentation and its repository (this has been started https://github.com/notaryproject/notaryproject/issues/77)
 - [ ] Develop a maintenance plan for the documentation and its repository 
-- [ ] Follow the [CNCF website guidelines checklist](https://github.com/cncf/techdocs/blob/main/howto/website-guidelines-checklist.md) for other required elements
+- [ ] Follow the [CNCF website guidelines checklist](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) for other required elements
 
 _Note_: [Notary Project branding artwork](https://github.com/cncf/artwork/tree/master/projects/notary) exists. Other branding elements, like colour schemes and whatnot, will need to be developed.
 
