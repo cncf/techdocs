@@ -2,5 +2,7 @@
 
 # temporary
 
+# Until https://github.com/cncf/techdocs/pull/229 is merged
 assessments
 docs
+/README.md
