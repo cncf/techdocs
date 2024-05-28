@@ -11,5 +11,5 @@ Use the templates in this directory to perform a documentation analysis for CNCF
 
 Resources for completing a documentation analysis, including a [how-to][] guide and analysis [criteria][], are in the `docs` directory.
 
-[how-to]: ../docs/howto.md
-[criteria]: ../docs/criteria.md
+[how-to]: ../howto.md
+[criteria]: ../criteria.md

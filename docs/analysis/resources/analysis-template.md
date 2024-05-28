@@ -91,13 +91,13 @@ _PROJECT_ is a **graduated** project of CNCF. This means that the project should
 <!-- or -->
 _PROJECT_ is an **incubating** project of CNCF. This means that the project should be [*developing*][criteria-doc] professional-quality documentation alongside the project code.
 
-| Criterion                  |      Rating (1-5)     |
-| ---                        |       ---             |
-| Information architecture   |     (rating value)    |
-| New user content           |     (rating value)    |
-| Content maintainability    |     (rating value)    |
-| Content creation processes |     (rating value)    |
-| Inclusive language         |     (rating value)    |
+| Criterion                  | Rating (1-5)   |
+|----------------------------|----------------|
+| Information architecture   | (rating value) |
+| New user content           | (rating value) |
+| Content maintainability    | (rating value) |
+| Content creation processes | (rating value) |
+| Inclusive language         | (rating value) |
 
 <!-- Rating values:
 1 - not present
@@ -198,12 +198,12 @@ _PROJECT_ is a **graduated** project of CNCF. This means that the project should
 <!-- or -->
 _PROJECT_ is an **incubating** project of CNCF. This means that the project should be [*developing*][criteria-doc] professional-quality documentation alongside the project code.
 
-| Criterion                                 |    Rating (1-5)   |
-| ---                                       | ----------------- | 
-| Communication methods documented          |  (rating value)   | 
-| Beginner friendly issue backlog           |  (rating value)   |
-| “New contributor” getting started content |  (rating value)   | 
-| Project governance documentation          |  (rating value)   | 
+| Criterion                                 | Rating (1-5)   |
+|-------------------------------------------|----------------| 
+| Communication methods documented          | (rating value) | 
+| Beginner friendly issue backlog           | (rating value) |
+| “New contributor” getting started content | (rating value) | 
+| Project governance documentation          | (rating value) | 
 
 <!-- Rating values:
 1 - not present
@@ -282,22 +282,22 @@ _PROJECT_ is a **graduated** project of CNCF. This means that the project should
 <!-- or -->
 _PROJECT_ is an **incubating** project of CNCF. This means that the project should be [*developing*][criteria-doc] professional-quality documentation alongside the project code.
 
-| Criterion                                   |     Rating (1-5) | 
-| ---                                         | ---------------- | 
-| Single-source for all files                 |  (rating value)  |
-| Meets min website req. (for maturity level) |  (rating value)  |
-| Usability, accessibility, and design        |  (rating value)  |
-| Branding and design                         |  (rating value)  |
-| Case studies/social proof                   |  (rating value)  |
-| SEO, Analytics, and site-local search       |  (rating value)  |
-| Maintenance planning                        |  (rating value)  |
-| A11y plan & implementation                  |  (rating value)  |
-| Mobile-first plan & impl.                   |  (rating value)  |
-| HTTPS access & HTTP redirect                |  (rating value)  |
-| Google Analytics 4 for production only      |  (rating value)  |
-| Indexing allowed for production server only |  (rating value)  |
-| Intra-site / local search                   |  (rating value)  |
-| Account custodians are documented           |  (rating value)  |
+| Criterion                                   | Rating (1-5)   | 
+|---------------------------------------------|----------------| 
+| Single-source for all files                 | (rating value) |
+| Meets min website req. (for maturity level) | (rating value) |
+| Usability, accessibility, and design        | (rating value) |
+| Branding and design                         | (rating value) |
+| Case studies/social proof                   | (rating value) |
+| SEO, Analytics, and site-local search       | (rating value) |
+| Maintenance planning                        | (rating value) |
+| A11y plan & implementation                  | (rating value) |
+| Mobile-first plan & impl.                   | (rating value) |
+| HTTPS access & HTTP redirect                | (rating value) |
+| Google Analytics 4 for production only      | (rating value) |
+| Indexing allowed for production server only | (rating value) |
+| Intra-site / local search                   | (rating value) |
+| Account custodians are documented           | (rating value) |
 
 <!-- Rating values:
 1 - not present
@@ -339,16 +339,16 @@ documented strategy for managing mirrored files and new contributions.
 
 Listed here are the minimal website requirements for projects based on their [maturity level][maturity-level], either incubating or graduated. (These are the only two levels for which a tech docs analysis can be requested.)
 
-| Criterion | Incubating Requirement | Graduated Requirement |
-| ---      | ---         | --- |
-| [Website guidelines][website-guidelines] | All guidelines satisfied | All guidelines satisfied |
-| [Docs analysis][analysis-doc] (this) | Requested through CNCF [service desk][cncf-servicedesk] | All follow-up actions addressed |
-| **Project doc**: stakeholders | Roles identified and doc needs documented | All stakeholder need identified |
-| **Project doc**: hosting | Hosted directly | Hosted directly |
-| **Project doc**: user docs | Comprehensive, addressing most stakeholder needs | Fully addresses needs of key stakeholders |
+| Criterion                                | Incubating Requirement                                  | Graduated Requirement                     |
+|------------------------------------------|---------------------------------------------------------|-------------------------------------------|
+| [Website guidelines][website-guidelines] | All guidelines satisfied                                | All guidelines satisfied                  |
+| [Docs analysis][analysis-doc] (this)     | Requested through CNCF [service desk][cncf-servicedesk] | All follow-up actions addressed           |
+| **Project doc**: stakeholders            | Roles identified and doc needs documented               | All stakeholder need identified           |
+| **Project doc**: hosting                 | Hosted directly                                         | Hosted directly                           |
+| **Project doc**: user docs               | Comprehensive, addressing most stakeholder needs        | Fully addresses needs of key stakeholders |
 
 [git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-[website-guidelines]: /../../resources/website-guidelines-checklist.md
+[website-guidelines]: ../../website-guidelines-checklist.md
 [maturity-level]: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
 [cncf-servicedesk]: https://servicedesk.cncf.io
 
@@ -462,7 +462,7 @@ We evaluate on the following:
 
 [project-website]: _PROJECT-WEBSITE_
 [project-doc-website]: _PROJECT-DOC-URL_
-[criteria-doc]: ./criteria.md
+[criteria-doc]: ../criteria.md
 [implementation-template]: ./implementation-template.md
 [issues-template]: ./issue-template.md
 [umbrella-template]: ./umbrella-issue-template.md
@@ -472,5 +472,5 @@ We evaluate on the following:
 [contributor-heading]: #contributor-documentation
 [website-heading]: #website
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website-guidelines]: ../../resources/website-guidelines-checklist.md
+[website-guidelines]: ../../website-guidelines-checklist.md
 

@@ -11,14 +11,14 @@ The goals of a CNCF technical documentation analysis are to:
 
 - Examine the current project technical documentation and website against the CNCF's analysis framework, as described in the doc analysis [criteria](./criteria.md).
 - Compare the documentation against the current or proposed maturity level for the overall project.
-- Recommends a program of key improvements with the largest return on investment. These improvements are documented as *recommendations* in the analysis document and expanded in a companion [implementation plan](./implementation-template.md) and [issues backlog](./umbrella-issue-template.md).
+- Recommends a program of key improvements with the largest return on investment. These improvements are documented as *recommendations* in the analysis document and expanded in a companion [implementation plan](./resources/implementation-template.md) and [issues backlog](./resources/umbrella-issue-template.md).
 
 
 ## Doing a Tech Docs Analysis
 
 The tech docs analysis consists of some repository bookkeeping (Prerequisites), then of three overall tasks:
 
-1. Write the analysis document: Evaluate the existing project documentation with respect to the project maturity level (or proposed maturity level, if the analysis is associated with an upgrade reqeust). Identify gaps with CNCF criteria. Write general recommendations to close the largest and most important gaps. 
+1. Write the analysis document: Evaluate the existing project documentation with respect to the project maturity level (or proposed maturity level, if the analysis is associated with an upgrade request). Identify gaps with CNCF criteria. Write general recommendations to close the largest and most important gaps. 
 2. Write the implementation plan: Decompose the recommendations to specific improvement suggestions. These can be additions or revisions to the docs; reorganization; website infrastructure changes; or any other work that will close the gaps. Make suggestions specific (if you propose reorganizing a section, for example, provide an outline) but provide enough information that a contributor could solve the problem differently if they have a different idea (make it clear that your proposed outline is only one possible reorganization, e.g.). 
 3. Write the issue backlog.
 
