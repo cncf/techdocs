@@ -135,8 +135,6 @@ Follow these steps:
     -- provided that there are active users. You should see roughly the same
     number and distribution of active users reported by the UA console.
 
-<a name="stage-2"></a>
-
 ### Stage 2 - configure the GA4 ID as the main analytics ID
 
 GA4 only works when your project's website is configured using the [gtag.js][]
@@ -198,6 +196,6 @@ that your project is using.
 [issue #108]: https://github.com/cncf/techdocs/issues/108
 [migration-help]: https://support.google.com/analytics/answer/10759417
 [opentelemetry.io/layouts/partials/google-analytics.html]: https://github.com/open-telemetry/opentelemetry.io/blob/3d8a59ea508b46497500297f334a079a4f91e293/layouts/partials/google-analytics.html
-[stage 2]: #stage-2
+[stage 2]: #stage-2---configure-the-ga4-id-as-the-main-analytics-id
 [status table]: https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
 [ua]: https://support.google.com/analytics/answer/11583528
