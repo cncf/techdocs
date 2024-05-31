@@ -75,7 +75,7 @@ These probably include:
 
 - _Evaluator_: Someone trying to determine whether etcd is appropriate for their
   product, project, or organization.
-- _Admin or Operator_: Someone reponsible for setting up and maintaining a
+- _Admin or Operator_: Someone responsible for setting up and maintaining a
   standalone (not installed as the backstore for Kubernetes) production etcd
   service.
 - _Kubernetes Admin_: Someone responsible for installing and maintaining a
@@ -314,4 +314,4 @@ Release notes should include:
 
 [etcd-analysis]: ./etcd-analysis.md
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
-[access-tutorial]: https://etcd.io/docs/v3.5/tutorials/how-to-access-etcd/
+[access-tutorial]: https://github.com/etcd-io/website/issues/790

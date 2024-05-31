@@ -70,10 +70,11 @@ existing pages that can be used as-is or provide a starting point. Pages with
 multiple procedures (for example, the "Deploying KEDA" page) should be split
 into multiple pages, one for each procedure.
 
-- [Getting Started (New users start here!)](/docs/2.13/) (rename current "KEDA
-  Documentation" heading) _Make the new user entry point obvious._
-  - [Deploying KEDA](/docs/2.13/deploy/) _This is analogous to "Install" for
-    application software or a plugin. It's the starting point for a new user._
+- [Getting Started (New users start here!)](https://keda.sh/docs/2.13/) (rename
+  current "KEDA Documentation" heading) _Make the new user entry point obvious._
+  - [Deploying KEDA](https://keda.sh/docs/2.13/deploy/) _This is analogous to
+    "Install" for application software or a plugin. It's the starting point for
+    a new user._
     - Overview _Briefly explain the differences between installation methods.
       What is the advantage of one deployment method over another? If the choice
       is not completely arbitrary, explain the differences here to help the new

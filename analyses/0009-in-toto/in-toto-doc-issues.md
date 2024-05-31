@@ -13,7 +13,7 @@ repurposed as the new overall **Doc home page**.
 
 - [ ] To be immediately useful, the landing page should provide a _top-level
       roadmap_ to existing docs. See
-      [Survey of existing doc](https://github.com/jbogarthyde/CNCF-techdocs/main/assessments/0009-in-toto/survey-of-existing-doc.md)
+      [Survey of existing doc](survey-of-existing-doc.md)
 
   This is a necessary step in raising the maturity level of this project. The
   roadmap should initially describe and provide access to:
@@ -72,9 +72,9 @@ A basic intro, possibly suitable for evaluators, is already linked directly from
 the [home page About tab](https://in-toto.io/in-toto/). The short intro links to
 the
 [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md),
-which contains a more comprehensive overview. (NOTE: The
-[PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf)
-is broken. This should be fixed or removed.)
+which contains a more comprehensive overview. (NOTE: The PDF link to the stable
+spec, `https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf`, is broken.
+This should be fixed or removed.)
 
 - [ ] Initially, transfer the tech overview content from the Specification into
       a top-level Technical Overview document in RTD, and link as "Read more..."

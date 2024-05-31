@@ -24,7 +24,8 @@ The assessment is divided into three sections:
   project
 - **Website:** branding, website structure, and maintainability
 
-Each section rates content based on different [criteria](criteria.md).
+Each section rates content based on different
+[criteria](../docs/analysis/criteria.md).
 
 ## Project documentation
 

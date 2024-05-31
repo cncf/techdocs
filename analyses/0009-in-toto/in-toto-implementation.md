@@ -3,9 +3,9 @@
 ## Organizational principles
 
 Review the
-[CNCF website design guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md)
-for project home page and architecture recommendations. Consult with CNCF
-TechDocs or other technical documentation specialists to develop an appropriate
+[CNCF website design guidelines](../../docs/website-guidelines-checklist.md) for
+project home page and architecture recommendations. Consult with CNCF TechDocs
+or other technical documentation specialists to develop an appropriate
 information architecture based on different user roles and their specific tasks
 and information needs.
 
@@ -76,7 +76,7 @@ following general plan.
    menu.
 
    b. Create a **Getting Started** page on the web site from the existing README
-   content in the [main repo](https://github.com/in-toto/in-toto.README.md).
+   content in the [main repo](https://github.com/in-toto/in-toto).
 
    c. Link **Getting Started** as the first menu item in the **Get started**
    menu (currently the first item is a link to a demo).
@@ -85,7 +85,7 @@ following general plan.
    the website, as:
 
    - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)
-     (compare content to https://in-toto.io/in-toto/README and current website
+     (compare content to <https://in-toto.io/in-toto> and current website
      About - create versions of increasing depth to address to specific
      audiences)
    - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology)
@@ -132,8 +132,8 @@ following general plan.
    the git repo structure.
 
    1.1 Create a _top-level roadmap_ to
-   [existing docs](https://github.com/jbogarthyde/CNCF-techdocs/main/assessments/0009-in-toto/survey-of-existing-doc.md)
-   at the location decided on for the Doc home page.
+   [existing docs](survey-of-existing-doc.md) at the location decided on for the
+   Doc home page.
 
    1.2 Move the Description and pointer to the Python Reference implementation
    to an **Implementations** section, and move the RTD reference docs for it
@@ -179,9 +179,9 @@ following general plan.
    from the [home page About tab](https://in-toto.io/in-toto/). The short intro
    links to the
    [latest spec in GitHub](https://github.com/in-toto/docs/blob/master/in-toto-spec.md),
-   which contains a more comprehensive overview. (NOTE: The
-   [PDF link to the stable spec](https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf)
-   is broken. This should be fixed or removed.)
+   which contains a more comprehensive overview. (NOTE: The PDF link to the
+   stable spec, `https://github.com/in-toto/docs/blob/v1.0/in-toto-spec.pdf` is
+   broken. This should be fixed or removed.)
 
    3.1 Initially, transfer the tech overview content from the Specification into
    a top-level Technical Overview document in RTD, and link as "Read more..."

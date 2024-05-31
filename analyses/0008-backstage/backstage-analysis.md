@@ -47,11 +47,11 @@ Backstage GitHub repo.
 - Website: https://backstage.io
 - Documentation: https://backstage.io/docs
 - Contributor documentation:
-  - https://github.com/backstage/backstage/README.md
-  - https://github.com/backstage/backstage/CONTRIBUTING.md
+  - https://github.com/backstage/backstage/blob/master/README.md
+  - https://github.com/backstage/backstage/blob/master/CONTRIBUTING.md
 - Website configuration (Docusaurus):
-  https://github.com/backstage/backstage/microsite
-- Website content: https://github.com/backstage/backstage/docs
+  https://github.com/backstage/backstage/blob/master/microsite
+- Website content: https://github.com/backstage/backstage/blob/master/docs
 
 **Out of scope:**
 
@@ -581,19 +581,20 @@ Improve compliance in these areas:
 
 [backstage-backstage]: https://github.com/backstage/backstage
 [backstage-community]: https://backstage.io/community
-[backstage-contrib]: https://github.com/backstage/backstage/CONTRIBUTING.md
+[backstage-contrib]:
+  https://github.com/backstage/backstage/blob/master/CONTRIBUTING.md
 [backstage-demo]:
   https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=owned
-[backstage-discussion]: https://github.com/backstage/backstage/discussions
+[backstage-discussion]: https://discord.gg/backstage-687207715902193673
 [backstage-doc-contrib]:
-  https://backstage.io/docs/getting-started/getting-involved#write-documentation-or-improve-the-website
+  https://backstage.io/docs/contribute/getting-involved#write-documentation-or-improve-the-website
 [backstage-doc-deployment]: https://backstage.io/docs/deployment/
 [backstage-doc-getting-started]: https://backstage.io/docs/getting-started/
 [backstage-doc-rn]: https://backstage.io/docs/releases/v1.17.0
 [backstage-github-community]: https://github.com/backstage/community
 [backstage-github-project]: https://github.com/backstage
 [backstage-governance]:
-  https://github.com/backstage/backstage/blob/master/GOVERNANCE.md
+  https://github.com/backstage/community/blob/main/GOVERNANCE.md
 [backstage-insights-summary]: ./backstage-insights-summary.md
 [backstage-issues]: https://github.com/backstage/backstage/issues
 [backstage-io-overview-benefits]:
@@ -603,11 +604,9 @@ Improve compliance in these areas:
 [backstage-microsite]:
   https://github.com/backstage/backstage/tree/master/microsite
 [clotributor]: https://clotributor.dev/
-[cncf-doc-criteria]: ../criteria.md
-[cncf-doc-criteria]:
-  https://github.com/cncf/techdocs/blob/main/assessments/criteria.md
-[cncf-docs-howto]:
-  https://github.com/cncf/techdocs/blob/main/assessments/howto.md
+[cncf-doc-criteria]: ../../docs/analysis/criteria.md
+[cncf-doc-criteria]: ../../docs/analysis/criteria.md
+[cncf-docs-howto]: ../../docs/analysis/howto.md
 [cncf-maturity-stages]:
   https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
 [cncf-servicedesk]: https://servicedesk.cncf.io
@@ -628,7 +627,7 @@ Improve compliance in these areas:
 
 [contrib-doc-rec]: #recommendations-contributor-documentation
 [contributor-doc]: #contributor-documentation
-[doc-survey]: ./Backstage%20doc%20survey.csv
+[doc-survey]: backstage-doc-survey.csv
 [implementation]: #implementation
 [info-arch-recommend]: #recommendations
 [proj-doc-comments]: #comments-project-documentation

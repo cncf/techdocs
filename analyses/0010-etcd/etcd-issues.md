@@ -73,14 +73,15 @@ the CLI".
 ## Issue: Write installation instructions for Kubernetes
 
 Write the procedure
-[Installation as part of Kubernetes installation](install/#installation-as-part-of-kubernetes-installation),
+[Installation as part of Kubernetes installation](https://etcd.io/docs/v3.5/install/#installation-as-part-of-kubernetes-installation),
 or link to Kubernetes documentation that includes etcd installation as
 backstore. Explain and fill in (on the etcd docs page) any gaps in the
 procedure.
 
 ## Issue: Write Linux installation instructions
 
-Write [installation instructions for Linux](install/#linux).
+Write
+[installation instructions for Linux](https://etcd.io/docs/v3.5/install/#linux).
 
 ## Issue: Update quickstart and new user workflows
 
@@ -397,4 +398,4 @@ each path. If such a guide isn't needed, then remove this page.
 
 [etcd-analysis]: ./etcd-analysis.md
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
-[access-tutorial]: https://etcd.io/docs/v3.5/tutorials/how-to-access-etcd/
+[access-tutorial]: https://github.com/etcd-io/website/issues/790

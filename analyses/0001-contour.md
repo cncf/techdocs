@@ -26,8 +26,9 @@ The assessment is divided into three sections:
 - **Website:** branding, website structure, and maintainability
 
 Within each section you receive a rating on different criteria. The full
-definition of each criteria is defined in [the criteria](criteria.md). We
-recommend reading each criterion’s definition.
+definition of each criteria is defined in
+[the criteria](../docs/analysis/criteria.md). We recommend reading each
+criterion’s definition.
 
 ## Project documentation
 
@@ -44,8 +45,8 @@ recommend reading each criterion’s definition.
 
   - Documentation is feature complete!
   - A clear "About" or "What is Contour?" page is missing. It partially exists
-    on (Architecture)[https://projectcontour.io/docs/v1.13.1/architecture/] and
-    (Philosophy)[https://projectcontour.io/resources/philosophy/], but it's hard
+    on [Architecture](https://projectcontour.io/docs/v1.13.1/architecture) and
+    [Philosophy](https://projectcontour.io/resources/philosophy), but it's hard
     to navigate for a new user.
   - Task and concept documentation for individual features (configurations and
     deployment options) are both feature complete.

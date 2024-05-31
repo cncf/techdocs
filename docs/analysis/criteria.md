@@ -76,7 +76,7 @@ Examples:
 
 - https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly
   documented maintainers)
-- https://thanos.io/tip/contributing/how-to-contribute-to-docs.md/
+- https://thanos.io/tip/contributing/how-to-contribute-to-docs.md
 
 ### Inclusive language
 
@@ -181,8 +181,8 @@ maturity levels so, for example, incubating projects must satisfy the
 requirements for sandbox projects.
 
 - **Sandbox**
-  - [Website guidelines](../../docs/website-guidelines-checklist.md): majority
-    of the guidelines are satisfied
+  - [Website guidelines](../website-guidelines-checklist.md): majority of the
+    guidelines are satisfied
   - [Docs assessment][]: consider [submitting a request][service desk] for an
     assessment as early as possible to avoid documentation and website rework.
   - **Project documentation** may or may not be present -- it is acceptable at

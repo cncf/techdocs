@@ -13,11 +13,11 @@ tags: _PROJECT_
 
 This issue tracks recommended changes resulting from an analysis of the
 _PROJECT_ documentation commissioned by CNCF. The analysis and supporting
-documents are here:
-https://github.com/cncf/techdocs/tree/main/assessments/00NN-project/
+documents are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+`00NN-project`.
 
-The CNCF etcd documentation effort is tracked in the CNCF Tech Docs repo:
-https://github.com/cncf/techdocs/issues/NNN
+The CNCF _PROJECT_ documentation effort is tracked in the CNCF Tech Docs repo:
+<https://github.com/cncf/techdocs/issues>
 
 # Issues
 
@@ -28,7 +28,7 @@ website and technical documentation.
 
 <!-- Summarize the documentation changes prescribed by this issue. Use enough detail to estimate the scope of the issue. Fine-grained detail can go in the issue itself. In the GitHub umbrella issue, link to the sub-issue using a Markdown checkbox as shown below. -->
 
-- [ ] https://github.com/project/repo/issues/NNN
+- [ ] `https://github.com/_PROJECT_/repo/issues/NNN`
 
 ## Issue: Item 2
 

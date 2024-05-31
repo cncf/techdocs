@@ -25,7 +25,8 @@ The assessment is divided into three sections:
   project
 - **Website:** branding, website structure, and maintainability
 
-Each section rates content based on different [criteria](criteria.md).
+Each section rates content based on different
+[criteria](../docs/analysis/criteria.md).
 
 ## Project documentation
 
@@ -154,7 +155,7 @@ Scale:
 
 - [This file](https://github.com/fluxcd/website/blob/main/hack/import-flux2-assets.sh)
   is _very_ fragile, as it points to specific files at their
-  `https://github.com/fluxcd/website/blob/main/hack/import-flux2-assets.sh` and
+  <https://github.com/fluxcd/website/blob/main/hack/import-flux2-assets.sh> and
   seems to have the potential to make the site build succeed but with
   unpredictable results.
   - Consider implementing [Hugo Modules](https://gohugo.io/hugo-modules/) to
@@ -166,7 +167,7 @@ Scale:
 **Content creation processes**:
 
 - Put
-  [this information](https://github.com/fluxcd/website/blob/main/content/en/docs/contributing/docs/some-background.md#running-the-site-locally)
+  [this information](https://github.com/fluxcd/website/blob/main/content/en/docs/contributing/docs/some-background.md#running-the-site-locally?no-link-check)
   directly in the README.md of the website repository, because people are lazy.
   Kudos on trying to keep everything in one place, however!
 
@@ -200,7 +201,7 @@ Scale:
   [Community repository](https://github.com/fluxcd/community).
 - Project governance is [clearly documented](https://fluxcd.io/governance/). The
   community repository also includes information on
-  [Oversight](https://github.com/fluxcd/community/blob/main/OVERSIGHT.md),
+  [governance](https://github.com/fluxcd/community/blob/main/GOVERNANCE.md),
   [Community roles](https://github.com/fluxcd/community/blob/main/community-roles.md),
   and more.
 
@@ -242,7 +243,7 @@ Scale:
   fragility, particularly once the original code owners leave the organization.
 
 - Flux meets and exceeds the
-  [website requirements](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md#minimal-website-requirements)
+  [website requirements](../docs/analysis/criteria.md#minimal-website-requirements)
   for its maturity level, save for the single sourcing requirement as noted
   above.
 

@@ -6,9 +6,8 @@ tags: porter
 # Notes
 
 meeting notes:
-https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw/edit?usp=sharing  
-website: https://getporter.org/  
-repos:
+https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw/edit?usp=sharing
+website: https://getporter.org/ repos:
 
 - https://github.com/getporter/porter (main site), site content is in docs/
   folder
@@ -45,7 +44,8 @@ The assessment is divided into three sections:
   project
 - **Website:** branding, website structure, and maintainability
 
-Each section rates content based on different [criteria](criteria.md).
+Each section rates content based on different
+[criteria](../docs/analysis/criteria.md).
 
 ## Project documentation
 

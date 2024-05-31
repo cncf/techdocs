@@ -21,7 +21,8 @@ Type:
 
 This issue tracks recommended changes resulting from an analysis of the etcd
 documentation commissioned by CNCF. The analysis and supporting documents are
-here: https://github.com/cncf/techdocs/tree/main/assessments/00NN-project/
+here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+`00NN-project`.
 
 # Possible Implementation
 
@@ -29,7 +30,8 @@ here: https://github.com/cncf/techdocs/tree/main/assessments/00NN-project/
 
 Related material in the current doc:
 
-- https://github.com/_PROJECT_/website/tree/main/content/en/docs/v3.5/tutorials
+- For example,
+  `https://github.com/_PROJECT_/website/tree/main/content/en/docs/v3.5/tutorials`
 
 <!-- Describe in detail a suggested way to achieve the goals of the issue. This should be specific enough to provide a contributor with a recipe for making the change; however, the contributor should feel free to solve the problem differently if they have an idea how it should be done. -->
 

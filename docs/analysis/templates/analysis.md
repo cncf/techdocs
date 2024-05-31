@@ -542,14 +542,14 @@ We evaluate on the following:
 
 <!--- References --->
 
-[project-website]: _PROJECT-WEBSITE_
-[project-doc-website]: _PROJECT-DOC-URL_
+[project-website]: #?_PROJECT-WEBSITE_
+[project-doc-website]: #?_PROJECT-DOC-URL_
 [criteria-doc]: ../criteria.md
-[implementation-template]: ./implementation-template.md
+[implementation-template]: ./implementation.md
 [issues-template]: ./issue-template.md
-[umbrella-template]: ./umbrella-issue-template.md
-[implementation-doc]: ./_PROJECT_-implementation.md
-[issues-doc]: ./_PROJECT_-issues.md
+[umbrella-template]: ./umbrella-issue.md
+[implementation-doc]: #?_PROJECT_-implementation.md
+[issues-doc]: #?_PROJECT_-issues.md
 [project-heading]: #project-documentation
 [contributor-heading]: #contributor-documentation
 [website-heading]: #website
