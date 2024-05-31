@@ -1,7 +1,6 @@
 # Notary Project Docs Assessment
 
-Date: 2021-07-31  
-Project: [Notary Project](https://github.com/notaryproject/)
+Date: 2021-07-31 Project: [Notary Project](https://github.com/notaryproject/)
 
 ## Introduction
 
@@ -29,7 +28,8 @@ This assessment is divided into two sections:
 - **Contributor documentation:** for new and existing contributors to the
   project
 
-Each section rates content based on different [criteria](criteria.md).
+Each section rates content based on different
+[criteria](../docs/analysis/criteria.md).
 
 Normally, a **website** section would also be a part of a document assessment,
 but as there isn't a website for the Notary Project yet, the website assessment
@@ -218,7 +218,7 @@ developed?
       https://github.com/notaryproject/notaryproject/issues/77)
 - [ ] Develop a maintenance plan for the documentation and its repository
 - [ ] Follow the
-      [CNCF website guidelines checklist](https://github.com/cncf/techdocs/blob/main/howto/website-guidelines-checklist.md)
+      [CNCF website guidelines checklist](../docs/website-guidelines-checklist.md)
       for other required elements
 
 _Note_:

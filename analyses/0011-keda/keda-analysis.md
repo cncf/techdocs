@@ -50,7 +50,7 @@ Netlify platform. The site's code is stored on the KEDA GitHub repo.
 - Website: https://keda.sh
 - Documentation: https://keda.sh/docs
 - Website repo: https://github.com/kedacore/keda-docs
-- Governance repo: https://github.com/kedacore/governanace
+- Governance repo: https://github.com/kedacore/governance
 - Main project contributor info: https://github.com/kedacore/keda
 
 **Out of scope:**
@@ -70,8 +70,7 @@ concern:
   includes branding, website structure, and maintainability
 
 Each section begins with summary ratings based on a rubric with appropriate
-[criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-for the section, then proceeds to:
+[criteria](../../docs/analysis/criteria.md) for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, with a focus on
   how it does or does not help KEDA users achieve their goals.
@@ -83,7 +82,7 @@ breaks the recommendations down into concrete actions that can be implemented by
 project contributors. Its focus is on drilling down to specific, achievable work
 that can be completed in constrained blocks of time. Ultimately, the
 implementation items should be tracked as a series of Github
-[issues]((./keda-issues.md).
+[issues](keda-issues.md).
 
 ## How to use this document
 
@@ -99,9 +98,7 @@ to their area of concern:
 - [Website and documentation infrastructure](#website)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
-from the
-[criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-specification.
+from the [criteria](../../docs/analysis/criteria.md) specification.
 
 ### Recommendations, requirements, and best practices
 
@@ -119,8 +116,7 @@ copyright and licensing issues.
 # Project documentation
 
 KEDA is a **graduated** project of CNCF. This means that the project should have
-[_very high_](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-standards for documentation.
+[_very high_](../../docs/analysis/criteria.md) standards for documentation.
 
 | Criterion                  | Rating (1-5)          |
 | -------------------------- | --------------------- |
@@ -294,8 +290,8 @@ Remove non-inclusive language throughout the documentation as recommended on the
 # Contributor documentation
 
 KEDA is a **graduated** project of CNCF. This means that the project should have
-[_very high_](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-standards for contributor documentation.
+[_very high_](../../docs/analysis/criteria.md) standards for contributor
+documentation.
 
 | Criterion                                 | Rating (1-5)                   |
 | ----------------------------------------- | ------------------------------ |
@@ -363,8 +359,7 @@ No recommendations.
 # Website
 
 KEDA is a **graduated** project of CNCF. This means that the project should have
-[_very high_](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-standards for documentation.
+[_very high_](../../docs/analysis/criteria.md) standards for documentation.
 
 | Criterion                                   | Rating (1-5)                   |
 | ------------------------------------------- | ------------------------------ |
@@ -407,15 +402,15 @@ sandbox, incubating, graduated and archived.
 
 | Maturity   | Requirement                                                                                                                                                                                                                  | Met?                                |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
-| Sandbox    | Majority of [Website guidelines](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md) satisfied                                                                                                  | Yes                                 |
-| Sandbox    | [Docs assessment](https://github.com/cncf/techdocs/blob/main/assessments/howto.md) [cncf-servicedesk] completed.                                                                                                             | Yes                                 |
+| Sandbox    | Majority of [Website guidelines](../../docs/website-guidelines-checklist.md) satisfied                                                                                                                                       | Yes                                 |
+| Sandbox    | [Docs assessment](../../docs/analysis/howto.md) [cncf-servicedesk] completed.                                                                                                                                                | Yes                                 |
 | Sandbox    | **Project documentation** exists – somewhere. It is acceptable at this maturity level to link out to documentation that hasn't yet been integrated into the website. (May still be in the project GitHub repo, for example.) | Yes                                 |
-| Incubating | All [Website guidelines](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md#website) satisfied                                                                                                               | Yes                                 |
+| Incubating | All [Website guidelines](../../docs/analysis/criteria.md#website) satisfied                                                                                                                                                  | Yes                                 |
 | Incubating | Request docs (re-)assessment through CNCF [service desk](https://servicedesk.cncf.io/)                                                                                                                                       | Yes                                 |
 | Incubating | **Project doc**: stakeholders (roles) identified and doc needs documented                                                                                                                                                    | No                                  |
 | Incubating | **Project doc**: Hosted directly                                                                                                                                                                                             | Yes                                 |
 | Incubating | **Project doc**: Comprehensive, addressing most stakeholder needs                                                                                                                                                            | Yes                                 |
-| Graduated  | [Docs assessment](https://github.com/cncf/techdocs/blob/main/assessments/howto.md): all assessment follow-through actions are complete                                                                                       | No                                  |
+| Graduated  | [Docs assessment](../../docs/analysis/howto.md): all assessment follow-through actions are complete                                                                                                                          | No                                  |
 | Graduated  | **Project doc** fully addresses needs of key stakeholders                                                                                                                                                                    | No - new user doc needs improvement |
 | Archived   | The website repo is in an [archived state](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)                                                                                     | n/a                                 |
 | Archived   | Archived status of the project is obvious to site visitors                                                                                                                                                                   | n/a                                 |

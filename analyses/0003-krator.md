@@ -27,8 +27,9 @@ The assessment is divided into three sections:
 - **Website:** branding, website structure, and maintainability
 
 Within each section you receive a rating on different criteria. The full
-definition of each criteria is defined in [the criteria](criteria.md). We
-recommend reading each criterion’s definition.
+definition of each criteria is defined in
+[Criteria](../docs/analysis/criteria.md). We recommend reading each criterion’s
+definition.
 
 ## Project documentation
 

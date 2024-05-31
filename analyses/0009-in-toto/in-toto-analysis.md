@@ -58,20 +58,20 @@ Readers interested only in actionable improvements can skip to the
 [implementation recommendations](./in-toto-implementation.md). For more context,
 read the recommendations for each of the three areas of analysis:
 
-- [Project documentation recommendations](./assessments#recommendations)
+- [Project documentation recommendations](#recommendations-1)
 
-- [Contributor documentation recommendations](./assessments#recommendations-1)
+- [Contributor documentation recommendations](#recommendations-2)
 
-- [Website recommendations](./assessments#recommendations-2)
+- [Website recommendations](#recommendations-3)
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should start with the analyses:
 
-- [Project documentation](./assessments#project-documentation-analysis)
+- [Project documentation](#project-documentation-analysis)
 
-- [Contributor documentation](./assessments#contributor-documentation-analysis)
+- [Contributor documentation](#contributor-documentation-analysis)
 
-- [Website](./assessments#website-analysis)
+- [Website](#website-analysis)
 
 # Analysis and Recommendations
 
@@ -138,7 +138,7 @@ sync.
 The Contributing and Governance files do not mention changes or additions to
 documentation as potential areas of contribution.
 
-### Recommendations
+### Recommendations 1
 
 **Information Architecture**
 
@@ -235,7 +235,7 @@ contribution (such as docs).
 **Project governance documentation**: Clearly described and discoverable on
 GOVERNANCE page.
 
-### Recommendations
+### Recommendations 2
 
 **Communication methods documented**
 
@@ -333,7 +333,7 @@ correctly.
 **Intra-site / local search**: There is no site map or search mechanism; the
 only navigation is through a minimal menu bar.
 
-### Recommendations
+### Recommendations 3
 
 **Meets min website req. (for Incubating)**, **Intra-site / local search**
 

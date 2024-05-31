@@ -2,8 +2,6 @@
 
 This directory contains templates for analyzing a CNCF project's documentation.
 
-## Contents
-
 Use the templates in this directory to perform a documentation analysis for
 CNCF. These materials provide:
 
@@ -14,8 +12,6 @@ CNCF. These materials provide:
 - Emphasis on effective documentation that serves all users associated with the
   project.
 
-Resources for completing a documentation analysis, including a [how-to][] guide
-and analysis [criteria][], are in the `docs` directory.
-
-[how-to]: ../howto.md
-[criteria]: ../criteria.md
+Resources for completing a documentation analysis, including a
+[how-to](../howto.md) guide and analysis [criteria](../criteria.md), are in the
+`docs` directory.

@@ -50,7 +50,7 @@ Netlify platform. The site's code is stored on the etcd GitHub repo.
 - Documentation: https://etcd.io/docs
 - Website repo: https://github.com/etcd-io/website
 - Main project contributor info: https://github.com/etcd-io/etcd
-- Demo server: http://play.etcd.io
+- Demo server: [http://play.etcd.io][demo server]
 
 **Out of scope:**
 
@@ -207,22 +207,22 @@ Benchmarks for down-level versions are available in the current documentation.
 It's not clear why these old benchmarks haven't been removed from the
 documentation.
 
-There is an example **installation** on the
-[etcd Play](http://play.etcd.io/install) server that presents "an example
-workflow to install and deploy etcd." This page consists of a form containing
-parameters (with no explanation of each parameter other than the label) followed
-by a CLI script that varies depending on the installation type you choose.
-Presumably you're supposed to run the script to do the install, but there are no
-clear task instructions at all. It's not clear how this is useful. Novice users
-will have a hard time with this. Also, why is this information on the demo
-server at all? Users should be referred to an installation procedure in the
-documentation. If this represents a separate, automated installation workflow it
-should be offered as a procedure in the user doc.
+There is an example **installation** on the [etcd Play][demo server] server that
+presents "an example workflow to install and deploy etcd." This page consists of
+a form containing parameters (with no explanation of each parameter other than
+the label) followed by a CLI script that varies depending on the installation
+type you choose. Presumably you're supposed to run the script to do the install,
+but there are no clear task instructions at all. It's not clear how this is
+useful. Novice users will have a hard time with this. Also, why is this
+information on the demo server at all? Users should be referred to an
+installation procedure in the documentation. If this represents a separate,
+automated installation workflow it should be offered as a procedure in the user
+doc.
 
 ### New user content
 
 There is a single paragraph on the [website][etcd-io] landing page with a "Learn
-more" link that goes to the current documetation table of contents (ToC). It
+more" link that goes to the current documentation table of contents (ToC). It
 would be better to link to an overview page that laid out learning paths for
 different users ("Start here").
 
@@ -383,9 +383,8 @@ In general, confine release-specific discussion to the Release Notes.
 Remove benchmarks for down-level versions in the current documentation if
 they're no longer relevant.
 
-Consider removing the installation example from the
-[etcd Play](http://play.etcd.io/install) server and pointing the user to the
-documentation's installation instructions.
+Consider removing the installation example from the [etcd Play][demo server]
+server and pointing the user to the documentation's installation instructions.
 
 ### New user content
 
@@ -450,8 +449,8 @@ Audit the documentation for non-inclusive language. See the
 # Contributor documentation
 
 etcd is a **graduated** project of CNCF. This means that the project should have
-[_very high_](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-standards for contributor documentation.
+[_very high_](../../docs/analysis/criteria.md) standards for contributor
+documentation.
 
 | Criterion                                 | Rating (1-5)                   |
 | ----------------------------------------- | ------------------------------ |
@@ -533,8 +532,7 @@ No recommnendations.
 # Website
 
 etcd is a **graduated** project of CNCF. This means that the project should have
-[_very high_](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md)
-standards for documentation.
+[_very high_](../../docs/analysis/criteria.md) standards for documentation.
 
 | Criterion                                   | Rating (1-5)                   |
 | ------------------------------------------- | ------------------------------ |
@@ -667,7 +665,7 @@ in the OWNERS file in the repo. Approvers and reviewers are listed.
 The website is accessible via **HTTPS**. Requests using **HTTP** are properly
 redirected to the **HTTPS** URLs.
 
-The [demo server][demo-server] uses unsecured HTTP.
+The [demo server][] uses unsecured HTTP.
 
 ## Recommendations
 
@@ -710,25 +708,24 @@ No recommendations.
 
 ### Other
 
-Consider securing the [demo server][demo-server] using HTTPS.
+Consider securing the [demo server][] using HTTPS.
 
 <!--- References --->
 
 [etcd-io]: https://etcd.io
-[cncf-doc-criteria]: ../criteria.md
+[cncf-doc-criteria]: ../../docs/analysis/criteria.md
 [implementation-doc]: ./etcd-implementation.md
-[proj-doc]: ../criteria.md#project-documentation
-[contributor-doc]: ../criteria.md/#contributor-documentation
-[website]: ../criteria.md/#website
+[proj-doc]: ../../docs/analysis/criteria.md#project-documentation
+[contributor-doc]: ../../docs/analysis/criteria.md#contributor-documentation
+[website]: ../../docs/analysis/criteria.md#website
 [etcd-issues]: ./etcd-issues.md
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
 [inclusive-naming]: https://inclusivenaming.org
 [install-check]: https://etcd.io/docs/v3.5/install/#installation-check
 [website-min-reqs]:
   https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
-[assess-howto]: https://github.com/cncf/techdocs/blob/main/assessments/howto.md
-[website-guidelines]:
-  https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
+[assess-howto]: ../../docs/analysis/howto.md
+[website-guidelines]: ../../docs/website-guidelines-checklist.md
 [cncf-servicedesk]: https://servicedesk.cncf.io
 [archiving-repo]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
@@ -736,7 +733,7 @@ Consider securing the [demo server][demo-server] using HTTPS.
 [etcd-howtocontrib]: https://github.com/etcd-io/etcd/blob/main/CONTRIBUTING.md
 [etcd-git-discuss]: https://github.com/etcd-io/etcd/discussions
 [etcd-govern]: https://github.com/etcd-io/etcd/blob/main/GOVERNANCE.md
-[demo-server]: http://play.etcd.io
+[demo server]: http://play.etcd.io?no-link-check
 [github-etcd-etcd]: https://github.com/etcd-io/etcd
 [etcdio-triage]: https://etcd.io/docs/v3.5/triage/
 [doc-optimalclustersize-23]:

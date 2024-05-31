@@ -26,7 +26,8 @@ The assessment is divided into three sections:
   project
 - **Website:** branding, website structure, and maintainability
 
-Each section rates content based on different [criteria](criteria.md).
+Each section rates content based on different
+[criteria](../docs/analysis/criteria.md).
 
 ## Project documentation
 
@@ -56,7 +57,7 @@ are mentioned in brief, great work!
 **New user content**:
 
 We have a great, clearly labelled
-[Getting Started](https://gateway-api.sigs.k8s.io/v1alpha2/guides/getting-started/)
+[Getting Started](https://gateway-api.sigs.k8s.io/v1alpha2/guides/getting-started/?no-link-check)
 page, which is awesome! However, the getting started guide is fairly high level
 and doesn't answer some of the following questions:
 
@@ -97,7 +98,7 @@ as well as where to find them.
 - **Prepared a miro board:
   [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
 
-  ![information_architecture](/images/gapi_info_arch.png)
+  ![information_architecture](../images/gapi_info_arch.png)
 
 - There are improvements we could make:
   - With the collection of guided, step-by-step instructions (tasks, hands-on
