@@ -137,10 +137,12 @@ Examples:
 
 ### Single-source requirement
 
-Source files for _all website pages_ should reside in a _single_ repo.
-Otherwise, having source files in two places will confuse contributors (who
-won't know which file(s) to update) and you'll run the risk of losing updates
-&mdash; [as has happened already][otel-changes-lost].
+Source files for _all website pages_ should reside in a single repo.
+Among other problems, keeping source files in two places:
+- confuses contributors
+- requires you to keep two sources in sync
+- increases the likelihood of errors
+- makes it more complicated to generate the documentation from source files
 
 Ideally, all website files should be in the **website repo** itself.
 Alternatively, files should be brought into the website repo via [git
@@ -148,9 +150,6 @@ submodules][].
 
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
-
-[otel-changes-lost]: https://github.com/open-telemetry/opentelemetry.io/issues/673
-[git submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 
 ### Minimal website requirements
 
@@ -162,7 +161,7 @@ maturity levels so, for example, incubating projects must satisfy the
 requirements for sandbox projects.
 
 - **Sandbox**
-  - [Website guidelines](../docs/website-guidelines-checklist.md): majority of the guidelines are satisfied
+  - [Website guidelines](../../docs/website-guidelines-checklist.md): majority of the guidelines are satisfied
   - [Docs assessment][]: consider [submitting a request][service desk] for an
     assessment as early as possible to avoid documentation and website rework.
   - **Project documentation** may or may not be present -- it is acceptable at
@@ -191,11 +190,11 @@ requirements for sandbox projects.
     documentation.
 
 [archived state]: https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
-[docs assessment]: /assessments/howto.md
+[docs assessment]: ./howto.md
 [maturity level]: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
 [service desk]: https://servicedesk.cncf.io
 [single-source requirement]: #single-source-requirement
-[website guidelines]: /howto/website-guidelines-checklist.md
+[website guidelines]: ../website-guidelines-checklist.md
 
 ### Usability, accessibility and devices
 
@@ -220,6 +219,7 @@ Plan for suitable [accessibility][] measures for your website. For example:
 It is up to each project to set their own guidelines.
 
 [accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
+
 ### Branding
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
