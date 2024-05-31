@@ -1,3 +1,5 @@
+<!-- cSpell:ignore projectname -->
+
 # CNCF TechDocs Analysis for OSS Projects
 
 ## Purpose
@@ -22,7 +24,7 @@ The analyses also provide information of value to organizations with an interest
 
 ## Contents
 
-This directory contains completed analyses of the technical documentation for selected CNCF incubating and graduated software projects. 
+This directory contains completed analyses of the technical documentation for selected CNCF incubating and graduated software projects.
 
 The analyses are in one of two formats depending on when they were written. Earlier analyses (**0001** - **0007**) are Markdown files, each of which is the sole artifact of the analysis.
 

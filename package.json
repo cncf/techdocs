@@ -9,7 +9,7 @@
     "_list:fix:*": "npm run --loglevel=warn | grep -Ee '^\\s*fix:[^:]+$' | grep -v 'fix:all'",
     "check:format": "npm run _check:format || (echo '[help] Run: npm run fix:format'; exit 1)",
     "check:links": "bash -c 'for f in *.md docs/*.md; do npx markdown-link-check --config .markdown-link-check.json $f || exit 1; done'",
-    "check:spelling": "npx cspell --no-progress -c .cspell.yml .",
+    "check:spelling": "npx cspell --no-progress -c .cspell.yml *.md",
     "check": "npm run seq -- $(npm run -s _list:check:*)",
     "fix:format": "npm run _check:format -- --write",
     "fix": "npm run seq -- $(npm -s run _list:fix:*)",
