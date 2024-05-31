@@ -2,7 +2,7 @@
 
 This document outlines the Cloud Native Computing Foundation (CNCF) Technical Documentation Assistance Program (the Program), a service offered by CNCF Tech Docs for evaluating and improving an OSS project's technical documentation. The process is designed to:
 
-1. Provide a baseline analysis of the project's documentation quality measured against the project's [maturity level](docs/criteria.md). Often, projects request an analysis in support of promotion to a new maturity level.
+1. Provide a baseline analysis of the project's documentation quality measured against the project's [maturity level](docs/analysis/criteria.md). Often, projects request an analysis in support of promotion to a new maturity level.
 1. Recommend changes that will reduce the gap between the documentation and the maturity of the overall project.
 1. Expand on the recommended changes in an implementation plan.
 1. Break down the implementation into a documentation project backlog comprising a GitHub Issues list.
@@ -32,7 +32,7 @@ A technical writer (on CNCF staff or on contract) analyzes the documentation. Ba
     1. Project documentation: The end-user documentation for the project's work product, typically (but not always) an application, API, protocol, or some other software product.
     1. Contributor documentation: Documentation about the project, aimed at project contributors and describing procedures, infrastructure, and customs for doing project work. This includes artifacts that define procedures and governance; recruit, orient, and train project contributors; and name responsible parties (project leaders, often generically called *maintainers*).
     1. Website: The technical infrastructure behind the documentation and the project's web presence, including website generation, versioning, SEO, analytics, and security.
-1. Collaborates with project leadership to identify user roles and objectives for software users. 
+1. Collaborates with project leadership to identify user roles and objectives for software users.
 1. Proposes changes, if necessary, to the organization and content of the documentation to close gaps with the target maturity level.
 1. Writes an implementation plan describing improvements that address the gaps identified by the analysis.
 
@@ -46,7 +46,7 @@ Once a high-level improvement plan has been written and approved, the tech write
 
 Community members work on the issues created in the previous phase. Ideally, tech writers are available to advise contributors and edit work, especially if the contributing community members are not trained technical writers. Remember that the training courses in Phase 0 are available to prepare contributors with general knowledge of the process.
 
-We know that recruiting contributors to write documentation can be difficult. While this is largely the responsibility of the project leadership, CNCF is actively working on ways to encourage doc contributions. For example, creating a backlog of time-bounded issues is an attempt to lower barriers, both psychological and logistical, to documentation creation and maintenance. 
+We know that recruiting contributors to write documentation can be difficult. While this is largely the responsibility of the project leadership, CNCF is actively working on ways to encourage doc contributions. For example, creating a backlog of time-bounded issues is an attempt to lower barriers, both psychological and logistical, to documentation creation and maintenance.
 
 ## Phase 4: Impact analysis
 
