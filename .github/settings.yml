@@ -82,6 +82,9 @@ labels:
   - name: Docs Assessment
     description: 'CNCF TechDocs Assessments'
     color: c2e0c6
+  - name: Docs Assistance
+    description: 'CNCF Technical Documentation Assistance Program'
+    color: c2e0c6
   - name: Website Update
     description: 'CNCF Help request for project website updates'
     color: BFAFE3
