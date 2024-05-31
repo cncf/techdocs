@@ -98,7 +98,7 @@ as well as where to find them.
 - **Prepared a miro board:
   [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
 
-  ![information_architecture](../images/gapi_info_arch.png)
+  ![information_architecture](../docs/images/gapi_info_arch.png)
 
 - There are improvements we could make:
   - With the collection of guided, step-by-step instructions (tasks, hands-on
