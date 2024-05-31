@@ -1,6 +1,7 @@
 ---
 title: KEDA Umbrella Issue
 tags: keda
+cSpell:ignore: findability
 ---
 
 # Overview
@@ -12,7 +13,7 @@ This document outlines the recommended changes to the KEDA documentation. The fo
 Reorganize the Table of Contents to:
 
 - Better welcome and orient new users
-- Separate user roles (personas), if there are more than one 
+- Separate user roles (personas), if there are more than one
 - Improve findability and access to tasks and procedures
 - Separate conceptual, task, and reference information
 
@@ -27,9 +28,9 @@ Here is a proposed high-level outline for the tech doc Table of Contents. Work o
 
 ## Issue: Reorganize Concepts
 
-Remove everything that's not a conceptual overview. 
+Remove everything that's not a conceptual overview.
 
-Here is a proposed outline. Links are to existing pages that can be used as-is or provide a starting point. 
+Here is a proposed outline. Links are to existing pages that can be used as-is or provide a starting point.
 
 - [KEDA Concepts](https://keda.sh/docs/2.13/concepts/)
   - What is KEDA?
@@ -50,12 +51,12 @@ Here is a proposed outline. Links are to existing pages that can be used as-is o
 
 Write a task-based, step-by-step workflow for new users. Start with the current "KEDA Documentation" section.
 
-Assume the new user has no experience with KEDA and is fairly new to Kubernetes. The current documentation assumes that users know how to deploy and use Kubernetes Custom Resources, and that using KEDA is a matter of knowing the right configuration parameters and deploying the right resources. This might be true for veteran users, but new users want explicit, foolproof instructions. 
+Assume the new user has no experience with KEDA and is fairly new to Kubernetes. The current documentation assumes that users know how to deploy and use Kubernetes Custom Resources, and that using KEDA is a matter of knowing the right configuration parameters and deploying the right resources. This might be true for veteran users, but new users want explicit, foolproof instructions.
 
 The following outline has been annotated to illustrate this point. Links are to existing pages that can be used as-is or provide a starting point. Pages with multiple procedures (for example, the "Deploying KEDA" page) should be split into multiple pages, one for each procedure.
 
 - [Getting Started (New users start here!)](/docs/2.13/) (rename current "KEDA Documentation" heading) *Make the new user entry point obvious.*
-  - [Deploying KEDA](/docs/2.13/deploy/) *This is analagous to "Install" for application software or a plugin. It's the starting point for a new user.*
+  - [Deploying KEDA](/docs/2.13/deploy/) *This is analogous to "Install" for application software or a plugin. It's the starting point for a new user.*
     - Overview *Briefly explain the differences between installation methods. What is the advantage of one deployment method over another? If the choice is not completely arbitrary, explain the differences here to help the new user decide.*
     - [Prerequisites](https://keda.sh/docs/2.13/operate/cluster/#requirements) *Make sure the new user has their tools gathered up before they start. This reduces frustration. Also, if prerequisites depend on the deployment type, you can optionally put a Prerequisites section in each deployment procedure rather than here.*
     - [Deploying with Helm](#helm)
@@ -70,7 +71,7 @@ The following outline has been annotated to illustrate this point. Links are to 
     - [Deploying KEDA on MicroK8s](#microk8s)
         - [Installing](#install-3)
         - [Uninstalling](#uninstall-3)
-  - Hello, KEDA (write a procedure for a simplest-possible use case for users to get started on - something like https://github.com/kedacore/sample-hello-world-azure-functions) *Analagous to a "Hello World" exercise in programming language or API guides*
+  - Hello, KEDA (write a procedure for a simplest-possible use case for users to get started on - something like https://github.com/kedacore/sample-hello-world-azure-functions) *analogous to a "Hello World" exercise in programming language or API guides*
 
 
 ## Issue: Update the Operator Guide
@@ -86,7 +87,7 @@ Some guidelines:
   - https://keda.sh/docs/2.13/operate/cluster/#firewall
 - Break up long pages containing several topics. Aim for one major topic per page. For example, all HTTP-related headings on the [Cluster](https://keda.sh/docs/2.13/operate/cluster/) page could go on one page named "Using HTTP".
 
-Here is a proposed outline. Links are to existing pages that can be used as-is or provide a starting point. 
+Here is a proposed outline. Links are to existing pages that can be used as-is or provide a starting point.
 
 - [Using KEDA or Operator Guide](https://keda.sh/docs/2.13/operate/) (rename current "Operate")
   - Setting up a scaler (write or adapt a more detailed procedure than the example used in Getting Started - see ["Write 'Setting Up a Scaler'"](#write-setting-up-a-scaler))
@@ -116,14 +117,14 @@ Here is a proposed outline. Links are to existing pages that can be used as-is o
   - [Troubleshooting](https://keda.sh/docs/2.13/concepts/troubleshooting/, /docs/2.13/troubleshooting/)
 
 
-## Issue: Create a "Reference" topic 
+## Issue: Create a "Reference" topic
 
 - The Reference section should be at or near the end of the ToC
 - Include the following information in the Reference section:
   - Move the FAQ to the Reference section.
   - Add a glossary to the Reference section.
 
-Here is a proposed outline. Links are to existing pages that can be used as-is or provide a starting point. 
+Here is a proposed outline. Links are to existing pages that can be used as-is or provide a starting point.
 
 - Reference
   - [Authentication Providers](https://keda.sh/docs/2.13/authentication-providers/)
@@ -141,11 +142,11 @@ Here is a proposed outline. Links are to existing pages that can be used as-is o
 
 # Separate reference and task information
 
-A common practice that reduces documentation effectiveness is mixing conceptual and task information. *Conceptual* discussion can be thought of as *How it works*; a *Task* is *How you use it*. Tasks should be described step-by-step as explicitly as possible. 
+A common practice that reduces documentation effectiveness is mixing conceptual and task information. *Conceptual* discussion can be thought of as *How it works*; a *Task* is *How you use it*. Tasks should be described step-by-step as explicitly as possible.
 
 Reference information is also embedded sometimes, but in general is easy to extract.
 
-In pages where conceptual, reference, and/or task info appears on the same page, separate and move each to the appropriate section. 
+In pages where conceptual, reference, and/or task info appears on the same page, separate and move each to the appropriate section.
 
 Here is a list of some of the KEDA pages containing more than one type of information. Some of these pages might appear in other issues suggesting that they be revised or relocated. If this creates contradictory recommendations, some judgement might be required to rearrange things.
 
@@ -192,14 +193,14 @@ For an example from another CNCF project, see the [glossary in the Backstage doc
 
 # Write "Setting Up a Scaler"
 
-Setting up a scaler seems to be largely a matter of installing the scaler and providing parameters in a configuration file. While the configurations are provided for all the various scalers, there doesn't seem to be a description of the procedure for doing the basic setup. This should go at the top of the Operator guide. 
+Setting up a scaler seems to be largely a matter of installing the scaler and providing parameters in a configuration file. While the configurations are provided for all the various scalers, there doesn't seem to be a description of the procedure for doing the basic setup. This should go at the top of the Operator guide.
 
 Users should be able to follow the procedure for any (or at least most) scalers. Any scaler that requires special instructions other than the configuration file should have its own procedure page, listing the extra steps required.
 
 
 # Make user roles explicit
 
-KEDA seems to have only one explicit user role (or *persona*), namely, an Operator using KEDA to scale resources on a Kubernetes installation. Regardless, this user role should be explicitly distinguished from the project Contributor user role. Use cases are different between the two roles. One strategy for separating the documentation is to confine the Contributor docs to the GitHub repo. 
+KEDA seems to have only one explicit user role (or *persona*), namely, an Operator using KEDA to scale resources on a Kubernetes installation. Regardless, this user role should be explicitly distinguished from the project Contributor user role. Use cases are different between the two roles. One strategy for separating the documentation is to confine the Contributor docs to the GitHub repo.
 
 The definition of the Operator role could be as minimal as a "who should use this documentation" paragraph in the product introduction.
 
@@ -209,13 +210,13 @@ The definition of the Operator role could be as minimal as a "who should use thi
 Make the following changes to improve the effectiveness of the KEDA documentation contributor instructions.
 
 In the keda-docs [README](https://github.com/kedacore/keda-docs/blob/main/README.md):
-- Move the "Become a listed KEDA user!" and "Become a listed KEDA commercial offering!" sections into their own files, or move them to the bottom of the README, so they're not at the top of the keda-docs README. 
-- Combine "Adding scaler documentation" and "Writing documentation for a scaler" so that they're not separated by "Writing documentation for a new authentication provider". 
+- Move the "Become a listed KEDA user!" and "Become a listed KEDA commercial offering!" sections into their own files, or move them to the bottom of the README, so they're not at the top of the keda-docs README.
+- Combine "Adding scaler documentation" and "Writing documentation for a scaler" so that they're not separated by "Writing documentation for a new authentication provider".
 
 
 # Clarify the KEDA website and documentation maintainers
 
-Create an `OWNERS.md` file to document (on the kedacore/keda-docs repo) the current custodian(s) of the following accounts: analytics (GA4), site-search (Algolia). 
+Create an `OWNERS.md` file to document (on the kedacore/keda-docs repo) the current custodian(s) of the following accounts: analytics (GA4), site-search (Algolia).
 
 Explicitly document in the repo (keda-docs, keda, or both) who the website/documentation maintainers are. Solicit maintainers and contributors for documentation, either in the new OWNERS file or the governance MAINTAINERS file.
 

@@ -120,7 +120,7 @@ The subdomain scheme uses some simpler template code to generate links, only hav
 Each version of the documentation is its own site
 - Uses git feature branches rather than folders to organize versions
 - Separate site in Netlify for each version supported
-- Simpler template code, more complex config 
+- Simpler template code, more complex config
 
 Scores high on:
 - Localization / Internationalization
@@ -146,7 +146,7 @@ Pursley et al. (2020, L4-L9)<sup>[4](#footnote4)</sup>
 
 The dropdown example is made simpler because the config is more complex and because the server setup is more complex.
 
-https://kubernetes.io `website/config.toml` 
+https://kubernetes.io `website/config.toml`
 ```toml
 [[params.versions]]
 fullversion = "v1.20.0"
@@ -184,14 +184,14 @@ For small to medium sized sites using one language/location, a folder based meth
 
 <a name="footnote1">1</a>: [Bannister, T.](https://github.com/sftim) et al. (2020, December 23). kubernetes/website. GitHub. Retrieved February 2, 2021 from [https://github.com/kubernetes/website/blob/ 7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml](https://github.com/kubernetes/website/blob/7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml)
 
-<a name="footnote2">2</a>: [Batard, T.](https://github.com/tbatard) (2020, August 13). _vmware-tanzu/velero_. GitHub. Retrieved January 19, 2021 from [https://github.com/vmware-tanzu/velero/blob/ db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html](https://github.com/vmware-tanzu/velero/blob/db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html) 
+<a name="footnote2">2</a>: [Batard, T.](https://github.com/tbatard) (2020, August 13). _vmware-tanzu/velero_. GitHub. Retrieved January 19, 2021 from [https://github.com/vmware-tanzu/velero/blob/ db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html](https://github.com/vmware-tanzu/velero/blob/db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html)
 
 
- <a name="footnote3">3</a>: [Brubaker, N.](https://github.com/nrb), [Rosland, J.](https://github.com/jonasrosland), [Thompson, C.](https://github.com/carlisia), [Batard, T.](https://github.com/tbatard) (2020, September 16). _vmware-tanzu/velero_. GitHub. Retrieved February 2, 2021 from [https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml](https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml) 
+ <a name="footnote3">3</a>: [Brubaker, N.](https://github.com/nrb), [Rosland, J.](https://github.com/jonasrosland), [Thompson, C.](https://github.com/carlisia), [Batard, T.](https://github.com/tbatard) (2020, September 16). _vmware-tanzu/velero_. GitHub. Retrieved February 2, 2021 from [https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml](https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml)
 
- <a name="footnote4">4</a>: [Pursley, B.](https://github.com/brianpursley), [Horgan, C.](https://github.com/celestehorgan), [Takahashi, S.](https://github.com/shuuj3) (2020, July 21). _kubernetes/website_. GitHub.  Retrieved February 2, 2021 from [https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html](https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html) 
+ <a name="footnote4">4</a>: [Pursley, B.](https://github.com/brianpursley), [Horgan, C.](https://github.com/celestehorgan), Takahashi, S. (2020, July 21). _kubernetes/website_. GitHub.  Retrieved February 2, 2021 from [https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html](https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html)
 
 ---
 
-This page has been adapted from the [Technical Documentation Versioning slide show](https://technical-documentation-versioning.netlify.app/), its source can be found here: [https://github.com/nate-double-u/technical-documentation-versioning](https://github.com/nate-double-u/technical-documentation-versioning). 
+This page has been adapted from the [Technical Documentation Versioning slide show](https://technical-documentation-versioning.netlify.app/), its source can be found here: [https://github.com/nate-double-u/technical-documentation-versioning](https://github.com/nate-double-u/technical-documentation-versioning).
 

@@ -35,9 +35,7 @@ We store ongoing meeting notes in a [Google doc](https://docs.google.com/documen
 
 ## Assistance program for technical documentation
 
-The TechDocs team can assist CNCF projects analyze and improve their documentation. For details, see the TechDocs [assistance-program][].
-
-[assistance-program]: ./assistance.md
+The TechDocs team can assist CNCF projects analyze and improve their documentation. For details, see the TechDocs [assistance program](docs/assistance.md).
 
 ### Resources
 

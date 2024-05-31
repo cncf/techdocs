@@ -21,6 +21,10 @@ ignorePaths:
 #     ignoreRegExpList:
 #       - CodeBlock
 words:
+  - backstore
   - CNCF
   - Docsy
+  - keda
+  - kedacore
   - techdocs
+  - toto

@@ -4,27 +4,28 @@ tags: kdeda
 created: 2024-02-23
 modified: 2024-04-09
 author: Dave Welsch (@dwelsch-esi)
+cSpell:ignore: Welsch dwelsch pastable
 ---
 
 # Introduction
 
-This document analyzes the effectiveness and completeness of the [KEDA](https://keda.sh) open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects. 
+This document analyzes the effectiveness and completeness of the [KEDA](https://keda.sh) open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects.
 
-According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation analysis is the first step of a CNCF process aimed at assisting projects with their documentation efforts. 
+According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation analysis is the first step of a CNCF process aimed at assisting projects with their documentation efforts.
 
 ## Purpose
 
-This document was written to analyze the current state of KEDA documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. The companion document, keda-impementation.md, outlines an actionable plan for improvement. 
+This document was written to analyze the current state of KEDA documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. The companion document, keda-implementation.md, outlines an actionable plan for improvement.
 
 This document:
 
 - Analyzes the current KEDA technical documentation and website
 - Compares existing documentation against the CNCF’s standards
-- Recommends a program of key improvements with the largest return on investment. The companion document, keda-impementation.md, provides specific actionable suggestions and recommendations for overall organization and presentation of documentation
+- Recommends a program of key improvements with the largest return on investment. The companion document, keda-implementation.md, provides specific actionable suggestions and recommendations for overall organization and presentation of documentation
 
 ## Scope of analysis
 
-The documentation discussed here includes the entire contents of the website (which contains the technical docs), as well as documentation for contributors and users on the KEDA GitHub repository. 
+The documentation discussed here includes the entire contents of the website (which contains the technical docs), as well as documentation for contributors and users on the KEDA GitHub repository.
 
 The KEDA website and documentation are written in Markdown and are compiled using the Hugo static site generator with the Docsy theme and served from the Netlify platform. The site's code is stored on the KEDA GitHub repo.
 
@@ -48,7 +49,7 @@ This document is divided into three sections that represent three major areas of
 
 Each section begins with summary ratings based on a rubric with appropriate [criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) for the section, then proceeds to:
 - **Comments**: observations about the existing documentation, with a focus on how it does or does not help KEDA users achieve their goals.
-- **Recommendations**: suggested changes that would improve the effectiveness of the documentation. 
+- **Recommendations**: suggested changes that would improve the effectiveness of the documentation.
 
 An accompanying document, [keda-implementation.md](./keda-implementation.md), breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items should be tracked as a series of Github [issues]((./keda-issues.md).
 
@@ -63,12 +64,12 @@ Readers interested in the current state of the documentation and the reasoning b
 - [Contributor documentation](#contributor-documentation)
 - [Website and documentation infrastructure](#website)
 
-Examples of CNCF documentation that demonstrate the analysis criteria are linked from the [criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) specification. 
+Examples of CNCF documentation that demonstrate the analysis criteria are linked from the [criteria](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) specification.
 
 
 ### Recommendations, requirements, and best practices
 
-This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs](https://www.rfc-editor.org/rfc/rfc2119), the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
+This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs](https://www.rfc-editor.org/rfc/rfc2119), the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues.
 
 
 # Project documentation
@@ -90,11 +91,11 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 
 There is an overview containing **high-level conceptual** content that explains what KEDA is and how it works. The conceptual overview has one diagram, which could be more clear and align better with the text.
 
-Installation tasks are documented, but KEDA has other **undocumented tasks**. The documentation provides reference information for configuring KEDA but does not provide **instructions** on the most common use cases (**"happy path"**), how to use KEDA in a Kubernetes deployment. 
+Installation tasks are documented, but KEDA has other **undocumented tasks**. The documentation provides reference information for configuring KEDA but does not provide **instructions** on the most common use cases (**"happy path"**), how to use KEDA in a Kubernetes deployment.
 
 Aside from task descriptions, the documentation seems **feature complete**. Since KEDA is essentially a single-purpose API for Kubernetes, KEDA's scope is small, with the caveat that the project contains a collection of plug-in scalers (64 at the time of this writing), maintained variously by the community and by outside entities.
 
-Documentation is **not clearly named according to user goals**, but there is probably only one user role (persona) for KEDA – an administrator adding KEDA-based scaling to a Kubernetes deployment. 
+Documentation is **not clearly named according to user goals**, but there is probably only one user role (persona) for KEDA – an administrator adding KEDA-based scaling to a Kubernetes deployment.
 
 There are **escalation paths** available:
 - The documentation contains a Troubleshooting section.
@@ -115,7 +116,7 @@ There is partial **getting started** information in the documentation as [Deploy
 There are **getting started** pages on the main GitHub repo for the following supported systems:
 - RabbitMQ and Go
 - Azure Functions and Queues
-- Azure Functions and Kafka on Openshift 4
+- Azure Functions and Kafka on OpenShift 4
 - Azure Storage Queue with ScaledJob
 
 These pages list installing KEDA as a prerequisite. Taken together, "Deploying KEDA" and the scenarios in the repo make a complete Getting Started workflow, but they are in two separate places and the scenarios are not findable from the website.
@@ -169,7 +170,7 @@ Reorganize the Table of Contents. Rename "The KEDA Documentation"; the name is m
 - Rename "Operate" to "Operator Guide".
 - Move "Troubleshooting" to the end of the User Guide.
 
-Move the scenarios from the KEDA GitHub repo to the user documentation on the website. Link to these from the end of "Deploying KEDA" to create a workflow for new users. 
+Move the scenarios from the KEDA GitHub repo to the user documentation on the website. Link to these from the end of "Deploying KEDA" to create a workflow for new users.
 
 Write step-by-step tasks in the User Guide that explain how to run and use KEDA, or link to other documentation that does, for example the [Kubernetes documentation on HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/). For example, explain how to do 0-to-1 scaling.
 
@@ -183,9 +184,9 @@ No recommendations
 
 ### Content creation processes
 
-Make it easier to find the instructions for releasing a new version of the documentation and updating the documentation. 
+Make it easier to find the instructions for releasing a new version of the documentation and updating the documentation.
 
-Document in the repo who the website/documentation maintainers are. 
+Document in the repo who the website/documentation maintainers are.
 
 ### Inclusive language
 
@@ -197,23 +198,23 @@ Remove non-inclusive language throughout the documentation as recommended on the
 KEDA is a **graduated** project of CNCF. This means that the project should have [*very high*](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) standards for contributor documentation.
 
 | Criterion                                 | Rating (1-5)           |
-| ---                                       | ---                    | 
-| Communication methods documented          |  3 - meets standards   | 
+| ---                                       | ---                    |
+| Communication methods documented          |  3 - meets standards   |
 | Beginner friendly issue backlog           |  3 - meets standards   |
-| “New contributor” getting started content |  3 - meets standards   | 
-| Project governance documentation          |  4 - meets or exceeds standards   | 
+| “New contributor” getting started content |  3 - meets standards   |
+| Project governance documentation          |  4 - meets or exceeds standards   |
 
 
 ## Comments
 
 ### Communication methods documented
 
-The KEDA main repo points to **community** resources, including a KEDA Slack channel in the Kubernetes workspace. There is a **community page** on the website that invites readers to a **biweekly Zoom meeting**. The main website has direct links in the footer to the Slack community, the **GitHub** repo, and a Twitter feed. I could not find any mention of a **mailing list**. 
+The KEDA main repo points to **community** resources, including a KEDA Slack channel in the Kubernetes workspace. There is a **community page** on the website that invites readers to a **biweekly Zoom meeting**. The main website has direct links in the footer to the Slack community, the **GitHub** repo, and a Twitter feed. I could not find any mention of a **mailing list**.
 
 
 ### Beginner friendly issue backlog
 
-Doc **issues** in the repo are **well documented** and have been labeled and, presumably, **triaged**. 
+Doc **issues** in the repo are **well documented** and have been labeled and, presumably, **triaged**.
 
 There is a **good first issue** label (although this label is not currently applied to any issues).
 
@@ -222,9 +223,9 @@ There are **stale issues**, but they seem for the most part to be managed. There
 
 ### New contributor getting started content
 
-The website contains a **community section**. 
+The website contains a **community section**.
 
-There is **CONTRIBUTORS** document in the website/documentation repo with instructions for **getting help** and building and contributing new documentation. 
+There is **CONTRIBUTORS** document in the website/documentation repo with instructions for **getting help** and building and contributing new documentation.
 
 
 ### Project governance documentation
@@ -258,8 +259,8 @@ No recommendations.
 
 KEDA is a **graduated** project of CNCF. This means that the project should have [*very high*](https://github.com/cncf/techdocs/blob/main/assessments/criteria.md) standards for documentation.
 
-| Criterion                                   | Rating (1-5) | 
-| ---                                         | --- | 
+| Criterion                                   | Rating (1-5) |
+| ---                                         | --- |
 | Single-source for all files                 |  3 - meets standards  |
 | Meets min website req. (for maturity level) |  2 - needs improvement  |
 | Usability, accessibility, and design        |  3 - meets standards  |
@@ -282,7 +283,7 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 
 Source files for all website pages reside in a **single repo**. However, some user documentation pages (speciifically, "Getting started" topics linked from the main (kedacore/keda) repo) would better serve users if they were moved to the tech docs on the website.
 
-Website files are all in the website repo. 
+Website files are all in the website repo.
 
 
 ### Minimal website requirements
@@ -357,7 +358,7 @@ There is a substantial **logo wall of users and participating organizations**. T
 
 ### Maintenance planning
 
-The website uses Hugo and Docsy, which are the recommended **website tooling** for CNCF projects. 
+The website uses Hugo and Docsy, which are the recommended **website tooling** for CNCF projects.
 
 There is no sign that the project is **cultivating website maintainers** from the community. However, the site is small and much of the content is links to community or third-party scalers (plugin components).
 

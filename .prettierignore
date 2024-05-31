@@ -3,8 +3,6 @@
 # temporary
 
 # Until https://github.com/cncf/techdocs/pull/229 is merged
-assessments
+analyses
 docs
 /README.md
-
-assistance.md
