@@ -79,7 +79,8 @@ Follow these steps:
 
     - Select **Admin** (bottom of left-nav)
     - Select **GA4 Setup Assistant**
-    - Select **Get started** under **I want to create a new Google Analytics 4 property**.
+    - Select **Get started** under **I want to create a new Google Analytics 4
+      property**.
     - In the dialog that opens up, check the **Enable data collection using your
       existing global site tag(s)** checkbox if it is enabled; otherwise carry
       on. The checkbox will be enabled (selectable) only if your site uses
@@ -90,12 +91,11 @@ Follow these steps:
     measurement ID. Continuing from the previous step:
 
     - Select **Go to your GA4 property** from the **GA4 Setup Assistant** view
-      of your UA property.<br>
-      This will open an analytics console onto your GA4 site tag. Perform the
-      remaining steps from your GA4 console.
+      of your UA property.<br> This will open an analytics console onto your GA4
+      site tag. Perform the remaining steps from your GA4 console.
     - Select **Admin** > **Data stream**
     - Select the (only) data stream to view its details.
-    - 📋 **Copy the __measurement ID__**, you'll need it later, and paste it
+    - 📋 **Copy the **measurement ID\*\*\*\*, you'll need it later, and paste it
       into the appropriate row of the [status table][].
 
 5.  Rename your UA property by adding the `- UA` suffix. From the UA console:
@@ -121,7 +121,8 @@ Follow these steps:
 
     - Open **Admin** > **Tracking Info** > **Tracking Code**.
     - Open **Connected Site Tags**.
-    - In **Enter ID of tag to connect**: enter your GA site tag (the ID starting with `G-`).
+    - In **Enter ID of tag to connect**: enter your GA site tag (the ID starting
+      with `G-`).
     - In **Nickname**, optionally add the name of the domain, for example,
       `kubernetes.io`.
     - Click **Connect**.
@@ -148,14 +149,14 @@ analytics library.
     - [Docusaurus][]:
       - v1: add a `gtag: true` site configuration parameter.
       - v2: enable the gtag plugin.
-    - [Docsy][] & Hugo version 0.82.0 or later: your project will automatically be
-      switched to using the `gtag` library once you complete the next step.
+    - [Docsy][] & Hugo version 0.82.0 or later: your project will automatically
+      be switched to using the `gtag` library once you complete the next step.
     - Hugo 0.82.0 or earlier (with or without use of Docsy): consider adding a
       `partial` named something like `google-analytics.html` containing the
       global tag snippet shown in [Add gtag.js to your site][], but using your
-      GA4 measurement ID. Conditionally include this partial in the `<head>` element
-      of your website pages, _provided that Hugo is building in a production
-      environment_.
+      GA4 measurement ID. Conditionally include this partial in the `<head>`
+      element of your website pages, _provided that Hugo is building in a
+      production environment_.
 
 2.  Set the GA4 ID as the main GA ID. Again, how you do this will depend on your
     project's site generator and setup. Here are some guidelines:
@@ -182,8 +183,10 @@ project's GA4 measurement ID. Details are provided in [Adding Analytics][]. Of
 course, this may require you to upgrade the version of [Docsy][] and/or Hugo
 that your project is using.
 
-[add gtag.js to your site]: https://developers.google.com/analytics/devguides/collection/gtagjs/
-[adding analytics]: https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
+[add gtag.js to your site]:
+  https://developers.google.com/analytics/devguides/collection/gtagjs/
+[adding analytics]:
+  https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
 [analytics.js]: https://support.google.com/analytics/answer/10268458
 [connected]: https://support.google.com/analytics/answer/9973999
 [etcd.io issue #595]: https://github.com/etcd-io/website/issues/595
@@ -191,11 +194,14 @@ that your project is using.
 [docusaurus]: https://docusaurus.io/
 [ga4-dev]: https://developers.google.com/analytics/devguides/migration
 [ga4]: https://support.google.com/analytics/answer/10089681
-[ga4+ua-dev]: https://developers.google.com/analytics/devguides/migration/measurement/add-ga4
+[ga4+ua-dev]:
+  https://developers.google.com/analytics/devguides/migration/measurement/add-ga4
 [gtag.js]: https://support.google.com/analytics/answer/10220869
 [issue #108]: https://github.com/cncf/techdocs/issues/108
 [migration-help]: https://support.google.com/analytics/answer/10759417
-[opentelemetry.io/layouts/partials/google-analytics.html]: https://github.com/open-telemetry/opentelemetry.io/blob/3d8a59ea508b46497500297f334a079a4f91e293/layouts/partials/google-analytics.html
+[opentelemetry.io/layouts/partials/google-analytics.html]:
+  https://github.com/open-telemetry/opentelemetry.io/blob/3d8a59ea508b46497500297f334a079a4f91e293/layouts/partials/google-analytics.html
 [stage 2]: #stage-2---configure-the-ga4-id-as-the-main-analytics-id
-[status table]: https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
+[status table]:
+  https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
 [ua]: https://support.google.com/analytics/answer/11583528

@@ -5,13 +5,24 @@ tags: _PROJECT_
 
 # Introduction
 
-This document provides actionable suggestions for improving the _PROJECT_ technical documentation.
+This document provides actionable suggestions for improving the _PROJECT_
+technical documentation.
 
-For an analysis and general discussion of recommendations on _PROJECT_ technical documentation, see [_PROJECT_-analysis.md][].
+For an analysis and general discussion of recommendations on _PROJECT_ technical
+documentation, see [_PROJECT_-analysis.md][].
 
 ## Recommendations, requirements, and best practices
 
-This analysis measures documentation against CNCF project maturity standards and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, recommendations are based on documentation best practices as understood by the reviewers. The recommended implementations represent the reviewers' experience with how to apply those best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-keywords], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues. 
+This analysis measures documentation against CNCF project maturity standards and
+suggests possible improvements. In most cases there is more than one way to do
+things. Few recommendations here are meant to be prescriptive. Rather,
+recommendations are based on documentation best practices as understood by the
+reviewers. The recommended implementations represent the reviewers' experience
+with how to apply those best practices. In other words, borrowing terminology
+from the lexicon of [RFCs][rfc-keywords], the changes described here should be
+understood as "recommended" or "should" at the strongest, and "optional" or
+"may" in many cases. Any "must" or "required" actions are clearly denoted as
+such, and pertain to legal requirements such as copyright and licensing issues.
 
 The top-level documentation recommendations for this project are:
 
@@ -28,7 +39,6 @@ The top-level documentation recommendations for this project are:
 ## Issue 1
 
 ## Issue 2
-
 
 <!--- References --->
 

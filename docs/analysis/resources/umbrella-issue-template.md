@@ -11,14 +11,18 @@ tags: _PROJECT_
 
 <!-- The following is boilerplate language to include in the umbrella issue in the repo: -->
 
-This issue tracks recommended changes resulting from an analysis of the _PROJECT_ documentation commissioned by CNCF. The analysis and supporting documents are here: https://github.com/cncf/techdocs/tree/main/assessments/00NN-project/
+This issue tracks recommended changes resulting from an analysis of the
+_PROJECT_ documentation commissioned by CNCF. The analysis and supporting
+documents are here:
+https://github.com/cncf/techdocs/tree/main/assessments/00NN-project/
 
 The CNCF etcd documentation effort is tracked in the CNCF Tech Docs repo:
 https://github.com/cncf/techdocs/issues/NNN
 
 # Issues
 
-This is a list of issues representing the recommended work on the _PROJECT_ website and technical documentation.
+This is a list of issues representing the recommended work on the _PROJECT_
+website and technical documentation.
 
 ## Issue: Item 1
 

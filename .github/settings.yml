@@ -65,31 +65,31 @@ labels:
   - name: p3-low
     color: FEF2C0
   - name: e0-minutes
-    description: "Effort: < 60 min"
+    description: 'Effort: < 60 min'
     color: e6ccb3
   - name: e1-hours
-    description: "Effort: < 8 hrs"
+    description: 'Effort: < 8 hrs'
     color: d9b38c
   - name: e2-days
-    description: "Effort: < 5 days"
+    description: 'Effort: < 5 days'
     color: cc9966
   - name: e3-weeks
-    description: "Effort: < 4 weeks"
+    description: 'Effort: < 4 weeks'
     color: bf8040
   - name: e4-months
-    description: "Effort: 1+ months"
+    description: 'Effort: 1+ months'
     color: 996633
   - name: Docs Assessment
-    description: "CNCF TechDocs Assessments"
+    description: 'CNCF TechDocs Assessments'
     color: c2e0c6
   - name: Website Update
-    description: "CNCF Help request for project website updates"
+    description: 'CNCF Help request for project website updates'
     color: BFAFE3
   - name: suggested doc
-    description: "New doc suggestions for the docs/ section"
+    description: 'New doc suggestions for the docs/ section'
     color: 89E295
   - name: admin
-    description: "TechDocs administration activities"
+    description: 'TechDocs administration activities'
     color: 000000
   # Default new repo labels
   - name: bug
@@ -122,4 +122,3 @@ labels:
   - name: CNCF Service Desk
     description: This issue has a related CNCF Service Desk ticket
     color: 0CD9EF
-
