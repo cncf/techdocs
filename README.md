@@ -22,4 +22,6 @@ Zoom link: https://zoom-lfx.platform.linuxfoundation.org/meeting/95471930872?pas
 
 ### Meeting notes
 
-We store ongoing meeting notes in a [Google doc](https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/). 
+We store ongoing meeting notes in a [Google doc](https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/).
+
+<!-- cSpell:ignore chalin nate thisisobate -->

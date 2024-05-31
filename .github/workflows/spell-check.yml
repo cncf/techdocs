@@ -13,6 +13,6 @@ jobs:
         with:
           node-version-file: .nvmrc
           cache: npm
-
+          cache-dependency-path: package.json
       - name: Check file format
         run: npm run check:spelling
