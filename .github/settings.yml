@@ -79,9 +79,6 @@ labels:
   - name: e4-months
     description: 'Effort: 1+ months'
     color: 996633
-  - name: Docs Assessment
-    description: 'CNCF TechDocs Assessments'
-    color: c2e0c6
   - name: Docs analysis
     description: CNCF technical documentation assistance
     color: c2e0c6
