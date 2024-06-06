@@ -261,7 +261,8 @@ The [website](https://gateway-api.sigs.k8s.io/) is accessible via HTTPS.
 
 - We can add a _Copyright_ notice present at bottom of the page. \
   Copyright should be to the project authors or to CNCF, not the origin company.
-  For details, see [Copyright notices](https://github.com/cncf/foundation/blob/master/copyright-notices.md).
+  For details, see
+  [Copyright notices](https://github.com/cncf/foundation/blob/master/copyright-notices.md).
 
 - CNCF Branding elements
 
