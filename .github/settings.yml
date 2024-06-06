@@ -82,7 +82,7 @@ labels:
   - name: Docs Assessment
     description: 'CNCF TechDocs Assessments'
     color: c2e0c6
-  - name: Docs Assistance
+  - name: Docs analysis
     description: CNCF technical documentation assistance
     color: c2e0c6
   - name: Website Update
