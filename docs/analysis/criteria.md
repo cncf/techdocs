@@ -165,8 +165,7 @@ problems, keeping source files in two places:
 - makes it more complicated to generate the documentation from source files
 
 Ideally, all website files should be in the **website repo** itself.
-Alternatively, files should be brought into the website repo via [git
-submodules][].
+Alternatively, files should be brought into the website repo via [git submodules][].
 
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
@@ -183,8 +182,8 @@ requirements for sandbox projects.
 - **Sandbox**
   - [Website guidelines](../website-guidelines-checklist.md): majority of the
     guidelines are satisfied
-  - [Docs assessment][]: consider [submitting a request][service desk] for an
-    assessment as early as possible to avoid documentation and website rework.
+  - [Docs assessment][]: consider [submitting a request][service desk] for an assessment
+    as early as possible to avoid documentation and website rework.
   - **Project documentation** may or may not be present -- it is acceptable at
     this maturity level to link out to documentation that hasn't yet been
     integrated into the website
