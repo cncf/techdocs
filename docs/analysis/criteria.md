@@ -23,7 +23,7 @@ documentation. We evaluate on the following:
 
 Examples:
 
-- https://prometheus.io/docs/
+- <https://prometheus.io/docs>
 
 ### New user content
 
@@ -41,7 +41,7 @@ specifically for them. We evaluate on the following:
 
 Examples:
 
-- https://falco.org/docs/getting-started/
+- <https://falco.org/docs/getting-started/>
 
 ### Content maintainability & site mechanics
 
@@ -57,7 +57,7 @@ We evaluate on the following:
 
 Examples:
 
-- https://kubernetes.io/docs/
+- <https://kubernetes.io/docs/>
 
 ### Content creation processes
 
@@ -74,9 +74,9 @@ We evaluate on the following:
 
 Examples:
 
-- https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly
+- <https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md> (clearly
   documented maintainers)
-- https://thanos.io/tip/contributing/how-to-contribute-to-docs.md
+- <https://thanos.io/tip/contributing/how-to-contribute-to-docs.md>
 
 ### Inclusive language
 
@@ -107,7 +107,7 @@ We evaluate on the following:
 
 Examples:
 
-- https://prometheus.io/community/
+- <https://prometheus.io/community/>
 
 ### Beginner friendly issue backlog
 
@@ -121,7 +121,7 @@ We evaluate on the following:
 
 Examples:
 
-- https://github.com/opentracing/opentracing.io/issues (all of open tracing’s
+- <https://github.com/opentracing/opentracing.io/issues> (all of open tracing’s
   backlogs are well maintained!)
 
 ### New contributor getting started content
@@ -138,7 +138,7 @@ We evaluate on the following:
 
 Examples:
 
-- https://github.com/helm/community
+- <https://github.com/helm/community>
 
 ### Project governance documentation
 
@@ -165,7 +165,8 @@ problems, keeping source files in two places:
 - makes it more complicated to generate the documentation from source files
 
 Ideally, all website files should be in the **website repo** itself.
-Alternatively, files should be brought into the website repo via [git submodules][].
+Alternatively, files should be brought into the website repo via
+[git submodules](https://www.git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
@@ -257,7 +258,7 @@ We evaluate on the following:
 
 Examples:
 
-- https://helm.sh/
+- <https://helm.sh/>
 
 ### Case studies/social proof
 
@@ -275,9 +276,9 @@ We evaluate on the following:
 
 Examples:
 
-- https://www.fluentd.org/testimonials (user testimonials)
-- https://goharbor.io/ (logo wall)
-- https://blog.rook.io/ (blog)
+- <https://www.fluentd.org/testimonials> (user testimonials)
+- <https://goharbor.io/> (logo wall)
+- <https://blog.rook.io/> (blog)
 
 ### SEO, Analytics and site-local search
 
@@ -314,7 +315,7 @@ We evaluate on the following:
 
 Examples:
 
-- http://kubernetes.io
+- <https://kubernetes.io>
 
 ### Other
 

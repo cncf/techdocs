@@ -3,39 +3,53 @@ title: _PROJECT_ Issue
 tags: _PROJECT_
 ---
 
-<!-- This template provides one possible format for the individual issues filed in the Issues of a project repository. Within the CNCF tech docs repo, include all issues in one document, `_PROJECT_-issues.md`. See any completed analysis for an example. -->
+> AUTHOR NOTE: This template provides one possible format for the individual
+> issues filed in the Issues of a project repository. Within the CNCF tech docs
+> repo, include all issues in one document, `_PROJECT_-issues.md`. See any
+> completed analysis for an example.
 
-# Overview
+## Overview
 
-<!-- Summarize the documentation changes prescribed by this issue. -->
+> AUTHOR NOTE:
+>
+> - Summarize the documentation changes prescribed by this issue.
+> - For the audience, provide the user role to which the issue is most
+>   applicable.
 
-Audience: <!-- Provide the user role to which the issue is most applicable. -->
+Audience:
 
 Type:
 
-<!-- What type of documentation topic the change affects. One of Task, Reference, or Conceptual. -->
+> AUTHOR NOTE: What type of documentation topic the change affects. One of Task,
+> Reference, or Conceptual.
 
-# Context
+## Context
 
-<!-- This is boilerplate text linking back to the doc analysis. -->
+> AUTHOR NOTE: This is boilerplate text linking back to the doc analysis.
 
 This issue tracks recommended changes resulting from an analysis of the etcd
 documentation commissioned by CNCF. The analysis and supporting documents are
 here: <https://github.com/cncf/techdocs/tree/main/analyses> under
 `00NN-project`.
 
-# Possible Implementation
+## Possible Implementation
 
-<!-- Include a bullet list of links to pages that are affected by the change: -->
+> AUTHOR NOTE: Include a bullet list of links to pages that are affected by the
+> change:
 
 Related material in the current doc:
 
 - For example,
   `https://github.com/_PROJECT_/website/tree/main/content/en/docs/v3.5/tutorials`
 
-<!-- Describe in detail a suggested way to achieve the goals of the issue. This should be specific enough to provide a contributor with a recipe for making the change; however, the contributor should feel free to solve the problem differently if they have an idea how it should be done. -->
+> AUTHOR NOTE: Describe in detail a suggested way to achieve the goals of the
+> issue. This should be specific enough to provide a contributor with a recipe
+> for making the change; however, the contributor should feel free to solve the
+> problem differently if they have an idea how it should be done.
+>
+> An EXAMPLE is provided next.
 
-Suggested changes: <!-- (example) -->
+Suggested changes:
 
 Use the following outline to write a procedure for each task:
 

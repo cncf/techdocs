@@ -1,5 +1,7 @@
 # Documentation Search
 
+<!-- markdownlint-disable no-duplicate-heading -->
+
 This page describes some common alternatives for static site search.
 
 - [Google search](#programmable-search-engine-by-google)

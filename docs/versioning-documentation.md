@@ -1,5 +1,7 @@
 # Technical Documentation Versioning with Hugo & Netlify
 
+<!-- markdownlint-disable no-emphasis-as-heading -->
+
 Technical Documents Versioning is an intersection of:
 
 **Changes** + **Language** + **Navigation** + **Search**
@@ -78,7 +80,7 @@ site.
 Each version of the documentation is placed in its own folder. This is probably
 the easiest way to start versioning.
 
-```
+```text
 content
 └── docs
     ├── _index.md
@@ -160,8 +162,7 @@ Scores high on:
 
 Same style of dropdown function as above, but made simpler because of the
 configuration:
-
-https://kubernetes.io `website/layouts/partials/navbar-version-selector.html`
+<https://github.com/kubernetes/website/blob/main/layouts/partials/navbar-version-selector.html>
 
 ```html
 <div
@@ -181,7 +182,7 @@ Pursley et al. (2020, L4-L9)<sup>[4](#footnote4)</sup>
 The dropdown example is made simpler because the config is more complex and
 because the server setup is more complex.
 
-https://kubernetes.io `website/config.toml`
+<https://github.com/kubernetes/website/blob/main/hugo.toml>
 
 ```toml
 [[params.versions]]

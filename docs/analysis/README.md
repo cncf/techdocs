@@ -1,11 +1,7 @@
 # TechDoc Analysis
 
-## Contents
+This section contains instructions and criteria for completing a documentation
+analysis, including a [how-to](./howto.md) guide and analysis
+[criteria](./criteria.md)
 
-This directory contains instructions and criteria for completing a documentation
-analysis, including a [how-to][] guide and analysis [criteria][].
-
-Templates for the analyses are in the resources directory.
-
-[how-to]: ./howto.md
-[criteria]: ./criteria.md
+For templates, see [templates](./templates/).
