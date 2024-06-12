@@ -15,7 +15,7 @@ The goals of a CNCF technical documentation analysis are to:
   investment. These improvements are documented as _recommendations_ in the
   analysis document and expanded in a companion
   [implementation plan](../docs/analysis/templates/implementation.md) and
-  [issues backlog](../docs/analysis/templates/umbrella-issue.md).
+  [issues backlog](../docs/analysis/templates/issues-list.md).
 
 ## Audience
 

@@ -2,75 +2,78 @@
 
 ## Audience
 
-This document is for members of the CNCF TechDocs team, including contractors or
-consultants, who need to conduct or assist with an analysis of a CNCF
-open-source project's technical documentation.
+This document is for members of the CNCF TechDocs team and others who wish to
+conduct or assist with an analysis of a CNCF open-source project's technical
+documentation.
 
 ## Purpose
 
 The goals of a CNCF technical documentation analysis are to:
 
 - Examine the current project technical documentation and website against the
-  CNCF's analysis framework, as described in the doc analysis
-  [criteria](./criteria.md).
-- Compare the documentation against the current or proposed maturity level for
-  the overall project.
-- Recommends a program of key improvements with the largest return on
-  investment. These improvements are documented as _recommendations_ in the
-  analysis document and expanded in a companion
+  CNCF's analysis [criteria].
+- Compare the documentation against the current or proposed [project
+  maturity level].
+- Recommend a program of key documentation improvements with the largest return
+  on investment. These improvements are documented as _recommendations_ in the
+  analysis document, and expanded in a companion
   [implementation plan](./templates/implementation.md) and
-  [issues backlog](./templates/umbrella-issue.md).
+  [issues list](./templates/issues-list.md).
 
 ## Doing a Tech Docs Analysis
 
-The tech docs analysis consists of some repository bookkeeping (Prerequisites),
+The tech docs analysis consists of some repository bookkeeping (prerequisites),
 then of three overall tasks:
 
-1. Write the analysis document: Evaluate the existing project documentation with
-   respect to the project maturity level (or proposed maturity level, if the
-   analysis is associated with an upgrade request). Identify gaps with CNCF
-   criteria. Write general recommendations to close the largest and most
-   important gaps.
-2. Write the implementation plan: Decompose the recommendations to specific
+1. Write the analysis document: evaluate the existing project documentation with
+   respect to the [project maturity level] or proposed maturity level, if the
+   analysis is associated with a project upgrade request. Identify gaps with
+   CNCF [criteria]. Write general recommendations to close the largest and most
+   important identified issues.
+2. Write a implementation plan: decompose recommendations in to specific
    improvement suggestions. These can be additions or revisions to the docs;
    reorganization; website infrastructure changes; or any other work that will
-   close the gaps. Make suggestions specific (if you propose reorganizing a
-   section, for example, provide an outline) but provide enough information that
-   a contributor could solve the problem differently if they have a different
-   idea (make it clear that your proposed outline is only one possible
-   reorganization, e.g.).
-3. Write the issue backlog.
+   close address issues. Make suggestions specific enough (for example, if you
+   propose reorganizing a section then provide an outline) without being overly
+   constraining so that a contributor could solve the problem differently if
+   they have a different solution. For example, make it clear that your proposed
+   outline is only one possible reorganization.
+3. Write an issue backlog.
 
-Finally, there are follow-up steps including creating GitHub issues and a pull
-request, and getting approval from project maintainers.
+Finally, there are follow-up steps including:
+
+- Creating GitHub issues and a pull request
+- Getting approval from project maintainers
 
 ### Prerequisites
 
-This process assumes you have some familiarity with GitHub repositories and pull
-requests (PRs).
+This section assumes you are familiar with GitHub repositories and pull requests
+(PRs). If you need a refresher, see
+[Get started](https://docs.github.com/en/get-started) from the GitHub docs.
+
+Project analyses are kept in the
+[CNCF tech docs repository](https://github.com/cncf/techdocs). Clone and prepare
+for
 
 1. Clone the [CNCF tech docs repository](https://github.com/cncf/techdocs).
-1. Create a branch for the analysis.
-1. In the new branch, create a directory for the analysis in the CNCF tech docs
-   /analysis directory. Name the directory `00NN-_PROJECT_`, where _NN_ is the
+2. Create a branch for the analysis.
+3. In the new branch, create a directory for the analysis in the CNCF tech docs
+   [analyses] directory. Name the directory `00NN-_PROJECT_`, where _NN_ is the
    next index available in the directory (check for PRs as well, if someone else
    is working on tech doc analyses), and where _PROJECT_ is a short but not
    abbreviated project name. For example, for Kubernetes _PROJECT_ would be
    _kubernetes_, not _k8s_.
-1. Copy and rename the analysis doc templates from the
-   `/analysis/analysis-tools` directory as follows: `analysis-template.md` >
-   `_PROJECT_-analysis.md`; `implementation-template.md` >
-   `_PROJECT_-implementation.md`; and `umbrella-issue-template.md` >
-   `_PROJECT_-issues.md`.
+4. Copy all the doc analysis [templates].
 
 ### Writing the Analysis document
 
-Edit `_PROJECT_-analysis.md` and follow these steps to complete the first step,
-the analysis:
+Follow the steps outlined below as a part of writing the project's analysis
+document. Record your findings in the project's
+[analysis.md](./templates/analysis.md) file.
 
-1. Define the scope of the analysis. Edit "Scope of analysis" to reflect URLs
-   and repositories included and excluded from the analysis.
-1. Review the in-scope URLs and repositories for compliance with the rubric
+1. Define the **scope** of the analysis. Edit "Scope of analysis" to reflect
+   URLs and repositories included and excluded from the analysis.
+2. Review the in-scope URLs and repositories for compliance with the rubric
    criteria. Note any gaps, as well as any areas that exceed criteria or are
    exceptionally well executed. I find it easiest to do this separately for each
    of the three areas of concern (project doc, contributor doc, website), making
@@ -81,11 +84,11 @@ the analysis:
    level (or proposed maturity level, if the analysis is part of a petition for
    upgrade). Write comments to note the most important gaps and best-executed
    features of the documentation.
-1. Assign ratings to each criterion based on your comments and compliance with
+3. Assign ratings to each criterion based on your comments and compliance with
    the maturity level expectations in the rubric. The ratings are
    self-explanatory. Keep in mind that "needs improvement" or "meets standards"
    is with respect to the current (or proposed) maturity level.
-1. Write recommendations. The template implies that you'll do this for every
+4. Write recommendations. The template implies that you'll do this for every
    criterion; the "Recommendations" headings mirror the "Comments" headings.
    However, if some alternative framework makes more sense, use that. For
    example, it might be that two or three of the product documentation criteria
@@ -205,7 +208,14 @@ interested parties to get feedback on the analysis and implementation plan.
 
 ### Creating GitHub issues
 
-Enter the backlog issues from the issues document into the project documentation
-GitHub repository using the format in the umbrella-issues-template.md and
-issues-template.md files. Create one GitHub issue per backlog issue, and create
-an umbrella issue that contains a checklist item for each issue.
+Create issues in the project documentation GitHub repository for:
+
+- Each issues in the [issues list].
+- An umbrella issue that provides a context for the previously created
+  individual issues.
+
+[analyses]: ../../analyses/
+[criteria]: ./criteria.md
+[project maturity level]: https://www.cncf.io/project-metrics
+[templates]: ./templates/
+[issues list]: ./templates/issues-list.md

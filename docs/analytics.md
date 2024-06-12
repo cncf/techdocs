@@ -32,22 +32,22 @@ process below. Adapt it to your needs. Useful resources to consider include:
 
 In preparation for the migration, follow these steps:
 
-1.  **Create an issue** over your project's website with the title "Migrate to
-    Google Analytics 4 (GA4)", and link to [Issue #108][]. For example, see the issues
-    opened for the pilot projects listed in #108.
+1. **Create an issue** over your project's website with the title "Migrate to
+   Google Analytics 4 (GA4)", and link to [Issue #108][]. For example, see the issues
+   opened for the pilot projects listed in #108.
 
-2.  Determine which **analytics library** your project's website is using.
+2. Determine which **analytics library** your project's website is using.
 
-    - Visit your project's website.
-    - View the page source of any website page.
-    - Search for "`https://www.google`". Look at all instances.
-    - If one of the matching URLs ends with:
-      - [analytics.js][], then your site is using the older (pre 2017) analytics
-        library.
-      - [gtag.js][], then your site is using the library that supports both UA
-        and GA4 tags.
-    - Take note of which library or libraries (some sites use both) your site is
-      using.
+   - Visit your project's website.
+   - View the page source of any website page.
+   - Search for "`https://www.google`". Look at all instances.
+   - If one of the matching URLs ends with:
+     - [analytics.js][], then your site is using the older (pre 2017) analytics
+       library.
+     - [gtag.js][], then your site is using the library that supports both UA
+       and GA4 tags.
+   - Take note of which library or libraries (some sites use both) your site is
+     using.
 
 ### Stage 1 - create a GA4 site tag
 
@@ -95,8 +95,8 @@ Follow these steps:
       site tag. Perform the remaining steps from your GA4 console.
     - Select **Admin** > **Data stream**
     - Select the (only) data stream to view its details.
-    - 📋 **Copy the **measurement ID\*\*\*\*, you'll need it later, and paste it
-      into the appropriate row of the [status table][].
+    - 📋 **Copy the _measurement ID_**, you'll need it later, and paste it into
+      the appropriate row of the [status table][].
 
 5.  Rename your UA property by adding the `- UA` suffix. From the UA console:
 
@@ -189,7 +189,6 @@ is using.
   https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
 [analytics.js]: https://support.google.com/analytics/answer/10268458
 [connected]: https://support.google.com/analytics/answer/9973999
-[etcd.io issue #595]: https://github.com/etcd-io/website/issues/595
 [docsy]: https://www.docsy.dev
 [docusaurus]: https://docusaurus.io/
 [ga4-dev]: https://developers.google.com/analytics/devguides/migration
@@ -199,8 +198,6 @@ is using.
 [gtag.js]: https://support.google.com/analytics/answer/10220869
 [issue #108]: https://github.com/cncf/techdocs/issues/108
 [migration-help]: https://support.google.com/analytics/answer/10759417
-[opentelemetry.io/layouts/partials/google-analytics.html]:
-  https://github.com/open-telemetry/opentelemetry.io/blob/3d8a59ea508b46497500297f334a079a4f91e293/layouts/partials/google-analytics.html
 [stage 2]: #stage-2---configure-the-ga4-id-as-the-main-analytics-id
 [status table]:
   https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
