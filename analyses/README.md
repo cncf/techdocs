@@ -1,6 +1,6 @@
 <!-- cSpell:ignore projectname -->
 
-# CNCF TechDocs Analysis for OSS Projects
+# TechDocs Analysis for CNCF Projects
 
 ## Purpose
 
@@ -49,18 +49,20 @@ The analyses are in one of two formats depending on when they were written.
 Earlier analyses (**0001** - **0007**) are Markdown files, each of which is the
 sole artifact of the analysis.
 
-Subsequent analyses (**0008-** forward) each has its own directory containing
+Subsequent analyses (**0008-** forward) each have their own directory containing
 three analysis artifacts:
 
-- `projectname-analysis.md` evaluates the project documentation and provides
-  comments and recommendations in a manner very similar to the Round 1 tech doc
-  assessments. This document is based on the analysis template and accompanying
-  criteria developed for the Round 1.
-- `projectname-implementation.md` provides concrete actions that can be
-  implemented by project contributors. Its focus is on specific, achievable work
-  that will have a strong positive impact on document effectiveness.
-- `projectname-issues.md` is a backlog of improvement actions, meant to be
-  entered as GitHub Issues, derived from `projectname-implementation.md`.
+- [analysis.md](../docs/analysis/templates/analysis.md) evaluates the project
+  documentation and provides comments and recommendations in a manner very
+  similar to the Round 1 tech doc assessments. This document is based on the
+  analysis template and accompanying criteria developed for the Round 1.
+- [implementation.md] provides concrete actions that can be implemented by
+  project contributors. Its focus is on specific, achievable work that will have
+  a strong positive impact on document effectiveness.
+- [](../docs/analysis/templates/issues-list.md) is list of improvement actions,
+  meant to be entered as GitHub issues, derived from [implementation.md].
 
 Each directory might also contain other documents, such as CSV-formatted surveys
 of documentation pages.
+
+[implementation.md]: ../docs/analysis/templates/implementation.md
