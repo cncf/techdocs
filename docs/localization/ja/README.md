@@ -5,20 +5,20 @@
 > [!IMPORTANT]
 > プロジェクトによっては適用できない場合もあります。各プロジェクトのメンテナーやコミュニティ、日本語ローカライゼーションのリードと適宜相談してください。
 
-## 目次 {#table-of-contents}
+## 目次
 
-- [スタイルガイド](#style-guide)
-- [固有の用語](#specific-terms)
-  - [例](#specific-terms-example)
-- [レビュー](#review)
-- [プロジェクト](#projects)
-- [コミュニケーション](#communication)
+- [スタイルガイド](#スタイルガイド)
+- [固有の用語](#固有の用語)
+  - [例](#例)
+- [レビュー](#レビュー)
+- [プロジェクト](#プロジェクト)
+- [コミュニケーション](#コミュニケーション)
 
-## スタイルガイド {#style-guide}
+## スタイルガイド
 
 Kubernetesの[日本語ローカライゼーション向けのスタイルガイド](https://kubernetes.io/ja/docs/contribute/localization/#style-guide)に準拠してください。
 
-## 固有の用語 {#specific-terms}
+## 固有の用語
 
 CNCFのプロジェクト特有の用語については、原則として英語のまま表記してください。ただしこれらの用語や概念を説明をするページなどで日本語の訳語が必要な場合は、以下の表を参考にしてください。
 
@@ -39,7 +39,7 @@ CNCFのプロジェクト特有の用語については、原則として英語�
 | Committee | 委員会 |
 | White Paper | ホワイトペーパー |
 
-### 例 {#specific-terms-example}
+### 例
 
 | 推奨 | 非推奨 |
 | --- | --- |
@@ -48,14 +48,14 @@ CNCFのプロジェクト特有の用語については、原則として英語�
 | SIG Docs | SIGドキュメント |
 | TAG Runtime | TAGランタイム |
 
-## レビュー {#review}
+## レビュー
 
-ローカライゼーションのPRを作成した際は、ローカライゼーションレビュアーにレビューを依頼してください。各リポジトリのレビュアーは、[プロジェクト](#projects)の表を参考にしてください。
+ローカライゼーションのPRを作成した際は、ローカライゼーションレビュアーにレビューを依頼してください。各リポジトリのレビュアーは、[プロジェクト](#プロジェクト)の表を参考にしてください。
 2人以上のローカライゼーションレビュアーからの承認を得ることを推奨します。
 
 ローカライゼーションレビュアーからの承認を得た後、各リポジトリのメンテナーにPRのマージを依頼してください。
 
-## プロジェクト {#projects}
+## プロジェクト
 
 すでにローカライゼーションが進められているプロジェクトの一覧です。ローカライゼーションPRを作成する際には、以下の表を参考にして、適宜ローカライゼーションリードやレビュアーに通知してください。
 
@@ -66,7 +66,7 @@ CNCFのプロジェクト特有の用語については、原則として英語�
 | CNCF TAG Environmental Sustainability | https://github.com/cncf/tag-env-sustainability | [@naonishijima](https://github.com/naonishijima) | [@naonishijima](https://github.com/naonishijima), [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
 | CNCF TAG Runtime | https://github.com/cncf/tag-runtime | [@kaitoii11](https://github.com/kaitoii11) | [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
 
-## コミュニケーション {#communication}
+## コミュニケーション
 
 CNCFのプロジェクトのローカライゼーションに関するコミュニケーションは、主に、[CNCFのSlack](cloud-native.slack.com)の[`#glossary-localization-japanese`](https://cloud-native.slack.com/archives/C057F81GFUG)チャンネルで行われています。ローカライゼーションに関する質問や提案がある場合は、こちらのチャンネルで議論してください。
 
