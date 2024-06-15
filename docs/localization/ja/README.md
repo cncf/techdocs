@@ -1,0 +1,65 @@
+# CNCF日本語ローカライゼーション向けガイドライン
+
+このドキュメントでは、CNCFのプロジェクトをローカライズする際に参考になる一般的なガイドラインを提供します。
+
+> [!IMPORTANT]
+> プロジェクトによっては適用できない場合もあります。各プロジェクトのメンテナーやコミュニティ、日本語ローカライゼーションのリードと適宜相談してください。
+
+## 目次 {#table-of-contents}
+
+- [スタイルガイド](#style-guide)
+- [固有の用語](#specific-terms)
+  - [例](#specific-terms-example)
+- [プロジェクト](#projects)
+- [コミュニケーション](#communication)
+
+## スタイルガイド {#style-guide}
+
+Kubernetesの[日本語ローカライゼーション向けのスタイルガイド](https://kubernetes.io/ja/docs/contribute/localization/#style-guide)に準拠してください。
+
+## 固有の用語 {#specific-terms}
+
+CNCFのプロジェクト特有の用語については、原則として英語のまま表記してください。ただしこれらの用語や概念を説明をするページなどで日本語の訳語が必要な場合は、以下の表を参考にしてください。
+
+| 英語 | 日本語 |
+| --- | --- |
+| Charter | チャーター |
+| Governing Board | 運営委員会 |
+| SIG (Special Interest Group) | Special Interest Group |
+| TAB (Technical Advisory Board) | 技術諮問評議会 |
+| TAG (Technical Advisory Group) | 技術諮問グループ |
+| TOC (Technical Oversight Committee) | 技術監督委員会 |
+| WG (Working Group) | ワーキンググループ |
+
+また次の表に示す用語はCNCF特有ではありませんが、表記を統一するため、原則として以下の表を参考にしてください。
+
+| 英語 | 日本語 |
+| --- | --- |
+| Committee | 委員会 |
+| White Paper | ホワイトペーパー |
+
+### 例 {#specific-terms-example}
+
+| 推奨 | 非推奨 |
+| --- | --- |
+| Platform WG | プラットフォームWG |
+| Platform WG | プラットフォームワーキンググループ |
+| SIG Docs | SIGドキュメント |
+| TAG Runtime | TAGランタイム |
+
+## プロジェクト {#projects}
+
+すでにローカライゼーションが進められているプロジェクトの一覧です。ローカライゼーションPRを作成する際には、以下の表を参考にして、適宜ローカライゼーションリードやレビュアーに通知してください。
+
+| プロジェクト | URL | ローカライゼーションリード | ローカライゼーションレビュアー |
+| --- | --- | --- | --- |
+| CNCF Glossary | https://github.com/cncf/glossary | [@naonishijima](https://github.com/naonishijima) | [@naonishijima](https://github.com/naonishijima), [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
+| CNCF TAG App Delivery | https://github.com/cncf/tag-app-delivery | [@hhiroshell](https://github.com/hhiroshell) | [@hhiroshell](https://github.com/hhiroshell), [@kaitoii11](https://github.com/kaitoii11), [@naonishijima](https://github.com/naonishijima) |
+| CNCF TAG Environmental Sustainability | https://github.com/cncf/tag-env-sustainability | [@naonishijima](https://github.com/naonishijima) | [@naonishijima](https://github.com/naonishijima), [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
+| CNCF TAG Runtime | https://github.com/cncf/tag-runtime | [@kaitoii11](https://github.com/kaitoii11) | [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
+
+## コミュニケーション {#communication}
+
+CNCFのプロジェクトのローカライゼーションに関するコミュニケーションは、主に、[CNCFのSlack](cloud-native.slack.com)の[`#glossary-localization-japanese`](https://cloud-native.slack.com/archives/C057F81GFUG)チャンネルで行われています。ローカライゼーションに関する質問や提案がある場合は、こちらのチャンネルで議論してください。
+
+CNCFのSlackに参加していない場合は、[Community Inviterのサイト](https://communityinviter.com/apps/cloud-native/cncf)から参加できます。
