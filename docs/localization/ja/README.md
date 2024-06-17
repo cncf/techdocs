@@ -64,7 +64,7 @@ CNCFのプロジェクト特有の用語については、原則として英語�
 | CNCF Glossary | https://github.com/cncf/glossary | [@naonishijima](https://github.com/naonishijima) | [@naonishijima](https://github.com/naonishijima), [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
 | CNCF TAG App Delivery | https://github.com/cncf/tag-app-delivery | [@hhiroshell](https://github.com/hhiroshell) | [@hhiroshell](https://github.com/hhiroshell), [@kaitoii11](https://github.com/kaitoii11), [@naonishijima](https://github.com/naonishijima) |
 | CNCF TAG Environmental Sustainability | https://github.com/cncf/tag-env-sustainability | [@naonishijima](https://github.com/naonishijima) | [@naonishijima](https://github.com/naonishijima), [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
-| CNCF TAG Runtime | https://github.com/cncf/tag-runtime | [@kaitoii11](https://github.com/kaitoii11) | [@kaitoii11](https://github.com/kaitoii11), [@Okabe-Junya](https://github.com/Okabe-Junya) |
+| CNCF TAG Runtime | https://github.com/cncf/tag-runtime | [@kaitoii11](https://github.com/kaitoii11) | [@kaitoii11](https://github.com/kaitoii11), [@kenta-iijima](https://github.com/kenta-iijima), [@Okabe-Junya](https://github.com/Okabe-Junya) |
 
 ## コミュニケーション
 
