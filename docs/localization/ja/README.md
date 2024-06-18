@@ -68,6 +68,6 @@ CNCFのプロジェクト特有の用語については、原則として英語�
 
 ## コミュニケーション
 
-CNCFのプロジェクトのローカライゼーションに関するコミュニケーションは、主に、[CNCFのSlack](cloud-native.slack.com)の[`#glossary-localization-japanese`](https://cloud-native.slack.com/archives/C057F81GFUG)チャンネルで行われています。ローカライゼーションに関する質問や提案がある場合は、こちらのチャンネルで議論してください。
+CNCFのプロジェクトのローカライゼーションに関するコミュニケーションは、主に、[CNCFのSlack](https://cloud-native.slack.com)の[`#glossary-localization-japanese`](https://cloud-native.slack.com/archives/C057F81GFUG)チャンネルで行われています。ローカライゼーションに関する質問や提案がある場合は、こちらのチャンネルで議論してください。
 
 CNCFのSlackに参加していない場合は、[Community Inviterのサイト](https://communityinviter.com/apps/cloud-native/cncf)から参加できます。
