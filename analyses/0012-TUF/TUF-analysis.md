@@ -128,11 +128,26 @@ Scale:
 
 ### Comments
 The following sections contain brief assessments of each element of the Project
-Documentation rubric.
+documentation rubric.
 
 #### Information architecture
 
 - There is an overview section explaining what TUF is and its use cases. The features, the metadata and roles are well explained with examples for each metadata.
 
+- Repetition of content on different pages
+
+- Content needs to be re-organised to make it easier to follow 
+
 - No tutorials for specific feature implementation. But, there are videos explaining various use cases.
+
+- No specific task-based guide for features. The available guide for  implementing the specification is part of a larger document labelled 'Specification latest'
+
+- There's a FAQ and reporting issues sections for troubleshooting.
+
+- There's an API reference for multiple TUF APIs
+
+- README on documentation repo is empty with no information about it's content.
+
+
+#### New user content
 
