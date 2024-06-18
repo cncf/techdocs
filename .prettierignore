@@ -1,1 +1,2 @@
-# Nothing to ignore at the moment.
+# prettier doesn't work well with Japanese
+docs/localization/ja/README.md
