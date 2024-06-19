@@ -134,20 +134,36 @@ documentation rubric.
 
 - There is an overview section explaining what TUF is and its use cases. The features, the metadata and roles are well explained with examples for each metadata.
 
-- Repetition of content on different pages
+- Repetition of content on different pages makes content confusing 
 
 - Content needs to be re-organised to make it easier to follow 
 
-- No tutorials for specific feature implementation. But, there are videos explaining various use cases.
+- Docs do not have tutorials for specific feature implementation. But, there are videos explaining various use cases.
 
-- No specific task-based guide for features. The available guide for  implementing the specification is part of a larger document labelled 'Specification latest'
+- There are not specific task-based guides for features. The available guide for  implementing the specification is part of a larger document labelled 'Specification latest'
 
-- There's a FAQ and reporting issues sections for troubleshooting.
+- There is a FAQ and reporting issues sections for troubleshooting.
 
-- There's an API reference for multiple TUF APIs
+- There is a a well detailed API reference for multiple TUF APIs
 
-- README on documentation repo is empty with no information about it's content.
+- README on theupdateframework.io
+repo is empty with little information about content of the repo.
 
 
 #### New user content
+
+- There is a 'Getting started' section on the website but it contains information about other features. 
+
+- The documentation repo does not have a contributor guide for new users
+
+- There isin't any documentation labeled 'Installation guide'. Instead, Installation instructions are part of a larger document labelled The Upadte Framework specification (latest)
+
+- TUF docs do not provide information about application-specific/OS functionality in system updates. Instead it states that TUF provides a secure way for applications to obtain and verify files being distributed by trusted parties.  
+
+- There is sample code in the content that can be easily copy-pastable on other platforms.
+
+
+
+
+
 
