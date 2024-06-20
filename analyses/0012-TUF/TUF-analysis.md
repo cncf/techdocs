@@ -115,7 +115,7 @@ to legal requirements such as copyright and licensing issues.
 | Criteria                  | Rating (1-5) |
 | -------------------------- | -------------- |
 | Information architecture   | 3 |
-| New user content           | 1 |
+| New user content           | 3 |
 | Content maintainability    | 3 |
 | Content creation processes | 1 |
 | Inclusive language         | 3 |
