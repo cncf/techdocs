@@ -140,27 +140,100 @@ documentation rubric.
 
 - Docs do not have tutorials for specific feature implementation. But, there are videos explaining various use cases.
 
-- There are not specific task-based guides for features. The available guide for  implementing the specification is part of a larger document labelled 'Specification latest'
+- There are not specific task-based guides for features. The available guide for  implementing the specification is part of a larger document labelled [Specification(latest)](https://theupdateframework.github.io/specification/latest)
 
 - There is a FAQ and reporting issues sections for troubleshooting.
 
 - There is a a well detailed API reference for multiple TUF APIs
 
-- README on theupdateframework.io
+- README on [theupdateframework.io](https://github.com/theupdateframework/theupdateframework.io)
 repo is empty with little information about content of the repo.
 
 
 #### New user content
 
-- There is a 'Getting started' section on the website but it contains information about other features. 
+- There is a 'Getting started' section on the website with information about main features. But there's repetition of content from other pages. For example the *Specification (latest)* and *index* include information present in the project and overview sections. This section is confusing for new users.  
 
-- The documentation repo does not have a contributor guide for new users
+- The documentation repo does not have a contributor guide for new users to get started
 
-- There isin't any documentation labeled 'Installation guide'. Instead, Installation instructions are part of a larger document labelled The Upadte Framework specification (latest)
+- There isin't any documentation labeled 'Installation guide'. Instead, installation instructions are part of a larger document labelled [The Update Framework specification](https://theupdateframework.github.io/specification/latest)
 
 - TUF docs do not provide information about application-specific/OS functionality in system updates. Instead it states that TUF provides a secure way for applications to obtain and verify files being distributed by trusted parties.  
 
 - There is sample code in the content that can be easily copy-pastable on other platforms.
+
+- It's not clear that the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest/)
+
+#### Content maintainability & site mechanics
+
+- The documentation is not searchable. You have to go through the site to find what you are looking for.
+
+- The Docs are managed through  docs-as-code site Hugo and content written in markdown. However,it appears the updates are made manually.
+
+
+#### Content creation processes
+
+- Documentation lacks contribution process guides and information on how to get started.
+
+- Documentation lacks procedures for duplicating the documentation locally.
+
+- It's not clear whether the code release process is synced with the documentation creation and updates.
+
+- It's not clear who reviews and approves documentation pull requests and updates either on the website or repo.
+
+- Information about TUF project maintainers is available on the website but not on the project documentation repo.
+
+#### Inclusive language
+
+- I noted one instance of use of non-recommended words as documented by the
+  [Inclusive Naming Initiative](https://inclusivenaming.org) website. The word *Aborted* is used in the [Specification index tutorial](https://theupdateframework.github.io/specification/latest/#fix-time)
+
+- There is no use of abliest language like simple,easy in the documentation.
+
+
+### Recommendations
+
+#### Information architecture
+- Information should be re-organized on the website to better the workflow. For example, each section should contain only related information. Consider the following:
+   - The **About section** should only have introductory information about the project in the following sequence. *Overview, History, Project and Publications, and Timeline*. The code of conduct moved to the Community section.
+
+   - The **Getting Started** section should contain information on how to use the software or contribute to the project. That is:*Security,Roles and metadata,Implementations,Videos & Tutorials, and FAQs* The *The specification(latest) and index* should be removed because they are linked in the *Project page*
+
+   - Include *Code of conduct* in the **Community section** 
+   - The *Contribute* page should include information on various areas of contribution e.g The spec,Documentataion etc and not to a specific repo. This way users can easily find the areas of interest.
+
+- Provide step-by-step tutorials for each use case on a separate page and label it as such. At the moment all the tutorials are included in a larger document the *Specification(latest)* 
+
+- Create a **README** on the documentation repo with information detailing the content of the repo. Also include a **contribution guide** and information of how to set up the website and run it locally for new contributors. You can include a getting started section on the README. 
+
+#### New user content
+
+- Include only new user content in the **Getting started** Include information about features, tutorials and guides. Remove information about the Specification as it's repeated in the *Project section*. 
+
+- Include a **README** in the documentation with a contributor guide on how to get started with Docs.
+
+- Create an *Installation guide* on a separate page. This can contain step-to-step instructions for diffent users including begginers. Installation instructions in the [The Update Framework specification](https://theupdateframework.github.io/specification/latest) can be included here.
+
+#### Content maintainability & site mechanics
+- Include a search button on the website to make it easier for users to find content
+
+
+#### Content creation processes
+
+- Provide information about the Docs website such as the tools used and how to set up ad run it locally.
+
+- Provide information on the contribution process including having contribution guides on the website and the documentaion repo. You can also include contribution guidelines to avoid violations.
+
+- Include dates on the documentation release on the website and the repo to inform users of their relevance.
+
+- Include information about verified maintainers on the documentation repo. It makes it easier for contributors to know who to contact for assistance.
+
+#### Inclusive language
+
+- Replace the word *Aborted* mentioned in the [Specification document](https://theupdateframework.github.io/specification/latest/#detailed-client-workflow) with recommended suggestions in the [Inclusive language documentation](https://inclusivenaming.org/word-lists/tier-1/abort/)
+
+
+
 
 
 
