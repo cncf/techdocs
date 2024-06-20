@@ -126,7 +126,7 @@ Scale:
 - 3 = (Is present, but needs improvement)
 - 5 = (Is executed extremely well or no improvement required)
 
-### Comments
+### Summary of issues
 - Information is repeated througout the site.For example the TUF Specification file has been referenced in more than one page. Also information in the Spec file is repeated on other pages of the website. Some pages can be consolidated into others.
 
 - The website content needs restructuring to align with it's use case. For example the information in the sections should be correspond with the label of the section i.e *About* should only contain introductory content about the project.
@@ -236,18 +236,23 @@ repo is empty with little information about content of the repo.
 
 | Criteria                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
-| Communication methods documented          | [rating (1-5)] |
-| Beginner friendly issue backlog           | [rating (1-5)] |
-| “New contributor” getting started content | [rating (1-5)] |
-| Project governance documentation          | [rating (1-5)] |
+| Communication methods documented          | 3              |
+| Beginner friendly issue backlog           | 1              |
+| “New contributor” getting started content | 1              |
+| Project governance documentation          | 3              |
+
+Scale:
 
 - 1 = (Is not present or requires significant work)
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-### Comments
-The following sections contain brief assessments of each element of the
-Contributor Documentation rubric.
+### Summary of Issues
+- The documentation  does not contain information tailored to contributors
+- Information about TUF communication channels is not visible in the docs repo. But the information is available on the website.
+- The documentation does not contain information about other project repos and their links. Making it harder for contributors to find them.
+- The documentation repo issues do not appear to be maintained. There are old issues that are still open which may confuse  contributors on what to work on.
+- Issues do not have labels making it hard for contributors to identify suitable areas of interest
 
 #### Communication methods documented
 - Information about the TUF **slack channel** is available on the website on both the Community and Contact sections. However,this information should be visible on the doc repo README for easy access.
@@ -258,39 +263,34 @@ Contributor Documentation rubric.
 
 #### Beginner friendly issue backlog
 - Issues on the docs repo are missing labels, making it hard for contributors to identify 'Docs' issues.
-- New contributors will have a hard time getting started as none of the issues are marked "good first issue” label"
+- New contributors have a hard time getting started as none of the issues are marked "good first issue” label"
 - Most issues on the docs repo have a title and a detailed description.
 - Issues are not maintained for staleness. There are issues opened in 2021 that are still open with the information on their status.
 
 #### New contributor getting started content
-
-- Do you have a community repository or section on your website?
-- Is there a document specifically for new contributors/your first contribution?
-- Do new users know where to get help?
+- There's a community section on the website
+- No specific documentation for new users of the software on the website or the docs repo.
+- The docs provide several channels for reporting issues, contacting the maintainers and slack community.
 
 #### Project governance documentation
-
-One of the CNCF’s core project values is open governance.
-
-We evaluate on the following:
-
-- Is project governance clearly documented?
+- The project governance is documented on the website. There's sufficient informtaion about it's history including leaders,maintainers and contributors. However, this information is not visisble in the docs repo README.
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
-
 #### Communication methods documented
-
+- The documentation repo link should be included on the site as an entry point for the project. The repo can then include information about ther repos.
+- Include communication channels on the Docs repo README for visibility.
+- Provide information about project meetings e.g a meeting link and calendar.
 #### Beginner friendly issue backlog
-
+- Maintain issues, track,close and stale old issues to reduce backlog.
+- Label all issues to assist new users and contributors identify areas of interest.
 #### New contributor getting started content
-
+- Include instructions on how to contribute on a CONTRIBUTING guideline e.g how to identify issues,forking,cloning, and submitting PRs.
 #### Project governance documentation
+- Information on project governance is well documented on the website. However, the same need to be included in the docs repo.
 
 
-
+## Website and infrastructure
 
 
 
