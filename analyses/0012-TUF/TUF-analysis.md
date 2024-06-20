@@ -109,13 +109,13 @@ as "recommended" or "should" at the strongest, and "optional" or "may" in many
 cases. Any "must" or "required" actions are clearly denoted as such, and pertain
 to legal requirements such as copyright and licensing issues.
 
-## Project documentation
+## Project Documentation
 
 
 | Criteria                  | Rating (1-5) |
 | -------------------------- | -------------- |
 | Information architecture   | 3 |
-| New user content           | 3 |
+| New user content           | 1 |
 | Content maintainability    | 3 |
 | Content creation processes | 1 |
 | Inclusive language         | 3 |
@@ -127,11 +127,14 @@ Scale:
 - 5 = (Is executed extremely well or no improvement required)
 
 ### Comments
-The following sections contain brief assessments of each element of the Project
-documentation rubric.
+- Information is repeated througout the site.For example the TUF Specification file has been referenced in more than one page. Also information in the Spec file is repeated on other pages of the website. Some pages can be consolidated into others.
+
+- The website content needs restructuring to align with it's use case. For example the information in the sections should be correspond with the label of the section i.e *About* should only contain introductory content about the project.
+
+- The information available for news users and contributors is not satisfactory. There are no step-to-step tutorials to guide news users to get started with the software, neither are there contributor guidelines.
+
 
 #### Information architecture
-
 - There is an overview section explaining what TUF is and its use cases. The features, the metadata and roles are well explained with examples for each metadata.
 
 - Repetition of content on different pages makes content confusing 
@@ -151,7 +154,6 @@ repo is empty with little information about content of the repo.
 
 
 #### New user content
-
 - There is a 'Getting started' section on the website with information about main features. But there's repetition of content from other pages. For example the *Specification (latest)* and *index* include information present in the project and overview sections. This section is confusing for new users.  
 
 - The documentation repo does not have a contributor guide for new users to get started
@@ -165,14 +167,12 @@ repo is empty with little information about content of the repo.
 - It's not clear that the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest/)
 
 #### Content maintainability & site mechanics
-
 - The documentation is not searchable. You have to go through the site to find what you are looking for.
 
 - The Docs are managed through  docs-as-code site Hugo and content written in markdown. However,it appears the updates are made manually.
 
 
 #### Content creation processes
-
 - Documentation lacks contribution process guides and information on how to get started.
 
 - Documentation lacks procedures for duplicating the documentation locally.
@@ -184,7 +184,6 @@ repo is empty with little information about content of the repo.
 - Information about TUF project maintainers is available on the website but not on the project documentation repo.
 
 #### Inclusive language
-
 - I noted one instance of use of non-recommended words as documented by the
   [Inclusive Naming Initiative](https://inclusivenaming.org) website. The word *Aborted* is used in the [Specification index tutorial](https://theupdateframework.github.io/specification/latest/#fix-time)
 
@@ -207,7 +206,6 @@ repo is empty with little information about content of the repo.
 - Create a **README** on the documentation repo with information detailing the content of the repo. Also include a **contribution guide** and information of how to set up the website and run it locally for new contributors. You can include a getting started section on the README. 
 
 #### New user content
-
 - Include only new user content in the **Getting started** Include information about features, tutorials and guides. Remove information about the Specification as it's repeated in the *Project section*. 
 
 - Include a **README** in the documentation with a contributor guide on how to get started with Docs.
@@ -217,9 +215,10 @@ repo is empty with little information about content of the repo.
 #### Content maintainability & site mechanics
 - Include a search button on the website to make it easier for users to find content
 
+- The Docs repo should be the entry point of all repos. Meaning the Docs README shoould contain all the TUF project information including links to the other repos and contributor guidelines. 
+
 
 #### Content creation processes
-
 - Provide information about the Docs website such as the tools used and how to set up ad run it locally.
 
 - Provide information on the contribution process including having contribution guides on the website and the documentaion repo. You can also include contribution guidelines to avoid violations.
@@ -229,9 +228,66 @@ repo is empty with little information about content of the repo.
 - Include information about verified maintainers on the documentation repo. It makes it easier for contributors to know who to contact for assistance.
 
 #### Inclusive language
-
 - Replace the word *Aborted* mentioned in the [Specification document](https://theupdateframework.github.io/specification/latest/#detailed-client-workflow) with recommended suggestions in the [Inclusive language documentation](https://inclusivenaming.org/word-lists/tier-1/abort/)
 
+
+## Contributor Documentation
+
+
+| Criteria                                 | [Rating (1-5)] |
+| ----------------------------------------- | -------------- |
+| Communication methods documented          | [rating (1-5)] |
+| Beginner friendly issue backlog           | [rating (1-5)] |
+| “New contributor” getting started content | [rating (1-5)] |
+| Project governance documentation          | [rating (1-5)] |
+
+- 1 = (Is not present or requires significant work)
+- 3 = (Is present, but needs work)
+- 5 = (Is executed extremely well or no improvement required)
+
+### Comments
+The following sections contain brief assessments of each element of the
+Contributor Documentation rubric.
+
+#### Communication methods documented
+- Information about the TUF **slack channel** is available on the website on both the Community and Contact sections. However,this information should be visible on the doc repo README for easy access.
+
+- The repo link on the website does not point to the documentation but rather the [Python reference implementation](https://github.com/theupdateframework/python-tuf?tab=readme-ov-file)
+
+- Information about the mailing list is included in the documentation. There's no information about project meetings. Instead the users are directed to join the #TUF channel on CNCF slack.
+
+#### Beginner friendly issue backlog
+- Issues on the docs repo are missing labels, making it hard for contributors to identify 'Docs' issues.
+- New contributors will have a hard time getting started as none of the issues are marked "good first issue” label"
+- Most issues on the docs repo have a title and a detailed description.
+- Issues are not maintained for staleness. There are issues opened in 2021 that are still open with the information on their status.
+
+#### New contributor getting started content
+
+- Do you have a community repository or section on your website?
+- Is there a document specifically for new contributors/your first contribution?
+- Do new users know where to get help?
+
+#### Project governance documentation
+
+One of the CNCF’s core project values is open governance.
+
+We evaluate on the following:
+
+- Is project governance clearly documented?
+
+### Recommendations
+
+> AUTHOR NOTE: Write general recommendations based on the comments from the
+> previous section.
+
+#### Communication methods documented
+
+#### Beginner friendly issue backlog
+
+#### New contributor getting started content
+
+#### Project governance documentation
 
 
 
