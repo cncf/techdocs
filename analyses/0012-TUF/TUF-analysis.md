@@ -127,11 +127,11 @@ Scale:
 - 5 = (Is executed extremely well or no improvement required)
 
 ### Summary of issues
-- Information is repeated througout the site.For example the TUF Specification file has been referenced in more than one page. Also information in the Spec file is repeated on other pages of the website. Some pages can be consolidated into others.
+- Information is repeated throughout the site.For example the TUF Specification file has been referenced in more than one page.Some pages can be consolidated into others.
 
-- The website content needs restructuring to align with it's use case. For example the information in the sections should be correspond with the label of the section i.e *About* should only contain introductory content about the project.
+- The website content needs restructuring to align sections with sub-sections related to their use case. For example, information in the sections should be correspond with the label of the section i.e *About* should only contain introductory content about the project.
 
-- The information available for news users and contributors is not satisfactory. There are no step-to-step tutorials to guide news users to get started with the software, neither are there contributor guidelines.
+- The information available for news users and contributors is not satisfactory. There are no step-to-step guides and tutorials for new users to get started with the software, neither are there contributor guidelines.
 
 
 #### Information architecture
@@ -160,11 +160,11 @@ repo is empty with little information about content of the repo.
 
 - There isin't any documentation labeled 'Installation guide'. Instead, installation instructions are part of a larger document labelled [The Update Framework specification](https://theupdateframework.github.io/specification/latest)
 
-- TUF docs do not provide information about application-specific/OS functionality in system updates. Instead it states that TUF provides a secure way for applications to obtain and verify files being distributed by trusted parties.  
+- TUF docs do not provide information about application-specific/OS functionality in system updates. Instead the documentation states that TUF provides a secure way for applications to obtain and verify files being distributed by trusted parties.  
 
-- There is sample code in the content that can be easily copy-pastable on other platforms.
+- There is sample code in the content that can be easily copy-pasted on other platforms.
 
-- It's not clear that the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest/)
+- It's not clear whether the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest/)
 
 #### Content maintainability & site mechanics
 - The documentation is not searchable. You have to go through the site to find what you are looking for.
@@ -194,12 +194,12 @@ repo is empty with little information about content of the repo.
 
 #### Information architecture
 - Information should be re-organized on the website to better the workflow. For example, each section should contain only related information. Consider the following:
-   - The **About section** should only have introductory information about the project in the following sequence. *Overview, History, Project and Publications, and Timeline*. The code of conduct moved to the Community section.
+   - The **About section** should only have introductory information about the project in the following sequence. *Overview, History, Project and Publications, and Timeline*. The *code of conduct* should be moved to the Community section.
 
-   - The **Getting Started** section should contain information on how to use the software or contribute to the project. That is:*Security,Roles and metadata,Implementations,Videos & Tutorials, and FAQs* The *The specification(latest) and index* should be removed because they are linked in the *Project page*
+   - The **Getting Started** section should contain information on how to use the software or contribute to the project. Consider the following sequence for this section:*Security,Roles and metadata,Implementations,Videos & Tutorials, and FAQs*. The *specification(latest) and index* should be removed because they are linked in the *Project page*
 
    - Include *Code of conduct* in the **Community section** 
-   - The *Contribute* page should include information on various areas of contribution e.g The spec,Documentataion etc and not to a specific repo. This way users can easily find the areas of interest.
+   - The *Contribute* page should include information of various areas of contribution e.g The spec, repos etc and not to a specific repo. This way users can easily find the areas of interest.
 
 - Provide step-by-step tutorials for each use case on a separate page and label it as such. At the moment all the tutorials are included in a larger document the *Specification(latest)* 
 
@@ -208,22 +208,22 @@ repo is empty with little information about content of the repo.
 #### New user content
 - Include only new user content in the **Getting started** Include information about features, tutorials and guides. Remove information about the Specification as it's repeated in the *Project section*. 
 
-- Include a **README** in the documentation with a contributor guide on how to get started with Docs.
+- Include a **README** in the documentation repo with a contributor guide on how to get started with Docs.
 
-- Create an *Installation guide* on a separate page. This can contain step-to-step instructions for diffent users including begginers. Installation instructions in the [The Update Framework specification](https://theupdateframework.github.io/specification/latest) can be included here.
+- Create an *Installation guide* on a separate page. This can contain step-to-step instructions for diffent users including beginners. Installation instructions in the [The Update Framework specification](https://theupdateframework.github.io/specification/latest) can be included here.
 
 #### Content maintainability & site mechanics
-- Include a search button on the website to make it easier for users to find content
+- Include a search button on the website to make it easier for users to search and find content.
 
-- The Docs repo should be the entry point of all repos. Meaning the Docs README shoould contain all the TUF project information including links to the other repos and contributor guidelines. 
+- The Docs repo should be the entry point of all repos. Meaning, the Docs README should contain all the TUF project information including links to the other repos and contributor guidelines. 
 
 
 #### Content creation processes
 - Provide information about the Docs website such as the tools used and how to set up ad run it locally.
 
-- Provide information on the contribution process including having contribution guides on the website and the documentaion repo. You can also include contribution guidelines to avoid violations.
+- Provide information about the contribution process including having contribution guides on the website and the documentation repo. You can also include contribution guidelines to avoid violations.
 
-- Include dates on the documentation release on the website and the repo to inform users of their relevance.
+- Include dates on the documentation on the website and the repo to inform users of their relevance.
 
 - Include information about verified maintainers on the documentation repo. It makes it easier for contributors to know who to contact for assistance.
 
@@ -248,10 +248,10 @@ Scale:
 - 5 = (Is executed extremely well or no improvement required)
 
 ### Summary of Issues
-- The documentation  does not contain information tailored to contributors
+- The documentation  does not contain information tailored to contributors.
 - Information about TUF communication channels is not visible in the docs repo. But the information is available on the website.
 - The documentation does not contain information about other project repos and their links. Making it harder for contributors to find them.
-- The documentation repo issues do not appear to be maintained. There are old issues that are still open which may confuse  contributors on what to work on.
+- The documentation repo issues do not appear to be maintained. There are old issues that are still open which may confuse contributors looking for issues to work on.
 - Issues do not have labels making it hard for contributors to identify suitable areas of interest
 
 #### Communication methods documented
@@ -268,17 +268,17 @@ Scale:
 - Issues are not maintained for staleness. There are issues opened in 2021 that are still open with the information on their status.
 
 #### New contributor getting started content
-- There's a community section on the website
-- No specific documentation for new users of the software on the website or the docs repo.
-- The docs provide several channels for reporting issues, contacting the maintainers and slack community.
+- There's a community section on the website with information on how to join the community.
+- No specific documentation tailored for new users to get started the software on the website or the docs repo.
+- The docs provide several channels for reporting issues, contacting the maintainers, and slack community.
 
 #### Project governance documentation
-- The project governance is documented on the website. There's sufficient informtaion about it's history including leaders,maintainers and contributors. However, this information is not visisble in the docs repo README.
+- The project governance is well documented on the website. There's sufficient informtaion about it's history including leaders,maintainers and contributors. However, this information is not visisble in the docs repo README.
 
 ### Recommendations
 
 #### Communication methods documented
-- The documentation repo link should be included on the site as an entry point for the project. The repo can then include information about ther repos.
+- The documentation repo link should be included on the site as an entry point for the project. The repo can then include information about other repos.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings e.g a meeting link and calendar.
 #### Beginner friendly issue backlog
@@ -287,7 +287,7 @@ Scale:
 #### New contributor getting started content
 - Include instructions on how to contribute on a CONTRIBUTING guideline e.g how to identify issues,forking,cloning, and submitting PRs.
 #### Project governance documentation
-- Information on project governance is well documented on the website. However, the same need to be included in the docs repo.
+- Information on project governance is well documented on the website. However, the same needs to be included in the docs repo on GitHub.
 
 
 ## Website and infrastructure
