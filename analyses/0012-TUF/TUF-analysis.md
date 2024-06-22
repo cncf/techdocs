@@ -122,14 +122,20 @@ to legal requirements such as copyright and licensing issues.
 
 Scale:
 
-- 1 = (Is not present)
-- 3 = (Is present, but needs improvement)
-- 5 = (Is executed extremely well or no improvement required)
+1 = Not present
+
+2 = Needs improvement
+
+3 = Meets standards
+
+4 = Meets or exceeds standards
+
+5 = Exemplary
 
 ### Summary of issues
-- Information is repeated throughout the site.For example the TUF Specification file has been referenced in more than one page.Some pages can be consolidated into others.
+- Information is repeated throughout the site. For example the TUF Specification file has been referenced in more than one page. Some pages can be consolidated into others.
 
-- The website content needs restructuring to align sections with sub-sections related to their use case. For example, information in the sections should be correspond with the label of the section i.e *About* should only contain introductory content about the project.
+- The website content needs restructuring to align sections with sub-sections related to their use case. For example, information in the sections should correspond with the label of the section i.e *About* should only contain introductory content about the project.
 
 - The information available for news users and contributors is not satisfactory. There are no step-to-step guides and tutorials for new users to get started with the software, neither are there contributor guidelines.
 
@@ -194,12 +200,12 @@ repo is empty with little information about content of the repo.
 
 #### Information architecture
 - Information should be re-organized on the website to better the workflow. For example, each section should contain only related information. Consider the following:
-   - The **About section** should only have introductory information about the project in the following sequence. *Overview, History, Project and Publications, and Timeline*. The *code of conduct* should be moved to the Community section.
+   - The **About section** should only have introductory information about the project in the following sequence. *Overview, History, Project and Publications, and Timeline*. The *Code of conduct* should be moved to the Community section.
 
-   - The **Getting Started** section should contain information on how to use the software or contribute to the project. Consider the following sequence for this section:*Security,Roles and metadata,Implementations,Videos & Tutorials, and FAQs*. The *specification(latest) and index* should be removed because they are linked in the *Project page*
+   - The **Getting Started** section should contain information on how to use the software or contribute to the project. Consider the following sequence for this section:*Security,Roles and metadata,Implementations,Videos & Tutorials, and FAQs*. The *specification(latest) and Specification index* pages should be removed because they are linked in the *Project page*
 
    - Include *Code of conduct* in the **Community section** 
-   - The *Contribute* page should include information of various areas of contribution e.g The spec, repos etc and not to a specific repo. This way users can easily find the areas of interest.
+   - The *Contribute* page should include information of various areas of contribution e.g The spec, repos etc and not to a specific repo. This way users can easily find areas of interest.
 
 - Provide step-by-step tutorials for each use case on a separate page and label it as such. At the moment all the tutorials are included in a larger document the *Specification(latest)* 
 
@@ -243,9 +249,15 @@ repo is empty with little information about content of the repo.
 
 Scale:
 
-- 1 = (Is not present or requires significant work)
-- 3 = (Is present, but needs work)
-- 5 = (Is executed extremely well or no improvement required)
+1 = Not present
+
+2 = Needs improvement
+
+3 = Meets standards
+
+4 = Meets or exceeds standards
+
+5 = Exemplary
 
 ### Summary of Issues
 - The documentation  does not contain information tailored to contributors.
@@ -263,7 +275,7 @@ Scale:
 
 #### Beginner friendly issue backlog
 - Issues on the docs repo are missing labels, making it hard for contributors to identify 'Docs' issues.
-- New contributors have a hard time getting started as none of the issues are marked "good first issue” label"
+- New contributors will have a hard time getting started as none of the issues are marked "good first issue” label
 - Most issues on the docs repo have a title and a detailed description.
 - Issues are not maintained for staleness. There are issues opened in 2021 that are still open with the information on their status.
 
@@ -291,6 +303,98 @@ Scale:
 
 
 ## Website and infrastructure
+
+| Criteria                                   | [Rating (1-5)] |
+| ------------------------------------------- | -------------- |
+| Single-source for all files                 | 4              |
+| Meets min website req. (for maturity level) | 3              |
+| Usability, accessibility, and design        | 3              |
+| Branding and design                         | 4              |
+| Case studies/social proof                   | 5              |
+| SEO, Analytics, and site-local search       | 2              |
+| Maintenance planning                        | 2              |
+| A11y plan & implementation                  | 3              |
+| Mobile-first plan & impl.                   | 5              |
+| HTTPS access & HTTP redirect                | 5              |
+| Google Analytics 4 for production only      | 1              |
+| Indexing allowed for production server only | 1              |
+| Intra-site / local search                   | 1              |
+| Account custodians are documented           | 3              |
+
+Scale:
+
+1 = Not present
+
+2 = Needs improvement
+
+3 = Meets standards
+
+4 = Meets or exceeds standards
+
+5 = Exemplary
+
+
+### Summary of Issues
+- The website repo is named *theupdateframework.io* which makes it harder to identify it. Name it according to it's content.
+- There's no guideline or tutorial to assist users to generate the website from the website repo.
+- Alot of empty space between the Hero section and the Navbar. Due to this spacing, information is pushed out of eyelevel. You have to scroll down to find it. 
+- The available [TUF blog](https://theupdateframework.github.io/python-tuf/) page is not available on the website. It's hosted on GitHub.
+- Information about the website build, tools and how to generate it are not available on the website or the docs repo.
+- Intra-site search mechanism is not available from the website. The only naviagation option is a menu bar. This makes it difficult to find information.
+
+#### Single-source requirement
+- All source files are in the website repo named [theupdateframework.io](https://github.com/theupdateframework/theupdateframework.io)
+
+#### Minimal website requirements
+The website docs analysis is in progess.
+
+#### Usability, accessibility and devices
+- The website follows a mobile-first design with all pages, menu's and features visible on smaller screens.
+- Website pages are readable
+- The website does not provide a text-to-speech option for users.
+
+#### Branding and design
+- There's a recognizable brand for the project , a logo and blue-white color scheme used througout the website.
+- The website design is good and suitable for reading. However, consider reducing space between the hero section and the Navbar.
+
+#### Case studies/social proof
+- There are case studies documented on the website under the *Adoptions* page.
+- There's a logo wall of users or participating organizations documented in the *Adoptions* page.
+- No avaliable community talks on the website. They have however provided links to the community channel.
+- The available [TUF blog](https://theupdateframework.github.io/python-tuf/) page is not available on the website. It's hosted on GitHub
+
+#### SEO, Analytics and site-local search
+- It's not clear what analytics are used on the site
+- Intra-site search is not available from the website
+- There's no mention of custodians of analytics and search.
+
+#### Maintenance planning
+- The Website runs on Hugo and supported by
+the community. 
+- It's not clear who are the maintainers of the website.
+
+
+#### Other
+- The website is accessible via HTTPS
+
+### Recommendations
+
+#### Single-source requirement
+- Rename the The website repo *theupdateframework.io* to a name that reflect it's content e.g *TUFwebsite.io*. It makes it easier to find.
+
+#### Branding and design
+- Reduce empty space between hero section and Navbar to bring information to eyelevel. At the moment the information is too far down, you have to scroll to find it. 
+
+#### SEO, Analytics and site-local search
+- Provide intra-site search options such as a search button to make it easier for users to search and  find information.
+
+#### Case studies/social proof
+- Add the [TUF blog](https://theupdateframework.github.io/python-tuf/) to the website.
+
+#### Maintenance planning
+- Identify website maintainers on the site and their roles so users know who to contact in case issues arise.
+- Provide information about the website build and how to generate on the docs repo. 
+
 
 
 
