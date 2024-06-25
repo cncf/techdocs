@@ -337,10 +337,10 @@ Scale:
 ### Summary of Issues
 - The website repo is named *theupdateframework.io* which makes it harder to identify it. Name it according to it's content.
 - There's no guideline or tutorial to assist users to generate the website from the website repo.
-- Alot of empty space between the Hero section and the Navbar. Due to this spacing, information is pushed out of eyelevel. You have to scroll down to find it. 
 - The available [TUF blog](https://theupdateframework.github.io/python-tuf/) page is not available on the website. It's hosted on GitHub.
 - Information about the website build, tools and how to generate it are not available on the website or the docs repo.
 - Intra-site search mechanism is not available from the website. The only naviagation option is a menu bar. This makes it difficult to find information.
+- Alot of empty space between the Hero section and the Navbar. Due to this spacing, information is pushed out of eyelevel. You have to scroll down to find it. 
 
 #### Single-source requirement
 - All source files are in the website repo named [theupdateframework.io](https://github.com/theupdateframework/theupdateframework.io)
