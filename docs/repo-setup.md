@@ -40,11 +40,6 @@ For documentation this means you must:
    [CC-BY-4.0 license](./LICENSE-docs).
    ```
 
-   For the footer, see
-   [cncf/hugo-netlify-starter](https://github.com/cncf/hugo-netlify-starter/blob/main/layouts/partials/footer.html)
-   contains a basic implementation, where the year and project name are
-   parameterized.
-
 2. Add both the CC-BY-4.0 `LICENCE-docs` and Apache 2.0 `LICENCE` files to the
    root directory of the documentation. For a plain text versions of both, see
    [cncf/project-template](https://github.com/cncf/project-template)
