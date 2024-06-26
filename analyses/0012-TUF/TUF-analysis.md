@@ -133,7 +133,7 @@ Scale:
 5 = Exemplary
 
 ### Summary of issues
-- Information is repeated throughout the site. For example the TUF Specification file has been referenced in more than one page. Some pages can be consolidated into others.
+- Information is repeated throughout the site. For example, the TUF Specification file has been referenced in more than one page. Some pages can be consolidated into others.
 
 - The website content needs restructuring to align sections with sub-sections related to their use case. For example, information in the sections should correspond with the label of the section i.e *About* should only contain introductory content about the project.
 
@@ -141,7 +141,7 @@ Scale:
 
 
 #### Information architecture
-- There is an overview section explaining what TUF is and its use cases. The features, the metadata and roles are well explained with examples for each metadata.
+- There is an *overview* section explaining what TUF is and its use cases. The features, the metadata and roles are well explained with examples for each metadata.
 
 - Repetition of content on different pages makes content confusing 
 
@@ -160,7 +160,7 @@ repo is empty with little information about content of the repo.
 
 
 #### New user content
-- There is a 'Getting started' section on the website with information about main features. But there's repetition of content from other pages. For example the *Specification (latest)* and *index* include information present in the project and overview sections. This section is confusing for new users.  
+- There is a *Getting started* section on the website with information about main features. But there's repetition of content from other pages. For example the *Specification (latest)* and *index* include information present in the project and overview sections. This section is confusing for new users.  
 
 - The documentation repo does not have a contributor guide for new users to get started
 
@@ -173,7 +173,7 @@ repo is empty with little information about content of the repo.
 - It's not clear whether the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest/)
 
 #### Content maintainability & site mechanics
-- The documentation is not searchable. You have to go through the site to find what you are looking for.
+- The documentation is not searchable. You have to go through the site to find what you are looking for. The only source of naviagation is the menu bar.
 
 - The Docs are managed through  docs-as-code site Hugo and content written in markdown. However,it appears the updates are made manually.
 
