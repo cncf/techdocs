@@ -59,7 +59,7 @@ three analysis artifacts:
 - [implementation.md] provides concrete actions that can be implemented by
   project contributors. Its focus is on specific, achievable work that will have
   a strong positive impact on document effectiveness.
-- [](../docs/analysis/templates/issues-list.md) is list of improvement actions,
+- [issues-list.md](../docs/analysis/templates/issues-list.md) is list of improvement actions,
   meant to be entered as GitHub issues, derived from [implementation.md].
 
 Each directory might also contain other documents, such as CSV-formatted surveys
