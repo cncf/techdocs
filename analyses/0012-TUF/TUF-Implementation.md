@@ -56,7 +56,7 @@ The top-level documentation recommendations for this project are:
 
 ### Align sub-sections with related sections
 Some sections listed on the menu bar have unrelated sub-sections. This structure makes information hard to find and can be confusing to new users.
- I propose the following Navbar outline. This structure includes the user roles in the documentation. 
+ I propose the following Navbar outline which includes the user roles. 
 - **About**: 
   - Overview
   - History
@@ -65,30 +65,32 @@ Some sections listed on the menu bar have unrelated sub-sections. This structure
   - Timeline
 - **Getting started**: 
   - TUF security 
-  - TUF specification(Roles and metadata,tutorials,videos etc)
-  - TUF proposals(linked to tutorials,videos)
+  - TUF specification (Roles and metadata,tutorials)
+  - TUF proposals (linked to tutorials,videos)
   - TUF implementation/Developers (linked to tutorials,videos)
-  - TUF docs(Link docs repo)
-  - Media(Videos and pictures of TUF events and seminars)
+  - TUF docs (Link docs repo)
   - FAQ
 - **Community**: 
   - Adoptions
   - Reporting issues
   - Security audits
-  - Contribute-TAP, Docs
-  - Chat(CNCF slack)
+  - Contribute : TAP, Docs
+  - Chat (CNCF slack)
   - Code of conduct
-- **News**: 
+- **Resources**:
+  - Blog
+  - News
+  - Videos
 - **Contact**: 
   - CNCF slack, meeting links or calendar
  
 ### Consolidate some pages 
-The specification index has been reference three times on the site despite having its own sub-section.
+The specification index has been referenced several times on the website despite having its own sub-section.
 
-I propose that it remains in the project sub-section section under specification. But it be removed from the *Getting started* section.
+I suggest that it remains in the project sub-section section under specification. But it be removed from the *Getting started* section.
 
 ### Add user roles to Getting started section
-Structure the *Getting started* section according to user roles. See the proposed *Getting started* above. The percieved user roles for this project are:
+Structure the *Getting started* section according to user roles. See the suggested *Getting started* above. The percieved user roles for this project are:
   - **TUF specification**: Uses TUF metadata to download and verify targets
   - **TUF proposals contributor** : Proposes major changes to the specification, including new features made as TUF Augmentation Proposals (TAPs)
   - **TUF implementation/Developers** : Develops software with the TUF Python reference implementation
@@ -98,8 +100,37 @@ Each role should have accompanying documentation and instructional material/tuto
 
 ## Introduce Instructional Material
 
-### Issue 1
+- Clearly identify user roles in the documentation and what can be achieved by each
+- Create instructional material in the *Getting started* section for each user role i.e How-to guides and tutorials 
+- Document installation guides for each user role in a separate page. At the moment all the information for [TUF Specification](https://theupdateframework.github.io/specification/latest/) file.
+- Include links to the github repos associated with the role.
 
-### Issue 2
+## Content maintainability and creation process
+
+### Rename the docs Github repo
+ Rename the docs repo to a recognizable name e.g *TUF-ReadTheDocs* or similar to make it easier to find. At the moment, the repo is named *theupdateframework.io* which is too broad as it only contains docs and not all information about TUF projects
+
+### Add README to docs repo
+Add a README to the docs repo with information about the project. I suggest the following information: Overview of the project, components, project repos, communication channels and links a contributors' guide. 
+
+### Add search functionality to website
+Consider adding a search functionality to website to make it easier for users to do intra-site searching. Hugo does not have such functionality so I advice using a plugin.
+### Identify maintainers for docs repo
+Identify maintainers for the docs repo both on the website and repo to make it easier for contributors to contact them.
+### Add labels to the docs repo
+Include labels to issues in the docs repo. These includes labels such as *#docs #Goodfirstissue* to make it easier for contributors to get started.   
+
+### Develop a contributors' guideline for new users
+  Develop contributor guides to assist new contributors to get started.
+### Create procedures for developing the docs site locally
+  Develop procedures for developing the docs site locally i.e cloning, building and serving the documentation. You can also provide information about the tools used to build and maintain the site. When such information is available it helps contributors know how to improve the website. You might get some good suggestions. 
+
+### Provide project meeting links and calendar
+Provide information about project meetings and a calendar on both the website and repo. Makes it easier for contributors to sinc with their calendars and get notifications about meetings. I like how the [**Meshery**](https://github.com/layer5io/layer5) project have implemented this.  
+
+### Include the TUF log to website 
+ Add the [TUF blog](https://theupdateframework.github.io/python-tuf/) to the website. It has more visibility there than where it's located currently on the **Python/TUF repo**
+     
+ 
 
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
