@@ -10,7 +10,7 @@ This document provides actionable suggestions for improving the **theUpdateframe
 technical documentation.
 
 For an analysis and general discussion of recommendations on TUF technical
-documentation, see [TUF-analysis.md](TUF-analysis.md).
+documentation, see [analysis](./analysis.md).
 
 ### Recommendations, requirements, and best practices
 
@@ -48,7 +48,7 @@ The top-level documentation recommendations for this project are:
   - Create procedure for developing the docs site locally
   - Include communication channels on the Docs repo README 
   - Provide information about project meetings e.g a meeting link and calendar on both the website and repo
-  - Add the [TUF blog](https://theupdateframework.github.io/python-tuf/) to the website.
+  - Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the website.
 
 ## Implementation
 
@@ -102,7 +102,7 @@ Each role should have accompanying documentation and instructional material/tuto
 
 - Clearly identify user roles in the documentation and what can be achieved by each
 - Create instructional material in the *Getting started* section for each user role i.e How-to guides and tutorials 
-- Document installation guides for each user role in a separate page. At the moment all the information for [TUF Specification](https://theupdateframework.github.io/specification/latest/) file.
+- Document installation guides for each user role in a separate page. At the moment all the information for [TUF Specification](https://theupdateframework.github.io/specification/latest) file.
 - Include links to the github repos associated with the role.
 
 ## Content maintainability and creation process
@@ -129,8 +129,8 @@ Include labels to issues in the docs repo. These includes labels such as *#docs 
 Provide information about project meetings and a calendar on both the website and repo. Makes it easier for contributors to sinc with their calendars and get notifications about meetings. I like how the [**Meshery**](https://github.com/layer5io/layer5) project have implemented this.  
 
 ### Include the TUF log to website 
- Add the [TUF blog](https://theupdateframework.github.io/python-tuf/) to the website. It has more visibility there than where it's located currently on the **Python/TUF repo**
+ Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the website. It has more visibility there than where it's located currently on the **Python/TUF repo**
      
  
 
-[rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
+

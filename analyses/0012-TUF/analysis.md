@@ -22,9 +22,9 @@ efforts.
 
 This document analyzes the current state of **The Update Framework (TUF)**
 documentation. It provides project leaders with an informed understanding
-of potential problems in current project documentation. A second [TUF-impementation.md](./TUF-implementation.md)
+of potential problems in current project documentation. A second [implementation](./implementation.md)
 document, , outlines an actionable plan for improvement. A third document, the 
-[TUF-issues.md](./TUF-issues.md) outlines issues to be added to the project documentation repository. These
+[issues](./issues.md) outlines issues to be added to the project documentation repository. These
 issues can be taken up by contributors to improve the documentation.
 
 This document:
@@ -75,18 +75,18 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: Suggested changes that would improve the effectiveness of
   the documentation.
 
-The accompanying [implementation](./TUF-implementation.md) document breaks the recommendations down into
+The accompanying [implementation](./implementation.md) document breaks the recommendations down into
 concrete actions that can be implemented by project contributors. Its focus is
 on drilling down to specific, achievable work that can be completed in
 constrained blocks of time. 
 
 Ultimately, the implementation items are decomposed
-into a series of [issues](./TUF-issues.md) that can be implemented by the project maintainers.
+into a series of [issues](./issues.md) that can be implemented by the project maintainers.
 
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the **[implementation](./TUF-implementation.md) plan** and **[issues](./TUF-issues.md) list**.
+read the **[implementation](./implementation.md) plan** and **[issues](./issues.md) list**.
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -170,7 +170,7 @@ repo is empty with little information about content of the repo.
 
 - There is sample code in the content that can be easily copy-pasted on other platforms.
 
-- It's not clear whether the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest/)
+- It's not clear whether the documentation is up-to-date as there are no dates on docs or release notes published.The only document on the site with dates is the [Specification file](https://theupdateframework.github.io/specification/latest)
 
 #### Content maintainability & site mechanics
 - The documentation is not searchable. You have to go through the site to find what you are looking for. The only source of naviagation is the menu bar.
@@ -234,7 +234,7 @@ repo is empty with little information about content of the repo.
 - Include information about verified maintainers on the documentation repo. It makes it easier for contributors to know who to contact for assistance.
 
 #### Inclusive language
-- Replace the word *Aborted* mentioned in the [Specification document](https://theupdateframework.github.io/specification/latest/#detailed-client-workflow) with recommended suggestions in the [Inclusive language documentation](https://inclusivenaming.org/word-lists/tier-1/abort/)
+- Replace the word *Aborted* mentioned in the [Specification document](https://theupdateframework.github.io/specification/latest/#detailed-client-workflow) with recommended suggestions in the [Inclusive language documentation](https://inclusivenaming.org/word-lists/tier-1/abort)
 
 
 ## Contributor Documentation
@@ -337,7 +337,7 @@ Scale:
 ### Summary of Issues
 - The website repo is named *theupdateframework.io* which makes it harder to identify it. Name it according to it's content.
 - There's no guideline or tutorial to assist users to generate the website from the website repo.
-- The available [TUF blog](https://theupdateframework.github.io/python-tuf/) page is not available on the website. It's hosted on GitHub.
+- The available [TUF blog](https://theupdateframework.github.io/python-tuf) page is not available on the website. It's hosted on GitHub.
 - Information about the website build, tools and how to generate it are not available on the website or the docs repo.
 - Intra-site search mechanism is not available from the website. The only naviagation option is a menu bar. This makes it difficult to find information.
 - Alot of empty space between the Hero section and the Navbar. Due to this spacing, information is pushed out of eyelevel. You have to scroll down to find it. 
@@ -361,7 +361,7 @@ The website docs analysis is in progess.
 - There are case studies documented on the website under the *Adoptions* page.
 - There's a logo wall of users or participating organizations documented in the *Adoptions* page.
 - No avaliable community talks on the website. They have however provided links to the community channel.
-- The available [TUF blog](https://theupdateframework.github.io/python-tuf/) page is not available on the website. It's hosted on GitHub
+- The available [TUF blog](https://theupdateframework.github.io/python-tuf) page is not available on the website. It's hosted on GitHub
 
 #### SEO, Analytics and site-local search
 - It's not clear what analytics are used on the site
@@ -389,7 +389,7 @@ the community.
 - Provide intra-site search options such as a search button to make it easier for users to search and  find information.
 
 #### Case studies/social proof
-- Add the [TUF blog](https://theupdateframework.github.io/python-tuf/) to the website.
+- Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the website.
 
 #### Maintenance planning
 - Identify website maintainers on the site and their roles so users know who to contact in case issues arise.
