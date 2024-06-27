@@ -11,3 +11,8 @@ Every guide here must meet the following requirements:
 - Meets the requirements of the original open-source license.
 
 Guides here must not violate copyright or licensing requirements.
+
+## Templates
+
+[TEMPLATE.md](TEMPLATE.md) is a template for creating new localization guides.
+You can copy this template and use it to create new guides.
