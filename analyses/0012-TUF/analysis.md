@@ -44,7 +44,7 @@ repo.
 #### In scope
 
 - Website: https://theupdateframework.io
-- Documentation: https://theupdateframework.io/content
+- Documentation: https://theupdateframework.io
 - Website configuration(Hugo): https://github.com/theupdateframework/theupdateframework.io
 
 
