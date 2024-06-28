@@ -12,8 +12,6 @@ Every guide here must meet the following requirements:
 
 Guides here must not violate copyright or licensing requirements.
 
-## Localization READMEs
+## Localizations
 
-| Language | File                         |
-| -------- | ---------------------------- |
-| Japanese | [ja/README.md](ja/README.md) |
+- [Japanese](ja/README.md)
