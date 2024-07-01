@@ -94,7 +94,7 @@ following Navbar outline which includes the user roles.
 
 ### Consolidate some pages
 
-The specification index has been referenced several times on the website despite
+The specification index is referenced several times on the website despite
 having its own sub-section.
 
 I suggest that it remains in the project sub-section section under
@@ -113,7 +113,7 @@ are:
   reference implementation
 - **TUF docs**: Contributes to documentation
 
-Each role should have accompanying documentation and instructional
+Each role may have accompanying documentation and instructional
 material/tutorial to help users set up and start using TUF.
 
 ## Introduce Instructional Material
@@ -176,7 +176,7 @@ suggestions.
 Provide information about project meetings and a calendar on both the website
 and repo. Makes it easier for contributors to sinc with their calendars and get
 notifications about meetings. I like how the
-[**Meshery**](https://github.com/layer5io/layer5) project have implemented this.
+[**Meshery**](https://github.com/layer5io/layer5) project has implemented this.
 
 ### Include the TUF log to website
 

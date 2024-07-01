@@ -6,7 +6,7 @@ modified: YYYY-MM-DD
 author: Sandra Dindi (@Dindihub)
 ---
 
-<!-- markdownlint-disable no-duplicate-heading no-empty-links -->
+
 
 ## Introduction
 
@@ -144,9 +144,9 @@ Scale:
 
 ### Summary of issues
 
-- Information is repeated throughout the site. For example, the TUF
-  Specification file has been referenced in more than one page. Some pages can
-  be consolidated into others.
+- Information is repeated is several pages of the website. For example, the TUF
+  Specification file is referenced in more than one page. Some pages can be
+  consolidated into others.
 
 - The website content needs restructuring to align sections with sub-sections
   related to their use case. For example, information in the sections should
@@ -165,12 +165,12 @@ Scale:
 
 - Repetition of content on different pages makes content confusing
 
-- Content needs to be re-organised to make it easier to follow
+- Re-organise content to make it easier to follow
 
 - Docs do not have tutorials for specific feature implementation. But, there are
   videos explaining various use cases.
 
-- There are not specific task-based guides for features. The available guide for
+- There aren't specific task-based guides for features. The available guide for
   implementing the specification is part of a larger document labelled
   [Specification(latest)](https://theupdateframework.github.io/specification/latest)
 
@@ -246,23 +246,23 @@ Scale:
 
 #### Information architecture
 
-- Information should be re-organized on the website to better the workflow. For
-  example, each section should contain only related information. Consider the
+- Information may be re-organized on the website to better the workflow. For
+  example, each section can contain only related information. Consider the
   following:
 
-  - The **About section** should only have introductory information about the
+  - The **About section** may contain only introductory information about the
     project in the following sequence. _Overview, History, Project and
     Publications, and Timeline_. The _Code of conduct_ should be moved to the
     Community section.
 
-  - The **Getting Started** section should contain information on how to use the
+  - The **Getting Started** section may contain information on how to use the
     software or contribute to the project. Consider the following sequence for
     this section:_Security,Roles and metadata,Implementations,Videos &
     Tutorials, and FAQs_. The _specification(latest) and Specification index_
     pages should be removed because they are linked in the _Project page_
 
   - Include _Code of conduct_ in the **Community section**
-  - The _Contribute_ page should include information of various areas of
+  - The _Contribute_ page can include information of various areas of
     contribution e.g The spec, repos etc and not to a specific repo. This way
     users can easily find areas of interest.
 
@@ -295,9 +295,9 @@ Scale:
 - Include a search button on the website to make it easier for users to search
   and find content.
 
-- The Docs repo should be the entry point of all repos. Meaning, the Docs README
-  should contain all the TUF project information including links to the other
-  repos and contributor guidelines.
+- The Docs repo may be the entry point of all repos. Meaning, the Docs README
+  can contain all the TUF project information including links to the other repos
+  and contributor guidelines.
 
 #### Content creation processes
 
@@ -398,7 +398,7 @@ Scale:
 
 #### Communication methods documented
 
-- The documentation repo link should be included on the site as an entry point
+- The documentation repo link may be included on the site as an entry point
   for the project. The repo can then include information about other repos.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings e.g a meeting link and calendar.
