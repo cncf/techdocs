@@ -6,7 +6,7 @@ modified: YYYY-MM-DD
 author: Sandra Dindi (@Dindihub)
 ---
 
-
+<!-- markdownlint-disable no-duplicate-heading no-empty-links -->
 
 ## Introduction
 
@@ -398,8 +398,8 @@ Scale:
 
 #### Communication methods documented
 
-- The documentation repo link may be included on the site as an entry point
-  for the project. The repo can then include information about other repos.
+- The documentation repo link may be included on the site as an entry point for
+  the project. The repo can then include information about other repos.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings e.g a meeting link and calendar.
 
