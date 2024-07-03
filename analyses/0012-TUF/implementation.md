@@ -178,7 +178,7 @@ and repo. Makes it easier for contributors to sinc with their calendars and get
 notifications about meetings. I like how the
 [**Meshery**](https://github.com/layer5io/layer5) project has implemented this.
 
-### Include the TUF log to website
+### Include the TUF blog to website
 
 Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the
 website. It has more visibility there than where it's located currently on the
