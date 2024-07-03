@@ -49,9 +49,8 @@ is stored on the TUF GitHub repo.
 
 #### In scope
 
-- Website: <https://theupdateframework.io>
-- Documentation: <https://theupdateframework.io>
-- Website configuration(Hugo):
+- Website and docs: <https://theupdateframework.io>
+- Website repo:
   <https://github.com/theupdateframework/theupdateframework.io>
 
 #### Out of scope
