@@ -27,13 +27,12 @@ such, and pertain to legal requirements such as copyright and licensing issues.
 The top-level documentation recommendations for this project are:
 
 - **Reorganize documentation**
-  - Align sub-sections with related sections
-  - Consolidate some pages into others to avoid repetition
-  - Add user roles to the 'Getting started' documentation
-  - Add a section for instructional material to website and repo documentation
-    to make it easier to find. It can be a sub-section under 'Getting started'
-- **Introduce instructional documentation**
+  - Introduce a docs section and place some pages under it to avoid repetition
+  - Structure 'Getting started' according to user roles
+  - Add instructional material to website and repo documentation
+    to make it easier to find.
 
+- **Introduce instructional documentation**
   - Identify TUF user roles (personas)
   - Develop task-based material i.e How-tos for user roles
   - Document TUF installation procedures in a separate page(At the moment it's
@@ -41,15 +40,15 @@ The top-level documentation recommendations for this project are:
   - Develop quick start and contribution guides for new users
 
 - **Content maintanability and creation process**
-  - Rename the docs repo to a recognizable name e.g _TUF-ReadTheDocs_ or similar
+  - Rename the website repo to a recognizable name e.g _TUF-ReadTheDocs_ or similar
   - Add search functionality to website to make it easier to find content
-  - Identify maintainers for the docs repo
-  - Add labels to the docs repo
-  - Add a README to the docs repo with information about the project including
+  - Identify maintainers for the website repo
+  - Add labels to the website repo
+  - Add a README to the website repo with information about the project including
     links to important project repos
   - Develop a contributors' guideline for new users
-  - Create procedure for developing the docs site locally
-  - Include communication channels on the Docs repo README
+  - Create procedure for developing the website locally
+  - Include communication channels on the website repo README
   - Provide information about project meetings e.g a meeting link and calendar
     on both the website and repo
   - Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the
@@ -59,11 +58,10 @@ The top-level documentation recommendations for this project are:
 
 ## Reorganize documentation
 
-### Align sub-sections with related sections
+### Align information in related sections
 
 Some sections listed on the menu bar have unrelated sub-sections. This structure
-makes information hard to find and can be confusing to new users. I propose the
-following:
+makes information hard to find and can be confusing to new users. Much of the information on the website can go under a *Docs* section. Consider the following structure: 
 
 - **About**: Overview of TUF project
 - **Documentation**:
@@ -98,12 +96,11 @@ The specification index is referenced several times on the website despite
 having its own sub-section.
 
 You can have a docs section with information tailored to the user roles of the
-three project components i.e
+three project components.
 
 ### Add user roles to Getting started section
 
-Structure the _Getting started_ section according to user roles. See the
-suggested _Getting started_ above. The percieved user roles for this project
+Structure the _Getting started_ section according to user roles under a *Docs* section. The percieved user roles for this project
 are:
 
 - **TUF specification**: Uses TUF metadata to download and verify targets
@@ -130,16 +127,16 @@ material/tutorial to help users set up and start using TUF.
 
 ## Content maintainability and creation process
 
-### Rename the docs Github repo
+### Rename the website Github repo
 
-Rename the docs repo to a recognizable name e.g _TUF-ReadTheDocs_ or similar to
+Rename the website repo to a recognizable name e.g _TUF-website_ or similar to
 make it easier to find. At the moment, the repo is named _theupdateframework.io_
 which is too broad as it only contains docs and not all information about TUF
 projects
 
 ### Add README to docs repo
 
-Add a README to the docs repo with information about the project. I suggest the
+Add a README to the website repo with information about the project. I suggest the
 following information: Overview of the project, components, project repos,
 communication channels and links a contributors' guide.
 
@@ -149,14 +146,14 @@ Consider adding a search functionality to website to make it easier for users to
 do intra-site searching. Hugo does not have such functionality so I advice using
 a plugin.
 
-### Identify maintainers for docs repo
+### Identify maintainers for website repo
 
-Identify maintainers for the docs repo both on the website and repo to make it
+Identify maintainers for the website repo both on the website and repo to make it
 easier for contributors to contact them.
 
 ### Add labels to the docs repo
 
-Include labels to issues in the docs repo. These includes labels such as _#docs
+Include labels to issues in the website repo. These includes labels such as _#docs
 \#Goodfirstissue_ to make it easier for contributors to get started.
 
 ### Develop a contributors' guideline for new users

@@ -246,9 +246,9 @@ Scale:
 
 #### Information architecture
 
-- Information can be re-organized on the website to better the workflow. That is
+- Information can be re-organized on the website to better the workflow. That is,
   each section can contain only related information. For example, introduce a
-  documentation section that to consolidate other pages on the site. Much of the
+  documentation section to consolidate other pages on the site. Much of the
   information in the _About_ and _Getting started_ sections can go under a
   _Docs_ section
 
