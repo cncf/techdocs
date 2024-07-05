@@ -63,42 +63,42 @@ The top-level documentation recommendations for this project are:
 
 Some sections listed on the menu bar have unrelated sub-sections. This structure
 makes information hard to find and can be confusing to new users. I propose the
-following Navbar outline which includes the user roles.
+following:
 
-- **About**:
-  - Overview
-  - History
-  - Project
-  - Publications
-  - Timeline
-- **Getting started**:
-  - TUF security
-  - TUF specification (Roles and metadata,tutorials)
-  - TUF proposals (linked to tutorials,videos)
-  - TUF implementation/Developers (linked to tutorials,videos)
-  - TUF docs (Link docs repo)
-  - FAQ
-- **Community**:
-  - Adoptions
-  - Reporting issues
-  - Security audits
-  - Contribute : TAP, Docs
-  - Chat (CNCF slack)
+- **About**: Overview of TUF project
+- **Documentation**:
+- Introduction to TUF
+- TUF project components
+- Getting started: TUF Specification, Standardization, reference implementation,
+  and documentation. You can include installation guides for each component in
+  this section
+- Tutorials
+- Implementations
+- Best practises
+- Contribution guidelines
+
+- **Community**: You can have two sections.
+
+  - Learn and connect: Includes all community communication channels including
+    social media, mailing lists,calendar,Slack etc.
+  - Develop and Contribute : Information about how to contribute to TUF
+    components and documentation.
   - Code of conduct
+
 - **Resources**:
   - Blog
   - News
   - Videos
 - **Contact**:
-  - CNCF slack, meeting links or calendar
+  - Maintainer info and TUF contact information
 
 ### Consolidate some pages
 
 The specification index is referenced several times on the website despite
 having its own sub-section.
 
-I suggest that it remains in the project sub-section section under
-specification. But it be removed from the _Getting started_ section.
+You can have a docs section with information tailored to the user roles of the
+three project components i.e
 
 ### Add user roles to Getting started section
 

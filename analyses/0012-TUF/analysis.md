@@ -26,10 +26,10 @@ efforts.
 This document analyzes the current state of **The Update Framework (TUF)**
 documentation. It provides project leaders with an informed understanding of
 potential problems in current project documentation. A second
-[implementation](./implementation.md) document, outlines an actionable plan
-for improvement. A third document, the [issues](./issues.md) outlines issues to
-be added to the project documentation repository. These issues can be taken up
-by contributors to improve the documentation.
+[implementation](./implementation.md) document, outlines an actionable plan for
+improvement. A third document, the [issues](./issues.md) outlines issues to be
+added to the project documentation repository. These issues can be taken up by
+contributors to improve the documentation.
 
 This document:
 
@@ -50,20 +50,19 @@ is stored on the TUF GitHub repo.
 #### In scope
 
 - Website and docs: <https://theupdateframework.io>
-- Website repo:
-  <https://github.com/theupdateframework/theupdateframework.io>
-
-#### Out of scope
-
+- Website repo: <https://github.com/theupdateframework/theupdateframework.io>
 - The TUF community repository:
   <https://github.com/theupdateframework/community>
 - TUF specification repository:
   <https://github.com/theupdateframework/specification>
+- TUF artwork repository: <https://github.com/theupdateframework/artwork>
 - Python reference implementation repository:
   <https://github.com/theupdateframework/python-tuf>
+
+#### Out of scope
+
 - TUF Augmentation proposals repository:
   <https://github.com/theupdateframework/taps>
-- TUF artwork repository: <https://github.com/theupdateframework/artwork>
 
 ### How this document is organized
 
@@ -103,9 +102,11 @@ Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
 to their area of concern:
 
-- [Project documentation]()
-- [Contributor documentation]()
-- [Website and documentation infrastructure]()
+- [Project documentation](#project-documentation)
+
+- [Contributor documentation](#contributor-documentation)
+
+- [Website and infastructure](#website-and-infrastructure)
 
 #### Recommendations, requirements, and best practices
 
@@ -119,11 +120,11 @@ as "recommended" or "should" at the strongest, and "optional" or "may" in many
 cases. Any "must" or "required" actions are clearly denoted as such, and pertain
 to legal requirements such as copyright and licensing issues.
 
-## Project Documentation
+## Project documentation
 
 | Criteria                   | Rating (1-5) |
 | -------------------------- | ------------ |
-| Information architecture   | 3            |
+| Information architecture   | 2            |
 | New user content           | 1            |
 | Content maintainability    | 3            |
 | Content creation processes | 1            |
@@ -166,7 +167,7 @@ Scale:
 
 - Re-organise content to make it easier to follow
 
-- Docs do not have tutorials for specific feature implementation. But, there are
+- There are no tutorials for specific feature implementation. But, there are
   videos explaining various use cases.
 
 - There aren't specific task-based guides for features. The available guide for
@@ -241,29 +242,15 @@ Scale:
 
 - There is no use of abliest language like simple,easy in the documentation.
 
-### Recommendations
+### Project recommendations
 
 #### Information architecture
 
-- Information may be re-organized on the website to better the workflow. For
-  example, each section can contain only related information. Consider the
-  following:
-
-  - The **About section** may contain only introductory information about the
-    project in the following sequence. _Overview, History, Project and
-    Publications, and Timeline_. The _Code of conduct_ should be moved to the
-    Community section.
-
-  - The **Getting Started** section may contain information on how to use the
-    software or contribute to the project. Consider the following sequence for
-    this section:_Security,Roles and metadata,Implementations,Videos &
-    Tutorials, and FAQs_. The _specification(latest) and Specification index_
-    pages should be removed because they are linked in the _Project page_
-
-  - Include _Code of conduct_ in the **Community section**
-  - The _Contribute_ page can include information of various areas of
-    contribution e.g The spec, repos etc and not to a specific repo. This way
-    users can easily find areas of interest.
+- Information can be re-organized on the website to better the workflow. That is
+  each section can contain only related information. For example, introduce a
+  documentation section that to consolidate other pages on the site. Much of the
+  information in the _About_ and _Getting started_ sections can go under a
+  _Docs_ section
 
 - Provide step-by-step tutorials for each use case on a separate page and label
   it as such. At the moment all the tutorials are included in a larger document
@@ -294,14 +281,14 @@ Scale:
 - Include a search button on the website to make it easier for users to search
   and find content.
 
-- The Docs repo may be the entry point of all repos. Meaning, the Docs README
+- The website repo can be the entry point of all repos. Meaning, the Docs README
   can contain all the TUF project information including links to the other repos
   and contributor guidelines.
 
 #### Content creation processes
 
-- Provide information about the Docs website such as the tools used and how to
-  set up ad run it locally.
+- Provide information about the website such as the tools used and how to set up
+  ad run it locally on the website repo.
 
 - Provide information about the contribution process including having
   contribution guides on the website and the documentation repo. You can also
@@ -320,7 +307,7 @@ Scale:
   with recommended suggestions in the
   [Inclusive language documentation](https://inclusivenaming.org/word-lists/tier-1/abort)
 
-## Contributor Documentation
+## Contributor documentation
 
 | Criteria                                  | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
@@ -393,7 +380,7 @@ Scale:
   informtaion about it's history including leaders,maintainers and contributors.
   However, this information is not visisble in the docs repo README.
 
-### Recommendations
+### Contributor recommendations
 
 #### Communication methods documented
 
@@ -513,7 +500,7 @@ The website docs analysis is in progess.
 
 - The website is accessible via HTTPS
 
-### Recommendations
+### Website recommendations
 
 #### Single-source requirement
 
