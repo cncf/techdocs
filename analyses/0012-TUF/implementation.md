@@ -27,7 +27,7 @@ such, and pertain to legal requirements such as copyright and licensing issues.
 The top-level documentation recommendations for this project are:
 
 - **Reorganize documentation**
-  - Introduce a docs section and place some pages under it to avoid repetition
+  - Introduce a docs section and place some sections like 'Getting started' under it to avoid repetition
   - Structure 'Getting started' according to user roles
   - Add instructional material to website and repo documentation
     to make it easier to find.
