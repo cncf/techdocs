@@ -478,7 +478,7 @@ The website docs analysis is in progess.
 #### Case studies/social proof
 
 - There are case studies documented on the website under the _Adoptions_ page.
-- There's a logo wall of users or participating organizations documented in the
+- There's a logo, wall of users and participating organizations documented in the
   _Adoptions_ page.
 - No avaliable community talks on the website. They have however provided links
   to the community channel.
@@ -493,7 +493,7 @@ The website docs analysis is in progess.
 
 #### Maintenance planning
 
-- The Website runs on Hugo and supported by the community.
+- The website runs on Hugo and supported by the community.
 - It's not clear who are the maintainers of the website.
 
 #### Other
@@ -504,7 +504,7 @@ The website docs analysis is in progess.
 
 #### Single-source requirement
 
-- Rename the The website repo _theupdateframework.io_ to a name that reflect
+- Rename the website repo _theupdateframework.io_ to a name that reflect
   it's content e.g _TUFwebsite.io_. It makes it easier to find.
 
 #### Branding and design
