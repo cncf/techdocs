@@ -21,8 +21,8 @@ reviewers. The recommended implementations represent the reviewers' experience
 with how to apply those best practices. In other words, borrowing terminology
 from the lexicon of [RFCs][rfc-keywords], the changes described here should be
 understood as "recommended" or "should" at the strongest, and "optional" or
-"may" in many cases. Any "must" or "required" actions are denoted as
-such and pertain to legal requirements such as copyright and licensing issues.
+"may" in many cases. Any "must" or "required" actions are denoted as such and
+pertain to legal requirements such as copyright and licensing issues.
 
 The top-level documentation recommendations for this project are:
 
@@ -68,19 +68,22 @@ Some sections listed on the menu bar have unrelated sub-sections. This structure
 makes information hard to find and can be confusing to new users. Much of the
 information on the website can go under a _Docs_ section. Consider the following
 structure:
+
 - **About**: Overview of TUF project
 - **Documentation**:
+
   - Introduction to TUF
   - TUF project components
-  - Getting started: TUF Specification, Standardization, reference implementation,
-  and documentation. You can include installation guides for each component in
-  this section
+  - Getting started: TUF Specification, Standardization, reference
+    implementation, and documentation. You can include installation guides for
+    each component in this section
   - Tutorials
   - Implementations
   - Best practices
   - Contribution guidelines
 
 - **Community**: You can have two sections.
+
   - Learn and connect: Includes all community communication channels including
     social media, mailing lists, calendars, Slack, etc.
   - Develop and Contribute: Information about how to contribute to TUF
@@ -99,8 +102,8 @@ structure:
 The specification index is referenced several times on the website despite
 having a sub-section.
 
-You can have a **docs section** with information tailored to the user roles of the
-three project components.
+You can have a **docs section** with information tailored to the user roles of
+the three project components.
 
 ### Add user roles to the Getting Started section
 
@@ -119,8 +122,7 @@ material/tutorial to help users set up and start using TUF.
 
 ## Introduce Instructional Material
 
-- Identify user roles in the documentation and what can be achieved by
-  each
+- Identify user roles in the documentation and what can be achieved by each
 - Create instructional material in the _Getting Started_ section for each user
   role i.e how-to guides and tutorials
 - Document installation guides for each user role on a separate page. At the
@@ -146,9 +148,9 @@ communication channels and links a contributors' guide.
 
 ### Add search functionality to website
 
-Consider adding a search functionality to the website to make it easier for users to
-do intra-site searching. Hugo does not have such functionality so I suggest using
-a plugin or migrating to a theme that has search functionality.
+Consider adding a search functionality to the website to make it easier for
+users to do intra-site searching. Hugo does not have such functionality so I
+suggest using a plugin or migrating to a theme that has search functionality.
 
 ### Identify maintainers for website repo
 
@@ -166,7 +168,8 @@ Develop contributor guides to assist new contributors to get started.
 
 ### Create procedures for developing the docs site locally
 
-Develop procedures for developing the docs site locally i.e. cloning, building, and serving the documentation. You can also provide information about the tools
+Develop procedures for developing the docs site locally i.e. cloning, building,
+and serving the documentation. You can also provide information about the tools
 used to build and maintain the site. When such information is available it helps
 contributors know how to improve the website. You might get some good
 suggestions.
