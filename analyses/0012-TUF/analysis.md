@@ -478,8 +478,8 @@ The website docs analysis is in progess.
 #### Case studies/social proof
 
 - There are case studies documented on the website under the _Adoptions_ page.
-- There's a logo, wall of users and participating organizations documented in the
-  _Adoptions_ page.
+- There's a logo, wall of users and participating organizations documented in
+  the _Adoptions_ page.
 - No avaliable community talks on the website. They have however provided links
   to the community channel.
 - The available [TUF blog](https://theupdateframework.github.io/python-tuf) page
@@ -504,8 +504,8 @@ The website docs analysis is in progess.
 
 #### Single-source requirement
 
-- Rename the website repo _theupdateframework.io_ to a name that reflect
-  it's content e.g _TUFwebsite.io_. It makes it easier to find.
+- Rename the website repo _theupdateframework.io_ to a name that reflect it's
+  content e.g _TUFwebsite.io_. It makes it easier to find.
 
 #### Branding and design
 
