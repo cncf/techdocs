@@ -176,7 +176,7 @@ Scale:
 
 - There is a FAQ and reporting issues sections for troubleshooting.
 
-- There is a a well detailed API reference for multiple TUF APIs
+- There is a well detailed API reference for multiple TUF APIs
 
 - README on
   [theupdateframework.io](https://github.com/theupdateframework/theupdateframework.io)
