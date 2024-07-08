@@ -145,7 +145,7 @@ Scale:
 ### Summary of issues
 
 - Information is repeated on several pages of the website. For example, the TUF
-  Specification file is referenced in more than one page. Some pages can be
+  Specification file is referenced on more than one page. Some pages can be
   consolidated into others.
 
 - The website content needs restructuring to align sections with sub-sections
