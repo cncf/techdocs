@@ -473,7 +473,7 @@ The website docs analysis is in progess.
 - There's a recognizable brand for the project , a logo and blue-white color
   scheme used througout the website.
 - The website design is good and suitable for reading. However, consider
-  reducing space between the hero section and the Navbar.
+  reducing the space between the hero section and the Navbar.
 
 #### Case studies/social proof
 
