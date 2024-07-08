@@ -527,7 +527,7 @@ The website docs analysis is in progess.
 
 - Identify website maintainers on the site and their roles so users know who to
   contact in case issues arise.
-- Provide information about the website build and how to generate on the docs
+- Provide information about the website build and how to generate it on the docs
   repo.
 
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
