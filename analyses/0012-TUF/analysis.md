@@ -27,7 +27,7 @@ This document analyzes the current state of **The Update Framework (TUF)**
 documentation. It provides project leaders with an informed understanding of
 potential problems in current project documentation. A second
 [implementation](./implementation.md) document, outlines an actionable plan for
-improvement. A third document, the [issues](./issues.md) outlines issues to be
+improvement. A third [issues](./issues.md) document, outlines the issues to be
 added to the project documentation repository. These issues can be taken up by
 contributors to improve the documentation.
 
