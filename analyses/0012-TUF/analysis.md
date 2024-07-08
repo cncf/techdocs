@@ -180,7 +180,7 @@ Scale:
 
 - README on
   [theupdateframework.io](https://github.com/theupdateframework/theupdateframework.io)
-  repo is empty with little information about content of the repo.
+  repo is empty with little information about the content of the repo.
 
 #### New user content
 
