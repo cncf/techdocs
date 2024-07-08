@@ -38,7 +38,7 @@ The top-level documentation recommendations for this project are:
 
   - Identify TUF user roles (personas)
   - Develop task-based material i.e How-tos for user roles
-  - Document TUF installation procedures on a separate page(At the moment, it's
+  - Document TUF installation procedures on a separate page (At the moment, it's
     in the spec doc)
   - Develop quick start and contribution guides for new users
 
