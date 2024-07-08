@@ -509,7 +509,7 @@ The website docs analysis is in progess.
 
 #### Branding and design
 
-- Reduce empty space between hero section and Navbar to bring information to
+- Reduce the empty space between the hero section and Navbar to bring information to
   eyelevel. At the moment the information is too far down, you have to scroll to
   find it.
 
