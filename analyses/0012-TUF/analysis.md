@@ -505,7 +505,7 @@ The website docs analysis is in progess.
 #### Single-source requirement
 
 - Rename the website repo _theupdateframework.io_ to a name that reflect it's
-  content e.g _TUFwebsite.io_. It makes it easier to find.
+  content, e.g., _TUFwebsite.io_. It makes it easier to find.
 
 #### Branding and design
 
