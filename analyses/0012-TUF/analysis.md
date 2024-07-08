@@ -480,7 +480,7 @@ The website docs analysis is in progess.
 - There are case studies documented on the website under the _Adoptions_ page.
 - There's a logo, wall of users and participating organizations documented in
   the _Adoptions_ page.
-- No avaliable community talks on the website. They have however provided links
+- No available community talks on the website. They have however provided links
   to the community channel.
 - The available [TUF blog](https://theupdateframework.github.io/python-tuf) page
   is not available on the website. It's hosted on GitHub
