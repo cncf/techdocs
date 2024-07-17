@@ -377,8 +377,9 @@ Scale:
 #### Project governance documentation
 
 - The project governance is well documented on the website. There's sufficient
-  informtaion about it's history including leaders, maintainers and contributors.
-  However, this information is not visisble in the docs repo README.
+  informtaion about it's history including leaders, maintainers and
+  contributors. However, this information is not visisble in the docs repo
+  README.
 
 ### Contributor recommendations
 
