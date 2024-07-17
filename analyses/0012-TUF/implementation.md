@@ -105,7 +105,8 @@ the three project components.
 ### Add user roles to the Getting Started section
 
 Structure the _Getting Started_ section according to user roles under a _Docs_
-section. The perceived user roles for this project are:
+section. The perceived user roles for this project are Adopters and
+Contributors:
 
 - **Adopters**: Integrate TUF security properties into new and existing content
   delivery systems. Adopters can be classified into two categories:
