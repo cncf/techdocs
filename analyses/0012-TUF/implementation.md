@@ -38,13 +38,9 @@ The top-level documentation recommendations for this project are:
 
   - Identify TUF user roles (personas)
   - Develop task-based material i.e How-tos for user roles
-  - Document TUF installation procedures on a separate page (At the moment, it's
-    in the spec doc)
   - Develop quick start and contribution guides for new users
 
 - **Content maintainability and creation process**
-  - Rename the website repo to a recognizable name e.g _TUF-ReadTheDocs_ or
-    similar
   - Add search functionality to the website to make it easier to find content
   - Identify maintainers for the website repo
   - Add labels to the website repo
@@ -55,8 +51,6 @@ The top-level documentation recommendations for this project are:
   - Include communication channels on the website repo README
   - Provide information about project meetings e.g a meeting link and calendar
     on both the website and repo
-  - Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the
-    website.
 
 ## Implementation
 
@@ -69,14 +63,11 @@ makes information hard to find and can be confusing to new users. Much of the
 information on the website can go under a _Docs_ section. Consider the following
 structure:
 
-- **About**: Overview of TUF project
-- **Documentation**:
+- **Home page**: Introduction to TUF project
+- **Documentation**: Overview of TUF
 
-  - Introduction to TUF
   - TUF project components
-  - Getting started: TUF Specification, Standardization, reference
-    implementation, and documentation. You can include installation guides for
-    each component in this section
+  - Getting started: Adopters and contributors
   - Tutorials
   - Implementations
   - Best practices
