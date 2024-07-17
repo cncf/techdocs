@@ -80,7 +80,6 @@ structure:
   - Tutorials
   - Implementations
   - Best practices
-  - Contribution guidelines
 
 - **Community**: You can have two sections.
 
@@ -91,11 +90,9 @@ structure:
   - Code of conduct
 
 - **Resources**:
-  - Blog
   - News
   - Videos
-- **Contact**:
-  - Maintainer info and TUF contact information
+  - Publications and press
 
 ### Consolidate some pages
 
@@ -110,37 +107,29 @@ the three project components.
 Structure the _Getting Started_ section according to user roles under a _Docs_
 section. The perceived user roles for this project are:
 
-- **TUF specification**: Uses TUF metadata to download and verify targets
-- **TUF proposals contributor**: Proposes major changes to the specification,
-  including new features made as TUF Augmentation Proposals (TAPs)
-- **TUF implementation/Developers** : Develops software with the TUF Python
-  reference implementation
-- **TUF docs**: Contributes to documentation
+- **Adopters**: Integrate TUF security properties into new and existing content
+  delivery systems. Adopters can be classified into two categories:
 
-Each role may have accompanying documentation and instructional
-material/tutorial to help users set up and start using TUF.
+  - **Client maintainers**: depend on repository maintainers, to provide a TUF
+    repo. And they can choose from multiple TUF client implementations
+    (python-tuf, go-tuf, etc.) . Typically, they will pick the language their
+    client is written in.
+  - **Repository maintainers** can either use an existing TUF repository
+    implementation (tuf-on-ci, RSTUF), or roll their own (typically using a tuf
+    repository library such as python-tuf, go-tuf, etc.)
+
+- **Contributors**: want to contribute either to the spec or documentation.
 
 ## Introduce Instructional Material
 
 - Identify user roles in the documentation and what can be achieved by each
 - Create instructional material in the _Getting Started_ section for each user
   role i.e how-to guides and tutorials
-- Document installation guides for each user role on a separate page. At the
-  moment, all the information for
-  [TUF Specification](https://theupdateframework.github.io/specification/latest)
-  file.
 - Include links to the GitHub repos associated with the role.
 
 ## Content maintainability and creation process
 
-### Rename the website Github repo
-
-Rename the website repo to a recognizable name e.g. _TUF-website_ or similar to
-make it easier to find. At the moment, the repo is named _theupdateframework.io_
-which is too broad as it only contains docs and not all information about TUF
-projects
-
-### Add README to docs repo
+### Add README to website repo
 
 Add a README to the website repo with information about the project. I suggest
 the following information: Overview of the project, components, project repos,
@@ -157,12 +146,12 @@ suggest using a plugin or migrating to a theme that has search functionality.
 Identify maintainers for the website repo both on the website and repo to make
 it easier for contributors to contact them.
 
-### Add labels to the docs repo
+### Add labels to the website repo
 
 Include labels to issues in the website repo. These include labels such as
 _#docs \#Goodfirstissue_ to make it easier for contributors to get started.
 
-### Develop a contributors' guideline for new users
+### Develop a guidelines for new users and contributors
 
 Develop contributor guides to assist new contributors to get started.
 
@@ -180,11 +169,5 @@ Provide information about project meetings and a calendar on both the website
 and repo. Makes it easier for contributors to sync with their calendars and get
 notifications about meetings. I like how the
 [**Meshery**](https://github.com/layer5io/layer5) project has implemented this.
-
-### Include the TUF blog on the website
-
-Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the
-website. It has more visibility there than where it's located currently on the
-**Python/TUF repo**
 
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119

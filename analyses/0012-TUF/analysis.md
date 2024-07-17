@@ -16,10 +16,8 @@ This document analyzes the effectiveness and completeness of
 as part of its overall effort to incubate, grow, and graduate open source cloud
 native software projects.
 
-According to CNCF best practices guidelines, effective documentation is a
-prerequisite for program graduation. The documentation analysis is the first
-step of a CNCF process aimed at assisting projects with their documentation
-efforts.
+TUF is a graduated CNCF project. The documentation analysis is the first step of
+a CNCF process aimed at assisting projects with their documentation efforts.
 
 ### Purpose
 
@@ -189,12 +187,14 @@ Scale:
   the _Specification (latest)_ and _index_ include information present in the
   project and overview sections. This section is confusing for new users.
 
-- The documentation repo does not have a contributor guide for new users to get
+- The website repo does not have guides for new users or contributors to get
   started
 
-- There isin't any documentation labeled 'Installation guide'. Instead,
-  installation instructions are part of a larger document labelled
-  [The Update Framework specification](https://theupdateframework.github.io/specification/latest)
+- There are no installation guides because TUF is a specification.There are
+  several TUF libraries (python, go, etc.), which can be used to implement a
+  TUF-powered repository and client. Also, there are TUF repository applications
+  (tuf-on-ci, RSTUF), which provide specific but reusable TUF repositories, plus
+  tooling to use them.
 
 - TUF docs do not provide information about application-specific/OS
   functionality in system updates. Instead the documentation states that TUF
@@ -369,8 +369,8 @@ Scale:
 
 - There's a community section on the website with information on how to join the
   community.
-- No specific documentation tailored for new users to get started the software
-  on the website or the docs repo.
+- No specific documentation tailored to new users to get started to set up the
+  website.
 - The docs provide several channels for reporting issues, contacting the
   maintainers, and slack community.
 
@@ -438,12 +438,8 @@ Scale:
 
 ### Summary of Issues
 
-- The website repo is named _theupdateframework.io_ which makes it harder to
-  identify it. Name it according to it's content.
 - There's no guideline or tutorial to assist users to generate the website from
   the website repo.
-- The available [TUF blog](https://theupdateframework.github.io/python-tuf) page
-  is not available on the website. It's hosted on GitHub.
 - Information about the website build, tools and how to generate it are not
   available on the website or the docs repo.
 - Intra-site search mechanism is not available from the website. The only
@@ -509,9 +505,9 @@ The website docs analysis is in progess.
 
 #### Branding and design
 
-- Reduce the empty space between the hero section and Navbar to bring information to
-  eyelevel. At the moment the information is too far down, you have to scroll to
-  find it.
+- Reduce the empty space between the hero section and Navbar to bring
+  information to eyelevel. At the moment the information is too far down, you
+  have to scroll to find it.
 
 #### SEO, Analytics and site-local search
 
