@@ -192,7 +192,7 @@ Scale:
 - The documentation repo does not have a contributor guide for new users to get
   started
 
-- There isin't any documentation labeled 'Installation guide'. Instead,
+- There isn't any documentation labeled 'Installation guide'. Instead,
   installation instructions are part of a larger document labelled
   [The Update Framework specification](https://theupdateframework.github.io/specification/latest)
 
