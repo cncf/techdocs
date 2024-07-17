@@ -190,11 +190,9 @@ Scale:
 - The website repo does not have guides for new users or contributors to get
   started
 
-- There are no installation guides because TUF is a specification.There are
-  several TUF libraries (python, go, etc.), which can be used to implement a
-  TUF-powered repository and client. Also, there are TUF repository applications
-  (tuf-on-ci, RSTUF), which provide specific but reusable TUF repositories, plus
-  tooling to use them.
+- There isn't any documentation labeled 'Installation guide'. Instead,
+  installation instructions are part of a larger document labelled
+  [The Update Framework specification](https://theupdateframework.github.io/specification/latest)
 
 - TUF docs do not provide information about application-specific/OS
   functionality in system updates. Instead the documentation states that TUF
