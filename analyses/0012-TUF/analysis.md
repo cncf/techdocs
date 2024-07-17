@@ -168,9 +168,7 @@ Scale:
 - There are no tutorials for specific feature implementation. But, there are
   videos explaining various use cases.
 
-- There aren't specific task-based guides for features. The available guide for
-  implementing the specification is part of a larger document labelled
-  [Specification(latest)](https://theupdateframework.github.io/specification/latest)
+- There aren't specific task-based guides for features.
 
 - There is a FAQ and reporting issues sections for troubleshooting.
 
@@ -252,14 +250,13 @@ Scale:
   information in the _About_ and _Getting started_ sections can go under a
   _Docs_ section
 
-- Provide step-by-step tutorials for each use case on a separate page and label
-  it as such. At the moment all the tutorials are included in a larger document
-  the _Specification(latest)_
+- Provide step-by-step tutorials for users on a separate page and label it as
+  such.
 
-- Create a **README** on the documentation repo with information detailing the
-  content of the repo. Also include a **contribution guide** and information of
-  how to set up the website and run it locally for new contributors. You can
-  include a getting started section on the README.
+- Create a **README** on the website repo with information detailing the content
+  of the repo. Also include a **contribution guide** and information of how to
+  set up the website and run it locally for new contributors. You can include a
+  getting started section on the README.
 
 #### New user content
 
@@ -269,12 +266,6 @@ Scale:
 
 - Include a **README** in the documentation repo with a contributor guide on how
   to get started with Docs.
-
-- Create an _Installation guide_ on a separate page. This can contain
-  step-to-step instructions for diffent users including beginners. Installation
-  instructions in the
-  [The Update Framework specification](https://theupdateframework.github.io/specification/latest)
-  can be included here.
 
 #### Content maintainability & site mechanics
 
@@ -331,8 +322,8 @@ Scale:
 ### Summary of Issues
 
 - The documentation does not contain information tailored to contributors.
-- Information about TUF communication channels is not visible in the docs repo.
-  But the information is available on the website.
+- Information about TUF communication channels is not visible in the website
+  repo. But the information is available on the website.
 - The documentation does not contain information about other project repos and
   their links. Making it harder for contributors to find them.
 - The documentation repo issues do not appear to be maintained. There are old
@@ -345,7 +336,7 @@ Scale:
 
 - Information about the TUF **slack channel** is available on the website on
   both the Community and Contact sections. However,this information should be
-  visible on the doc repo README for easy access.
+  visible on the website repo README for easy access.
 
 - The repo link on the website does not point to the documentation but rather
   the
@@ -385,8 +376,10 @@ Scale:
 
 #### Communication methods documented
 
-- The documentation repo link may be included on the site as an entry point for
-  the project. The repo can then include information about other repos.
+- The website repo link may be included on the site as an entry point for the
+  project or the umbrella repo
+  [theupdateframework](https://github.com/theupdateframework) that lists all TUF
+  repositories.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings e.g a meeting link and calendar.
 
@@ -456,7 +449,7 @@ Scale:
 
 #### Minimal website requirements
 
-The website docs analysis is in progess.
+The website docs analysis is in progress.
 
 #### Usability, accessibility and devices
 
@@ -499,11 +492,6 @@ The website docs analysis is in progess.
 
 ### Website recommendations
 
-#### Single-source requirement
-
-- Rename the website repo _theupdateframework.io_ to a name that reflect it's
-  content, e.g., _TUFwebsite.io_. It makes it easier to find.
-
 #### Branding and design
 
 - Reduce the empty space between the hero section and Navbar to bring
@@ -514,11 +502,6 @@ The website docs analysis is in progess.
 
 - Provide intra-site search options such as a search button to make it easier
   for users to search and find information.
-
-#### Case studies/social proof
-
-- Add the [TUF blog](https://theupdateframework.github.io/python-tuf) to the
-  website.
 
 #### Maintenance planning
 
