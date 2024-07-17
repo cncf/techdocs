@@ -75,7 +75,7 @@ concern:
   branding, website structure, and maintainability.
 
 Each section begins with summary ratings based on a rubric with appropriate
-[criteria] for the section, then proceeds to:
+criteria for the section, then proceeds to:
 
 - **Comments**: Observations about the existing documentation, with a focus on
   how it does or does not help TUF project users achieve their goals.
@@ -377,7 +377,7 @@ Scale:
 #### Project governance documentation
 
 - The project governance is well documented on the website. There's sufficient
-  informtaion about it's history including leaders,maintainers and contributors.
+  informtaion about it's history including leaders, maintainers and contributors.
   However, this information is not visisble in the docs repo README.
 
 ### Contributor recommendations
