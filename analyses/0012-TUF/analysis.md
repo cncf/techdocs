@@ -77,7 +77,7 @@ concern:
   branding, website structure, and maintainability.
 
 Each section begins with summary ratings based on a rubric with appropriate
-[criteria] for the section, then proceeds to:
+criteria for the section, then proceeds to:
 
 - **Comments**: Observations about the existing documentation, with a focus on
   how it does or does not help TUF project users achieve their goals.
