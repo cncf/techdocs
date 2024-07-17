@@ -111,11 +111,11 @@ Contributors:
 - **Adopters**: Integrate TUF security properties into new and existing content
   delivery systems. Adopters can be classified into two categories:
 
-  - **Client maintainers**: depend on repository maintainers, to provide a TUF
+  - _Client maintainers_: depend on repository maintainers, to provide a TUF
     repo. And they can choose from multiple TUF client implementations
-    (python-tuf, go-tuf, etc.) . Typically, they will pick the language their
+    (python-tuf, go-tuf, etc.) Typically, they will pick the language their
     client is written in.
-  - **Repository maintainers** can either use an existing TUF repository
+  - _Repository maintainers_: Use either an existing TUF repository
     implementation (tuf-on-ci, RSTUF), or roll their own (typically using a tuf
     repository library such as python-tuf, go-tuf, etc.)
 
