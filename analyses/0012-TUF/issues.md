@@ -32,38 +32,12 @@ Type: Conceptual
 Structure the _Getting Started_ section according to user roles. The identified
 user roles are _Adopters_ and _Contributors_.
 
-These can be further broken down into subsections depending on use case:
-
-- Adopters :
-  - Client maintainers
-  - Respository maintainers
-- Contributors:
-  - Spec contributors
-  - Docs contributors
-
-View the [Implementation document](./implementation.md) to understand the user
-roles and the kind of information targeting each role.
+These can be further broken down into subsections depending on use case. View
+the [Implementation document](./implementation.md) to understand the user roles
+and the kind of information targeting each role.
 
 You can add an _Edit this page_ button on website and link it to the doc
 repository for doc contributors.
-
-Audience: Admin
-
-Type: Conseptual
-
-### Add introductory Video to homepage
-
-- Add a 1 minute video covering an overview of the TUF project why the project
-  matters.
-
-Audience: Admin
-
-Type: Conseptual
-
-### Add a 'Schedule and appointment' icon to the website
-
-- Create a 'Schedule an appointment' link on the website footer section. It can
-  also appear on the community page.
 
 Audience: Admin
 
