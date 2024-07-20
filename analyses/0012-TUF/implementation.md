@@ -151,7 +151,7 @@ _#docs \#Goodfirstissue_ to make it easier for contributors to get started.
 
 Develop contributor guides to assist new contributors to get started.
 
-### Create procedures for developing the docs site locally
+### Create procedures for developing the website locally
 
 Develop procedures for developing the docs site locally i.e. cloning, building,
 and serving the documentation. You can also provide information about the tools
