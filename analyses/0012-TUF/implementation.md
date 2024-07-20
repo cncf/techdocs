@@ -63,14 +63,18 @@ makes information hard to find and can be confusing to new users. Much of the
 information on the website can go under a _Docs_ section. Consider the following
 structure:
 
-- **Home page**: Introduction to TUF project
+- **Home page**
 - **Documentation**: Overview of TUF
 
-  - TUF project components
   - Getting started: Adopters and contributors
-  - Tutorials
+  - Project :Tap,History,Timeline
+  - Metadata
+  - Adoptions
   - Implementations
+  - Security audits
+  - Enhancement proposals
   - Best practices
+  - FAQ
 
 - **Community**: You can have two sections.
 
