@@ -115,6 +115,8 @@ Contributors:
     repository library such as python-tuf, go-tuf, etc.)
 
 - **Contributors**: want to contribute either to the spec or documentation.
+  - Spec contributors
+  - Docs contributors
 
 ## Introduce Instructional Material
 
