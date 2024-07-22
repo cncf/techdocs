@@ -118,17 +118,6 @@ Contributors:
   - Spec contributors
   - Docs contributors
 
-## Add introductory Video to homepage
-
-- Add a 1 minute video covering an overview of the TUF project why the project
-  matters.
-
-## Add a 'Schedule and appointment' icon to the website
-
-- Create 'Schedule an appointment' link on the website. This creates an avenue
-  for users to talk to community members to learn the project or seek
-  clarification.
-
 ## Introduce Instructional Material
 
 - Identify user roles in the documentation and what can be achieved by each
