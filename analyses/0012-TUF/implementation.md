@@ -168,4 +168,45 @@ and repo. Makes it easier for contributors to sync with their calendars and get
 notifications about meetings. I like how the
 [**Meshery**](https://github.com/layer5io/layer5) project has implemented this.
 
+## Proposed Information Architecture for the TUF Website
+
+| Website                  | Section         | Subsections               |
+| ------------------------ | --------------- | ------------------------- |
+| **Current TUF Website**  | Homepage        |                           |
+|                          | About           | - Overview                |
+|                          |                 | - History                 |
+|                          |                 | - Timeline                |
+|                          |                 | - Project                 |
+|                          |                 | - Publications            |
+|                          |                 | - Code of conduct         |
+|                          | Getting Started | - Roles and metadata      |
+|                          |                 | - FAQ                     |
+|                          |                 | - Specification (latest)  |
+|                          |                 | - Specification index     |
+|                          |                 | - Implementations         |
+|                          |                 | - Videos                  |
+|                          | Community       | - Adoptions               |
+|                          |                 | - Reporting issues        |
+|                          |                 | - Security audits         |
+|                          |                 | - Proposals               |
+|                          |                 | - Contribute              |
+|                          |                 | - Chat(CNCF Slack)        |
+|                          | News            |                           |
+|                          | Contact         |                           |
+| **Proposed TUF website** | Homepage        |                           |
+|                          | Docs            | - Overview                |
+|                          |                 | - History                 |
+|                          |                 | - Timeline                |
+|                          |                 | - Project (Tap, metadata) |
+|                          |                 | - Security audits         |
+|                          |                 | - Adoptions               |
+|                          |                 | - FAQ                     |
+|                          | Community       | - Code of conduct         |
+|                          |                 | - Learn and connect       |
+|                          |                 | - Develop and contribute  |
+|                          | Resources       | - News                    |
+|                          |                 | - Publications and press  |
+|                          |                 | - Videos                  |
+|                          |                 |                           |
+
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
