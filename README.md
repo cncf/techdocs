@@ -16,8 +16,8 @@ team. The repo contains the following directories:
 
 ## TechDocs Q&A
 
-The CNCF tech docs team holds a Zoom call to answer questions and discuss 
-anything to do with documentation. Calls are held on the 
+The CNCF tech docs team holds a Zoom call to answer questions and discuss
+anything to do with documentation. Calls are held on the
 [fourth Wednesday of every month at 8am Pacific time][date-time].
 
 TechDocs Q&A (formerly called *Office Hours*) started on 30 September 2020.
