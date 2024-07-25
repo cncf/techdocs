@@ -21,7 +21,7 @@ documentation. We evaluate on the following:
 - If the product exposes an API, is there a complete reference?
 - Is content up to date and accurate?
 
-Examples:
+Example:
 
 - <https://prometheus.io/docs>
 
@@ -39,7 +39,7 @@ specifically for them. We evaluate on the following:
   top of your information architecture?
 - Is there easily copy-pastable sample code or other example content?
 
-Examples:
+Example:
 
 - <https://falco.org/docs/getting-started/>
 
@@ -55,7 +55,7 @@ We evaluate on the following:
   directory structure? Is a localization framework present?
 - Do you have a clearly documented method for versioning your content?
 
-Examples:
+Example:
 
 - <https://kubernetes.io/docs/>
 
@@ -105,7 +105,7 @@ We evaluate on the following:
   join those meetings?
 - Are mailing lists documented?
 
-Examples:
+Example:
 
 - <https://prometheus.io/community/>
 
@@ -119,7 +119,7 @@ We evaluate on the following:
 - Are issues well-documented (i.e., more than just a title)?
 - Are issues maintained for staleness?
 
-Examples:
+Example:
 
 - <https://github.com/opentracing/opentracing.io/issues> (all of open tracing’s
   backlogs are well maintained!)
@@ -136,7 +136,7 @@ We evaluate on the following:
 - Is there a document specifically for new contributors/your first contribution?
 - Do new users know where to get help?
 
-Examples:
+Example:
 
 - <https://github.com/helm/community>
 
@@ -148,9 +148,9 @@ We evaluate on the following:
 
 - Is project governance clearly documented?
 
-Examples:
+Example:
 
-- Any graduated CNCF project
+- <https://github.com/kubernetes/community> (see `governance.md`)
 
 ## Website
 
@@ -181,16 +181,19 @@ maturity levels so, for example, incubating projects must satisfy the
 requirements for sandbox projects.
 
 - **Sandbox**
-  - [Website guidelines](../website-guidelines-checklist.md): majority of the
+  - [Website guidelines](../website-guidelines-checklist.md): a majority of the
     guidelines are satisfied
-  - [Docs assessment][]: consider [submitting a request][service desk] for an assessment
-    as early as possible to avoid documentation and website rework.
   - **Project documentation** may or may not be present -- it is acceptable at
     this maturity level to link out to documentation that hasn't yet been
     integrated into the website
-  - _Example_: website with a single homepage, without any documentation or, as
+    - _Example_: website with a single homepage, without any documentation or, as
     was mentioned above, linking out to an external (preexisting) source for
     docs
+    - _However_: consider reading the recommended practices in this repository and
+    implementing as many of the best practices as you can. This groundwork will pay
+    big dividends later when you need to upgrade your practices and update your
+    documentation as an incubating project. Assistance is available from CNCF
+    TechDocs anytime, including answers to individual questions or a documentation workshop.
 - **Incubating**
   - [Website guidelines][]: all guidelines are satisfied.
   - [Docs assessment][]: request an (re-)assessment through the CNCF [service
@@ -207,7 +210,7 @@ requirements for sandbox projects.
   - The website repo is in an [archived state][]
   - The archived status of the project must be obvious to those visiting the
     website, such as through the use of a prominent banner.
-  - If a successor project exists, link to it's website and/or migration
+  - If a successor project exists, link to its website and/or migration
     documentation.
 
 [archived state]:
@@ -254,9 +257,9 @@ We evaluate on the following:
 - Is there an easily recognizable brand for the project (logo + color scheme)
   clearly identifiable?
 - Is the brand used across the website consistently?
-- Is the website’s typography clean and well-suited for reading?
+- Is the website’s typography clean and legible?
 
-Examples:
+Example:
 
 - <https://helm.sh/>
 
@@ -282,9 +285,10 @@ Examples:
 
 ### SEO, Analytics and site-local search
 
-SEO helps users find your project and it's documentation, and analytics helps
+SEO helps users find your project and its documentation, and analytics helps
 you monitor site traffic and diagnose issues like page 404s. Intra-site search,
-while optional, can offer your readers a site-focused search results.
+while optional, offers your readers site-focused search results and is strongly
+recommended.
 
 We evaluate on the following:
 
@@ -313,7 +317,7 @@ We evaluate on the following:
 - Are site build times reasonable?
 - Do site maintainers have adequate permissions?
 
-Examples:
+Example:
 
 - <https://kubernetes.io>
 
