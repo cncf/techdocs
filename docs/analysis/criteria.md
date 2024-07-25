@@ -39,7 +39,6 @@ specifically for them. We evaluate on the following:
   top of your information architecture?
 - Is there easily copy-pastable sample code or other example content?
 
-
 <!-- markdownlint-enable line-length -->
 <!-- cSpell:ignore OSes copy-pastable Algolia Docsy -->
 
