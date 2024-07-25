@@ -137,7 +137,7 @@ Here is a proposed outline for the tech doc Table of Contents:
   - [Events](https://keda.sh/docs/2.13/operate/events/)
   - [Firewall requirements](https://keda.sh/docs/2.13/operate/cluster/#firewall)
   - ...
-  - [FAQ](https://keda.sh/docs/2.13/faq/)
+  - [FAQ](https://keda.sh/docs/2.13/reference/faq/)
   - Glossary
 - [Scalers](https://keda.sh/docs/2.13/scalers/)
   - [ActiveMQ](https://keda.sh/docs/2.13/scalers/activemq/)
