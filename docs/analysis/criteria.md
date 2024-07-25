@@ -39,6 +39,10 @@ specifically for them. We evaluate on the following:
   top of your information architecture?
 - Is there easily copy-pastable sample code or other example content?
 
+
+<!-- markdownlint-enable line-length -->
+<!-- cSpell:ignore OSes copy-pastable Algolia Docsy -->
+
 Example:
 
 - <https://falco.org/docs/getting-started/>
@@ -186,14 +190,15 @@ requirements for sandbox projects.
   - **Project documentation** may or may not be present -- it is acceptable at
     this maturity level to link out to documentation that hasn't yet been
     integrated into the website
-    - _Example_: website with a single homepage, without any documentation or, as
-    was mentioned above, linking out to an external (preexisting) source for
+    - _Example_: website with a single homepage, without any documentation or,
+    as was mentioned above, linking out to an external (preexisting) source for
     docs
-    - _However_: consider reading the recommended practices in this repository and
-    implementing as many of the best practices as you can. This groundwork will pay
-    big dividends later when you need to upgrade your practices and update your
-    documentation as an incubating project. Assistance is available from CNCF
-    TechDocs anytime, including answers to individual questions or a documentation workshop.
+    - _However_: consider reading the recommended practices in this repository
+    and implementing as many of the best practices as you can. This groundwork
+    will pay big dividends later when you need to upgrade your practices and
+    update your documentation as an incubating project. Assistance is available
+    from CNCF TechDocs anytime, including answers to individual questions or a
+    documentation workshop.
 - **Incubating**
   - [Website guidelines][]: all guidelines are satisfied.
   - [Docs assessment][]: request an (re-)assessment through the CNCF [service
