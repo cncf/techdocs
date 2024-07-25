@@ -3,18 +3,22 @@
 This repository holds resources provided by the CNCF Technical Documentation
 team. The repo contains the following directories:
 
-- `docs` contains collected resources for building websites and developing documentation, including recommended tools and practices, how-tos,
-and evaluation checklists. Included are specific guidelines for:
-    - Setting up and maintaining a documentation website.
-    - Writing technical documentation for a project.
-    - Getting assistance from the CNCF TechDocs community.
-    - Analyzing project documentation, for use by CNCF TechDocs staff (in `docs/analysis`).
-- `analyses` (not to be confused with `docs/analysis`) contains all the completed documentation analyses.
+- `docs` contains collected resources for building websites and developing
+  documentation, including recommended tools and practices, how-tos,
+  and evaluation checklists. Included are specific guidelines for:
+  - Setting up and maintaining a documentation website.
+  - Writing technical documentation for a project.
+  - Getting assistance from the CNCF TechDocs community.
+  - Analyzing project documentation, for use by CNCF TechDocs staff
+      (in `docs/analysis`).
+- `analyses` (not to be confused with `docs/analysis`) contains all the
+  completed documentation analyses.
 
 ## TechDocs Q&A
 
-The CNCF tech docs team holds a Zoom call to answer questions and discuss anything to do with documentation.
-Calls are held on the [fourth Wednesday of everymonth at 8am Pacific time][date-time].
+The CNCF tech docs team holds a Zoom call to answer questions and discuss 
+anything to do with documentation. Calls are held on the 
+[fourth Wednesday of every month at 8am Pacific time][date-time].
 
 TechDocs Q&A (formerly called *Office Hours*) started on 30 September 2020.
 
