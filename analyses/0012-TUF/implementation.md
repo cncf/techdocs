@@ -169,6 +169,7 @@ notifications about meetings. I like how the
 [**Meshery**](https://github.com/layer5io/layer5) project has implemented this.
 
 ## Proposed Information Architecture for the TUF Website
+The table below outlines the current information architecture(IA) of the [TUF website](https://theupdateframework.io/) and the proposed IA for the new website.
 
 | Website                  | Section         | Subsections               |
 | ------------------------ | --------------- | ------------------------- |
