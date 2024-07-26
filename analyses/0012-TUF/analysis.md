@@ -339,7 +339,7 @@ Scale:
 
 #### Communication methods documented
 
-- Information about the TUF **slack channel** is available on the website on
+- Information about the TUF **slack channel** is available on the website in
   both the Community and Contact sections. However,this information should be
   visible on the website repo README for easy access.
 
