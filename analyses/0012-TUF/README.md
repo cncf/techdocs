@@ -1,6 +1,6 @@
 # TUF Documentation Analysis
 
-**Status: Draft**
+[Context: "Status: Draft"]
 
 This section contains analysis of The Update Framework (TUF) project
 documentation. This is a [CNCF-techdocs](https://github.com/cncf/techdocs) group
