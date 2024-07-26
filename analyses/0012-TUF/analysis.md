@@ -174,10 +174,7 @@ Scale:
   videos explaining various use cases.
 
 - There aren't specific task-based guides for features.
-<<<<<<< HEAD
 - There aren't specific task-based guides for features.
-=======
->>>>>>> ff681034861f5665d4d1892a63e19b9016053ac9
 
 - There is a FAQ and reporting issues sections for troubleshooting.
 
@@ -337,18 +334,15 @@ Scale:
   issues that are still open which may confuse contributors looking for issues
   to work on.
 - Information about the TUF **slack channel** is available on the website in
+- Information about the TUF **slack channel** is available on the website in
   areas of interest
 
 #### Communication methods documented
 
 - Information about the TUF **slack channel** is available on the website in
   both the Community and Contact sections. However,this information should be
-<<<<<<< HEAD
   visible on the website repo README for easy access. visible on the website
   repo README for easy access.
-=======
-  visible on the website repo README for easy access.
->>>>>>> ff681034861f5665d4d1892a63e19b9016053ac9
 
   no information about project meetings. Instead, the users are directed to join
   the
@@ -388,17 +382,12 @@ Scale:
 
 #### Communication methods documented
 
-<<<<<<< HEAD
 - The website repo link may be included on the site as an entry point for the
-=======
-- Provide information about project meetings, e.g., a meeting link and calendar.
->>>>>>> ff681034861f5665d4d1892a63e19b9016053ac9
   project or the umbrella repo
   [theupdateframework](https://github.com/theupdateframework) that lists all TUF
   repositories.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings, e.g., a meeting link and calendar.
-<<<<<<< HEAD
   project or the umbrella repo
   [theupdateframework](https://github.com/theupdateframework) that lists all TUF
   repositories.
@@ -406,8 +395,6 @@ Scale:
 - Provide information about project meetings e.g a meeting link and calendar.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings, e.g., a meeting link and calendar.
-=======
->>>>>>> ff681034861f5665d4d1892a63e19b9016053ac9
 
 #### Beginner friendly issue backlog
 
