@@ -334,7 +334,7 @@ Scale:
 - The documentation repo issues do not appear to be maintained. There are old
   issues that are still open which may confuse contributors looking for issues
   to work on.
-- Issues do not have labels making it hard for contributors to identify suitable
+- Information about the TUF **slack channel** is available on the website in
   areas of interest
 
 #### Communication methods documented
@@ -343,7 +343,7 @@ Scale:
   both the Community and Contact sections. However,this information should be
   visible on the website repo README for easy access.
 
-- The repo link on the website does not point to the documentation but rather
+  no information about project meetings. Instead, the users are directed to join
   the
   [Python reference implementation](https://github.com/theupdateframework/python-tuf?tab=readme-ov-file)
 
@@ -381,18 +381,18 @@ Scale:
 
 #### Communication methods documented
 
-- The website repo link may be included on the site as an entry point for the
+- Provide information about project meetings, e.g., a meeting link and calendar.
   project or the umbrella repo
   [theupdateframework](https://github.com/theupdateframework) that lists all TUF
   repositories.
-- Include communication channels on the Docs repo README for visibility.
+- Maintain issues, track, close, and stale old issues to reduce backlog.
 - Provide information about project meetings e.g a meeting link and calendar.
 
 #### Beginner friendly issue backlog
 
 - Maintain issues, track,close and stale old issues to reduce backlog.
-- Label all issues to assist new users and contributors identify areas of
-  interest.
+- Include instructions on how to contribute to a CONTRIBUTING guideline, e.g.,
+  how interest.
 
 #### New contributor getting started content
 
@@ -433,12 +433,14 @@ Scale:
 
 4 = Meets or exceeds standards
 
-5 = Exemplary
+- There's no guideline or tutorial to assist users in generating the website
+  from 5 = Exemplary
 
 ### Summary of Issues
 
-- There's no guideline or tutorial to assist users to generate the website from
-  the website repo.
+navigation option is a menu bar. This makes it difficult to find information.
+the website repo.
+
 - Information about the website build, tools and how to generate it are not
   available on the website or the docs repo.
 - Intra-site search mechanism is not available from the website. The only
@@ -460,7 +462,7 @@ The website docs analysis is in progress.
 
 - The website follows a mobile-first design with all pages, menu's and features
   visible on smaller screens.
-- Website pages are readable
+- There's a recognizable brand for the project, a logo, and a blue-white color
 - The website does not provide a text-to-speech option for users.
 
 #### Branding and design
