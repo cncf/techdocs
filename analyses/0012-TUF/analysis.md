@@ -335,6 +335,7 @@ Scale:
   to work on.
 - Information about the TUF **slack channel** is available on the website in
 - Information about the TUF **slack channel** is available on the website in
+- Information about the TUF **slack channel** is available on the website in
   areas of interest
 
 #### Communication methods documented
@@ -383,10 +384,17 @@ Scale:
 
 #### Communication methods documented
 
+- The website repo link may be included on the site as an entry point for the
+  project or the umbrella repo
+  [theupdateframework](https://github.com/theupdateframework) that lists all TUF
+  repositories.
+- Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings, e.g., a meeting link and calendar.
   project or the umbrella repo
   [theupdateframework](https://github.com/theupdateframework) that lists all TUF
   repositories.
+- Maintain issues, track, close, and stale old issues to reduce backlog.
+- Provide information about project meetings e.g a meeting link and calendar.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings, e.g., a meeting link and calendar.
 
