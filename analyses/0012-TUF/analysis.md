@@ -387,8 +387,6 @@ Scale:
   project or the umbrella repo
   [theupdateframework](https://github.com/theupdateframework) that lists all TUF
   repositories.
-- Maintain issues, track, close, and stale old issues to reduce backlog.
-- Provide information about project meetings e.g a meeting link and calendar.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings, e.g., a meeting link and calendar.
 
