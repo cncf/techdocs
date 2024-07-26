@@ -397,6 +397,7 @@ Scale:
 - Provide information about project meetings e.g a meeting link and calendar.
 - Include communication channels on the Docs repo README for visibility.
 - Provide information about project meetings, e.g., a meeting link and calendar.
+- Provide information about project meetings, e.g., a meeting link and calendar.
 
 #### Beginner friendly issue backlog
 
