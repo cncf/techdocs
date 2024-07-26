@@ -61,6 +61,11 @@ is stored on the TUF GitHub repo.
 
 - TUF Augmentation proposals repository:
   <https://github.com/theupdateframework/taps>
+- python-tuf: <https://theupdateframework.readthedocs.io>
+- go-tuf: <https://pkg.go.dev/github.com/theupdateframework/go-tuf>
+- tuf-on-ci:
+  <https://github.com/theupdateframework/tuf-on-ci?tab=readme-ov-file#documentation>
+- RSTUF: <https://repository-service-tuf.readthedocs.io>
 
 ### How this document is organized
 
@@ -238,17 +243,17 @@ Scale:
   _Aborted_ is used in the
   [Specification index tutorial](https://theupdateframework.github.io/specification/latest/#fix-time)
 
-- There is no use of abliest language like simple,easy in the documentation.
+- There is no use of abliest language like simple, or easy in the documentation.
 
 ### Project recommendations
 
 #### Information architecture
 
-- Information can be re-organized on the website to better the workflow. That
-  is, each section can contain only related information. For example, introduce
-  a documentation section to consolidate other pages on the site. Much of the
-  information in the _About_ and _Getting started_ sections can go under a
-  _Docs_ section
+- Information can be re-organized on the website to make it easier for new users
+  to navigate. That is, each section can contain only related information. For
+  example, introduce a documentation section to consolidate other pages on the
+  site. Much of the information in the _About_ and _Getting started_ sections
+  can go under a _Docs_ section
 
 - Provide step-by-step tutorials for users on a separate page and label it as
   such.
