@@ -346,7 +346,7 @@ Scale:
   [Python reference implementation](https://github.com/theupdateframework/python-tuf?tab=readme-ov-file)
 
 - Information about the mailing list is included in the documentation. There's
-  no information about project meetings. Instead the users are directed to join
+  no information about project meetings. Instead, the users are directed to join
   the #TUF channel on CNCF slack.
 
 #### Beginner friendly issue backlog
