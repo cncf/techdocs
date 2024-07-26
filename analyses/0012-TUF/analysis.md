@@ -348,7 +348,7 @@ Scale:
   [Python reference implementation](https://github.com/theupdateframework/python-tuf?tab=readme-ov-file)
 
 - Information about the mailing list is included in the documentation. There's
-  no information about project meetings. Instead the users are directed to join
+  no information about project meetings. Instead, the users are directed to join
   the #TUF channel on CNCF slack.
 
 #### Beginner friendly issue backlog
@@ -385,8 +385,8 @@ Scale:
   project or the umbrella repo
   [theupdateframework](https://github.com/theupdateframework) that lists all TUF
   repositories.
-- Maintain issues, track, close, and stale old issues to reduce backlog.
-- Provide information about project meetings e.g a meeting link and calendar.
+- Include communication channels on the Docs repo README for visibility.
+- Provide information about project meetings, e.g., a meeting link and calendar.
 
 #### Beginner friendly issue backlog
 
