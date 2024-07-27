@@ -153,7 +153,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://github.com/kubernetes/community> (see `governance.md`)
+- <https://github.com/envoyproxy/envoy/blob/main/GOVERNANCE.md>
 
 ## Website
 
