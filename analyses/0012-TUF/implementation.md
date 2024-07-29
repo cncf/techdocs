@@ -66,14 +66,13 @@ structure:
 - **Home page**
 - **Documentation**: Overview of TUF
 
-  - Getting started: Adopters and contributors
-  - Project :Tap,History,Timeline
+  - Getting started: Adopters, contributors, Timeline, and History
+  - Project
   - Metadata
+  - Enhancement proposals
   - Adoptions
   - Implementations
   - Security audits
-  - Enhancement proposals
-  - Best practices
   - FAQ
 
 - **Community**: You can have two sections.
@@ -118,6 +117,17 @@ Contributors:
   - Spec contributors
   - Docs contributors
 
+## Add introductory Video to homepage
+
+- Add a 1 minute video covering an overview of the TUF project why the project
+  matters.
+
+## Add a 'Schedule and appointment' icon to the website
+
+- Create 'Schedule an appointment' link on the website. This creates an avenue
+  for users to talk to community members to learn the project or seek
+  clarification.
+
 ## Introduce Instructional Material
 
 - Identify user roles in the documentation and what can be achieved by each
@@ -155,11 +165,11 @@ Develop contributor guides to assist new contributors to get started.
 
 ### Create procedures for developing the website locally
 
-Develop procedures for developing the docs site locally i.e. cloning, building,
-and serving the documentation. You can also provide information about the tools
-used to build and maintain the site. When such information is available it helps
-contributors know how to improve the website. You might get some good
-suggestions.
+Develop procedures for developing the website site locally i.e. cloning,
+building, and serving the documentation. You can also provide information about
+the tools used to build and maintain the site. When such information is
+available it helps contributors know how to improve the website. You might get
+some good suggestions.
 
 ### Provide project meeting links and calendar
 
@@ -174,43 +184,44 @@ The table below outlines the current information architecture(IA) of the
 [TUF website](https://theupdateframework.io/) and the proposed IA for the new
 website.
 
-| Website                  | Section         | Subsections               |
-| ------------------------ | --------------- | ------------------------- |
-| **Current TUF Website**  | Homepage        |                           |
-|                          | About           | - Overview                |
-|                          |                 | - History                 |
-|                          |                 | - Timeline                |
-|                          |                 | - Project                 |
-|                          |                 | - Publications            |
-|                          |                 | - Code of conduct         |
-|                          | Getting Started | - Roles and metadata      |
-|                          |                 | - FAQ                     |
-|                          |                 | - Specification (latest)  |
-|                          |                 | - Specification index     |
-|                          |                 | - Implementations         |
-|                          |                 | - Videos                  |
-|                          | Community       | - Adoptions               |
-|                          |                 | - Reporting issues        |
-|                          |                 | - Security audits         |
-|                          |                 | - Proposals               |
-|                          |                 | - Contribute              |
-|                          |                 | - Chat(CNCF Slack)        |
-|                          | News            |                           |
-|                          | Contact         |                           |
-| **Proposed TUF website** | Homepage        |                           |
-|                          | Docs            | - Overview                |
-|                          |                 | - History                 |
-|                          |                 | - Timeline                |
-|                          |                 | - Project (Tap, metadata) |
-|                          |                 | - Security audits         |
-|                          |                 | - Adoptions               |
-|                          |                 | - FAQ                     |
-|                          | Community       | - Code of conduct         |
-|                          |                 | - Learn and connect       |
-|                          |                 | - Develop and contribute  |
-|                          | Resources       | - News                    |
-|                          |                 | - Publications and press  |
-|                          |                 | - Videos                  |
-|                          |                 |                           |
+| Website                  | Section         | Subsections              |
+| ------------------------ | --------------- | ------------------------ | --- |
+| **Current TUF Website**  | Homepage        |                          |
+|                          | About           | - Overview               |
+|                          |                 | - History                |
+|                          |                 | - Timeline               |
+|                          |                 | - Project                |
+|                          |                 | - Publications           |
+|                          |                 | - Code of conduct        |
+|                          | Getting Started | - Roles and metadata     |
+|                          |                 | - FAQ                    |
+|                          |                 | - Specification (latest) |
+|                          |                 | - Specification index    |
+|                          |                 | - Implementations        |
+|                          |                 | - Videos                 |
+|                          | Community       | - Adoptions              |
+|                          |                 | - Reporting issues       |
+|                          |                 | - Security audits        |
+|                          |                 | - Proposals              |
+|                          |                 | - Contribute             |
+|                          |                 | - Chat(CNCF Slack)       |
+|                          | News            |                          |
+|                          | Contact         |                          |
+| **Proposed TUF website** | Homepage        |                          |
+|                          | Docs            | - Overview               |
+|                          |                 | - Project                |
+|                          |                 | - Enhancement proposals  |
+|                          |                 | - Metadata               |
+|                          |                 | - Getting started        |     |
+|                          |                 | - Security audits        |
+|                          |                 | - Adoptions              |
+|                          |                 | - FAQ                    |
+|                          | Community       | - Code of conduct        |
+|                          |                 | - Learn and connect      |
+|                          |                 | - Develop and contribute |
+|                          | Resources       | - News                   |
+|                          |                 | - Publications and press |
+|                          |                 | - Videos                 |
+|                          |                 |                          |
 
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
