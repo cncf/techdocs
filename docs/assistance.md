@@ -1,9 +1,9 @@
 # Assistance program for technical documentation
 
 This document outlines the Cloud Native Computing Foundation (CNCF) Technical
-Documentation Assistance Program (the Program), a service offered by CNCF Tech
-Docs for evaluating and improving an OSS project's technical documentation. The
-process is designed to:
+Documentation Assistance Program (the Program), a service offered by CNCF TechDocs
+for evaluating and improving an OSS project's technical documentation. The process
+is designed to:
 
 1. Provide a baseline analysis of the project's documentation quality measured
    against the project's [maturity level](analysis/criteria.md). Often, projects
@@ -17,6 +17,13 @@ process is designed to:
    backlog items.
 1. Leave the project team with an improved understanding and skill base for
    improving and maintaining the project documentation.
+
+**Note**: The Program focuses on established projects at the _incubating_ and
+_graduated_ maturity levels. The Program offers help for _sandbox_ projects as
+well, but with less emphasis on analyzing existing documentation and more on
+establishing good practices and starting a minimally viable documentation set.
+For more information contact the
+[CNCF TechDocs team](https://servicedesk.cncf.io/).
 
 ## Phase 0: Training
 
