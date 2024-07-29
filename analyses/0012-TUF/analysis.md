@@ -397,7 +397,7 @@ Scale:
 #### New contributor getting started content
 
 - Include instructions on how to contribute on a CONTRIBUTING guideline e.g how
-  to identify issues,forking,cloning, and submitting PRs.
+  to identify issues, forking, cloning, and submitting PRs.
 
 #### Project governance documentation
 
