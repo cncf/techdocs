@@ -66,14 +66,13 @@ structure:
 - **Home page**
 - **Documentation**: Overview of TUF
 
-  - Getting started: Adopters and contributors
-  - Project :Tap,History,Timeline
+  - Getting started: Adopters, contributors, Timeline, and History
+  - Project
   - Metadata
+  - Enhancement proposals
   - Adoptions
   - Implementations
   - Security audits
-  - Enhancement proposals
-  - Best practices
   - FAQ
 
 - **Community**: You can have two sections.
@@ -117,6 +116,17 @@ Contributors:
 - **Contributors**: want to contribute either to the spec or documentation.
   - Spec contributors
   - Docs contributors
+
+## Add introductory Video to homepage
+
+- Add a 1 minute video covering an overview of the TUF project why the project
+  matters.
+
+## Add a 'Schedule and appointment' icon to the website
+
+- Create 'Schedule an appointment' link on the website. This creates an avenue
+  for users to talk to community members to learn the project or seek
+  clarification.
 
 ## Introduce Instructional Material
 
@@ -174,43 +184,44 @@ The table below outlines the current information architecture(IA) of the
 [TUF website](https://theupdateframework.io/) and the proposed IA for the new
 website.
 
-| Website                  | Section         | Subsections               |
-| ------------------------ | --------------- | ------------------------- |
-| **Current TUF Website**  | Homepage        |                           |
-|                          | About           | - Overview                |
-|                          |                 | - History                 |
-|                          |                 | - Timeline                |
-|                          |                 | - Project                 |
-|                          |                 | - Publications            |
-|                          |                 | - Code of conduct         |
-|                          | Getting Started | - Roles and metadata      |
-|                          |                 | - FAQ                     |
-|                          |                 | - Specification (latest)  |
-|                          |                 | - Specification index     |
-|                          |                 | - Implementations         |
-|                          |                 | - Videos                  |
-|                          | Community       | - Adoptions               |
-|                          |                 | - Reporting issues        |
-|                          |                 | - Security audits         |
-|                          |                 | - Proposals               |
-|                          |                 | - Contribute              |
-|                          |                 | - Chat(CNCF Slack)        |
-|                          | News            |                           |
-|                          | Contact         |                           |
-| **Proposed TUF website** | Homepage        |                           |
-|                          | Docs            | - Overview                |
-|                          |                 | - History                 |
-|                          |                 | - Timeline                |
-|                          |                 | - Project (Tap, metadata) |
-|                          |                 | - Security audits         |
-|                          |                 | - Adoptions               |
-|                          |                 | - FAQ                     |
-|                          | Community       | - Code of conduct         |
-|                          |                 | - Learn and connect       |
-|                          |                 | - Develop and contribute  |
-|                          | Resources       | - News                    |
-|                          |                 | - Publications and press  |
-|                          |                 | - Videos                  |
-|                          |                 |                           |
+| Website                  | Section         | Subsections              |
+| ------------------------ | --------------- | ------------------------ | --- |
+| **Current TUF Website**  | Homepage        |                          |
+|                          | About           | - Overview               |
+|                          |                 | - History                |
+|                          |                 | - Timeline               |
+|                          |                 | - Project                |
+|                          |                 | - Publications           |
+|                          |                 | - Code of conduct        |
+|                          | Getting Started | - Roles and metadata     |
+|                          |                 | - FAQ                    |
+|                          |                 | - Specification (latest) |
+|                          |                 | - Specification index    |
+|                          |                 | - Implementations        |
+|                          |                 | - Videos                 |
+|                          | Community       | - Adoptions              |
+|                          |                 | - Reporting issues       |
+|                          |                 | - Security audits        |
+|                          |                 | - Proposals              |
+|                          |                 | - Contribute             |
+|                          |                 | - Chat(CNCF Slack)       |
+|                          | News            |                          |
+|                          | Contact         |                          |
+| **Proposed TUF website** | Homepage        |                          |
+|                          | Docs            | - Overview               |
+|                          |                 | - Project                |
+|                          |                 | - Enhancement proposals  |
+|                          |                 | - Metadata               |
+|                          |                 | - Getting started        |     |
+|                          |                 | - Security audits        |
+|                          |                 | - Adoptions              |
+|                          |                 | - FAQ                    |
+|                          | Community       | - Code of conduct        |
+|                          |                 | - Learn and connect      |
+|                          |                 | - Develop and contribute |
+|                          | Resources       | - News                   |
+|                          |                 | - Publications and press |
+|                          |                 | - Videos                 |
+|                          |                 |                          |
 
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119

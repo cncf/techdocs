@@ -51,6 +51,24 @@ Audience: Admin
 
 Type: Conseptual
 
+### Add introductory Video to homepage
+
+- Add a 1 minute video covering an overview of the TUF project why the project
+  matters.
+
+Audience: Admin
+
+Type: Conseptual
+
+### Add a 'Schedule and appointment' icon to the website
+
+- Create a 'Schedule an appointment' link on the website footer section. It can
+  also appear on the community page.
+
+Audience: Admin
+
+Type: Conseptual
+
 ### Introduce Instructional material for user roles
 
 Create instructional material in the _Getting Started_ section for each user
