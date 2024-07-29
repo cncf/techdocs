@@ -180,7 +180,7 @@ or provide a starting point.
   - [Events](https://keda.sh/docs/2.13/operate/events/)
   - [Firewall requirements](https://keda.sh/docs/2.13/operate/cluster/#firewall)
   - ...
-  - [FAQ](https://keda.sh/docs/2.13/faq/)
+  - [FAQ](https://keda.sh/docs/latest/faq/)
   - Glossary
 
 # Separate reference and task information
