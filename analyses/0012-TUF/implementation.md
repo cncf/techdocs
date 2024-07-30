@@ -66,13 +66,11 @@ structure:
 - **Home page**
 - **Documentation**: Overview of TUF
 
-  - Getting started: Adopters, contributors, Timeline, and History
-  - Project
-  - Metadata
-  - Enhancement proposals
+  - Overview: Metadata,Project,Security
+  - Getting started: Adopters, contributors,
+  - History
+  - Timeline
   - Adoptions
-  - Implementations
-  - Security audits
   - FAQ
 
 - **Community**: You can have two sections.
@@ -208,12 +206,12 @@ website.
 |                          | News            |                          |
 |                          | Contact         |                          |
 | **Proposed TUF website** | Homepage        |                          |
-|                          | Docs            | - Overview               |
+|                          | Docs            | - Overview:              |
 |                          |                 | - Project                |
 |                          |                 | - Enhancement proposals  |
 |                          |                 | - Metadata               |
-|                          |                 | - Getting started        |     |
 |                          |                 | - Security audits        |
+|                          |                 | - Getting started        |     |
 |                          |                 | - Adoptions              |
 |                          |                 | - FAQ                    |
 |                          | Community       | - Code of conduct        |
