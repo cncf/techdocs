@@ -3,11 +3,39 @@
 This repository holds resources provided by the CNCF Technical Documentation
 team. The repo contains the following directories:
 
-- `analysis` contains instructions, templates, and criteria for requesting and
-  performing an analysis of an OSS project's website and technical
-  documentation. Completed analyses are stored here as well.
-- `resources` contains information that OSS teams can use to set up a
-  documentation project as suggested by the TechDocs team.
+- `docs` contains collected resources for building websites and developing
+  documentation, including recommended tools and practices, how-tos, and
+  evaluation checklists. Included are specific guidelines for:
+  - Setting up and maintaining a documentation website.
+  - Writing technical documentation for a project.
+  - Getting assistance from the CNCF TechDocs community.
+  - Analyzing project documentation, for use by CNCF TechDocs staff (in
+    `docs/analysis`).
+- `analyses` (not to be confused with `docs/analysis`) contains all the
+  completed documentation analyses.
+
+## TechDocs Q&A
+
+The CNCF tech docs team holds a Zoom call to answer questions and discuss
+anything to do with documentation. Calls are held on the [fourth Wednesday of
+every month at 8am Pacific time][date-time].
+
+TechDocs Q&A (formerly called _Office Hours_) started on 30 September 2020.
+
+### Meeting link
+
+- [Zoom meeting 95471930872]
+
+### Meeting notes
+
+We store ongoing meeting notes in a
+[Google doc](https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/).
+
+## Assistance program for technical documentation
+
+The TechDocs team can help CNCF projects analyze and improve their
+documentation. For details, see the TechDocs
+[assistance program](docs/assistance.md).
 
 ## CNCF TechDocs team
 
@@ -25,34 +53,6 @@ The full-time staff of the CNCF Tech Docs team is:
 <!-- cSpell:ignore chalin nate thisisobate -->
 
 Various consultants and volunteers also contribute to CNCF Tech Docs projects.
-
-## Office hours
-
-The CNCF tech docs team holds office hours on the [fourth Wednesday of every
-month at 8am Pacific time][date-time].
-
-Office hours started on 30 September 2020.
-
-### Meeting link
-
-- [Zoom meeting 95471930872]
-
-### Meeting notes
-
-We store ongoing meeting notes in a
-[Google doc](https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/).
-
-## Assistance program for technical documentation
-
-The TechDocs team can assist CNCF projects analyze and improve their
-documentation. For details, see the TechDocs
-[assistance program](docs/assistance.md).
-
-### Resources
-
-The `docs/` directory contains collected resources for building websites and
-developing documentation, including recommended tools and practices, how-tos,
-and evaluation checklists.
 
 [date-time]:
   https://tockify.com/cncf.public.events/monthly?search=CNCF%20Tech%20Writers%20Office%20Hours
