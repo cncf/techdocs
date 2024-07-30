@@ -125,6 +125,8 @@ Contributors:
 - Create 'Schedule an appointment' link on the website. This creates an avenue
   for users to talk to community members to learn the project or seek
   clarification.
+  - Spec contributors
+  - Docs contributors
 
 ## Introduce Instructional Material
 
