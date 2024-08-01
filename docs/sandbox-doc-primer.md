@@ -14,8 +14,7 @@ The purpose of documentation is to help the user of a product achieve their
 objectives. The scope of these objectives ranges from individual tasks (use a
 command correctly, connect to a database) to large-scale goals (write a software
 product or module; configure a server farm). Objectives also vary by
-[user role](https://docs.google.com/document/d/1jEM4P_VT_jvkGbvKpZXz5DYvKW4AiIWk7Vw1X-NGpWs/edit#product-users)
-(new developer; software architect; IT administrator).
+[user role](#product-users) (new developer; software architect; IT administrator).
 
 Documentation effectiveness, therefore, is defined by _how well it enables a
 user to succeed in achieving their objectives_, within every range of scope and
@@ -50,6 +49,7 @@ A documentation topic is one of these three types, depending on its purpose:
   - user interface references
   - error code lookups
   - glossaries
+  - release notes
 
 ### Descriptive vs. instructional documentation
 
@@ -183,6 +183,9 @@ always required to make the product usable:
 - A getting started guide
 - Reference manual(s)
 
+[Here's more](https://expertsupport.com/library/quick-and-easy-document-specifications/)
+on how to determine which docs you really need.
+
 ### Where to put it
 
 At the sandbox stage, making the documentation available in some form is more
@@ -201,10 +204,14 @@ SEO, and finding contributing writers.
 For a thorough preparation in working with technical documentation, the
 following resources are available:
 
-[Open Source Documentation Essentials](https://training.linuxfoundation.org/training/open-source-technical-documentation-essentials-lfc111/)  
-[Creating Effective Documentation for Developers](https://training.linuxfoundation.org/training/creating-effective-documentation-for-developers-lfc112/)  
-(both
-are free courses offered by CNCF and the Linux Foundation).
+[Open Source Documentation Essentials](https://training.linuxfoundation.org/training/open-source-technical-documentation-essentials-lfc111/)
+and
+[Creating Effective Documentation for Developers](https://training.linuxfoundation.org/training/creating-effective-documentation-for-developers-lfc112/)
+are free courses offered by CNCF and the Linux Foundation.
+
+[Google for Developers](https://developers.google.com)
+offers
+[free technical writing courses](https://developers.google.com/tech-writing).
 
 [Docs for Developers](https://docsfordevelopers.com/) is a guide to writing
 user-oriented documentation for software engineers.
