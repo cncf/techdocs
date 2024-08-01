@@ -14,7 +14,8 @@ The purpose of documentation is to help the user of a product achieve their
 objectives. The scope of these objectives ranges from individual tasks (use a
 command correctly, connect to a database) to large-scale goals (write a software
 product or module; configure a server farm). Objectives also vary by
-[user role](#product-users) (new developer; software architect; IT administrator).
+[user role](#product-users)
+(new developer; software architect; IT administrator).
 
 Documentation effectiveness, therefore, is defined by _how well it enables a
 user to succeed in achieving their objectives_, within every range of scope and
