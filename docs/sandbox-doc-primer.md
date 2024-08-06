@@ -194,6 +194,11 @@ important than hosting it in any particular place. That said, CNCF TechDocs has
 a [number of resources](https://github.com/cncf/techdocs/tree/main/docs) for
 creating web-based documentation.
 
+CNCF TechDocs can purchase, set up, and maintain your website's domain at no
+cost to your project. Contact CNCF TechDocs through the
+[CNCF TechDocs Service Desk](https://servicedesk.cncf.io)
+to request website hosting.
+
 Even if you don't use the CNCF recommended tools, it's worth reading the
 recommendations to preview the sorts of issues you'll encounter as the
 documentation matures. These issues parallel those facing the code
