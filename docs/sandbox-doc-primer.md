@@ -14,8 +14,8 @@ The purpose of documentation is to help the user of a product achieve their
 objectives. The scope of these objectives ranges from individual tasks (use a
 command correctly, connect to a database) to large-scale goals (write a software
 product or module; configure a server farm). Objectives also vary by
-[user role](#product-users)
-(new developer; software architect; IT administrator).
+[user role](#product-users) (new developer; software architect; IT
+administrator).
 
 Documentation effectiveness, therefore, is defined by _how well it enables a
 user to succeed in achieving their objectives_, within every range of scope and
@@ -196,8 +196,8 @@ creating web-based documentation.
 
 CNCF TechDocs can purchase, set up, and maintain your website's domain at no
 cost to your project. Contact CNCF TechDocs through the
-[CNCF TechDocs Service Desk](https://servicedesk.cncf.io)
-to request website hosting.
+[CNCF TechDocs Service Desk](https://servicedesk.cncf.io) to request website
+hosting.
 
 Even if you don't use the CNCF recommended tools, it's worth reading the
 recommendations to preview the sorts of issues you'll encounter as the
@@ -215,8 +215,7 @@ and
 [Creating Effective Documentation for Developers](https://training.linuxfoundation.org/training/creating-effective-documentation-for-developers-lfc112/)
 are free courses offered by CNCF and the Linux Foundation.
 
-[Google for Developers](https://developers.google.com)
-offers
+[Google for Developers](https://developers.google.com) offers
 [free technical writing courses](https://developers.google.com/tech-writing).
 
 [Docs for Developers](https://docsfordevelopers.com/) is a guide to writing
