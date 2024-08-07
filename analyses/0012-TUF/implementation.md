@@ -186,12 +186,8 @@ The table below outlines the current information architecture(IA) of the
 [TUF website](https://theupdateframework.io/) and the proposed IA for the new
 website.
 
-The table below outlines the current information architecture(IA) of the
-[TUF website](https://theupdateframework.io/) and the proposed IA for the new
-website.
-
 | Website                  | Section         | Subsections              |
-| ------------------------ | --------------- | ------------------------ | --- |
+| ------------------------ | --------------- | ------------------------ |
 | **Current TUF Website**  | Homepage        |                          |
 |                          | About           | - Overview               |
 |                          |                 | - History                |
@@ -210,16 +206,16 @@ website.
 |                          |                 | - Security audits        |
 |                          |                 | - Proposals              |
 |                          |                 | - Contribute             |
-|                          |                 | - Chat(CNCF Slack)       |
+|                          |                 | - Chat (CNCF Slack)      |
 |                          | News            |                          |
 |                          | Contact         |                          |
-| **Proposed TUF website** | Homepage        |                          |
+| **Proposed TUF Website** | Homepage        |                          |
 |                          | Docs            | - Overview               |
 |                          |                 | - Project                |
 |                          |                 | - Enhancement proposals  |
 |                          |                 | - Metadata               |
-|                          |                 | - Getting started        |     |
 |                          |                 | - Security audits        |
+|                          |                 | - Getting started        |
 |                          |                 | - Adoptions              |
 |                          |                 | - FAQ                    |
 |                          | Community       | - Code of conduct        |
