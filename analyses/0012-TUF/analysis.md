@@ -335,7 +335,6 @@ Scale:
   to work on.
 - Information about the TUF **slack channel** is available on the website in
 - Information about the TUF **slack channel** is available on the website in
-- Information about the TUF **slack channel** is available on the website in
   areas of interest
 
 #### Communication methods documented
@@ -345,7 +344,6 @@ Scale:
   visible on the website repo README for easy access. visible on the website
   repo README for easy access.
 
-  no information about project meetings. Instead, the users are directed to join
   no information about project meetings. Instead, the users are directed to join
   the
   [Python reference implementation](https://github.com/theupdateframework/python-tuf?tab=readme-ov-file)
@@ -404,8 +402,6 @@ Scale:
 - Maintain issues, track,close and stale old issues to reduce backlog.
 - Include instructions on how to contribute to a CONTRIBUTING guideline, e.g.,
   how interest.
-- Include instructions on how to contribute to a CONTRIBUTING guideline, e.g.,
-  how interest.
 
 #### New contributor getting started content
 
@@ -448,13 +444,8 @@ Scale:
 
 - There's no guideline or tutorial to assist users in generating the website
   from 5 = Exemplary
-- There's no guideline or tutorial to assist users in generating the website
-  from 5 = Exemplary
 
 ### Summary of Issues
-
-navigation option is a menu bar. This makes it difficult to find information.
-the website repo.
 
 navigation option is a menu bar. This makes it difficult to find information.
 the website repo.
@@ -480,7 +471,6 @@ The website docs analysis is in progress.
 
 - The website follows a mobile-first design with all pages, menu's and features
   visible on smaller screens.
-- There's a recognizable brand for the project, a logo, and a blue-white color
 - There's a recognizable brand for the project, a logo, and a blue-white color
 - The website does not provide a text-to-speech option for users.
 

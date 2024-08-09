@@ -66,13 +66,11 @@ structure:
 - **Home page**
 - **Documentation**: Overview of TUF
 
-  - Getting started: Adopters, contributors, Timeline, and History
-  - Project
-  - Metadata
-  - Enhancement proposals
+  - Overview: Metadata,Project,Security
+  - Getting started: Adopters, contributors,
+  - History
+  - Timeline
   - Adoptions
-  - Implementations
-  - Security audits
   - FAQ
 
 - **Community**: You can have two sections.
@@ -182,7 +180,7 @@ notifications about meetings. I like how the
 
 ## Proposed Information Architecture for the TUF Website
 
-The table below outlines the current information architecture (IA) of the
+The table below outlines the current information architecture(IA) of the
 [TUF website](https://theupdateframework.io/) and the proposed IA for the new
 website.
 
@@ -218,8 +216,6 @@ website.
 |                          |                 | - Getting started        |
 |                          |                 | - Adoptions              |
 |                          |                 | - FAQ                    |
-|                          | Specification   | -Specification (latest)  |
-|                          |                 | - Specification index    |
 |                          | Community       | - Code of conduct        |
 |                          |                 | - Learn and connect      |
 |                          |                 | - Develop and contribute |
