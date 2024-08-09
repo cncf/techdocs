@@ -182,7 +182,7 @@ notifications about meetings. I like how the
 
 ## Proposed Information Architecture for the TUF Website
 
-The table below outlines the current information architecture(IA) of the
+The table below outlines the current information architecture (IA) of the
 [TUF website](https://theupdateframework.io/) and the proposed IA for the new
 website.
 
@@ -218,6 +218,8 @@ website.
 |                          |                 | - Getting started        |
 |                          |                 | - Adoptions              |
 |                          |                 | - FAQ                    |
+|                          | Specs           | -Specification (latest)  |
+|                          |                 | - Specification index  |
 |                          | Community       | - Code of conduct        |
 |                          |                 | - Learn and connect      |
 |                          |                 | - Develop and contribute |
