@@ -218,8 +218,8 @@ website.
 |                          |                 | - Getting started        |
 |                          |                 | - Adoptions              |
 |                          |                 | - FAQ                    |
-|                          | Specs           | -Specification (latest)  |
-|                          |                 | - Specification index  |
+|                          | Specification   | -Specification (latest)  |
+|                          |                 | - Specification index    |
 |                          | Community       | - Code of conduct        |
 |                          |                 | - Learn and connect      |
 |                          |                 | - Develop and contribute |

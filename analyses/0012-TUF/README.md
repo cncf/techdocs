@@ -1,6 +1,5 @@
 # TUF Documentation Analysis
 
-
 This section contains analysis of The Update Framework (TUF) project
 documentation. This is a [CNCF-techdocs](https://github.com/cncf/techdocs) group
 process aimed at assisting cloud-native open-source projects with their
