@@ -218,6 +218,8 @@ website.
 |                          |                 | - FAQ                    |
 |                          | Specification   | - Specification (latest) |
 |                          |                 | - Specification index    |
+|                          | Security        | - Audits                 |
+|                          |                 | - Reporting issues       |
 |                          | Community       | - Code of conduct        |
 |                          |                 | - Learn and connect      |
 |                          |                 | - Develop and contribute |
