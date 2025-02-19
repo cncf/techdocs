@@ -605,7 +605,7 @@ websites:
 <!-- markdownlint-disable line-length -->
 
 | Site                                                  | Repository                                               | Tool or Stack            |
-|-------------------------------------------------------|----------------------------------------------------------|--------------------------|
+| ----------------------------------------------------- | -------------------------------------------------------- | ------------------------ |
 | [Project website](https://litmuschaos.io/)            | https://github.com/litmuschaos/litmus-website-2          | React/Next/Tailwind/SCSS |
 | [Documentation website](https://docs.litmuschaos.io/) | https://github.com/litmuschaos/litmus-docs/              | Docusaurus/Netlify       |
 | Tutorials                                             | https://github.com/litmuschaos/tutorials                 | Google Codelab?          |
