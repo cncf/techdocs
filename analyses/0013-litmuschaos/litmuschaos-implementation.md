@@ -133,7 +133,7 @@ There are at least four "getting started" links on the website.
 | _Get Started_ button        | [Doc landing page](https://docs.litmuschaos.io/)             | [ChaosCenter installation](https://docs.litmuschaos.io/docs/getting-started/installation)                 |
 | _Getting Started_ link      | [Doc landing page](https://docs.litmuschaos.io/)             | [What is Litmus?](https://docs.litmuschaos.io/docs/introduction/what-is-litmus)                           |
 | _Getting Started_ TOC entry | [Doc page](https://docs.litmuschaos.io/docs/) left-side menu | [ChaosCenter installation](https://docs.litmuschaos.io/docs/getting-started/installation)                 |
-| _Getting started_ tutorial  | Tutorial site    | [Getting started tutorial](https://litmuschaos.github.io/tutorials/tutorial-getting-started/index.html#0) |
+| _Getting started_ tutorial  | Tutorial site                                                | [Getting started tutorial](https://litmuschaos.github.io/tutorials/tutorial-getting-started/index.html#0) |
 
 <!-- markdownlint-enable line-length -->
 
