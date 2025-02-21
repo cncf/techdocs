@@ -1,25 +1,44 @@
 # Assessment criteria and examples
 
+We recommend reading the
+[CNCF sandbox project documentation primer](../sandbox-doc-primer.md)
+before reviewing these criteria. The primer contains key definitions concepts
+that are referred to in the criteria.
+
 ## Project documentation
 
 ### Information architecture
 
-The overall structure (pages/subpages/sections/subsections) of your project
-documentation. We evaluate on the following:
+How your technical information is organized, laid out, and presented.
+This includes structure (pages/subpages/sections/subsections), information
+types (conceptual/instructional/reference), and matching documentation
+content
+to user expectations.
 
-- Is there high level conceptual/“About” content? Is the documentation feature
-  complete? (i.e., each product feature is documented)
-- Are there step-by-step instructions (tasks, tutorials) documented for
-  features?
-- Are there any key features which are documented but missing task
-  documentation?
-- Is the “happy path”/most common use case documented? Does task and tutorial
-  content demonstrate atomicity and isolation of concerns? (Are tasks clearly
-  named according to user goals?)
+We evaluate on the following:
+
+- Is there high level conceptual/“About” content?
+- Is the documentation feature-complete? (i.e., every product feature is
+  documented)
+- Does the documentation define all user roles (personas) for the product?
+- Are there instructions (tasks, tutorials) documented for features?
+- Are there instructions for all major use cases for each user role?
+- Are tasks organized by user role and use case?
+- Does instructional content demonstrate atomicity — are individual tasks
+  clearly named according to their goals?
+- Are tasks written as numbered step-by-step instructions?
+- Do task descriptions in headings and the TOC describe the task with a verb
+  phrase?
+- Is the documentation free of any key features which are documented but missing
+  task documentation?
+- Is the “happy path” — the most common use case — documented?
 - If the documentation does not suffice, is there a clear escalation path for
-  users needing more help? (FAQ, Troubleshooting)
+  users needing more help?
 - If the product exposes an API, is there a complete reference?
+- If the product has CLIs, are there complete references?
 - Is content up to date and accurate?
+- Does the documentation separate conceptual, instructional, and reference
+  information?
 
 Example:
 
@@ -27,12 +46,17 @@ Example:
 
 ### New user content
 
-New users are the most avid users of documentation, and need content
-specifically for them. We evaluate on the following:
+New users are the most avid users of documentation and they have unique
+documentation needs.
+
+We evaluate on the following:
 
 - Is “getting started” clearly labeled? (“Getting started”, “Installation”,
-  “First steps”, etc.)
+  “First steps”, or the equivalent.)
+- Is there a “getting started” path for all user roles?
 - Is installation documented step-by-step?
+- Are different types of installation documented (development, test, production)
+  if necessary?
 - If needed, are multiple OSes documented?
 - Do users know where to go after reading the getting started guide?
 - Is your new user content clearly signposted on your site’s homepage or at the
@@ -49,14 +73,22 @@ Example:
 ### Content maintainability & site mechanics
 
 As a project scales, concerns like localized (translated) content and versioning
-become large maintenance burdens, particularly if you don’t plan for them.
+become large maintenance burdens if you don’t plan for them.
 
 We evaluate on the following:
 
 - Is your documentation searchable?
-- Are you planning for localization/internationalization with regards to site
-  directory structure? Is a localization framework present?
+- Are you planning for localization/internationalization as regards site
+  directory structure?
+- Is a localization framework present?
 - Do you have a clearly documented method for versioning your content?
+- Is release-specific information documented in release notes?
+- Is the documentation free of duplicate or nearly duplicated sections of
+  information?
+- Do informational graphics add value by providing information in a way that 
+  would be difficult in text?
+- Will graphics require frequent modifications due to software changes, GUI
+  updates, or translation?
 
 Example:
 
@@ -64,7 +96,7 @@ Example:
 
 ### Content creation processes
 
-Documentation is only as useful as it is accurate and well-maintained, and
+Documentation is only useful if it is accurate and well maintained. It
 requires the same kind of review and approval processes as code.
 
 We evaluate on the following:
@@ -101,11 +133,11 @@ to reach you.
 
 We evaluate on the following:
 
-- Is there a Slack/Discord/Discourse/etc. community and is it prominently linked
+- Is there a Slack/Discord/Discourse or equivalent community prominently linked
   from your website?
-- Is there a direct link to your GitHub organization/repository?
-- Are weekly/monthly project meetings documented? Is it clear how someone can
-  join those meetings?
+- Is there a direct link to your GitHub project or repository?
+- Can users find and join periodic (weekly or monthly) project meetings, if
+  applicable?
 - Are mailing lists documented?
 
 Example:
@@ -136,8 +168,9 @@ in easily?
 We evaluate on the following:
 
 - Do you have a community repository or section on your website?
-- Is there a document specifically for new contributors/your first contribution?
-- Do new users know where to get help?
+- Is there a document specifically welcoming new contributors and documenting a
+  first contribution process?
+- Can new users find where to get help?
 
 Example:
 
@@ -174,48 +207,32 @@ Alternatively, files should be brought into the website repo via
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
 
+We evaluate on the following:
+
+- Does the project have a single source for documentation? If not, is there a
+  reason?
+
 ### Minimal website requirements
 
 Listed here are the _minimal_ website requirements for projects based on their
-[maturity level][]: sandbox, incubating, graduated and archived.
+[maturity level]: sandbox, incubating, graduated and archived.
 
 Except for archived projects, requirements are cumulative through project
-maturity levels so, for example, incubating projects must satisfy the
-requirements for sandbox projects.
+maturity levels. So, for example, graduated projects must satisfy the
+requirements for incubating projects.
 
-- **Sandbox**
-  - [Website guidelines](../website-guidelines-checklist.md): a majority of the
-    guidelines are satisfied
-  - **Project documentation** may or may not be present -- it is acceptable at
-    this maturity level to link out to documentation that hasn't yet been
-    integrated into the website
-    - _Example_: website with a single homepage, without any documentation or,
-      as was mentioned above, linking out to an external (preexisting) source
-      for docs
-    - _However_: consider reading the recommended practices in this repository
-      and implementing as many of the best practices as you can. This groundwork
-      will pay big dividends later when you need to upgrade your practices and
-      update your documentation as an incubating project. Assistance is
-      available from CNCF TechDocs anytime, including answers to individual
-      questions or a documentation workshop.
-- **Incubating**
-  - [Website guidelines][]: all guidelines are satisfied.
-  - [Docs assessment][]: request an (re-)assessment through the CNCF [service
-    desk][]
-  - **Project documentation**:
-    - Stakeholders / personas are identified and their core needs (in terms of
-      docs) documented
-    - Hosted directly on the website (also see [Single-source requirement])
-    - Comprehensive, addressing most stakeholder needs
-- **Graduated**
-  - [Docs assessment][]: follow-through actions from any assessment are complete
-  - **Project documentation** fully addresses the needs of key stakeholders
-- **Archived**
-  - The website repo is in an [archived state][]
-  - The archived status of the project must be obvious to those visiting the
-    website, such as through the use of a prominent banner.
-  - If a successor project exists, link to its website and/or migration
-    documentation.
+We evaluate on the following:
+
+- Incubating: Are all [website guidelines][] satisfied? Graduated: Are all
+  guidelines satisfied?
+- Incubating: Was a [docs assessment][] requested through CNCF service desk?
+  Graduated: All follow-up actions addressed?
+- Incubating: User roles identified and doc needs documented? Graduated: All
+  stakeholder need identified?
+- Incubating: Website hosted directly? Graduated: Hosted directly?
+- Incubating: Is the [docs assessment][] comprehensive, addressing most
+  stakeholder needs? Graduated: Fully addresses needs of key stakeholders?
+
 
 [archived state]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
@@ -232,16 +249,23 @@ Most CNCF websites are accessed from mobile and other non-desktop devices at
 least 10-20% of the time. Planning for this early in your website's design will
 be much less effort than retrofitting a desktop-first design.
 
+We evaluate on the following:
+
 - Is the website usable from mobile?
 - Are doc pages readable?
-- Are all / most website features accessible from mobile -- such as the top-nav,
-  site search and in-page table of contents?
+- Are all or most website features accessible from mobile -- such as the
+  top-nav, site search, and in-page table of contents?
 - Might a [mobile-first] design make sense for your project?
+- Are color contrasts significant enough for color-impaired readers?
+- Are most website features usable using a keyboard only?
+- Does text-to-speech offer listeners a good experience?
 
 [mobile-first]:
   https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
 
-Plan for suitable [accessibility][] measures for your website. For example:
+Plan for suitable [accessibility] measures for your website. For example:
+
+We evaluate on the following:
 
 - Are color contrasts significant enough for color-impaired readers?
 - Are most website features usable using a keyboard only?
@@ -258,8 +282,8 @@ this is branding and marketing.
 
 We evaluate on the following:
 
-- Is there an easily recognizable brand for the project (logo + color scheme)
-  clearly identifiable?
+- Is there an easily recognizable brand for the project (logo, font, and color
+  scheme) clearly identifiable?
 - Is the brand used across the website consistently?
 - Is the website’s typography clean and legible?
 
@@ -274,7 +298,8 @@ organizations using it.
 
 We evaluate on the following:
 
-- Are there case studies available for the project and are they documented on
+- Are there case studies available for the project and are they documented
+  on
   the website?
 - Are there user testimonials available?
 - Is there an active project blog?
@@ -329,3 +354,4 @@ Example:
 
 - Is your website accessible via HTTPS?
 - Does HTTP access, if any, redirect to HTTPS?
+- Are links to external websites or applications working and current?
