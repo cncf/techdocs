@@ -30,8 +30,9 @@ This document was written to analyze the current state of LitmusChaos
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 [implementation] document outlines an actionable plan for improvement. A third
-document is an [issues list] of issues to be added to the project documentation repository.
-These issues can be taken up by contributors to improve the documentation.
+document is an [issues list] of issues to be added to the project documentation
+repository. These issues can be taken up by contributors to improve the
+documentation.
 
 This document:
 
@@ -172,9 +173,9 @@ installation, configuration, and running a "first-time" experiment.
 - Formatting and organization of the instructions is inconsistent.
 - Some minor functionality does not have complete step-by-step instructions. For
   example, a link in the instructions to connect an external delegate in
-  _Schedule a chaos scenario_
-  point to the `litmusctl` reference. While relevant, this is not the same as
-  explicit instructions for connecting to a delegate.
+  _Schedule a chaos scenario_ point to the `litmusctl` reference. While
+  relevant, this is not the same as explicit instructions for connecting to a
+  delegate.
 
 <!-- markdownlint-enable line-length -->
 
@@ -604,12 +605,12 @@ websites:
 
 <!-- markdownlint-disable line-length -->
 
-| Site      | Repository                                               | Tool or Stack            |
-|-----------| -------------------------------------------------------- | ------------------------ |
-| [Project website](https://litmuschaos.io/) | https://github.com/litmuschaos/litmus-website-2          | React/Next/Tailwind/SCSS |
+| Site                                                  | Repository                                               | Tool or Stack            |
+| ----------------------------------------------------- | -------------------------------------------------------- | ------------------------ |
+| [Project website](https://litmuschaos.io/)            | https://github.com/litmuschaos/litmus-website-2          | React/Next/Tailwind/SCSS |
 | [Documentation website](https://docs.litmuschaos.io/) | https://github.com/litmuschaos/litmus-docs/              | Docusaurus/Netlify       |
-| Tutorials | https://github.com/litmuschaos/tutorials                 | Google Codelab?          |
-| [APIs][api-site] | https://github.com/litmuschaos/litmus/tree/master/mkdocs | MkDocs                   |
+| Tutorials                                             | https://github.com/litmuschaos/tutorials                 | Google Codelab?          |
+| [APIs][api-site]                                      | https://github.com/litmuschaos/litmus/tree/master/mkdocs | MkDocs                   |
 
 <!-- markdownlint-enable line-length -->
 

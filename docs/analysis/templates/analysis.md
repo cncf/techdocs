@@ -46,8 +46,8 @@ This document was written to analyze the current state of _PROJECT_
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second [impementation]
 document, , outlines an actionable plan for improvement. A third document is an
-[issues list] of issues to be added to the project documentation repository. These
-issues can be taken up by contributors to improve the documentation.
+[issues list] of issues to be added to the project documentation repository.
+These issues can be taken up by contributors to improve the documentation.
 
 This document:
 
@@ -61,23 +61,23 @@ The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
 _PROJECT_ GitHub repository.
 
-The _PROJECT_ website and documentation are written in [Markdown,
-ReStructured Text, other] and are compiled using the [Hugo, Docusaurus,
-Sphynx, other] static site generator with the [Docsy, other] theme and served from
-[the Netlify platform, other]. The site's code is stored on the _PROJECT_ GitHub
-repo.
+The _PROJECT_ website and documentation are written in [Markdown, ReStructured
+Text, other] and are compiled using the [Hugo, Docusaurus, Sphynx, other] static
+site generator with the [Docsy, other] theme and served from [the Netlify
+platform, other]. The site's code is stored on the _PROJECT_ GitHub repo.
 
 #### In scope
 
 - Website: _PROJECT-WEBSITE_
 - Documentation: _PROJECT-DOC-URL_
 - Website repo: _PROJECT-DOC-REPO_
-- _[Other; might include a demo server, governance site, or other relevant repositories]_
+- _[Other; might include a demo server, governance site, or other relevant
+  repositories]_
 
 #### Out of scope
 
-- Other _PROJECT_ repos: _[In general, do not include sub-projects or
-  related "ecosystem" projects]_
+- Other _PROJECT_ repos: _[In general, do not include sub-projects or related
+  "ecosystem" projects]_
 
 ### How this document is organized
 
