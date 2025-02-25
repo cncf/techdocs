@@ -4,12 +4,10 @@ tags: LitmusChaos
 created: 2024-08-02
 modified: 2024-10-09
 author: Dave Welsch (@dwelsch-esi)
+cSpell:ignore: Docusaurus rfc OSes pastable impl servicedesk md
 ---
 
-<!-- markdownlint-enable line-length -->
-<!-- cSpell:ignore Docusaurus rfc OSes pastable impl servicedesk md -->
-
-<!-- markdownlint-disable no-duplicate-heading -->
+<!-- markdownlint-disable no-duplicate-heading no-bare-urls -->
 
 ## Introduction
 
@@ -63,9 +61,9 @@ GitHub repo.
 
 #### Out of scope
 
-- Other LitmusChaos repos: <https://github.com/litmuschaos/>\*
+- Other LitmusChaos repos: <https://github.com/litmuschaos/>
 - Litmus Software (a completely unrelated company and product based in
-  Massachusetts): https://litmus.com/*
+  Massachusetts): <https://litmus.com/>
 
 ### How this document is organized
 
@@ -293,7 +291,7 @@ complete. For complex procedures, it's OK to link to sub-procedures or (usually
 better) put preliminary tasks in the Prerequisites section.
 
 Ensure that installation, setup, and verification have a clear, linked path for
-each user role. See [New user content](#New-user-content) below.
+each user role. See [New user content](#new-user-content) below.
 
 Organize the User Guide by task. Some of the tasks will align with the current
 function-based organization, but some will not. If necessary, split it into two

@@ -23,10 +23,10 @@ things. Few recommendations here are meant to be prescriptive. Rather,
 recommendations are based on documentation best practices as understood by the
 reviewers. The recommended implementations represent the reviewers' experience
 with how to apply those best practices. In other words, borrowing terminology
-from the lexicon of [RFCs][rfc-keywords], the changes described here should be
-understood as "recommended" or "should" at the strongest, and "optional" or
-"may" in many cases. Any "must" or "required" actions are clearly denoted as
-such, and pertain to legal requirements such as copyright and licensing issues.
+from the lexicon of [RFCs][], the changes described here should be understood as
+"recommended" or "should" at the strongest, and "optional" or "may" in many
+cases. Any "must" or "required" actions are clearly denoted as such, and pertain
+to legal requirements such as copyright and licensing issues.
 
 ## Implementation
 
@@ -129,7 +129,7 @@ There are at least four "getting started" links on the website.
 
 | Link                        | Location                                                     | Refers to                                                                                                 |
 | --------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------- |
-| _Get Started_ button        | [Product landing page](https://litmuschaos.io/)              | [GitHub repo]()                                                                                           |
+| _Get Started_ button        | [Product landing page](https://litmuschaos.io/)              | [GitHub repo](https://github.com/litmuschaos/litmus)                                                      |
 | _Get Started_ button        | [Doc landing page](https://docs.litmuschaos.io/)             | [ChaosCenter installation](https://docs.litmuschaos.io/docs/getting-started/installation)                 |
 | _Getting Started_ link      | [Doc landing page](https://docs.litmuschaos.io/)             | [What is Litmus?](https://docs.litmuschaos.io/docs/introduction/what-is-litmus)                           |
 | _Getting Started_ TOC entry | [Doc page](https://docs.litmuschaos.io/docs/) left-side menu | [ChaosCenter installation](https://docs.litmuschaos.io/docs/getting-started/installation)                 |
@@ -160,9 +160,10 @@ be its own page.
 
 Ensure that installation, setup, and verification have a clear workflow. If
 these instructions vary significantly between user roles, write a separate
-workflow for each user role. See [New user content](#new-user-content) below.
-Rename "Learn more" at the end of procedures and tasks to "Next steps". Explain
-who would want to do each item and why in a short paragraph.
+workflow for each user role. See
+[New user content](litmuschaos-analysis.md#new-user-content). Rename "Learn
+more" at the end of procedures and tasks to "Next steps". Explain who would want
+to do each item and why in a short paragraph.
 
 Limit on-site search to the current version of the documentation.
 
@@ -252,3 +253,5 @@ Consider adding links from the graphic elements on the project landing page.
 Update or remove the CNCF announcement in the banner menu Community drop-down.
 
 Implement analytics.
+
+[RFCs]: https://www.rfc-editor.org/rfc/rfc2119

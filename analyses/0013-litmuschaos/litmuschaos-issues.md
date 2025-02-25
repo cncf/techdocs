@@ -3,6 +3,8 @@ title: Litmus Chaos Issue
 tags: Litmus Chaos
 ---
 
+<!-- markdownlint-disable line-length no-duplicate-heading no-bare-urls no-emphasis-as-heading -->
+
 This document contains a list of issues to be entered in the Litmus Chaos
 documentation repo more or less verbatim.
 
