@@ -195,7 +195,7 @@ Criteria
   - Letting new users know where to get help
 
 - Complete the governance work started here:
-  https://github.com/notaryproject/notaryproject/issues/55
+  <https://github.com/notaryproject/specifications/issues/55>
   https://github.com/notaryproject/notaryproject/pull/78, and add it to a
   governance page (or section) on the website.
 
@@ -215,7 +215,7 @@ developed?
 - [ ] Develop a
       [maintainers list](https://github.com/notaryproject/notaryproject.dev/blob/main/.github/settings.yml)
       for the documentation and its repository (this has been started
-      https://github.com/notaryproject/notaryproject/issues/77)
+      https://github.com/notaryproject/specifications/issues/77)
 - [ ] Develop a maintenance plan for the documentation and its repository
 - [ ] Follow the
       [CNCF website guidelines checklist](../docs/website-guidelines-checklist.md)
