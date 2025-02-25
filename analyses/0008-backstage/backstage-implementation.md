@@ -1,12 +1,13 @@
 ---
 title: Implementing Backstage Doc Improvements
 tags: backstage
+cSpell:ignore: rigeur runbooks toolkits
 ---
 
 # Introduction
 
 This document provides actionable suggestions for improving the Backstage
-technical documentaiton.
+technical documentation.
 
 For an analysis and general discussion of recommendations on Backstage technical
 documentation, see [backstage-analysis.md][backstage-analysis]].
@@ -142,7 +143,7 @@ The following artifacts should be written and made findable for administrators.
    - Install and configure Backstage plugins
    - Manage the many software dependencies for Backstage and its plugins
    - Maintain the Backstage database
-   - Upgrade and downgrade the Backstage release verison
+   - Upgrade and downgrade the Backstage release version
    - Troubleshoot common problems
    - Tune server performance
 
@@ -153,7 +154,7 @@ The following artifacts should be written and made findable for developers.
 1. A getting started guide for developers. Provide a clear work path that
    describes how to:
 
-   1. Downloead and install any necessary software components
+   1. Download and install any necessary software components
    1. Integrate Backstage with an existing development environment
 
 1. A User Guide for developers. Provide clear instructions for these tasks:
@@ -173,7 +174,7 @@ issues. For integrators, at a high level, a program should be undertaken to:
 1. Organize integrator tasks from most basic and common (write a simple plugin;
    decide between backend and frontend plugin) to more complex (integrate with
    external systems; use a proxy; implement authentication).
-2. Where possible, using the exisitng documentation as a starting point, write
+2. Where possible, using the existing documentation as a starting point, write
    step-by-step procedures for discrete integration tasks (starting with how to
    write a basic plugin).
 3. Organize existing reference and conceptual information (such as API

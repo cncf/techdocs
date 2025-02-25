@@ -98,10 +98,10 @@ on: - Localization / Internationalization
 The folder based method of versioning can make the website code more complex.
 
 One of the things that make this an interesting example is how Batard (2020,
-L8-L18)<sup>[2](#footnote2)</sup> manages the navigation in the
-`/site/layouts/docs/versions.html` file, particularly the use of the `replace`
-function to ensure that when the links in the dropdown menu are built, the
-versioned links reflect the currently loaded page:
+L8-L18)[^2] manages the navigation in the `/site/layouts/docs/versions.html`
+file, particularly the use of the `replace` function to ensure that when the
+links in the dropdown menu are built, the versioned links reflect the currently
+loaded page:
 
 [velero.io](https://velero.io/) `/site/layouts/docs/versions.html`
 
@@ -120,7 +120,7 @@ versioned links reflect the currently loaded page:
 </div>
 ```
 
-Batard (2020, L8-L18)<sup>[2](#footnote2)</sup>
+Batard (2020, L8-L18)[^2]
 
 Folder based versioning can make site _configuration_ less complex.
 
@@ -137,7 +137,7 @@ velero.io `velero/site/config.yaml`
     ⋮
 ```
 
-Brubaker et al. (2020, L14-L20)<sup>[3](#footnote3)</sup>
+Brubaker et al. (2020, L14-L20)[^3]
 
 ### Subdomain based
 
@@ -177,7 +177,7 @@ configuration:
 </div>
 ```
 
-Pursley et al. (2020, L4-L9)<sup>[4](#footnote4)</sup>
+Pursley et al. (2020, L4-L9)[^4]
 
 The dropdown example is made simpler because the config is more complex and
 because the server setup is more complex.
@@ -200,7 +200,7 @@ docsbranch = "release-1.19"
 url = "https://v1-19.docs.kubernetes.io"
 ```
 
-Bannister et al. (2020, L180-L192)<sup>[1](#footnote1)</sup>
+Bannister et al. (2020, L180-L192)[^1]
 
 ## Summary
 
@@ -221,25 +221,29 @@ method is likely the best method to balance versioning considerations.
 
 ## References / Credits
 
-<a name="footnote1">1</a>: [Bannister, T.](https://github.com/sftim) et al.
-(2020, December 23). kubernetes/website. GitHub. Retrieved February 2, 2021 from
-[https://github.com/kubernetes/website/blob/ 7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml](https://github.com/kubernetes/website/blob/7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml)
+[^1]:
+    [Bannister, T.](https://github.com/sftim) et al. (2020, December 23).
+    kubernetes/website. GitHub. Retrieved February 2, 2021 from
+    [https://github.com/kubernetes/website/blob/ 7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml](https://github.com/kubernetes/website/blob/7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml)
 
-<a name="footnote2">2</a>: [Batard, T.](https://github.com/tbatard) (2020,
-August 13). _vmware-tanzu/velero_. GitHub. Retrieved January 19, 2021 from
-[https://github.com/vmware-tanzu/velero/blob/ db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html](https://github.com/vmware-tanzu/velero/blob/db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html)
+[^2]:
+    [Batard, T.](https://github.com/tbatard) (2020, August 13).
+    _vmware-tanzu/velero_. GitHub. Retrieved January 19, 2021 from
+    [https://github.com/vmware-tanzu/velero/blob/ db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html](https://github.com/vmware-tanzu/velero/blob/db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html)
 
-<a name="footnote3">3</a>: [Brubaker, N.](https://github.com/nrb),
-[Rosland, J.](https://github.com/jonasrosland),
-[Thompson, C.](https://github.com/carlisia),
-[Batard, T.](https://github.com/tbatard) (2020, September 16).
-_vmware-tanzu/velero_. GitHub. Retrieved February 2, 2021 from
-[https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml](https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml)
+[^3]:
+    [Brubaker, N.](https://github.com/nrb),
+    [Rosland, J.](https://github.com/jonasrosland),
+    [Thompson, C.](https://github.com/carlisia),
+    [Batard, T.](https://github.com/tbatard) (2020, September 16).
+    _vmware-tanzu/velero_. GitHub. Retrieved February 2, 2021 from
+    [https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml](https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml)
 
-<a name="footnote4">4</a>: [Pursley, B.](https://github.com/brianpursley),
-[Horgan, C.](https://github.com/celestehorgan), Takahashi, S. (2020, July 21).
-_kubernetes/website_. GitHub. Retrieved February 2, 2021 from
-[https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html](https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html)
+[^4]:
+    [Pursley, B.](https://github.com/brianpursley),
+    [Horgan, C.](https://github.com/celestehorgan), Takahashi, S. (2020, July
+    21). _kubernetes/website_. GitHub. Retrieved February 2, 2021 from
+    [https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html](https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html)
 
 ---
 

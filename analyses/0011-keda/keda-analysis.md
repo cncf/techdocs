@@ -1,10 +1,9 @@
 ---
 title: KEDA Documentation Analysis
-tags: kdeda
 created: 2024-02-23
 modified: 2024-04-09
 author: Dave Welsch (@dwelsch-esi)
-cSpell:ignore: Welsch dwelsch pastable
+cSpell:ignore: Welsch dwelsch pastable servicedesk
 ---
 
 # Introduction
@@ -383,9 +382,9 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 ### Single-source requirement
 
 Source files for all website pages reside in a **single repo**. However, some
-user documentation pages (speciifically, "Getting started" topics linked from
-the main (kedacore/keda) repo) would better serve users if they were moved to
-the tech docs on the website.
+user documentation pages (specifically, "Getting started" topics linked from the
+main (kedacore/keda) repo) would better serve users if they were moved to the
+tech docs on the website.
 
 Website files are all in the website repo.
 
@@ -403,7 +402,7 @@ sandbox, incubating, graduated and archived.
 | Maturity   | Requirement                                                                                                                                                                                                                  | Met?                                |
 | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
 | Sandbox    | Majority of [Website guidelines](../../docs/website-guidelines-checklist.md) satisfied                                                                                                                                       | Yes                                 |
-| Sandbox    | [Docs assessment](../../docs/analysis/howto.md) [cncf-servicedesk] completed.                                                                                                                                                | Yes                                 |
+| Sandbox    | [Docs assessment](../../docs/analysis/howto.md) [CNCF-servicedesk] completed.                                                                                                                                                | Yes                                 |
 | Sandbox    | **Project documentation** exists – somewhere. It is acceptable at this maturity level to link out to documentation that hasn't yet been integrated into the website. (May still be in the project GitHub repo, for example.) | Yes                                 |
 | Incubating | All [Website guidelines](../../docs/analysis/criteria.md#website) satisfied                                                                                                                                                  | Yes                                 |
 | Incubating | Request docs (re-)assessment through CNCF [service desk](https://servicedesk.cncf.io/)                                                                                                                                       | Yes                                 |
@@ -538,3 +537,5 @@ Explicitly list and solicit maintainers and contributors for documentation.
 No recommendations.
 
 <!--- References --->
+
+[CNCF-servicedesk]: https://servicedesk.cncf.io
