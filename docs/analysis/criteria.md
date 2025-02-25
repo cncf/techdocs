@@ -1,19 +1,18 @@
 # Assessment criteria and examples
 
 We recommend reading the
-[CNCF sandbox project documentation primer](../sandbox-doc-primer.md)
-before reviewing these criteria. The primer contains key definitions concepts
-that are referred to in the criteria.
+[CNCF sandbox project documentation primer](../sandbox-doc-primer.md) before
+reviewing these criteria. The primer contains key definitions concepts that are
+referred to in the criteria.
 
 ## Project documentation
 
 ### Information architecture
 
-How your technical information is organized, laid out, and presented.
-This includes structure (pages/subpages/sections/subsections), information
-types (conceptual/instructional/reference), and matching documentation
-content
-to user expectations.
+How your technical information is organized, laid out, and presented. This
+includes structure (pages/subpages/sections/subsections), information types
+(conceptual/instructional/reference), and matching documentation content to user
+expectations.
 
 We evaluate on the following:
 
@@ -85,7 +84,7 @@ We evaluate on the following:
 - Is release-specific information documented in release notes?
 - Is the documentation free of duplicate or nearly duplicated sections of
   information?
-- Do informational graphics add value by providing information in a way that 
+- Do informational graphics add value by providing information in a way that
   would be difficult in text?
 - Will graphics require frequent modifications due to software changes, GUI
   updates, or translation?
@@ -96,8 +95,8 @@ Example:
 
 ### Content creation processes
 
-Documentation is only useful if it is accurate and well maintained. It
-requires the same kind of review and approval processes as code.
+Documentation is only useful if it is accurate and well maintained. It requires
+the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
@@ -233,7 +232,6 @@ We evaluate on the following:
 - Incubating: Is the [docs assessment][] comprehensive, addressing most
   stakeholder needs? Graduated: Fully addresses needs of key stakeholders?
 
-
 [archived state]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
 [docs assessment]: ./howto.md
@@ -298,8 +296,7 @@ organizations using it.
 
 We evaluate on the following:
 
-- Are there case studies available for the project and are they documented
-  on
+- Are there case studies available for the project and are they documented on
   the website?
 - Are there user testimonials available?
 - Is there an active project blog?
