@@ -141,8 +141,8 @@ or provide a starting point.
       [Disabling Keep-alive](https://keda.sh/docs/2.13/operate/cluster/#http-connection-disable-keep-alive)
       [Using HTTP Proxies](https://keda.sh/docs/2.13/operate/cluster/#http-proxies)
       [Configuring Minimum TLS Version]
-  - [Integrating with OpenTelemetry Collector (Experimental)](https://keda.sh/docs/2.13/operate/opentelemetry/)
-  - [Integrating with Prometheus](https://keda.sh/docs/2.13/operate/prometheus/)
+  - [Integrating with OpenTelemetry Collector (Experimental)](https://keda.sh/docs/2.13/integrations/opentelemetry/)
+  - [Integrating with Prometheus](https://keda.sh/docs/2.13/integrations/prometheus/)
   - [Using the KEDA Metrics Server](https://keda.sh/docs/2.13/operate/metrics-server/)
     - [Querying Metrics](https://keda.sh/docs/2.13/operate/metrics-server/#querying-metrics-exposed-by-keda-metrics-server)
     - [Getting Metric Names](https://keda.sh/docs/2.13/operate/metrics-server/#how-to-get-metric-names-from-scaledobject)
@@ -211,7 +211,7 @@ some judgement might be required to rearrange things.
 | Troubleshooting                                        | https://keda.sh/docs/2.13/concepts/troubleshooting/     | Remove this troubleshooting information and combine it with the troubleshooting section under "The KEDA Documentation".                                                                                                                                                         |
 | Cluster                                                | https://keda.sh/docs/2.13/operate/cluster/              | See the "Update the Operator Guide" issue                                                                                                                                                                                                                                       |
 | Events                                                 | https://keda.sh/docs/2.13/operate/events/               | This is reference information.                                                                                                                                                                                                                                                  |
-| Integrate with Prometheus                              | https://keda.sh/docs/2.13/operate/prometheus/           | Split this into a task ("Integrating with Prometheus" and a reference "Metrics Exported to Prometheus".                                                                                                                                                                         |
+| Integrate with Prometheus                              | https://keda.sh/docs/2.13/integrations/prometheus/      | Split this into a task ("Integrating with Prometheus" and a reference "Metrics Exported to Prometheus".                                                                                                                                                                         |
 
 # Write a Glossary
 
