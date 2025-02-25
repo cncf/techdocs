@@ -12,8 +12,8 @@ The goals of a CNCF technical documentation analysis are to:
 
 - Examine the current project technical documentation and website against the
   CNCF's analysis [criteria].
-- Compare the documentation against the current or proposed [project
-  maturity level].
+- Compare the documentation against the current or proposed [project maturity
+  level].
 - Recommend a program of key documentation improvements with the largest return
   on investment. These improvements are documented as _recommendations_ in the
   analysis document, and expanded in a companion

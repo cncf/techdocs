@@ -109,8 +109,8 @@ Here is a proposed outline for the tech doc Table of Contents:
   - https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility
   - https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity
   - https://keda.sh/docs/2.13/operate/cluster/#firewall
-  - [Integrating with OpenTelemetry Collector (Experimental)](https://keda.sh/docs/2.13/operate/opentelemetry/)
-  - [Integrating with Prometheus](https://keda.sh/docs/2.13/operate/prometheus/)
+  - [Integrating with OpenTelemetry Collector (Experimental)](https://keda.sh/docs/2.13/integrations/opentelemetry/)
+  - [Integrating with Prometheus](https://keda.sh/docs/2.13/integrations/prometheus/)
   - [Using the KEDA Metrics Server](https://keda.sh/docs/2.13/operate/metrics-server/)
     - [Querying Metrics](https://keda.sh/docs/2.13/operate/metrics-server/#querying-metrics-exposed-by-keda-metrics-server)
     - [Getting Metric Names](https://keda.sh/docs/2.13/operate/metrics-server/#how-to-get-metric-names-from-scaledobject)

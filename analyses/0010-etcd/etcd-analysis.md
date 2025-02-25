@@ -313,8 +313,8 @@ For example:
 - [installation check][install-check]: contains "sanity check", a term
   designated "Strongly Consider Replacing" by the [Inclusive Naming
   Initiative][inclusive-naming].
-- There is some use of language like "easy", "simple", and "just [take
-  an action]"; for example, "Creating a user is as easy as" in
+- There is some use of language like "easy", "simple", and "just [take an
+  action]"; for example, "Creating a user is as easy as" in
   [Role-based access control](https://etcd.io/docs/v3.5/op-guide/authentication/rbac/).
 
 ## Recommendations

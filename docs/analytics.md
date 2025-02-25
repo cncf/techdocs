@@ -33,8 +33,8 @@ process below. Adapt it to your needs. Useful resources to consider include:
 In preparation for the migration, follow these steps:
 
 1. **Create an issue** over your project's website with the title "Migrate to
-   Google Analytics 4 (GA4)", and link to [Issue #108][]. For example, see the issues
-   opened for the pilot projects listed in #108.
+   Google Analytics 4 (GA4)", and link to [Issue #108][]. For example, see the
+   issues opened for the pilot projects listed in #108.
 
 2. Determine which **analytics library** your project's website is using.
 
@@ -69,8 +69,8 @@ Follow these steps:
 
     How you switch will depend on the static-site generation tooling you use.
     For details, see [Stage 2][]. If you know how to switch and it is easy to do
-    so, then switch your project to [gtag.js][], otherwise defer the switch to [stage
-    2][].
+    so, then switch your project to [gtag.js][], otherwise defer the switch to
+    [stage 2][].
 
 2.  **Open the analytics console** of your project's UA property by visiting
     [analytics.google.com](https://analytics.google.com).
@@ -179,9 +179,9 @@ code (such as custom Hugo partials) to enable GA4, consider removing the custom
 code in favor of the native support provided by your site-generator tooling.
 
 For example, for [Docsy][]-based websites, all you need to do is provide your
-project's GA4 measurement ID. Details are provided in [Adding Analytics][]. Of course,
-this may require you to upgrade the version of [Docsy][] and/or Hugo that your project
-is using.
+project's GA4 measurement ID. Details are provided in [Adding Analytics][]. Of
+course, this may require you to upgrade the version of [Docsy][] and/or Hugo
+that your project is using.
 
 [add gtag.js to your site]:
   https://developers.google.com/analytics/devguides/collection/gtagjs/

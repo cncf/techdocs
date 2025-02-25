@@ -4,10 +4,8 @@ tags: LitmusChaos
 created: 2024-08-02
 modified: 2024-10-09
 author: Dave Welsch (@dwelsch-esi)
+cSpell:ignore: Docusaurus rfc OSes pastable impl servicedesk md
 ---
-
-<!-- markdownlint-enable line-length -->
-<!-- cSpell:ignore Docusaurus rfc OSes pastable impl servicedesk md -->
 
 <!-- markdownlint-disable no-duplicate-heading -->
 
@@ -30,8 +28,9 @@ This document was written to analyze the current state of LitmusChaos
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 [implementation] document outlines an actionable plan for improvement. A third
-document is an [issues list] of issues to be added to the project documentation repository.
-These issues can be taken up by contributors to improve the documentation.
+document is an [issues list] of issues to be added to the project documentation
+repository. These issues can be taken up by contributors to improve the
+documentation.
 
 This document:
 
@@ -62,9 +61,9 @@ GitHub repo.
 
 #### Out of scope
 
-- Other LitmusChaos repos: <https://github.com/litmuschaos/>\*
+- Other LitmusChaos repos: <https://github.com/litmuschaos/>
 - Litmus Software (a completely unrelated company and product based in
-  Massachusetts): https://litmus.com/*
+  Massachusetts): <https://litmus.com/>
 
 ### How this document is organized
 
@@ -172,9 +171,9 @@ installation, configuration, and running a "first-time" experiment.
 - Formatting and organization of the instructions is inconsistent.
 - Some minor functionality does not have complete step-by-step instructions. For
   example, a link in the instructions to connect an external delegate in
-  _Schedule a chaos scenario_
-  point to the `litmusctl` reference. While relevant, this is not the same as
-  explicit instructions for connecting to a delegate.
+  _Schedule a chaos scenario_ point to the `litmusctl` reference. While
+  relevant, this is not the same as explicit instructions for connecting to a
+  delegate.
 
 <!-- markdownlint-enable line-length -->
 
@@ -292,7 +291,7 @@ complete. For complex procedures, it's OK to link to sub-procedures or (usually
 better) put preliminary tasks in the Prerequisites section.
 
 Ensure that installation, setup, and verification have a clear, linked path for
-each user role. See [New user content](#New-user-content) below.
+each user role. See [New user content](#new-user-content) below.
 
 Organize the User Guide by task. Some of the tasks will align with the current
 function-based organization, but some will not. If necessary, split it into two
@@ -604,12 +603,12 @@ websites:
 
 <!-- markdownlint-disable line-length -->
 
-| Site      | Repository                                               | Tool or Stack            |
-|-----------| -------------------------------------------------------- | ------------------------ |
-| [Project website](https://litmuschaos.io/) | https://github.com/litmuschaos/litmus-website-2          | React/Next/Tailwind/SCSS |
-| [Documentation website](https://docs.litmuschaos.io/) | https://github.com/litmuschaos/litmus-docs/              | Docusaurus/Netlify       |
-| Tutorials | https://github.com/litmuschaos/tutorials                 | Google Codelab?          |
-| [APIs][api-site] | https://github.com/litmuschaos/litmus/tree/master/mkdocs | MkDocs                   |
+| Site                                                  | Repository                                                 | Tool or Stack            |
+| ----------------------------------------------------- | ---------------------------------------------------------- | ------------------------ |
+| [Project website](https://litmuschaos.io/)            | <https://github.com/litmuschaos/litmus-website-2>          | React/Next/Tailwind/SCSS |
+| [Documentation website](https://docs.litmuschaos.io/) | <https://github.com/litmuschaos/litmus-docs/>              | Docusaurus/Netlify       |
+| Tutorials                                             | <https://github.com/litmuschaos/tutorials>                 | Google Codelab?          |
+| [APIs][api-site]                                      | <https://github.com/litmuschaos/litmus/tree/master/mkdocs> | MkDocs                   |
 
 <!-- markdownlint-enable line-length -->
 
