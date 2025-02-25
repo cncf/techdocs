@@ -3,7 +3,7 @@
 ## API
 
 In the Backstage [Catalog](#catalog), an API is an [entity](#entity)
-representing a boundary between two [compnents](#component).
+representing a boundary between two [components](#component).
 
 https://backstage.io/docs/features/software-catalog/system-model
 
@@ -41,7 +41,7 @@ declarative APIs exemplify this approach."
 ## Cloud Native Computing Foundation
 
 A foundation dedicated to the promotion and advancement of
-[Cloud Native Computing](#Cloud-Native-Computing). The mission of the Cloud
+[Cloud Native Computing](#cloud-native-computing). The mission of the Cloud
 Native Computing Foundation (CNCF) is "to make cloud native computing
 ubiquitous"
 ([CNCF Charter](https://github.com/cncf/foundation/blob/main/charter.md)).
@@ -91,7 +91,7 @@ https://backstage.io/docs/features/software-catalog/system-model
 ## Entity
 
 What is cataloged in the Backstage Software Catalog. An entity is identified by
-[kind](#Kind), [namespace](#Namespace), and name.
+[kind](#kind), [namespace](#namespace), and name.
 
 ## Evaluator
 
@@ -106,7 +106,7 @@ with another software system. A [user role](#user-role).
 
 ## Kind
 
-Classification of an [entity](#Entity) in the Backstage Software Catalog, for
+Classification of an [entity](#entity) in the Backstage Software Catalog, for
 example _service_, _database_, and _team_.
 
 ## Kubernetes Plugin
@@ -126,7 +126,7 @@ organize [entities](#entity).
 
 ## Objective
 
-A high level goal of a [user role](#User-Role) interacting with Backstage. Some
+A high level goal of a [user role](#user-role) interacting with Backstage. Some
 goals of the _administrator_ user role, for example, are to maintain an instance
 ("app") of Backstage; to add and update functionality via plugins; and to
 troubleshoot issues.
@@ -147,8 +147,8 @@ the core features, are implemented as plugins.
 ## Procedure
 
 A set of actions that accomplish a goal, usually as part of a
-[use case](#Use-Case). A procedure can be high-level, containing other
-procedures, or can be as simple as a single [task](#Task).
+[use case](#use-case). A procedure can be high-level, containing other
+procedures, or can be as simple as a single [task](#task).
 
 ## Resource
 
@@ -160,13 +160,13 @@ https://backstage.io/docs/features/software-catalog/system-model
 
 ## Role
 
-See [User Role](#User-Role).
+See [User Role](#user-role).
 
 ## Search
 
 A Backstage plugin that provides a framework for searching a Backstage
-[app](#app), including the [Software Catalog](#Software-Catalog) and
-[TechDocs](#TechDocs). One of the core features of Backstage.
+[app](#app), including the [Software Catalog](#software-catalog) and
+[TechDocs](#techdocs). One of the core features of Backstage.
 
 ## Software Catalog
 
@@ -190,7 +190,7 @@ https://backstage.io/docs/features/software-catalog/system-model
 
 ## Task
 
-A low-level step-by-step [Procedure](#Procedure).
+A low-level step-by-step [Procedure](#procedure).
 
 ## TechDocs
 
@@ -200,7 +200,7 @@ Backstage.
 
 ## Use Case
 
-A purpose for which a [user role](#User-Role) interacts with Backstage. Related
+A purpose for which a [user role](#user-role) interacts with Backstage. Related
 to [Objective](#objective): An objective is _what_ the user wants to do; a use
 case is _how_ the user does it.
 

@@ -6,7 +6,7 @@ tags: keda
 # Introduction
 
 This document provides actionable suggestions for improving the KEDA technical
-documentaiton.
+documentation.
 
 For an analysis and general discussion of recommendations on KEDA technical
 documentation, see [keda-analysis.md][keda-analysis].
@@ -26,7 +26,7 @@ such, and pertain to legal requirements such as copyright and licensing issues.
 
 The documentation recommendations for this project are:
 
-- [Reorganize the table of contents (TOC)](#reorganize-the-table-of-contents-toc)
+- [Reorganize the table of contents (TOC)](#reorganize-the-table-of-contents)
 - [Write a glossary](#write-a-glossary)
 - [Add "How to set up a scaler" to the Operator guide](#add-how-to-set-up-a-scaler-to-the-operator-guide)
 - [Write a New User workflow](#write-a-new-user-workflow)
@@ -41,7 +41,7 @@ Reorganize the Table of Contents to:
 
 - Better welcome and orient new users
 - Separate user rules (personas), if there are more than one
-- Improve findability and access to tasks and procedures
+- Improve the ease of finding and accessing tasks and procedures
 - Separate conceptual, task, and reference information
 
 In general, follow these principles when reorganizing the documentation:
@@ -77,18 +77,18 @@ Here is a proposed outline for the tech doc Table of Contents:
   current "KEDA Documentation" heading)
   - [Deploying KEDA](https://keda.sh/docs/2.13/deploy/)
   - Prerequisites (https://keda.sh/docs/2.13/operate/cluster/#requirements)
-  - [Deploying with Helm](#helm)
-    - [Installing](#install)
-    - [Uninstalling](#uninstall)
-  - [Deploying with Operator Hub](#operatorhub)
-    - [Installing](#install-1)
-    - [Uninstalling](#uninstall-1)
-  - [Deploying using the deployment YAML files](#yaml)
-    - [Installing](#install-2)
-    - [Uninstalling](#uninstall-2)
-  - [Deploying KEDA on MicroK8s](#microk8s)
-    - [Installing](#install-3)
-    - [Uninstalling](#uninstall-3)
+  - [Deploying with Helm](?no-link-check#helm)
+    - [Installing](?no-link-check#install)
+    - [Uninstalling](?no-link-check#uninstall)
+  - [Deploying with Operator Hub](?no-link-check#operatorhub)
+    - [Installing](?no-link-check#install-1)
+    - [Uninstalling](?no-link-check#uninstall-1)
+  - [Deploying using the deployment YAML files](?no-link-check#yaml)
+    - [Installing](?no-link-check#install-2)
+    - [Uninstalling](?no-link-check#uninstall-2)
+  - [Deploying KEDA on MicroK8s](?no-link-check#microk8s)
+    - [Installing](?no-link-check#install-3)
+    - [Uninstalling](?no-link-check#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
     https://github.com/kedacore/sample-hello-world-azure-functions)
@@ -98,7 +98,7 @@ Here is a proposed outline for the tech doc Table of Contents:
     Getting Started)
   - Usage Scenarios
     - [Scaling with RabbitMQ and Go](https://github.com/kedacore/sample-go-rabbitmq)
-    - [Scaling with Azure Functions and Kafka on Openshift 4](https://github.com/kedacore/sample-azure-functions-on-ocp4)
+    - [Scaling with Azure Functions and Kafka on OpenShift 4](https://github.com/kedacore/sample-azure-functions-on-ocp4)
     - ... and so on.
   - [Admission Webhooks](https://keda.sh/docs/2.13/operate/admission-webhooks/)
   - Prevention Rules
@@ -196,18 +196,18 @@ annotated to illustrate this point:
       the differences here to help the new user decide. Also, if prerequisites
       depend on the deployment type, you can optionally put a Prerequisites
       section in each deployment procedure rather than here._
-    - [Deploying with Helm](#helm)
-      - [Installing](#install)
-      - [Uninstalling](#uninstall) \*
-    - [Deploying with Operator Hub](#operatorhub)
-      - [Installing](#install-1)
-      - [Uninstalling](#uninstall-1)
-    - [Deploying using the deployment YAML files](#yaml)
-      - [Installing](#install-2)
-      - [Uninstalling](#uninstall-2)
-    - [Deploying KEDA on MicroK8s](#microk8s)
-      - [Installing](#install-3)
-      - [Uninstalling](#uninstall-3)
+    - [Deploying with Helm](?no-link-check#helm)
+      - [Installing](?no-link-check#install)
+      - [Uninstalling](?no-link-check#uninstall) \*
+    - [Deploying with Operator Hub](?no-link-check#operatorhub)
+      - [Installing](?no-link-check#install-1)
+      - [Uninstalling](?no-link-check#uninstall-1)
+    - [Deploying using the deployment YAML files](?no-link-check#yaml)
+      - [Installing](?no-link-check#install-2)
+      - [Uninstalling](?no-link-check#uninstall-2)
+    - [Deploying KEDA on MicroK8s](?no-link-check#microk8s)
+      - [Installing](?no-link-check#install-3)
+      - [Uninstalling](?no-link-check#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
     https://github.com/kedacore/sample-hello-world-azure-functions) _analogous
