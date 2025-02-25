@@ -16,7 +16,7 @@
     "_list:check:*": "npm run --loglevel=warn | grep -Ee '^\\s*check:[^:]+$'",
     "_list:fix:*": "npm run --loglevel=warn | grep -Ee '^\\s*fix:[^:]+$' | grep -v 'fix:all'",
     "check:format": "npm run _check:format || (echo '[help] Run: npm run fix:format'; exit 1)",
-    "check:links": "bash -c 'for f in *.md `find docs analyses -name \"*.md\"`; do npx markdown-link-check --config .markdown-link-check.json -p -v $f || exit 1; done'",
+    "check:links": "bash -c 'for f in *.md `find docs analyses -name \"*.md\"`; do npx markdown-link-check@3.12.2 --config .markdown-link-check.json -p -v $f || exit 1; done'",
     "check:markdown": "npm run _check:markdown:all",
     "check:spelling": "npx cspell --no-progress -c .cspell.yml *.md",
     "check": "npm run seq -- $(npm run -s _list:check:*)",
@@ -28,7 +28,7 @@
   },
   "author": "CNCF",
   "license": "CC-BY-4.0",
-  "NOTE": "Pinning markdown-link-check to 3.12.2 due to a bug in 3.13.x stream. For details, see https://github.com/tcort/markdown-link-check/issues/369",
+  "NOTE": "We've pinned markdown-link-check to 3.12.2 due to a bug in 3.13.x stream, both in the devDeps below and the check:links script above. For details, see https://github.com/tcort/markdown-link-check/issues/369.",
   "devDependencies": {
     "cspell": "^8.17.5",
     "markdown-link-check": "3.12.2",
