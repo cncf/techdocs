@@ -3,7 +3,7 @@ title: Litmus Chaos Issue
 tags: Litmus Chaos
 ---
 
-<!-- markdownlint-disable line-length no-duplicate-heading no-bare-urls no-emphasis-as-heading -->
+<!-- markdownlint-disable line-length no-duplicate-heading no-emphasis-as-heading -->
 
 This document contains a list of issues to be entered in the Litmus Chaos
 documentation repo more or less verbatim.
@@ -45,13 +45,13 @@ are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
 
 The following repos are affected:
 
-| Repo URL                                           | Description                                     | Recommendation                                            |
-| -------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------- |
-| https://github.com/litmuschaos/litmus-website-2    | The project website repo                        | Combine with the doc repo                                 |
-| https://github.com/litmuschaos/litmus-docs         | Documentation repo                              | Combine with website repo                                 |
-| https://github.com/litmuschaos/v1-litmus-docs      | Another documentation repo, for docs before 2.0 | Move toward retiring and archiving.                       |
-| https://github.com/litmuschaos/website-litmuschaos | Previous website repo                           | Already archived. Include new repo URL in archive banner. |
-| https://github.com/litmuschaos/tutorials           | Tutorials repo                                  | Combine with documentation repo                           |
+| Repo URL                                             | Description                                     | Recommendation                                            |
+| ---------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------- |
+| <https://github.com/litmuschaos/litmus-website-2>    | The project website repo                        | Combine with the doc repo                                 |
+| <https://github.com/litmuschaos/litmus-docs>         | Documentation repo                              | Combine with website repo                                 |
+| <https://github.com/litmuschaos/v1-litmus-docs>      | Another documentation repo, for docs before 2.0 | Move toward retiring and archiving.                       |
+| <https://github.com/litmuschaos/website-litmuschaos> | Previous website repo                           | Already archived. Include new repo URL in archive banner. |
+| <https://github.com/litmuschaos/tutorials>           | Tutorials repo                                  | Combine with documentation repo                           |
 
 ## Issue: Removed obsolete websites
 
@@ -85,17 +85,17 @@ are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
 **GraphicQL API**
 
 The following API is one of the first hits on a search of "Litmus Chaos API":
-https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html.
+<https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html>.
 
-I'm not even sure where the doc repo is (it might be in the API's repo here:
-https://github.com/litmuschaos/spectaql). It's clear this is a Litmus Chaos
-component, but not whether this documetnation is current or what it is for --
+I'm not even sure where the doc repo is (it might be in the API's repo at
+<https://github.com/litmuschaos/spectaql>). It's clear this is a Litmus Chaos
+component, but not whether this documentation is current or what it is for --
 there's no introduction or explanation of the API.
 
 **Tutorials**
 
-The Litmus Chaos Tutorial website (https://litmuschaos.github.io/tutorials/;
-repo at https://github.com/litmuschaos/tutorials) seems to have been last
+The [Litmus Chaos Tutorial website](https://litmuschaos.github.io/tutorials/)
+([repo](https://github.com/litmuschaos/tutorials)) seems to have been last
 updated in version 2. The first tutorial, "Getting Started", was last updated in
 August of 2021.
 

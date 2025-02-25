@@ -7,7 +7,7 @@ author: Dave Welsch (@dwelsch-esi)
 cSpell:ignore: Docusaurus rfc OSes pastable impl servicedesk md
 ---
 
-<!-- markdownlint-disable no-duplicate-heading no-bare-urls -->
+<!-- markdownlint-disable no-duplicate-heading -->
 
 ## Introduction
 
@@ -603,12 +603,12 @@ websites:
 
 <!-- markdownlint-disable line-length -->
 
-| Site                                                  | Repository                                               | Tool or Stack            |
-| ----------------------------------------------------- | -------------------------------------------------------- | ------------------------ |
-| [Project website](https://litmuschaos.io/)            | https://github.com/litmuschaos/litmus-website-2          | React/Next/Tailwind/SCSS |
-| [Documentation website](https://docs.litmuschaos.io/) | https://github.com/litmuschaos/litmus-docs/              | Docusaurus/Netlify       |
-| Tutorials                                             | https://github.com/litmuschaos/tutorials                 | Google Codelab?          |
-| [APIs][api-site]                                      | https://github.com/litmuschaos/litmus/tree/master/mkdocs | MkDocs                   |
+| Site                                                  | Repository                                                 | Tool or Stack            |
+| ----------------------------------------------------- | ---------------------------------------------------------- | ------------------------ |
+| [Project website](https://litmuschaos.io/)            | <https://github.com/litmuschaos/litmus-website-2>          | React/Next/Tailwind/SCSS |
+| [Documentation website](https://docs.litmuschaos.io/) | <https://github.com/litmuschaos/litmus-docs/>              | Docusaurus/Netlify       |
+| Tutorials                                             | <https://github.com/litmuschaos/tutorials>                 | Google Codelab?          |
+| [APIs][api-site]                                      | <https://github.com/litmuschaos/litmus/tree/master/mkdocs> | MkDocs                   |
 
 <!-- markdownlint-enable line-length -->
 
