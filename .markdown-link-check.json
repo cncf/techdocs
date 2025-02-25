@@ -4,9 +4,6 @@
       "pattern": "^http://localhost"
     },
     {
-      "pattern": "^#"
-    },
-    {
       "pattern": "^https://(www|docs).tremor.rs"
     },
     {

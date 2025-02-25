@@ -1,3 +1,7 @@
+---
+cSpell:ignore: flipside
+---
+
 # Backstage Insights
 
 This document briefly summarizes the research, branded "Backstage Insight," done
@@ -21,7 +25,7 @@ Adoption here means:
    3. Automate development using Backstage, including integrating Backstage with
       other development support systems.
 3. Backstage must be recognized throughout the organization as the "source of
-   truth" about all software development within the organizaiton.
+   truth" about all software development within the organization.
 
 ### Barriers to Adoption
 
@@ -85,7 +89,7 @@ number one outcome for both internal and external users was to **maintain clear
 ownership of software**.
 
 For external adopters, other top outcomes were consistent with _improving the
-maturity level of their development practices_, for example standarizing
+maturity level of their development practices_, for example standardizing
 software development practices and increasing collaboration. For internal
 adopters, other top outcomes were goals that relied on already-mature
 development practices, for example improving monitoring and tracking costs. The

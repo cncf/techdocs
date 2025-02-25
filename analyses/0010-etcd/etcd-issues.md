@@ -45,7 +45,7 @@ including:
 
 - _Evaluator_: Someone trying to determine whether etcd is appropriate for their
   product, project, or organization.
-- _Admin or Operator_: Someonereponsible for setting up and maintaining a
+- _Admin or Operator_: Someone responsible for setting up and maintaining a
   standalone (non-Kubernetes-backstore) production etcd service.
 - _Kubernetes Admin_: Someone responsible for a Kubernetes cluster using etcd as
   a backstore.
@@ -265,7 +265,7 @@ Sections to be added to the table of contents.
 | --------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
 | Reference       | A library of reference documents: APIs, CLIs, configuration options, and anything else a user might need to look up to complete a task. |
 | Troubleshooting | A list of procedures for diagnosing and fixing problems.                                                                                |
-| Release Notes   | The cumulative release notes for the major and minor release. See [Release Notes](#add-release-notes-to-new-releases).                  |
+| Release Notes   | The cumulative release notes for the major and minor release.                                                                           |
 
 ### Remove pages
 
@@ -279,7 +279,7 @@ that page is listed as "Redundant with". Page URLs are relative to
 | -------------------------------- | ------------------------------------------------------------------------------------ | --------------------------------------- | ----------------------------------------------------------------------------- |
 | demo/                            |                                                                                      | op-guide/authentication/authentication/ | Remove                                                                        |
 | dev-internal/discovery_protocol/ | op-guide/clustering/                                                                 | dev-guide/discovery_protocol/           | Remove                                                                        |
-| /dev-guide/interacting_v3/       | dev-guide/local_cluster/                                                             | tutorials/\*.md                         | Consolidate under "Tasks". See [Tutorials](#tutorials)                        |
+| /dev-guide/interacting_v3/       | dev-guide/local_cluster/                                                             | tutorials/\*.md                         | [Consolidate under "Tasks"](#issue-convert-tutorials-to-tasks)                |
 | op-guide/recovery/               | op-guide/failures/, op-guide/runtime-configuration/, op-guide/runtime-reconf-design/ |                                         | Incorporate into Troubleshooting guide                                        |
 | op-guide/data_corruption/        | op-guide/monitoring/                                                                 |                                         | Incorporate into Troubleshooting guide                                        |
 | upgrades/                        |                                                                                      |                                         | Remove or archive old upgrade paths if they're no longer needed or supported. |

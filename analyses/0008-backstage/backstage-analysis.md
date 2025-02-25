@@ -4,6 +4,7 @@ tags: backstage
 created: 2023-09-01
 modified: 2023-11-28
 author: Dave Welsch (@dwelsch-esi)
+cSpell:ignore: clotributor dwelsch Welsch runbooks WCAG
 ---
 
 # Introduction
@@ -95,7 +96,7 @@ to their area of concern:
 
 - [Project documentation][proj-doc]
 - [Contributor documentation][contributor-doc]
-- [Website and documentation infrrastructure][website]
+- [Website and documentation infrastructure][website]
 
 Examples of CNCF documentation that demonstrates the analysis criteria are
 linked from the [Criteria][cncf-doc-criteria] specification.
@@ -277,10 +278,10 @@ documentation set, but the nature of Backstage makes it especially important
 here.
 
 The example roles given in the [comments][proj-doc-comments] have been carried
-over to the [Implementation][implementation] section. Contributors with a
-greater understanding of how Backstage is used should feel free to modify this
-list if it serves the needs of the project, keeping in mind that the purpose of
-the user roles is to organize the task-based documentation.
+over to [Implementation][implementation-doc]. Contributors with a greater
+understanding of how Backstage is used should feel free to modify this list if
+it serves the needs of the project, keeping in mind that the purpose of the user
+roles is to organize the task-based documentation.
 
 ### Develop instructional documentation
 
@@ -405,7 +406,7 @@ There is an active [Discussions][backstage-discussion] board in the GitHub repo.
 page][backstage-github-community] on GitHub. Help resources are not linked from
 the Getting Started documentation.
 
-Backstage is listed in the [Clotributor][clotributor] tool.
+Backstage is listed in the [Clotributor][] tool.
 
 ### Project governance documentation
 
@@ -416,8 +417,7 @@ Governance is clearly documented in [GOVERNANCE.md][backstage-governance].
 As an open source project, Backstage looks healthy and well run.
 
 The only recommendation here is to disentangle the contributor documentation
-from the product documentation, as described in the [Information architecture
-recommendations][info-arch-recommend].
+from the product documentation.
 
 # Website
 
@@ -577,14 +577,12 @@ Improve compliance in these areas:
 - **Images** should have alternative text.
 - **Links** should have discernible text.
 
-<!--- References --->
-
 [backstage-backstage]: https://github.com/backstage/backstage
 [backstage-community]: https://backstage.io/community
 [backstage-contrib]:
   https://github.com/backstage/backstage/blob/master/CONTRIBUTING.md
 [backstage-demo]:
-  https://demo.backstage.io/catalog?filters%5Bkind%5D=component&filters%5Buser%5D=owned
+  https://demo.backstage.io/catalog?no-link-check&filters%5Bkind%5D=component&filters%5Buser%5D=owned
 [backstage-discussion]: https://discord.gg/backstage-687207715902193673
 [backstage-doc-contrib]:
   https://backstage.io/docs/contribute/getting-involved#write-documentation-or-improve-the-website
@@ -628,8 +626,6 @@ Improve compliance in these areas:
 [contrib-doc-rec]: #recommendations-contributor-documentation
 [contributor-doc]: #contributor-documentation
 [doc-survey]: backstage-doc-survey.csv
-[implementation]: #implementation
-[info-arch-recommend]: #recommendations
 [proj-doc-comments]: #comments-project-documentation
 [proj-doc-rec]: #recommendations-project-documentation
 [proj-doc]: #project-documentation
