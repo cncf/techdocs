@@ -1,9 +1,10 @@
 ---
-title: Porter docs analysis
 cSpell:ignore: Uchechukwu Obasi
 ---
 
-# Porter Docs Assessment
+<!-- markdownlint-disable no-duplicate-heading -->
+
+# Porter Docs Analysis
 
 Prepared by:
 
@@ -61,8 +62,6 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-**Comments**
-
 ### Information architecture
 
 - Good nav on landing page
@@ -70,8 +69,8 @@ Scale:
   difference between desired state and operator? maybe the operator one needs to
   be in Get Started)
 
-  - https://getporter.org/quickstart/desired-state/
-  - https://getporter.org/operator/quickstart/
+  - <https://getporter.org/quickstart/desired-state/>
+  - <https://getporter.org/operator/quickstart/>
 
 - Mixins & Plugins sections duplicated in sidebar (and could potentially be
   organized under Concepts?)
@@ -132,8 +131,6 @@ Scale:
 - Maintainers are clearly documented as well as where to find them.
 - There are no docs for the release process. Same for docs creation and updates.
 
-**Recommendations**
-
 ### Information Architecture
 
 - Overall, Porter's documentation is well organized:
@@ -184,8 +181,6 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-**Comments**
-
 ### Communication methods documented
 
 - Communication methods are clearly documented, as well as how (and where) to
@@ -206,8 +201,6 @@ Scale:
 ### Project governance documentation
 
 - Project governance is clearly documented
-
-**Recommendations**
 
 ### Beginner friendly issue backlog
 
@@ -246,7 +239,7 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-**Comments**
+Comments:
 
 - Porter meets and exceeds the website requirements for its maturity level.
 - Branding is consistently applied throughout the site
@@ -255,8 +248,6 @@ Scale:
 - Website is accessible via HTTPS
 - Site is well-indexed on Google
 - Account custodians are well documented
-
-**Recommendations**
 
 ### Single-source for all files
 
