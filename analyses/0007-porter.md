@@ -1,19 +1,10 @@
 ---
-title: Porter tech docs assessment draft
-tags: porter
+cSpell:ignore: Uchechukwu Obasi
 ---
 
-# Notes
+<!-- markdownlint-disable no-duplicate-heading -->
 
-meeting notes:
-https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw/edit?usp=sharing
-website: https://getporter.org/ repos:
-
-- https://github.com/getporter/porter (main site), site content is in docs/
-  folder
-- https://github.com/getporter/operator (https://getporter.org/operator site)
-
-# Porter Docs Assessment
+# Porter Docs Analysis
 
 Prepared by:
 
@@ -21,6 +12,15 @@ Prepared by:
 - [Nate W.](https://github.com/nate-double-u/)
 
 Date: 2023-04-07
+
+Resources:
+
+- [Meeting notes](https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw?no-link-check)
+- Website: <https://getporter.org>
+- Repos:
+  - Main site: <https://github.com/getporter/porter>. Content is in `docs`.
+  - [Operator site](https://getporter.org/operator):
+    <https://github.com/getporter/operator>
 
 ## Introduction
 
@@ -62,8 +62,6 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-**Comments**
-
 ### Information architecture
 
 - Good nav on landing page
@@ -71,8 +69,8 @@ Scale:
   difference between desired state and operator? maybe the operator one needs to
   be in Get Started)
 
-  - https://getporter.org/quickstart/desired-state/
-  - https://getporter.org/operator/quickstart/
+  - <https://getporter.org/quickstart/desired-state/>
+  - <https://getporter.org/operator/quickstart/>
 
 - Mixins & Plugins sections duplicated in sidebar (and could potentially be
   organized under Concepts?)
@@ -103,7 +101,7 @@ Scale:
 - Multiple OSes are well documented too.
 - The onboarding and contributing guides are well documented making it easy for
   new users to understand and kickstart.
-- Porter's sample code is copy-pastable.
+- Porter's sample code can be copy-pasted.
 - "What is Porter?" is a good overview or 'about' section.
 - Items listed under "When to use Porter?" are inconsistent with the way they're
   linked: some are linked while others are not.
@@ -122,7 +120,7 @@ Scale:
   developers to write docs. I think it's a fair point. My only issue with this
   convention is that it makes it difficult for a new contributor to find the
   website's sourcefile. A contributor expects the "docs" directory to only
-  contain nothing but actual documentation files not website sourcefiles.
+  contain nothing but actual documentation files not website source files.
 - There's no way to search the documentation
 - Hard to locate the different versions on smaller screens
 
@@ -133,14 +131,12 @@ Scale:
 - Maintainers are clearly documented as well as where to find them.
 - There are no docs for the release process. Same for docs creation and updates.
 
-**Recommendations**
-
 ### Information Architecture
 
 - Overall, Porter's documentation is well organized:
   - some pages seem misplaced (quick start for operator, ...)
   - Some pages appear at the top level of the docs nav that may not need to be
-    there -- search may help with findability
+    there -- search may help with discoverability
     - Best practices could be under reference
     - Mixins Plugins -- should these be top level?
 
@@ -159,7 +155,7 @@ Scale:
 
 - Move the website sourcefile to a separate "website" directory. That way, we
   create a good separation of concern. A good example is
-  [https://github.com/thanos-io/thanos](https://github.com/thanos-io/thanos).
+  <https://github.com/thanos-io/thanos>.
 - The porter's docs should be searchable.
 - Create a version picker (dropdown) to make search easily discoverable for
   users.
@@ -185,8 +181,6 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-**Comments**
-
 ### Communication methods documented
 
 - Communication methods are clearly documented, as well as how (and where) to
@@ -207,8 +201,6 @@ Scale:
 ### Project governance documentation
 
 - Project governance is clearly documented
-
-**Recommendations**
 
 ### Beginner friendly issue backlog
 
@@ -247,7 +239,7 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-**Comments**
+Comments:
 
 - Porter meets and exceeds the website requirements for its maturity level.
 - Branding is consistently applied throughout the site
@@ -256,8 +248,6 @@ Scale:
 - Website is accessible via HTTPS
 - Site is well-indexed on Google
 - Account custodians are well documented
-
-**Recommendations**
 
 ### Single-source for all files
 

@@ -3,6 +3,7 @@ title: Implementing LitmusChaos Doc Improvements
 tags: LitmusChaos
 created: 2024-10-24
 author: Dave Welsch (@dwelsch-esi)
+cSpell:ignore: Welsch dwelsch
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -152,7 +153,7 @@ be its own page.
     [Harness](https://app.harness.io/auth/#/signin).
   - **Local** (self-hosted): Use _Helm_ or `kubectl`
     - **Helm**: One-page install procedure.
-    - **kubectl** (with a YAML spec file) Prereq: install MongoDB
+    - **kubectl** (with a YAML spec file) Prerequisite: install MongoDB
       - **Basic installation**: One-page install procedure.
       - **Advanced installation**: One-page install procedure.
     - **Verify your installation**: One-page procedure. Next steps: Access the
@@ -186,9 +187,9 @@ detail here. Some guidelines for writing procedures:
   chaos experiment" rather than "Schedule a chaos experiment".
 - Rather than duplicating information in different scenarios (basic vs. advanced
   install, for example), write single sub-procedures and link to them from the
-  main procedure or include them as prereqs.
+  main procedure or include them as prerequisites.
 - Explicitly state which operating systems and platform the installation is for.
-  This can be done in the Prereqs section.
+  This can be done in the Prerequisites section.
 - In all cases, use consistent naming for the sections as an aid to navigation.
   For example, the current documentation uses "Prerequisites" and "Before you
   begin" for the same information.

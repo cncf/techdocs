@@ -1,12 +1,12 @@
 ---
 title: Implementing TUF Doc Improvements
-tags: TUF
+cSpell:ignore: RSTUF
 ---
 
 ## Introduction
 
-This document provides actionable suggestions for improving the
-**theUpdateframework (TUF)** technical documentation.
+This document provides actionable suggestions for improving the **The Update
+Framework (TUF)** technical documentation.
 
 For an analysis and general discussion of recommendations on TUF technical
 documentation, see [analysis](./analysis.md).
@@ -157,7 +157,7 @@ it easier for contributors to contact them.
 ### Add labels to the website repo
 
 Include labels to issues in the website repo. These include labels such as
-_#docs \#Goodfirstissue_ to make it easier for contributors to get started.
+`docs` and `good first issue` to make it easier for contributors to get started.
 
 ### Develop a guidelines for new users and contributors
 
@@ -176,7 +176,7 @@ some good suggestions.
 Provide information about project meetings and a calendar on both the website
 and repo. Makes it easier for contributors to sync with their calendars and get
 notifications about meetings. I like how the
-[**Meshery**](https://github.com/layer5io/layer5) project has implemented this.
+[Layer 5](https://github.com/layer5io/layer5) project has implemented this.
 
 ## Proposed Information Architecture for the TUF Website
 
