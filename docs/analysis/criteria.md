@@ -1,24 +1,23 @@
 # Assessment criteria and examples
 
 We recommend reading the
-[CNCF sandbox project documentation primer](../sandbox-doc-primer.md) before
-reviewing these criteria. The primer contains key definitions concepts that are
-referred to in the criteria.
+[CNCF sandbox project documentation primer](../sandbox-doc-primer.md)
+before reviewing these criteria. The primer contains key definitions concepts
+that are referred to in the criteria.
 
 ## Project documentation
 
 ### Information architecture
 
-How your technical information is organized, laid out, and presented. This
-includes structure (pages/subpages/sections/subsections), information types
-(conceptual/instructional/reference), and matching documentation content to user
-expectations.
+How your technical information is organized, laid out, and presented.
+This includes structure (pages/subpages/sections/subsections), information
+types (conceptual/instructional/reference), and matching documentation
+content to user expectations.
 
 We evaluate on the following:
 
-- Is there high level conceptual/“About” content?
-- Is the documentation feature-complete? (i.e., every product feature is
-  documented)
+- Is there high level conceptual content?
+- Is every product feature documented?
 - Does the documentation define all user roles (personas) for the product?
 - Are there instructions (tasks, tutorials) documented for features?
 - Are there instructions for all major use cases for each user role?
@@ -60,7 +59,10 @@ We evaluate on the following:
 - Do users know where to go after reading the getting started guide?
 - Is your new user content clearly signposted on your site’s homepage or at the
   top of your information architecture?
-- Is there sample code or other example content that can easily be copy-pasted?
+- Is there easily copy-pastable sample code or other example content?
+
+<!-- markdownlint-enable line-length -->
+<!-- cSpell:ignore OSes copy-pastable Algolia Docsy -->
 
 Example:
 
@@ -211,23 +213,63 @@ We evaluate on the following:
 ### Minimal website requirements
 
 Listed here are the _minimal_ website requirements for projects based on their
-[maturity level]: sandbox, incubating, graduated and archived.
-
-Except for archived projects, requirements are cumulative through project
-maturity levels. So, for example, graduated projects must satisfy the
-requirements for incubating projects.
+[maturity level][]: sandbox, incubating, graduated and archived.
 
 We evaluate on the following:
 
-- Incubating: Are all [website guidelines][] satisfied? Graduated: Are all
-  guidelines satisfied?
-- Incubating: Was a [docs assessment][] requested through CNCF service desk?
-  Graduated: All follow-up actions addressed?
-- Incubating: User roles identified and doc needs documented? Graduated: All
-  stakeholder need identified?
-- Incubating: Website hosted directly? Graduated: Hosted directly?
-- Incubating: Is the [docs assessment][] comprehensive, addressing most
-  stakeholder needs? Graduated: Fully addresses needs of key stakeholders?
+*Note: Except for archived projects, requirements are cumulative through project
+maturity levels so, for example, incubating projects must satisfy the
+requirements for sandbox projects.*
+
+
+#### Sandbox
+
+- Are a majority of the [Website guidelines](../website-guidelines-checklist.md)
+  satisfied?
+  - "Guidelines" is misleading; these are mandatory standards concerning:
+    - Maintaining open source status
+    - IP licensing
+    - Corporate sponsorship and support
+    - Copyright and trademark
+    - Community standards
+  - **Plan ahead**: projects must meet all guidelines before being promoted to Incubating status.
+- Is there rudimentary **project documentation**, or a placeholder or substitute?
+  - It is acceptable at this maturity level to link out to documentation that
+    hasn't yet been integrated into the website.
+  - _Example_: website with a single homepage, without any documentation or,
+    as was mentioned above, linking out to an external (preexisting) source
+    for docs.
+  - _However_: consider reading the recommended practices in this repository
+    and implementing as many of the best practices as you can. This groundwork
+    will pay big dividends later when you need to upgrade your practices and
+    update your documentation as an incubating project. Assistance is
+    available from CNCF TechDocs anytime, including answers to individual
+    questions or a documentation workshop.
+
+#### Incubating
+
+- Are all [Website guidelines][] satisfied?
+- Has a [Docs assessment][] or reassessment been requested through the CNCF
+  [service desk][]?
+- Does **project documentation** meet these standards?:
+  - Stakeholders / personas are identified and their core needs (in terms of
+    docs) documented.
+  - Hosted directly on the website.
+  - The [single-source requirement][] met.
+  - Doc is comprehensive, addressing most stakeholder needs.
+
+#### Graduated
+
+- Are follow-through actions from the [Docs assessment][] complete?
+- Does **project documentation** fully addresses the needs of key stakeholders?
+
+#### Archived
+
+- Is the website repo in an [archived state][]?
+- Is the archived status of the project obvious to those visiting the
+  website, such as through the use of a prominent banner?
+- If a successor project exists, are there links to its website and/or migration
+  documentation.
 
 [archived state]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
@@ -250,7 +292,7 @@ We evaluate on the following:
 - Are doc pages readable?
 - Are all or most website features accessible from mobile -- such as the
   top-nav, site search, and in-page table of contents?
-- Might a [mobile-first] design make sense for your project?
+- Might a [mobile-first][] design make sense for your project?
 - Are color contrasts significant enough for color-impaired readers?
 - Are most website features usable using a keyboard only?
 - Does text-to-speech offer listeners a good experience?
@@ -258,7 +300,7 @@ We evaluate on the following:
 [mobile-first]:
   https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
 
-Plan for suitable [accessibility] measures for your website. For example:
+Plan for suitable [accessibility][] measures for your website.
 
 We evaluate on the following:
 
@@ -293,7 +335,8 @@ organizations using it.
 
 We evaluate on the following:
 
-- Are there case studies available for the project and are they documented on
+- Are there case studies available for the project and are they documented
+  on
   the website?
 - Are there user testimonials available?
 - Is there an active project blog?
@@ -348,4 +391,8 @@ Example:
 
 - Is your website accessible via HTTPS?
 - Does HTTP access, if any, redirect to HTTPS?
-- Are links to external websites or applications working and current?
+- Are links working and current?
+  - Internal documentation
+  - External documentation
+  - External websites
+  - Web applications
