@@ -9,6 +9,7 @@ cSpell:ignore: Welsch dwelsch Vitess vitess topo pasteable mysqlshell vtctldclie
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
+<!-- markdownlint-disable no-bare-urls -->
 
 ## Introduction
 
@@ -366,7 +367,7 @@ case basis.
 
 #### Information architecture
 
-**Get Started**
+##### Get Started
 
 Write an introduction on the
 [Get Started](https://vitess.io/docs/21.0/get-started/) landing page. This
@@ -395,7 +396,7 @@ to whatever is next in the User Guide documentation. This can be more than one
 path. Make it conditional based on the task a reader might want to accomplish
 after installation: Test the installation? Plan a cluster? Something else?
 
-**Conceptual Info**
+##### Conceptual Info
 
 Clarify the beginning of the
 [Overview](https://vitess.io/docs/21.0/overview/whatisvitess/) ("What is ...")
@@ -410,7 +411,7 @@ Or the introduction that this replaced:
 > Vitess is a database clustering system for horizontal scaling of MySQL through
 > generalized sharding.
 
-**Tasks**
+###### Tasks
 
 The User Guides page _says_ "Task-based guides for common usage scenarios".
 That's the right idea, but implementation must be improved if readers are to
@@ -422,7 +423,7 @@ The User Guides require three types of changes to maximize their effectiveness:
 - Rewrite
 - Reorganize
 
-_Rename_
+###### Rename
 
 Rename the individual pages in the User Guides to reflect the tasks that are
 described there. Use verbs ending in "-ing" (along with a noun that describes
@@ -461,7 +462,7 @@ Remove this. The "<topo_flags>" placeholder does not seem to have been
 implemented. There are no mentions of "<topo_flags"> elsewhere in the
 documentation, and in any case each would have to refer back to this page.
 
-_Rewrite_
+###### Rewrite
 
 A reader typically consults the User Guide to find out how to do something. The
 User Guides should consist primarily of procedures.
@@ -495,7 +496,7 @@ The
 [Creating a cell](https://vitess.io/docs/21.0/user-guides/configuration-basic/create-cell/)
 page shows a CLI command:
 
-> ```
+> ```bash
 > vtctldclient AddCellInfo \
 >   --root /vitess/cell1 \
 >   --server-address <cell_topo_address> \
@@ -507,7 +508,7 @@ server address placeholder, `<cell_topo_address>`, is not defined in the text.
 
 Here's how I'd rewrite it, defining placeholders for the parameters:
 
-> ```
+> ```bash
 > vtctldclient AddCellInfo \
 >   --root <root_dir> \
 >   --server-address <cell_topo_addr> \
@@ -535,7 +536,7 @@ Here's an outline for a one-page procedure writeup:
   - Next Steps (What procedure or use case typically follows this. If it depends
     on context, explain the options.)
 
-_Reorganize_
+###### Reorganize
 
 Ensure that the various sections of the User Guide cover all usage scenarios.
 Reorganize the User Guide:
@@ -586,7 +587,7 @@ _Application programmer_:
 (Again, these are my understanding of the Vitess user roles. Adjust the details
 if they're different.
 
-**Troubleshooting**
+###### Troubleshooting
 
 Consolidate all troubleshooting information into a Troubleshooting Guide. Or,
 create one troubleshooting guide per user guide/user role. In either case,
@@ -596,7 +597,7 @@ of the
 [VReplication FAQ](https://vitess.io/docs/21.0/reference/vreplication/faq/) in
 the reference section and put the information in a troubleshooting section.
 
-**Glossary**
+###### Glossary
 
 Write a glossary. This is different from the "Concepts" page – the explanations
 of terms is less in-depth. The glossary contains not just key terms but any word
@@ -604,7 +605,7 @@ or phrase that the reader might not know: abbreviations and acronyms,
 definitions of Vitess-specific terms, and explanations of jargon used in Vitess
 ("topo", for example).
 
-**Other recommendations**
+###### Other recommendations
 
 Rename ["Reference > Programs"](https://vitess.io/docs/21.0/reference/programs/)
 to "Command line reference" or "Tools reference". Consider splitting into two or
@@ -1057,9 +1058,8 @@ The numeric rating values used in this document are as follows:
 [criteria]: ../../docs/analysis/criteria.md
 [implementation]: ./implementation.md?no-link-check
 [issues list]: ./issues-list.md?no-link-check
-[project-doc-website]: ?https://vitess.io/docs/
-[project-website]: ?https://vitess.io/
+[project-doc-website]: https://vitess.io/docs/
+[project-website]: https://vitess.io/
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
 [Bulma]: https://bulma.io/
