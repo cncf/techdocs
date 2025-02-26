@@ -6,6 +6,8 @@ author: Dave Welsch (@dwelsch-esi)
 cSpell:ignore: Welsch dwelsch pastable servicedesk
 ---
 
+<!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading -->
+
 # Introduction
 
 This document analyzes the effectiveness and completeness of the
@@ -46,15 +48,15 @@ Netlify platform. The site's code is stored on the KEDA GitHub repo.
 
 **In scope:**
 
-- Website: https://keda.sh
-- Documentation: https://keda.sh/docs
-- Website repo: https://github.com/kedacore/keda-docs
-- Governance repo: https://github.com/kedacore/governance
-- Main project contributor info: https://github.com/kedacore/keda
+- Website: <https://keda.sh>
+- Documentation: <https://keda.sh/docs>
+- Website repo: <https://github.com/kedacore/keda-docs>
+- Governance repo: <https://github.com/kedacore/governance>
+- Main project contributor info: <https://github.com/kedacore/keda>
 
 **Out of scope:**
 
-- Other KEDA repos: https://github.com/kedacore/*
+- Other KEDA repos under <https://github.com/kedacore/>
 
 ## How this document is organized
 
@@ -233,12 +235,12 @@ The documentation includes some examples of
 [**non-inclusive language**](https://inclusivenaming.org/). For example:
 
 - "easily", "simple", "simply", etc.
-  - https://keda.sh/docs/2.13/deploy/
-  - https://keda.sh/docs/2.13/deploy/#uninstall-3
-  - https://keda.sh/docs/2.13/concepts/scaling-deployments/#triggers
+  - <https://keda.sh/docs/2.13/deploy/>
+  - <https://keda.sh/docs/2.13/deploy/#uninstall-3>
+  - <https://keda.sh/docs/2.13/concepts/scaling-deployments/#triggers>
 - "master" node
-  - https://keda.sh/docs/2.13/troubleshooting/#google-kubernetes-engine-gke
-  - https://keda.sh/docs/2.13/scalers/redis-sentinel-lists/#authentication-parameters
+  - <https://keda.sh/docs/2.13/troubleshooting/#google-kubernetes-engine-gke>
+  - <https://keda.sh/docs/2.13/scalers/redis-sentinel-lists/#authentication-parameters>
 
 ## Recommendations
 
