@@ -18,7 +18,7 @@
     "check:format": "npm run _check:format || (echo '[help] Run: npm run fix:format'; exit 1)",
     "check:links": "bash -c 'for f in *.md `find docs analyses -name \"*.md\"`; do npx markdown-link-check@3.12.2 --config .markdown-link-check.json -p -v $f || exit 1; done'",
     "check:markdown": "npm run _check:markdown:all",
-    "check:spelling": "npx cspell --no-progress -c .cspell.yml *.md",
+    "check:spelling": "npx cspell --no-progress -c .cspell.yml analyses docs *.md",
     "check": "npm run seq -- $(npm run -s _list:check:*)",
     "fix:format": "npm run _check:format -- --write",
     "fix": "npm run seq -- $(npm -s run _list:fix:*)",

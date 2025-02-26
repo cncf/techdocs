@@ -102,9 +102,9 @@ This should be fixed or removed.)
       that describes the ITE process, which is two levels down from main in the
       [ITE repo](https://github.com/in-toto/ITE/). The document should be
       referenced in the section for Contributors, and possibly a subsection
-      sepecifically intended for ITE proposers and developers.
+      specifically intended for ITE proposers and developers.
 
-- [ ] As documents are transfered from GitHub into the Doc web site, update the
+- [ ] As documents are transferred from GitHub into the Doc web site, update the
       index accordingly and adjust the doc architecture as needed.
 
 ## Establish policy for reference material

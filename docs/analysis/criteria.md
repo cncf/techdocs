@@ -60,10 +60,7 @@ We evaluate on the following:
 - Do users know where to go after reading the getting started guide?
 - Is your new user content clearly signposted on your site’s homepage or at the
   top of your information architecture?
-- Is there easily copy-pastable sample code or other example content?
-
-<!-- markdownlint-enable line-length -->
-<!-- cSpell:ignore OSes copy-pastable Algolia Docsy -->
+- Is there sample code or other example content that can easily be copy-pasted?
 
 Example:
 

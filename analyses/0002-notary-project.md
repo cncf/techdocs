@@ -1,3 +1,7 @@
+---
+cSpell:ignore: docset notaryproject celestehorgan
+---
+
 # Notary Project Docs Assessment
 
 Date: 2021-07-31 Project: [Notary Project](https://github.com/notaryproject/)
@@ -223,8 +227,8 @@ developed?
 
 _Note_:
 [Notary Project branding artwork](https://github.com/cncf/artwork/tree/master/projects/notary)
-exists. Other branding elements, like colour schemes and whatnot, will need to
-be developed.
+exists. Other branding elements, like color schemes and whatnot, will need to be
+developed.
 
 ### Information Architecture
 

@@ -1,6 +1,6 @@
 ---
 title: etcd Umbrella Issue
-tags: etcd
+cSpell:ignore: reconf
 ---
 
 # Overview
@@ -334,13 +334,13 @@ section is probably easier.
 
 Longer explanations in the FAQ might be better as part of conceptual information
 -- for example, in the system or architecture overview. Retain the short answers
-that don't fit elesewhere.
+that don't fit elsewhere.
 
 ## Issue: Create a System Overview
 
 Rename the "Learning" section to "System Overview" or "Conceptual Overview".
 This is the place for detailed explanations of the system philosophy, design,
-and architeture. Edit the content, limiting it to explaining concepts. Move
+and architecture. Edit the content, limiting it to explaining concepts. Move
 instructional and reference topics to their own areas of the documentation.
 
 Move the section to earlier in ToC, perhaps before "Installation".
@@ -353,8 +353,8 @@ Include in architecture overview.
 
 ### etcd client design
 
-Include in architecture overview. Remove the Glossary and merge it into the
-sitewide Glossary.
+Include in architecture overview. Remove the Glossary and merge it into the site
+wide Glossary.
 
 ### etcd learner design
 

@@ -4,9 +4,8 @@
 version: '0.2'
 caseSensitive: true
 ignorePaths:
-  # Temporary until https://github.com/cncf/techdocs/pull/229 is merged
-  - /docs/
-  - /assessments/
+  - '*.csv'
+  - /docs/localization/ja
 # patterns:
 #   - name: CodeBlock
 #     pattern: |
@@ -21,10 +20,15 @@ ignorePaths:
 #     ignoreRegExpList:
 #       - CodeBlock
 words:
+  - nvmrc
   - backstore
+  - CLOTributor
   - CNCF
   - Docsy
   - keda
   - kedacore
+  - subpages
   - techdocs
+  - toolkits
   - toto
+  - triaging
