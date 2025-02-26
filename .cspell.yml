@@ -21,6 +21,7 @@ ignorePaths:
 #     ignoreRegExpList:
 #       - CodeBlock
 words:
+  - nvmrc
   - backstore
   - CNCF
   - Docsy
