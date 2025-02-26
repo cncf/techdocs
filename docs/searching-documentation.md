@@ -5,7 +5,7 @@
 This page describes some common alternatives for static site search.
 
 - [Google search](#programmable-search-engine-by-google)
-- [Docsearch by Algolia](#docsearch-by-algolia)
+- [DocSearch by Algolia](#docsearch-by-algolia)
 - [Lunr](#lunr)
 
 ## Programmable Search Engine by Google
@@ -26,7 +26,7 @@ website.
 
 - Search index is completely managed and hosted on Google servers.
 
-## Docsearch by Algolia
+## DocSearch by Algolia
 
 [DocSearch](https://docsearch.algolia.com/) is a search tool powered by the
 Algolia search engine that crawls your docs and provides a dropdown search
@@ -61,8 +61,8 @@ needing external, server-side, search services.
 
 ### Cons
 
-- Can be complex to configure and setup (If a team is already using hugo/docsy,
-  this should be _very_ easy to setup).
+- Can be complex to configure and setup (If a team is already using Hugo or
+  Docsy, this should be _very_ easy to setup).
 - Depending on site setup, may require javascript knowledge
 
 ## When Is It Best To Use One Over Another?

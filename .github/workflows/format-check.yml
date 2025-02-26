@@ -14,6 +14,7 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package.json
+      - run: npm install
       - run: npm run check:format
 
   markdown-linter:
@@ -26,4 +27,5 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
           cache-dependency-path: package.json
+      - run: npm install
       - run: npm run check:markdown

@@ -1,3 +1,7 @@
+---
+cSpell:ignore: Horgan celestehorgan hashlinks
+---
+
 # Docs assessment
 
 ## Introduction
@@ -174,8 +178,8 @@ website, and in the repo. Great job team!
 - Update
   [SITE_CONTRIBUTION.md](https://github.com/projectcontour/contour/blob/main/SITE_CONTRIBUTION.md)
   to Hugo when ready.
-- Do a backlog clean of `kind/docuentation` and ensure that all issues are still
-  valid. Close any which are not. For example
+- Do a backlog clean of `kind/documentation` and ensure that all issues are
+  still valid. Close any which are not. For example
   [this issue](https://github.com/projectcontour/contour/issues/2053) was opened
   in 2019.
 - Improve stub issue descriptions
@@ -203,7 +207,7 @@ website, and in the repo. Great job team!
   native community. While ideally we would see a logo wall of users or case
   studies, for a project of contour's size this is a great addition to the site.
 
-- **Maitenence planning**:
+- **Maintenance planning**:
   - **Monorepos**: Having a docs+code monorepo is risky in the long term, as it
     couples all docs builds with code builds and vice versa. If docs CI fails
     because Netlify is temporarily down, for example, this means that all your
@@ -223,7 +227,7 @@ website, and in the repo. Great job team!
     better to have padding above an h2 rather than below it, as this helps
     separate each section of a page.
 
-- **Maitenence planning**: Unless you have very good reasons for staying in a
+- **Maintenance planning**: Unless you have very good reasons for staying in a
   docs+code monorepo, we strongly suggest migrating documentation to its own
   repository and maintaining it separately.
 

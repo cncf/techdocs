@@ -1,6 +1,6 @@
 ---
 title: TUF Issue
-tags: TUF
+cSpell:ignore: theupdateframework
 ---
 
 ## Overview
@@ -16,10 +16,10 @@ analysis and implementation plan.
 ### Reorganize website content
 
 Reorganize website content by introducing new sections and consolidating some
-pages. For example, a docs section can accomodate most pages on the website.
+pages. For example, a docs section can accommodate most pages on the website.
 View the proposed outline in the [Implementation document](./implementation.md)
 
-This proposed change consolidates related pages and removes others, chnaging the
+This proposed change consolidates related pages and removes others, changing the
 structure of the current website
 [theupdateframework.io](https://theupdateframework.io/)
 
@@ -36,7 +36,7 @@ These can be further broken down into subsections depending on use case:
 
 - Adopters :
   - Client maintainers
-  - Respository maintainers
+  - Repository maintainers
 - Contributors:
   - Spec contributors
   - Docs contributors
@@ -49,7 +49,7 @@ repository for doc contributors.
 
 Audience: Admin
 
-Type: Conseptual
+Type: Conceptual
 
 ### Add introductory Video to homepage
 
@@ -58,7 +58,7 @@ Type: Conseptual
 
 Audience: Admin
 
-Type: Conseptual
+Type: Conceptual
 
 ### Add a 'Schedule and appointment' icon to the website
 
@@ -67,7 +67,7 @@ Type: Conseptual
 
 Audience: Admin
 
-Type: Conseptual
+Type: Conceptual
 
 ### Introduce Instructional material for user roles
 
@@ -115,8 +115,8 @@ Type: Conceptual
 ### Add labels to the website repo
 
 Add labels to issues in the website repo to make it easier for contributors to
-identify suitable issues. Labels such as _#docs \#Goodfirstissue_ make it easier
-for contributors to get started.
+identify suitable issues. Labels such as `docs` and `good first issue` make it
+easier for contributors to get started.
 
 Audience: Admin
 

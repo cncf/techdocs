@@ -1,4 +1,6 @@
-<!-- cSpell:ignore chalin gtag opentelemetry -->
+---
+cSpell:ignore: gtag kubernetes
+---
 
 # Analytics
 

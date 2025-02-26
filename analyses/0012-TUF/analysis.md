@@ -4,9 +4,10 @@ tags: TUF
 created: 2024-06-17
 modified: YYYY-MM-DD
 author: Sandra Dindi (@Dindihub)
+cSpell:ignore: Dindi Dindihub RSTUF theupdateframework
 ---
 
-<!-- markdownlint-disable no-duplicate-heading no-empty-links -->
+<!-- markdownlint-disable no-duplicate-heading -->
 
 ## Introduction
 
@@ -109,7 +110,7 @@ to their area of concern:
 
 - [Contributor documentation](#contributor-documentation)
 
-- [Website and infastructure](#website-and-infrastructure)
+- [Website and infrastructure](#website-and-infrastructure)
 
 #### Recommendations, requirements, and best practices
 
@@ -168,7 +169,7 @@ Scale:
 
 - Repetition of content on different pages makes content confusing
 
-- Re-organise content to make it easier to follow
+- Re-organize content to make it easier to follow
 
 - There are no tutorials for specific feature implementation. But, there are
   videos explaining various use cases.
@@ -214,7 +215,7 @@ Scale:
 #### Content maintainability & site mechanics
 
 - The documentation is not searchable. You have to go through the site to find
-  what you are looking for. The only source of naviagation is the menu bar.
+  what you are looking for. The only source of navigation is the menu bar.
 
 - The Docs are managed through docs-as-code site Hugo and content written in
   markdown. However,it appears the updates are made manually.
@@ -242,7 +243,7 @@ Scale:
   _Aborted_ is used in the
   [Specification index tutorial](https://theupdateframework.github.io/specification/latest/#fix-time)
 
-- There is no use of abliest language like simple, or easy in the documentation.
+- There is no use of ableist language like simple, or easy in the documentation.
 
 ### Project recommendations
 
@@ -453,9 +454,9 @@ the website repo.
 - Information about the website build, tools and how to generate it are not
   available on the website or the docs repo.
 - Intra-site search mechanism is not available from the website. The only
-  naviagation option is a menu bar. This makes it difficult to find information.
-- Alot of empty space between the Hero section and the Navbar. Due to this
-  spacing, information is pushed out of eyelevel. You have to scroll down to
+  navigation option is a menu bar. This makes it difficult to find information.
+- A lot of empty space between the Hero section and the Navbar. Due to this
+  spacing, information is pushed out of eye level. You have to scroll down to
   find it.
 
 #### Single-source requirement
@@ -477,7 +478,7 @@ The website docs analysis is in progress.
 #### Branding and design
 
 - There's a recognizable brand for the project , a logo and blue-white color
-  scheme used througout the website.
+  scheme used throughout the website.
 - The website design is good and suitable for reading. However, consider
   reducing the space between the hero section and the Navbar.
 
@@ -511,7 +512,7 @@ The website docs analysis is in progress.
 #### Branding and design
 
 - Reduce the empty space between the hero section and Navbar to bring
-  information to eyelevel. At the moment the information is too far down, you
+  information to eye level. At the moment the information is too far down, you
   have to scroll to find it.
 
 #### SEO, Analytics and site-local search

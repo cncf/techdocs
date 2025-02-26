@@ -1,3 +1,7 @@
+---
+cSpell:ignore: Meha Bhalodiya mehabhalodiya kubernetes
+---
+
 # Assessment: Project Kubernetes Gateway API
 
 Prepared by: Meha Bhalodiya
@@ -95,7 +99,7 @@ as well as where to find them.
   - Reference
   - Contribute
 
-- **Prepared a miro board:
+- **Prepared a Miro board:
   [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
 
   ![information_architecture](../docs/images/gapi_info_arch.png)

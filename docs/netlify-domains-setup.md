@@ -1,21 +1,25 @@
+---
+cSpell:ignore: caniszczyk
+---
+
 # Netlify and domain setup
 
 ## Netlify
 
 If a project already has its own Netlify instance, ask them to add
-@celestehorgan and @caniszczyk as administrators. As a part of their project
-onboarding, any billing information should be taken care of. If it isn't, ask
-them to open a [CNCF Service Desk](https://github.com/cncf/servicedesk) ticket.
+[@caniszczyk][] as administrator. As a part of project onboarding, any billing
+information should be taken care of. If it isn't, ask them to open a
+[CNCF Service Desk](https://github.com/cncf/servicedesk) ticket.
 
 If a project does not have a website, or is migrating from using GitHub pages to
 Netlify, create a new site for them under the CNCF Projects netlify instance.
 
 ### Netlify maintainers
 
-- Ensure that @celestehorgan and @caniszczyk are Owners if they are not already.
+- Ensure that [@caniszczyk][] is an Owner.
 - Contact the project and ask for **at least two** maintainers for Netlify. You
   will need their GitHub usernames. Add them either as Collaborators to specific
-  sites (if in the CNCF Projects Netlify team) or as Collaboators for the
+  sites (if in the CNCF Projects Netlify team) or as Collaborators for the
   Netlify team.
 
 ## Domains
@@ -30,7 +34,7 @@ one.
 In most cases, we prefer to manage domains for project websites using Netlify
 DNS.
 
-At the moment, @caniszczyk manages domain transfers.
+At the moment, [@caniszczyk][] manages domain transfers.
 
 ### Netlify DNS domains
 
@@ -52,3 +56,5 @@ Occasionally projects have domain names that don't point to websites. These are
 used for, among other things, email addresses.
 
 Issues related to these should be forwarded on to Linux Foundation IT staff.
+
+[@caniszczyk]: https://github.com/caniszczyk

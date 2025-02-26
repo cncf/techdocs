@@ -1,3 +1,7 @@
+---
+cSpell:ignore: celestehorgan Horgan
+---
+
 # Assessment template
 
 Prepared by: Celeste Horgan

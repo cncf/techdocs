@@ -44,10 +44,11 @@ efforts.
 
 This document was written to analyze the current state of _PROJECT_
 documentation. It aims to provide project leaders with an informed understanding
-of potential problems in current project documentation. A second [impementation]
-document, , outlines an actionable plan for improvement. A third document is an
-[issues list] of issues to be added to the project documentation repository.
-These issues can be taken up by contributors to improve the documentation.
+of potential problems in current project documentation. A second
+[implementation] document, , outlines an actionable plan for improvement. A
+third document is an [issues list] of issues to be added to the project
+documentation repository. These issues can be taken up by contributors to
+improve the documentation.
 
 This document:
 
@@ -62,7 +63,7 @@ the technical documentation, and documentation for contributors and users on the
 _PROJECT_ GitHub repository.
 
 The _PROJECT_ website and documentation are written in [Markdown, ReStructured
-Text, other] and are compiled using the [Hugo, Docusaurus, Sphynx, other] static
+Text, other] and are compiled using the [Hugo, Docusaurus, Sphinx, other] static
 site generator with the [Docsy, other] theme and served from [the Netlify
 platform, other]. The site's code is stored on the _PROJECT_ GitHub repo.
 
@@ -196,7 +197,7 @@ specifically for them. We evaluate on the following:
 - Do users know where to go after reading the getting started guide?
 - Is your new user content clearly signposted on your site’s homepage or at the
   top of your information architecture?
-- Is there easily copy-pastable sample code or other example content?
+- Is there sample code or other example content that can easily be copy-pasted?
 
 #### Content maintainability & site mechanics
 
@@ -381,7 +382,7 @@ and documentation infrastructure rubric.
 > these criteria. Keep in mind that much of the website infrastructure criteria
 > depend on the tools (static site generator, website framework and hosting,
 > analytics tools, etc.) and processes (project CI, release procedures,
-> goverance, etc.) used to produce the documentation. (Criteria are copied from
+> governance, etc.) used to produce the documentation. (Criteria are copied from
 > criteria.md)
 
 #### Single-source requirement

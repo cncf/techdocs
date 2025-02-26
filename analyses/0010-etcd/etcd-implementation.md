@@ -6,7 +6,7 @@ tags: etcd
 # Introduction
 
 This document provides actionable suggestions for improving the etcd technical
-documentaiton.
+documentation.
 
 For an analysis and general discussion of recommendations on etcd technical
 documentation, see [etcd-analysis.md][etcd-analysis].
@@ -266,8 +266,8 @@ section.
 **_Disaster recovery_**: Consolidate with other troubleshooting procedures.
 
 **_Hardware recommendations_**: System prerequisite. Move to somewhere before
-the Cluster Installation section; maybe even put it in a Prereq heading in that
-section.
+the Cluster Installation section; maybe even put it in a prerequisite heading in
+that section.
 
 **_Maintenance_**: Maybe provide a more specific title like "Storage
 maintenance".

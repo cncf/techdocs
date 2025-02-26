@@ -1,6 +1,9 @@
-# Technical Documentation Versioning with Hugo & Netlify
+---
+# prettier-ignore
+cSpell:ignore Batard Brubaker Pursley velero fullversion githubbranch docsbranch Tanzu Rosland Horgan Takahashi
+---
 
-<!-- markdownlint-disable no-emphasis-as-heading -->
+# Technical Documentation Versioning with Hugo & Netlify
 
 Technical Documents Versioning is an intersection of:
 
@@ -20,44 +23,40 @@ Things discussed in this article:
 
 What are the main concerns when versioning technical documentation in a website?
 
-**Readers**
+### Readers
 
 - Ease of navigation/understanding
 
-**Maintainers / Writers**
+### Maintainers / Writers
 
 - How hard is it to update when it's time to cut a new version?
 
-**Necessity**
+### Necessity
 
 - Does the documentation need versioning yet?
 - YAGNI (You aren't gonna need it - Don't implement things before you actually
   need them)
 
-**Navigation**
+### Navigation
 
 - Differences between versions (how do you deal with pages that have been added,
   removed, or moved between releases?)
 
-**Searchability**
+### Searchability
 
 - Does the duplication of pages affect search results? How do you manage result
   priority between versions?
 
-**Localization / Internationalization**
+### Localization / Internationalization
 
 - How does the added complexity of language/locale versions affect the version
   system?
 
-**Compartmentalization**
+### Compartmentalization
 
 - Does all of the site need to be versioned?
 - How do we avoid versioning the entire site if only Documentation versions are
   the goal?
-
-**Switchability**
-
-- How easy is it to change versioning schemes?
 
 ## Versioning Schemes
 
@@ -223,12 +222,12 @@ method is likely the best method to balance versioning considerations.
 
 [^1]:
     [Bannister, T.](https://github.com/sftim) et al. (2020, December 23).
-    kubernetes/website. GitHub. Retrieved February 2, 2021 from
+    Kubernetes/website. GitHub. Retrieved February 2, 2021 from
     [https://github.com/kubernetes/website/blob/ 7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml](https://github.com/kubernetes/website/blob/7462297ee388332a7b0d27625929fbf44d0c1ea9/config.toml)
 
 [^2]:
     [Batard, T.](https://github.com/tbatard) (2020, August 13).
-    _vmware-tanzu/velero_. GitHub. Retrieved January 19, 2021 from
+    _VMware-Tanzu/velero_. GitHub. Retrieved January 19, 2021 from
     [https://github.com/vmware-tanzu/velero/blob/ db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html](https://github.com/vmware-tanzu/velero/blob/db403c6c54b0048fada2b5db628c44be4ac0fd79/site/layouts/docs/versions.html)
 
 [^3]:
@@ -236,13 +235,13 @@ method is likely the best method to balance versioning considerations.
     [Rosland, J.](https://github.com/jonasrosland),
     [Thompson, C.](https://github.com/carlisia),
     [Batard, T.](https://github.com/tbatard) (2020, September 16).
-    _vmware-tanzu/velero_. GitHub. Retrieved February 2, 2021 from
+    _VMware-Tanzu/velero_. GitHub. Retrieved February 2, 2021 from
     [https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml](https://github.com/vmware-tanzu/velero/blob/1fd49f4fd66ecf6cd959ce258efbd9a549d8902b/site/config.yaml)
 
 [^4]:
     [Pursley, B.](https://github.com/brianpursley),
     [Horgan, C.](https://github.com/celestehorgan), Takahashi, S. (2020, July
-    21). _kubernetes/website_. GitHub. Retrieved February 2, 2021 from
+    21). _Kubernetes/website_. GitHub. Retrieved February 2, 2021 from
     [https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html](https://github.com/kubernetes/website/blob/072d4b41b45f5311538c24d375432a755f9e3f4c/layouts/partials/navbar-version-selector.html)
 
 ---

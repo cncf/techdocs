@@ -1,6 +1,6 @@
 ---
 title: Litmus Chaos Issue
-tags: Litmus Chaos
+cSpell:ignore: litmuschaos ChaoCenter
 ---
 
 <!-- markdownlint-disable line-length no-duplicate-heading no-emphasis-as-heading -->
@@ -207,7 +207,7 @@ There are several ways to do this:
   assumes that making the user click to a common piece of information is a
   lesser liability than trying to maintain the same information in two (or more)
   places. It usually is.
-- Put the dupilcate information on its own page and include in-line everywhere
+- Put the duplicate information on its own page and include in-line everywhere
   it's required (not easy to do here, since Markdown doesn't have a mechanism
   for that like the Restructured Text ".. include" directive.)
 
@@ -327,7 +327,7 @@ same sections as shown for the User Guides in the TOC:
 - Environments
 - Chaos Infrastructure
 - Injecting Fault
-- Resilience Probjes
+- Resilience Probes
 - Account Settings
 - User Management
 - Managing Projects
@@ -349,7 +349,7 @@ sections as shown for Concepts in the TOC:
 - GitOps
 - Authentication in ChaosCenter
 
-Also, make sure the TOC entries have consistent captitalization and agree with
+Also, make sure the TOC entries have consistent capitalization and agree with
 the Overview headings. For example, "Chaos experiment" is sentence-style
 capitalization; "Chaos Experiment" is title capitalization. Pick one or the
 other for the site. Don't mix and match.
@@ -491,12 +491,12 @@ here. Some guidelines for writing procedures:
     tell the reader what to do ("Save and run the experiment. You are redirected
     to the experiment execution page where the experiment execution steps are
     visualized").
-- Use gerunds ("-ing" verbs) to title proceure pages; for example "Scheduling a
+- Use gerunds ("-ing" verbs) to title procedure pages; for example "Scheduling a
   chaos experiment" rather than "Schedule a chaos experiment".
 - Explicitly state which operating systems and platform the installation is for.
-  This can be done in the Prereqs section.
+  This can be done in the Prerequisites section.
 
-- In all cases, use conistent naming for the sections as an aid to navigation.
+- In all cases, use consistent naming for the sections as an aid to navigation.
   For example, the current documentation uses "Prerequisites" and "Before you
   begin" for the same information.
   - Similarly, retitle "Learn More" as "Next Steps", and write explanations for
@@ -575,7 +575,7 @@ the relevant portion.
 ### Overview
 
 There are several good articles in the Litmus Chaos blog that expand and explain
-Litmus funtionality. Blog posts that run through an end-to-end example would
+Litmus functionality. Blog posts that run through an end-to-end example would
 make good tutorials. If any posts explain core functional capabilities, they
 should be included in the Litmus technical documentation so they are findable by
 users.

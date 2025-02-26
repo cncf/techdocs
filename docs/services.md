@@ -111,5 +111,5 @@ for an embedded writer.
 formal request. Bear in mind that this project proposal will convert to the
 statement of work for a contractor and plan accordingly.
 
-> Note: Longer techncial writer engagements are subject to team availability and
+> Note: Longer technical writer engagements are subject to team availability and
 > CNCF priorities. Availability is not guaranteed.

@@ -4,7 +4,8 @@ tags: LitmusChaos
 created: 2024-08-02
 modified: 2024-10-09
 author: Dave Welsch (@dwelsch-esi)
-cSpell:ignore: Docusaurus rfc OSes pastable impl servicedesk md
+# prettier-ignore
+cSpell:ignore: Welsch dwelsch litmusctl embedmd litmuschaos mkdocs subsite codelab
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -255,7 +256,7 @@ Instructions for contributing doc changes are in the CONTRIBUTING.md file in the
 docs repo.
 
 There is nothing in the main release process about documentation. There is a
-wikiin the main project repo. One of the things it contains is a list of SIGs
+wiki in the main project repo. One of the things it contains is a list of SIGs
 and one of the SIGs is documentation. However, the SIG document has not been
 edited since early 2021.
 
@@ -266,7 +267,7 @@ MAINTAINERS.md file.
 
 There are a few examples of non-recommended words as documented by the
 [Inclusive Naming Initiative](https://inclusivenaming.org) website. Some of
-these cannot be summarily changed because they appear in pathnames, commands,
+these cannot be summarily changed because they appear in path names, commands,
 and as parameter names.
 
 The project also uses terms like "simple", "easy", and so on in what could be
@@ -308,7 +309,7 @@ respectively. Explain the usage scenario at the top of each procedure.
 
 Rather than duplicating information in different scenarios (basic vs. advanced
 install, for example), write single sub-procedures and link to them from the
-main procedure or include them as prereqs.
+main procedure or include them as prerequisites.
 
 Explicitly call out the operating system for every install procedure.
 

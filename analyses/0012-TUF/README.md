@@ -1,3 +1,7 @@
+---
+cSpell:ignore: theupdateframework
+---
+
 # TUF Documentation Analysis
 
 This section contains analysis of The Update Framework (TUF) project

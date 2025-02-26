@@ -4,6 +4,7 @@ tags: etcd
 created: 2023-09-01
 modified: 2024-01-08
 author: Dave Welsch (@dwelsch-esi)
+cSpell:ignore: Welsch dwelsch
 ---
 
 # Introduction
@@ -23,14 +24,14 @@ efforts.
 This document was written to analyze the current state of etcd documentation. It
 aims to provide project leaders with an informed understanding of potential
 problems in current project documentation. The companion document,
-etcd-impementation.md, outlines an actionable plan for improvement.
+etcd-implementation.md, outlines an actionable plan for improvement.
 
 This document:
 
 - Analyzes the current etcd technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on
-  investment. The companion document, etcd-impementation.md, provides specific
+  investment. The companion document, etcd-implementation.md, provides specific
   actionable suggestions and recommendations for overall organization and
   presentation of documentation
 
@@ -94,7 +95,7 @@ to their area of concern:
 
 - [Project documentation][proj-doc]
 - [Contributor documentation][contributor-doc]
-- [Website and documentation infrrastructure][website]
+- [Website and documentation infrastructure][website]
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [Criteria][cncf-doc-criteria] specification.
@@ -331,9 +332,9 @@ Reorganize the table of contents (ToC) to separate three types of information:
   material by user role: for etcd, the two main user roles seem to be 1)
   developers, and 2) operators or admins responsible for running and maintaining
   etcd server instances.
-- **Reference**: The details of CLI commands, API metehods and objects, system
+- **Reference**: The details of CLI commands, API methods and objects, system
   configuration options, and other information that needs to be looked up in the
-  course of performning a task.
+  course of performing a task.
 
 For an excellent and very literal example of this approach, see the [Kubernetes
 documentation][k8s-doc].
@@ -507,7 +508,7 @@ minimal difficulty **finding help** if they need it.
 
 ### Project governance documentation
 
-[**Project goverance**][etcd-govern] is clearly documented.
+[**Project governance**][etcd-govern] is clearly documented.
 
 ## Recommendations
 
@@ -527,7 +528,7 @@ repo, with links to the other contributor resources.
 
 ### Project governance documentation
 
-No recommnendations.
+No recommendations.
 
 # Website
 
@@ -682,8 +683,7 @@ documentation for all major use cases for each stakeholder.
 
 ### Usability, accessibility and devices
 
-Consider replaciing low-contrast text for the benefit of visually impaired
-users.
+Consider replacing low-contrast text for the benefit of visually impaired users.
 
 ### Branding and design
 

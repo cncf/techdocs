@@ -6,7 +6,7 @@ around which to organize the Backstage documentation.
 
 The documentation should ultimately be task-oriented, with tasks organized
 around users and their objectives. A process for creating this type of
-documentation set is under development in the CDCF Tech Doc GitHub project.
+documentation set is under development in the CNCF Tech Doc GitHub project.
 
 ## Summary of Proposed User Roles
 

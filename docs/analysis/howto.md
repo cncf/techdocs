@@ -62,7 +62,7 @@ for
    next index available in the directory (check for PRs as well, if someone else
    is working on tech doc analyses), and where _PROJECT_ is a short but not
    abbreviated project name. For example, for Kubernetes _PROJECT_ would be
-   _kubernetes_, not _k8s_.
+   _Kubernetes_, not _k8s_.
 4. Copy all the doc analysis [templates].
 
 ### Writing the Analysis document

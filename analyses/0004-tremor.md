@@ -1,3 +1,7 @@
+---
+cSpell:ignore: Horgan onramps offramps LLDB Wayfair
+---
+
 # Assessment: Project Tremor
 
 Prepared by: Celeste Horgan Date: July 2021
