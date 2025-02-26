@@ -1,17 +1,7 @@
 ---
-title: Porter tech docs assessment draft
+title: Porter docs analysis
 cSpell:ignore: Uchechukwu Obasi
 ---
-
-# Notes
-
-meeting notes:
-https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw/edit?usp=sharing
-website: https://getporter.org/ repos:
-
-- https://github.com/getporter/porter (main site), site content is in docs/
-  folder
-- https://github.com/getporter/operator (https://getporter.org/operator site)
 
 # Porter Docs Assessment
 
@@ -21,6 +11,15 @@ Prepared by:
 - [Nate W.](https://github.com/nate-double-u/)
 
 Date: 2023-04-07
+
+Resources:
+
+- [Meeting notes](https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw?no-link-check)
+- Website: <https://getporter.org>
+- Repos:
+  - Main site: <https://github.com/getporter/porter>. Content is in `docs`.
+  - [Operator site](https://getporter.org/operator):
+    <https://github.com/getporter/operator>
 
 ## Introduction
 
@@ -159,7 +158,7 @@ Scale:
 
 - Move the website sourcefile to a separate "website" directory. That way, we
   create a good separation of concern. A good example is
-  [https://github.com/thanos-io/thanos](https://github.com/thanos-io/thanos).
+  <https://github.com/thanos-io/thanos>.
 - The porter's docs should be searchable.
 - Create a version picker (dropdown) to make search easily discoverable for
   users.
