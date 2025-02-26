@@ -1,6 +1,6 @@
 ---
 title: Porter tech docs assessment draft
-tags: porter
+cSpell:ignore: Uchechukwu Obasi
 ---
 
 # Notes
@@ -103,7 +103,7 @@ Scale:
 - Multiple OSes are well documented too.
 - The onboarding and contributing guides are well documented making it easy for
   new users to understand and kickstart.
-- Porter's sample code is copy-pastable.
+- Porter's sample code can be copy-pasted.
 - "What is Porter?" is a good overview or 'about' section.
 - Items listed under "When to use Porter?" are inconsistent with the way they're
   linked: some are linked while others are not.
@@ -122,7 +122,7 @@ Scale:
   developers to write docs. I think it's a fair point. My only issue with this
   convention is that it makes it difficult for a new contributor to find the
   website's sourcefile. A contributor expects the "docs" directory to only
-  contain nothing but actual documentation files not website sourcefiles.
+  contain nothing but actual documentation files not website source files.
 - There's no way to search the documentation
 - Hard to locate the different versions on smaller screens
 
@@ -140,7 +140,7 @@ Scale:
 - Overall, Porter's documentation is well organized:
   - some pages seem misplaced (quick start for operator, ...)
   - Some pages appear at the top level of the docs nav that may not need to be
-    there -- search may help with findability
+    there -- search may help with discoverability
     - Best practices could be under reference
     - Mixins Plugins -- should these be top level?
 

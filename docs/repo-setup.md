@@ -1,3 +1,7 @@
+---
+cSpell:ignore cncf
+---
+
 # Repository setup
 
 We recommend that CNCF projects separate docs into their own repository, away
@@ -40,7 +44,7 @@ For documentation this means you must:
    [CC-BY-4.0 license](./LICENSE-docs).
    ```
 
-2. Add both the CC-BY-4.0 `LICENCE-docs` and Apache 2.0 `LICENCE` files to the
+2. Add both the CC-BY-4.0 `LICENSE-docs` and Apache 2.0 `LICENSE` files to the
    root directory of the documentation. For a plain text versions of both, see
    [cncf/project-template](https://github.com/cncf/project-template)
 

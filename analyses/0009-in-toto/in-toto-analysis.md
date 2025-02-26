@@ -176,7 +176,7 @@ in the Get Started menu (wherever that ends up).
 
 Almost all doc content is in GitHub (in README files, the Specification, or
 comments in demos). Most of it should be exposed as indexed documents on the
-website to make it versionable, editable, and localizable.
+website so it can be edited, versioned, and localized.
 
 - Move most of the documentation into read-the-docs (RTD) so that it can
   properly indexed and maintained.

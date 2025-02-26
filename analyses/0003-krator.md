@@ -1,3 +1,7 @@
+---
+cSpell:ignore: Krator celestehorgan CODEOWNERS
+---
+
 # Krator Docs assessment
 
 ## Introduction
@@ -53,9 +57,9 @@ Criteria:
   - Documentation is currently in several locations and will need to be brought
     into one repo. The current resources are:
     - The project [README](https://github.com/krator-rs/krator)
-    - [Introduction to krator Blog Post](https://deislabs.io/posts/introducing-krator/)
+    - [Introduction to Krator Blog Post](https://deislabs.io/posts/introducing-krator/)
     - [A Fistful of States: More State Machine Patterns in Rust](https://deislabs.io/posts/a-fistful-of-states/)
-    - [Crate krator API Documentation](https://docs.rs/krator/0.4.0/krator/).
+    - [Crate Krator API Documentation](https://docs.rs/krator/0.4.0/krator/).
       This is a substantial part of the current documentation and could be
       incorporated into the main body (site/repo) of the documentation. This is
       already a great resource for users, but if we transport it to a
@@ -83,7 +87,7 @@ Criteria:
   - We'll need to create a clear entry point for the new user. Some of this info
     could be taken from the
     [Developer Guide](https://github.com/krator-rs/krator/blob/main/docs/community/developers.md)
-    and includes prerequisite knowlege, configuration, and a brief step-by-step
+    and includes prerequisite knowledge, configuration, and a brief step-by-step
     guide on adding Krator to your project.
 - **Content maintainability**:
   - Since we'll be creating a site, search doesn't apply yet (though will be
@@ -117,19 +121,19 @@ Criteria:
     creating a Getting Started/Quickstart.
   - **Tutorials**
     - **Setting up Krator**
-    - **Configuring your project to use krator**
+    - **Configuring your project to use Krator**
   - **Tasks:** I recommend a section with step-by-step instructions on how to
     accomplish the most common tasks in Krator. For example, if you have five
     most common tasks, you could have a document for each. Suggestions include:
     - **Using built-in operators**
-    - **Creating your own operators with krator**
+    - **Creating your own operators with Krator**
     - Are there other common tasks? If so, they should go here.
   - **Best practices**
   - **Troubleshooting**
     - **Troubleshooting**
     - **Error Reference** A table with explanations and resolution steps would
       suffice
-  - **Contributing to krator**
+  - **Contributing to Krator**
     - **Cutting releases** (This is existing documentation)
     - **Contributing:** Include information on submitting issues and
       instructions with links on contributing to the code base and to the
@@ -196,7 +200,7 @@ be done!
 
 <!-- borrowed from @celestehorgan's excellent work in 0001-contour.md -->
 
-- **Maitenence planning**:
+- **Maintenance planning**:
   - **Monorepos**: Having a docs+code monorepo is risky in the long term, as it
     couples all docs builds with code builds and vice versa. If docs CI fails
     because Netlify is temporarily down, for example, this means that all your

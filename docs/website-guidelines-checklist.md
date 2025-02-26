@@ -14,7 +14,7 @@ all projects
         Unless there's a strong necessity to use CLA, we encourage projects to
         use DCO as it's easier to setup and use.
 - [ ] 2. Reference the origin company correctly (if needed)<br/> _Note_: It is
-     OK to say that, e.g., “Prometheus was originally created by Soundcloud” or
+     OK to say that, e.g., “Prometheus was originally created by SoundCloud” or
      “Kubernetes builds upon 15 years of experience of running production
      workloads at Google,” but the origin company should not otherwise be
      referred to on the project homepage.
