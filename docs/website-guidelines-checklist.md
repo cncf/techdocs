@@ -43,7 +43,7 @@ all projects
      trademarks and uses trademarks. For a list of TLF trademarks, see
      [Trademark Usage][]". If your project has been converted to the Series LLC
      model (starting in 2025), please use the following in your copyright
-     statement: "Copyright ©$PROJECT_NAME a Series of LF Projects, LLC."
+     statement: "Copyright © $PROJECT_NAME a Series of LF Projects, LLC."
 
 ## Community and license files
 
