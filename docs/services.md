@@ -4,7 +4,7 @@ The CNCF provides technical writing and documentation website services for all
 its projects.
 
 All requests are subject to approval by the CNCF and should be submitted through
-the [CNCF service desk](https://servicedesk.cncf.io).
+the [CNCF service desk][].
 
 ## Docs assessment
 
@@ -37,6 +37,9 @@ website domain name (i.e. longhorn/longhorn.io, rather than longhorn/website)
 Netlify installed/added to this repository A list of key maintainer(s) who
 should have access to Netlify A decision on whether your project will use CNCF’s
 CLA or Github’s DCO for committer verification.
+
+Please see the [Netlify and Domains Setup](netlify-domains-setup.md) page for
+more information.
 
 ## Techdocs office hours
 
@@ -113,3 +116,5 @@ statement of work for a contractor and plan accordingly.
 
 > Note: Longer technical writer engagements are subject to team availability and
 > CNCF priorities. Availability is not guaranteed.
+
+[CNCF service desk]: https://servicedesk.cncf.io/
