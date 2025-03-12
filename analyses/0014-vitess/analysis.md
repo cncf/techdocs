@@ -476,8 +476,8 @@ Also on the Global TopoServer page, by the way:
 > To avoid repetition we will use <topo_flags> in our examples to signify the above
 >   flags.
 
-Remove this. The "<topo_flags>" placeholder does not seem to have been implemented.
-There are no mentions of "<topo_flags"> elsewhere in the documentation, and in any
+Remove this. The `<topo_flags>` placeholder does not seem to have been implemented.
+There are no mentions of `<topo_flags>` elsewhere in the documentation, and in any
 case each would have to refer back to this page.
 
 In the FAQ: Rename the questions into concise headings when you consolidate the FAQ into the versioned documentation (see *Reorganize* below).
