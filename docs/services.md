@@ -38,9 +38,7 @@ Netlify installed/added to this repository A list of key maintainer(s) who
 should have access to Netlify A decision on whether your project will use CNCF’s
 CLA or Github’s DCO for committer verification.
 
-Please see the [Netlify and Domains Setup](netlify-domains-setup.md) page for
-more information.
-
+For more information, see [Netlify and domain setup](netlify-domains-setup.md).
 ## Techdocs office hours
 
 **What it is:** An hour long open meeting with CNCF’s technical writers where
