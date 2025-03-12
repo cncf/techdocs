@@ -5,7 +5,7 @@ created: 2025-02-19
 modified: 2025-02-19
 author: Dave Welsch (dwelsch-esi)
 # prettier-ignore
-cSpell:ignore: Welsch dwelsch Vitess vitess topo pasteable mysqlshell vtctldclient
+cSpell:ignore: Welsch dwelsch vitess topo pasteable mysqlshell vtctldclient
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
