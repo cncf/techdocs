@@ -93,7 +93,7 @@ Follow these steps:
     measurement ID. Continuing from the previous step:
 
     - Select **Go to your GA4 property** from the **GA4 Setup Assistant** view
-      of your UA property.<br> This will open an analytics console onto your GA4
+      of your UA property.<br/>This will open an analytics console onto your GA4
       site tag. Perform the remaining steps from your GA4 console.
     - Select **Admin** > **Data stream**
     - Select the (only) data stream to view its details.

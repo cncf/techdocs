@@ -1,3 +1,8 @@
+# Docusaurus - cSpell:disable-next-line
+.docusaurus
+.cache-loader
+/build
+
 # npm assets
 node_modules/
 package-lock.json

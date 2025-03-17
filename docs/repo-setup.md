@@ -1,5 +1,5 @@
 ---
-cSpell:ignore cncf
+cSpell:ignore: cncf
 ---
 
 # Repository setup
