@@ -1,6 +1,9 @@
 {
   "ignorePatterns": [
     {
+      "pattern": "^https://slack.cncf.io/?"
+    },
+    {
       "pattern": "^http://localhost"
     },
     {
