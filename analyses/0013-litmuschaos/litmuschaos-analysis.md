@@ -1,6 +1,6 @@
 ---
 title: LitmusChaos Documentation Analysis
-tags: LitmusChaos
+tags: [LitmusChaos]
 created: 2024-08-02
 modified: 2024-10-09
 author: Dave Welsch (@dwelsch-esi)
@@ -54,17 +54,17 @@ GitHub repo.
 
 #### In scope
 
-- Website: <https://litmuschaos.io/>
-- Website repo: <https://github.com/litmuschaos/litmus-website-2>
-- Documentation repo: <https://github.com/litmuschaos/litmus-docs/>
+- Website: https://litmuschaos.io/
+- Website repo: https://github.com/litmuschaos/litmus-website-2
+- Documentation repo: https://github.com/litmuschaos/litmus-docs/
 - Main project repo (for governance and contributor docs):
-  <https://github.com/litmuschaos/litmus>
+  https://github.com/litmuschaos/litmus
 
 #### Out of scope
 
-- Other LitmusChaos repos: <https://github.com/litmuschaos/>
+- Other LitmusChaos repos: https://github.com/litmuschaos/
 - Litmus Software (a completely unrelated company and product based in
-  Massachusetts): <https://litmus.com/>
+  Massachusetts): https://litmus.com/
 
 ### How this document is organized
 
@@ -604,12 +604,12 @@ websites:
 
 <!-- markdownlint-disable line-length -->
 
-| Site                                                  | Repository                                                 | Tool or Stack            |
-| ----------------------------------------------------- | ---------------------------------------------------------- | ------------------------ |
-| [Project website](https://litmuschaos.io/)            | <https://github.com/litmuschaos/litmus-website-2>          | React/Next/Tailwind/SCSS |
-| [Documentation website](https://docs.litmuschaos.io/) | <https://github.com/litmuschaos/litmus-docs/>              | Docusaurus/Netlify       |
-| Tutorials                                             | <https://github.com/litmuschaos/tutorials>                 | Google Codelab?          |
-| [APIs][api-site]                                      | <https://github.com/litmuschaos/litmus/tree/master/mkdocs> | MkDocs                   |
+| Site                                                  | Repository                                               | Tool or Stack            |
+| ----------------------------------------------------- | -------------------------------------------------------- | ------------------------ |
+| [Project website](https://litmuschaos.io/)            | https://github.com/litmuschaos/litmus-website-2          | React/Next/Tailwind/SCSS |
+| [Documentation website](https://docs.litmuschaos.io/) | https://github.com/litmuschaos/litmus-docs/              | Docusaurus/Netlify       |
+| Tutorials                                             | https://github.com/litmuschaos/tutorials                 | Google Codelab?          |
+| [APIs][api-site]                                      | https://github.com/litmuschaos/litmus/tree/master/mkdocs | MkDocs                   |
 
 <!-- markdownlint-enable line-length -->
 

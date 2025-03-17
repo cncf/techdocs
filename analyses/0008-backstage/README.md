@@ -1,6 +1,6 @@
 ---
 title: Backstage TechDocs Analysis
-tags: backstage
+tags: [backstage]
 ---
 
 - [Backstage Doc Analysis](backstage-analysis.md) - Analyzes the existing
