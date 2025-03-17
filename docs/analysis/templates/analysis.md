@@ -1,6 +1,6 @@
 ---
 title: _PROJECT_ Documentation Analysis
-tags: _PROJECT_
+tags: [_PROJECT_]
 created: YYYY-MM-DD
 modified: YYYY-MM-DD
 author: _NAME_ (@_HANDLE_)

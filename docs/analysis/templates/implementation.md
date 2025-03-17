@@ -1,6 +1,6 @@
 ---
 title: Implementing _PROJECT_ Doc Improvements
-tags: _PROJECT_
+tags: [_PROJECT_]
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
