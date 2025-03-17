@@ -1,6 +1,6 @@
 ---
 title: _PROJECT_ Issue
-tags: _PROJECT_
+tags: [_PROJECT_]
 ---
 
 > AUTHOR NOTE: This template provides one possible format for the individual
@@ -29,8 +29,7 @@ Type:
 
 This issue tracks recommended changes resulting from an analysis of the etcd
 documentation commissioned by CNCF. The analysis and supporting documents are
-here: <https://github.com/cncf/techdocs/tree/main/analyses> under
-`00NN-project`.
+here: https://github.com/cncf/techdocs/tree/main/analyses under `00NN-project`.
 
 ## Possible Implementation
 

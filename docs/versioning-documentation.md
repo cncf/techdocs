@@ -1,6 +1,6 @@
 ---
 # prettier-ignore
-cSpell:ignore Batard Brubaker Pursley velero fullversion githubbranch docsbranch Tanzu Rosland Horgan Takahashi
+cSpell:ignore: Batard Brubaker Pursley velero fullversion githubbranch docsbranch Tanzu Rosland Horgan Takahashi
 ---
 
 # Technical Documentation Versioning with Hugo & Netlify
@@ -161,7 +161,7 @@ Scores high on:
 
 Same style of dropdown function as above, but made simpler because of the
 configuration:
-<https://github.com/kubernetes/website/blob/main/layouts/partials/navbar-version-selector.html>
+https://github.com/kubernetes/website/blob/main/layouts/partials/navbar-version-selector.html
 
 ```html
 <div
@@ -181,7 +181,7 @@ Pursley et al. (2020, L4-L9)[^4]
 The dropdown example is made simpler because the config is more complex and
 because the server setup is more complex.
 
-<https://github.com/kubernetes/website/blob/main/hugo.toml>
+https://github.com/kubernetes/website/blob/main/hugo.toml
 
 ```toml
 [[params.versions]]

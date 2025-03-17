@@ -40,7 +40,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://prometheus.io/docs>
+- https://prometheus.io/docs
 
 ### New user content
 
@@ -66,7 +66,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://falco.org/docs/getting-started/>
+- https://falco.org/docs/getting-started/
 
 ### Content maintainability & site mechanics
 
@@ -90,7 +90,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://kubernetes.io/docs/>
+- https://kubernetes.io/docs/
 
 ### Content creation processes
 
@@ -107,9 +107,9 @@ We evaluate on the following:
 
 Examples:
 
-- <https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md> (clearly
+- https://github.com/nats-io/nats-site/blob/master/MAINTAINERS.md (clearly
   documented maintainers)
-- <https://thanos.io/tip/contributing/how-to-contribute-to-docs.md>
+- https://thanos.io/tip/contributing/how-to-contribute-to-docs.md
 
 ### Inclusive language
 
@@ -140,7 +140,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://prometheus.io/community/>
+- https://prometheus.io/community/
 
 ### Beginner friendly issue backlog
 
@@ -154,7 +154,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://github.com/opentracing/opentracing.io/issues> (all of open tracing’s
+- https://github.com/opentracing/opentracing.io/issues (all of open tracing’s
   backlogs are well maintained!)
 
 ### New contributor getting started content
@@ -172,7 +172,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://github.com/helm/community>
+- https://github.com/helm/community
 
 ### Project governance documentation
 
@@ -184,7 +184,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://github.com/envoyproxy/envoy/blob/main/GOVERNANCE.md>
+- https://github.com/envoyproxy/envoy/blob/main/GOVERNANCE.md
 
 ## Website
 
@@ -327,7 +327,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://helm.sh/>
+- https://helm.sh/
 
 ### Case studies/social proof
 
@@ -345,9 +345,9 @@ We evaluate on the following:
 
 Examples:
 
-- <https://www.fluentd.org/testimonials> (user testimonials)
-- <https://goharbor.io/> (logo wall)
-- <https://blog.rook.io/> (blog)
+- https://www.fluentd.org/testimonials (user testimonials)
+- https://goharbor.io/ (logo wall)
+- https://blog.rook.io/ (blog)
 
 ### SEO, Analytics and site-local search
 
@@ -385,7 +385,7 @@ We evaluate on the following:
 
 Example:
 
-- <https://kubernetes.io>
+- https://kubernetes.io
 
 ### Other
 

@@ -1,6 +1,6 @@
 ---
 title: _PROJECT_ Umbrella Issue and Issues List
-tags: _PROJECT_
+tags: [_PROJECT_]
 ---
 
 ## Overview
@@ -21,11 +21,11 @@ tags: _PROJECT_
 
 This issue tracks recommended changes resulting from an analysis of the
 _PROJECT_ documentation commissioned by CNCF. The analysis and supporting
-documents are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+documents are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `00NN-project`.
 
 The CNCF _PROJECT_ documentation effort is tracked in the CNCF Tech Docs repo:
-<https://github.com/cncf/techdocs/issues>
+https://github.com/cncf/techdocs/issues
 
 ## Umbrella issue
 
