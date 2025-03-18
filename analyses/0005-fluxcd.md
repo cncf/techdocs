@@ -5,7 +5,7 @@ cSpell:ignore: celestehorgan Horgan
 # Assessment template
 
 Prepared by: Celeste Horgan
-([@celestehorgan](https://github.com/cncf/techdocs))<br> Date: 2021-11-30
+([@celestehorgan](https://github.com/cncf/techdocs))<br/> Date: 2021-11-30
 
 ## Introduction
 
@@ -159,7 +159,7 @@ Scale:
 
 - [This file](https://github.com/fluxcd/website/blob/main/hack/import-flux2-assets.sh)
   is _very_ fragile, as it points to specific files at their
-  <https://github.com/fluxcd/website/blob/main/hack/import-flux2-assets.sh> and
+  https://github.com/fluxcd/website/blob/main/hack/import-flux2-assets.sh and
   seems to have the potential to make the site build succeed but with
   unpredictable results.
   - Consider implementing [Hugo Modules](https://gohugo.io/hugo-modules/) to

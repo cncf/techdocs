@@ -77,7 +77,7 @@ Here is a proposed outline for the tech doc Table of Contents:
 - [Getting Started (New users start here!)](https://keda.sh/docs/2.13/) (rename
   current "KEDA Documentation" heading)
   - [Deploying KEDA](https://keda.sh/docs/2.13/deploy/)
-  - Prerequisites (<https://keda.sh/docs/2.13/operate/cluster/#requirements>)
+  - Prerequisites (https://keda.sh/docs/2.13/operate/cluster/#requirements)
   - [Deploying with Helm](?no-link-check#helm)
     - [Installing](?no-link-check#install)
     - [Uninstalling](?no-link-check#uninstall)
@@ -92,7 +92,7 @@ Here is a proposed outline for the tech doc Table of Contents:
     - [Uninstalling](?no-link-check#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
-    <https://github.com/kedacore/sample-hello-world-azure-functions>)
+    https://github.com/kedacore/sample-hello-world-azure-functions)
 - [Using KEDA or Operator Guide](https://keda.sh/docs/2.13/operate/) (rename
   current "Operate")
   - How to set up a scaler (a more detailed procedure than the example used in
@@ -103,13 +103,13 @@ Here is a proposed outline for the tech doc Table of Contents:
     - ... and so on.
   - [Admission Webhooks](https://keda.sh/docs/2.13/operate/admission-webhooks/)
   - Prevention Rules
-    (<https://keda.sh/docs/2.13/concepts/admission-webhooks/#prevention-rules>)
+    (https://keda.sh/docs/2.13/concepts/admission-webhooks/#prevention-rules)
   - Validation Enforcement
   - [Cluster](https://keda.sh/docs/2.13/operate/cluster/) - Except sections that
     are purely reference info, for example:
-  - <https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility>
-  - <https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity>
-  - <https://keda.sh/docs/2.13/operate/cluster/#firewall>
+  - https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility
+  - https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity
+  - https://keda.sh/docs/2.13/operate/cluster/#firewall
   - [Integrating with OpenTelemetry Collector (Experimental)](https://keda.sh/docs/2.13/integrations/opentelemetry/)
   - [Integrating with Prometheus](https://keda.sh/docs/2.13/integrations/prometheus/)
   - [Using the KEDA Metrics Server](https://keda.sh/docs/2.13/operate/metrics-server/)
@@ -119,11 +119,11 @@ Here is a proposed outline for the tech doc Table of Contents:
   - [Migrating to a new release](https://keda.sh/docs/2.13/migration/) (current
     "Migration Guide")
   - Caching Metrics
-    (<https://keda.sh/docs/2.13/concepts/scaling-deployments/#caching-metrics>)
+    (https://keda.sh/docs/2.13/concepts/scaling-deployments/#caching-metrics)
   - Pausing Autoscaling of deployments
-    (<https://keda.sh/docs/2.13/concepts/scaling-deployments/#pause-autoscaling>)
+    (https://keda.sh/docs/2.13/concepts/scaling-deployments/#pause-autoscaling)
   - Pausing Autoscaling of jobs
-    (<https://keda.sh/docs/2.13/concepts/scaling-jobs/#pause-autoscaling>)
+    (https://keda.sh/docs/2.13/concepts/scaling-jobs/#pause-autoscaling)
   - [Troubleshooting](https://keda.sh/docs/2.13/concepts/troubleshooting/),
     `/docs/2.13/troubleshooting/`
 - Reference
@@ -132,9 +132,9 @@ Here is a proposed outline for the tech doc Table of Contents:
     - ...
     - [Secret](https://keda.sh/docs/2.13/authentication-providers/secret/)
   - Scaled Object specification (from "Concepts";
-    <https://keda.sh/docs/2.13/concepts/scaling-deployments/#scaledobject-spec>)
+    https://keda.sh/docs/2.13/concepts/scaling-deployments/#scaledobject-spec)
   - ScaledJob specification
-    (<https://keda.sh/docs/2.13/concepts/scaling-jobs/#scaledjob-spec>)
+    (https://keda.sh/docs/2.13/concepts/scaling-jobs/#scaledjob-spec)
   - [Events](https://keda.sh/docs/2.13/operate/events/)
   - [Firewall requirements](https://keda.sh/docs/2.13/operate/cluster/#firewall)
   - ...
@@ -211,7 +211,7 @@ annotated to illustrate this point:
       - [Uninstalling](?no-link-check#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
-    <https://github.com/kedacore/sample-hello-world-azure-functions>) _analogous
+    https://github.com/kedacore/sample-hello-world-azure-functions) _analogous
     to a "Hello World" exercise in programming language or API guides_
 
 # Update the doc content creation instructions

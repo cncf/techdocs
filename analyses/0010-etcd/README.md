@@ -1,6 +1,6 @@
 ---
 title: etcd TechDocs Analysis
-tags: etcd
+tags: [etcd]
 ---
 
 - [etcd Doc Analysis](etcd-analysis.md) - Analyzes the existing etcd
