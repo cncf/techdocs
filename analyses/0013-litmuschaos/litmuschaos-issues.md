@@ -38,20 +38,20 @@ websites.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
 
 The following repos are affected:
 
-| Repo URL                                             | Description                                     | Recommendation                                            |
-| ---------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------- |
-| <https://github.com/litmuschaos/litmus-website-2>    | The project website repo                        | Combine with the doc repo                                 |
-| <https://github.com/litmuschaos/litmus-docs>         | Documentation repo                              | Combine with website repo                                 |
-| <https://github.com/litmuschaos/v1-litmus-docs>      | Another documentation repo, for docs before 2.0 | Move toward retiring and archiving.                       |
-| <https://github.com/litmuschaos/website-litmuschaos> | Previous website repo                           | Already archived. Include new repo URL in archive banner. |
-| <https://github.com/litmuschaos/tutorials>           | Tutorials repo                                  | Combine with documentation repo                           |
+| Repo URL                                           | Description                                     | Recommendation                                            |
+| -------------------------------------------------- | ----------------------------------------------- | --------------------------------------------------------- |
+| https://github.com/litmuschaos/litmus-website-2    | The project website repo                        | Combine with the doc repo                                 |
+| https://github.com/litmuschaos/litmus-docs         | Documentation repo                              | Combine with website repo                                 |
+| https://github.com/litmuschaos/v1-litmus-docs      | Another documentation repo, for docs before 2.0 | Move toward retiring and archiving.                       |
+| https://github.com/litmuschaos/website-litmuschaos | Previous website repo                           | Already archived. Include new repo URL in archive banner. |
+| https://github.com/litmuschaos/tutorials           | Tutorials repo                                  | Combine with documentation repo                           |
 
 ## Issue: Removed obsolete websites
 
@@ -77,7 +77,7 @@ websites.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -85,10 +85,10 @@ are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
 **GraphicQL API**
 
 The following API is one of the first hits on a search of "Litmus Chaos API":
-<https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html>.
+https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html.
 
 I'm not even sure where the doc repo is (it might be in the API's repo at
-<https://github.com/litmuschaos/spectaql>). It's clear this is a Litmus Chaos
+https://github.com/litmuschaos/spectaql). It's clear this is a Litmus Chaos
 component, but not whether this documentation is current or what it is for --
 there's no introduction or explanation of the API.
 
@@ -143,7 +143,7 @@ This issue concerns instructional information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -224,7 +224,7 @@ This issue concerns instructional information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -277,7 +277,7 @@ This issue concerns conceptual information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -315,7 +315,7 @@ This issue concerns organizing all documentation information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -376,7 +376,7 @@ This issue concerns instructional information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -421,7 +421,7 @@ This issue concerns conceptual information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -458,7 +458,7 @@ This issue concerns meta-information (project community resources).
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -521,7 +521,7 @@ here. Some guidelines for writing procedures:
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -561,7 +561,7 @@ question.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -592,7 +592,7 @@ This issue concerns potentially all types of information.
 
 This issue tracks recommended changes resulting from an analysis of the Litmus
 Chaos documentation commissioned by CNCF. The analysis and supporting documents
-are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
+are here: https://github.com/cncf/techdocs/tree/main/analyses under
 `0013-litmuschaos`.
 
 ### Possible Implementation
@@ -600,19 +600,19 @@ are here: <https://github.com/cncf/techdocs/tree/main/analyses> under
 Here's a list of all the blog posts. Each should be evaluated for technical
 documentation content.
 
-- <https://litmuschaos.io/blog/litmuschaos-is-joining-kubecon-cloudnativecon-north-america-2024-3blg>
-- <https://litmuschaos.io/blog/introduction-to-k6-load-chaos-in-litmuschaos-4l2k>
-- <https://litmuschaos.io/blog/introduction-to-http-chaos-in-litmuschaos-3hn>
-- <https://litmuschaos.io/blog/gcp-iam-integration-for-litmuschaos-with-workload-identity-2eai>
-- <https://litmuschaos.io/blog/frontend-optimization-at-litmuschaos-1p14>
-- <https://litmuschaos.io/blog/litmuschaos-in-2021-the-year-in-review-38cl>
-- <https://litmuschaos.io/blog/how-to-contribute-blog-posts-for-litmuschaos-3cnp>
-- <https://litmuschaos.io/blog/getting-started-with-litmus-2-0-in-google-kubernetes-engine-4obf>
-- <https://litmuschaos.io/blog/part-2-a-beginner-s-practical-guide-to-containerisation-and-chaos-engineering-with-litmuschaos-2-0-253i>
-- <https://litmuschaos.io/blog/part-1-a-beginner-s-practical-guide-to-containerisation-and-chaos-engineering-with-litmuschaos-2-0-3h5c>
-- <https://litmuschaos.io/blog/litmuschaos-node-memory-hog-experiment-2nj6>
-- <https://litmuschaos.io/blog/analysing-chaos-workflows-with-litmus-portal-4e67>
-- <https://litmuschaos.io/blog/chaos-engineering-with-litmus-portal-on-okteto-cloud-3g57>
-- <https://litmuschaos.io/blog/how-to-use-react-hooks-in-apollo-client-for-graphql-33bh>
-- <https://litmuschaos.io/blog/declarative-approach-to-chaos-hypothesis-using-litmus-probes-5157>
-- <https://litmuschaos.io/blog/litmuschaos-gitlab-remote-templates-6l2>
+- https://litmuschaos.io/blog/litmuschaos-is-joining-kubecon-cloudnativecon-north-america-2024-3blg
+- https://litmuschaos.io/blog/introduction-to-k6-load-chaos-in-litmuschaos-4l2k
+- https://litmuschaos.io/blog/introduction-to-http-chaos-in-litmuschaos-3hn
+- https://litmuschaos.io/blog/gcp-iam-integration-for-litmuschaos-with-workload-identity-2eai
+- https://litmuschaos.io/blog/frontend-optimization-at-litmuschaos-1p14
+- https://litmuschaos.io/blog/litmuschaos-in-2021-the-year-in-review-38cl
+- https://litmuschaos.io/blog/how-to-contribute-blog-posts-for-litmuschaos-3cnp
+- https://litmuschaos.io/blog/getting-started-with-litmus-2-0-in-google-kubernetes-engine-4obf
+- https://litmuschaos.io/blog/part-2-a-beginner-s-practical-guide-to-containerisation-and-chaos-engineering-with-litmuschaos-2-0-253i
+- https://litmuschaos.io/blog/part-1-a-beginner-s-practical-guide-to-containerisation-and-chaos-engineering-with-litmuschaos-2-0-3h5c
+- https://litmuschaos.io/blog/litmuschaos-node-memory-hog-experiment-2nj6
+- https://litmuschaos.io/blog/analysing-chaos-workflows-with-litmus-portal-4e67
+- https://litmuschaos.io/blog/chaos-engineering-with-litmus-portal-on-okteto-cloud-3g57
+- https://litmuschaos.io/blog/how-to-use-react-hooks-in-apollo-client-for-graphql-33bh
+- https://litmuschaos.io/blog/declarative-approach-to-chaos-hypothesis-using-litmus-probes-5157
+- https://litmuschaos.io/blog/litmuschaos-gitlab-remote-templates-6l2

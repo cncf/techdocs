@@ -1,6 +1,6 @@
 ---
 title: Implementing LitmusChaos Doc Improvements
-tags: LitmusChaos
+tags: [LitmusChaos]
 created: 2024-10-24
 author: Dave Welsch (@dwelsch-esi)
 cSpell:ignore: Welsch dwelsch

@@ -7,9 +7,9 @@ cSpell:ignore: theupdateframework
 
 This issue tracks recommended changes resulting from an analysis of the TUF
 documentation commissioned by CNCF. The analysis and supporting documents are
-here: <https://github.com/cncf/techdocs/tree/main/analyses> under
-`0012-TUF`.This is a master list of issues recommended in the TUF tech doc
-analysis and implementation plan.
+here: https://github.com/cncf/techdocs/tree/main/analyses under `0012-TUF`.This
+is a master list of issues recommended in the TUF tech doc analysis and
+implementation plan.
 
 ## Issues
 

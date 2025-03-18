@@ -11,6 +11,10 @@
     },
     {
       "pattern": "\\?no-link-check$"
+    },
+    {
+      "why": "Temporary: due to scheduled maintenance",
+      "pattern": "https://www.usenix.org"
     }
   ],
   "timeout": "3s",

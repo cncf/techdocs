@@ -1,6 +1,6 @@
 ---
 title: Implementing etcd Doc Improvements
-tags: etcd
+tags: [etcd]
 ---
 
 # Introduction

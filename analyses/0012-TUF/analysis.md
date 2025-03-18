@@ -1,6 +1,6 @@
 ---
 title: TUF Documentation Analysis
-tags: TUF
+tags: [TUF]
 created: 2024-06-17
 modified: YYYY-MM-DD
 author: Sandra Dindi (@Dindihub)
@@ -48,25 +48,24 @@ is stored on the TUF GitHub repo.
 
 #### In scope
 
-- Website and docs: <https://theupdateframework.io>
-- Website repo: <https://github.com/theupdateframework/theupdateframework.io>
-- The TUF community repository:
-  <https://github.com/theupdateframework/community>
+- Website and docs: https://theupdateframework.io
+- Website repo: https://github.com/theupdateframework/theupdateframework.io
+- The TUF community repository: https://github.com/theupdateframework/community
 - TUF specification repository:
-  <https://github.com/theupdateframework/specification>
-- TUF artwork repository: <https://github.com/theupdateframework/artwork>
+  https://github.com/theupdateframework/specification
+- TUF artwork repository: https://github.com/theupdateframework/artwork
 - Python reference implementation repository:
-  <https://github.com/theupdateframework/python-tuf>
+  https://github.com/theupdateframework/python-tuf
 
 #### Out of scope
 
 - TUF Augmentation proposals repository:
-  <https://github.com/theupdateframework/taps>
-- python-tuf: <https://theupdateframework.readthedocs.io>
-- go-tuf: <https://pkg.go.dev/github.com/theupdateframework/go-tuf>
+  https://github.com/theupdateframework/taps
+- python-tuf: https://theupdateframework.readthedocs.io
+- go-tuf: https://pkg.go.dev/github.com/theupdateframework/go-tuf
 - tuf-on-ci:
-  <https://github.com/theupdateframework/tuf-on-ci?tab=readme-ov-file#documentation>
-- RSTUF: <https://repository-service-tuf.readthedocs.io>
+  https://github.com/theupdateframework/tuf-on-ci?tab=readme-ov-file#documentation
+- RSTUF: https://repository-service-tuf.readthedocs.io
 
 ### How this document is organized
 

@@ -1,6 +1,6 @@
 ---
 title: KEDA TechDocs Analysis
-tags: KEDA
+tags: [KEDA]
 ---
 
 - [KEDA Doc Analysis](keda-analysis.md) - Analyzes the existing KEDA

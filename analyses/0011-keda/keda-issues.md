@@ -99,7 +99,7 @@ into multiple pages, one for each procedure.
       - [Uninstalling](?no-link-check#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
-    <https://github.com/kedacore/sample-hello-world-azure-functions>) _analogous
+    https://github.com/kedacore/sample-hello-world-azure-functions) _analogous
     to a "Hello World" exercise in programming language or API guides_
 
 ## Issue: Update the Operator Guide
@@ -111,9 +111,9 @@ Some guidelines:
 - Move "Troubleshooting" to the end of the Operator Guide.
 - Relocate sections that are purely reference information, including these
   sections in [Cluster](https://keda.sh/docs/2.13/operate/cluster/):
-  - <https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility>
-  - <https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity>
-  - <https://keda.sh/docs/2.13/operate/cluster/#firewall>
+  - https://keda.sh/docs/2.13/operate/cluster/#kubernetes-compatibility
+  - https://keda.sh/docs/2.13/operate/cluster/#cluster-capacity
+  - https://keda.sh/docs/2.13/operate/cluster/#firewall
 - Break up long pages containing several topics. Aim for one major topic per
   page. For example, all HTTP-related headings on the
   [Cluster](https://keda.sh/docs/2.13/operate/cluster/) page could go on one
@@ -133,7 +133,7 @@ or provide a starting point.
     - ... and so on.
   - [Admission Webhooks](https://keda.sh/docs/2.13/operate/admission-webhooks/)
   - Prevention Rules
-    (<https://keda.sh/docs/2.13/concepts/admission-webhooks/#prevention-rules>)
+    (https://keda.sh/docs/2.13/concepts/admission-webhooks/#prevention-rules)
   - Validation Enforcement
   - [Cluster](https://keda.sh/docs/2.13/operate/cluster/) - (Relocate sections
     that are purely reference info)
@@ -151,11 +151,11 @@ or provide a starting point.
   - [Migrating to a new release](https://keda.sh/docs/2.13/migration/) (current
     "Migration Guide")
   - Caching Metrics
-    (<https://keda.sh/docs/2.13/concepts/scaling-deployments/#caching-metrics>)
+    (https://keda.sh/docs/2.13/concepts/scaling-deployments/#caching-metrics)
   - Pausing Autoscaling of deployments
-    (<https://keda.sh/docs/2.13/concepts/scaling-deployments/#pause-autoscaling>)
+    (https://keda.sh/docs/2.13/concepts/scaling-deployments/#pause-autoscaling)
   - Pausing Autoscaling of jobs
-    (<https://keda.sh/docs/2.13/concepts/scaling-jobs/#pause-autoscaling>)
+    (https://keda.sh/docs/2.13/concepts/scaling-jobs/#pause-autoscaling)
   - [Troubleshooting](https://keda.sh/docs/2.13/concepts/troubleshooting/)
     `/docs/2.13/troubleshooting/`
 
@@ -175,9 +175,9 @@ or provide a starting point.
     - ...
     - [Secret](https://keda.sh/docs/2.13/authentication-providers/secret/)
   - Scaled Object specification (from "Concepts";
-    <https://keda.sh/docs/2.13/concepts/scaling-deployments/#scaledobject-spec>)
+    https://keda.sh/docs/2.13/concepts/scaling-deployments/#scaledobject-spec)
   - ScaledJob specification
-    (<https://keda.sh/docs/2.13/concepts/scaling-jobs/#scaledjob-spec>)
+    (https://keda.sh/docs/2.13/concepts/scaling-jobs/#scaledjob-spec)
   - [Events](https://keda.sh/docs/2.13/operate/events/)
   - [Firewall requirements](https://keda.sh/docs/2.13/operate/cluster/#firewall)
   - ...
@@ -202,17 +202,17 @@ information. Some of these pages might appear in other issues suggesting that
 they be revised or relocated. If this creates contradictory recommendations,
 some judgement might be required to rearrange things.
 
-| Page Title                                             | URL                                                       | Notes                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Deploying KEDA                                         | <https://keda.sh/docs/2.13/deploy/>                       | Page is all install and uninstall tasks, but put each install procedure on its own page. Make this page an intro and index.                                                                                                                                                     |
-| Scaling Deployments, StatefulSets and Custom Resources | <https://keda.sh/docs/2.13/concepts/scaling-deployments/> | The "ScaledObject spec" is reference information. "Transfer ownership of an existing HPA" is a task.                                                                                                                                                                            |
-| Scaling Jobs                                           | <https://keda.sh/docs/2.13/concepts/scaling-jobs/>        | "ScaledJob spec" is reference information.                                                                                                                                                                                                                                      |
-| Authentication                                         | <https://keda.sh/docs/2.13/concepts/authentication/>      | Deliberately discuss the three patterns listed at the top of the page. This entire page might be better written as a task-based how-to guide.                                                                                                                                   |
-| External Scalers                                       | <https://keda.sh/docs/2.13/concepts/external-scalers/>    | "Implementing KEDA external scaler GRPC interface" is a series of tasks. The steps after the first 2 are choices -- Describe the task of downloading `externalscaler.proto` and preparing the project, then offer steps 3 - 6 as sub-tasks that can be performed independently. |
-| Troubleshooting                                        | <https://keda.sh/docs/2.13/concepts/troubleshooting/>     | Remove this troubleshooting information and combine it with the troubleshooting section under "The KEDA Documentation".                                                                                                                                                         |
-| Cluster                                                | <https://keda.sh/docs/2.13/operate/cluster/>              | See the "Update the Operator Guide" issue                                                                                                                                                                                                                                       |
-| Events                                                 | <https://keda.sh/docs/2.13/operate/events/>               | This is reference information.                                                                                                                                                                                                                                                  |
-| Integrate with Prometheus                              | <https://keda.sh/docs/2.13/integrations/prometheus/>      | Split this into a task ("Integrating with Prometheus" and a reference "Metrics Exported to Prometheus".                                                                                                                                                                         |
+| Page Title                                             | URL                                                     | Notes                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------------ | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Deploying KEDA                                         | https://keda.sh/docs/2.13/deploy/                       | Page is all install and uninstall tasks, but put each install procedure on its own page. Make this page an intro and index.                                                                                                                                                     |
+| Scaling Deployments, StatefulSets and Custom Resources | https://keda.sh/docs/2.13/concepts/scaling-deployments/ | The "ScaledObject spec" is reference information. "Transfer ownership of an existing HPA" is a task.                                                                                                                                                                            |
+| Scaling Jobs                                           | https://keda.sh/docs/2.13/concepts/scaling-jobs/        | "ScaledJob spec" is reference information.                                                                                                                                                                                                                                      |
+| Authentication                                         | https://keda.sh/docs/2.13/concepts/authentication/      | Deliberately discuss the three patterns listed at the top of the page. This entire page might be better written as a task-based how-to guide.                                                                                                                                   |
+| External Scalers                                       | https://keda.sh/docs/2.13/concepts/external-scalers/    | "Implementing KEDA external scaler GRPC interface" is a series of tasks. The steps after the first 2 are choices -- Describe the task of downloading `externalscaler.proto` and preparing the project, then offer steps 3 - 6 as sub-tasks that can be performed independently. |
+| Troubleshooting                                        | https://keda.sh/docs/2.13/concepts/troubleshooting/     | Remove this troubleshooting information and combine it with the troubleshooting section under "The KEDA Documentation".                                                                                                                                                         |
+| Cluster                                                | https://keda.sh/docs/2.13/operate/cluster/              | See the "Update the Operator Guide" issue                                                                                                                                                                                                                                       |
+| Events                                                 | https://keda.sh/docs/2.13/operate/events/               | This is reference information.                                                                                                                                                                                                                                                  |
+| Integrate with Prometheus                              | https://keda.sh/docs/2.13/integrations/prometheus/      | Split this into a task ("Integrating with Prometheus" and a reference "Metrics Exported to Prometheus".                                                                                                                                                                         |
 
 # Write a Glossary
 

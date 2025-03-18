@@ -1,6 +1,6 @@
 ---
 title: etcd Documentation Analysis
-tags: etcd
+tags: [etcd]
 created: 2023-09-01
 modified: 2024-01-08
 author: Dave Welsch (@dwelsch-esi)

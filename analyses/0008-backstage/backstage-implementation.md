@@ -1,6 +1,6 @@
 ---
 title: Implementing Backstage Doc Improvements
-tags: backstage
+tags: [backstage]
 cSpell:ignore: rigeur runbooks toolkits
 ---
 
