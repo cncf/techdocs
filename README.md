@@ -1,35 +1,29 @@
 # CNCF TechDocs
 
-This repository holds resources provided by the CNCF Technical Documentation
-team. The repo contains the following directories:
+This site contains resources provided by the CNCF Technical Documentation team,
+including:
 
-- `docs` contains collected resources for building websites and developing
-  documentation, including recommended tools and practices, how-tos, and
-  evaluation checklists. Included are specific guidelines for:
+- [Docs](docs) about building websites and developing technical documentation,
+  including recommended tools, best practices, how-tos, and evaluation
+  checklists. It provides specific guidelines for:
   - Setting up and maintaining a documentation website.
   - Writing technical documentation for a project.
-  - Getting assistance from the CNCF TechDocs community.
-  - Analyzing project documentation, for use by CNCF TechDocs staff (in
-    `docs/analysis`).
-- `analyses` (not to be confused with `docs/analysis`) contains all the
-  completed documentation analyses.
+  - Seeking assistance from the CNCF TechDocs community.
+  - [Analyzing project documentation](docs/analysis/).
+- [Analyses](analyses): a collection of documentation analyses of CNCF projects
+  performed by the TechDocs team.
 
 ## TechDocs Q&A
 
-The CNCF tech docs team holds a Zoom call to answer questions and discuss
-anything to do with documentation. Calls are held on the [fourth Wednesday of
+The CNCF TechDocs team holds a [Zoom meeting][] to answer questions and discuss
+anything to do with documentation. Meetings are held on the [fourth Wednesday of
 every month at 8am Pacific time][date-time].
 
-TechDocs Q&A (formerly called _Office Hours_) started on 30 September 2020.
+- [Zoom meeting][] link
+- [Meeting notes][]
 
-### Meeting link
-
-- [Zoom meeting 95471930872]
-
-### Meeting notes
-
-We store ongoing meeting notes in a
-[Google doc](https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/).
+> <small>Formerly called _Office Hours_, TechDocs Q&amp;A started on September
+> 30, 2020.</small>
 
 ## Assistance program for technical documentation
 
@@ -39,20 +33,14 @@ documentation. For details, see the TechDocs
 
 ## CNCF TechDocs team
 
-The full-time staff of the CNCF Tech Docs team is:
+The full-time staff of the team is (in alphabetical order):
 
-<!-- markdownlint-disable line-length -->
+- [Nate Waddington](https://github.com/nate-double-u) - Head of mentoring &
+  documentation
+- [Patrice Chalin](https://github.com/chalin) - Senior techdoc & webdev lead
+- [Uchechukwu Obasi](https://github.com/thisisobate) - Developer advocate
 
-| GitHub ID                                          | Role                                    |
-| -------------------------------------------------- | --------------------------------------- |
-| [@chalin](https://github.com/chalin)               | Senior technical writer                 |
-| [@nate-double-u](https://github.com/nate-double-u) | Head of Mentoring & Documentation, CNCF |
-| [@thisisobate](https://github.com/thisisobate)     | Developer advocate                      |
-
-<!-- markdownlint-enable line-length -->
-<!-- cSpell:ignore chalin nate thisisobate -->
-
-Various consultants and volunteers also contribute to CNCF Tech Docs projects.
+Consultants and volunteers also contribute to CNCF TechDocs efforts.
 
 ## Licenses
 
@@ -61,5 +49,9 @@ Various consultants and volunteers also contribute to CNCF Tech Docs projects.
 
 [date-time]:
   https://tockify.com/cncf.public.events/monthly?search=CNCF%20Tech%20Writers%20Office%20Hours
-[Zoom meeting 95471930872]:
+[Meeting notes]:
+  https://docs.google.com/document/d/1roexHTLCrErYjNT2NEoRsVnn_YNbQzZ1gyXNK8hXR4Q/
+[Zoom meeting]:
   https://zoom-lfx.platform.linuxfoundation.org/meeting/95471930872?password=db1aa715-a60b-444c-8b14-71d44161a42e
+
+<!-- cSpell:ignore Chalin Waddington Uchechukwu Obasi techdoc webdev -->
