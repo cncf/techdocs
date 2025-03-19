@@ -43,11 +43,11 @@ The full-time staff of the CNCF Tech Docs team is:
 
 <!-- markdownlint-disable line-length -->
 
-| GitHub ID                                          | Role                                  |
-| -------------------------------------------------- | ------------------------------------- |
-| [@chalin](https://github.com/chalin)               | Senior technical writer               |
-| [@nate-double-u](https://github.com/nate-double-u) | Developer advocate & technical writer |
-| [@thisisobate](https://github.com/thisisobate)     | Developer advocate                    |
+| GitHub ID                                          | Role                                    |
+| -------------------------------------------------- | --------------------------------------- |
+| [@chalin](https://github.com/chalin)               | Senior technical writer                 |
+| [@nate-double-u](https://github.com/nate-double-u) | Head of Mentoring & Documentation, CNCF |
+| [@thisisobate](https://github.com/thisisobate)     | Developer advocate                      |
 
 <!-- markdownlint-enable line-length -->
 <!-- cSpell:ignore chalin nate thisisobate -->
