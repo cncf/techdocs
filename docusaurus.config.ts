@@ -24,6 +24,8 @@ const config: Config = {
   onBrokenLinks: 'warn', // TODO: 'error' or 'throw' once we've fixed all links
   onBrokenMarkdownLinks: 'warn',
 
+  trailingSlash: true,
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
