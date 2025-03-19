@@ -66,6 +66,10 @@ const config: Config = {
       style: 'dark',
       links: [
         {
+          label: 'Licenses',
+          href: '/#licenses',
+        },
+        {
           label: 'Privacy',
           href: 'https://www.linuxfoundation.org/legal/privacy-policy',
         },

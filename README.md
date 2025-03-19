@@ -54,6 +54,11 @@ The full-time staff of the CNCF Tech Docs team is:
 
 Various consultants and volunteers also contribute to CNCF Tech Docs projects.
 
+## Licenses
+
+- Documentation: [CC-BY-4.0](LICENSE)
+- Code: [Apache-2.0](LICENSE-CODE)
+
 [date-time]:
   https://tockify.com/cncf.public.events/monthly?search=CNCF%20Tech%20Writers%20Office%20Hours
 [Zoom meeting 95471930872]:
