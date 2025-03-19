@@ -14,7 +14,7 @@ const config: Config = {
     'https://www.cncf.io/wp-content/themes/cncf-twenty-two/images/favicon.ico', // TODO: localize?
 
   // Production URL:
-  url: 'https://techdocs.netlify.app/', // TODO
+  url: 'https://cncf-techdocs.netlify.app/', // FIXME if/once we get a domain
   baseUrl: '/',
 
   // GitHub pages deployment config. TODO: this still useful?
