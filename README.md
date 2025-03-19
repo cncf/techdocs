@@ -35,10 +35,10 @@ documentation. For details, see the TechDocs
 
 The full-time staff of the team is (in alphabetical order):
 
-- [Nate Waddington](https://github.com/nate-double-u) - head of mentoring &
+- [Nate Waddington](https://github.com/nate-double-u) - Head of mentoring &
   documentation
-- [Patrice Chalin](https://github.com/chalin) - senior techdoc & webdev lead
-- [Uchechukwu Obasi](https://github.com/thisisobate) - developer advocate
+- [Patrice Chalin](https://github.com/chalin) - Senior techdoc & webdev lead
+- [Uchechukwu Obasi](https://github.com/thisisobate) - Developer advocate
 
 Consultants and volunteers also contribute to CNCF TechDocs efforts.
 
