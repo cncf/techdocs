@@ -5,7 +5,7 @@ cSpell:ignore: Meha Bhalodiya mehabhalodiya kubernetes
 # Assessment: Project Kubernetes Gateway API
 
 Prepared by: Meha Bhalodiya
-([@mehabhalodiya](https://github.com/mehabhalodiya))<br> Date: 2021-03-03
+([@mehabhalodiya](https://github.com/mehabhalodiya))<br/> Date: 2021-03-03
 
 ## Introduction
 

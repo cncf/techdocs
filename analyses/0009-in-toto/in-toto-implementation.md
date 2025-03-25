@@ -89,9 +89,8 @@ following general plan.
    the website, as:
 
    - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)
-     (compare content to <https://in-toto.io/in-toto> and current website
-     About - create versions of increasing depth to address to specific
-     audiences)
+     (compare content to https://in-toto.io/in-toto and current website About -
+     create versions of increasing depth to address to specific audiences)
    - [Glossary](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#17-terminology)
      (convert to alphabetized table)
    - [Workflow/Personas](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)

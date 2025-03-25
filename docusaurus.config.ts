@@ -14,7 +14,7 @@ const config: Config = {
     'https://www.cncf.io/wp-content/themes/cncf-twenty-two/images/favicon.ico', // TODO: localize?
 
   // Production URL:
-  url: 'https://techdocs.netlify.app/', // TODO
+  url: 'https://cncf-techdocs.netlify.app/', // FIXME if/once we get a domain
   baseUrl: '/',
 
   // GitHub pages deployment config. TODO: this still useful?
@@ -23,6 +23,8 @@ const config: Config = {
 
   onBrokenLinks: 'warn', // TODO: 'error' or 'throw' once we've fixed all links
   onBrokenMarkdownLinks: 'warn',
+
+  trailingSlash: true,
 
   i18n: {
     defaultLocale: 'en',
@@ -65,6 +67,10 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
+        {
+          label: 'Licenses',
+          href: '/#licenses',
+        },
         {
           label: 'Privacy',
           href: 'https://www.linuxfoundation.org/legal/privacy-policy',

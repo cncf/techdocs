@@ -16,11 +16,11 @@ Date: 2023-04-07
 Resources:
 
 - [Meeting notes](https://docs.google.com/document/d/12OGtSaUtlc7OA_iPnUvmVaiKg8yM7_QBzFnMgoHvnLw?no-link-check)
-- Website: <https://getporter.org>
+- Website: https://getporter.org
 - Repos:
-  - Main site: <https://github.com/getporter/porter>. Content is in `docs`.
+  - Main site: https://github.com/getporter/porter. Content is in `docs`.
   - [Operator site](https://getporter.org/operator):
-    <https://github.com/getporter/operator>
+    https://github.com/getporter/operator
 
 ## Introduction
 
@@ -69,8 +69,8 @@ Scale:
   difference between desired state and operator? maybe the operator one needs to
   be in Get Started)
 
-  - <https://getporter.org/quickstart/desired-state/>
-  - <https://getporter.org/operator/quickstart/>
+  - https://getporter.org/quickstart/desired-state/
+  - https://getporter.org/operator/quickstart/
 
 - Mixins & Plugins sections duplicated in sidebar (and could potentially be
   organized under Concepts?)
@@ -155,7 +155,7 @@ Scale:
 
 - Move the website sourcefile to a separate "website" directory. That way, we
   create a good separation of concern. A good example is
-  <https://github.com/thanos-io/thanos>.
+  https://github.com/thanos-io/thanos.
 - The porter's docs should be searchable.
 - Create a version picker (dropdown) to make search easily discoverable for
   users.
