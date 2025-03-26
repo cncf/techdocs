@@ -9,7 +9,6 @@ cSpell:ignore: Welsch dwelsch vitess topo pasteable mysqlshell vtctldclient lede
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
-<!-- markdownlint-disable no-bare-urls -->
 
 ## Introduction
 
@@ -52,14 +51,14 @@ code is stored in its own repository in the Vitess GitHub project.
 
 #### In scope
 
-- Website: https://vitess.io/
-- Documentation: https://vitess.io/docs/
-- Website repo: https://github.com/vitessio/website
-- Project repo (for reference): https://github.com/vitessio
+- Website: <https://vitess.io/>
+- Documentation: <https://vitess.io/docs/>
+- Website repo: <https://github.com/vitessio/website>
+- Project repo (for reference): <https://github.com/vitessio>
 
 #### Out of scope
 
-- Other Vitess repos: https://github.com/vitessio/* (In general, other Vitess
+- Other Vitess repos: <https://github.com/vitessio/*> (In general, other Vitess
   code repos are out of scope)
 
 ### How this document is organized
