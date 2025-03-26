@@ -475,7 +475,8 @@ Also on the Global TopoServer page, by the way:
 
 > The following command line options are required for every Vitess component:
 >
-> ```--topo_implementation=etcd2 --topo_global_server_address=<comma_separated_addresses>
+> ```
+>   --topo_implementation=etcd2 --topo_global_server_address=<comma_separated_addresses>
 >   --topo_global_root=/vitess/global
 > ```
 >
