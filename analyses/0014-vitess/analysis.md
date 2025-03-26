@@ -821,7 +821,7 @@ have [_very high_][criteria] standards for documentation.
 | Usability, accessibility, and design        | 3. Meets standards            |
 | Branding and design                         | 4. Meets or exceeds standards |
 | Case studies/social proof                   | 2. Needs improvement          |
-| SEO, Analytics, and site-local search       | TBD                           |
+| SEO, Analytics, and site-local search       | out of scope                           |
 | Maintenance planning                        | 2. Needs improvement          |
 | HTTPS access & HTTP redirect                | 5. Exemplary                  |
 
@@ -944,53 +944,6 @@ variety of topics including community talks.
 
 Yes, there is a substantial logo wall on the product landing page.
 
-#### SEO, Analytics and site-local search
-
-**Analytics on production site**: Analytics: Is analytics enabled for the
-production server?
-
-- TBD
-- TBD
-
-**Analytics disabled for non-production sites**: Analytics: Is analytics
-disabled for all other deploys?
-
-- TBD
-- TBD
-
-**Google analytics: GA4**: Analytics: If your project used Google Analytics,
-have you migrated to GA4?
-
-- TBD
-- TBD
-
-**404 reports**: Analytics: Can Page-not-found (404) reports easily be generated
-from you site analytics? Provide a sample of the site's current top-10 404s.
-
-- TBD
-- TBD
-
-**Site indexing on production server**: Is site indexing supported for the
-production server?
-
-- TBD
-- TBD
-
-**Site indexing disabled on non-default content**: Is site indexing disabled for
-website previews and - TBD
-
-- TBD
-
-**Intra-site search**: Is local intra-site search available from the website?
-
-Yes, the site text search function works well.
-
-**Analytics custodians documented**: Are the current custodian(s) of the
-following accounts clearly documented: analytics, Google Search Console,
-site-search (such as Google CSE or Algolia)
-
-No documentation maintainers of any sort are credited.
-
 #### Maintenance planning
 
 **Well supported website tooling**: Is your website tooling well supported by
@@ -1051,12 +1004,6 @@ Include case studies and testimonials on the product website. If these are
 already among the video content, tag them and feature them on the landing page.
 
 Update blog content at least monthly.
-
-#### SEO, Analytics and site-local search
-
-TBD
-
-List documentation maintainers in the website repository.
 
 #### Maintenance planning
 
