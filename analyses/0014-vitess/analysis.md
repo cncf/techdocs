@@ -145,9 +145,12 @@ works, in both the [Overview](https://vitess.io/docs/21.0/overview/) and
 
 The introduction to the Overview could be more helpful to new users.
 
-There is an extensive FAQ that contains much information of all types, but especially conceptual information. The overview introduction in the FAQ is actually more descriptive and succinct than the one on the main web page:
+There is an extensive FAQ that contains much information of all types, but
+especially conceptual information. The overview introduction in the FAQ is
+actually more descriptive and succinct than the one on the main web page:
 
-> Vitess is a database solution for deploying, scaling and managing large clusters of database instances.
+> Vitess is a database solution for deploying, scaling and managing large
+> clusters of database instances.
 
 The FAQ is outside the versioned documentation.
 
@@ -168,8 +171,9 @@ use Vitess:
 - Administration
 
 Except for Installation, all task documentation is in one of two places:
-- The [User Guides](https://vitess.io/docs/21.0/user-guides/). 
-- An extensive FAQ that contains task instructions. 
+
+- The [User Guides](https://vitess.io/docs/21.0/user-guides/).
+- An extensive FAQ that contains task instructions.
 
 Despite being labeled "Task-based guides," the task instructions in the User
 Guide are written from a feature-oriented perspective, which lessens the
@@ -240,7 +244,9 @@ utilities, and these are documented in the Reference.
 Yes, documentation is versioned and prominently includes the latest Stable and
 Development versions.
 
-However, there are several important sections that are maintained outside the versioned documentation:
+However, there are several important sections that are maintained outside the
+versioned documentation:
+
 - Troubleshooting
 - FAQ
 - Information about the release procedure
@@ -310,7 +316,8 @@ localization/internationalization with regard to site directory structure?
 
 Yes, there are full versions of the documentation in both English and Chinese.
 
-The Chinese versions are reportedly not up to date with the latest software version.
+The Chinese versions are reportedly not up to date with the latest software
+version.
 
 **Localization framework**: Is a localization framework present?
 
@@ -469,18 +476,19 @@ Also on the Global TopoServer page, by the way:
 
 > The following command line options are required for every Vitess component:
 >
-> ````--topo_implementation=etcd2 --topo_global_server_address=<comma_separated_addresses>
+> ```--topo_implementation=etcd2 --topo_global_server_address=<comma_separated_addresses>
 >   --topo_global_root=/vitess/global
-> ````
+> ```
 >
-> To avoid repetition we will use <topo_flags> in our examples to signify the above
->   flags.
+> To avoid repetition we will use <topo_flags> in our examples to signify the
+> above flags.
 
-Remove this. The `<topo_flags>` placeholder does not seem to have been implemented.
-There are no mentions of `<topo_flags>` elsewhere in the documentation, and in any
-case each would have to refer back to this page.
+Remove this. The `<topo_flags>` placeholder does not seem to have been
+implemented. There are no mentions of `<topo_flags>` elsewhere in the
+documentation, and in any case each would have to refer back to this page.
 
-In the FAQ: Rename the questions into concise headings when you consolidate the FAQ into the versioned documentation (see *Reorganize* below).
+In the FAQ: Rename the questions into concise headings when you consolidate the
+FAQ into the versioned documentation (see _Reorganize_ below).
 
 ###### Rewrite
 
@@ -497,8 +505,8 @@ This page appears to be well named ("Creating a Backup" is a descriptive task
 title) and properly placed (it resides in a logical location in the User Guide).
 However, the page itself buries the lede (it doesn't provide the procedure until
 far down the page): There is no actual command line given between
-_Configuration_ and _Common Errors and Resolutions_ The "how to" procedure should
-be prominently featured.
+_Configuration_ and _Common Errors and Resolutions_ The "how to" procedure
+should be prominently featured.
 
 Further down the page, another backup option, _Using mysqlshell_, has the same
 shortcomings: No actual command is apparent.
@@ -603,24 +611,32 @@ _Application programmer_:
   to any tasks that are identical)
 - Query optimization
 
-(Again, these are my understanding of the Vitess user roles. Adjust the details if
-they're different.)
+(Again, these are my understanding of the Vitess user roles. Adjust the details
+if they're different.)
 
-Get rid of the FAQ. This FAQ has apparently grown from a repository for common questions into a separate de facto technical documentation set. Move all of the FAQ topics and information into the versioned documentation. 
+Get rid of the FAQ. This FAQ has apparently grown from a repository for common
+questions into a separate de facto technical documentation set. Move all of the
+FAQ topics and information into the versioned documentation.
 
-Merge information with existing sections and/or move FAQ topics to the documentation intact, as appropriate. For example, much of the FAQ amounts to a good conceptual overview of the product; it should be part of the conceptual overview. In its current form it is unversioned and hard to find.
-
+Merge information with existing sections and/or move FAQ topics to the
+documentation intact, as appropriate. For example, much of the FAQ amounts to a
+good conceptual overview of the product; it should be part of the conceptual
+overview. In its current form it is unversioned and hard to find.
 
 ###### Troubleshooting
 
-Consolidate all troubleshooting information into a Troubleshooting Guide. Or, create
-one troubleshooting guide per user guide/user role. In either case, create an escalation
-path for any problems with a task (the escalation path might be:
-*troubleshooting procedure > Slack Channel > project Issue*). Get rid of the
-[VReplication FAQ](https://vitess.io/docs/21.0/reference/vreplication/faq/)
-in the reference section and put the information in a troubleshooting section.
+Consolidate all troubleshooting information into a Troubleshooting Guide. Or,
+create one troubleshooting guide per user guide/user role. In either case,
+create an escalation path for any problems with a task (the escalation path
+might be: _troubleshooting procedure > Slack Channel > project Issue_). Get rid
+of the
+[VReplication FAQ](https://vitess.io/docs/21.0/reference/vreplication/faq/) in
+the reference section and put the information in a troubleshooting section.
 
-Locate the troubleshooting guide or guides within the versioned technical documentation. Changes to the product affect troubleshooting procedures as well as other types of information, and the documentation structure should reflect that.
+Locate the troubleshooting guide or guides within the versioned technical
+documentation. Changes to the product affect troubleshooting procedures as well
+as other types of information, and the documentation structure should reflect
+that.
 
 ###### Glossary
 
@@ -821,7 +837,7 @@ have [_very high_][criteria] standards for documentation.
 | Usability, accessibility, and design        | 3. Meets standards            |
 | Branding and design                         | 4. Meets or exceeds standards |
 | Case studies/social proof                   | 2. Needs improvement          |
-| SEO, Analytics, and site-local search       | out of scope                           |
+| SEO, Analytics, and site-local search       | out of scope                  |
 | Maintenance planning                        | 2. Needs improvement          |
 | HTTPS access & HTTP redirect                | 5. Exemplary                  |
 
