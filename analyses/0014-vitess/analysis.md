@@ -474,6 +474,7 @@ Here are three examples from the
 Also on the Global TopoServer page, by the way:
 
 <!-- markdownlint-disable fenced-code-language -->
+
 > The following command line options are required for every Vitess component:
 >
 > ```
