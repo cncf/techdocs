@@ -5,6 +5,7 @@ TestFilesConcurrently: true
 IgnoreDirs:
 IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
+  - ^https?://localhost
   - \?no-link-check
   # FIXME: temporary ignore rules
   - assistance\.md
