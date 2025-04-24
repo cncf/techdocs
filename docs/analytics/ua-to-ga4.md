@@ -2,23 +2,13 @@
 cSpell:ignore: gtag kubernetes
 ---
 
-# Analytics
+# Migrating Universal to Google Analytics 4
 
-This page describes how to setup or upgrade Google Analytics (GA) for your CNCF
-project's website.
+This page describes how to migrate your CNCF project from Google's [Universal
+Analytics][ua] (UA) to [Google Analytics 4][ga4] (GA4).
 
-> **Deprecation notice**: Google's [Universal Analytics will be going away][ua]
-> in 2023.
-
-When adding analytics to a new CNCF project website, use [Google Analytics
-4][ga4] (GA4).
-
-## Adding Google Analytics
-
-For instructions on how to setup [Google Analytics 4 (GA4)][ga4] for your
-[Docsy][]-based website, see [Adding Analytics][].
-
-## Migrating to Google Analytics 4
+> **Deprecation notice**: Google started deprecating UA in 2023. As of 2024, UA
+> is no longer supported, and UA data is no longer accessible.
 
 There are many ways to upgrade your project to [GA4][]. We describe one such
 process below. Adapt it to your needs. Useful resources to consider include:
@@ -30,7 +20,7 @@ process below. Adapt it to your needs. Useful resources to consider include:
 - **Help center** resource: [Migrate from Universal Analytics to Google
   Analytics 4][migration-help]
 
-### Stage 0 - preparation
+## Stage 0 - preparation
 
 In preparation for the migration, follow these steps:
 
@@ -51,7 +41,7 @@ In preparation for the migration, follow these steps:
    - Take note of which library or libraries (some sites use both) your site is
      using.
 
-### Stage 1 - create a GA4 site tag
+## Stage 1 - create a GA4 site tag
 
 Objectives:
 
@@ -138,7 +128,7 @@ Follow these steps:
     -- provided that there are active users. You should see roughly the same
     number and distribution of active users reported by the UA console.
 
-### Stage 2 - configure the GA4 ID as the main analytics ID
+## Stage 2 - configure the GA4 ID as the main analytics ID
 
 GA4 only works when your project's website is configured using the [gtag.js][]
 analytics library.
@@ -174,7 +164,7 @@ analytics library.
       partial. In this case, make use of the GA4 measurement ID in your partial
       or site config file, as appropriate.
 
-### Stage 3 - switch to native support for GA
+## Stage 3 - switch to native support for GA
 
 In cases where your project website (temporarily) used some custom layouts or
 code (such as custom Hugo partials) to enable GA4, consider removing the custom
