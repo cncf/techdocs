@@ -7,14 +7,18 @@ import type * as Preset from '@docusaurus/preset-classic';
 const title = 'CNCF TechDocs';
 const repo = 'https://github.com/cncf/techdocs';
 
+const buildEnv = process.env.BUILD_ENV || 'production';
+const isProd = buildEnv === 'production';
+
 const config: Config = {
   title,
   // tagline: '',
   favicon:
     'https://www.cncf.io/wp-content/themes/cncf-twenty-two/images/favicon.ico', // TODO: localize?
 
-  // Production URL:
-  url: 'https://cncf-techdocs.netlify.app/', // FIXME if/once we get a domain
+  url: isProd
+    ? 'https://cncf-techdocs.netlify.app'
+    : process.env.DEPLOY_PRIME_URL || 'http://localhost:3000',
   baseUrl: '/',
 
   // GitHub pages deployment config. TODO: this still useful?
@@ -37,7 +41,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: `${repo}/tree/main`,
+          editUrl: isProd ? `${repo}/tree/main` : undefined,
         },
         theme: {
           customCss: './src/css/custom.css',

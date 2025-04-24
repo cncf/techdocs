@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Resources provided by the CNCF Technical Documentation team.",
   "scripts": {
+    "_build": "docusaurus build",
     "_check:format:any": "npx prettier --check --ignore-path ''",
     "_check:format:delta": "npm run _check:format:any -- $(npm run -s _list:git:delta)",
     "_check:format": "npx prettier --check .",
@@ -29,7 +30,9 @@
     "update:pkgs": "npx npm-check-updates -u",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build:preview": "npm run _build",
+    "build:production": "npm run _build",
+    "build": "BUILD_ENV=dev npm run _build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
