@@ -24,8 +24,7 @@ documentation commissioned by CNCF. The analysis and supporting documents are
 here: <https://github.com/cncf/techdocs/tree/main/analyses/0014-vitess> under
 0014-Vitess.
 
-See the [umbrella issue](https://github.com/vitessio/website/issues/1955)
-listing all issues identified in the analysis.
+See the [umbrella issue](https://github.com/vitessio/website/issues/1955) listing all issues identified in the analysis.
 
 ### Possible Implementation
 
