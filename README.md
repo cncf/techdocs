@@ -35,7 +35,8 @@ documentation. For details, see the TechDocs
 
 The full-time staff of the team is (in alphabetical order):
 
-- [Daniel Krook](https://github.com/krook) - Senior Director of Developer Experience, CNCF
+- [Daniel Krook](https://github.com/krook) - Senior director of developer
+  experience, CNCF
 - [Nate W.](https://github.com/nate-double-u) - Head of mentoring &
   documentation, CNCF
 - [Patrice Chalin](https://github.com/chalin) - Senior techdoc & webdev lead
