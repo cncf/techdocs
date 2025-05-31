@@ -33,7 +33,7 @@ documentation. For details, see the TechDocs
 
 ## CNCF TechDocs team
 
-The full-time staff of the team is (in alphabetical order):
+The full-time staff of the team is:
 
 - [Daniel Krook](https://github.com/krook) - Senior director of developer
   experience, CNCF
