@@ -1,4 +1,5 @@
 ---
+title: Netlify and domain setup
 cSpell:ignore: caniszczyk
 ---
 

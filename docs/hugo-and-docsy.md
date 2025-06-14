@@ -1,3 +1,7 @@
+---
+title: Hugo and Docsy
+---
+
 # Hugo and Docsy
 
 Tips:

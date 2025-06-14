@@ -1,3 +1,7 @@
+---
+title: CNCF website guidelines checklist
+---
+
 # CNCF website guidelines checklist
 
 As per the

@@ -4,3 +4,4 @@
 list-marker-space: false
 no-inline-html: false
 no-bare-urls: false
+single-h1: false # Temporary

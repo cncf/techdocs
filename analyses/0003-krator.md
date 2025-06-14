@@ -1,4 +1,5 @@
 ---
+title: Krator Docs assessment
 cSpell:ignore: Krator celestehorgan CODEOWNERS
 ---
 
