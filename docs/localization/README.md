@@ -14,4 +14,4 @@ Guides here must not violate copyright or licensing requirements.
 
 ## Localizations
 
-- [Japanese](ja/README.md)
+- [Japanese](ja/)
