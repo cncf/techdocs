@@ -1,3 +1,7 @@
+---
+title: CNCF TechDocs Analysis How-To
+---
+
 # CNCF TechDocs Analysis How-To
 
 ## Audience
@@ -217,5 +221,5 @@ Create issues in the project documentation GitHub repository for:
 [analyses]: ../../analyses/
 [criteria]: ./criteria.md
 [project maturity level]: https://www.cncf.io/project-metrics
-[templates]: ./templates/README.md
+[templates]: ./templates/index.md
 [issues list]: ./templates/issues-list.md

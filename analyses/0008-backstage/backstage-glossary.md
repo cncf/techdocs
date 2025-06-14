@@ -1,3 +1,7 @@
+---
+title: Backstage Glossary
+---
+
 # Backstage Glossary
 
 ## API

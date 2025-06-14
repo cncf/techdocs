@@ -1,3 +1,7 @@
+---
+title: Documentation Issues
+---
+
 # Documentation Issues
 
 These issues identify and classify tasks that contributors can undertake to

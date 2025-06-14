@@ -1,3 +1,7 @@
+---
+title: Assistance program for technical documentation
+---
+
 # Assistance program for technical documentation
 
 This document outlines the Cloud Native Computing Foundation (CNCF) Technical
