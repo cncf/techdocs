@@ -1,3 +1,7 @@
+---
+title: Documentation Search
+---
+
 # Documentation Search
 
 <!-- markdownlint-disable no-duplicate-heading -->

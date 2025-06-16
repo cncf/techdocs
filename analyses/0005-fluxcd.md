@@ -1,4 +1,5 @@
 ---
+title: Assessment template
 cSpell:ignore: celestehorgan Horgan
 ---
 

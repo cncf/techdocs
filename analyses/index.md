@@ -1,3 +1,7 @@
+---
+title: TechDocs Analysis for CNCF Projects
+---
+
 <!-- cSpell:ignore projectname -->
 
 # TechDocs Analysis for CNCF Projects

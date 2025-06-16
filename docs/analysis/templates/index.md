@@ -1,3 +1,7 @@
+---
+title: TechDoc Analysis Templates
+---
+
 # TechDoc Analysis Templates
 
 This section contains templates for analyzing a CNCF project's documentation.
