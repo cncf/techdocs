@@ -1,3 +1,7 @@
+---
+title: CNCF sandbox project documentation primer
+---
+
 # CNCF sandbox project documentation primer
 
 This document is a quick primer for CNCF project maintainers and contributors

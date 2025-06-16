@@ -1,4 +1,5 @@
 ---
+title: Repository setup
 cSpell:ignore: cncf
 ---
 

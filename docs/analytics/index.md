@@ -1,3 +1,7 @@
+---
+title: Analytics
+---
+
 # Analytics
 
 ## Google Analytics

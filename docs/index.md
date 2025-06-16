@@ -1,3 +1,8 @@
+---
+title: CNCF Techdocs how-tos
+sidebar_position: 1
+---
+
 # CNCF Techdocs how-tos
 
 This directory contains documentation on how the CNCF TechDocs team does things.

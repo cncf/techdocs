@@ -1,3 +1,7 @@
+---
+title: CNCF Localization Guides
+---
+
 # CNCF Localization Guides
 
 This directory contains a growing collection of localization guides that CNCF
