@@ -3,6 +3,10 @@
 .cache-loader
 /build
 
+# Astro
+.astro
+dist
+
 # npm assets
 node_modules/
 package-lock.json
