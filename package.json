@@ -7,8 +7,9 @@
     "_check:format:any": "npx prettier --check --ignore-path ''",
     "_check:format:delta": "npm run _check:format:any -- $(npm run -s _list:git:delta)",
     "_check:format": "npx prettier --check .",
-    "_check:links": "make --keep-going check-links",
     "_check:links-md": "bash -c 'for f in *.md `find analyses -name \"*.md\"`; do npx markdown-link-check --config .markdown-link-check.json -p -v $f || exit 1; done'",
+    "_check:links:internal": "npm run _check:links -- HTMLTEST_ARGS='--skip-external'",
+    "_check:links": "make --keep-going check-links",
     "_check:markdown:all": "npm run -s _list:check:md | xargs -I {} -P 4 npx -p markdownlint-cli markdownlint -c .markdownlint.yaml {}",
     "_check:markdown:delta": "npm run -s _list:git:delta | xargs -I {} npx -p markdownlint-cli markdownlint -c .markdownlint.yaml {}",
     "_check:markdown:1": "npx -p markdownlint-cli markdownlint -c .markdownlint.yaml",
@@ -65,7 +66,7 @@
     "typescript": "~5.8.3"
   },
   "private": true,
-  "spelling": "cSpell:ignore ACMR loglevel pkgs -",
+  "spelling": "cSpell:ignore ACMR HTMLTEST loglevel pkgs -",
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
