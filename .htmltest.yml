@@ -1,12 +1,17 @@
 # cSpell:ignore github
 CacheExpires: 9000h # ~ 12 months
-DirectoryPath: build
+DirectoryPath: dist
 TestFilesConcurrently: true
+IgnoreCanonicalBrokenLinks: true
+IgnoreEmptyHref: true
+IgnoreAltEmpty: true
 IgnoreDirs:
+  - analyses
 IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
   - \?no-link-check
+  - \?(_PROJECT|TODO)
   # FIXME: temporary ignore rules
   - assistance\.md
   - LICENSE
