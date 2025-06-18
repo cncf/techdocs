@@ -1,8 +1,9 @@
 ---
-title: Documentation Search
+title: Site Search
+sidebar: { label: Search }
 ---
 
-# Documentation Search
+# Site Search
 
 <!-- markdownlint-disable no-duplicate-heading -->
 
