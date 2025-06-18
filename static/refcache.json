@@ -487,6 +487,10 @@
     "StatusCode": 206,
     "LastSeen": "2025-03-19T11:52:41.206262-04:00"
   },
+  "https://github.com/withastro/starlight": {
+    "StatusCode": 206,
+    "LastSeen": "2025-06-18T06:17:48.988777-04:00"
+  },
   "https://goharbor.io/": {
     "StatusCode": 206,
     "LastSeen": "2025-03-19T11:52:42.657248-04:00"
