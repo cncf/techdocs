@@ -115,9 +115,9 @@ Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
 to their area of concern:
 
-- [Project documentation](?TODO=ADD-URL)
-- [Contributor documentation](?TODO=ADD-URL)
-- [Website and documentation infrastructure](?TODO=ADD-URL)
+- [Project documentation](./?TODO=ADD-URL)
+- [Contributor documentation](./?TODO=ADD-URL)
+- [Website and documentation infrastructure](./?TODO=ADD-URL)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
@@ -550,8 +550,8 @@ The numeric rating values used in this document are as follows
 [criteria]: ../criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
-[project-doc-website]: ?_PROJECT-DOC-URL_
-[project-website]: ?_PROJECT-WEBSITE_
+[project-doc-website]: ./?_PROJECT-DOC-URL_
+[project-website]: ./?_PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../website-guidelines-checklist.md

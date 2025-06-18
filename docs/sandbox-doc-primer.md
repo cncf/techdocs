@@ -1,11 +1,13 @@
 ---
-title: CNCF sandbox project documentation primer
+title: CNCF sandbox-project docs primer
+sidebar:
+  label: Sandbox-project docs primer
 ---
 
-# CNCF sandbox project documentation primer
+# CNCF sandbox-project docs primer
 
-This document is a quick primer for CNCF project maintainers and contributors
-who need to document their projects but don't know where to start. It provides a
+This page is a quick primer for CNCF project maintainers and contributors who
+need to document their projects but don't know where to start. It provides a
 framework for thinking about user documentation that will enable the project
 contributors to write effective documentation from the very beginning and to get
 the most out of documentation efforts as the project matures.
