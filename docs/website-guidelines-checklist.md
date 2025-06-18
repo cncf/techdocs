@@ -1,10 +1,10 @@
 ---
-title: CNCF website guidelines checklist
+title: Website guidelines & checklist
 ---
 
-# CNCF website guidelines checklist
+# Website guidelines & checklist
 
-As per the
+Per the
 [CNCF Website Guidelines](https://github.com/cncf/foundation/blob/main/website-guidelines.md),
 the following should be present:<br/> _Note_, not all of these are applicable to
 all projects

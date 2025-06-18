@@ -1,10 +1,10 @@
 ---
-title: Doc Versioning with Hugo & Netlify
+title: Versioned docs with Hugo & Netlify
 # prettier-ignore
 cSpell:ignore: Batard Brubaker Pursley velero fullversion githubbranch docsbranch Tanzu Rosland Horgan Takahashi
 ---
 
-# Doc Versioning with Hugo & Netlify
+# Versioned docs with Hugo & Netlify
 
 Technical Documents Versioning is an intersection of:
 
