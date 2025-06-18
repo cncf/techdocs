@@ -3,14 +3,14 @@
 This site contains resources provided by the CNCF Technical Documentation team,
 including:
 
-- [Docs](docs) about building websites and developing technical documentation,
+- [Docs](docs/) about building websites and developing technical documentation,
   including recommended tools, best practices, how-tos, and evaluation
   checklists. It provides specific guidelines for:
   - Setting up and maintaining a documentation website.
   - Writing technical documentation for a project.
   - Seeking assistance from the CNCF TechDocs community.
   - [Analyzing project documentation](docs/analysis/).
-- [Analyses](analyses): a collection of documentation analyses of CNCF projects
+- [Analyses](analyses/): a collection of documentation analyses of CNCF projects
   performed by the TechDocs team.
 
 ## TechDocs Q&A
