@@ -1,7 +1,7 @@
 ---
 title: Helm Documentation Analysis
 tags: [Helm]
-created: YYYY-MM-DD
+created: 2025-12-04
 modified: YYYY-MM-DD
 author: Paige Calvert (@paigecalvert)
 ---
@@ -11,7 +11,7 @@ author: Paige Calvert (@paigecalvert)
 ## Introduction
 
 This document is an analysis of the effectiveness and completeness of the
-[Helm][https://helm.sh/] open source software (OSS) project's documentation
+[Helm][project-website] open source software (OSS) project's documentation
 and website. It is funded by the CNCF Foundation as part of its overall effort
 to incubate, grow, and graduate open source cloud native software projects.
 
@@ -25,7 +25,7 @@ efforts.
 This document was written to analyze the current state of Helm
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
-[implementation] document, , outlines an actionable plan for improvement. A
+[implementation] document outlines an actionable plan for improvement. A
 third document is an [issues list] of issues to be added to the project
 documentation repository. These issues can be taken up by contributors to
 improve the documentation.
@@ -80,20 +80,20 @@ The accompanying [implementation] document breaks the recommendations down into
 concrete actions that can be implemented by project contributors. Its focus is
 on drilling down to specific, achievable work that can be completed in
 constrained blocks of time. Ultimately, the implementation items are decomposed
-into a series of [issues] and entered as GitHub [project-doc-website]/issues.
+into a series of [issues] and entered as GitHub [issues](https://github.com/helm/helm-www/issues).
 
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the **[implementation] plan** and **[issues] list**.
+read the **[implementation] plan** and **[issues list]**.
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
 to their area of concern:
 
-- [Project documentation](./?TODO=ADD-URL)
-- [Contributor documentation](./?TODO=ADD-URL)
-- [Website and documentation infrastructure](./?TODO=ADD-URL)
+- [Project documentation](#project-documentation)
+- [Contributor documentation](#contributor-documentation)
+- [Website and documentation infrastructure](#website-and-infrastructure)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
@@ -112,16 +112,8 @@ to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
-
 Helm is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
-
-> AUTHOR NOTE: or
-
-Helm is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
-the project code.
 
 | Criterion                  | [Rating (1-5)] |
 | -------------------------- | -------------- |
@@ -133,14 +125,8 @@ the project code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Project Documentation here.
-
 The following sections contain brief assessments of each element of the Project
 Documentation rubric.
-
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items, and
-> especially the technical documentation, meet these criteria. (Criteria are
-> copied from criteria.md)
 
 #### Information architecture
 
@@ -275,15 +261,13 @@ The docs do occassionally use language like "simple", "easy", etc. Example: http
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
-
 #### Information architecture
 
-The information architecture could benefit from the following:
-- The Introduction, How-to, Topics, Best Practices, Chart Template Guide, and FAQs sections should all be reviewed to see where there is redundant content that can be condensed. With the current naming of these sections, it's not clear to docs users or contributors how the pages are grouped, and what types of info should go where. 
-- Could consider creating high-level categories based on the major feature area. For example, a section on working with chart registries, plugins, variables/templates, and so on.
-- The Chart Template Guide is a better example of having 
+It will be helpful to find greater specificity in the naming strategy for categories. With the current naming of the sections in the sidebar, it's not clear to docs users or contributors how the pages are grouped, and what types of info should go where. Many sections are named by content type (how-to, topics, faqs, best practices). This is fine, but can be challenging to maintain and find content when it's not clear what qualifies as each content type (for example, Topics has become a large catch-all category). By using more specific categories that align with a given product area or use case, it'll be more obvious where info can be found.
+
+Additionally, content throughout should be reviewed to see where there is redundant content that can be condensed. For example, lots of the pages in Topics, FAQs, Introduction, Best Practices feels out-of-date or redundant with other pages
+
+Finally, procedures should be converted to step-by-step instructions for better readability.
 
 #### New user content
 
@@ -297,7 +281,7 @@ Helm.sh is in need of a better process for reviewing and accepting localized doc
 
 #### Content creation processes
 
-The contributors docs could be better centralized and easier to search, maybe in a "Contribute to the Docs" section. Currently, the contributor info is spread across the readme, the ARCHITECTURE_DECISIONS doc, as well as the community section, which makes it hard to find, and hard to tell when it's out of date.
+The contributors docs could be better centralized and easier to search, maybe in a "Contribute to the Docs" section. Currently, the contributor info is spread across the README, [CONTRIBUTING](https://github.com/paigecalvert/helm-www/blob/main/CONTRIBUTING.md), and the Community section, which makes it a bit harder to find, and harder to tell when it's out of date.
 
 Also, the team could make docs more "part of the definition of done" for new features. For example, when a docs update is needed, creating the docs PR could be required before a new feature PR to be merged. This would help ensure that the docs stay up to date.
 
@@ -309,16 +293,8 @@ Helm.sh could also choose an existing, industry-accepted style guide to point co
 
 ## Contributor documentation
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
-
 Helm is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
-
-> AUTHOR NOTE: or
-
-Helm is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
-the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
@@ -329,16 +305,8 @@ the project code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Contributor Documentation
-> here.
-
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
-
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the contributor documentation might
-> be contained in the documentation repository. (Criteria are copied from
-> criteria.md)
 
 #### Communication methods documented
 
@@ -384,9 +352,6 @@ Is Project governance clearly is documented here: https://helm.sh/community/gove
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
-
 #### Beginner friendly issue backlog
 
 Improved standards/practices around regular issue triage and maintaining issue freshness could help make the issue backlog a little easier to navigate. 
@@ -419,18 +384,8 @@ have [_very high_][criteria] standards for documentation.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Website and documentation
-> infrastructure here.
-
 The following sections contain brief assessments of each element of the Website
 and documentation infrastructure rubric.
-
-> AUTHOR NOTE: for each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the website infrastructure criteria
-> depend on the tools (static site generator, website framework and hosting,
-> analytics tools, etc.) and processes (project CI, release procedures,
-> governance, etc.) used to produce the documentation. (Criteria are copied from
-> criteria.md)
 
 #### Single-source requirement
 
@@ -456,7 +411,6 @@ only two levels for which a tech docs analysis can be requested.)
 
 <!-- markdownlint-enable line-length -->
 
-[git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [maturity-level]:
   https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
 [cncf-servicedesk]: https://servicedesk.cncf.io
@@ -517,9 +471,6 @@ The website is accessible via HTTPS and requests using HTTP are properly redirec
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
-
 #### Case studies/social proof
 
 Could add a link to case studies on the landing page and/or prioritize writing and publishing case studies in the blog
@@ -545,10 +496,10 @@ The numeric rating values used in this document are as follows
 5. Exemplary
 
 [criteria]: ../criteria.md
-[implementation]: ./implementation.md
-[issues list]: ./issues-list.md
-[project-doc-website]: ./?https://helm.sh/docs/
-[project-website]: ./?https://helm.sh/
+[implementation]: ./helm-implementation.md
+[issues list]: ./helm-issues-list.md
+[project-doc-website]: https://helm.sh/docs/
+[project-website]: https://helm.sh/
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../website-guidelines-checklist.md
