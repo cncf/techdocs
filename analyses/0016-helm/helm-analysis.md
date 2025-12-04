@@ -218,7 +218,9 @@ There is Getting Started section on the site homepage. It includes Helm download
 
 In terms of “getting started” docs that are clearly labeled as such, there is both an "Introduction" section and a page named "Quickstart". However, the content in these sections is for chart users and does not include information that would be useful to chart developers just getting started.
 
-After completing the quickstart or reading the introduction section, there's no clear info about what the user should do next. In general, there's not a lot of info about the most common use cases for Helm, so it's not clear the user would be able to intuit how they could use Helm (unless they already had some idea about the technology and were just visiting the docs for information about the mechanics of a specific task).
+After completing the quickstart or reading the introduction section, there's no clear info about what the user should do next. In general, it's hard to grock the most common use cases for Helm from looking at the docs table of contents, so it's not clear the user would be able to intuit how they could use Helm.
+
+This Next Steps page in the Chart Template Guide does provide a good example of pointing chart developers to more information about chart development: https://helm.sh/docs/chart_template_guide/wrapping_up
 
 **Step-by-step install procedures**
 
@@ -301,9 +303,9 @@ Also, the team could make docs more "part of the definition of done" for new fea
 
 #### Inclusive language
 
-Helm.sh could choose an existing, industry-accepted style guide to point contributors to, including a link to the inclusive language website. This would help maintain inclusive, clear word choice throughout.
+Review the docs for terms like "simply" and "easy" and remove them.
 
-Could also consider adding some of the terms to avoid to the existing `typos` plugin on the site so that these get flagged during the build process.
+Helm.sh could also choose an existing, industry-accepted style guide to point contributors to, including a link to the inclusive language website. This would help maintain inclusive, clear word choice throughout.
 
 ## Contributor documentation
 
@@ -518,20 +520,6 @@ The website is accessible via HTTPS and requests using HTTP are properly redirec
 > AUTHOR NOTE: Write general recommendations based on the comments from the
 > previous section.
 
-#### Single-source requirement
-
-No recommendations
-
-#### Minimal website requirements
-
-#### Usability, accessibility and devices
-
-No recommendations
-
-#### Branding and design
-
-No recommendations
-
 #### Case studies/social proof
 
 Could add a link to case studies on the landing page and/or prioritize writing and publishing case studies in the blog
@@ -543,10 +531,6 @@ Add analytics to the production server (could use Google Analytics (GA) 4), and 
 #### Maintenance planning
 
 Consider troubleshooting the existing script to see why it inconsistently reduces build times.
-
-#### Other
-
-No recommendations
 
 #### References and notes
 
