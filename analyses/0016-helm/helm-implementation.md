@@ -168,7 +168,6 @@ For example:
 
 - Allow signing multiple charts with single passphrase from stdin
   (https://github.com/helm/helm/pull/30718)
-  
 - Allow post-renderer to process hooks (https://github.com/helm/helm/pull/13154)
 
 ### Review and update all the pages with the "This page has not yet been updated for Helm 4" warning
