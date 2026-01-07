@@ -42,33 +42,33 @@
     "serve": "npm run docus:serve",
     "test": "npm run check",
     "typecheck": "tsc",
-    "update:pkgs": "npx npm-check-updates -u"
+    "update:packages": "npx npm-check-updates -u"
   },
   "author": "CNCF",
   "license": "CC-BY-4.0",
   "dependencies": {
-    "@docusaurus/core": "3.8.1",
-    "@docusaurus/preset-classic": "3.8.1",
-    "@mdx-js/react": "^3.1.0",
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
+    "@mdx-js/react": "^3.1.1",
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.1",
-    "react-dom": "^19.1.0",
-    "react": "^19.1.0"
+    "react-dom": "^19.2.3",
+    "react": "^19.2.3"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.8.1",
-    "@docusaurus/tsconfig": "3.8.1",
-    "@docusaurus/types": "3.8.1",
-    "cspell": "^9.1.1",
-    "markdown-link-check": "3.13.7",
-    "markdownlint-cli": "^0.45.0",
-    "markdownlint": "^0.38.0",
-    "npm-check-updates": "^18.0.1",
-    "prettier": "^3.5.3",
-    "typescript": "~5.8.3"
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
+    "cspell": "^9.4.0",
+    "markdown-link-check": "3.14.2",
+    "markdownlint-cli": "^0.47.0",
+    "markdownlint": "^0.40.0",
+    "npm-check-updates": "^19.3.1",
+    "prettier": "^3.7.4",
+    "typescript": "~5.9.3"
   },
   "private": true,
-  "spelling": "cSpell:ignore ACMR docus HTMLTEST loglevel pkgs -",
+  "spelling": "cSpell:ignore ACMR docus HTMLTEST loglevel -",
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true

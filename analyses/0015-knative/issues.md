@@ -6,7 +6,7 @@ modified: 2025-07-28
 author: Dave Welsch (@dwelsch-esi)
 ---
 
-<!-- markdownlint-disable -->
+<!-- markdownlint-disable no-duplicate-heading -->
 
 # Separate technical documentation from the project page
 
