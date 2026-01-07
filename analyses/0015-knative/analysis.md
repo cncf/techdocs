@@ -6,7 +6,7 @@ modified: 2025-07-25
 author: Dave Welsch (@dwelsch-esi)
 ---
 
-<!-- markdownlint-disable-file -->
+<!-- markdownlint-disable no-duplicate-heading -->
 
 ## Introduction
 
@@ -664,7 +664,7 @@ No recommendations.
 
 ## Website and infrastructure
 
-**TBD**
+> **TBD**
 
 Knative is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
@@ -712,7 +712,6 @@ only two levels for which a tech docs analysis can be requested.)
 
 <!-- markdownlint-enable line-length -->
 
-[git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
 [maturity-level]:
   https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
 [cncf-servicedesk]: https://servicedesk.cncf.io
@@ -843,8 +842,6 @@ The numeric rating values used in this document are as follows
 5. Exemplary
 
 [criteria]: ../criteria.md
-[implementation]: ./implementation.md
-[issues]: ./issues.md
 [project-doc-website]: https://knative.dev/docs/
 [project-website]: https://knative.dev/docs/
 [Rating (1-5)]: #rating-values
