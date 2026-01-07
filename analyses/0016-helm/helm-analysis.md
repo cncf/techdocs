@@ -12,9 +12,9 @@ cSpell:ignore: paigecalvert subrepos kstatus Bitnami
 ## Introduction
 
 This document is an analysis of the effectiveness and completeness of the
-[Helm][project-website] open source software (OSS) project's documentation
-and website. It is funded by the CNCF Foundation as part of its overall effort
-to incubate, grow, and graduate open source cloud native software projects.
+[Helm][project-website] open source software (OSS) project's documentation and
+website. It is funded by the CNCF Foundation as part of its overall effort to
+incubate, grow, and graduate open source cloud native software projects.
 
 According to CNCF best practices guidelines, effective documentation is a
 prerequisite for program graduation. The documentation analysis is the first
@@ -23,26 +23,24 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of Helm
-documentation. It aims to provide project leaders with an informed
-understanding of potential problems in current project documentation. A second
-[implementation] document outlines an actionable plan for improvement. A
-third document is an [issues list] of issues to be added to the project
-documentation repository. These issues can be taken up by contributors to
-improve the documentation.
+This document was written to analyze the current state of Helm documentation. It
+aims to provide project leaders with an informed understanding of potential
+problems in current project documentation. A second [implementation] document
+outlines an actionable plan for improvement. A third document is an [issues
+list] of issues to be added to the project documentation repository. These
+issues can be taken up by contributors to improve the documentation.
 
 This document:
 
 - Analyzes the current Helm technical documentation and website
 - Compares existing documentation against the CNCF's standards
-- Recommends a program of key improvements with the largest return on
-  investment
+- Recommends a program of key improvements with the largest return on investment
 
 ### Scope of analysis
 
 The documentation discussed here includes the entire contents of the website,
-the technical documentation, and documentation for contributors and users on
-the helm-www GitHub repository.
+the technical documentation, and documentation for contributors and users on the
+helm-www GitHub repository.
 
 The Helm website and documentation are written in Markdown and are compiled
 using the Docusaurus static site generator with the theme-classic theme and
@@ -62,8 +60,8 @@ GitHub repo.
 
 ### How this document is organized
 
-This document is divided into three sections that represent three major areas
-of concern:
+This document is divided into three sections that represent three major areas of
+concern:
 
 - **Project documentation:** concerns documentation for users of the Helm
   software, aimed at people who intend to use the project software
@@ -77,8 +75,8 @@ Each section begins with summary ratings based on a rubric with appropriate
 
 - **Comments**: observations about the existing documentation, with a focus on
   how it does or does not help Helm users achieve their goals.
-- **Recommendations**: suggested changes that would improve the effectiveness
-  of the documentation.
+- **Recommendations**: suggested changes that would improve the effectiveness of
+  the documentation.
 
 The accompanying [implementation] document breaks the recommendations down into
 concrete actions that can be implemented by project contributors. Its focus is
@@ -89,8 +87,8 @@ into a series of [issues] and entered as GitHub
 
 ### How to use this document
 
-Readers interested only in actionable improvements should skip this document
-and read the **[implementation] plan** and **[issues list]**.
+Readers interested only in actionable improvements should skip this document and
+read the **[implementation] plan** and **[issues list]**.
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -100,8 +98,8 @@ to their area of concern:
 - [Contributor documentation](#contributor-documentation)
 - [Website and documentation infrastructure](#website-and-infrastructure)
 
-Examples of CNCF documentation that demonstrate the analysis criteria are
-linked from the [criteria] specification.
+Examples of CNCF documentation that demonstrate the analysis criteria are linked
+from the [criteria] specification.
 
 #### Recommendations, requirements, and best practices
 
@@ -110,15 +108,15 @@ and suggests possible improvements. In most cases there is more than one way to
 do things. Few recommendations here are meant to be prescriptive. Rather, the
 recommended implementations represent the reviewers' experience with how to
 apply documentation best practices. In other words, borrowing terminology from
-the lexicon of [RFCs][rfc-spec], the changes described here should be
-understood as "recommended" or "should" at the strongest, and "optional" or
-"may" in many cases. Any "must" or "required" actions are clearly denoted as
-such, and pertain to legal requirements such as copyright and licensing issues.
+the lexicon of [RFCs][rfc-spec], the changes described here should be understood
+as "recommended" or "should" at the strongest, and "optional" or "may" in many
+cases. Any "must" or "required" actions are clearly denoted as such, and pertain
+to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-Helm is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
+Helm is a **graduated** project of CNCF. This means that the project should have
+[_very high_][criteria] standards for documentation.
 
 | Criterion                  | [Rating (1-5)]                 |
 | -------------------------- | ------------------------------ |
@@ -149,9 +147,9 @@ There is some level of project overview/conceptual content on these pages:
 - The Introduction section (https://helm.sh/docs/intro/) includes information
   primarily for users of Helm charts (ie, no info for chart developers). It
   includes a quickstart guide that walks you through installing an example
-  chart, a page on how to install Helm, a page with info about common Helm
-  tasks like installing, upgrading, and working with repos, and a "cheat sheet"
-  with quick references for common CLI commands.
+  chart, a page on how to install Helm, a page with info about common Helm tasks
+  like installing, upgrading, and working with repos, and a "cheat sheet" with
+  quick references for common CLI commands.
 
 - There is also some high level conceptual information in the "Topics" section
   of the docs. For example, Helm Architecture
@@ -162,8 +160,8 @@ There is some level of project overview/conceptual content on these pages:
 Overall, main Helm features are documented (like variables, template functions,
 hooks, and the Helm CLI).
 
-But, there are several new features/breaking changes that need to be updated
-for Helm 4. For example:
+But, there are several new features/breaking changes that need to be updated for
+Helm 4. For example:
 
 - kstatus watcher needs to be documented in the SDK docs and likely some
   user-facing docs needed outside of the SDK docs as well
@@ -205,8 +203,8 @@ instructions.
 The Helm docs include some tutorials on workflows like creating different types
 of plugins using the different supported runtimes (eg,
 https://helm.sh/docs/plugins/developer/tutorial-cli-plugin). There are several
-other pages that use a tutorial-style format that walks users through a
-specific example in order to explain a given task or feature. For example:
+other pages that use a tutorial-style format that walks users through a specific
+example in order to explain a given task or feature. For example:
 
 - https://helm.sh/docs/chart_template_guide/accessing_files uses a variety of
   examples to explain different ways to create and access named templates
@@ -224,12 +222,12 @@ are given relevant headings. There are some pages like "Using Helm" that would
 probably be better broken down into several smaller pages that users can see
 from the sidebar. Also, there are some places where there is extra info under a
 heading that one might not expect to find there. For example, under
-[Writing a Hook](https://helm.sh/docs/topics/charts_hooks#writing-a-hook),
-there is conceptual information about how hooks work, like that you can
-implement multiple hooks in a single resource or that multiple resources can be
+[Writing a Hook](https://helm.sh/docs/topics/charts_hooks#writing-a-hook), there
+is conceptual information about how hooks work, like that you can implement
+multiple hooks in a single resource or that multiple resources can be
 implemented as the same type of hook. These are important details about how
-hooks work, but they are a bit hidden half way down a section whose heading
-uses a verb phrase.
+hooks work, but they are a bit hidden half way down a section whose heading uses
+a verb phrase.
 
 ##### Happy path/common use cases
 
@@ -241,18 +239,18 @@ Helm has a few different happy paths depending on the user persona:
 - Chart developers need to know how to work with features like values files,
   template functions, chart hooks, and so on
 
-For chart users, the "happy path" of initializing a chart repository,
-installing a chart, viewing release info for the chart, then uninstalling is
-documented in the Quickstart workflow. The Using Helm page also touches on each
-of the main tasks that a chart user would need to know about.
+For chart users, the "happy path" of initializing a chart repository, installing
+a chart, viewing release info for the chart, then uninstalling is documented in
+the Quickstart workflow. The Using Helm page also touches on each of the main
+tasks that a chart user would need to know about.
 
 As a chart developer, it's not very clear from looking at the docs sidebar if
 there's a most common use case or "happy path" documented. The closest page to
-this is [Charts](https://helm.sh/docs/topics/charts), which does include lots
-of helpful info about the chart file structure, working with chart
-dependencies, templates and values, and more. However, it's a lot of info in
-one page, and it doesn't necessarily walk developers through how all these
-pieces should fit together to create a release.
+this is [Charts](https://helm.sh/docs/topics/charts), which does include lots of
+helpful info about the chart file structure, working with chart dependencies,
+templates and values, and more. However, it's a lot of info in one page, and it
+doesn't necessarily walk developers through how all these pieces should fit
+together to create a release.
 
 ##### Clear escalation path to get more help
 
@@ -262,13 +260,13 @@ is documented for users that need more help:
 - The community section of the docs (which is pulled in from the Helm community
   repository) includes most of the helpful info about troubleshooting. For
   example, https://helm.sh/community/developers/#troubleshooting provides
-  information about working with the community and searching the existing
-  issues in the Helm repo to troubleshoot.
+  information about working with the community and searching the existing issues
+  in the Helm repo to troubleshoot.
 
-- There are also some minimal FAQs here: https://helm.sh/docs/faq/. They
-  include a few questions about installing and one question about uninstalling.
-  It looks like this information is not really an "FAQ", but rather information
-  about installing/uninstalling Helm that might have been documented under FAQs
+- There are also some minimal FAQs here: https://helm.sh/docs/faq/. They include
+  a few questions about installing and one question about uninstalling. It looks
+  like this information is not really an "FAQ", but rather information about
+  installing/uninstalling Helm that might have been documented under FAQs
   because it lacks a more permanent home.
 
 The Helm docs lack clear troubleshooting steps for different common tasks.
@@ -291,17 +289,17 @@ docs. For example:
 - For the Helm v4 docs, there is a fair bit of out of date content. Some of the
   new features haven't been fully doc'd yet
 
-- There's also several warnings "This page has not yet been updated for Helm
-  4." This content needs to be evaluated and updated
+- There's also several warnings "This page has not yet been updated for Helm 4."
+  This content needs to be evaluated and updated
 
 #### New user content
 
 ##### Getting started content
 
-There is Getting Started section on the site homepage. It includes Helm
-download commands and a link to Artifact Hub where you can find Helm charts. It
-links users to the docs for more information (specifically, it links to the
-installing Helm and using Helm docs pages).
+There is Getting Started section on the site homepage. It includes Helm download
+commands and a link to Artifact Hub where you can find Helm charts. It links
+users to the docs for more information (specifically, it links to the installing
+Helm and using Helm docs pages).
 
 In terms of "getting started" docs that are clearly labeled as such, there is
 both an "Introduction" section and a page named "Quickstart". However, the
@@ -346,9 +344,9 @@ https://github.com/helm/helm-www/blob/main/README.md#versioning:
 
 - Helm.sh releases a new version of the docs with each major release
 
-- Helm.sh uses the version number in the URL path for non-latest versions of
-  the product (the latest version is served at the main /docs/ path with no
-  version number)
+- Helm.sh uses the version number in the URL path for non-latest versions of the
+  product (the latest version is served at the main /docs/ path with no version
+  number)
 
 - Version labels on the site are updated to use the latest minor/patch version
 
@@ -385,8 +383,8 @@ reviewing and updating the list of maintainers.
 
 #### Inclusive language
 
-There do not appear to be any customer-facing utilities, endpoints, class
-names, or feature names that use non-recommended words as documented by the
+There do not appear to be any customer-facing utilities, endpoints, class names,
+or feature names that use non-recommended words as documented by the
 [Inclusive Naming Initiative](https://inclusivenaming.org) website.
 
 The docs do occasionally use language like "simple", "easy", etc. Example:
@@ -398,13 +396,13 @@ https://helm.sh/docs/topics/registries/#migrating-from-chart-repos
 
 It will be helpful to find greater specificity in the naming strategy for
 categories. With the current naming of the sections in the sidebar, it's not
-clear to docs users or contributors how the pages are grouped, and what types
-of info should go where. Many sections are named by content type (how-to,
-topics, FAQs, best practices). This is fine, but can be challenging to maintain
-and find content when it's not clear what qualifies as each content type (for
-example, Topics has become a large catch-all category). By using more specific
-categories that align with a given product area or use case, it'll be more
-obvious where info can be found.
+clear to docs users or contributors how the pages are grouped, and what types of
+info should go where. Many sections are named by content type (how-to, topics,
+FAQs, best practices). This is fine, but can be challenging to maintain and find
+content when it's not clear what qualifies as each content type (for example,
+Topics has become a large catch-all category). By using more specific categories
+that align with a given product area or use case, it'll be more obvious where
+info can be found.
 
 Additionally, content throughout should be reviewed to see where there is
 redundant content that can be condensed. For example, lots of the pages in
@@ -416,13 +414,13 @@ readability.
 
 #### New user content
 
-The site could use a more clearly labeled "getting started" section, with
-guides for all main user personas (both chart users and chart developers). For
-example, a quick start that shows how to create and release a simple chart
-and/or a page that explains that chart dev "happy path", including all the main
-tasks a chart developer should consider as part of creating and publishing a
-chart for their app. Could probably use lots of the content in Using Helm to
-create getting started info for chart developers.
+The site could use a more clearly labeled "getting started" section, with guides
+for all main user personas (both chart users and chart developers). For example,
+a quick start that shows how to create and release a simple chart and/or a page
+that explains that chart dev "happy path", including all the main tasks a chart
+developer should consider as part of creating and publishing a chart for their
+app. Could probably use lots of the content in Using Helm to create getting
+started info for chart developers.
 
 #### Content maintainability & site mechanics
 
@@ -438,9 +436,9 @@ https://opentelemetry.io/docs/contributing/localization/.
 
 #### Content creation processes
 
-The contributors docs could be better centralized and easier to search, maybe
-in a "Contribute to the Docs" section. Currently, the contributor info is
-spread across the README,
+The contributors docs could be better centralized and easier to search, maybe in
+a "Contribute to the Docs" section. Currently, the contributor info is spread
+across the README,
 [CONTRIBUTING](https://github.com/paigecalvert/helm-www/blob/main/CONTRIBUTING.md),
 and the Community section, which makes it a bit harder to find, and harder to
 tell when it's out of date.
@@ -460,8 +458,8 @@ help maintain inclusive, clear word choice throughout.
 
 ## Contributor documentation
 
-Helm is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
+Helm is a **graduated** project of CNCF. This means that the project should have
+[_very high_][criteria] standards for documentation.
 
 | Criterion                                 | [Rating (1-5)]        |
 | ----------------------------------------- | --------------------- |
@@ -479,11 +477,11 @@ Contributor Documentation rubric.
 
 ##### Slack and dev meetings
 
-The Helm Slack channels are prominently linked in the Join the Community
-section on the landing page. This section also has info about upcoming events,
-weekly developer stand-ups (with info on how to join), and more. Additionally,
-the Community section of the website (https://helm.sh/community) also includes
-this information.
+The Helm Slack channels are prominently linked in the Join the Community section
+on the landing page. This section also has info about upcoming events, weekly
+developer stand-ups (with info on how to join), and more. Additionally, the
+Community section of the website (https://helm.sh/community) also includes this
+information.
 
 ##### GitHub links
 
@@ -493,8 +491,8 @@ couple ways:
 - There are links on the site homepage, in the community section, and in the
   footer to the main Helm github
 
-- There's an edit this page link on every docs page that allows the user to
-  open it in the helm-www repo in github
+- There's an edit this page link on every docs page that allows the user to open
+  it in the helm-www repo in github
 
 ##### Mailing lists
 
@@ -504,11 +502,11 @@ https://helm.sh/community/communication/#mailing-lists
 #### Beginner friendly issue backlog
 
 Docs issues are not very well triaged. There are nearly 100 open docs issues,
-many irrelevant to the new site. There is also no clear triage plan or
-timelines in place for addressing issues or reviewing them for freshness.
+many irrelevant to the new site. There is also no clear triage plan or timelines
+in place for addressing issues or reviewing them for freshness.
 
-There is a "good first issue" label, which new contributors can use to make
-code or documentation contributions.
+There is a "good first issue" label, which new contributors can use to make code
+or documentation contributions.
 
 In general, issues are well-documented and include helpful descriptions beyond
 just a title. There doesn't seem to be an issue template.
@@ -529,9 +527,9 @@ first-time contributors:
 
 - https://helm.sh/community/#your-first-contribution
 
-Also, while there's nothing specifically labeled "get help" on the site,
-there's plenty of places where the slack channels, dev meetings, etc are listed
-for users.
+Also, while there's nothing specifically labeled "get help" on the site, there's
+plenty of places where the slack channels, dev meetings, etc are listed for
+users.
 
 #### Project governance documentation
 
@@ -554,8 +552,8 @@ terms.
 
 ## Website and infrastructure
 
-Helm is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
+Helm is a **graduated** project of CNCF. This means that the project should have
+[_very high_][criteria] standards for documentation.
 
 | Criterion                                   | [Rating (1-5)]                 |
 | ------------------------------------------- | ------------------------------ |
@@ -597,8 +595,8 @@ useful for making the information more findable for users.
 #### Minimal website requirements
 
 Listed here are the minimal website requirements for projects based on their
-[maturity level][maturity-level], either incubating or graduated. (These are
-the only two levels for which a tech docs analysis can be requested.)
+[maturity level][maturity-level], either incubating or graduated. (These are the
+only two levels for which a tech docs analysis can be requested.)
 
 <!-- markdownlint-disable line-length -->
 
@@ -620,9 +618,9 @@ the only two levels for which a tech docs analysis can be requested.)
 
 ##### Usability / mobile experience
 
-The website usable from mobile (doc pages are readable, and all website
-features are accessible from mobile including the top-nav, site search and
-in-page table of contents).
+The website usable from mobile (doc pages are readable, and all website features
+are accessible from mobile including the top-nav, site search and in-page table
+of contents).
 
 ##### Accessibility
 
@@ -638,10 +636,10 @@ experience for users.
 
 #### Branding and design
 
-There is an easily recognizable brand for the project (logo + color scheme)
-that is used across the website consistently. The website's typography is
-consistent and easy to read. The only exception is that the font used for
-headings can be somewhat difficult to read for some of the letters.
+There is an easily recognizable brand for the project (logo + color scheme) that
+is used across the website consistently. The website's typography is consistent
+and easy to read. The only exception is that the font used for headings can be
+somewhat difficult to read for some of the letters.
 
 #### Case studies/social proof
 
