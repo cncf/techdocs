@@ -47,7 +47,6 @@ criterion’s definition.
 ### Comments
 
 - **Information Architecture**:
-
   - Documentation is feature complete!
   - A clear "About" or "What is Contour?" page is missing. It partially exists
     on [Architecture](https://projectcontour.io/docs/v1.13.1/architecture) and
@@ -83,7 +82,6 @@ criterion’s definition.
     - What's the next doc I should read _after_ this to understand Contour and
       how to customize it for my use case?
 - **Content maintainability**:
-
   - Your documentation is searchable, which is great!
     - However, because there are docs on your site that live _outside_ of the
       docs directory, the entire site needs to be searchable.
@@ -111,7 +109,6 @@ criterion’s definition.
 ### Recommendations
 
 - **Information Architecture**:
-
   - The main issue with information architecture is titling.
   - **The guides section:** Having "Guides" as a top-level section which appears
     in the nav before documentation is a bit confusing. I recommend having
@@ -139,7 +136,6 @@ criterion’s definition.
     a small win and a great first issue.
 
 - **New user content**:
-
   - Work with a technical writer to revise your getting started page to provide
     a bit more background information about Contour for the true new learner and
     provide more "next steps" documentation.
@@ -221,7 +217,6 @@ website, and in the repo. Great job team!
 
 - **Branding and design**: one extremely small styling suggestion which would
   make a great first issue:
-
   - for `<h2>` elements on documentation pages, change the margin from
     `margin-bottom: 2rem` to `margin-top: 1rem; margin-bottom: 1rem` or
     (preferred) `margin-top: 1.5rem; margin-bottom: 0.5rem;`. In general it's
@@ -266,7 +261,6 @@ website, and in the repo. Great job team!
 The revised content could have the following structure, if desired:
 
 - Getting started guide:
-
   - Introduction to Project Contour
     - Project philosophy
     - Why choose Contour over another (less opinionated) ingress controller

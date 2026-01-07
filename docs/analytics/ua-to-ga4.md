@@ -30,7 +30,6 @@ In preparation for the migration, follow these steps:
    issues opened for the pilot projects listed in #108.
 
 2. Determine which **analytics library** your project's website is using.
-
    - Visit your project's website.
    - View the page source of any website page.
    - Search for "`https://www.google`". Look at all instances.
@@ -69,7 +68,6 @@ Follow these steps:
     [analytics.google.com](https://analytics.google.com).
 
 3.  **Create a GA4 site tag**:
-
     - Select **Admin** (bottom of left-nav)
     - Select **GA4 Setup Assistant**
     - Select **Get started** under **I want to create a new Google Analytics 4
@@ -82,7 +80,6 @@ Follow these steps:
 
 4.  **Open the analytics console onto your GA4 site tag** and copy the
     measurement ID. Continuing from the previous step:
-
     - Select **Go to your GA4 property** from the **GA4 Setup Assistant** view
       of your UA property.<br/>This will open an analytics console onto your GA4
       site tag. Perform the remaining steps from your GA4 console.
@@ -92,7 +89,6 @@ Follow these steps:
       the appropriate row of the [status table][].
 
 5.  Rename your UA property by adding the `- UA` suffix. From the UA console:
-
     - Select **Admin** (bottom of left-nav)
     - Select **Property Settings**
     - Change the property name (which usually matches the project name), by
@@ -104,14 +100,12 @@ Follow these steps:
     since the GA4 setup assistant will then have automatically [connected][]
     your GA4 site tag from your UA config. If you aren't sure, then you can
     check as follows:
-
     - **Open** the analytics console for the **UA site tag**
     - Under **Admin** > **GA4 Setup Assistant**, look for your GA4 property in
       the **Connected Property** table.
 
     If you can't find your GA4 property, then you'll have to manually add it as
     follows:
-
     - Open **Admin** > **Tracking Info** > **Tracking Code**.
     - Open **Connected Site Tags**.
     - In **Enter ID of tag to connect**: enter your GA site tag (the ID starting
@@ -138,7 +132,6 @@ analytics library.
     this will depend, in particular, on your project's site generator and setup.
 
     Here are some guidelines on how to switch over to `gtag.js`:
-
     - [Docusaurus][]:
       - v1: add a `gtag: true` site configuration parameter.
       - v2: enable the gtag plugin.
@@ -153,7 +146,6 @@ analytics library.
 
 2.  Set the GA4 ID as the main GA ID. Again, how you do this will depend on your
     project's site generator and setup. Here are some guidelines:
-
     - [Docusaurus][]:
       - v1: set the `gaTrackingId` site configuration parameter to your
         project's GA4 measurement ID.

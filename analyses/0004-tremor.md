@@ -52,7 +52,6 @@ Scale:
 - **Information Architecture:** Project Tremor's documentation makes a number of
   individually small IA choices that culminate in a confusing experience for the
   user.
-
   - The [Getting Started](https://www.tremor.rs/getting-started/) section covers
     a number of seemingly random topics, with some appearing to be focused on
     selling the project to new users (i.e.
@@ -112,7 +111,6 @@ Scale:
 - **New user content:** Project Tremor has a Getting Started section but it's a
   little disorganized as mentioned above. This makes it difficult for an actual
   new user to understand.
-
   - [Starting Tremor for the first time](https://www.tremor.rs/getting-started/starting/)
     is the best part of the getting started guide. However, it mentions that
     there are "many ways" to install Tremor - it would be good to point users to
@@ -172,7 +170,6 @@ Scale:
 
 - **Get specific about your Getting Started:** Getting Started Guides contain a
   very predictable set of content:
-
   - In one paragraph or less, what is this piece of software
   - What prerequisite software (i.e. Kubernetes) and knowledge (i.e., Go) do I
     need on my system to launch this?
@@ -183,7 +180,6 @@ Scale:
 
 - **Reorganize the Operations section and retitle it "Using Tremor"**:
   Additionally, move some topics from the existing Getting Started section:
-
   - [Configuring Tremor](https://docs.tremor.rs/operations/configuration-walkthrough/)
     - [Walkthrough: Configure a Tremor Deployment](https://docs.tremor.rs/operations/configuration-walkthrough/)
   - [Connectivity: Onramps and Offramps](https://www.tremor.rs/getting-started/connectivity/)
@@ -207,7 +203,6 @@ Scale:
 - **Reorganize [Overview](https://docs.tremor.rs/overview/) with
   user-centeredness in mind**: I suggest creating a new section with the
   following content:
-
   - The information on [The docs index](https://docs.tremor.rs/) as a page
     titled "Overview", with subpages:
     - [Architecture Overview](https://docs.tremor.rs/overview/) (note: you could
@@ -218,7 +213,6 @@ Scale:
 
 - **Audit for colloquial/casual language, abbreviations, and other "basic"
   English:**
-
   - This recommendation has less to do with casual language or abbreviations
     being _bad_, and more to do with the perception of professionalism for the
     project.
@@ -269,7 +263,6 @@ Scale:
   and
   [issues for new users are tagged](https://github.com/tremor-rs/tremor-www-docs/issues?q=is%3Aissue+is%3Aclosed).
   Great work!
-
   - One thing to note is when tagging an issue
     [as a good first issue](https://github.com/tremor-rs/tremor-www-docs/issues/101),
     assume the reader knows nothing and must be hand-held through the entire
@@ -280,7 +273,6 @@ Scale:
   [Community](https://www.tremor.rs/community/) page exists but doesn't provide
   much guidance for new users. How do I get involved? When do community meetings
   happen? Where do I find the team on Discord or Slack?
-
   - As mentioned above, [Development](https://docs.tremor.rs/development/) and
     [Governance](https://docs.tremor.rs/CodeOfConduct/) are targeted at
     contributor users and should be under the community section.
@@ -296,7 +288,6 @@ Scale:
 
 - **Turn the Community page into a subsection and house Governance and
   Development documentation under it:**
-
   - Specifically, move [Development](https://docs.tremor.rs/development/) to
     /community/development
   - Move
@@ -325,7 +316,6 @@ Scale:
 **Comments**
 
 - **Branding and design:**
-
   - On the whole, the Tremor docs site looks professional, if a little plain.
   - Because of the way the site deploys (from different repositories via GitHub
     pages), navigation is disjointed: if you're in the RFCs, you don't have the
@@ -340,7 +330,6 @@ Scale:
       content you can showcase about the project?
 
 - **Case studies/social proof**: None available.
-
   - Case studies/talks/generally showing that other projects use Tremor is one
     of the most powerful ways to gain new users. People love real-world examples
     of a codebase in action.
