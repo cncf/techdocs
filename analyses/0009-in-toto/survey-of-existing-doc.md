@@ -33,7 +33,6 @@ https://github.com/in-toto/attestation
   https://github.com/in-toto/demo
 
 - Doc generation repo: https://github.com/in-toto/docs
-
   - Generated (read-the-docs) for Python reference implementation
 
   - Installation https://in-toto.readthedocs.io/en/latest/installing.html

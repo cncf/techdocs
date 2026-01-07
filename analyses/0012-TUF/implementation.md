@@ -27,7 +27,6 @@ pertain to legal requirements such as copyright and licensing issues.
 The top-level documentation recommendations for this project are:
 
 - **Reorganize documentation**
-
   - Introduce a docs section and place some sections like **Getting started**
     under it to avoid repetition
   - Structure 'Getting started' according to user roles
@@ -35,7 +34,6 @@ The top-level documentation recommendations for this project are:
     easier to find.
 
 - **Introduce instructional documentation**
-
   - Identify TUF user roles (personas)
   - Develop task-based material i.e How-tos for user roles
   - Develop quick start and contribution guides for new users
@@ -65,7 +63,6 @@ structure:
 
 - **Home page**
 - **Documentation**: Overview of TUF
-
   - Overview: Metadata,Project,Security
   - Getting started: Adopters, contributors,
   - History
@@ -74,7 +71,6 @@ structure:
   - FAQ
 
 - **Community**: You can have two sections.
-
   - Learn and connect: Includes all community communication channels including
     social media, mailing lists, calendars, Slack, etc.
   - Develop and Contribute: Information about how to contribute to TUF
@@ -102,7 +98,6 @@ Contributors:
 
 - **Adopters**: Integrate TUF security properties into new and existing content
   delivery systems. Adopters can be classified into two categories:
-
   - _Client maintainers_: depend on repository maintainers, to provide a TUF
     repo. And they can choose from multiple TUF client implementations
     (python-tuf, go-tuf, etc.) Typically, they will pick the language their

@@ -24,9 +24,12 @@ words:
   - CLOTributor
   - CNCF
   - Docsy
+  - dwelsch
   - keda
+  - knative
   - kedacore
   - krook
+  - mkdocs
   - nate
   - nvmrc
   - subpages
@@ -34,3 +37,4 @@ words:
   - toolkits
   - toto
   - triaging
+  - Welsch

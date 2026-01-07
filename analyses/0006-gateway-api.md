@@ -92,7 +92,6 @@ as well as where to find them.
 - The main task with information architecture is conceptualization and
   development as the documents are currently in different places. The following
   areas would establish a foundation:
-
   - Introduction
   - Quick Start
   - Concepts
@@ -270,7 +269,6 @@ The [website](https://gateway-api.sigs.k8s.io/) is accessible via HTTPS.
   [Copyright notices](https://github.com/cncf/foundation/blob/master/copyright-notices.md).
 
 - CNCF Branding elements
-
   - “We are a Cloud Native Computing Foundation project.” or “We are a Cloud
     Native Computing Foundation sandbox project.” are present (depending on
     status)

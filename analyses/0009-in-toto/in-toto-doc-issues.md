@@ -21,7 +21,6 @@ repurposed as the new overall **Doc home page**.
 
   This is a necessary step in raising the maturity level of this project. The
   roadmap should initially describe and provide access to:
-
   - Specification
   - Basic demo
   - Python reference implementation along with its reference docs (which need to
@@ -40,7 +39,6 @@ repurposed as the new overall **Doc home page**.
 - [ ] Move the content of the
       [README for the main repo](https://github.com/in-toto/in-toto) to a
       separate **"Getting Started" document**.
-
   - [ ] Add a prominent pointer to the new **"Getting Started" document** on the
         in-toto home page, such as the top menu item in the "Get Started" menu.
   - [ ] Replace the README with brief introductory notes that link to the

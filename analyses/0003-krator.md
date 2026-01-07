@@ -54,7 +54,6 @@ Criteria:
 ### Comments
 
 - **Information Architecture**:
-
   - Documentation is currently in several locations and will need to be brought
     into one repo. The current resources are:
     - The project [README](https://github.com/krator-rs/krator)

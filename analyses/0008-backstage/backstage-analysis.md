@@ -118,11 +118,11 @@ such, and pertain to legal requirements such as copyright and licensing issues.
 
 | Criteria                   | 1   | 2   | 3   | 4   | 5   |
 | -------------------------- | --- | --- | --- | --- | --- |
-| Information architecture   |     | ✔︎ |     |     |     |
-| New user content           |     |     |     | ✔︎ |     |
-| Content maintainability    |     |     | ✔︎ |     |     |
-| Content creation processes |     |     | ✔︎ |     |     |
-| Inclusive language         |     |     |     | ✔︎ |     |
+| Information architecture   |     | ✔︎   |     |     |     |
+| New user content           |     |     |     | ✔︎   |     |
+| Content maintainability    |     |     | ✔︎   |     |     |
+| Content creation processes |     |     | ✔︎   |     |     |
+| Inclusive language         |     |     |     | ✔︎   |     |
 
 Scale:
 
@@ -352,10 +352,10 @@ these navigation aids are adequate.
 
 | Criteria                                  | 1   | 2   | 3   | 4   | 5   |
 | ----------------------------------------- | --- | --- | --- | --- | --- |
-| Communication methods documented          |     |     |     | ✔︎ |     |
-| Beginner friendly issue backlog           |     |     |     | ✔︎ |     |
-| “New contributor” getting started content |     |     | ✔︎ |     |     |
-| Project governance documentation          |     |     |     |     | ✔︎ |
+| Communication methods documented          |     |     |     | ✔︎   |     |
+| Beginner friendly issue backlog           |     |     |     | ✔︎   |     |
+| “New contributor” getting started content |     |     | ✔︎   |     |     |
+| Project governance documentation          |     |     |     |     | ✔︎   |
 
 Scale:
 
@@ -423,19 +423,19 @@ from the product documentation.
 
 | Criteria                                    | 1   | 2   | 3   | 4   | 5   |
 | ------------------------------------------- | --- | --- | --- | --- | --- |
-| Single source for all files                 |     |     | ✔︎ |     |     |
-| Meets min website req. (for maturity level) |     | ✔︎ |     |     |     |
-| Branding and design                         |     |     |     | ✔︎ |     |
-| Case studies/social proof                   |     |     | ✔︎ |     |     |
-| SEO, Analytics, and site-local search       |     |     |     |     | ✔︎ |
-| Maintenance planning                        |     |     | ✔︎ |     |     |
-| A11y plan & implementation                  |     |     |     | ✔︎ |     |
-| Mobile-first plan & impl.                   |     |     | ✔︎ |     |     |
-| HTTPS access & HTTP redirect                |     |     |     |     | ✔︎ |
-| Google Analytics 4 for production only      |     |     |     |     | ✔︎ |
-| Indexing allowed for production server only |     |     |     |     | ✔︎ |
-| Intra-site / local search                   |     |     |     |     | ✔︎ |
-| Account custodians are documented           | ✔︎ |     |     |     |     |
+| Single source for all files                 |     |     | ✔︎   |     |     |
+| Meets min website req. (for maturity level) |     | ✔︎   |     |     |     |
+| Branding and design                         |     |     |     | ✔︎   |     |
+| Case studies/social proof                   |     |     | ✔︎   |     |     |
+| SEO, Analytics, and site-local search       |     |     |     |     | ✔︎   |
+| Maintenance planning                        |     |     | ✔︎   |     |     |
+| A11y plan & implementation                  |     |     |     | ✔︎   |     |
+| Mobile-first plan & impl.                   |     |     | ✔︎   |     |     |
+| HTTPS access & HTTP redirect                |     |     |     |     | ✔︎   |
+| Google Analytics 4 for production only      |     |     |     |     | ✔︎   |
+| Indexing allowed for production server only |     |     |     |     | ✔︎   |
+| Intra-site / local search                   |     |     |     |     | ✔︎   |
+| Account custodians are documented           | ✔︎   |     |     |     |     |
 
 Scale:
 

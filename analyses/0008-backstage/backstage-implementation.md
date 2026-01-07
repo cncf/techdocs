@@ -153,7 +153,6 @@ The following artifacts should be written and made findable for developers.
 
 1. A getting started guide for developers. Provide a clear work path that
    describes how to:
-
    1. Download and install any necessary software components
    1. Integrate Backstage with an existing development environment
 
