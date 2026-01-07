@@ -89,7 +89,6 @@ Scale:
   high-level concepts better before beginning code: providing a bit more
   explanation up front, particularly around the object's required fields and
   what the expected values are. An example would be helpful for this audience.
-
   - Items under the **Project** top level navigation section. At a glance I
     couldn't figure out how these were being pulled in via (I assume) the
     [Community repository](https://github.com/fluxcd/community), meaning they

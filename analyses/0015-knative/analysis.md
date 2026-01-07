@@ -6,7 +6,7 @@ modified: 2025-07-25
 author: Dave Welsch (@dwelsch-esi)
 ---
 
-<!-- markdownlint-disable no-duplicate-heading -->
+<!-- markdownlint-disable-file -->
 
 ## Introduction
 
@@ -22,12 +22,11 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of Knative
-documentation. It aims to provide project leaders with an informed understanding
-of potential problems in current project documentation. A second
-document is a list of [issues] to be added to the project
-documentation repository. These issues can be taken up by contributors to
-improve the documentation.
+This document was written to analyze the current state of Knative documentation.
+It aims to provide project leaders with an informed understanding of potential
+problems in current project documentation. A second document is a list of
+[issues] to be added to the project documentation repository. These issues can
+be taken up by contributors to improve the documentation.
 
 This document:
 
@@ -42,8 +41,8 @@ the technical documentation, and documentation for contributors and users on the
 Knative GitHub repository.
 
 The Knative website and documentation are written in Markdown and are compiled
-using the mkdocs static site generator with the Material theme.
-The site's code is stored on the knative/docs GitHub repo.
+using the mkdocs static site generator with the Material theme. The site's code
+is stored on the knative/docs GitHub repo.
 
 #### In scope
 
@@ -84,8 +83,8 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
-The accompanying [issues] document contains actionable improvements
-for inclusion in [project-doc-website]/issues.
+The accompanying [issues] document contains actionable improvements for
+inclusion in [project-doc-website]/issues.
 
 ### How to use this document
 
@@ -121,7 +120,7 @@ Knative is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 | Criterion                  | [Rating (1-5)]        |
-| -------------------------- | --------------        |
+| -------------------------- | --------------------- |
 | Information architecture   | 2 - Needs improvement |
 | New user content           | 2 - Needs improvement |
 | Content maintainability    | 3 - Meets standards   |
@@ -136,23 +135,23 @@ around organization and the new user experience.
 Following are general comments that don't address specific CNCF criteria.
 
 The project main landing page also serves as the documentation landing page,
-mixing marketing and technical information. It's helpful to users if there's
-a clear separation between technical documentation and other information.
-The technical documentation is goal-driven and should be factual, specific,
-and purposeful.
+mixing marketing and technical information. It's helpful to users if there's a
+clear separation between technical documentation and other information. The
+technical documentation is goal-driven and should be factual, specific, and
+purposeful.
 
 The technical documentation outline in the banner headings is good from a
 organizational perspective: Concepts, Tutorial, and Installing, then
 instructional information, then reference information. See notes below on the
 Left-hand sidebar (LHS) table of contents. Some other notes:
 
-- The "Home" item is unnecessary for the project landing page. By convention
-the upper-left logo links to the site landing page.
-- The "Concepts" section is a brief introduction. Instead, it should contain
-a complete technical overview that's accessible to a new user.
+- The "Home" item is unnecessary for the project landing page. By convention the
+  upper-left logo links to the site landing page.
+- The "Concepts" section is a brief introduction. Instead, it should contain a
+  complete technical overview that's accessible to a new user.
 - "Installing" does a good job of providing complete installation instructions
-for all user roles. Some additional "road signs" would help to guide users to
-the correct installation for their role, OS, and so on.
+  for all user roles. Some additional "road signs" would help to guide users to
+  the correct installation for their role, OS, and so on.
 - "Serving" and "Eventing" organize the instructional information by functional
   component, and by user role within the component. The alternative is to flip
   this and organize by user role first:
@@ -161,7 +160,7 @@ the correct installation for their role, OS, and so on.
     - Serving
   - Developer Guide
     - Eventing
-    - Serviing
+    - Serving
 - Knative CLI - The title implies a dedicated Knative CLI. There are two Knative
   CLIs documented here, `kn` and `func`. As well, `kubectl` is the first CLI
   documented on the page.
@@ -171,46 +170,46 @@ The reference to the repo-based documentation is OK, but why is the not
 documented here? Its installation is documented on the site; this seems
 inconsistent.
 
-***Table of contents***
+**_Table of contents_**
 
 The table of contents (TOC) in the LHS is hard to navigate. Some issues:
 
 1.  The LHS contains only one technical documentation section at a time (see
-  previous comment about the banner menu). It's more usual for the LHS to
-  contain the entire TOC and to not change between pages (except for expanding
-  and collapsing headings).
-2. The expand/collapse items in the TOC are navigational only; they do not
-  bring up information pages. This isn't uncommon, but it's tedious to navigate
-  multi-level topics. It's also less efficient than displaying the overview or
-  introduction with the top-level entry.
-3. There are singleton sub-headings in the TOC. For example, see [Concepts >
-  Resources > Serving Resources > Revisions]
-  (https://knative.dev/development/concepts/serving-resources/revisions/).
-  Especially with the navigation-only expand/collapse items, these represent
-  extra mouse clicks for the user with no added benefit.
-4. There are multiple entry points to the same documentation in the TOC. *And*
-  there are duplicate information sections. For example:
-  Installing > Install the Knative CLI sends you to the `Knative CLI` page. This
-  completely changes the left-hand TOC but the banner menu is not set up to
-  highlight `Knative CLI`, so are no cues as to where you were just teleported
-  (violating the [principle of least astonishment]
-  (https://en.wikipedia.org/wiki/Principle_of_least_astonishment)).
+    previous comment about the banner menu). It's more usual for the LHS to
+    contain the entire TOC and to not change between pages (except for expanding
+    and collapsing headings).
+2.  The expand/collapse items in the TOC are navigational only; they do not
+    bring up information pages. This isn't uncommon, but it's tedious to
+    navigate multi-level topics. It's also less efficient than displaying the
+    overview or introduction with the top-level entry.
+3.  There are singleton sub-headings in the TOC. For example, see [Concepts >
+    Resources > Serving Resources > Revisions]
+    (https://knative.dev/development/concepts/serving-resources/revisions/).
+    Especially with the navigation-only expand/collapse items, these represent
+    extra mouse clicks for the user with no added benefit.
+4.  There are multiple entry points to the same documentation in the TOC. _And_
+    there are duplicate information sections. For example: Installing > Install
+    the Knative CLI sends you to the `Knative CLI` page. This completely changes
+    the left-hand TOC but the banner menu is not set up to highlight
+    `Knative CLI`, so are no cues as to where you were just teleported
+    (violating the [principle of least astonishment]
+    (https://en.wikipedia.org/wiki/Principle_of_least_astonishment)).
 
-***New user experience***
+**_New user experience_**
 
 The blurb under "Need to know more?" on the landing page sounds like it's going
-to an information resource; the button says "Explore Knative". Instead it
-goes to the Quickstart tutorials. It sounds more like it should go to "Serving
+to an information resource; the button says "Explore Knative". Instead it goes
+to the Quickstart tutorials. It sounds more like it should go to "Serving
 Architecture".
 
-***Graphics***
+**_Graphics_**
 
 In many places, large graphics are placed before any explanatory text. Also,
 many graphics, especially in the E2E tutorial (incidentally, "end-to-end" should
 be spelled out), provide no information but serve to distract, clutter, and take
 up valuable screen space.
 
-***Headings and titles***
+**_Headings and titles_**
 
 Tasks are for the most part well named using appropriate verbs.
 
@@ -221,9 +220,9 @@ Project Documentation.
 
 #### Information architecture
 
-***Is there high level conceptual content?***
+**_Is there high level conceptual content?_**
 
-The "Concepts" document at the top of the websiteis a brief introduction to two
+The "Concepts" document at the top of the website is a brief introduction to two
 of the components of Knative. It does not introduce the overall architecture or
 explain how it works.
 
@@ -232,7 +231,7 @@ throughout the website. The existing conceptual information seems to assume that
 you're already familiar with Kubernetes and with the problems that Knative is
 intended to solve.
 
-***Is every product feature documented?***
+**_Is every product feature documented?_**
 
 The documentation seems a little behind being feature-complete, based on open
 Github issues requesting feature documentation. See for example issues
@@ -242,52 +241,53 @@ Github issues requesting feature documentation. See for example issues
 Every component section (Eventing, Serving) is organized differently. This
 requires extra cognitive work from the readers.
 
-***Does the documentation define all user roles (personas) for the product?***
+**_Does the documentation define all user roles (personas) for the product?_**
 
 The "Audiences information" in Community is a good description of user roles.
 This information is reflected in subsections of the "Eventing" and "Serving"
 sections in the division between Developer and Admin topics.
 
-***Are there instructions (tasks, tutorials) documented for features?***
+**_Are there instructions (tasks, tutorials) documented for features?_**
 
 Tasks are documented for most features.
 
-***Are there instructions for all major use cases for each user role?***
+**_Are there instructions for all major use cases for each user role?_**
 
 Tasks are covered for different user roles; it's unknown whether this coverage
 is complete.
 
-***Are tasks organized by user role and use case?***
+**_Are tasks organized by user role and use case?_**
 
 The documentation is organized by the key components. Tasks for each component
-seem to be present, but could be more clearly written and better labeleled.
+seem to be present, but could be more clearly written and better labeled.
 
-***Does instructional content demonstrate atomicity***
-Are individual tasks clearly named according to their goals?
+**_Does instructional content demonstrate atomicity_** Are individual tasks
+clearly named according to their goals?
 
 For the most part tasks seem separate and well named.
 
-***Are tasks written as numbered step-by-step instructions?***
+**_Are tasks written as numbered step-by-step instructions?_**
 
 Tasks are broken down into steps. In most cases steps are not numbered. Some
 procedures have embedded subtasks. Numbering of tasks and subtasks is
 inconsistent.
 
-***Are task descriptions in headings and the TOC described with a verb phrase?***
+**_Are task descriptions in headings and the TOC described with a verb
+phrase?_**
 
 Most task headings accurately describe the task.
 
-***Is the documentation free of features that lack task documentation?***
+**_Is the documentation free of features that lack task documentation?_**
 
 Task documentation seems to exist for key features. It is sometimes difficult to
 locate.
 
-***Is the “happy path” — the most common use case — documented?***
+**_Is the “happy path” — the most common use case — documented?_**
 
 The "Happy Path" seems to be building and running a simple service using all
 three of the Knative components. This is documented in the "E2E" tutorial.
 
-***Is there a clear escalation path for users needing more help?***
+**_Is there a clear escalation path for users needing more help?_**
 
 In general, Knative help and community support are strong throughout the
 documentation and repositories. Troubleshooting could provide clearer
@@ -302,42 +302,41 @@ documentation. The troubleshooting steps are little more than command examples
 showing the non-exception case output. In some cases the output is cryptic and
 it's not clear what to do.
 
-***If the product exposes an API, is there a complete reference?***
+**_If the product exposes an API, is there a complete reference?_**
 
 There is a reference for the Eventing API. It contains no explanatory or
 introductory text, and many descriptions of functions and fields are missing,
 rudimentary, or tautological.
 
-***If the product has CLIs, are there complete references?***
+**_If the product has CLIs, are there complete references?_**
 
 There are references for the two CLIs, `kn` and `func`. The references are
 contained in their respective repos, not in the technical documentation.
 
-***Is content up to date and accurate?***
+**_Is content up to date and accurate?_**
 
 The content seems up to date based on the versioning and release mechanisms.
 
-***Does the doc separate conceptual, instructional, and reference info?***
+**_Does the doc separate conceptual, instructional, and reference info?_**
 
 Individual topics are separated by information type.
 
-
 #### New user content
 
-***Is “getting started” clearly labeled?**
-(“Getting started”, “Installation”, “First steps”, or the equivalent.)
+**\*Is “getting started” clearly labeled?** (“Getting started”, “Installation”,
+“First steps”, or the equivalent.)
 
-There is no clearly labeleld "Getting Started" page. There is a "Quickstart"
+There is no clearly labeled "Getting Started" page. There is a "Quickstart"
 tutorial, with an accompanying plugin, that serves (primarily) as a beginner
 getting-started procedure.
 
-***Is there a “getting started” path for all user roles?***
+**_Is there a “getting started” path for all user roles?_**
 
-The "Quckstart" tutorial does not discuss roles. It acknowledges that the
+The "Quickstart" tutorial does not discuss roles. It acknowledges that the
 exercise does a simplified local installation and directs the reader to YAML or
 Operator-based installs for production server installation.
 
-***Is installation documented step-by-step?***
+**_Is installation documented step-by-step?_**
 
 Installation is thoroughly documented. Instructions are step-by-step and well
 organized. That said, I could not install using the Quickstart tutorial because
@@ -346,107 +345,104 @@ Release Notes pages for binary downloads. This was confusing. Downloading the
 binary from the release page is not straightforward. The download links are
 under "Assets", far down the page.
 
-***Are different types of installation documented if necessary?***
-(development, test, production)
+**_Are different types of installation documented if necessary?_** (development,
+test, production)
 
 The Quickstart tutorial documents a local install. Other (server) installs are
 documented in the Install section.
 
-***If needed, are multiple OSes documented?***
+**_If needed, are multiple OSes documented?_**
 
 Installs for multiple OSes are documented implicitly (for example, the install
 binaries are characteristic of their respective OSes). A discussion of OSes up
-front in the prereqs section would be appropriate.
+front in the prerequisite section would be appropriate.
 
-***Do users know where to go after reading the getting started guide?***
+**_Do users know where to go after reading the getting started guide?_**
 
 Next steps are documented at the end of the quickstart and some other sections.
 
-***Is new user content clearly signposted on the site’s homepage?***
+**_Is new user content clearly signposted on the site’s homepage?_**
 
 There is no clearly labeled new user content available from the landing page.
 The closest is the Quickstart tutorial.
 
-***Is there easily copy-pastable sample code or other example content?***
+**_Is there easily copy-paste sample code or other example content?_**
 
 There are code samples available in "Code samples", organized by Knative
 component.
 
 #### Content maintainability and site mechanics
 
-
-***Is your documentation searchable?***
+**_Is your documentation searchable?_**
 
 The documentation is searchable. The Search function does not truncate results.
 For example, the "Puppet" entry when searching "getting started" displays the
 page's entire 900 words.
 
-***Are you planning for localization/internationalization?***
+**_Are you planning for localization/internationalization?_**
 
-***Is a localization framework present?***
+**_Is a localization framework present?_**
 
 Apparently not. There is no evident localization or mechanism for localization.
 
-***Do you have a clearly documented method for versioning your content?***
+**_Do you have a clearly documented method for versioning your content?_**
 
 Content is versioned up to the most recent release using branches in the
 knative/docs Github repo. The process is documented in the contribute-to-docs
 directory in the repo. The version drop-down contains the latest three releases
 plus pre-release. No older archived versions are offered on the site.
 
-***Is release-specific information documented in release notes?***
+**_Is release-specific information documented in release notes?_**
 
 The repo contains appropriate release notes.
 
-***Is the documentation free of duplicate sections of information?***
+**_Is the documentation free of duplicate sections of information?_**
 
 Duplicated information is present in the doc. It is deliberately included from a
 collection of reusable doc snippets.
 
-***Do informational graphics add value by providing information?***
+**_Do informational graphics add value by providing information?_**
 
 Graphics are large and contain little new information, especially in the E2E
 tutorial. Some of the conceptual diagrams (component diagrams, flow charts) are
 helpful.
 
-***Will graphics require modifications?***
-For example, due to software changes, GUI updates, or translation?
+**_Will graphics require modifications?_** For example, due to software changes,
+GUI updates, or translation?
 
 Graphics are unlikely to require frequent updates; for example, there are no
 screen shots.
 
-
 #### Content creation processes
 
-***Is there a clearly documented contribution process for documentation?***
+**_Is there a clearly documented contribution process for documentation?_**
 
 The documentation contribution process is well documented in the repo.
 
-***Does the code release process include documentation creation & updates?***
+**_Does the code release process include documentation creation & updates?_**
 
 Documentation releases are controlled by the release process. The contribution
 process documents how to update previous versions of the documentation, if
 necessary.
 
-***Who reviews and approves documentation pull requests?***
+**_Who reviews and approves documentation pull requests?_**
 
-***Does the website have a clear owner/maintainer?***
+**_Does the website have a clear owner/maintainer?_**
 
 Review and approval of documentation releases is role-based and is controlled by
 the OWNERS and OWNER_ALIASES files in the repo. A steering committee is among
 the leadership identified in these files.
 
-
 #### Inclusive language
 
-***Are there customer-facing utilities, endpoints, class names, or features***
-that use non-recommended words as documented by the Inclusive Naming
-Initiative website?
+**_Are there customer-facing utilities, endpoints, class names, or features_**
+that use non-recommended words as documented by the Inclusive Naming Initiative
+website?
 
 The documentation contains few non-recommended words as documented by the
 [Inclusive Naming Initiative](https://inclusivenaming.org) website.
 
-***Does the project use language like "simple", "easy", etc.?***
+**_Does the project use language like "simple", "easy", etc.?_**
 
 The Knative documentation avoids ableist language. The Knative style guide
 explicitly discourages language that assumes a level of understanding ("just",
@@ -460,17 +456,17 @@ The simplest solution to untangling the documentation from the landing page is
 probably to:
 
 - Add a "Documentation" tab on the right alongside "Blog," "About," and
-"Community"
+  "Community"
 - Move the tech docs items from the banner to the left-hand sidebar (LHS)
 
 Other suggestions:
 
 - Remove the "Home" item.
 - Write a comprehensive "Concepts" section using conceptual material from the
-rest of the documentation.
+  rest of the documentation.
 - Rename "Tutorial" to "Tutorials".
 - Add navigational cues to the "Installation" section to better guide users to
-the right instructions and downloads for their user role, OS, and use case.
+  the right instructions and downloads for their user role, OS, and use case.
 - Rename "Developer Topics" and "Admin Topics" to "Developer Tasks" and "Admin
   Tasks" to cue readers. These are effectively user guides and need to be
   recognizable as such by users.
@@ -481,11 +477,9 @@ the right instructions and downloads for their user role, OS, and use case.
 - Rename "Knative CLI" to "CLI tools". Include the `kn` CLI documentation on the
   documentation site.
 - In "Reference": Rewrite at the top of the page: "This page describes Knative
-  security and disclosure information."
-  to
-  "This page describes how to validate code and report security vulnerabilites
-  in Knative. For a complete description of the Knative threat model, see the
-  [Knative security working group repo]
+  security and disclosure information." to "This page describes how to validate
+  code and report security vulnerabilities in Knative. For a complete description
+  of the Knative threat model, see the [Knative security working group repo]
   (https://github.com/knative/community/blob/main/working-groups/security/threat-model.md)."
   Then change headings: "Verifying code signature" and "Reporting a
   vulnerability."
@@ -496,11 +490,11 @@ the right instructions and downloads for their user role, OS, and use case.
 - Add a glossary in the Reference section.
 - Reevaluate each graphic on the site. Is it adding value? If not, eliminate it.
   Does it take up so much page space that it forces unnecessary scrolling?
-  Reduce the size. Especially in the E2E tutorial, get rid of the large graphics.
-  Their only purpose here is to cue the user to the type of task. Make them 32x32
-  icons, or get rid of them. In the text, tell the user what the graphic is
-  before they see it, and make sure the picture is adding value, or else delete
-  it.
+  Reduce the size. Especially in the E2E tutorial, get rid of the large
+  graphics. Their only purpose here is to cue the user to the type of task. Make
+  them 32x32 icons, or get rid of them. In the text, tell the user what the
+  graphic is before they see it, and make sure the picture is adding value, or
+  else delete it.
 - Make TOC titles agree with page titles. Rename "About" in the banner to
   something more descriptive: "Why Knative?", "Testimonials and Case Studies",
   or "Endorsements".
@@ -512,25 +506,25 @@ the right instructions and downloads for their user role, OS, and use case.
   - Spell out words to avoid abbreviations. For example: Replace "E2E" with "end
     to end".
 
-
 #### Information architecture
 
-***Conceptual overview***
+**_Conceptual overview_**
 
 Update the "Concepts" section to be a complete overview of the Knative system.
 Start with an explanation of Knative's purpose that's understandable to new
-users and to readers who are only passingly familiar with containerized software.
+users and to readers who are only passingly familiar with containerized
+software.
 
 Include a complete explanation of Knative's components and how they're related.
 This is a good short explanation of the Knative components (though a little
 marketing-ish) that's on the CNCF website:
 
-  Knative is a developer-focused serverless application layer which is a great
-  complement to the existing Kubernetes application constructs. Knative consists
-  of three components: an HTTP-triggered autoscaling container runtime called
-  “Knative Serving”, a CloudEvents-over-HTTP asynchronous routing layer called
-  “Knative Eventing”, and a developer-focused function framework which leverages
-  the Serving and Eventing components, called "Knative Functions".
+Knative is a developer-focused serverless application layer which is a great
+complement to the existing Kubernetes application constructs. Knative consists
+of three components: an HTTP-triggered autoscaling container runtime called
+“Knative Serving”, a CloudEvents-over-HTTP asynchronous routing layer called
+“Knative Eventing”, and a developer-focused function framework which leverages
+the Serving and Eventing components, called "Knative Functions".
 
 None of the instructional material is going to make sense without an
 understanding of the Knative architecture.
@@ -539,11 +533,10 @@ Some specifics:
 
 Rewrite: "The documentation in this section explains commonly referenced Knative
 concepts and abstractions, and helps to provide you with a better understanding
-of how Knative works."
-as
-"This documentation explains what Knative is for and how it works."
+of how Knative works." as "This documentation explains what Knative is for and
+how it works."
 
-***Escalation path***
+**_Escalation path_**
 
 Expand or eliminate the FAQ. My preference is to eliminate it.
 
@@ -554,11 +547,11 @@ each command is intended to diagnose.
 Expand the Eventing API reference to include meaningful explanations of every
 field and function. Add a short introduction to the API reference.
 
-***New user content***
+**_New user content_**
 
 Add a "Getting Started" page at the top level of the documentation. This page
 should map a reader's user role and goals to content that helps them install,
-evaluate, or learn about the product, depending on their goal. For exmaple,
+evaluate, or learn about the product, depending on their goal. For example,
 direct new users to the Quickstart tutorial, evaluators or potential buyers to
 the conceptual overview, and so on.
 
@@ -568,7 +561,7 @@ downloads list. Move the install download links to the top of the Release Notes
 or clearly link to them from the top of the Release Notes. Or, put them on their
 own Downloads page.
 
-***Content maintainability & site mechanics***
+**_Content maintainability & site mechanics_**
 
 Configure the Search to truncate results after 100 characters or so. Displaying
 the entire page text of each result hinders users' ability to find their result.
@@ -582,7 +575,7 @@ Knative is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 | Criterion                                 | [Rating (1-5)]                 |
-| ----------------------------------------- | --------------                 |
+| ----------------------------------------- | ------------------------------ |
 | Communication methods documented          | 5 - Exemplary                  |
 | Beginner friendly issue backlog           | 3 - Meets standards            |
 | “New contributor” getting started content | 3 - Meets standards            |
@@ -590,16 +583,15 @@ have [_very high_][criteria] standards for documentation.
 
 ### Comments
 
-
 #### Communication methods documented
 
-***Is there a Slack/Discord or equivalent community linked from your website?***
+**_Is there a Slack/Discord or equivalent community linked from your website?_**
 
-***Is there a direct link to your GitHub project or repository?***
+**_Is there a direct link to your GitHub project or repository?_**
 
-***Can users find and join periodic project meetings, if applicable?***
+**_Can users find and join periodic project meetings, if applicable?_**
 
-***Are mailing lists documented?***
+**_Are mailing lists documented?_**
 
 The site lists community resources that include:
 
@@ -609,57 +601,53 @@ The site lists community resources that include:
 - A Stack Overflow topic
 - A Google Groups mailing list
 
-
 #### Beginner friendly issue backlog
 
-***Are docs issues well-triaged?***
+**_Are docs issues well-triaged?_**
 
 Doc issues are well triaged; there are tags classifying changes according to
 size and status.
 
-***Is there a clearly marked way for new contributors to make  contributions?***
+**_Is there a clearly marked way for new contributors to make contributions?_**
 (A “good first issue” label?)
 
 There is a "good first issue" label in the issues list.
 
-***Are issues well-documented (i.e., more than just a title)?***
+**_Are issues well-documented (i.e., more than just a title)?_**
 
 Issue descriptions are uneven. Many issues are well documented, but some lack
 basic information.
 
-***Are issues maintained for staleness?***
+**_Are issues maintained for staleness?_**
 
 There is a archiving bot for stale doc issues, but there are issues as old as
 four years in the repo.
 
-
 #### New contributor getting started content
 
-***Do you have a community repository or section on your website?***
+**_Do you have a community repository or section on your website?_**
 
 There is a separate [community repo](https://github.com/knative/community) in
 the Knative project.
 
-***Is there a document welcoming new contributors?***
-And documenting a first contribution process?
+**_Is there a document welcoming new contributors?_** And documenting a first
+contribution process?
 
 There is ample documentation for contributors but no documentation specifically
 for new contributors.
 
-***Can new users find where to get help?***
+**_Can new users find where to get help?_**
 
 There are ample resources for new users to get support from the community.
 
-
 #### Project governance documentation
 
-***Is project governance clearly documented?***
+**_Is project governance clearly documented?_**
 
 Project
 [governance](https://github.com/knative/community/blob/main/GOVERNANCE.md) is
 documented in the [community repo](https://github.com/knative/community) in the
 Knative project.
-
 
 ### Recommendations
 
@@ -699,10 +687,9 @@ have [_very high_][criteria] standards for documentation.
 
 ### Comments
 
-
 #### Single-source requirement
 
-The project website and documentaiton are contained in a single repo.
+The project website and documentation are contained in a single repo.
 
 Every code repo in the project has its own `docs` folder.
 
@@ -766,8 +753,8 @@ We evaluate on the following:
 - Is the brand used across the website consistently?
 - Is the website’s typography clean and well-suited for reading?
 
-Footer: "Knative is a Cloud Native Computing Foundation incubation project". Should be "incubating".
-
+Footer: "Knative is a Cloud Native Computing Foundation incubation project".
+Should be "incubating".
 
 #### Case studies/social proof
 

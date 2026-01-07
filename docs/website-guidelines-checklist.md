@@ -47,8 +47,8 @@ all projects
     following text: "The Linux Foundation® (TLF) has registered trademarks and
     uses trademarks. For a list of TLF trademarks, see [Trademark Usage][]".
   - If your project has been converted to the Series LLC model (starting in
-    2025), use the following **copyright statement**: "Copyright ©
-    $PROJECT_NAME a Series of LF Projects, LLC."
+    2025), use the following **copyright statement**: "Copyright © $PROJECT_NAME
+    a Series of LF Projects, LLC."
 
 ## Community and license files
 

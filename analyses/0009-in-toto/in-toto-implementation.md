@@ -88,7 +88,6 @@ following general plan.
 
    d. Expose parts of the product specification as separate named documents on
    the website, as:
-
    - [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)
      (compare content to https://in-toto.io/in-toto and current website About -
      create versions of increasing depth to address to specific audiences)
@@ -159,7 +158,6 @@ following general plan.
 
    2.3 Move important sections out of the spec into separate documents, and add
    them to the Doc home-page TOC.
-
    - Evaluate the depth of the
      [System Overview](https://github.com/in-toto/docs/blob/master/in-toto-spec.md#2-system-overview)
      and decide which user population it is most suitable for, or adapt it to
@@ -229,7 +227,6 @@ following general plan.
 
    5.2 Publish the policy and procedures for developers to document their
    implementations.
-
    - Develop a documentation policy for implementers. For example, the
      auto-generated doc for the
      [Go implementation](https://pkg.go.dev/github.com/in-toto/in-toto-golang)
@@ -252,7 +249,6 @@ following general plan.
    the project doc repo.
 
    6.3 Make sure the policy pages include or link to:
-
    - Contact info for maintainer/reviewer for documentation contributions.
    - Available doc style guides/templates (as well as code standards)
    - Usage guidelines for RTD (or other doc tool) and any project-specific usage

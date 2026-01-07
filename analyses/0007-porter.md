@@ -69,14 +69,12 @@ Scale:
 - There appear to be two different operator quick starts (or is it the
   difference between desired state and operator? maybe the operator one needs to
   be in Get Started)
-
   - https://getporter.org/quickstart/desired-state/
   - https://getporter.org/operator/quickstart/
 
 - Mixins & Plugins sections duplicated in sidebar (and could potentially be
   organized under Concepts?)
 - Current info architecture
-
   - root
     - Get started
     - Contribute

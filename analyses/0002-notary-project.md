@@ -75,7 +75,6 @@ Criteria:
 
 - Is the documentation feature complete, as in each product feature is
   documented?
-
   - As the project is in ongoing development, not every feature is completed and
     so there are some holes in the documentation.
   - The
@@ -86,14 +85,12 @@ Criteria:
 
 - Are there step-by-step instructions (tasks, tutorials) documented for
   features?
-
   - Since V2's documentation is so conceptual at this point (consisting mostly
     of specification), it may be best to leave it as is &mdash; linking to it
     directly during the development process, and planning documentation along
     side the development of the system as a whole.
 
 - Is the “happy path”/most common use case documented?
-
   - The V1 Getting Started Guide is very good. Will V2 be able to draw from it?
 
 - If the documentation does not suffice, is there a clear escalation path for
@@ -181,7 +178,6 @@ Criteria
 ### Comments & recommendations
 
 - Most of the issues in this section are a function of not having a website yet.
-
   - As the website build process starts, put together a skeleton IA that can be
     filled in as the project grows.
 
@@ -190,7 +186,6 @@ Criteria
   https://prometheus.io/community/.
 
 - There is no documentation for:
-
   - Triaging docs issues
   - Clearly marking a way for new contributors to make code or documentation
     contributions (i.e. a “good first issue” label), and define what makes a
