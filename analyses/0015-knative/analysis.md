@@ -478,8 +478,9 @@ Other suggestions:
   documentation site.
 - In "Reference": Rewrite at the top of the page: "This page describes Knative
   security and disclosure information." to "This page describes how to validate
-  code and report security vulnerabilities in Knative. For a complete description
-  of the Knative threat model, see the [Knative security working group repo]
+  code and report security vulnerabilities in Knative. For a complete
+  description of the Knative threat model, see the [Knative security working
+  group repo]
   (https://github.com/knative/community/blob/main/working-groups/security/threat-model.md)."
   Then change headings: "Verifying code signature" and "Reporting a
   vulnerability."
