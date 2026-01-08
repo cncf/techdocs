@@ -75,7 +75,7 @@ in the docs, make the necessary updates so that it is up-to-date and accurate.
 Make sure that all the Helm 4 features, improvements, and fixes are documented.
 Use the full changelog for Helm 4 as a reference.
 
-### Issue: Review and update all the pages with the "This page has not yet been updated for Helm 4" warning
+### Issue: Update pages with "This page has not yet been updated for Helm 4"
 
 Search the Helm v4 docs for the "This page has not yet been updated for Helm 4."
 warning, which appears on several pages. Review the content on these pages and
@@ -87,7 +87,7 @@ Reformat or rewrite all tasks should to use numbered steps. For example, each of
 the headings in https://helm.sh/docs/howto/chart_repository_sync_example could
 be converted to a numbered step in an ordered list.
 
-### Issue: Create and publish a clear process for adding and maintaining localized documentation
+### Issue: Create and publish a process for triaging issues/PRs
 
 The CNCF docs team has share the following guidance that the OpenTelemetry
 project uses for localizing their docs:

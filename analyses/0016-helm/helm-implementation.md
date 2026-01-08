@@ -1,7 +1,7 @@
 ---
 title: Implementing Helm Doc Improvements
 tags: [Helm]
-cSpell:ignore: kstatus unreviewed
+cSpell:ignore: kstatus unreviewed helmignore
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -170,7 +170,7 @@ For example:
   (https://github.com/helm/helm/pull/30718)
 - Allow post-renderer to process hooks (https://github.com/helm/helm/pull/13154)
 
-### Review and update all the pages with the "This page has not yet been updated for Helm 4" warning
+### Update pages with "This page has not yet been updated for Helm 4"
 
 This warning was added to several pages in the Helm 4 docs to indicate that
 they've not yet been updated:
@@ -212,7 +212,7 @@ immediately clearer that this is a procedure that can be followed in order.
 
 ## Improve docs contribution processes
 
-### Create and publish a clear process for adding and maintaining localized documentation
+### Create and publish a process for adding and maintaining localized docs
 
 There is not currently a process for adding a new locale to the docs,
 maintaining/tracking drift in existing locales, or reviewing PRs to localized
@@ -231,7 +231,7 @@ https://opentelemetry.io/docs/contributing/localization/
 The Helm docs maintainers should review these guidelines and make a plan for
 rolling out similar processes.
 
-### Create and publish a clear process for triaging the issue backlog and reviewing PRs
+### Create and publish a process for triaging issues/PRs
 
 Similar to above, the helm-www repo should have clearer processes for triaging
 issues and reviewing/merging PRs. As is, there are dozens of open issues and PRs
