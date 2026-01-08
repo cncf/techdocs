@@ -87,7 +87,7 @@ Reformat or rewrite all tasks should to use numbered steps. For example, each of
 the headings in https://helm.sh/docs/howto/chart_repository_sync_example could
 be converted to a numbered step in an ordered list.
 
-### Issue: Create and publish a process for triaging issues/PRs
+### Issue: Publish a process for adding/maintaining localized docs
 
 The CNCF docs team has share the following guidance that the OpenTelemetry
 project uses for localizing their docs:
@@ -96,7 +96,7 @@ https://opentelemetry.io/docs/contributing/localization/
 The Helm docs maintainers should review these guidelines and make a plan for
 rolling out similar processes.
 
-### Issue: Create and publish a clear process for triaging the issue backlog and reviewing PRs
+### Issue: Publish a process for triaging issues/PRs
 
 Similar to above, agree on and publish clearer processes for triaging issues and
 reviewing/merging PRs.
