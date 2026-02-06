@@ -119,6 +119,10 @@ labels:
   - name: wontfix
     description: This will not be worked on
     color: ffffff
+  - name: ops/service-desk
+    description: Service desk and support operations
+    color: 32CD32
   - name: CNCF Service Desk
     description: This issue has a related CNCF Service Desk ticket
     color: 0CD9EF
+
