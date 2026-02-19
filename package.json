@@ -15,7 +15,7 @@
     "_check:markdown:delta": "npm run -s _list:git:delta | xargs -I {} npx -p markdownlint-cli markdownlint -c .markdownlint.yaml {}",
     "_list:check:*": "npm run --loglevel=warn | grep -Ee '^\\s*check:[^:]+$'",
     "_list:check:md:no-analysis": "find . -name '*.md' -not -path '*/node_modules/*' -a -not -path '*/.?*' -a -not -path './analyses/*'",
-    "_list:check:md": "find . -name '*.md' -not -path '*/node_modules/*' -a -not -path '*/.?*'",
+    "_list:check:md": "find . -name '*.md' -not -path '*/node_modules/*' -a -not -path '*/.?*' -a -not -path './analyses/*'",
     "_list:fix:*": "npm run --loglevel=warn | grep -Ee '^\\s*fix:[^:]+$' | grep -v 'fix:all'",
     "_list:git:delta": "git diff --name-only --diff-filter=ACMR | grep -E '\\.(js|md|scss|yml|yaml)$'",
     "build:preview": "npm run _build",
