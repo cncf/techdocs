@@ -50,11 +50,9 @@ This directory contains completed analyses of the technical documentation for
 selected CNCF incubating and graduated software projects.
 
 The analyses are in one of two formats depending on when they were written.
-Earlier analyses (**0001** - **0007**) are Markdown files, each of which is the
-sole artifact of the analysis.
+Earlier analyses (**2021**) have one project directory per project, and each of those directories contains a single Markdown file as the only analysis artifact.
 
-Subsequent analyses (**0008-** forward) each have their own directory containing
-three analysis artifacts:
+Subsequent analyses (**2023** onward) also use one directory per project, with each directory containing one or more of these three artifact types:
 
 - [analysis.md](../docs/analysis/templates/analysis.md) evaluates the project
   documentation and provides comments and recommendations in a manner very
