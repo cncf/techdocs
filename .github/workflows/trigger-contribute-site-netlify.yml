@@ -1,0 +1,13 @@
+name: Trigger contribute-site Netlify build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Netlify build hook
+        run: |
+          curl -sS -X POST "${{ secrets.NETLIFY_CONTRIBUTE_SITE_BUILD_HOOK }}"
