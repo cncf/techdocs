@@ -1,37 +1,17 @@
 ---
-title: _PROJECT_ Documentation Analysis
-tags: [_PROJECT_]
-created: YYYY-MM-DD
-modified: YYYY-MM-DD
-author: _NAME_ (@_HANDLE_)
+title: Flatcar Documentation Analysis
+tags: [Flatcar]
+created: 2026-02-26
+modified: 2026-02-26
+author: Bruce Hamilton (@iRaindrop)
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
 
-## About this template
-
-TO USE THIS TEMPLATE, search and replace the named IDs:
-
-- `_PROJECT_`: project name
-- `YYYY-MM-DD`: creation and modification dates of the analysis document
-- `_NAME_`: name of the analysis author
-- `@_HANDLE_`: GitHub handle of the analysis author
-- `_PROJECT-WEBSITE_`: landing page of the project's information website
-- `_PROJECT-DOC-URL_`: main page of the technical documentation for the current
-  project revision; this might be on the main website server, for example as
-  _PROJECT-WEBSITE_/doc
-- `_PROJECT-DOC-REPO_`: repository where the project technical documentation is
-  stored; this might be its own repo or a directory in the project main repo
-
-For the analysis procedure, see [Analysis how-to](../howto.md).
-
-> Note: delete this "About this template" section after you have customized this
-> template for a specific project.
-
 ## Introduction
 
 This document is an analyzes the effectiveness and completeness of the
-[_PROJECT_][project-website] open source software (OSS) project's documentation
+[Flatcar][project-website] open source software (OSS) project's documentation
 and website. It is funded by the CNCF Foundation as part of its overall effort
 to incubate, grow, and graduate open source cloud native software projects.
 
@@ -42,7 +22,7 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of _PROJECT_
+This document was written to analyze the current state of Flatcar
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 [implementation] document, , outlines an actionable plan for improvement. A
@@ -52,7 +32,7 @@ improve the documentation.
 
 This document:
 
-- Analyzes the current _PROJECT_ technical documentation and website
+- Analyzes the current Flatcar technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
 
@@ -60,24 +40,24 @@ This document:
 
 The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
-_PROJECT_ GitHub repository.
+Flatcar GitHub repository.
 
-The _PROJECT_ website and documentation are written in [Markdown, ReStructured
+The Flatcar website and documentation are written in [Markdown, ReStructured
 Text, other] and are compiled using the [Hugo, Docusaurus, Sphinx, other] static
 site generator with the [Docsy, other] theme and served from [the Netlify
-platform, other]. The site's code is stored on the _PROJECT_ GitHub repo.
+platform, other]. The site's code is stored on the Flatcar GitHub repo.
 
 #### In scope
 
-- Website: _PROJECT-WEBSITE_
-- Documentation: _PROJECT-DOC-URL_
-- Website repo: _PROJECT-DOC-REPO_
+- Website: https://www.flatcar.org/
+- Documentation: https://www.flatcar.org/docs/latest
+- Website repo: https://github.com/cncf/techdocs
 - _[Other; might include a demo server, governance site, or other relevant
   repositories]_
 
 #### Out of scope
 
-- Other _PROJECT_ repos: _[In general, do not include sub-projects or related
+- Other Flatcar repos: _[In general, do not include sub-projects or related
   "ecosystem" projects]_
 
 ### How this document is organized
@@ -85,10 +65,10 @@ platform, other]. The site's code is stored on the _PROJECT_ GitHub repo.
 This document is divided into three sections that represent three major areas of
 concern:
 
-- **Project documentation:** concerns documentation for users of the _PROJECT_
+- **Project documentation:** concerns documentation for users of the Flatcar
   software, aimed at people who intend to use the project software
 - **Contributor documentation:** concerns documentation for new and existing
-  contributors to the _PROJECT_ OSS project
+  contributors to the Flatcar OSS project
 - **Website:** concerns the mechanics of publishing the documentation, and
   includes branding, website structure, and maintainability
 
@@ -96,7 +76,7 @@ Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, with a focus on
-  how it does or does not help _PROJECT_ users achieve their goals.
+  how it does or does not help Flatcar users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
@@ -138,12 +118,12 @@ to legal requirements such as copyright and licensing issues.
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-_PROJECT_ is a **graduated** project of CNCF. This means that the project should
+Flatcar is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
+Flatcar is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -254,12 +234,12 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-_PROJECT_ is a **graduated** project of CNCF. This means that the project should
+Flatcar is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
+Flatcar is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -344,12 +324,12 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-_PROJECT_ is a **graduated** project of CNCF. This means that the project should
+Flatcar is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
+Flatcar is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -550,7 +530,8 @@ The numeric rating values used in this document are as follows
 [criteria]: ../criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
-[project-website]: _PROJECT-WEBSITE_
+[project-doc-website]: ./?https://www.flatcar.org/docs/latest
+[project-website]: ./?https://www.flatcar.org/
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../website-guidelines-checklist.md
