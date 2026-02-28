@@ -10,13 +10,25 @@ author: Bruce Hamilton (@iRaindrop)
 
 ## Introduction
 
-This document is an analysis the effectiveness and completeness of the [Flatcar](https://www.flatcar.org/docs/latest) open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects.
+This document is an analyzes the effectiveness and completeness of the
+[Flatcar][project-website] open source software (OSS) project's documentation
+and website. It is funded by the CNCF Foundation as part of its overall effort
+to incubate, grow, and graduate open source cloud native software projects.
 
-According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation analysis is the first step of a CNCF process aimed at assisting projects with their documentation efforts.
+According to CNCF best practices guidelines, effective documentation is a
+prerequisite for program graduation. The documentation analysis is the first
+step of a CNCF process aimed at assisting projects with their documentation
+efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of Flatcar documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. A second **implementation** document, outlines an actionable plan for improvement. A third document is an **issues list** of issues to be added to the project documentation repository. These issues can be taken up by contributors to improve the documentation.
+This document was written to analyze the current state of Flatcar
+documentation. It aims to provide project leaders with an informed understanding
+of potential problems in current project documentation. A second
+[implementation] document, , outlines an actionable plan for improvement. A
+third document is an [issues list] of issues to be added to the project
+documentation repository. These issues can be taken up by contributors to
+improve the documentation.
 
 This document:
 
