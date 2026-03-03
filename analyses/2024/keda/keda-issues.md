@@ -1,5 +1,6 @@
 ---
 title: KEDA Umbrella Issue
+tags: [KEDA]
 cSpell:ignore: externalscaler findability
 ---
 

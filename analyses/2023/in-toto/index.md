@@ -1,5 +1,6 @@
 ---
 title: README
+tags: [in-toto]
 ---
 
 # README
