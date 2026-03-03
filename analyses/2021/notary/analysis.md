@@ -1,5 +1,6 @@
 ---
 title: Notary Project Docs Assessment
+tags: [notary]
 cSpell:ignore: docset notaryproject celestehorgan
 ---
 
