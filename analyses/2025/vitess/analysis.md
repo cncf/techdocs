@@ -51,15 +51,18 @@ code is stored in its own repository in the Vitess GitHub project.
 
 #### In scope
 
-- Website: <https://vitess.io/>
-- Documentation: <https://vitess.io/docs/>
-- Website repo: <https://github.com/vitessio/website>
-- Project repo (for reference): <https://github.com/vitessio>
+- Website: [https://vitess.io/](https://vitess.io/)
+- Documentation: [https://vitess.io/docs/](https://vitess.io/docs/)
+- Website repo:
+  [https://github.com/vitessio/website](https://github.com/vitessio/website)
+- Project repo (for reference):
+  [https://github.com/vitessio](https://github.com/vitessio)
 
 #### Out of scope
 
-- Other Vitess repos: <https://github.com/vitessio/*> (In general, other Vitess
-  code repos are out of scope)
+- Other Vitess repos:
+  [https://github.com/vitessio/](https://github.com/vitessio/) (In general,
+  other Vitess code repos are out of scope)
 
 ### How this document is organized
 
@@ -482,11 +485,11 @@ Also on the Global TopoServer page, by the way:
 >   --topo_global_root=/vitess/global
 > ```
 >
-> To avoid repetition we will use <topo_flags> in our examples to signify the
+> To avoid repetition we will use `topo_flags` in our examples to signify the
 > above flags.
 
-Remove this. The `<topo_flags>` placeholder does not seem to have been
-implemented. There are no mentions of `<topo_flags>` elsewhere in the
+Remove this. The `topo_flags` placeholder does not seem to have been
+implemented. There are no mentions of `topo_flags` elsewhere in the
 documentation, and in any case each would have to refer back to this page.
 
 In the FAQ: Rename the questions into concise headings when you consolidate the
@@ -546,8 +549,8 @@ Here's how I'd rewrite it, defining placeholders for the parameters:
 >
 > where:
 >
-> - <root_dir> is the root directory of the server installation
-> - <cell_topo_addr> is the IP address of the topo server
+> - `root_dir` is the root directory of the server installation
+> - `cell_topo_addr` is the IP address of the topo server
 
 (or whatever the actual descriptions of the parameters are.)
 
