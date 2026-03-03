@@ -8,16 +8,15 @@ sidebar_position: 1
 This site contains resources provided by the CNCF Technical Documentation team,
 including:
 
-- Docs about building websites and developing technical documentation, including
-  recommended tools, best practices, how-tos, and evaluation checklists. It
-  provides specific guidelines for:
+- Docs about building websites and developing technical documentation,
+  including recommended tools, best practices, how-tos, and evaluation
+  checklists. It provides specific guidelines for:
   - Setting up and maintaining a documentation website.
   - Writing technical documentation for a project.
   - Seeking assistance from the CNCF TechDocs community.
-  - Analyzing project documentation.
-
-It also contains a collection of documentation analyses of CNCF projects
-performed by the TechDocs team.
+  - [Analyzing project documentation](./analysis).
+- [Analyses](./analyses): a collection of documentation analyses of CNCF projects
+  performed by the TechDocs team.
 
 ## TechDocs Q&A
 
@@ -45,15 +44,15 @@ The full-time staff of the team is:
   experience, CNCF
 - [Nate W.](https://github.com/nate-double-u) - Head of mentoring &
   documentation, CNCF
-- [Patrice Chalin](https://github.com/chalin) - Senior TechDocs & webdev lead
+- [Patrice Chalin](https://github.com/chalin) - Senior techdoc & webdev lead
 - [Uchechukwu Obasi](https://github.com/thisisobate) - Developer advocate
 
 Consultants and volunteers also contribute to CNCF TechDocs efforts.
 
 ## Licenses
 
-- Documentation: [CC-BY-4.0](https://github.com/cncf/techdocs/blob/main/LICENSE)
-- Code: [Apache-2.0](https://github.com/cncf/techdocs/blob/main/LICENSE-CODE)
+- Documentation: [CC-BY-4.0](LICENSE)
+- Code: [Apache-2.0](LICENSE-CODE)
 
 [date-time]:
   https://tockify.com/cncf.public.events/monthly?search=CNCF%20Tech%20Writers%20Office%20Hours
