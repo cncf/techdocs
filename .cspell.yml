@@ -21,6 +21,7 @@ ignorePaths:
 #       - CodeBlock
 words:
   - backstore
+  - Chalin
   - CLOTributor
   - CNCF
   - Docsy
@@ -32,9 +33,12 @@ words:
   - mkdocs
   - nate
   - nvmrc
+  - Obasi
   - subpages
   - techdocs
   - toolkits
   - toto
   - triaging
+  - Uchechukwu
+  - webdev
   - Welsch

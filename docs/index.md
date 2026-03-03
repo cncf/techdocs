@@ -8,15 +8,15 @@ sidebar_position: 1
 This site contains resources provided by the CNCF Technical Documentation team,
 including:
 
-- Docs about building websites and developing technical documentation,
-  including recommended tools, best practices, how-tos, and evaluation
-  checklists. It provides specific guidelines for:
+- Docs about building websites and developing technical documentation, including
+  recommended tools, best practices, how-tos, and evaluation checklists. It
+  provides specific guidelines for:
   - Setting up and maintaining a documentation website.
   - Writing technical documentation for a project.
   - Seeking assistance from the CNCF TechDocs community.
   - [Analyzing project documentation](./analysis).
-- [Analyses](./analyses): a collection of documentation analyses of CNCF projects
-  performed by the TechDocs team.
+- [Analyses](./analyses): a collection of documentation analyses of CNCF
+  projects performed by the TechDocs team.
 
 ## TechDocs Q&A
 
@@ -44,7 +44,7 @@ The full-time staff of the team is:
   experience, CNCF
 - [Nate W.](https://github.com/nate-double-u) - Head of mentoring &
   documentation, CNCF
-- [Patrice Chalin](https://github.com/chalin) - Senior techdoc & webdev lead
+- [Patrice Chalin](https://github.com/chalin) - Senior TechDocs & webdev lead
 - [Uchechukwu Obasi](https://github.com/thisisobate) - Developer advocate
 
 Consultants and volunteers also contribute to CNCF TechDocs efforts.
