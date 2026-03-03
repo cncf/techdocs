@@ -1,5 +1,6 @@
 ---
 title: Implementing KEDA Doc Improvements
+tags: [KEDA]
 ---
 
 <!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading -->

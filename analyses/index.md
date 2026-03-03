@@ -1,5 +1,6 @@
 ---
 title: TechDocs Analysis for CNCF Projects
+tags: [analyses]
 ---
 
 <!-- cSpell:ignore projectname -->
