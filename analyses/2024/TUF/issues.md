@@ -1,5 +1,6 @@
 ---
 title: TUF Issue
+tags: [TUF]
 cSpell:ignore: theupdateframework
 ---
 

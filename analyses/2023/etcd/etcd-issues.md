@@ -1,5 +1,6 @@
 ---
 title: etcd Umbrella Issue
+tags: [etcd]
 cSpell:ignore: reconf
 ---
 

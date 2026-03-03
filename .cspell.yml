@@ -26,9 +26,11 @@ words:
   - CNCF
   - Docsy
   - dwelsch
+  - fluxcd
   - keda
   - knative
   - kedacore
+  - krator
   - krook
   - mkdocs
   - nate

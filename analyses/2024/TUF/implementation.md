@@ -1,5 +1,6 @@
 ---
 title: Implementing TUF Doc Improvements
+tags: [TUF]
 cSpell:ignore: RSTUF
 ---
 

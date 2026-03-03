@@ -1,5 +1,6 @@
 ---
 title: Backstage Glossary
+tags: [backstage]
 ---
 
 # Backstage Glossary

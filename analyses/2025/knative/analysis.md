@@ -1,6 +1,6 @@
 ---
 title: Knative Documentation Analysis
-tags: Knative
+tags: [Knative]
 created: 2025-07-25
 modified: 2025-07-25
 author: Dave Welsch (@dwelsch-esi)

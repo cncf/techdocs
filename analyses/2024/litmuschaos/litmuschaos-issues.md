@@ -1,5 +1,6 @@
 ---
 title: Litmus Chaos Issue
+tags: [LitmusChaos]
 cSpell:ignore: litmuschaos ChaoCenter
 ---
 

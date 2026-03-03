@@ -1,5 +1,6 @@
 ---
 title: Docs assessment
+tags: [contour]
 cSpell:ignore: Horgan celestehorgan hashlinks
 ---
 

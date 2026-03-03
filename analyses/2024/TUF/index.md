@@ -1,5 +1,6 @@
 ---
 title: TUF Documentation Analysis
+tags: [TUF]
 cSpell:ignore: theupdateframework
 ---
 

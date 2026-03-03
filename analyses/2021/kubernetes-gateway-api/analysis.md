@@ -1,5 +1,6 @@
 ---
 title: 'Assessment: Project Kubernetes Gateway API'
+tags: [kubernetes-gateway-api]
 cSpell:ignore: Meha Bhalodiya mehabhalodiya kubernetes
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Assessment template
+tags: [fluxcd]
 cSpell:ignore: celestehorgan Horgan
 ---
 

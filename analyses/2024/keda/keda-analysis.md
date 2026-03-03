@@ -1,5 +1,6 @@
 ---
 title: KEDA Documentation Analysis
+tags: [KEDA]
 created: 2024-02-23
 modified: 2024-04-09
 author: Dave Welsch (@dwelsch-esi)

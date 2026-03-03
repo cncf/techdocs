@@ -1,5 +1,6 @@
 ---
 title: Analysis of Existing Documentation
+tags: [in-toto]
 ---
 
 # Analysis of Existing Documentation

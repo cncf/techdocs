@@ -1,6 +1,6 @@
 ---
 title: Vitess Documentation Analysis
-tags: Vitess
+tags: [Vitess]
 created: 2025-02-19
 modified: 2025-02-19
 author: Dave Welsch (dwelsch-esi)

@@ -1,6 +1,6 @@
 ---
 title: Knative Issues
-tags: Knative
+tags: [Knative]
 created: 2025-07-28
 modified: 2025-07-28
 author: Dave Welsch (@dwelsch-esi)
