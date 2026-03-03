@@ -1,5 +1,6 @@
 ---
 title: Documentation Issues
+tags: [in-toto]
 ---
 
 # Documentation Issues

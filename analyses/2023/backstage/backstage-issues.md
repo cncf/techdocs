@@ -1,5 +1,6 @@
 ---
 title: Backstage umbrella issue
+tags: [backstage]
 ---
 
 # Backstage umbrella issue
