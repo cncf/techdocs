@@ -60,8 +60,8 @@ is stored on the knative/docs GitHub repo.
 
 #### Out of scope
 
-- Other Knative repos: https://github.com/knative/\<repo\>, for any \<repo\> not
-  listed in "In scope".
+- Other Knative repos: `https://github.com/knative/REPO_NAME`, for any
+  `REPO_NAME` not listed in "In scope".
 
 ### How this document is organized
 
