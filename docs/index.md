@@ -15,8 +15,9 @@ including:
   - Writing technical documentation for a project.
   - Seeking assistance from the CNCF TechDocs community.
   - [Analyzing project documentation](./analysis).
-- [Analyses](./analyses): a collection of documentation analyses of CNCF
-  projects performed by the TechDocs team.
+
+It also contains a collection of documentation analyses of CNCF projects
+performed by the TechDocs team.
 
 ## TechDocs Q&A
 
