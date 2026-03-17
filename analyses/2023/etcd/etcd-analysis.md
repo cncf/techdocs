@@ -55,7 +55,7 @@ Netlify platform. The site's code is stored on the etcd GitHub repo.
 
 **Out of scope:**
 
-- Other etcd repos: https://github.com/etcd-io/*
+- Other etcd repos: https://github.com/etcd-io/
 
 ## How this document is organized
 
@@ -299,7 +299,7 @@ The website has a
 Those maintainer **responsible for approving** documentation PRs are listed as
 "approvers".
 
-The website repo [README](../../README.md) is out of date. For example,
+The website repo [README](https://github.com/etcd-io/website/blob/main/README.md) is out of date. For example,
 instructions for building the website state that the local build starts the
 server on `localhost:8888`. It's actually `localhost:1313`.
 

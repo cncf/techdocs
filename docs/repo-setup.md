@@ -39,10 +39,10 @@ For documentation this means you must:
    ```markdown
    # License
 
-   $PROJECT_NAME is licensed under an [Apache 2.0 license](./LICENSE).
+   $PROJECT_NAME is licensed under an [Apache 2.0 license](https://github.com/cncf/techdocs/blob/main/LICENSE-CODE).
 
    The #PROJECT_NAME documentation is licensed under a
-   [CC-BY-4.0 license](./LICENSE-docs).
+   [CC-BY-4.0 license](https://github.com/cncf/techdocs/blob/main/LICENSE).
    ```
 
 2. Add both the CC-BY-4.0 `LICENSE-docs` and Apache 2.0 `LICENSE` files to the

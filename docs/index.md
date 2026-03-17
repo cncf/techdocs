@@ -52,8 +52,8 @@ Consultants and volunteers also contribute to CNCF TechDocs efforts.
 
 ## Licenses
 
-- Documentation: [CC-BY-4.0](LICENSE)
-- Code: [Apache-2.0](LICENSE-CODE)
+- Documentation: [CC-BY-4.0](https://github.com/cncf/techdocs/blob/main/LICENSE)
+- Code: [Apache-2.0](https://github.com/cncf/techdocs/blob/main/LICENSE-CODE)
 
 [date-time]:
   https://tockify.com/cncf.public.events/monthly?search=CNCF%20Tech%20Writers%20Office%20Hours
