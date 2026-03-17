@@ -196,7 +196,7 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `0015-knative`.
 
 Related material in the current doc:
 
-- https://github.com/knative/install
+- https://knative.dev/docs/install/
 
 Suggested changes:
 
@@ -665,7 +665,7 @@ start by looking at the [mkdocs config file].
   https://github.com/knative/docs/blob/main/contribute-to-docs/style-guide/voice-and-language.md#avoid-statements-that-will-soon-be-out-of-date
 [Install Knative using quickstart]:
   https://knative.dev/docs/install/quickstart-install/
-[Installing Knative]: https://github.com/knative/install
+[Installing Knative]: https://knative.dev/docs/install/
 [Installing the Knative CLI]: https://knative.dev/docs/client/install-kn/
 [Knative Broker for Apache Kafka]:
   https://knative.dev/docs/eventing/brokers/broker-types/kafka-broker/
