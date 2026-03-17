@@ -39,7 +39,8 @@ For documentation this means you must:
    ```markdown
    # License
 
-   $PROJECT_NAME is licensed under an [Apache 2.0 license](https://github.com/cncf/techdocs/blob/main/LICENSE-CODE).
+   $PROJECT_NAME is licensed under an
+   [Apache 2.0 license](https://github.com/cncf/techdocs/blob/main/LICENSE-CODE).
 
    The #PROJECT_NAME documentation is licensed under a
    [CC-BY-4.0 license](https://github.com/cncf/techdocs/blob/main/LICENSE).
