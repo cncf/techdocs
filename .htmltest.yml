@@ -7,6 +7,8 @@ IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
   - \?no-link-check
+  - _PROJECT-WEBSITE_
+  - _PROJECT-DOC-URL_
   # FIXME: temporary ignore rules
   - assistance\.md
   - LICENSE
