@@ -55,7 +55,7 @@ Netlify platform. The site's code is stored on the etcd GitHub repo.
 
 **Out of scope:**
 
-- Other etcd repos: https://github.com/etcd-io/
+- Other etcd repos: `https://github.com/etcd-io/*`
 
 ## How this document is organized
 
