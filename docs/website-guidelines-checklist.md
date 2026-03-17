@@ -5,7 +5,7 @@ title: Website guidelines & checklist
 # Website guidelines & checklist
 
 Per the
-[CNCF Website Guidelines](https://github.com/cncf/foundation/blob/main/website-guidelines.md),
+[CNCF Website Guidelines](https://github.com/cncf/foundation/blob/main/policies-guidance/website-guidelines.md),
 the following should be present:<br/> _Note_, not all of these are applicable to
 all projects
 
