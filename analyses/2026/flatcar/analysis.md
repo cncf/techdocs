@@ -383,5 +383,3 @@ sophistication where such verbiage would be suspicious.
 #### Content creation processes
 
 #### Inclusive language
-
-Remainder of template to be applied.
