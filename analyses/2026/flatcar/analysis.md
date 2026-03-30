@@ -163,7 +163,7 @@ The current content is comprehensive on the key concepts needed for understandin
 
 - **If the product exposes an API, is there a complete reference?**
 
-  There is a Developer Guide for building Flatcar Container Linux from source and/or in modifying the OS. The SDK is  a containerized Software Development Kit that enables developers to customize and build their own Flatcar Container Linux OS images.
+  There is a Developer Guide for building Flatcar Container Linux from source and/or in modifying the OS. The SDK is a containerized Software Development Kit that enables developers to customize and build their own Flatcar Container Linux OS images.
 
   The SDK is not an API with function calls, but rather a kit of scripts and tools.
 
