@@ -231,11 +231,11 @@ Supported, but not a formalized process at this time.
 
 - **Who reviews and approves documentation pull requests?**
 
-Jan Bronicki
+Team members are determined.
 
 - **Does the website have a clear owner/maintainer?**
 
-Jan Bronicki
+Team members are determined.
 
 ##### Inclusive language
 
