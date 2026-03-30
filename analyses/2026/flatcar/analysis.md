@@ -92,9 +92,9 @@ Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
 to their area of concern:
 
-- [Project documentation](https://www.flatcar.org/docs/latest)
-- [Contributor documentation](https://www.flatcar.org/docs/latest/contribute/)
-- [Website and documentation infrastructure](https://github.com/flatcar/flatcar-website)
+- [Project documentation](#project-documentation)
+- Contributor documentation
+- Website and documentation infrastructure
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
