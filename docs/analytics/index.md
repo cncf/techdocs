@@ -20,7 +20,7 @@ title: Analytics
 > [Migrating Universal to Google Analytics 4](ua-to-ga4.md).
 
 [adding analytics]:
-  https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
+  https://www.docsy.dev/docs/content/feedback/#adding-analytics
 [CNCF sandbox]: https://github.com/cncf/sandbox
 [docsy]: https://www.docsy.dev
 [ga4]: https://support.google.com/analytics/answer/10089681

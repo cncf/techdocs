@@ -1,5 +1,5 @@
 # cSpell:ignore github
-CacheExpires: 9000h # ~ 12 months
+CacheExpires: 4500h # ~ 6 months
 DirectoryPath: build
 TestFilesConcurrently: true
 IgnoreDirs:
