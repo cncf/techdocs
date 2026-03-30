@@ -16,7 +16,7 @@ According to CNCF best practices guidelines, effective documentation is a prereq
 
 ### Purpose
 
-This document was written to analyze the current state of Flatcar documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. A second [implementation] document, , outlines an actionable plan for improvement. A third document is an [issues list] of issues to be added to the project documentation repository. These issues can be taken up by contributors to improve the documentation.
+This document was written to analyze the current state of Flatcar documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. A second [implementation] document, outlines an actionable plan for improvement. A third document is an [issues list] of issues to be added to the project documentation repository. These issues can be taken up by contributors to improve the documentation.
 
 This document:
 
@@ -28,8 +28,7 @@ This document:
 
 The documentation discussed here includes the entire contents of the website, the technical documentation, and documentation for contributors and users on the Flatcar GitHub repository.
 
-The Flatcar website and documentation are written in Markdown and are compiled using the "static site" generator with the "theme" and served from "platform". The site's code is stored on the Flatcar GitHub repo.
-The Flatcar website and documentation are written in [Markdown, ReStructured Text, other] and are compiled using the [Hugo, Docusaurus, Sphinx, other] static site generator with the [Docsy, other] theme and served from [the Netlify platform, other]. The site's code is stored on the Flatcar GitHub repo.
+The Flatcar website and documentation are written in Markdown and are compiled using the [Hugo, Docusaurus, Sphinx, other] static site generator with the [Docsy, other] theme and served from [the Netlify platform, other]. The site's code is stored on the Flatcar GitHub repo.
 
 #### In scope
 
@@ -39,12 +38,7 @@ The Flatcar website and documentation are written in [Markdown, ReStructured Tex
 
 #### Out of scope
 
-Other Flatcar besides the flatcar-website: https://github.com/flatcar/flatcar-website.
-- Website repo: https://github.com/cncf/techdocs
-
-#### Out of scope
-
-Other Flatcar repos: <https://github.com/flatcar/\><repo>, for any <repo> not listed in "In scope".
+Other Flatcar besides the flatcar-website: https://github.com/flatcar/flatcar-webite.
 
 ### How this document is organized
 
@@ -348,9 +342,9 @@ Listed here are the minimal website requirements for projects based on their [ma
 
 <!-- markdownlint-enable line-length -->
 
-[git-submodules]: <https://git-scm.com/book/en/v2/Git-Tools-Submodules> [maturity-level]:
-  <https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations>
-[cncf-servicedesk]: <https://servicedesk.cncf.io>
+git-submodules: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+maturity-level: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
+cncf-servicedesk: https://servicedesk.cncf.io
 
 #### Usability, accessibility and devices
 
@@ -362,8 +356,7 @@ Most CNCF websites are accessed from mobile and other non-desktop devices at lea
   site search and in-page table of contents?**
 - **Might a [mobile-first] design make sense for your project?**
 
-[mobile-first]:
-  https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
+[mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
 
 Plan for suitable [accessibility][] measures for your website. For example:
 
@@ -373,7 +366,7 @@ Plan for suitable [accessibility][] measures for your website. For example:
 
 It is up to each project to set their own guidelines.
 
-[accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
+[accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 
 #### Branding and design
 
@@ -464,11 +457,11 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
-[implementation]: ./implementation.md
-[issues list]: ./issues-list.md
-[project-doc-website]: ./?https://www.flatcar.org/docs/latest
-[project-website]: ./?https://www.flatcar.org/
-[Rating (1-5)]: #rating-values
-[rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+criteria        ./criteria.md
+implementation    ./implementation.md
+issues list        ./issues-list.md
+project-doc-website    ./?https://www.flatcar.org/docs/latest
+project-website    https://www.flatcar.org/
+Rating (1-5)    rating-values
+rfc-spec    https://www.rfc-editor.org/rfc/rfc2119
+website guidelines    ../../website-guidelines-checklist.md
