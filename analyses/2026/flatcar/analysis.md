@@ -328,7 +328,7 @@ If a project chooses to keep source files in multiple repos, they need a clearly
 
 #### Minimal website requirements
 
-Listed here are the minimal website requirements for projects based on their [maturity level][maturity-level], either incubating or graduated. (These are the only two levels for which a tech docs analysis can be requested.)
+Listed here are the minimal website requirements for projects based on their maturity level, either incubating or graduated. (These are the only two levels for which a tech docs analysis can be requested.)
 
 <!-- markdownlint-disable line-length -->
 
@@ -344,24 +344,24 @@ Listed here are the minimal website requirements for projects based on their [ma
 
 [git-submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 [maturity-level](https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations)
-[cncf-servicedesk](https://servicedesk.cncf.io)
+[service desk](https://servicedesk.cncf.io)
 
 #### Usability, accessibility and devices
 
 Most CNCF websites are accessed from mobile and other non-desktop devices.
- at least 10-20% of the time. 
-Planning for this early in your website's design will be much less effort than 
+At least 10-20% of the time.
+Planning for this early in your website's design will be much less effort than
 retrofitting a desktop-first design.
 
 - **Is the website usable from mobile?**
 - **Are doc pages readable?**
 - **Are all / most website features accessible from mobile -- **such as the top-nav,
-  site search and in-page table of contents?**
+site search and in-page table of contents?**
 - **Might a [mobile-first] design make sense for your project?**
 
 [mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
 
-Plan for suitable [accessibility][] measures for your website. For example:
+Plan for suitable accessibility measures for your website. For example:
 
 - **Are color contrasts significant enough for color-impaired readers?**
 - **Are most website features usable using a keyboard only?**
@@ -369,25 +369,26 @@ Plan for suitable [accessibility][] measures for your website. For example:
 
 It is up to each project to set their own guidelines.
 
-[accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+[Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 
 #### Branding and design
 
-CNCF seeks to support enterprise-ready open source software. A key aspect of this is branding and marketing.
+CNCF seeks to support enterprise-ready open source software. 
 
 We evaluate on the following:
 
-- **Is there an easily recognizable brand for the project (logo + color scheme) clearly identifiable?**
+- **Is there an easily recognizable brand for the project (logo + color scheme)
 - **Is the brand used across the website consistently?**
 - **Is the website’s typography clean and well-suited for reading?**
 
 #### Case studies/social proof
 
-One of the best ways to advertise an open source project is to show other organizations using it.
+One of the best ways to advertise an open source project is to show other organizations.
+
 
 We evaluate on the following:
 
-- **Are there case studies available for the project and are they documented on the website?**
+- **Are there case studies available for the project and are they documented.
 - **Are there user testimonials available?**
 - **Is there an active project blog?**
 - **Are there community talks for the project and are they present on the website?**
@@ -415,12 +416,13 @@ We evaluate on the following:
 
 #### Maintenance planning
 
-Website maintenance is an important part of project success, especially when project maintainers aren’t web developers.
+Website maintenance is an important part of project success, especially
+maintainers aren’t web developers.
 
 We evaluate on the following:
 
-- **Is your website tooling well supported by the community (i.e., Hugo with the   Docsy theme)
--  or commonly used by CNCF projects (our recommended tech stack?**)
+- **Is your website tooling well-supported by the community.
+- Commonly used by CNCF projects (our recommended tech stack?**)
 - **Are you actively cultivating website maintainers from within the community?**
 - **Are site build times reasonable?**
 - **Do site maintainers have adequate permissions?**
@@ -462,5 +464,3 @@ The numeric rating values used in this document are as follows
 3. Meets standards
 4. Meets or exceeds standards
 5. Exemplary
-
-
