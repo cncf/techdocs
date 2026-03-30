@@ -384,4 +384,4 @@ sophistication where such verbiage would be suspicious.
 
 #### Inclusive language
 
-Remaineder of template to be applied.
+Remainder of template to be applied.
