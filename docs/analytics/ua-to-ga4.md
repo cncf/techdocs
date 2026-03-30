@@ -170,8 +170,6 @@ that your project is using.
 
 [add gtag.js to your site]:
   https://developers.google.com/analytics/devguides/collection/gtagjs/
-[adding analytics]:
-  https://www.docsy.dev/docs/adding-content/feedback/#adding-analytics
 [analytics.js]: https://support.google.com/analytics/answer/10268458
 [connected]: https://support.google.com/analytics/answer/9973999
 [docsy]: https://www.docsy.dev
