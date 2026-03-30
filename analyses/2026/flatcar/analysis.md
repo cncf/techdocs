@@ -38,7 +38,7 @@ The Flatcar website and documentation are written in Markdown and are compiled u
 
 #### Out of scope
 
-Other Flatcar besides the flatcar-website: https://github.com/flatcar/flatcar-webite.
+Other Flatcar besides the flatcar-website: https://github.com/flatcar/flatcar-website.
 
 ### How this document is organized
 
@@ -252,8 +252,6 @@ The 175 hits were "master", "disable", "abort", and "man in the middle". Of thos
 No, the complexity of the content is a given, and the content assumes a level of sophistication where such verbiage would be suspicious.
 
 ### Recommendations
-
-> AUTHOR NOTE: Write general recommendations based on the comments from the > previous section.
 
 #### Information architecture
 
