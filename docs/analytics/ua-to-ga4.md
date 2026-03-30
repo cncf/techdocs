@@ -164,7 +164,7 @@ code (such as custom Hugo partials) to enable GA4, consider removing the custom
 code in favor of the native support provided by your site-generator tooling.
 
 For example, for [Docsy][]-based websites, all you need to do is provide your
-project's GA4 measurement ID. Details are provided in [Adding Analytics][]. Of
+project's GA4 measurement ID. Details are provided in Adding Analytics. Of
 course, this may require you to upgrade the version of [Docsy][] and/or Hugo
 that your project is using.
 
