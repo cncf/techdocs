@@ -10,13 +10,13 @@ author: Bruce Hamilton (@iRaindrop)
 
 ## Introduction
 
-This document is an analysis the effectiveness and completeness of the [Flatcar][project-website] open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects.
+This document is an analysis the effectiveness and completeness of the [Flatcar](https://www.flatcar.org/docs/latest) open source software (OSS) project's documentation and website. It is funded by the CNCF Foundation as part of its overall effort to incubate, grow, and graduate open source cloud native software projects.
 
 According to CNCF best practices guidelines, effective documentation is a prerequisite for program graduation. The documentation analysis is the first step of a CNCF process aimed at assisting projects with their documentation efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of Flatcar documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. A second [implementation] document, outlines an actionable plan for improvement. A third document is an [issues list] of issues to be added to the project documentation repository. These issues can be taken up by contributors to improve the documentation.
+This document was written to analyze the current state of Flatcar documentation. It aims to provide project leaders with an informed understanding of potential problems in current project documentation. A second **implementation** document, outlines an actionable plan for improvement. A third document is an **issues list** of issues to be added to the project documentation repository. These issues can be taken up by contributors to improve the documentation.
 
 This document:
 
@@ -28,7 +28,7 @@ This document:
 
 The documentation discussed here includes the entire contents of the website, the technical documentation, and documentation for contributors and users on the Flatcar GitHub repository.
 
-The Flatcar website and documentation are written in Markdown and are compiled using the [Hugo, Docusaurus, Sphinx, other] static site generator with the [Docsy, other] theme and served from [the Netlify platform, other]. The site's code is stored on the Flatcar GitHub repo.
+The Flatcar website and documentation are written in Markdown and are compiled using the "static site" generator with the "theme" and served from "platform". The site's code is stored on the Flatcar GitHub repo.
 
 #### In scope
 
@@ -53,11 +53,11 @@ Each section begins with summary ratings based on a rubric with appropriate crit
 - **Comments**: observations about the existing documentation, with a focus on how it does or does not help Flatcar users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of the documentation.
 
-The accompanying [implementation] document breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items are decomposed into a series of [issues] and entered as GitHub [project-doc-website]/issues.
+The accompanying implementation document breaks the recommendations down into concrete actions that can be implemented by project contributors. Its focus is on drilling down to specific, achievable work that can be completed in constrained blocks of time. Ultimately, the implementation items are decomposed into a series of issues and entered as GitHub project-doc-website/issues.
 
 ### How to use this document
 
-Readers interested only in actionable improvements should skip this document and read the **[implementation] plan** and **[issues] list**.
+Readers interested only in actionable improvements should skip this document and read the **implementation plan** and **issues list**.
 
 Readers interested in the current state of the documentation and the reasoning behind the recommendations should read the section of this document pertaining to their area of concern:
 
@@ -69,7 +69,7 @@ Examples of CNCF documentation that demonstrate the analysis criteria are linked
 
 #### Recommendations, requirements, and best practices
 
-This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of [RFCs][rfc-spec], the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues.
+This analysis measures documentation against CNCF project maturity standards, and suggests possible improvements. In most cases there is more than one way to do things. Few recommendations here are meant to be prescriptive. Rather, the recommended implementations represent the reviewers' experience with how to apply documentation best practices. In other words, borrowing terminology from the lexicon of RFCs, the changes described here should be understood as "recommended" or "should" at the strongest, and "optional" or "may" in many cases. Any "must" or "required" actions are clearly denoted as such, and pertain to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
@@ -103,7 +103,7 @@ The "Learning Series" node, introduced into the documentation recently, outlines
   - The systemd is about core OS management.
 - The "Container Runtimes" node is an expected node focused on containers and clusters. An argument could be made to elevate "Getting Started with Kubernetes" and "High Availability Kubernetes" to its own node, as Flatcar has its optimization benefits for Kubernetes deployment.
 - The "Migrating from CoreOS" node might be better placed earlier or within an Installation node, as it is an installation scenario.
-- The "Reference" node contains expected look-up information such as "Constance and IDs" and "Supply chain security mechanisms" but these sections could have better placement: 
+- The "Reference" node contains expected look-up information such as "Constance and IDs" and "Supply chain security mechanisms" but these sections could have better placement:
   - "Integrations" could be incorporated into the Cloud Providers documentation.
   - "Developer Guides" contains conceptual content typically not found in a Reference section, so "Developer Guides" or something more descriptive like "Flatcar Development Guides" should be a top-tier node.
 - The "How to Contribute" node is well-placed has the expected content.
@@ -234,9 +234,9 @@ One of the easiest ways to attract new contributors is making sure they know how
 
 We evaluate on the following:
 
-- **Is there a Slack/Discord/Discourse/etc. community and is it prominently linked   from your website?**
+- **Is there a Slack/Discord/Discourse/etc. community and is it prominently linked from your website?**
 - **Is there a direct link to your GitHub organization/repository?**
-- **Are weekly/monthly project meetings documented?** Is it clear how someone can   join those meetings?**
+- **Are weekly/monthly project meetings documented?** Is it clear how someone can join those meetings?**
 - **Are mailing lists documented?**
 
 #### Beginner friendly issue backlog
@@ -244,7 +244,7 @@ We evaluate on the following:
 We evaluate on the following:
 
 - **Are docs issues well-triaged?**
-- **Is there a clearly marked way for new contributors to make code or   documentation contributions (i.e. a “good first issue” label)?**
+- **Is there a clearly marked way for new contributors to make code or documentation contributions (i.e. a “good first issue” label)?**
 - **Are issues well-documented (i.e., more than just a title)?**
 - **Are issues maintained for staleness?**
 
@@ -282,11 +282,11 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-Flatcar is a **graduated** project of CNCF. This means that the project should have [_very high_][criteria] standards for documentation.
+Flatcar is a **graduated** project of CNCF. This means that the project should have high criteria standards for documentation.
 
 > AUTHOR NOTE: or
 
-Flatcar is an **incubating** project of CNCF. This means that the project should be [_developing_][criteria] professional-quality documentation alongside the project code.
+Flatcar is an **incubating** project of CNCF. This means that the project should be developing professional-quality documentation alongside the project code.
 
 | Criterion                                   | [Rating (1-5)] |
 | ------------------------------------------- | -------------- |
@@ -322,7 +322,7 @@ Source files for _all website pages_ should reside in a single repo. Among other
 - **increases the likelihood of errors
 - **makes it more complicated to generate the documentation from source files
 
-Ideally, all website files should be in the **website repo** itself. Alternatively, files should be brought into the website repo via [git submodules][git-submodules].
+Ideally, all website files should be in the **website repo** itself. Alternatively, files should be brought into the website repo via git submodules.
 
 If a project chooses to keep source files in multiple repos, they need a clearly documented strategy for managing mirrored files and new contributions.
 
@@ -335,20 +335,23 @@ Listed here are the minimal website requirements for projects based on their [ma
 | Criterion                     | Incubating Requirement                                  | Graduated Requirement                     |
 | ----------------------------- | ------------------------------------------------------- | ----------------------------------------- |
 | [Website guidelines]          | All guidelines satisfied                                | All guidelines satisfied                  |
-| **Docs analysis** (this)      | Requested through CNCF [service desk][cncf-servicedesk] | All follow-up actions addressed           |
+| **Docs analysis** (this)      | Requested through CNCF service desk | All follow-up actions addressed           |
 | **Project doc**: stakeholders | Roles identified and doc needs documented               | All stakeholder need identified           |
-| **Project doc**: hosting      | Hosted directly                                         | Hosted directly                           |
+| **Project doc**: hosting      | Hosted directly                           |
 | **Project doc**: user docs    | Comprehensive, addressing most stakeholder needs        | Fully addresses needs of key stakeholders |
 
 <!-- markdownlint-enable line-length -->
 
-git-submodules: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-maturity-level: https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
-cncf-servicedesk: https://servicedesk.cncf.io
+[git-submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+[maturity-level](https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations)
+[cncf-servicedesk](https://servicedesk.cncf.io)
 
 #### Usability, accessibility and devices
 
-Most CNCF websites are accessed from mobile and other non-desktop devices at least 10-20% of the time. Planning for this early in your website's design will be much less effort than retrofitting a desktop-first design.
+Most CNCF websites are accessed from mobile and other non-desktop devices.
+ at least 10-20% of the time. 
+Planning for this early in your website's design will be much less effort than 
+retrofitting a desktop-first design.
 
 - **Is the website usable from mobile?**
 - **Are doc pages readable?**
@@ -392,7 +395,9 @@ We evaluate on the following:
 
 #### SEO, Analytics and site-local search
 
-SEO helps users find your project and it's documentation, and analytics helps you monitor site traffic and diagnose issues like page 404s. Intra-site search, while optional, can offer your readers a site-focused search results.
+SEO helps users find your project and it's documentation, and analytics helps you
+ monitor site traffic and diagnose issues like page 404s. Intra-site search,
+while optional can offer your readers a site-focused search results.
 
 We evaluate on the following:
 
@@ -414,7 +419,8 @@ Website maintenance is an important part of project success, especially when pro
 
 We evaluate on the following:
 
-- **Is your website tooling well supported by the community (i.e., Hugo with the   Docsy theme) or commonly used by CNCF projects (our recommended tech stack?**)
+- **Is your website tooling well supported by the community (i.e., Hugo with the   Docsy theme)
+-  or commonly used by CNCF projects (our recommended tech stack?**)
 - **Are you actively cultivating website maintainers from within the community?**
 - **Are site build times reasonable?**
 - **Do site maintainers have adequate permissions?**
@@ -457,11 +463,4 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-criteria        ./criteria.md
-implementation    ./implementation.md
-issues list        ./issues-list.md
-project-doc-website    ./?https://www.flatcar.org/docs/latest
-project-website    https://www.flatcar.org/
-Rating (1-5)    rating-values
-rfc-spec    https://www.rfc-editor.org/rfc/rfc2119
-website guidelines    ../../website-guidelines-checklist.md
+
