@@ -19,7 +19,7 @@ title: Analytics
 > Analytics to GA4, see
 > [Migrating Universal to Google Analytics 4](ua-to-ga4.md).
 
-[CNCF sandbox]: https://github.com/cncf/sandbox
-[docsy]: https://www.docsy.dev
-[ga4]: https://support.google.com/analytics/answer/10089681
-[service desk]: https://github.com/cncf/servicedesk
+[CNCF sandbox](https://github.com/cncf/sandbox)
+[docsy](https://www.docsy.dev)
+[ga4](https://support.google.com/analytics/answer/10089681)
+[service desk](https://github.com/cncf/servicedesk)

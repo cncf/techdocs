@@ -168,20 +168,17 @@ project's GA4 measurement ID. Details are provided in Adding Analytics. Of
 course, this may require you to upgrade the version of [Docsy][] and/or Hugo
 that your project is using.
 
-[add gtag.js to your site]:
-  https://developers.google.com/analytics/devguides/collection/gtagjs/
-[analytics.js]: https://support.google.com/analytics/answer/10268458
-[connected]: https://support.google.com/analytics/answer/9973999
-[docsy]: https://www.docsy.dev
-[docusaurus]: https://docusaurus.io/
-[ga4-dev]: https://developers.google.com/analytics/devguides/migration
-[ga4]: https://support.google.com/analytics/answer/10089681
-[ga4+ua-dev]:
-  https://developers.google.com/analytics/devguides/migration/measurement/add-ga4
-[gtag.js]: https://support.google.com/analytics/answer/10220869
-[issue #108]: https://github.com/cncf/techdocs/issues/108
-[migration-help]: https://support.google.com/analytics/answer/10759417
-[stage 2]: #stage-2---configure-the-ga4-id-as-the-main-analytics-id
-[status table]:
-  https://docs.google.com/spreadsheets/d/1Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA
-[ua]: https://support.google.com/analytics/answer/11583528
+[add gtag.js to your site](https://developers.google.com/analytics/devguides/collection/gtagjs/)
+[analytics.js](https://support.google.com/analytics/answer/10268458)
+[connected](https://support.google.com/analytics/answer/9973999)
+[docsy](https://www.docsy.dev)
+[docusaurus](https://docusaurus.io/)
+[ga4-dev](https://developers.google.com/analytics/devguides/migration)
+[ga4](https://support.google.com/analytics/answer/10089681)
+[ga4+ua-dev](https://developers.google.com/analytics/devguides/migration/measurement/add-ga4)
+[gtag.js](https://support.google.com/analytics/answer/10220869)
+[issue #108](https://github.com/cncf/techdocs/issues/108)
+[migration-help](https://support.google.com/analytics/answer/10759417)
+stage 2: #stage-2---configure-the-ga4-id-as-the-main-analytics-id
+[status table](https://docs.google.com/spreadsheets/d/Mx4LhdI2Un-rvGMI73SlHxQH9D2HABAJclMB3dd6lnA)
+[ua](https://support.google.com/analytics/answer/11583528)
