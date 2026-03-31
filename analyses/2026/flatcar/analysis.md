@@ -386,15 +386,8 @@ sophistication where such verbiage would be suspicious.
 
 ## Contributor documentation
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
-
-_PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
-
-> AUTHOR NOTE: or
-
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
+Flatcar is an **incubating** project of CNCF. This means that the project
+should be developing professional-quality documentation alongside
 the project code.
 
 | Criterion                                 | [Rating (1-5)] |
@@ -431,7 +424,7 @@ We evaluate on the following:
   join those meetings?
 - Are mailing lists documented?
 
-#### Beginner friendly issue backlog
+#### Beginner-friendly issue backlog
 
 We evaluate on the following:
 
@@ -468,7 +461,7 @@ We evaluate on the following:
 
 #### Communication methods documented
 
-#### Beginner friendly issue backlog
+#### Beginner-friendly issue backlog
 
 #### New contributor getting started content
 
@@ -478,13 +471,8 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-_PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
-
-> AUTHOR NOTE: or
-
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
+Flatcar is an **incubating** project of CNCF. This means that the project
+should be developing professional-quality documentation alongside
 the project code.
 
 | Criterion                                   | [Rating (1-5)] |
@@ -497,11 +485,11 @@ the project code.
 | SEO, Analytics, and site-local search       | [rating (1-5)] |
 | Maintenance planning                        | [rating (1-5)] |
 | A11y plan & implementation                  | [rating (1-5)] |
-| Mobile-first plan & impl.                   | [rating (1-5)] |
+| Mobile-first plan & implementation          | [rating (1-5)] |
 | HTTPS access & HTTP redirect                | [rating (1-5)] |
 | Google Analytics 4 for production only      | [rating (1-5)] |
 | Indexing allowed for production server only | [rating (1-5)] |
-| Intra-site / local search                   | [rating (1-5)] |
+| Within site / local search                  | [rating (1-5)] |
 | Account custodians are documented           | [rating (1-5)] |
 
 ### Comments
@@ -549,7 +537,7 @@ only two levels for which a tech docs analysis can be requested.)
 | [Website guidelines]          | All guidelines satisfied                                | All guidelines satisfied                  |
 | **Docs analysis** (this)      | Requested through CNCF [service desk][cncf-servicedesk] | All follow-up actions addressed           |
 | **Project doc**: stakeholders | Roles identified and doc needs documented               | All stakeholder need identified           |
-| **Project doc**: hosting      | Hosted directly                                         | Hosted directly                           |
+| **Project doc**: hosting      | Hosted directly                                         | All Hosted directly                       |
 | **Project doc**: user docs    | Comprehensive, addressing most stakeholder needs        | Fully addresses needs of key stakeholders |
 
 <!-- markdownlint-enable line-length -->
@@ -594,7 +582,7 @@ We evaluate on the following:
 - Is there an easily recognizable brand for the project (logo + color scheme)
   clearly identifiable?
 - Is the brand used across the website consistently?
-- Is the website’s typography clean and well-suited for reading?
+- The website’s typography clean and well-suited for reading?
 
 #### Case studies/social proof
 
@@ -612,7 +600,7 @@ We evaluate on the following:
 
 #### SEO, Analytics and site-local search
 
-SEO helps users find your project and it's documentation, and analytics helps
+SEO helps users find your project, and it's documentation, and analytics helps
 you monitor site traffic and diagnose issues like page 404s. Intra-site search,
 while optional, can offer your readers a site-focused search results.
 
@@ -622,7 +610,7 @@ We evaluate on the following:
   - Is analytics enabled for the production server?
   - Is analytics disabled for all other deploys?
   - If your project used Google Analytics, have you migrated to GA4?
-  - Can Page-not-found (404) reports easily be generated from you site
+  - Can Page-not-found (404) reports easily be generated from your site
     analytics? Provide a sample of the site's current top-10 404s.
 - Is site indexing supported for the production server, while disabled for
   website previews and builds for non-default branches?
@@ -637,7 +625,7 @@ project maintainers aren’t web developers.
 
 We evaluate on the following:
 
-- Is your website tooling well supported by the community (i.e., Hugo with the
+- Is your website tooling well-supported by the community (i.e., Hugo with the
   Docsy theme) or commonly used by CNCF projects (our recommended tech stack?)
 - Are you actively cultivating website maintainers from within the community?
 - Are site build times reasonable?
@@ -688,4 +676,3 @@ The numeric rating values used in this document are as follows
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../website-guidelines-checklist.md
-
