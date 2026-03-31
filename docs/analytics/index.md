@@ -6,8 +6,8 @@ title: Analytics
 
 ## Google Analytics
 
-- [CNCF sandbox][] projects currently onboarding, should open a [Service Desk][]
-  ticket to either:
+- CNCF sandbox projects currently onboarding, should open a Service Desk ticket
+  to either:
   - Request a transfer of their existing GA properties to the **CNCF Projects**
     Google Analytics account. The first step is to make projects@cncf.io and
     Administrator of their existing GA account.
