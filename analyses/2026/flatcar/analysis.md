@@ -386,9 +386,8 @@ sophistication where such verbiage would be suspicious.
 
 ## Contributor documentation
 
-Flatcar is an **incubating** project of CNCF. This means that the project
-should be developing professional-quality documentation alongside
-the project code.
+Flatcar is an **incubating** project of CNCF. This means that the project should
+be developing professional-quality documentation alongside the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
@@ -471,9 +470,8 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-Flatcar is an **incubating** project of CNCF. This means that the project
-should be developing professional-quality documentation alongside
-the project code.
+Flatcar is an **incubating** project of CNCF. This means that the project should
+be developing professional-quality documentation alongside the project code.
 
 | Criterion                                   | [Rating (1-5)] |
 | ------------------------------------------- | -------------- |
