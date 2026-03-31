@@ -1,9 +1,6 @@
 ---
-title: README
-tags: [in-toto]
+title: in-toto Analysis
 ---
-
-# README
 
 These documents are intended to recommend a direction for the ongoing
 development of technical documentation for the in-toto open source software
