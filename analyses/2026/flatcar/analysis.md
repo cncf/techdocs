@@ -383,3 +383,309 @@ sophistication where such verbiage would be suspicious.
 #### Content creation processes
 
 #### Inclusive language
+
+## Contributor documentation
+
+> AUTHOR NOTE: Pick the CNCF maturity level of the project:
+
+_PROJECT_ is a **graduated** project of CNCF. This means that the project should
+have [_very high_][criteria] standards for documentation.
+
+> AUTHOR NOTE: or
+
+_PROJECT_ is an **incubating** project of CNCF. This means that the project
+should be [_developing_][criteria] professional-quality documentation alongside
+the project code.
+
+| Criterion                                 | [Rating (1-5)] |
+| ----------------------------------------- | -------------- |
+| Communication methods documented          | [rating (1-5)] |
+| Beginner friendly issue backlog           | [rating (1-5)] |
+| “New contributor” getting started content | [rating (1-5)] |
+| Project governance documentation          | [rating (1-5)] |
+
+### Comments
+
+> AUTHOR NOTE: make any overall comments about the Contributor Documentation
+> here.
+
+The following sections contain brief assessments of each element of the
+Contributor Documentation rubric.
+
+> AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
+> these criteria. Keep in mind that much of the contributor documentation might
+> be contained in the documentation repository. (Criteria are copied from
+> criteria.md)
+
+#### Communication methods documented
+
+One of the easiest ways to attract new contributors is making sure they know how
+to reach you.
+
+We evaluate on the following:
+
+- Is there a Slack/Discord/Discourse/etc. community and is it prominently linked
+  from your website?
+- Is there a direct link to your GitHub organization/repository?
+- Are weekly/monthly project meetings documented? Is it clear how someone can
+  join those meetings?
+- Are mailing lists documented?
+
+#### Beginner friendly issue backlog
+
+We evaluate on the following:
+
+- Are docs issues well-triaged?
+- Is there a clearly marked way for new contributors to make code or
+  documentation contributions (i.e. a “good first issue” label)?
+- Are issues well-documented (i.e., more than just a title)?
+- Are issues maintained for staleness?
+
+#### New contributor getting started content
+
+Open source is complex and projects have many processes to manage that. Are
+processes easy to understand and written down so that new contributors can jump
+in easily?
+
+We evaluate on the following:
+
+- Do you have a community repository or section on your website?
+- Is there a document specifically for new contributors/your first contribution?
+- Do new users know where to get help?
+
+#### Project governance documentation
+
+One of the CNCF’s core project values is open governance.
+
+We evaluate on the following:
+
+- Is project governance clearly documented?
+
+### Recommendations
+
+> AUTHOR NOTE: Write general recommendations based on the comments from the
+> previous section.
+
+#### Communication methods documented
+
+#### Beginner friendly issue backlog
+
+#### New contributor getting started content
+
+#### Project governance documentation
+
+## Website and infrastructure
+
+> AUTHOR NOTE: Pick the CNCF maturity level of the project:
+
+_PROJECT_ is a **graduated** project of CNCF. This means that the project should
+have [_very high_][criteria] standards for documentation.
+
+> AUTHOR NOTE: or
+
+_PROJECT_ is an **incubating** project of CNCF. This means that the project
+should be [_developing_][criteria] professional-quality documentation alongside
+the project code.
+
+| Criterion                                   | [Rating (1-5)] |
+| ------------------------------------------- | -------------- |
+| Single-source for all files                 | [rating (1-5)] |
+| Meets min website req. (for maturity level) | [rating (1-5)] |
+| Usability, accessibility, and design        | [rating (1-5)] |
+| Branding and design                         | [rating (1-5)] |
+| Case studies/social proof                   | [rating (1-5)] |
+| SEO, Analytics, and site-local search       | [rating (1-5)] |
+| Maintenance planning                        | [rating (1-5)] |
+| A11y plan & implementation                  | [rating (1-5)] |
+| Mobile-first plan & impl.                   | [rating (1-5)] |
+| HTTPS access & HTTP redirect                | [rating (1-5)] |
+| Google Analytics 4 for production only      | [rating (1-5)] |
+| Indexing allowed for production server only | [rating (1-5)] |
+| Intra-site / local search                   | [rating (1-5)] |
+| Account custodians are documented           | [rating (1-5)] |
+
+### Comments
+
+> AUTHOR NOTE: make any overall comments about the Website and documentation
+> infrastructure here.
+
+The following sections contain brief assessments of each element of the Website
+and documentation infrastructure rubric.
+
+> AUTHOR NOTE: for each heading below, discuss how well the in-scope items meet
+> these criteria. Keep in mind that much of the website infrastructure criteria
+> depend on the tools (static site generator, website framework and hosting,
+> analytics tools, etc.) and processes (project CI, release procedures,
+> governance, etc.) used to produce the documentation. (Criteria are copied from
+> criteria.md)
+
+#### Single-source requirement
+
+Source files for _all website pages_ should reside in a single repo. Among other
+problems, keeping source files in two places:
+
+- confuses contributors
+- requires you to keep two sources in sync
+- increases the likelihood of errors
+- makes it more complicated to generate the documentation from source files
+
+Ideally, all website files should be in the **website repo** itself.
+Alternatively, files should be brought into the website repo via [git
+submodules][git-submodules].
+
+If a project chooses to keep source files in multiple repos, they need a clearly
+documented strategy for managing mirrored files and new contributions.
+
+#### Minimal website requirements
+
+Listed here are the minimal website requirements for projects based on their
+[maturity level][maturity-level], either incubating or graduated. (These are the
+only two levels for which a tech docs analysis can be requested.)
+
+<!-- markdownlint-disable line-length -->
+
+| Criterion                     | Incubating Requirement                                  | Graduated Requirement                     |
+| ----------------------------- | ------------------------------------------------------- | ----------------------------------------- |
+| [Website guidelines]          | All guidelines satisfied                                | All guidelines satisfied                  |
+| **Docs analysis** (this)      | Requested through CNCF [service desk][cncf-servicedesk] | All follow-up actions addressed           |
+| **Project doc**: stakeholders | Roles identified and doc needs documented               | All stakeholder need identified           |
+| **Project doc**: hosting      | Hosted directly                                         | Hosted directly                           |
+| **Project doc**: user docs    | Comprehensive, addressing most stakeholder needs        | Fully addresses needs of key stakeholders |
+
+<!-- markdownlint-enable line-length -->
+
+[git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
+[maturity-level]:
+  https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
+[cncf-servicedesk]: https://servicedesk.cncf.io
+
+#### Usability, accessibility and devices
+
+Most CNCF websites are accessed from mobile and other non-desktop devices at
+least 10-20% of the time. Planning for this early in your website's design will
+be much less effort than retrofitting a desktop-first design.
+
+- Is the website usable from mobile?
+- Are doc pages readable?
+- Are all / most website features accessible from mobile -- such as the top-nav,
+  site search and in-page table of contents?
+- Might a [mobile-first] design make sense for your project?
+
+[mobile-first]:
+  https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
+
+Plan for suitable [accessibility][] measures for your website. For example:
+
+- Are color contrasts significant enough for color-impaired readers?
+- Are most website features usable using a keyboard only?
+- Does text-to-speech offer listeners a good experience?
+
+It is up to each project to set their own guidelines.
+
+[accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
+
+#### Branding and design
+
+CNCF seeks to support enterprise-ready open source software. A key aspect of
+this is branding and marketing.
+
+We evaluate on the following:
+
+- Is there an easily recognizable brand for the project (logo + color scheme)
+  clearly identifiable?
+- Is the brand used across the website consistently?
+- Is the website’s typography clean and well-suited for reading?
+
+#### Case studies/social proof
+
+One of the best ways to advertise an open source project is to show other
+organizations using it.
+
+We evaluate on the following:
+
+- Are there case studies available for the project and are they documented on
+  the website?
+- Are there user testimonials available?
+- Is there an active project blog?
+- Are there community talks for the project and are they present on the website?
+- Is there a logo wall of users/participating organizations?
+
+#### SEO, Analytics and site-local search
+
+SEO helps users find your project and it's documentation, and analytics helps
+you monitor site traffic and diagnose issues like page 404s. Intra-site search,
+while optional, can offer your readers a site-focused search results.
+
+We evaluate on the following:
+
+- Analytics:
+  - Is analytics enabled for the production server?
+  - Is analytics disabled for all other deploys?
+  - If your project used Google Analytics, have you migrated to GA4?
+  - Can Page-not-found (404) reports easily be generated from you site
+    analytics? Provide a sample of the site's current top-10 404s.
+- Is site indexing supported for the production server, while disabled for
+  website previews and builds for non-default branches?
+- Is local intra-site search available from the website?
+- Are the current custodian(s) of the following accounts clearly documented:
+  analytics, Google Search Console, site-search (such as Google CSE or Algolia)
+
+#### Maintenance planning
+
+Website maintenance is an important part of project success, especially when
+project maintainers aren’t web developers.
+
+We evaluate on the following:
+
+- Is your website tooling well supported by the community (i.e., Hugo with the
+  Docsy theme) or commonly used by CNCF projects (our recommended tech stack?)
+- Are you actively cultivating website maintainers from within the community?
+- Are site build times reasonable?
+- Do site maintainers have adequate permissions?
+
+#### Other
+
+- Is your website accessible via HTTPS?
+- Does HTTP access, if any, redirect to HTTPS?
+
+### Recommendations
+
+> AUTHOR NOTE: Write general recommendations based on the comments from the
+> previous section.
+
+#### Single-source requirement
+
+#### Minimal website requirements
+
+#### Usability, accessibility and devices
+
+#### Branding and design
+
+#### Case studies/social proof
+
+#### SEO, Analytics and site-local search
+
+#### Maintenance planning
+
+#### Other
+
+#### References and notes
+
+##### Rating values
+
+The numeric rating values used in this document are as follows
+
+1. Not present
+2. Needs improvement
+3. Meets standards
+4. Meets or exceeds standards
+5. Exemplary
+
+[criteria]: ../criteria.md
+[implementation]: ./implementation.md
+[issues list]: ./issues-list.md
+[project-website]: _PROJECT-WEBSITE_
+[Rating (1-5)]: #rating-values
+[rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
+[website guidelines]: ../../website-guidelines-checklist.md
+
