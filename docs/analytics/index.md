@@ -12,8 +12,7 @@ title: Analytics
     Google Analytics account. The first step is to make projects@cncf.io and
     Administrator of their existing GA account.
   - Request the creation of a new analytics property.
-- For instructions on how to setup [Google Analytics 4 (GA4)][ga4] for your
-  [Docsy][]-based website, see Adding Analytics.
+- For instructions on how to set up Google Analytics 4 (GA4) for your [Docsy]-based website, see Adding Analytics.
 
 > **Archived instructions**: for details on how to migrate from Universal
 > Analytics to GA4, see
