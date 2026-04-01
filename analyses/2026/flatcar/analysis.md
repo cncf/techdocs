@@ -54,8 +54,7 @@ The site's code is stored on the Flatcar GitHub repo.
 
 #### Out of scope
 
-Other Flatcar besides the flatcar-website:
-https://github.com/flatcar/flatcar-website.
+Other Flatcar documentation besides the flatcar-website.
 
 ### How this document is organized
 
