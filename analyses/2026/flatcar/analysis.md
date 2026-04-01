@@ -10,7 +10,7 @@ author: Bruce Hamilton (@iRaindrop)
 
 ## Introduction
 
-This document is an analysis the effectiveness and completeness of the
+This document is an analysis of the effectiveness and completeness of the
 [Flatcar](https://www.flatcar.org/docs/latest) open source software (OSS)
 project's documentation and website. It is funded by the CNCF Foundation as part
 of its overall effort to incubate, grow, and graduate open source cloud native
