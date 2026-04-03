@@ -92,8 +92,8 @@ behind the recommendations should read the section of this document pertaining
 to their area of concern:
 
 - [Project documentation](#project-documentation)
-- Contributor documentation
-- Website and documentation infrastructure
+- [Contributor documentation](#contributor-documentation)
+- [Website and documentation infrastructure](#website-and-infrastructure)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
@@ -373,7 +373,36 @@ sophistication where such verbiage would be suspicious.
 
 ### Recommendations
 
+The Flatcar documentation is naturally evolving into comprehensive and
+understandable guidance. Technical savvy readers are well suited to gather the
+information they need. New users can still find their path, but they need more
+context of the technologies and tools involved, why they're needed, and the
+environments they're used in.
+
 #### Information architecture
+
+High level recommendations for the top three tiers of the Flatcar documentation.
+The first node be a Getting Started, followed by several nodes devoted to
+operations that span several categories organized by functionality, and the last
+tier or group will be related content such as the Reference and Contributor
+Documentation. These recommendations are designed to be malleable.
+
+For a Getting Started node. Titles are preliminary.
+
+- Create an "Installation roadmap" page for users that enables them to determine
+  how they want to deploy containers with Flatcar installed. The starting points
+  are on-premise and cloud and many users will use both of them. This purpose of
+  this page is to provide users with a procedure for installation. Include the
+  following sections or subsections:
+  - Prerequisites regarding client operating systems including running VMs from
+    macOS and Windows.
+  - Prerequisites for the Quickstart.
+  - Any guidance on installing binaries directly or using programs like brew.
+
+- Create a "Configuration and Provisioning" that covers the coding of the YAML,
+  using Butane and employing other configurations.
+- Create a "Deployment" section, covering scenarios for Kubernetes, clustering
+  and distributed systems. Cover on-prem and cloud.
 
 #### New user content
 
