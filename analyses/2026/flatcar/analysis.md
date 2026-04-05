@@ -43,8 +43,8 @@ the technical documentation, and documentation for contributors and users on the
 Flatcar GitHub repository.
 
 The Flatcar website and documentation are written in Markdown and are compiled
-using the "static site" generator with the "theme" and served from "platform".
-The site's code is stored on the Flatcar GitHub repo.
+using the Hugo generator with the Flatcar theme and served from a GitHub
+repository. The site's code is stored on the Flatcar GitHub repo.
 
 #### In scope
 
@@ -117,11 +117,11 @@ be developing professional-quality documentation alongside the project code.
 
 | Criterion                  | [Rating (1-5)] |
 | -------------------------- | -------------- |
-| Information architecture   | [rating (1-5)] |
-| New user content           | [rating (1-5)] |
-| Content maintainability    | [rating (1-5)] |
-| Content creation processes | [rating (1-5)] |
-| Inclusive language         | [rating (1-5)] |
+| Information architecture   | 3              |
+| New user content           | 3              |
+| Content maintainability    | 4              |
+| Content creation processes | 4              |
+| Inclusive language         | 4              |
 
 ### Comments
 
@@ -343,15 +343,15 @@ repository, formatting, and style.
 - **Does your code release process account for documentation creation &
   updates?**
 
-Supported, but not a formalized process at this time.
+The team regularly updates content as the project is incubating.
 
 - **Who reviews and approves documentation pull requests?**
 
-Team members are determined.
+Maintainers delegate doc approval to experienced code contributors.
 
 - **Does the website have a clear owner/maintainer?**
 
-Team members are determined.
+Yes.
 
 ##### Inclusive language
 
@@ -368,8 +368,7 @@ those only "abort" would necessitate a fix on eight occurrences.
 
 - **Does the project use language like "simple", "easy", etc.?**
 
-No, the complexity of the content is a given, and the content assumes a level of
-sophistication where such verbiage would be suspicious.
+Yes, there are such occurrences to flag and rewrite.
 
 ### Recommendations
 
@@ -409,30 +408,14 @@ For a Getting Started node. Titles are preliminary.
   areas for Flatcar. While these could be under a broader umbrella, such as
   Operations, I think that nine or headings in the navigation bar is not too
   much, and speeds up discovery. Given a list of about 60 tools, technologies,
-  etc., Copilot devised the following categories with descriptions:
+  etc., Copilot devised the following categories:
 
-  Virtualization & Hypervisors Technologies used to run Flatcar as a VM.
+  Virtualization & Hypervisors Cloud & Hosting Platforms Bare Metal, Booting &
+  Installation Security & Compliance Security Storage & File systems System
+  Services & OS Internals Provisioning, Configuration & Automation Container &
+  Orchestration
 
-  Cloud & Hosting Platforms Providers where Flatcar can be deployed.
-
-  Bare Metal, Booting & Installation Tools and technologies involved in
-  provisioning, booting, or installing Flatcar.
-
-  Security & Compliance Security frameworks, encryption, authentication, and
-  compliance features.
-
-  Storage & Filesystems Filesystems, storage layers, and related tooling.
-
-  System Services & OS Internals Core OS components and Linux/Flatcar system
-  management.
-
-  Provisioning, Configuration & Automation Tools for configuring, deploying, or
-  automating Flatcar systems.
-
-  Container & Orchestration Ecosystem Container runtimes, orchestration systems,
-  and distributed components.
-
-Work with the team to devise the structure and keep to it!
+  Work with the team to devise the categories and keep to it!
 
 #### New user content
 
