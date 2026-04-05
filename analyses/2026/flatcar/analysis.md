@@ -2,7 +2,7 @@
 title: Flatcar Documentation Analysis
 tags: [Flatcar]
 created: 2026-02-26
-modified: 2026-02-31
+modified: 2026-04-04
 author: Bruce Hamilton (@iRaindrop)
 ---
 
@@ -398,13 +398,42 @@ For a Getting Started node. Titles are preliminary.
     macOS and Windows.
   - Prerequisites for the Quickstart.
   - Any guidance on installing binaries directly or using programs like brew.
+  - Create a "Configuration and Provisioning" page that covers the coding of the
+  YAML, using Butane and employing other configurations. Link from the Installation Roadmap.
+  - Create a "Deployment" page, covering scenarios for Kubernetes, clustering and
+  distributed systems. Cover on-prem and cloud. Link from the Installation Roadmap.
 
-- Create a "Configuration and Provisioning" that covers the coding of the YAML,
-  using Butane and employing other configurations.
-- Create a "Deployment" section, covering scenarios for Kubernetes, clustering
-  and distributed systems. Cover on-prem and cloud.
+- Devise the categories of tools, technologies, products, and terms pertinent areas for Flatcar. While these could be under a broader umbrella, such as Operations, I think that nine or headings in the navigation bar is not too much, and speeds up discovery. Given a list of about 60 tools, technologies, etc., Copilot devised the following categories with descriptions:
+
+  Virtualization & Hypervisors
+  Technologies used to run Flatcar as a VM.
+
+  Cloud & Hosting Platforms
+  Providers where Flatcar can be deployed.
+
+  Bare Metal, Booting & Installation
+  Tools and technologies involved in provisioning, booting, or installing Flatcar.
+
+  Security & Compliance
+  Security frameworks, encryption, authentication, and compliance features.
+
+  Storage & Filesystems
+  Filesystems, storage layers, and related tooling.
+
+  System Services & OS Internals
+  Core OS components and Linux/Flatcar system management.
+
+  Provisioning, Configuration & Automation
+  Tools for configuring, deploying, or automating Flatcar systems.
+
+  Container & Orchestration Ecosystem
+  Container runtimes, orchestration systems, and distributed components.
+
+Work with the team to devise the structure and keep to it!
 
 #### New user content
+
+Create the Getting Started node as described previously in Information Architecture.
 
 #### Content maintainability & site mechanics
 
