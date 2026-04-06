@@ -192,6 +192,14 @@ provider? Normally this can be deduced by the narrative, but starting a
 procedure with "In the VM window, use the following command to ..." or similar
 guidance.
 
+In pages with code examples, how-to topics, the narrative follows a casual and
+conversational flow, introducing the steps such as "First do this", show a block
+of code, followed by "Now do this", followed by the next block of code. While at
+first this tone may seem refreshing from sterile nature of technical
+documentation, it inhibits learning because it inhibits scanning and the ability
+to reference the exact steps. It's easier to go back a numbered step in a
+procedure that to read the narrative again to find that step.
+
 It should be noted that a new proposed structure is proposed by the team, with
 the top nodes as follows:
 
@@ -368,7 +376,9 @@ those only "abort" would necessitate a fix on eight occurrences.
 
 - **Does the project use language like "simple", "easy", etc.?**
 
-Yes, there are such occurrences to flag and rewrite.
+Yes, there are about 53 hits of "easy" to replace. The word "simple" is used,
+but the context is a simpler piece of code or process rather than a task being
+simple.
 
 ### Recommendations
 
@@ -386,13 +396,12 @@ operations that span several categories organized by functionality, and the last
 tier or group will be related content such as the Reference and Contributor
 Documentation. These recommendations are designed to be malleable.
 
-For a Getting Started node. Titles are preliminary.
-
-- Create an "Installation roadmap" page for users that enables them to determine
-  how they want to deploy containers with Flatcar installed. The starting points
-  are on-premise and cloud and many users will use both of them. This purpose of
-  this page is to provide users with a procedure for installation. Include the
-  following sections or subsections:
+- Create a Getting Started node with the following sections:
+  - Create an "Installation roadmap" page for users that enables them to
+    determine how they want to deploy containers with Flatcar installed. The
+    starting points are on-premise and cloud and many users will use both of
+    them. This purpose of this page is to provide users with a procedure for
+    installation. Include the following sections or subsections:
   - Prerequisites regarding client operating systems including running VMs from
     macOS and Windows.
   - Prerequisites for the Quickstart.
@@ -404,29 +413,48 @@ For a Getting Started node. Titles are preliminary.
     and distributed systems. Cover on-prem and cloud. Link from the Installation
     Roadmap.
 
-- Devise the categories of tools, technologies, products, and terms pertinent
-  areas for Flatcar. While these could be under a broader umbrella, such as
-  Operations, I think that nine or headings in the navigation bar is not too
-  much, and speeds up discovery. Given a list of about 60 tools, technologies,
-  etc., Copilot devised the following categories:
-
-  Virtualization & Hypervisors Cloud & Hosting Platforms Bare Metal, Booting &
-  Installation Security & Compliance Security Storage & File systems System
-  Services & OS Internals Provisioning, Configuration & Automation Container &
-  Orchestration
+- For the middle functional nodes of the table of contents, devise the
+  categories of tools, technologies, products, and terms pertinent areas for
+  Flatcar. While these could be under a broader umbrella, such as Operations, I
+  think that nine or headings in the navigation bar is not too much, and speeds
+  up discovery. Given a list of about 60 tools, technologies, etc., Copilot
+  devised the following categories:
+  - Virtualization and Hypervisors
+  - Cloud and Hosting Platforms
+  - Bare Metal Booting and Installation
+  - Security and Compliance
+  - File systems
+  - System Services and OS Internals
+  - Provisioning Configuration and Automation
+  - Container and Orchestration
 
   Work with the team to devise the categories and keep to it!
 
-#### New user content
+- Update the top Overview page to accommodate an introduction to the overall
+  documentation to guide users into determining their happy path to accomplish
+  their Flatcar objectives.
 
-Create the Getting Started node as described previously in Information
-Architecture.
+#### Content maintainability and site mechanics
 
-#### Content maintainability & site mechanics
+- Edit each procedural topic, page with code examples, into a semiformal How-to
+  topic with numbered steps. While the conversational flow is inviting, it
+  inhibits scanning, predictability, and easily returning to a particular code
+  block. No need to go granular, but at least have then main steps numbered.
 
-#### Content creation processes
+- For most, but not every, code block make user the user has the right context
+  of where the code is being run. Preceded each step with clauses such as the
+  following:
+  - On your local machine, ...
+  - Inside the Flatcar instance, ...
+  - SSH into the instance and then run ...
 
-#### Inclusive language
+- Reformat all code blocks to have a copy button. Having to manually select code
+  can pick up unwanted characters and is more difficult on mobile devices.
+
+#### Inclusive language and tone
+
+- Consider replacing the eight occurrences of "abort".
+- Remove occurrences of "easy" where it's implied that a task is easy.
 
 ## Contributor documentation
 
