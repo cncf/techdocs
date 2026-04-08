@@ -54,7 +54,7 @@ repository. The site's code is stored on the Flatcar GitHub repo.
 
 #### Out of scope
 
-Any Flatcar content that is not accesed by the documentation URL,
+Any Flatcar content that is not accessed by the documentation URL,
 https://www.flatcar.org/docs/latest,is outside the scope of this analysis. The
 FAQ and Blog are outside the scope, however an argument can be made to keep an
 up-to-date FAQ in the core documentation.
