@@ -54,7 +54,10 @@ repository. The site's code is stored on the Flatcar GitHub repo.
 
 #### Out of scope
 
-Other Flatcar documentation besides the flatcar-website.
+Any Flatcar content that is not accesed by the documentation URL,
+https://www.flatcar.org/docs/latest,is outside the scope of this analysis. The
+FAQ and Blog are outside the scope, however an argument can be made to keep an
+up-to-date FAQ in the core documentation.
 
 ### How this document is organized
 
@@ -119,7 +122,7 @@ be developing professional-quality documentation alongside the project code.
 | -------------------------- | -------------- |
 | Information architecture   | 3              |
 | New user content           | 3              |
-| Content maintainability    | 4              |
+| Content maintainability    | 3              |
 | Content creation processes | 4              |
 | Inclusive language         | 4              |
 
@@ -135,92 +138,83 @@ different paths for new users depending on their environment.
 The following comments regard the top-tier nodes in the current table of
 contents:
 
-- The top overview page contains headings with short paragraphs and links that
-  provide additional views and categorization of Flatcar topics. These links are
-  not necessarily parallel with the table of contents hierarchy.
-- The "Installing" node Overview page introduces the needed guidance for the
-  provisioning and configuration of Flatcar, but it also contains getting
-  started code for a VM installation. That content is better served by a Getting
-  Started node or the Learning Series node.
+- The top "Flatcar Container Linux" page contains references and links that
+  appear to an alternate version of the table of contents. While its good to
+  provide quick links, the user wonders whether the TOC node reference the same
+  content, or if the links in the overview are supplemental.
 - The "Installing" node contains the large "Cloud Providers" node, that might be
   better as top tier node, same with "Bare Metal". The team agrees that
-  "Community supported platforms" could be merged into the Cloud Providers node.
-  The installation node should be primarily addressing all the new user paths,
-  providing an installation roadmap or strategy. The "Learning Series" node,
-  introduced into the documentation recently, outlines the key steps for
-  installing, configuring, and managing Flatcar conveying the life cycle. It
-  would be good for the top nodes to have a similar flow.
+  "Community supported platforms" could be merged into the "Cloud Providers"
+  node.
+- The installation node should address all the new user paths, providing an
+  installation roadmap or strategy. The "Learning Series" node, introduced into
+  the documentation recently, outlines the key steps for installing,
+  configuring, and managing Flatcar conveying the life cycle. It would be good
+  for the top nodes to have a similar flow.
 - The "Provisioning Tools" title is descriptive, but its unclear how other areas
   of the docs relate to this section.
-- The "Nebraska" node is about updates, but it should convey the functionality
-  and its location is unusual prominence.
-- The "Setup and Operations" node is too much of a wide net in its title. How
+- The "Nebraska" node is about updates, but a top node should convey the
+  functionality rather than a product name.
+- The "Setup and Operations" node casts too much of a wide net in its title. How
   does "setup" differ from installation? The node contains several important
   content areas that should be more discoverable, for instance:
   - "Managing Clusters" might be better at a higher level because it's an
-    initial evaluation of whether to deploy Flatcar.
+    initial evaluation in deploying Flatcar.
   - The Storage and Security nodes are typically at a higher level.
-  - The systemd is about core OS management.
-- The "Container Runtimes" node is an expected node focused on containers and
-  clusters. An argument could be made to elevate "Getting Started with
-  Kubernetes" and "High Availability Kubernetes" to its own node, as Flatcar has
-  its optimization benefits for Kubernetes deployment.
+  - The systemd is about core OS management, which should be reflected in its
+    title.
+- The "Container Runtimes" node is expected to focus on containers and clusters.
+  An argument could be made to elevate "Getting Started with Kubernetes" and
+  "High Availability Kubernetes" to its own node, as Flatcar has its
+  optimization benefits for Kubernetes deployment.
 - The "Migrating from CoreOS" node might be better placed earlier or within an
   Installation node, as it is an installation scenario.
-- The "Reference" node contains expected look-up information such as "Constance
-  and IDs" and "Supply chain security mechanisms" but these sections could have
-  better placement:
+- The "Reference" node contains expected look-up information such as "Constants
+  and IDs" and "Supply chain security mechanisms" but the following sections
+  could have better placement:
   - "Integrations" could be incorporated into the Cloud Providers documentation.
   - "Developer Guides" contains conceptual content typically not found in a
     Reference section, so "Developer Guides" or something more descriptive like
     "Flatcar Development Guides" should be a top-tier node.
-- The "How to Contribute" node is well-placed has the expected content.
+- The "How to Contribute" node is well-placed and has the expected content.
 
 The documentation also includes an FAQ, accessible from the top banner of the
-home page. It has some content that would be good to verify that its in the main
-docs, such as historical context and how images are updated. Conversely, there
-should be a few top-of-mind installation and support FAQ items derived from the
-docs.
+home page. This FAQ has some content that would be prudent to verify that it's
+also in the docs, such as historical context and how images are updated.
+Conversely, there should be a few top-of-mind installation and support FAQ items
+derived from the docs.
 
-Code blocks are different from other documentation sets as they are not bordered
-or have a different fill background, don't have a copy button, and the language
-is not noted.
+Code blocks are different from other documentation sets as they are not
+bordered, don't have a different fill background, don't have a copy button, and
+the language is not indicated.
 
 New users might not be sure of the context for a given block of code. Is the
 Linux prompt in a VM, in a client computer, or in a CLI session with a cloud
-provider? Normally this can be deduced by the narrative, but starting a
+provider? Normally this can be deduced by the narrative, such as starting a
 procedure with "In the VM window, use the following command to ..." or similar
 guidance.
 
-In pages with code examples, how-to topics, the narrative follows a casual and
-conversational flow, introducing the steps such as "First do this", show a block
-of code, followed by "Now do this", followed by the next block of code. While at
-first this tone may seem refreshing from sterile nature of technical
-documentation, it inhibits learning because it inhibits scanning and the ability
-to reference the exact steps. It's easier to go back a numbered step in a
-procedure that to read the narrative again to find that step.
+In pages with code examples the narrative follows a casual and conversational
+flow, introducing the steps such as "First do this", show a block of code,
+followed by "Now do this", followed by the next block of code. While at first
+this tone may seem refreshing from sterile nature of technical documentation, it
+inhibits learning because it inhibits scanning and the ability to reference the
+exact steps. It's easier to go back a numbered step in a procedure that to read
+the narrative again to find that step.
 
-It should be noted that a new proposed structure is proposed by the team, with
-the top nodes as follows:
-
-Flatcar Concepts and Quick Start Configuration and Provisioning Deploying to
-Public Cloud, Private Cloud, and Bare Metal Kubernetes In-place updates and
-roll-backs The Nebraska update server Customizing and Extending the OS image
-Troubleshooting Developer Guides Legacy Information
-
-Essentially all the pertinent areas of knowledge to install and run Flatcar have
-been identified and documented. Then just need to be better organized. The next
+Essentially, the pertinent areas of knowledge to install and run Flatcar have
+been identified and documented. They just need to be better organized. The next
 step is to structure the documentation so that it meets these objectives:
 
 - The node and topic titles provide expected guidance, such as "Getting
   Started", with nodes and sections organized for precise purposes, rather than
   headings that serve as broad categories such as "Setup and Operations".
-- The structure provides the expected flow and orientation of users so that they
-  can identify a pathway for learning about and deploying Flatcar efficiently
-  and optimally.
+- The structure provides the expected flow and orientation so that users can
+  identify a pathway for learning about and deploying Flatcar efficiently and
+  optimally.
 - The structure provides effective navigation and identification of the tools
-  and technologies so that users efficiently learn about the ones they need to
-  use.
+  and technologies so that users can identify the ones they need to learn about
+  and use.
 
 #### Information architecture
 
@@ -237,14 +231,15 @@ and configuring Flatcar.
 - **Is the documentation feature complete?**
 
   Yes, given that Flatcar is essentially an operating system and new features
-  and capabilities will be apparent and easily referenced.
+  and capabilities would be readily documented. Those features and areas need to
+  be continuously updated.
 
 - **Are there step-by-step instructions (tasks, tutorials) documented for
   features?**
 
   Procedures, mainly invoking bash commands, are introduced informally and do
-  not have the typical Microsoft style of numbered steps that read "Use the
-  following command to ..." verbiage. It would be easy to rewrite for meet that
+  not follow the typical style of numbered steps that read "Use the following
+  command to ..." verbiage. It would be easy to rewrite for meet that
   conformity.
 
 - **Are there any key features which are documented but missing task
@@ -256,23 +251,19 @@ and configuring Flatcar.
 - **Are tasks clearly named according to user goals providing a happy path for
   users to get their tasks accomplished?**
 
-  Not currently. But the needed content areas are established and just need to
-  be coordinated into a "Flatcar installation roadmap" for most paths.
+  Not currently. The content areas are established and just need to be
+  coordinated into a "Flatcar installation roadmap" for most user paths.
 
 - **If the documentation does not suffice, is there a clear escalation path for
   users needing more help? (FAQ)**
 
-  There is an FAQ that needs updating.
+  The current FAQ does not provide this information.
 
 - **If the product exposes an API, is there a complete reference?**
 
   There is a Developer Guide for building Flatcar Container Linux from source
-  and/or in modifying the OS. The SDK is a containerized Software Development
-  Kit that enables developers to customize and build their own Flatcar Container
-  Linux OS images.
-
-  The SDK is not an API with function calls, but rather a kit of scripts and
-  tools.
+  and/or in modifying the OS. The SDK is not an API with function calls, but
+  rather a kit of scripts and tools.
 
 ##### New user content
 
@@ -289,14 +280,15 @@ Heading 3 heading "Getting started" in the overview.
 Procedures are not formal step-by-steps, but rather sufficient descriptions of
 the purpose and result of running the provided code example.
 
-Even if the new user does not know anything about the technologies, it can still
-be logical and understandable by looking up terms.
+Even if the new user does not know anything about the technologies, the guidance
+still works but would be helped greatly with numbered steps.
 
 - **If needed, are multiple OSes documented?**
 
-Users are typically running a Linux machine, or a VM running on Windows or
-MacOS. It would be beneficial to acquaint the user with any client OS guidance,
-particularly when installing tools and images.
+Users are typically running a Linux machine, or a Virtual Machine running on
+Windows or macOS. It would be beneficial to acquaint the user with any specific
+client guidance, particularly when installing tools and images. For example,
+brew may not install all components one gets from directly installing binaries.
 
 - **Do users know where to go after reading the getting started guide?**
 
@@ -390,35 +382,36 @@ environments they're used in.
 
 #### Information architecture
 
-High level recommendations for the top three tiers of the Flatcar documentation.
-The first node be a Getting Started, followed by several nodes devoted to
-operations that span several categories organized by functionality, and the last
-tier or group will be related content such as the Reference and Contributor
-Documentation. These recommendations are designed to be malleable.
+The high-level recommendations follow a three tier approach to Flatcar
+documentation. The first tier (node) should be a Getting Started, followed by
+several nodes devoted to operations that span several categories organized by
+functionality, and the last tier or group will be related content such as the
+Reference and Contributor Documentation. These recommendations are designed to
+be malleable.
 
 - Create a Getting Started node with the following sections:
   - Create an "Installation roadmap" page for users that enables them to
-    determine how they want to deploy containers with Flatcar installed. The
-    starting points are on-premise and cloud and many users will use both of
-    them. This purpose of this page is to provide users with a procedure for
-    installation. Include the following sections or subsections:
+    determine how they want to deploy containers with Flatcar. The starting
+    points for the discussion are whether the user comes from an on-prem or
+    cloud environment and many users will use both. This purpose of this page is
+    to provide users with a procedure for installation.
   - Prerequisites regarding client operating systems including running VMs from
     macOS and Windows.
   - Prerequisites for the Quickstart.
   - Any guidance on installing binaries directly or using programs like brew.
-  - Create a "Configuration and Provisioning" page that covers the coding of the
-    YAML, using Butane and employing other configurations. Link from the
-    Installation Roadmap.
+  - Create a "Configuration and Provisioning" page that covers the YAML coding,
+    using Butane and employing other configurations. Link this page from the
+    "Installation roadmap".
   - Create a "Deployment" page, covering scenarios for Kubernetes, clustering
-    and distributed systems. Cover on-prem and cloud. Link from the Installation
-    Roadmap.
+    and distributed systems. Cover on-prem and cloud. Link from the
+    "Installation roadmap".
 
 - For the middle functional nodes of the table of contents, devise the
   categories of tools, technologies, products, and terms pertinent areas for
-  Flatcar. While these could be under a broader umbrella, such as Operations, I
-  think that nine or headings in the navigation bar is not too much, and speeds
-  up discovery. Given a list of about 60 tools, technologies, etc., Copilot
-  devised the following categories:
+  Flatcar. While these could be under a broader umbrella, such as Operations,
+  nine or headings in the navigation bar is not too much, and speeds up
+  discovery. Given a list of about 60 tools, technologies, etc., Copilot devised
+  the following categories:
   - Virtualization and Hypervisors
   - Cloud and Hosting Platforms
   - Bare Metal Booting and Installation
@@ -434,22 +427,26 @@ Documentation. These recommendations are designed to be malleable.
   documentation to guide users into determining their happy path to accomplish
   their Flatcar objectives.
 
+- Add at least one architectural diagram to top overviews that depict a
+  container, a container with Flatcar, and perhaps nodes and clusters.
+
 #### Content maintainability and site mechanics
 
 - Edit each procedural topic, page with code examples, into a semiformal How-to
   topic with numbered steps. While the conversational flow is inviting, it
-  inhibits scanning, predictability, and easily returning to a particular code
-  block. No need to go granular, but at least have then main steps numbered.
+  inhibits scanning, predictability, and troubleshooting when needed to
+  reference a particular code block. No need to go granular, but at least have
+  then main steps numbered.
 
-- For most, but not every, code block make user the user has the right context
+- For most, but not every, code block make sure the user has the right context
   of where the code is being run. Preceded each step with clauses such as the
   following:
-  - On your local machine, ...
+  - On your local machine, use the following command to...
   - Inside the Flatcar instance, ...
   - SSH into the instance and then run ...
 
 - Reformat all code blocks to have a copy button. Having to manually select code
-  can pick up unwanted characters and is more difficult on mobile devices.
+  can pick up unwanted characters and is also more difficult on mobile devices.
 
 #### Inclusive language and tone
 
