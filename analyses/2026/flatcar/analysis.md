@@ -273,29 +273,30 @@ specifically for them. We evaluate on the following:
 
 - **Is “getting started” or similar clearly labeled?**
 
-The "Learning Series" is a well-documented getting started guide. There is a
-Heading 3 heading "Getting started" in the overview.
+  The "Learning Series" is a well-documented getting started guide. There is a
+  Heading 3 heading "Getting started" in the overview.
 
 - **Is installation documented step-by-step?**
 
-Procedures are not formal step-by-steps, but rather sufficient descriptions of
-the purpose and result of running the provided code example.
+  Procedures are not formal step-by-steps, but rather sufficient descriptions of
+  the purpose and result of running the provided code example.
 
-Even if the new user does not know anything about the technologies, the guidance
-still works but would be helped greatly with numbered steps.
+  Even if the new user does not know anything about the technologies, the
+  guidance still works but would be helped greatly with numbered steps.
 
 - **If needed, are multiple OSes documented?**
 
-Users are typically running a Linux machine, or a Virtual Machine running on
-Windows or macOS. It would be beneficial to acquaint the user with any specific
-client guidance, particularly when installing tools and images. For example,
-brew may not install all components one gets from directly installing binaries.
+  Users are typically running a Linux machine, or a Virtual Machine running on
+  Windows or macOS. It would be beneficial to acquaint the user with any
+  specific client guidance, particularly when installing tools and images. For
+  example, brew may not install all components one gets from directly installing
+  binaries.
 
 - **Do users know where to go after reading the getting started guide?**
 
-Intuitively perhaps, as the Learning Services provides sufficient content to get
-Flatcar instances running. It would be good to have listings of next steps for
-the various deployment scenarios.
+  Intuitively perhaps, as the Learning Services provides sufficient content to
+  get Flatcar instances running. It would be good to have listings of next steps
+  for the various deployment scenarios.
 
 - **Is your new user content clearly signposted on your site’s homepage or at
   the top of your information architecture?**
@@ -305,8 +306,8 @@ Other than being a top level node in the table of contents, no.
 - **Is there sample code or other example content that can easily be
   copy-pasted?**
 
-Yes, most pages have code samples, but currently the UI does not show code
-example blocks with copy buttons. The code is simply in a different font.
+  Yes, most pages have code samples, but currently the UI does not show code
+  example blocks with copy buttons. The code is simply in a different font.
 
 ##### Content maintainability & site mechanics
 
@@ -317,16 +318,16 @@ We evaluate on the following:
 
 - **Is your documentation searchable?**
 
-Yes, the home page has a search bar where any results populate a dropdown for
-selection.
+  Yes, the home page has a search bar where any results populate a dropdown for
+  selection.
 
 - **Are you planning for localization/internationalization?**
 
-There are currently no plans for localization.
+  There are currently no plans for localization.
 
 - **Do you have a clearly documented method for versioning your content?**
 
-Being an incubating project, the content is not versioned at this time.
+  Being an incubating project, the content is not versioned at this time.
 
 ##### Content creation processes
 
@@ -338,21 +339,21 @@ We evaluate on the following:
 - **Is there a clearly documented (ongoing) contribution process for
   documentation?**
 
-Yes. There is a 'How to contribute' node with guidance for using the GitHub
-repository, formatting, and style.
+  Yes. There is a 'How to contribute' node with guidance for using the GitHub
+  repository, formatting, and style.
 
 - **Does your code release process account for documentation creation &
   updates?**
 
-The team regularly updates content as the project is incubating.
+  The team regularly updates content as the project is incubating.
 
 - **Who reviews and approves documentation pull requests?**
 
-Maintainers delegate doc approval to experienced code contributors.
+  Maintainers delegate doc approval to experienced code contributors.
 
 - **Does the website have a clear owner/maintainer?**
 
-Yes.
+  Yes.
 
 ##### Inclusive language
 
@@ -369,9 +370,9 @@ those only "abort" would necessitate a fix on eight occurrences.
 
 - **Does the project use language like "simple", "easy", etc.?**
 
-Yes, there are about 53 hits of "easy" to replace. The word "simple" is used,
-but the context is a simpler piece of code or process rather than a task being
-simple.
+  Yes, there are about 53 hits of "easy" to replace. The word "simple" is used,
+  but the context is a simpler piece of code or process rather than a task being
+  simple.
 
 ### Recommendations
 
@@ -461,23 +462,15 @@ be developing professional-quality documentation alongside the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
-| Communication methods documented          | [rating (1-5)] |
-| Beginner friendly issue backlog           | [rating (1-5)] |
-| “New contributor” getting started content | [rating (1-5)] |
-| Project governance documentation          | [rating (1-5)] |
+| Communication methods documented          | 3              |
+| Beginner friendly issue backlog           | 3              |
+| “New contributor” getting started content | 3              |
+| Project governance documentation          | 3              |
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Contributor Documentation
-> here.
-
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
-
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the contributor documentation might
-> be contained in the documentation repository. (Criteria are copied from
-> criteria.md)
 
 #### Communication methods documented
 
@@ -486,22 +479,54 @@ to reach you.
 
 We evaluate on the following:
 
-- Is there a Slack/Discord/Discourse/etc. community and is it prominently linked
-  from your website?
-- Is there a direct link to your GitHub organization/repository?
-- Are weekly/monthly project meetings documented? Is it clear how someone can
-  join those meetings?
+- **Is there a Slack or similar resource and is it linked from your website?**
+
+  Yes, however these chat and social media links are on the README file of the
+  [Flatcar GitHub repository](https://github.com/flatcar/Flatcar).
+
+  Chats:
+  - Matrix: https://app.element.io/#/room/#flatcar:matrix.org
+  - Slack: https://kubernetes.slack.com/archives/C03GQ8B5XNJ Social media:
+  - Mastodon: https://hachyderm.io/@flatcar
+  - X: https://x.com/flatcar
+
+- **Is there a direct link to your GitHub organization/repository?**
+
+  Not from the website.
+
+- **Are weekly/monthly project meetings documented? Is it clear how someone can
+  join those meetings?**
+
+  Yes. Project planning, meetings, and discussions are available on the GitHub
+  repository: https://github.com/flatcar/Flatcar/discussions and
+  https://github.com/flatcar/Flatcar/discussions/2025.
+
 - Are mailing lists documented?
 
 #### Beginner-friendly issue backlog
 
 We evaluate on the following:
 
-- Are docs issues well-triaged?
-- Is there a clearly marked way for new contributors to make code or
-  documentation contributions (i.e. a “good first issue” label)?
-- Are issues well-documented (i.e., more than just a title)?
-- Are issues maintained for staleness?
+- **Are docs issues well-triaged?**
+
+  Yes, this URL shows doc issues being tracked in GitHub:
+  https://github.com/flatcar/Flatcar/issues?q=state%3Aopen%20label%3Akind%2Fdocs
+
+- **Is there a clearly marked way for new contributors to make code or
+  documentation contributions (i.e. a “good first issue” label)?**
+
+  Each page has these two links at the bottom:
+  - An `Edit this page` link opens the page for editing in GitHub if a fork
+    exists, otherwise shows the option to fork the repository.
+  - A `File documentation issue` link opens a new GitHub issue.
+
+- **Are issues well-documented (i.e., more than just a title)?**
+
+  Yes, most issues are thoroughly described with detailed proposed solutions.
+
+- **Are issues maintained for staleness?**
+
+  Generally, yes.
 
 #### New contributor getting started content
 
