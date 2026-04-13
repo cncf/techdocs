@@ -536,9 +536,26 @@ in easily?
 
 We evaluate on the following:
 
-- Do you have a community repository or section on your website?
-- Is there a document specifically for new contributors/your first contribution?
-- Do new users know where to get help?
+- **Do you have a community repository or section on your website?**
+
+  Not currently.
+
+- **Is there a document specifically for new contributors/your first
+  contribution?**
+
+  Yes. There is a "How to contribute" node at the bottom of the navigation tree,
+  and contains guidance on making pull requests in the Flatcar GitHub
+  repository. Also included is guidance style and formatting with links to style
+  guides.
+
+  https://www.flatcar.org/docs/latest/contribute/
+
+- **Do new users know where to get help?**
+
+  That would be Flatcar's Slack and Matrix chat channels. That information is
+  available in the README for Flatcar's GitHub repository:
+
+  https://github.com/flatcar/Flatcar?tab=readme-ov-file
 
 #### Project governance documentation
 
