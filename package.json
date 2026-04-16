@@ -37,6 +37,7 @@
     "docusaurus": "docusaurus",
     "fix:format": "npm run _check:format -- --write",
     "fix": "npm run seq -- $(npm -s run _list:fix:*)",
+    "postinstall": "node scripts/postinstall-webpackbar-notice.mjs",
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run docus:serve",
@@ -67,8 +68,14 @@
     "prettier": "^3.8.3",
     "typescript": "~6.0.2"
   },
+  "//": "TEMP overrides (webpackbar): remove after @docusaurus/* ships webpackbar ^7 — https://github.com/facebook/docusaurus/issues/11923",
+  "overrides": {
+    "@docusaurus/bundler": {
+      "webpackbar": "^7.0.0"
+    }
+  },
   "private": true,
-  "spelling": "cSpell:ignore ACMR docus HTMLTEST loglevel -",
+  "spelling": "cSpell:ignore ACMR docus HTMLTEST loglevel webpackbar -",
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
