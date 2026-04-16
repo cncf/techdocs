@@ -8,7 +8,7 @@ jobs:
     name: FILE FORMAT
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/npm-ci-via-cached-nvmrc
       - run: npm run check:format
 
@@ -16,6 +16,6 @@ jobs:
     name: MARKDOWN linter
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./.github/actions/npm-ci-via-cached-nvmrc
       - run: npm run check:markdown
