@@ -462,10 +462,10 @@ be developing professional-quality documentation alongside the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
-| Communication methods documented          | 3              |
-| Beginner friendly issue backlog           | 3              |
-| “New contributor” getting started content | 3              |
-| Project governance documentation          | 3              |
+| Communication methods documented          |        4       |
+| Beginner friendly issue backlog           |        4       |
+| “New contributor” getting started content |        4       |
+| Project governance documentation          |        4       |
 
 ### Comments
 
@@ -501,7 +501,14 @@ We evaluate on the following:
   repository: https://github.com/flatcar/Flatcar/discussions and
   https://github.com/flatcar/Flatcar/discussions/2025.
 
-- Are mailing lists documented?
+  Meeting info is also noted in the [Community Meetings](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#community-meetings) section of the Contribution Guidelines.
+
+- **Are mailing lists documented?**
+
+  Yes, in the README of the [Flatcar GitHub repository](https://github.com/flatcar/Flatcar/tree/main?tab=readme-ov-file#mailing-lists) these mailing lists are noted:
+
+  Flatcar Users: https://groups.google.com/g/flatcar-linux-user
+  Flatcar Devs: https://groups.google.com/g/flatcar-linux-dev
 
 #### Beginner-friendly issue backlog
 
@@ -543,12 +550,12 @@ We evaluate on the following:
 - **Is there a document specifically for new contributors/your first
   contribution?**
 
-  Yes. There is a "How to contribute" node at the bottom of the navigation tree,
+  Yes. There is a [How to contribute]( https://www.flatcar.org/docs/latest/contribute/) node at the bottom of the navigation tree,
   and contains guidance on making pull requests in the Flatcar GitHub
   repository. Also included is guidance style and formatting with links to style
   guides.
 
-  https://www.flatcar.org/docs/latest/contribute/
+  In addition to the website, there is guidance for contributors on the README page of the Flatcar GitHub repository, in [Participate and Contribute](https://github.com/flatcar/Flatcar/tree/main?tab=readme-ov-file#participate-and-contribute) section.
 
 - **Do new users know where to get help?**
 
@@ -563,7 +570,9 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-- Is project governance clearly documented?
+- **Is project governance clearly documented?**
+
+  Yes, [Flatcar Project Governance](https://github.com/flatcar/Flatcar/blob/main/governance.md) is well documented.
 
 ### Recommendations
 
