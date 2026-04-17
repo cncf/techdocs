@@ -26,7 +26,12 @@ const config: Config = {
   projectName: 'techdocs',
 
   onBrokenLinks: 'warn', // TODO: 'error' or 'throw' once we've fixed all links
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   trailingSlash: true,
 
