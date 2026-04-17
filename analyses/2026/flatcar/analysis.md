@@ -461,10 +461,10 @@ be developing professional-quality documentation alongside the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
-| Communication methods documented          | 4              |
-| Beginner friendly issue backlog           | 4              |
-| “New contributor” getting started content | 4              |
-| Project governance documentation          | 4              |
+| Communication methods documented          |        4       |
+| Beginner friendly issue backlog           |        4       |
+| “New contributor” getting started content |        4       |
+| Project governance documentation          |        4       |
 
 ### Comments
 
