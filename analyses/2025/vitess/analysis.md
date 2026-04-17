@@ -1034,6 +1034,12 @@ TBD
 
 No recommendations.
 
+## Companion documents
+
+Separate implementation and issues-list documents are not yet available for this
+analysis. Use this page's recommendations and notes as the current source for
+follow-up work.
+
 ## References and notes
 
 ### Rating values
@@ -1049,8 +1055,8 @@ The numeric rating values used in this document are as follows:
 ### References
 
 [criteria]: ../../docs/analysis/criteria.md
-[implementation]: ./implementation.md?no-link-check
-[issues list]: ./issues-list.md?no-link-check
+[implementation]: #companion-documents
+[issues list]: #companion-documents
 [project-doc-website]: https://vitess.io/docs/
 [project-website]: https://vitess.io/
 [Rating (1-5)]: #rating-values

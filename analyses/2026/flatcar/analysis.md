@@ -6,7 +6,8 @@ modified: 2026-04-04
 author: Bruce Hamilton (@iRaindrop)
 ---
 
-<!-- markdownlint-disable no-duplicate-heading -->
+<!-- markdownlint-disable line-length -->
+<!-- markdownlint-disable no-duplicate-heading link-image-reference-definitions -->
 
 ## Introduction
 
@@ -25,9 +26,9 @@ efforts.
 
 This document was written to analyze the current state of Flatcar documentation.
 It aims to provide project leaders with an informed understanding of potential
-problems in current project documentation. A second **implementation** document
-outlines an actionable plan for improvement. A third document is an **issues
-list** of issues to be added to the project documentation repository. These
+problems in current project documentation. A second [implementation] document
+outlines an actionable plan for improvement. A third document is an [issues
+list] of issues to be added to the project documentation repository. These
 issues can be taken up by contributors to improve the documentation.
 
 This document:
@@ -55,7 +56,7 @@ repository. The site's code is stored on the Flatcar GitHub repo.
 #### Out of scope
 
 Any Flatcar content that is not accessed by the documentation URL,
-https://www.flatcar.org/docs/latest,is outside the scope of this analysis. The
+https://www.flatcar.org/docs/latest, is outside the scope of this analysis. The
 FAQ and Blog are outside the scope, however an argument can be made to keep an
 up-to-date FAQ in the core documentation.
 
@@ -88,7 +89,7 @@ into a series of issues and entered as GitHub project-doc-website/issues.
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the **implementation plan** and **issues list**.
+read the [implementation][] plan and [issues list][].
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -724,6 +725,12 @@ We evaluate on the following:
 
 #### Other
 
+#### Companion documents
+
+Separate implementation and issues-list documents are not yet available for this
+analysis. Use this page's recommendations and notes as the current source for
+follow-up work.
+
 #### References and notes
 
 ##### Rating values
@@ -736,10 +743,10 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
-[implementation]: ./implementation.md
-[issues list]: ./issues-list.md
+[criteria]: /docs/analysis/criteria.md
+[implementation]: #companion-documents
+[issues list]: #companion-documents
 [project-website]: _PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[website guidelines]: /docs/website-guidelines-checklist.md

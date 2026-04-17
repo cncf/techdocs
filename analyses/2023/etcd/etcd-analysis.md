@@ -7,7 +7,9 @@ author: Dave Welsch (@dwelsch-esi)
 cSpell:ignore: Welsch dwelsch
 ---
 
-# Introduction
+<!-- markdownlint-disable line-length no-duplicate-heading no-emphasis-as-heading link-image-reference-definitions -->
+
+## Introduction
 
 This document analyzes the effectiveness and completeness of the [etcd][etcd-io]
 open source software (OSS) project's documentation and website. It is funded by
@@ -19,7 +21,7 @@ prerequisite for program graduation. The documentation analysis is the first
 step of a CNCF process aimed at assisting projects with their documentation
 efforts.
 
-## Purpose
+### Purpose
 
 This document was written to analyze the current state of etcd documentation. It
 aims to provide project leaders with an informed understanding of potential
@@ -35,7 +37,7 @@ This document:
   actionable suggestions and recommendations for overall organization and
   presentation of documentation
 
-## Scope of analysis
+### Scope of analysis
 
 The documentation discussed here includes the entire contents of the website
 (which contains the technical docs), as well as documentation for contributors
@@ -57,7 +59,7 @@ Netlify platform. The site's code is stored on the etcd GitHub repo.
 
 - Other etcd repos: `https://github.com/etcd-io/*`
 
-## How this document is organized
+### How this document is organized
 
 This document is divided into three sections that represent three major areas of
 concern:
@@ -84,7 +86,7 @@ that can be completed in constrained blocks of time. Ultimately, the
 implementation items should be tracked as a series of Github
 [issues][etcd-issues].
 
-## How to use this document
+### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
 read [etcd-implementation.md][implementation-doc].
@@ -100,7 +102,7 @@ to their area of concern:
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [Criteria][cncf-doc-criteria] specification.
 
-### Recommendations, requirements, and best practices
+#### Recommendations, requirements, and best practices
 
 This analysis measures documentation against CNCF project maturity standards,
 and suggests possible improvements. In most cases there is more than one way to
@@ -112,7 +114,7 @@ understood as "recommended" or "should" at the strongest, and "optional" or
 "may" in many cases. Any "must" or "required" actions are clearly denoted as
 such, and pertain to legal requirements such as copyright and licensing issues.
 
-# Project documentation
+## Project documentation
 
 etcd is a **graduated** project of CNCF. This means that the project should have
 [_very high_][cncf-doc-criteria] standards for documentation.
@@ -125,7 +127,7 @@ etcd is a **graduated** project of CNCF. This means that the project should have
 | Content creation processes | 2 - needs improvement |
 | Inclusive language         | 2 - needs improvement |
 
-## Comments
+### Comments
 
 Much of the documentation seems as if it hasn't been reviewed and updated for a
 while.
@@ -133,7 +135,7 @@ while.
 The following sections contain brief assessments of each element of the Project
 Documentation rubric.
 
-### Information architecture
+#### Information architecture
 
 There is **high-level conceptual** and design content, but it is hard to find.
 Most of it is in a _Learning_ section, which is not a conventional label for a
@@ -220,7 +222,7 @@ installation procedure in the documentation. If this represents a separate,
 automated installation workflow it should be offered as a procedure in the user
 doc.
 
-### New user content
+#### New user content
 
 There is a single paragraph on the [website][etcd-io] landing page with a "Learn
 more" link that goes to the current documentation table of contents (ToC). It
@@ -261,7 +263,7 @@ There are instructions for installing and getting started in the etcd-io/etcd
 [README][etcd-readme]. It would be preferable to point new users and
 contributors to the documentation straightaway.
 
-### Content maintainability & site mechanics
+#### Content maintainability & site mechanics
 
 Documentation content is **versioned** with the software. Versions are
 maintained in separate **directories** in the website content repo.
@@ -287,7 +289,7 @@ There do not appear to be plans to translate the documentation from English.
 There is a Github issue label (`area/documentation`) for **documentation
 issues**.
 
-### Content creation processes
+#### Content creation processes
 
 There are instructions for contributing to documentation and for **releasing a
 new version** of the etcd **documentation** in the `README.md` file in the
@@ -304,7 +306,7 @@ The website repo
 For example, instructions for building the website state that the local build
 starts the server on `localhost:8888`. It's actually `localhost:1313`.
 
-### Inclusive language
+#### Inclusive language
 
 Language is mostly inclusive. For example, the neutral terms "Leader" and
 "Follower" are used to describe server failover roles.
@@ -319,9 +321,9 @@ For example:
   action]"; for example, "Creating a user is as easy as" in
   [Role-based access control](https://etcd.io/docs/v3.5/op-guide/authentication/rbac/).
 
-## Recommendations
+### Recommendations
 
-### Information architecture
+#### Information architecture
 
 Reorganize the table of contents (ToC) to separate three types of information:
 
@@ -388,7 +390,7 @@ they're no longer relevant.
 Consider removing the installation example from the [etcd Play][demo server]
 server and pointing the user to the documentation's installation instructions.
 
-### New user content
+#### New user content
 
 Point "Learn more" links to a "Start here" page that provides orientation and
 sets out paths for different user roles. For example, the Developer path should
@@ -419,7 +421,7 @@ paths for specific persona use cases.
 Remove getting-started instructions from the main GitHub repo README and instead
 point the user to the documentation.
 
-### Content maintainability & site mechanics
+#### Content maintainability & site mechanics
 
 Remove links to documentation for previous releases from the current
 documentation version. Going forward, write doc for each release without
@@ -435,7 +437,7 @@ References to previous versions are in the following 3.5 documentation files:
 - metrics.md
 - dev-guide/discovery_protocol.md
 
-### Content creation processes
+#### Content creation processes
 
 Update the content creation instructions in the website README file.
 
@@ -443,12 +445,12 @@ Move issue and PR submission guidelines from the documentation ("Triage") to the
 Github repo. Link to these guidelines from a Troubleshooting section in the
 docs.
 
-### Inclusive language
+#### Inclusive language
 
 Audit the documentation for non-inclusive language. See the
 [Inclusive Naming Initiative](https://inclusivenaming.org/) website.
 
-# Contributor documentation
+## Contributor documentation
 
 etcd is a **graduated** project of CNCF. This means that the project should have
 [_very high_](../../docs/analysis/criteria.md) standards for contributor
@@ -461,9 +463,9 @@ documentation.
 | “New contributor” getting started content | 3 - meets standards            |
 | Project governance documentation          | 4 - meets or exceeds standards |
 
-## Comments
+### Comments
 
-### Communication methods documented
+#### Communication methods documented
 
 **Communication channels** include a Google Group and Twitter, and are
 documented on the [Community][etcd-community] page.
@@ -482,7 +484,7 @@ list**.
 the etcd repo. These should be in the repo itself, with a pointer from the
 documentation troubleshooting section.
 
-### Beginner friendly issue backlog
+#### Beginner friendly issue backlog
 
 There is a **good first issue** label. Issues are generally **well documented**
 by submitters and discussed in the Issues forum. There is a label
@@ -500,38 +502,38 @@ issues for the etcd main repo at the time of this writing:
 | 6 mo - 12 mo | 40    | \*\*\*\*\*\*\*\*       |
 | > 12 mo      | 52    | \*\*\*\*\*\*\*\*\*\*\* |
 
-### New contributor getting started content
+#### New contributor getting started content
 
 There is a [**Community**][etcd-community] page on the etcd website. There is no
 dedicated **"first-contributor"** document, but there are multiple resources and
 pointers in the general contributor instructions. New contributors should have
 minimal difficulty **finding help** if they need it.
 
-### Project governance documentation
+#### Project governance documentation
 
 [**Project governance**][etcd-govern] is clearly documented.
 
-## Recommendations
+### Recommendations
 
-### Communication methods documented
+#### Communication methods documented
 
 Move the information from the [Triage][etcdio-triage] doc section into the repo
 itself, with pointers from the documentation Troubleshooting guide.
 
-### Beginner friendly issue backlog
+#### Beginner friendly issue backlog
 
 No recommendations.
 
-### New contributor getting started content
+#### New contributor getting started content
 
 Consider creating a conspicuous "First contributor start here" document in the
 repo, with links to the other contributor resources.
 
-### Project governance documentation
+#### Project governance documentation
 
 No recommendations.
 
-# Website
+## Website
 
 etcd is a **graduated** project of CNCF. This means that the project should have
 [_very high_](../../docs/analysis/criteria.md) standards for documentation.
@@ -553,9 +555,9 @@ etcd is a **graduated** project of CNCF. This means that the project should have
 | Intra-site / local search                   | 5 - exemplary                  |
 | Account custodians are documented           | 4 - meets or exceeds standards |
 
-## Comments
+### Comments
 
-### Single-source requirement
+#### Single-source requirement
 
 The website has its own GitHub **repository**. The website repo contains the
 documentation and is separated from the project source code.
@@ -563,7 +565,7 @@ documentation and is separated from the project source code.
 **Contributor documentation** is contained in the [main code
 repo][github-etcd-etcd] in well labeled Markdown files.
 
-### Minimal website requirements
+#### Minimal website requirements
 
 Except for archived projects, requirements are cumulative through project
 maturity levels so, for example, incubating projects must satisfy the
@@ -589,7 +591,7 @@ sandbox, incubating, graduated and archived.
 | Archived   | Archived status of the project is obvious to site visitors                                                                                                                                                                   | n/a                               |
 | Archived   | Link to successor project website and/or migration documentation (if it exists)                                                                                                                                              | n/a                               |
 
-### Usability, accessibility and devices
+#### Usability, accessibility and devices
 
 The site is **usable from mobile**. **Doc pages are readable**. Features such as
 **search** and **top-nav** work; the **in-page TOC** is missing on a small phone
@@ -601,13 +603,13 @@ on the landing page. Basic **website features**, including navigation, can be
 done via **keyboard**. Unknown whether **text-to-speech** is a good user
 experience for listeners.
 
-### Branding and design
+#### Branding and design
 
 The website and documentation carry an **easily recognizable brand** for the
 project based on logo, color scheme, and template layout. The brand is used
 **consistently** on the site. The text is easily **readable**.
 
-### Case studies/social proof
+#### Case studies/social proof
 
 The landing page lists a tiny **"logo wall"** of four "Used by" organizations,
 though given that one of those organizations is Kubernetes, this seems adequate.
@@ -625,7 +627,7 @@ production installation, including when it was launched, the cluster size, what
 application is using etcd, and the cloud environment. The list of production
 users in this file is probably not exhaustive.
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 The website has site-wide search, GA4 enabled, and well indexed on popular
 search engines; matches perfectly to our criteria.
@@ -647,7 +649,7 @@ search engines; matches perfectly to our criteria.
 
 - Account custodians are not clearly documented.
 
-### Maintenance planning
+#### Maintenance planning
 
 The website uses Hugo and Docsy, which are the recommended **website tooling**
 for CNCF projects.
@@ -662,52 +664,52 @@ Site maintainers have **adequate permissions** to update the website.
 Maintainers of the [website repository][website-repo] are adequately documented
 in the OWNERS file in the repo. Approvers and reviewers are listed.
 
-### Other
+#### Other
 
 The website is accessible via **HTTPS**. Requests using **HTTP** are properly
 redirected to the **HTTPS** URLs.
 
 The [demo server][] uses unsecured HTTP.
 
-## Recommendations
+### Recommendations
 
-### Single-source requirement
+#### Single-source requirement
 
 No recommendations.
 
-### Minimal website requirements
+#### Minimal website requirements
 
 Update website to include DCO or other source validation.
 
 Identify stakeholders (user roles). Ensure that instructions exist in the
 documentation for all major use cases for each stakeholder.
 
-### Usability, accessibility and devices
+#### Usability, accessibility and devices
 
 Consider replacing low-contrast text for the benefit of visually impaired users.
 
-### Branding and design
+#### Branding and design
 
 No recommendations.
 
-### Case studies/social proof
+#### Case studies/social proof
 
 Consider adding user testimonials and/or case studies to the web page.
 
 Consider posting updates and news to the blog more regularly.
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 **Account custodians**
 
 - Areas such as analytics, Google Search Console, site-search (such as Google
   CSE or Algolia) must have at least one custodian assigned.
 
-### Maintenance planning
+#### Maintenance planning
 
 No recommendations.
 
-### Other
+#### Other
 
 Consider securing the [demo server][] using HTTPS.
 

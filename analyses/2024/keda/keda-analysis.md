@@ -9,7 +9,7 @@ cSpell:ignore: Welsch dwelsch pastable servicedesk
 
 <!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading -->
 
-# Introduction
+## Introduction
 
 This document analyzes the effectiveness and completeness of the
 [KEDA](https://keda.sh) open source software (OSS) project's documentation and
@@ -21,7 +21,7 @@ prerequisite for program graduation. The documentation analysis is the first
 step of a CNCF process aimed at assisting projects with their documentation
 efforts.
 
-## Purpose
+### Purpose
 
 This document was written to analyze the current state of KEDA documentation. It
 aims to provide project leaders with an informed understanding of potential
@@ -37,7 +37,7 @@ This document:
   actionable suggestions and recommendations for overall organization and
   presentation of documentation
 
-## Scope of analysis
+### Scope of analysis
 
 The documentation discussed here includes the entire contents of the website
 (which contains the technical docs), as well as documentation for contributors
@@ -59,7 +59,7 @@ Netlify platform. The site's code is stored on the KEDA GitHub repo.
 
 - Other KEDA repos under https://github.com/kedacore/
 
-## How this document is organized
+### How this document is organized
 
 This document is divided into three sections that represent three major areas of
 concern:
@@ -86,7 +86,7 @@ that can be completed in constrained blocks of time. Ultimately, the
 implementation items should be tracked as a series of Github
 [issues](keda-issues.md).
 
-## How to use this document
+### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
 read [keda-implementation.md](./keda-implementation.md).
@@ -102,7 +102,7 @@ to their area of concern:
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria](../../docs/analysis/criteria.md) specification.
 
-### Recommendations, requirements, and best practices
+#### Recommendations, requirements, and best practices
 
 This analysis measures documentation against CNCF project maturity standards,
 and suggests possible improvements. In most cases there is more than one way to
@@ -115,7 +115,7 @@ strongest, and "optional" or "may" in many cases. Any "must" or "required"
 actions are clearly denoted as such, and pertain to legal requirements such as
 copyright and licensing issues.
 
-# Project documentation
+## Project documentation
 
 KEDA is a **graduated** project of CNCF. This means that the project should have
 [_very high_](../../docs/analysis/criteria.md) standards for documentation.
@@ -128,9 +128,9 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 | Content creation processes | 2 - needs improvement |
 | Inclusive language         | 2 - needs improvement |
 
-## Comments
+### Comments
 
-### Information architecture
+#### Information architecture
 
 There is an overview containing **high-level conceptual** content that explains
 what KEDA is and how it works. The conceptual overview has one diagram, which
@@ -169,7 +169,7 @@ their own directory in the repo. Release notes are provided in the project main
 repo, and linked from a ROADMAP file. They are not linked from the documentation
 pages.
 
-### New user content
+#### New user content
 
 There is partial **getting started** information in the documentation as
 [Deploying KEDA](https://keda.sh/docs/2.13/deploy/), the first topic in the
@@ -207,7 +207,7 @@ roadmap.
 There is easily **copy-pastable** content for CLI input where appropriate,
 including in the installation instructions.
 
-### Content maintainability & site mechanics
+#### Content maintainability & site mechanics
 
 The documentation is **Searchable** using functionality provided by the site
 generation engine.
@@ -218,7 +218,7 @@ multiple languages** in case that changes.
 The documentation is **versioned**. The repo contains a separate folder for each
 version.
 
-### Content creation processes
+#### Content creation processes
 
 The procedure for **building and releasing a new version** is documented in the
 doc repo README file.
@@ -230,7 +230,7 @@ The MAINTAINERS doc in the website repo points to the MAINTAINERS doc in the
 main repo, which does not tell who is **responsible for documentation pull
 requests**. The website does not have a **clear owner or maintainer**.
 
-### Inclusive language
+#### Inclusive language
 
 The documentation includes some examples of
 [**non-inclusive language**](https://inclusivenaming.org/). For example:
@@ -243,9 +243,9 @@ The documentation includes some examples of
   - https://keda.sh/docs/2.13/troubleshooting/#google-kubernetes-engine-gke
   - https://keda.sh/docs/2.13/scalers/redis-sentinel-lists/#authentication-parameters
 
-## Recommendations
+### Recommendations
 
-### Information architecture
+#### Information architecture
 
 Reorganize the Table of Contents. Rename "The KEDA Documentation"; the name is
 misleading since it implies that it contains the entire documentation set. I'd
@@ -267,29 +267,29 @@ or link to other documentation that does, for example the
 [Kubernetes documentation on HPA](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/).
 For example, explain how to do 0-to-1 scaling.
 
-### New user content
+#### New user content
 
 Clearly label the starting point for new users. Make sure that there is an easy
 to follow workflow for installation, configuring and running a basic scaler, and
 any other tasks required to begin using KEDA.
 
-### Content maintainability & site mechanics
+#### Content maintainability & site mechanics
 
 No recommendations
 
-### Content creation processes
+#### Content creation processes
 
 Make it easier to find the instructions for releasing a new version of the
 documentation and updating the documentation.
 
 Document in the repo who the website/documentation maintainers are.
 
-### Inclusive language
+#### Inclusive language
 
 Remove non-inclusive language throughout the documentation as recommended on the
 [inclusive naming website](https://inclusivenaming.org/).
 
-# Contributor documentation
+## Contributor documentation
 
 KEDA is a **graduated** project of CNCF. This means that the project should have
 [_very high_](../../docs/analysis/criteria.md) standards for contributor
@@ -302,9 +302,9 @@ documentation.
 | “New contributor” getting started content | 3 - meets standards            |
 | Project governance documentation          | 4 - meets or exceeds standards |
 
-## Comments
+### Comments
 
-### Communication methods documented
+#### Communication methods documented
 
 The KEDA main repo points to **community** resources, including a KEDA Slack
 channel in the Kubernetes workspace. There is a **community page** on the
@@ -312,7 +312,7 @@ website that invites readers to a **biweekly Zoom meeting**. The main website
 has direct links in the footer to the Slack community, the **GitHub** repo, and
 a Twitter feed. I could not find any mention of a **mailing list**.
 
-### Beginner friendly issue backlog
+#### Beginner friendly issue backlog
 
 Doc **issues** in the repo are **well documented** and have been labeled and,
 presumably, **triaged**.
@@ -323,7 +323,7 @@ applied to any issues).
 There are **stale issues**, but they seem for the most part to be managed. There
 are only ~30 open issues in the doc repo.
 
-### New contributor getting started content
+#### New contributor getting started content
 
 The website contains a **community section**.
 
@@ -331,14 +331,14 @@ There is **CONTRIBUTORS** document in the website/documentation repo with
 instructions for **getting help** and building and contributing new
 documentation.
 
-### Project governance documentation
+#### Project governance documentation
 
 **Governance** is clearly documented in its own repo. Presumably this
 information is applicable to all of the repos in kedacore.
 
-## Recommendations
+### Recommendations
 
-### Communication methods documented
+#### Communication methods documented
 
 If there is a mailing list or other news distribution channel, add it to the
 community page. (Note: As discussed in the
@@ -346,19 +346,19 @@ community page. (Note: As discussed in the
 newsletter. This is OK since there are plenty of other active communication
 channels.)
 
-### Beginner friendly issue backlog
+#### Beginner friendly issue backlog
 
 Revisit stale issues if they are not being reviewed.
 
-### New contributor getting started content
+#### New contributor getting started content
 
 No recommendations.
 
-### Project governance documentation
+#### Project governance documentation
 
 No recommendations.
 
-# Website
+## Website
 
 KEDA is a **graduated** project of CNCF. This means that the project should have
 [_very high_](../../docs/analysis/criteria.md) standards for documentation.
@@ -380,9 +380,9 @@ KEDA is a **graduated** project of CNCF. This means that the project should have
 | Intra-site / local search                   | 5 - exemplary                  |
 | Account custodians are documented           | 2 - needs improvement          |
 
-## Comments
+### Comments
 
-### Single-source requirement
+#### Single-source requirement
 
 Source files for all website pages reside in a **single repo**. However, some
 user documentation pages (specifically, "Getting started" topics linked from the
@@ -391,7 +391,7 @@ tech docs on the website.
 
 Website files are all in the website repo.
 
-### Minimal website requirements
+#### Minimal website requirements
 
 Except for archived projects, requirements are cumulative through project
 maturity levels so, for example, incubating projects must satisfy the
@@ -418,7 +418,7 @@ sandbox, incubating, graduated and archived.
 | Archived   | Archived status of the project is obvious to site visitors                                                                                                                                                                   | n/a                                 |
 | Archived   | Link to successor project website and/or migration documentation (if it exists)                                                                                                                                              | n/a                                 |
 
-### Usability, accessibility and devices
+#### Usability, accessibility and devices
 
 The website is **usable from mobile**. Top-nav is reachable only via the
 hamburger menu on mobile devices. There is no in-page TOC or other context on
@@ -439,13 +439,13 @@ only**.
 As with any text that contains a lot of code and special characters,
 **text-to-speech** is **not likely to offer listeners a good experience**.
 
-### Branding and design
+#### Branding and design
 
 The website and documentation carry an **easily recognizable brand** for the
 project based on logo, color scheme, and template layout. The **brand is used
 consistently** on the site. The website's text is **easily readable**.
 
-### Case studies/social proof
+#### Case studies/social proof
 
 I'm unable to find **case studies** or **user testimonials** for the project.
 They're probably not as important for KEDA as they are for a more extensive
@@ -460,7 +460,7 @@ There are **community talks** for the project on YouTube. One talk, from KubeCon
 There is a substantial **logo wall of users and participating organizations**.
 The KEDA project solicits users to register as "listed users."
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 **Analytics:**
 
@@ -479,7 +479,7 @@ The KEDA project solicits users to register as "listed users."
 - There are no records showing the different account custodians; nothing is
   listed on `MAINTAINERS.md` and no `OWNERS.md` is found.
 
-### Maintenance planning
+#### Maintenance planning
 
 The website uses Hugo and Docsy, which are the recommended **website tooling**
 for CNCF projects.
@@ -493,18 +493,18 @@ community or third-party scalers (plugin components).
 Presumably, **site maintainers have adequate permissions** since the
 documentation is up to date with the software.
 
-### Other
+#### Other
 
 The website is accessible via **HTTPS**. Requests using **HTTP** are properly
 redirected to the **HTTPS** URLs.
 
-## Recommendations
+### Recommendations
 
-### Single-source requirement
+#### Single-source requirement
 
 No recommendations.
 
-### Minimal website requirements
+#### Minimal website requirements
 
 Identify stakeholder roles in the user documentation (even if there is only one
 role). This could be as minimal as a "who should use this documentation"
@@ -513,29 +513,29 @@ paragraph in the product introduction.
 Update docs per Implementation and Issues recommendations (separate documents).
 Especially, improve new user documentation.
 
-### Usability, accessibility and devices
+#### Usability, accessibility and devices
 
 No recommendations.
 
-### Branding and design
+#### Branding and design
 
 No recommendations.
 
-### Case studies/social proof
+#### Case studies/social proof
 
 No recommendations.
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 The current custodian(s) of the following accounts should be clearly documented:
 analytics (GA4), site-search (Algolia). You can create an `OWNERS.md` file for
 this.
 
-### Maintenance planning
+#### Maintenance planning
 
 Explicitly list and solicit maintainers and contributors for documentation.
 
-### Other
+#### Other
 
 No recommendations.
 

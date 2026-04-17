@@ -4,6 +4,8 @@ tags: [fluxcd]
 cSpell:ignore: celestehorgan Horgan
 ---
 
+<!-- markdownlint-disable no-duplicate-heading -->
+
 # Assessment template
 
 Prepared by: Celeste Horgan
