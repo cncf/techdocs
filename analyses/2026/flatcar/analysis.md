@@ -461,10 +461,10 @@ be developing professional-quality documentation alongside the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
-| Communication methods documented          |        4       |
-| Beginner friendly issue backlog           |        4       |
-| “New contributor” getting started content |        4       |
-| Project governance documentation          |        4       |
+| Communication methods documented          | 4              |
+| Beginner friendly issue backlog           | 4              |
+| “New contributor” getting started content | 4              |
+| Project governance documentation          | 4              |
 
 ### Comments
 
@@ -528,8 +528,8 @@ We evaluate on the following:
   [Flatcar GitHub repository](https://github.com/flatcar/Flatcar/tree/main?tab=readme-ov-file#mailing-lists)
   these mailing lists are noted:
 
-  Flatcar Users: https://groups.google.com/g/flatcar-linux-user Flatcar
-  Developers: https://groups.google.com/g/flatcar-linux-dev
+  Flatcar Users: https://groups.google.com/g/flatcar-linux-user 
+  Flatcar Developers: https://groups.google.com/g/flatcar-linux-dev
 
 #### Beginner-friendly issue backlog
 
