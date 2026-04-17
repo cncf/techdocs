@@ -511,8 +511,8 @@ We evaluate on the following:
   [Flatcar GitHub repository](https://github.com/flatcar/Flatcar/tree/main?tab=readme-ov-file#mailing-lists)
   these mailing lists are noted:
 
-  Flatcar Users: https://groups.google.com/g/flatcar-linux-user Flatcar Devs:
-  https://groups.google.com/g/flatcar-linux-dev
+  Flatcar Users: https://groups.google.com/g/flatcar-linux-user Flatcar
+  Developers: https://groups.google.com/g/flatcar-linux-dev
 
 #### Beginner-friendly issue backlog
 
