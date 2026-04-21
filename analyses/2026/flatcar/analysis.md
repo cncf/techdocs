@@ -589,10 +589,10 @@ We evaluate on the following:
 - **Do new users know where to get help?**
 
   That would be Flatcar's Slack and Matrix chat channels.
-  - Matrix (preferred): #flatcar:matrix.org
-  - Slack: #flatcar (Kubernetes Slack)
-  - GitHub Discussions: flatcar/Flatcar/discussions
-  - Mailing List (Users): #flatcar-linux-user
+  - Matrix (preferred): `#flatcar:matrix.org`
+  - Slack: `#flatcar` (Kubernetes Slack)
+  - GitHub Discussions: `flatcar/Flatcar/discussions`
+  - Mailing List (Users): `#flatcar-linux-user`
 
 #### Project governance documentation
 
