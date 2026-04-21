@@ -399,6 +399,6 @@ each path. If such a guide isn't needed, then remove this page.
 
 <!--- References --->
 
-[etcd-analysis]: ./etcd-analysis.md
+[etcd-analysis]: ./analysis.md
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
 [access-tutorial]: https://github.com/etcd-io/website/issues/790
