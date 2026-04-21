@@ -3,6 +3,8 @@ title: Backstage umbrella issue
 tags: [backstage]
 ---
 
+<!-- markdownlint-disable no-trailing-punctuation -->
+
 # Backstage umbrella issue
 
 ## Overview

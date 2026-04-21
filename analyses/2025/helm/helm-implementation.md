@@ -135,8 +135,7 @@ personas, and the primary concepts/terms to know.
 There are several pages in the docs that are likely out-of-date or otherwise no
 longer relevant. For example:
 
-- "FAQs" https://helm.sh/docs/faq/installing and
-  https://helm.sh/docs/faq/uninstalling
+- "FAQs" pages for installing and uninstalling
 
 - Best practices section: https://helm.sh/docs/chart_best_practices/
 

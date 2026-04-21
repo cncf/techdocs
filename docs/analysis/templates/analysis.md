@@ -45,8 +45,8 @@ efforts.
 This document was written to analyze the current state of _PROJECT_
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
-[implementation] document, , outlines an actionable plan for improvement. A
-third document is an [issues list] of issues to be added to the project
+[implementation][] document, , outlines an actionable plan for improvement. A
+third document is an [issues list][] of issues to be added to the project
 documentation repository. These issues can be taken up by contributors to
 improve the documentation.
 
@@ -109,7 +109,7 @@ into a series of issues and entered on GitHub `PROJECT-DOC-WEBSITE/issues`.
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the **[implementation] plan** and **[issues] list**.
+read the [implementation][] plan and [issues list][].
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -550,7 +550,7 @@ The numeric rating values used in this document are as follows
 [criteria]: ../criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
-[project-website]: _PROJECT-WEBSITE_
+[project-website]: ?fixme-target-dne=_PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../website-guidelines-checklist.md

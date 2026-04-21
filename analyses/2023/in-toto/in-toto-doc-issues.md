@@ -3,6 +3,8 @@ title: Documentation Issues
 tags: [in-toto]
 ---
 
+<!-- markdownlint-disable line-length no-trailing-punctuation -->
+
 # Documentation Issues
 
 These issues identify and classify tasks that contributors can undertake to

@@ -4,6 +4,9 @@ tags: [kubernetes-gateway-api]
 cSpell:ignore: Meha Bhalodiya mehabhalodiya kubernetes
 ---
 
+<!-- markdownlint-disable line-length -->
+<!-- markdownlint-disable ul-style descriptive-link-text no-duplicate-heading no-trailing-punctuation -->
+
 # Assessment: Project Kubernetes Gateway API
 
 Prepared by: Meha Bhalodiya
@@ -103,7 +106,7 @@ as well as where to find them.
 - **Prepared a Miro board:
   [https://miro.com/app/board/uXjVO_1cS9k=/](https://miro.com/app/board/uXjVO_1cS9k=/)**
 
-  ![information_architecture](../docs/images/gapi_info_arch.png)
+  ![information_architecture](../../../docs/images/gapi_info_arch.png)
 
 - There are improvements we could make:
   - With the collection of guided, step-by-step instructions (tasks, hands-on

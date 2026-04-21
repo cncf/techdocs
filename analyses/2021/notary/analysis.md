@@ -4,6 +4,8 @@ tags: [notary]
 cSpell:ignore: docset notaryproject celestehorgan
 ---
 
+<!-- markdownlint-disable no-duplicate-heading no-emphasis-as-heading -->
+
 # Notary Project Docs Assessment
 
 Date: 2021-07-31 Project: [Notary Project](https://github.com/notaryproject/)

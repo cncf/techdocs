@@ -4,6 +4,8 @@ tags: [etcd]
 cSpell:ignore: reconf
 ---
 
+<!-- markdownlint-disable line-length link-image-reference-definitions -->
+
 # Overview
 
 Here is an outline of the recommended changes to the etcd documentation.

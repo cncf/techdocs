@@ -841,9 +841,9 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
+[criteria]: /docs/analysis/criteria.md
 [project-doc-website]: https://knative.dev/docs/
 [project-website]: https://knative.dev/docs/
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[website guidelines]: /docs/website-guidelines-checklist.md

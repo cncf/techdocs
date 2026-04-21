@@ -4,6 +4,8 @@ tags: [krator]
 cSpell:ignore: Krator celestehorgan CODEOWNERS
 ---
 
+<!-- markdownlint-disable line-length no-duplicate-heading -->
+
 # Krator Docs assessment
 
 ## Introduction

@@ -3,9 +3,9 @@ title: Implementing KEDA Doc Improvements
 tags: [KEDA]
 ---
 
-<!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading -->
+<!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading no-empty-links -->
 
-# Introduction
+## Introduction
 
 This document provides actionable suggestions for improving the KEDA technical
 documentation.
@@ -13,7 +13,7 @@ documentation.
 For an analysis and general discussion of recommendations on KEDA technical
 documentation, see [keda-analysis.md][keda-analysis].
 
-## Recommendations, requirements, and best practices
+### Recommendations, requirements, and best practices
 
 This analysis measures documentation against CNCF project maturity standards,
 and suggests possible improvements. In most cases there is more than one way to
@@ -37,7 +37,7 @@ The documentation recommendations for this project are:
 - [Make user roles explicit](#make-user-roles-explicit)
 - [Clarify documentation maintainers](#clarify-documentation-maintainers)
 
-# Reorganize the Table of Contents
+## Reorganize the Table of Contents
 
 Reorganize the Table of Contents to:
 
@@ -79,18 +79,18 @@ Here is a proposed outline for the tech doc Table of Contents:
   current "KEDA Documentation" heading)
   - [Deploying KEDA](https://keda.sh/docs/2.13/deploy/)
   - Prerequisites (https://keda.sh/docs/2.13/operate/cluster/#requirements)
-  - [Deploying with Helm](?no-link-check#helm)
-    - [Installing](?no-link-check#install)
-    - [Uninstalling](?no-link-check#uninstall)
-  - [Deploying with Operator Hub](?no-link-check#operatorhub)
-    - [Installing](?no-link-check#install-1)
-    - [Uninstalling](?no-link-check#uninstall-1)
-  - [Deploying using the deployment YAML files](?no-link-check#yaml)
-    - [Installing](?no-link-check#install-2)
-    - [Uninstalling](?no-link-check#uninstall-2)
-  - [Deploying KEDA on MicroK8s](?no-link-check#microk8s)
-    - [Installing](?no-link-check#install-3)
-    - [Uninstalling](?no-link-check#uninstall-3)
+  - [Deploying with Helm](https://keda.sh/docs/2.13/deploy/#helm)
+    - [Installing](https://keda.sh/docs/2.13/deploy/#install)
+    - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall)
+  - [Deploying with Operator Hub](https://keda.sh/docs/2.13/deploy/#operatorhub)
+    - [Installing](https://keda.sh/docs/2.13/deploy/#install-1)
+    - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-1)
+  - [Deploying using the deployment YAML files](https://keda.sh/docs/2.13/deploy/#yaml)
+    - [Installing](https://keda.sh/docs/2.13/deploy/#install-2)
+    - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-2)
+  - [Deploying KEDA on MicroK8s](https://keda.sh/docs/2.13/deploy/#microk8s)
+    - [Installing](https://keda.sh/docs/2.13/deploy/#install-3)
+    - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
     https://github.com/kedacore/sample-hello-world-azure-functions)
@@ -157,11 +157,11 @@ Among other things, the reorganization includes these changes:
 - Separate reference and task information that appears on the same page and move
   each to the appropriate section.
 
-# Write a Glossary
+## Write a Glossary
 
 Create a glossary of terms specific to KEDA. Add to the Reference section.
 
-# Add "How to set up a scaler" to the Operator guide
+## Add "How to set up a scaler" to the Operator guide
 
 Setting up a scaler seems to be largely a matter of installing the scaler and
 providing parameters in a configuration file. While the configurations are
@@ -173,7 +173,7 @@ least most) scalers.
 Any scaler that requires special instructions other than the configuration file
 should have its own procedure page, listing the extra steps required.
 
-# Write a New User workflow
+## Write a New User workflow
 
 Write a task-based, step-by-step workflow for new users. Assume the new user has
 no experience with KEDA and is fairly new to Kubernetes.
@@ -198,24 +198,24 @@ annotated to illustrate this point:
       the differences here to help the new user decide. Also, if prerequisites
       depend on the deployment type, you can optionally put a Prerequisites
       section in each deployment procedure rather than here._
-    - [Deploying with Helm](?no-link-check#helm)
-      - [Installing](?no-link-check#install)
-      - [Uninstalling](?no-link-check#uninstall) \*
-    - [Deploying with Operator Hub](?no-link-check#operatorhub)
-      - [Installing](?no-link-check#install-1)
-      - [Uninstalling](?no-link-check#uninstall-1)
-    - [Deploying using the deployment YAML files](?no-link-check#yaml)
-      - [Installing](?no-link-check#install-2)
-      - [Uninstalling](?no-link-check#uninstall-2)
-    - [Deploying KEDA on MicroK8s](?no-link-check#microk8s)
-      - [Installing](?no-link-check#install-3)
-      - [Uninstalling](?no-link-check#uninstall-3)
+    - [Deploying with Helm](https://keda.sh/docs/2.13/deploy/#helm)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall) \*
+    - [Deploying with Operator Hub](https://keda.sh/docs/2.13/deploy/#operatorhub)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install-1)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-1)
+    - [Deploying using the deployment YAML files](https://keda.sh/docs/2.13/deploy/#yaml)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install-2)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-2)
+    - [Deploying KEDA on MicroK8s](https://keda.sh/docs/2.13/deploy/#microk8s)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install-3)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
     https://github.com/kedacore/sample-hello-world-azure-functions) _analogous
     to a "Hello World" exercise in programming language or API guides_
 
-# Update the doc content creation instructions
+## Update the doc content creation instructions
 
 In the keda-docs
 [README](https://github.com/kedacore/keda-docs/blob/main/README.md):
@@ -230,12 +230,12 @@ In the keda-docs
 Document in the repo (keda-docs, keda, or both) who the website/documentation
 maintainers are.
 
-# Remove non-inclusive language
+## Remove non-inclusive language
 
 Remove non-inclusive language throughout the documentation as recommended by the
 [Inclusive Naming Initiative](https://inclusivenaming.org/).
 
-# Make user roles explicit
+## Make user roles explicit
 
 KEDA seems to have only one explicit user role (or _persona_), namely, an
 Operator using KEDA to scale resources on a Kubernetes installation. Regardless,
@@ -247,7 +247,7 @@ repo.
 The definition of the Operator role could be as minimal as a "who should use
 this documentation" paragraph in the product introduction.
 
-# Clarify documentation maintainers
+## Clarify documentation maintainers
 
 Create an `OWNERS.md` file to document (on the repo) the current custodian(s) of
 the following accounts: analytics (GA4), site-search (Algolia).

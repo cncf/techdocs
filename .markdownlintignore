@@ -1,0 +1,10 @@
+# Paths excluded from markdownlint (see `markdownlint --help` → --ignore-path).
+# Patterns follow .gitignore semantics (see markdownlint-cli).
+
+# Dependencies and build output
+node_modules/
+build/
+.docusaurus/
+
+# Scratch / local
+tmp/

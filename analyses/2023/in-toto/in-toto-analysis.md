@@ -3,6 +3,8 @@ title: Analysis of Existing Documentation
 tags: [in-toto]
 ---
 
+<!-- markdownlint-disable line-length no-emphasis-as-heading no-duplicate-heading -->
+
 # Analysis of Existing Documentation
 
 This document characterizes the effectiveness and completeness of the in-toto

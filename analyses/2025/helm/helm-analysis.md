@@ -263,10 +263,10 @@ is documented for users that need more help:
   information about working with the community and searching the existing issues
   in the Helm repo to troubleshoot.
 
-- There are also some minimal FAQs here: https://helm.sh/docs/faq/. They include
-  a few questions about installing and one question about uninstalling. It looks
-  like this information is not really an "FAQ", but rather information about
-  installing/uninstalling Helm that might have been documented under FAQs
+- There are also some minimal FAQ pages for installing and uninstalling. They
+  include a few questions about installing and one question about uninstalling.
+  It looks like this information is not really an "FAQ", but rather information
+  about installing/uninstalling Helm that might have been documented under FAQs
   because it lacks a more permanent home.
 
 The Helm docs lack clear troubleshooting steps for different common tasks.
@@ -727,10 +727,10 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
+[criteria]: /docs/analysis/criteria.md
 [implementation]: ./helm-implementation.md
 [issues list]: ./helm-issues-list.md
 [project-website]: https://helm.sh/
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[website guidelines]: /docs/website-guidelines-checklist.md
