@@ -4,15 +4,15 @@ tags: [KEDA]
 cSpell:ignore: externalscaler findability
 ---
 
-<!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading -->
+<!-- markdownlint-disable line-length no-duplicate-heading single-title no-emphasis-as-heading no-empty-links -->
 
-# Overview
+## Overview
 
 This document outlines the recommended changes to the KEDA documentation. The
 following issues are added to the
 [project repo](https://github.com/kedacore/keda-docs).
 
-# Issue: Reorganize the Table of Contents
+## Issue: Reorganize the Table of Contents
 
 Reorganize the Table of Contents to:
 
@@ -35,7 +35,7 @@ on individual sections is broken out into sub-issues.
 - Reference. See [Create a Reference](#issue-create-a-reference-topic).
 - [Scalers](https://keda.sh/docs/2.13/scalers/).
 
-## Issue: Reorganize Concepts
+### Issue: Reorganize Concepts
 
 Remove everything that's not a conceptual overview.
 
@@ -56,7 +56,7 @@ or provide a starting point.
     - [External Scalers](https://keda.sh/docs/2.13/concepts/external-scalers/)
     - [Admission Webhooks](https://keda.sh/docs/2.13/concepts/admission-webhooks/)
 
-## Issue: Write a "Getting Started" guide
+### Issue: Write a "Getting Started" guide
 
 Write a task-based, step-by-step workflow for new users. Start with the current
 "KEDA Documentation" section.
@@ -86,24 +86,24 @@ into multiple pages, one for each procedure.
       This reduces frustration. Also, if prerequisites depend on the deployment
       type, you can optionally put a Prerequisites section in each deployment
       procedure rather than here._
-    - [Deploying with Helm](?no-link-check#helm)
-      - [Installing](?no-link-check#install)
-      - [Uninstalling](?no-link-check#uninstall)
-    - [Deploying with Operator Hub](?no-link-check#operatorhub)
-      - [Installing](?no-link-check#install-1)
-      - [Uninstalling](?no-link-check#uninstall-1)
-    - [Deploying using the deployment YAML files](?no-link-check#yaml)
-      - [Installing](?no-link-check#install-2)
-      - [Uninstalling](?no-link-check#uninstall-2)
-    - [Deploying KEDA on MicroK8s](?no-link-check#microk8s)
-      - [Installing](?no-link-check#install-3)
-      - [Uninstalling](?no-link-check#uninstall-3)
+    - [Deploying with Helm](https://keda.sh/docs/2.13/deploy/#helm)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall)
+    - [Deploying with Operator Hub](https://keda.sh/docs/2.13/deploy/#operatorhub)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install-1)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-1)
+    - [Deploying using the deployment YAML files](https://keda.sh/docs/2.13/deploy/#yaml)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install-2)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-2)
+    - [Deploying KEDA on MicroK8s](https://keda.sh/docs/2.13/deploy/#microk8s)
+      - [Installing](https://keda.sh/docs/2.13/deploy/#install-3)
+      - [Uninstalling](https://keda.sh/docs/2.13/deploy/#uninstall-3)
   - Hello, KEDA (write a procedure for a simplest-possible use case for users to
     get started on - something like
     https://github.com/kedacore/sample-hello-world-azure-functions) _analogous
     to a "Hello World" exercise in programming language or API guides_
 
-## Issue: Update the Operator Guide
+### Issue: Update the Operator Guide
 
 Some guidelines:
 
@@ -160,7 +160,7 @@ or provide a starting point.
   - [Troubleshooting](https://keda.sh/docs/2.13/concepts/troubleshooting/)
     `/docs/2.13/troubleshooting/`
 
-## Issue: Create a "Reference" topic
+### Issue: Create a "Reference" topic
 
 - The Reference section should be at or near the end of the ToC
 - Include the following information in the Reference section:
@@ -185,7 +185,7 @@ or provide a starting point.
   - [FAQ](https://keda.sh/docs/2.13/reference/faq/)
   - Glossary
 
-# Separate reference and task information
+## Separate reference and task information
 
 A common practice that reduces documentation effectiveness is mixing conceptual
 and task information. _Conceptual_ discussion can be thought of as _How it
@@ -215,7 +215,7 @@ some judgement might be required to rearrange things.
 | Events                                                 | https://keda.sh/docs/2.13/operate/events/               | This is reference information.                                                                                                                                                                                                                                                  |
 | Integrate with Prometheus                              | https://keda.sh/docs/2.13/integrations/prometheus/      | Split this into a task ("Integrating with Prometheus" and a reference "Metrics Exported to Prometheus".                                                                                                                                                                         |
 
-# Write a Glossary
+## Write a Glossary
 
 Create a glossary of terms specific to KEDA. It wouldn't hurt to include some
 key Kubernetes terms as well, especially acronyms. Add to the Reference section.
@@ -246,7 +246,7 @@ Here is a partial list of terms to include:
 For an example from another CNCF project, see the
 [glossary in the Backstage documentation](https://backstage.io/docs/references/glossary/).
 
-# Write "Setting Up a Scaler"
+## Write "Setting Up a Scaler"
 
 Setting up a scaler seems to be largely a matter of installing the scaler and
 providing parameters in a configuration file. While the configurations are
@@ -258,7 +258,7 @@ Users should be able to follow the procedure for any (or at least most) scalers.
 Any scaler that requires special instructions other than the configuration file
 should have its own procedure page, listing the extra steps required.
 
-# Make user roles explicit
+## Make user roles explicit
 
 KEDA seems to have only one explicit user role (or _persona_), namely, an
 Operator using KEDA to scale resources on a Kubernetes installation. Regardless,
@@ -270,7 +270,7 @@ repo.
 The definition of the Operator role could be as minimal as a "who should use
 this documentation" paragraph in the product introduction.
 
-# Update the doc content creation instructions
+## Update the doc content creation instructions
 
 Make the following changes to improve the effectiveness of the KEDA
 documentation contributor instructions.
@@ -285,7 +285,7 @@ In the keda-docs
   so that they're not separated by "Writing documentation for a new
   authentication provider".
 
-# Clarify the KEDA website and documentation maintainers
+## Clarify the KEDA website and documentation maintainers
 
 Create an `OWNERS.md` file to document (on the kedacore/keda-docs repo) the
 current custodian(s) of the following accounts: analytics (GA4), site-search
@@ -295,7 +295,7 @@ Explicitly document in the repo (keda-docs, keda, or both) who the
 website/documentation maintainers are. Solicit maintainers and contributors for
 documentation, either in the new OWNERS file or the governance MAINTAINERS file.
 
-# Remove non-inclusive language
+## Remove non-inclusive language
 
 Remove non-inclusive language throughout the documentation as recommended by the
 [Inclusive Naming Initiative](https://inclusivenaming.org/). Some examples of

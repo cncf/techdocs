@@ -4,7 +4,9 @@ tags: [backstage]
 cSpell:ignore: rigeur runbooks toolkits
 ---
 
-# Introduction
+<!-- markdownlint-disable line-length no-duplicate-heading reference-links-images -->
+
+## Introduction
 
 This document provides actionable suggestions for improving the Backstage
 technical documentation.
@@ -12,7 +14,7 @@ technical documentation.
 For an analysis and general discussion of recommendations on Backstage technical
 documentation, see [backstage-analysis.md][backstage-analysis]].
 
-## Recommendations, requirements, and best practices
+### Recommendations, requirements, and best practices
 
 Notwithstanding the fact that this analysis measures documentation against CNCF
 project maturity standards, in most cases there is more than one way to do
@@ -32,21 +34,21 @@ The top-level documentation recommendations for this project are:
 - Organize and "signpost" documentation by role and task so that stakeholders
   can find documentation that supports their roles' activities.
 
-# Definitions
+## Definitions
 
 These implementations rely on the following definitions.
 
-## Organization
+### Organization
 
 It is assumed that Backstage is adopted by a medium-to-large _organization_
 (_org_) made up of a number of _groups_.
 
-## Group
+### Group
 
 A group is defined by its responsibility for one or more software _products_
 that are manageable in Backstage.
 
-## Product
+### Product
 
 Products can include but are not limited to: internal and external toolkits and
 APIs; components; databases; and web-based and standalone applications.
@@ -54,21 +56,21 @@ APIs; components; databases; and web-based and standalone applications.
 A group needs 1) visibility into the org's entire corpus of products, and 2) to
 publicize its own software products to the org.
 
-## Developer
+### Developer
 
 Members of a group can have various functional and organizational roles,
 including: software engineer; dev-op; QA engineer; software architect; network
 engineer; engineering manager; and many others. These implementations refer to a
 group member generically as a _developer_ (_dev_).
 
-## Contributor
+### Contributor
 
 The org has ties to the Backstage open source software (OSS) project through
 developers who contribute to the project and who participate in discussions,
 newsgroups, and other community forums. These OSS participants, regardless of
 their employer or job function, are called _contributors_.
 
-# User Roles
+## User Roles
 
 The only distinctions among Backstage users relevant to this implementation
 discussion are among _user roles_. User roles are defined to organize
@@ -94,7 +96,7 @@ this analysis. They are important considerations, however, that should be
 addressed by any organization and for which further exploration and
 documentation would be valuable.
 
-# Implementation: Fill gaps in instructional documentation
+## Implementation: Fill gaps in instructional documentation
 
 "Instructional documentation" is a broad category that includes such traditional
 documentation artifacts as tutorials; getting started guides; procedural recipes
@@ -126,7 +128,7 @@ explaining what the configuration controls.
 The sections below give recommendations for the most important instructional
 documentation improvements to Backstage for each user role.
 
-## Administrator
+### Administrator
 
 The following artifacts should be written and made findable for administrators.
 
@@ -147,7 +149,7 @@ The following artifacts should be written and made findable for administrators.
    - Troubleshoot common problems
    - Tune server performance
 
-## Developer
+### Developer
 
 The following artifacts should be written and made findable for developers.
 
@@ -164,7 +166,7 @@ The following artifacts should be written and made findable for developers.
    - Deprecating and retiring a product from Backstage
    - Searching for a component in Backstage
 
-## Integrator
+### Integrator
 
 There are a dizzying array of issues with writing, modifying, and maintaining
 plugins in Backstage. This is not a detailed recipe for documenting those
@@ -180,7 +182,7 @@ issues. For integrators, at a high level, a program should be undertaken to:
    references and architecture discussions) into supporting documentation,
    referenced from the integration tasks.
 
-## Contributor
+### Contributor
 
 For a plugin-dependent project like Backstage, it's vital that community members
 contribute plugins, for two reasons:
@@ -194,7 +196,7 @@ repo and should be limited to how to contribute software to the product. "How to
 write a plugin" documentation should be included in the website-based doc as
 described above.
 
-# Organize and "signpost" documentation
+## Organize and "signpost" documentation
 
 Right now different types of documentation (conceptual/architectural;
 instructional; reference) for different user roles are intermixed throughout the
@@ -210,7 +212,7 @@ to learning the software and becoming proficient as quickly as possible.
 Some documents are used by more than one user role. These docs are listed first
 under the heading **Common**.
 
-## Common
+### Common
 
 | Document           | Description                                                                                                                                                                                                                                |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -219,14 +221,14 @@ under the heading **Common**.
 | Glossary           | A dictionary of product-specific terms. Also commonly includes domain- and industry-specific terms that are necessary to understanding the product.                                                                                        |
 | Knowledge base     | An encyclopedic collection of related background, conceptual, and reference information that doesn't fit elsewhere in the documentation. Similar to a FAQ, but more structured, more searchable and, therefore, more useful.               |
 
-## Evaluator
+### Evaluator
 
 | Document     | Description                                                                                                                                                                                                                                                                     |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Logo wall    | Not a technical document, but a _de rigeur_ feature on a product website these days. The logo wall shows at a glance an instantly recognizable selection of organizations that use the product. The logos typically link to testimonials or to the organizations' own websites. |
 | Case studies | Another element on a product website that is as much marketing as technical material, a case study nonetheless helps an evaluator decide whether to adopt the product. A handful of well written case studies is sufficient.                                                    |
 
-## Administrator
+### Administrator
 
 | Document                             | Description                                                                                                                                                                                                                                  |
 | ------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -234,7 +236,7 @@ under the heading **Common**.
 | Installation and configuration guide | A guide to downloading, installing, and configuring an organization-wide Backstage instance ("app").                                                                                                                                         |
 | Administrator guide                  | Contains all tasks the administrator needs to maintain the Backstage app: onboarding developers; installing plugins; starting, stopping, upgrading, and troubleshooting the app; using containers; evaluating and tuning server performance. |
 
-## Developer
+### Developer
 
 | Document              | Description                                                                                                                                                                                                                                                                                                             |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -244,22 +246,22 @@ under the heading **Common**.
 | Tutorials             | Tasks that are good candidates for tutorials are difficult, often-used tasks that must be mastered to use the product effectively. Many of these are probably in daily use by developers.                                                                                                                               |
 | Cookbooks             | There might be specialized tasks required of developers by an organization that should be documented, especially if they are performed infrequently.                                                                                                                                                                    |
 
-## Integrator
+### Integrator
 
 | Document           | Description                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Technical overview | Same as the common technical overview, but an integrator will need more detail about the plugin architecture.                                                                                                                                                                                                                                                                           |
 | Cookbooks          | The integrator will need to write plugins. This encompasses a large body of task knowledge. The best way to document these is as a collection of tasks or procedures explaining how to complete each task. Even with a comprehensive collection of task documents, some creativity is probably needed by the integrator, since every new plugin by definition is solving a new problem. |
 
-## Contributor
+### Contributor
 
 | Document            | Description                                                                                                                                                                                                                                                                                                                                                                                |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | GitHub Instructions | Contributing a plugin to Backstage is essentially an exercise in creating and shepherding a pull request through the Backstage community process. This can be documented entirely in GitHub, or it can be a separate section in the Backstage documentation. Regardless, the contributing instructional material should be separate from the integration/"How to write a plugin" material. |
 
-# Website and documentation infrastructure
+## Website and documentation infrastructure
 
-## Single-source repo
+### Single-source repo
 
 Move the Backstage documentation out of the [Backstage
 repo][backstage-github-project] and into its own repo within the [Backstage
@@ -270,23 +272,23 @@ In the meantime, put references to the documentation contributing and build
 instructions alongside the project code instructions in the contributor
 documentation in the Backstage repo.
 
-## Case studies/social proof
+### Case studies/social proof
 
 Implement a **logo wall** of participating organizations, with links to
 testimonials or the organizations' websites. Write or solicit a handful of
 representative case studies and link them from the website.
 
-## SEO, Analytics and site-local search
+### SEO, Analytics and site-local search
 
 Add documentation and website custodians to the project maintainer lists in
 `OWNERS.md` and wherever else project maintainers are documented.
 
-## Maintenance planning
+### Maintenance planning
 
 Add a prominent call for website and documentation maintainers in the project
 introduction alongside the call for code maintainers.
 
-## Accessibility
+### Accessibility
 
 Improve compliance in these areas:
 

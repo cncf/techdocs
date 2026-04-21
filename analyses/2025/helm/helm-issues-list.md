@@ -60,8 +60,7 @@ high-level Helm overview page. See the proposed sidebar in
 Review each of these pages/section to see if their content can be redistributed
 or deleted:
 
-- "FAQs" https://helm.sh/docs/faq/installing and
-  https://helm.sh/docs/faq/uninstalling
+- "FAQs" pages for installing and uninstalling
 
 - Best practices section: https://helm.sh/docs/chart_best_practices/
 

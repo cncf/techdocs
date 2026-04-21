@@ -3,6 +3,8 @@ title: Backstage User Roles for Doc
 tags: [backstage]
 ---
 
+<!-- markdownlint-disable line-length -->
+
 # Backstage User Roles for Doc
 
 This document provides recommendations for user roles, or personas, for

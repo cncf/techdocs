@@ -3,13 +3,14 @@ CacheExpires: 4500h # ~ 6 months
 DirectoryPath: build
 TestFilesConcurrently: true
 IgnoreDirs:
+  # We don't fix broken links on old analysis pages.
+  # - analyses/202[0-5]/
 IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
   - \?no-link-check
-  - _PROJECT-WEBSITE_
-  - _PROJECT-DOC-URL_
-  # FIXME: temporary ignore rules
-  - assistance\.md
-  - LICENSE
-  - /analyses/
+  # Old analysis pages are not updated. Ignore broken links:
+  - ^https://(docs|www).tremor.rs/
+  - ^https://knative.dev/docs/(concepts|reference|relnotes)/
+  - ^https://knative.dev/development/concepts/serving-resources/revisions/
+  - ^https://vitess.io/docs/21.0/

@@ -4,7 +4,7 @@ tags: [porter]
 cSpell:ignore: Uchechukwu Obasi
 ---
 
-<!-- markdownlint-disable no-duplicate-heading -->
+<!-- markdownlint-disable no-duplicate-heading line-length -->
 
 # Porter Docs Analysis
 
