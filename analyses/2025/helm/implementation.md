@@ -12,7 +12,7 @@ This document provides actionable suggestions for improving the Helm technical
 documentation.
 
 For an analysis and general discussion of recommendations on Helm technical
-documentation, see [analysis.md](helm-analysis.md).
+documentation, see [the analysis](analysis.md).
 
 ### Recommendations, requirements, and best practices
 
