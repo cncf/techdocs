@@ -6,8 +6,7 @@ modified: 2026-04-04
 author: Bruce Hamilton (@iRaindrop)
 ---
 
-<!-- markdownlint-disable line-length -->
-<!-- markdownlint-disable no-duplicate-heading link-image-reference-definitions -->
+<!-- markdownlint-disable no-duplicate-heading -->
 
 ## Introduction
 
@@ -26,9 +25,9 @@ efforts.
 
 This document was written to analyze the current state of Flatcar documentation.
 It aims to provide project leaders with an informed understanding of potential
-problems in current project documentation. A second [implementation] document
-outlines an actionable plan for improvement. A third document is an [issues
-list] of issues to be added to the project documentation repository. These
+problems in current project documentation. A second **implementation** document
+outlines an actionable plan for improvement. A third document is an **issues
+list** of issues to be added to the project documentation repository. These
 issues can be taken up by contributors to improve the documentation.
 
 This document:
@@ -56,7 +55,7 @@ repository. The site's code is stored on the Flatcar GitHub repo.
 #### Out of scope
 
 Any Flatcar content that is not accessed by the documentation URL,
-https://www.flatcar.org/docs/latest, is outside the scope of this analysis. The
+https://www.flatcar.org/docs/latest,is outside the scope of this analysis. The
 FAQ and Blog are outside the scope, however an argument can be made to keep an
 up-to-date FAQ in the core documentation.
 
@@ -89,7 +88,7 @@ into a series of issues and entered as GitHub project-doc-website/issues.
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the [implementation][] plan and [issues list][].
+read the **implementation plan** and **issues list**.
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -477,6 +476,19 @@ Contributor Documentation rubric.
 One of the easiest ways to attract new contributors is making sure they know how
 to reach you.
 
+The Flatcar teams cast a wide net for gathering feedback and contributions in the following areas:
+
+- Documentation: Guides, tutorials, API docs
+- Code: New features, bug fixes, builds, CI/CD
+- Community: Issue triage, answering questions on Slack/Matrix/Mailing Lists
+- Flatcar Apps: Create reference implementations for running services on Flatcar
+- Outreach: blog posts, talks, presentations, workshops
+- Coordination: Release management, Upstream project coordination
+- Events: Bug fixing days, doc writing days, devrooms, meetups, conferences
+- Design: Web design, maintaining the Flatcar website
+
+The team provides links to aggregated GitHub issues for newcomers and advanced users to work on.
+
 We evaluate on the following:
 
 - **Is there a Slack or similar resource and is it linked from your website?**
@@ -497,13 +509,17 @@ We evaluate on the following:
 - **Are weekly/monthly project meetings documented? Is it clear how someone can
   join those meetings?**
 
-  Yes. Project planning, meetings, and discussions are available on the GitHub
-  repository: https://github.com/flatcar/Flatcar/discussions and
-  https://github.com/flatcar/Flatcar/discussions/2025.
+  Yes. Office Hours are promoted and scheduled monthly.
 
-  Meeting info is also noted in the
-  [Community Meetings](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#community-meetings)
-  section of the Contribution Guidelines.
+  When: 2nd Wednesday of every month at 2:30pm UTC
+  Where: https://meet.flatcar.org/OfficeHours
+  Agenda: https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours
+
+  There are also Developer Syncs.
+
+  When: 4th Wednesday of every month at 2:30pm UTC
+  Where: https://meet.flatcar.org/OfficeHours
+  Agenda: Developer Sync Discussions
 
 - **Are mailing lists documented?**
 
@@ -525,6 +541,10 @@ We evaluate on the following:
 
 - **Is there a clearly marked way for new contributors to make code or
   documentation contributions (i.e. a “good first issue” label)?**
+
+Label	Description
+good first issue	Extra guidance to help you make your first contribution
+help wanted	Issues suitable for non-core maintainers
 
   Each page has these two links at the bottom:
   - An `Edit this page` link opens the page for editing in GitHub if a fork
@@ -567,10 +587,12 @@ We evaluate on the following:
 
 - **Do new users know where to get help?**
 
-  That would be Flatcar's Slack and Matrix chat channels. That information is
-  available in the README for Flatcar's GitHub repository:
+  That would be Flatcar's Slack and Matrix chat channels.
 
-  https://github.com/flatcar/Flatcar?tab=readme-ov-file
+  - Matrix (preferred): #flatcar:matrix.org
+  - Slack: #flatcar (Kubernetes Slack)
+  - GitHub Discussions: flatcar/Flatcar/discussions
+  - Mailing List (Users): flatcar-linux-user
 
 #### Project governance documentation
 
@@ -786,12 +808,6 @@ We evaluate on the following:
 
 #### Other
 
-#### Companion documents
-
-Separate implementation and issues-list documents are not yet available for this
-analysis. Use this page's recommendations and notes as the current source for
-follow-up work.
-
 #### References and notes
 
 ##### Rating values
@@ -804,10 +820,10 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: /docs/analysis/criteria.md
-[implementation]: #companion-documents
-[issues list]: #companion-documents
+[criteria]: ../criteria.md
+[implementation]: ./implementation.md
+[issues list]: ./issues-list.md
 [project-website]: _PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: /docs/website-guidelines-checklist.md
+[website guidelines]: ../../website-guidelines-checklist.md
