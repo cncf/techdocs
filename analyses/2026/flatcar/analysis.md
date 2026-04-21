@@ -512,24 +512,23 @@ We evaluate on the following:
   join those meetings?**
 
   Yes. Office Hours are promoted and scheduled monthly.
-
-  When: 2nd Wednesday of every month at 2:30pm UTC Where:
-  https://meet.flatcar.org/OfficeHours Agenda:
-  https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours
+  - When: 2nd Wednesday of every month at 2:30pm UTC
+  - Where: https://meet.flatcar.org/OfficeHours
+  - Agenda:
+    https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours
 
   There are also Developer Syncs.
-
-  When: 4th Wednesday of every month at 2:30pm UTC Where:
-  https://meet.flatcar.org/OfficeHours Agenda: Developer Sync Discussions
+  - When: 4th Wednesday of every month at 2:30pm UTC
+  - Where: https://meet.flatcar.org/OfficeHours
+  - Agenda: Developer Sync Discussions
 
 - **Are mailing lists documented?**
 
   Yes, in the README of the
   [Flatcar GitHub repository](https://github.com/flatcar/Flatcar/tree/main?tab=readme-ov-file#mailing-lists)
   these mailing lists are noted:
-
-  Flatcar Users: https://groups.google.com/g/flatcar-linux-user 
-  Flatcar Developers: https://groups.google.com/g/flatcar-linux-dev
+  - Flatcar Users: https://groups.google.com/g/flatcar-linux-user
+  - Flatcar Developers: https://groups.google.com/g/flatcar-linux-dev
 
 #### Beginner-friendly issue backlog
 
