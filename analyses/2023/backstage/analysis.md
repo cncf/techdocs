@@ -80,17 +80,16 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
-An accompanying document, [backstage-implementation.md][implementation-doc],
-breaks the recommendations down into concrete actions that can be implemented by
-project contributors. Its focus is on drilling down to specific, achievable work
-that can be completed in constrained blocks of time. Ultimately, the
-implementation items should be tracked as a series of Github
-[issues][backstage-issues].
+An accompanying document, [implementation.md][implementation-doc], breaks the
+recommendations down into concrete actions that can be implemented by project
+contributors. Its focus is on drilling down to specific, achievable work that
+can be completed in constrained blocks of time. Ultimately, the implementation
+items should be tracked as a series of Github [issues][backstage-issues].
 
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read [backstage-implementation.md][implementation-doc].
+read [implementation.md][implementation-doc].
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read this document or the section pertaining
@@ -595,7 +594,7 @@ Improve compliance in these areas:
 [backstage-github-project]: https://github.com/backstage
 [backstage-governance]:
   https://github.com/backstage/community/blob/main/GOVERNANCE.md
-[backstage-insights-summary]: ./backstage-insights-summary.md
+[backstage-insights-summary]: ./insights-summary.md
 [backstage-issues]: https://github.com/backstage/backstage/issues
 [backstage-io-overview-benefits]:
   https://backstage.io/docs/overview/what-is-backstage#benefits
@@ -618,7 +617,7 @@ Improve compliance in these areas:
   https://expertsupport.com/library/the-ideal-documentation-suite-for-software-developers/
 [github-archiving]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
-[implementation-doc]: ./backstage-implementation.md
+[implementation-doc]: ./implementation.md
 [inclusive-naming]: https://inclusivenaming.org
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
 [wcag-understanding]: https://www.w3.org/WAI/WCAG21/Understanding/

@@ -11,7 +11,7 @@ This document provides actionable suggestions for improving the KEDA technical
 documentation.
 
 For an analysis and general discussion of recommendations on KEDA technical
-documentation, see [keda-analysis.md][keda-analysis].
+documentation, see [analysis.md][keda-analysis].
 
 ### Recommendations, requirements, and best practices
 
@@ -257,5 +257,5 @@ either in the new OWNERS file or the governance MAINTAINERS file.
 
 <!--- References --->
 
-[keda-analysis]: ./keda-analysis.md
+[keda-analysis]: ./analysis.md
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119

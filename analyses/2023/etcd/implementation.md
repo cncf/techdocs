@@ -9,7 +9,7 @@ This document provides actionable suggestions for improving the etcd technical
 documentation.
 
 For an analysis and general discussion of recommendations on etcd technical
-documentation, see [etcd-analysis.md][etcd-analysis].
+documentation, see [analysis.md][etcd-analysis].
 
 ## Recommendations, requirements, and best practices
 
@@ -312,6 +312,6 @@ Release notes should include:
 
 <!--- References --->
 
-[etcd-analysis]: ./etcd-analysis.md
+[etcd-analysis]: ./analysis.md
 [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
 [access-tutorial]: https://github.com/etcd-io/website/issues/790

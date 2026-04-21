@@ -713,9 +713,9 @@ The numeric rating values used in this document are as follows:
 
 [api-site]: https://litmuschaos.github.io/litmus/graphql/v2.0.0/api.html
 [criteria]: ../../docs/analysis/criteria.md
-[implementation]: ./litmuschaos-implementation.md
-[issues]: ./litmuschaos-implementation.md
-[issues list]: ./litmuschaos-implementation.md
+[implementation]: ./implementation.md
+[issues]: ./implementation.md
+[issues list]: ./implementation.md
 [project-website]: https://litmuschaos.io/
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../docs/website-guidelines-checklist.md

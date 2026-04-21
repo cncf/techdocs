@@ -13,7 +13,7 @@ September 2023. Documentation is analyzed with respect to CNCF criteria for
 completeness, discoverability, and usability.
 
 The analysis forms the basis for the recommendations and doc plan presented in
-the companion [Implementation document](./in-toto-implementation.md).
+the companion [Implementation document](./implementation.md).
 
 ## Scope of analysis
 
@@ -49,8 +49,8 @@ appropriate criteria for the section, then proceeds to:
 - Recommendations: suggested changes that would improve the effectiveness of the
   documentation in a specific area.
 
-The companion [Implementation document](./in-toto-implementation.md) organizes
-the recommendations into concrete actions that can be implemented by project
+The companion [Implementation document](./implementation.md) organizes the
+recommendations into concrete actions that can be implemented by project
 contributors.
 
 The intention is to drill down to specific, achievable documentation tasks that
@@ -62,8 +62,8 @@ documentation issues that can be undertaken by contributors.
 ## How to use this document
 
 Readers interested only in actionable improvements can skip to the
-[implementation recommendations](./in-toto-implementation.md). For more context,
-read the recommendations for each of the three areas of analysis:
+[implementation recommendations](./implementation.md). For more context, read
+the recommendations for each of the three areas of analysis:
 
 - [Project documentation recommendations](#recommendations-1)
 

@@ -75,7 +75,7 @@ describe('rewriteHref (cross-plugin links)', () => {
     assert.strictEqual(
       rewriteHref(
         '../../docs/analysis/criteria.md#website',
-        'analyses/2023/etcd/etcd-analysis.md',
+        'analyses/2023/etcd/analysis.md',
       ),
       '/docs/analysis/criteria/#website',
     );
@@ -87,8 +87,8 @@ describe('rewriteHref (cross-plugin links)', () => {
       '/docs/analysis/criteria/',
     );
     assert.strictEqual(
-      rewriteHref('/analyses/2024/keda/keda-analysis.md', 'docs/howto.md'),
-      '/analyses/2024/keda/keda-analysis/',
+      rewriteHref('/analyses/2024/keda/analysis.md', 'docs/howto.md'),
+      '/analyses/2024/keda/analysis/',
     );
   });
 });
@@ -163,7 +163,7 @@ describe('remarkRewriteLinks (full pipeline)', () => {
 
       ![arch](../../../docs/images/gapi_info_arch.png)
     `);
-    const out = await run(md, 'analyses/2023/backstage/backstage-analysis.md');
+    const out = await run(md, 'analyses/2023/backstage/analysis.md');
     assert.match(out, /\[criteria\]\(\/docs\/analysis\/criteria\/\)/);
     assert.match(
       out,

@@ -12,7 +12,7 @@ This document provides actionable suggestions for improving the Backstage
 technical documentation.
 
 For an analysis and general discussion of recommendations on Backstage technical
-documentation, see [backstage-analysis.md][backstage-analysis]].
+documentation, see [analysis.md][backstage-analysis].
 
 ### Recommendations, requirements, and best practices
 
@@ -297,8 +297,8 @@ Improve compliance in these areas:
 
 <!--- References --->
 
-[backstage-analysis]: ./backstage-analysis.md
+[backstage-analysis]: ./analysis.md
 [backstage-backstage]: https://github.com/backstage/backstage
 [backstage-github-project]: https://github.com/backstage
-[backstage-insights-summary]: ./backstage-insights-summary.md
+[backstage-insights-summary]: ./insights-summary.md
 [user-roles]: #user-roles

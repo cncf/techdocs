@@ -14,7 +14,7 @@ This document provides actionable suggestions for improving the LitmusChaos
 technical documentation.
 
 For an analysis and general discussion of recommendations on LitmusChaos
-technical documentation, see [the analysis](./litmuschaos-analysis.md).
+technical documentation, see [the analysis](./analysis.md).
 
 ### Recommendations, requirements, and best practices
 
@@ -162,9 +162,9 @@ be its own page.
 Ensure that installation, setup, and verification have a clear workflow. If
 these instructions vary significantly between user roles, write a separate
 workflow for each user role. See
-[New user content](litmuschaos-analysis.md#new-user-content). Rename "Learn
-more" at the end of procedures and tasks to "Next steps". Explain who would want
-to do each item and why in a short paragraph.
+[New user content](analysis.md#new-user-content). Rename "Learn more" at the end
+of procedures and tasks to "Next steps". Explain who would want to do each item
+and why in a short paragraph.
 
 Limit on-site search to the current version of the documentation.
 

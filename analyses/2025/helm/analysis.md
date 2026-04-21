@@ -728,8 +728,8 @@ The numeric rating values used in this document are as follows
 5. Exemplary
 
 [criteria]: /docs/analysis/criteria.md
-[implementation]: ./helm-implementation.md
-[issues list]: ./helm-issues-list.md
+[implementation]: ./implementation.md
+[issues list]: ./issues-list.md
 [project-website]: https://helm.sh/
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119

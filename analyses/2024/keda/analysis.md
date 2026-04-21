@@ -26,14 +26,14 @@ efforts.
 This document was written to analyze the current state of KEDA documentation. It
 aims to provide project leaders with an informed understanding of potential
 problems in current project documentation. The companion document,
-keda-implementation.md, outlines an actionable plan for improvement.
+implementation.md, outlines an actionable plan for improvement.
 
 This document:
 
 - Analyzes the current KEDA technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on
-  investment. The companion document, keda-implementation.md, provides specific
+  investment. The companion document, implementation.md, provides specific
   actionable suggestions and recommendations for overall organization and
   presentation of documentation
 
@@ -79,17 +79,16 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
-An accompanying document, [keda-implementation.md](./keda-implementation.md),
-breaks the recommendations down into concrete actions that can be implemented by
-project contributors. Its focus is on drilling down to specific, achievable work
-that can be completed in constrained blocks of time. Ultimately, the
-implementation items should be tracked as a series of Github
-[issues](keda-issues.md).
+An accompanying document, [implementation.md](./implementation.md), breaks the
+recommendations down into concrete actions that can be implemented by project
+contributors. Its focus is on drilling down to specific, achievable work that
+can be completed in constrained blocks of time. Ultimately, the implementation
+items should be tracked as a series of Github [issues](issues.md).
 
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read [keda-implementation.md](./keda-implementation.md).
+read [implementation.md](./implementation.md).
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
