@@ -476,7 +476,8 @@ Contributor Documentation rubric.
 One of the easiest ways to attract new contributors is making sure they know how
 to reach you.
 
-The Flatcar teams cast a wide net for gathering feedback and contributions in the following areas:
+The Flatcar teams cast a wide net for gathering feedback and contributions in
+the following areas:
 
 - Documentation: Guides, tutorials, API docs
 - Code: New features, bug fixes, builds, CI/CD
@@ -484,10 +485,11 @@ The Flatcar teams cast a wide net for gathering feedback and contributions in th
 - Flatcar Apps: Create reference implementations for running services on Flatcar
 - Outreach: blog posts, talks, presentations, workshops
 - Coordination: Release management, Upstream project coordination
-- Events: Bug fixing days, doc writing days, devrooms, meetups, conferences
+- Events: Bug fixing days, doc writing days, meetups, conferences
 - Design: Web design, maintaining the Flatcar website
 
-The team provides links to aggregated GitHub issues for newcomers and advanced users to work on.
+The team provides links to aggregated GitHub issues for newcomers and advanced
+users to work on.
 
 We evaluate on the following:
 
@@ -511,15 +513,14 @@ We evaluate on the following:
 
   Yes. Office Hours are promoted and scheduled monthly.
 
-  When: 2nd Wednesday of every month at 2:30pm UTC
-  Where: https://meet.flatcar.org/OfficeHours
-  Agenda: https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours
+  When: 2nd Wednesday of every month at 2:30pm UTC Where:
+  https://meet.flatcar.org/OfficeHours Agenda:
+  https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours
 
   There are also Developer Syncs.
 
-  When: 4th Wednesday of every month at 2:30pm UTC
-  Where: https://meet.flatcar.org/OfficeHours
-  Agenda: Developer Sync Discussions
+  When: 4th Wednesday of every month at 2:30pm UTC Where:
+  https://meet.flatcar.org/OfficeHours Agenda: Developer Sync Discussions
 
 - **Are mailing lists documented?**
 
@@ -542,14 +543,14 @@ We evaluate on the following:
 - **Is there a clearly marked way for new contributors to make code or
   documentation contributions (i.e. a “good first issue” label)?**
 
-Label	Description
-good first issue	Extra guidance to help you make your first contribution
-help wanted	Issues suitable for non-core maintainers
+Label Description good first issue Extra guidance to help you make your first
+contribution help wanted Issues suitable for non-core maintainers
 
-  Each page has these two links at the bottom:
-  - An `Edit this page` link opens the page for editing in GitHub if a fork
-    exists, otherwise shows the option to fork the repository.
-  - A `File documentation issue` link opens a new GitHub issue.
+Each page has these two links at the bottom:
+
+- An `Edit this page` link opens the page for editing in GitHub if a fork
+  exists, otherwise shows the option to fork the repository.
+- A `File documentation issue` link opens a new GitHub issue.
 
 - **Are issues well-documented (i.e., more than just a title)?**
 
@@ -588,11 +589,10 @@ We evaluate on the following:
 - **Do new users know where to get help?**
 
   That would be Flatcar's Slack and Matrix chat channels.
-
   - Matrix (preferred): #flatcar:matrix.org
   - Slack: #flatcar (Kubernetes Slack)
   - GitHub Discussions: flatcar/Flatcar/discussions
-  - Mailing List (Users): flatcar-linux-user
+  - Mailing List (Users): #flatcar-linux-user
 
 #### Project governance documentation
 
@@ -820,10 +820,11 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
+<!--
+[criteria]: ../../../docs/criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
 [project-website]: _PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[website guidelines]: ../../website-guidelines-checklist.md -->
