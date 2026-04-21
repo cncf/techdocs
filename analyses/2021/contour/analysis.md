@@ -4,6 +4,8 @@ tags: [contour]
 cSpell:ignore: Horgan celestehorgan hashlinks
 ---
 
+<!-- markdownlint-disable line-length no-duplicate-heading -->
+
 # Docs assessment
 
 ## Introduction

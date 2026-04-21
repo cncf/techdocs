@@ -7,7 +7,9 @@ author: Dave Welsch (@dwelsch-esi)
 cSpell:ignore: clotributor dwelsch Welsch runbooks WCAG
 ---
 
-# Introduction
+<!-- markdownlint-disable line-length no-duplicate-heading no-emphasis-as-heading reference-links-images link-image-reference-definitions link-fragments -->
+
+## Introduction
 
 This document analyzes the effectiveness and completeness of the
 [Backstage][backstage-io] open source software (OSS) project's documentation and
@@ -19,7 +21,7 @@ prerequisite for program graduation. The documentation analysis is the first
 step of a CNCF process aimed at assisting projects with their documentation
 efforts.
 
-## Purpose
+### Purpose
 
 This document was written to analyze the current state of Backstage
 documentation. It aims to provide project leaders with an informed understanding
@@ -32,7 +34,7 @@ This document:
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
 
-## Scope of analysis
+### Scope of analysis
 
 The documentation discussed here includes the entire contents of the website
 (which contains the technical docs), as well as documentation for contributors
@@ -58,7 +60,7 @@ Backstage GitHub repo.
 
 - Backstage plugins: https://backstage.spotify.com/
 
-## How this document is organized
+### How this document is organized
 
 This document is divided into three sections that represent three major areas of
 concern:
@@ -85,7 +87,7 @@ that can be completed in constrained blocks of time. Ultimately, the
 implementation items should be tracked as a series of Github
 [issues][backstage-issues].
 
-## How to use this document
+### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
 read [backstage-implementation.md][implementation-doc].
@@ -101,7 +103,7 @@ to their area of concern:
 Examples of CNCF documentation that demonstrates the analysis criteria are
 linked from the [Criteria][cncf-doc-criteria] specification.
 
-### Recommendations, requirements, and best practices
+#### Recommendations, requirements, and best practices
 
 Notwithstanding the fact that this analysis measures documentation against CNCF
 project maturity standards, in most cases there is more than one way to do
@@ -114,7 +116,7 @@ understood as "recommended" or "should" at the strongest, and "optional" or
 "may" in many cases. Any "must" or "required" actions are clearly denoted as
 such, and pertain to legal requirements such as copyright and licensing issues.
 
-# Project documentation
+## Project documentation
 
 | Criteria                   | 1   | 2   | 3   | 4   | 5   |
 | -------------------------- | --- | --- | --- | --- | --- |
@@ -130,7 +132,7 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-## Comments: project documentation
+### Comments: project documentation
 
 Backstage is a platform for organizing and managing software projects. This
 complicates the documentation, because it can be difficult to distinguish among
@@ -155,7 +157,7 @@ that documentation should be organized under at least four roles:
 3. Extending a Backstage app: DevOp or internal tooling developer.
 4. Extending the Backstage platform: contributing developer.
 
-### Overall Issues
+#### Overall Issues
 
 The main issues with the Backstage documentation are:
 
@@ -178,7 +180,7 @@ Started][backstage-doc-getting-started]. However:
 The following sections contain brief analyses of each element of the Project
 Documentation rubric.
 
-### Information architecture
+#### Information architecture
 
 **Conceptual content** is abundant throughout the Backstage documentation. This
 is good, because using Backstage effectively requires a thorough understanding
@@ -220,7 +222,7 @@ necessary).
 It's not clear that the documentation is completely **up to date**, although
 [release notes][backstage-doc-rn] exist and are easily findable.
 
-### New user content
+#### New user content
 
 **New user** content is present and findable ("**signposted**"), including
 **installation** instructions for all applicable **OSes**. However, the [Getting
@@ -233,7 +235,7 @@ workflow **path** after installation.
 There is **example content** available, including tutorials for a variety of
 tasks and a very nice [demo server][backstage-demo].
 
-### Content maintainability & site mechanics
+#### Content maintainability & site mechanics
 
 The documentation is **searchable**. There does not seem to be a
 **localization** framework. There doesn't currently seem to be any kind of
@@ -242,7 +244,7 @@ localization effort.
 There does not seem to be any mechanism for **versioning** documentation
 content.
 
-### Content creation processes
+#### Content creation processes
 
 The procedures for duplicating the documentation locally and for contributing
 documentation are [documented][backstage-microsite] but are [not easily
@@ -255,7 +257,7 @@ It would be nice if this situation were made clear explicitly.
 
 The website does not have a clear individual **owner or maintainer**.
 
-### Inclusive language
+#### Inclusive language
 
 I found no content that uses non-recommended words as documented by the
 [Inclusive Naming Initiative][inclusive-naming] website.
@@ -263,14 +265,14 @@ I found no content that uses non-recommended words as documented by the
 The website makes occasional use of words like "simple" and "easy", but avoids
 explicitly ableist language.
 
-## Recommendations: project documentation
+### Recommendations: project documentation
 
 The following sections contain recommendations for improvements to the Backstage
 project documentation. These recommendations are for broad improvements that
 would greatly increase documentation effectiveness. For details, see
 [Implementation][implementation].
 
-### Clarify user roles and objectives
+#### Clarify user roles and objectives
 
 Any systemic improvement to the Backstage documentation hinges on clearly
 defining and documenting user roles. This is a first step in defining any
@@ -283,7 +285,7 @@ understanding of how Backstage is used should feel free to modify this list if
 it serves the needs of the project, keeping in mind that the purpose of the user
 roles is to organize the task-based documentation.
 
-### Develop instructional documentation
+#### Develop instructional documentation
 
 Most of the Backstage documentation seems to have evolved from architecture and
 design documentation. This makes it very rich in conceptual material and
@@ -322,7 +324,7 @@ task, or reference. In some cases this will mean that two pages are extracted
 from a single existing page. Conversely, some pages may prove to be redundant.
 The new, more focused pages can then be reorganized as described below.
 
-### Reorganize the documentation site
+#### Reorganize the documentation site
 
 Right now different types of documentation (conceptual/architectural;
 instructional; reference) for different user roles are intermixed throughout the
@@ -348,7 +350,7 @@ help navigate the site. Much of this is automated by the static site generator
 (currently _Docusaurus_), but it's the writer's responsibility to assure that
 these navigation aids are adequate.
 
-# Contributor documentation
+## Contributor documentation
 
 | Criteria                                  | 1   | 2   | 3   | 4   | 5   |
 | ----------------------------------------- | --- | --- | --- | --- | --- |
@@ -363,7 +365,7 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-## Comments: contributor documentation
+### Comments: contributor documentation
 
 A unique feature of Backstage is that user and contributor roles exist on a
 spectrum; plugins designed or modified to serve a particular organization can be
@@ -373,7 +375,7 @@ contributors is intermingled, and easily confused, with instructions for admin
 users trying to expand functionality by modifying or adding code, especially
 plugins.
 
-### Communication methods documented
+#### Communication methods documented
 
 Communication channels are clearly documented on the
 [Community][backstage-community] page of the website, including **message
@@ -385,7 +387,7 @@ main menu. There are 22 related repositories listed on the [Backstage project
 page][backstage-github-project]. A little digging is required to suss out the
 purpose of some of these projects.
 
-### Beginner friendly issue backlog
+#### Beginner friendly issue backlog
 
 The backlog is robustly **triaged** and documented. A **"good first issue"**
 label is available and prominently recommended. Issues are **well documented**
@@ -394,7 +396,7 @@ with complete descriptions.
 There are quite a few **stale backlog items** open in the backlog list. Many,
 perhaps a majority, of these seem to be plugin requests.
 
-### New contributor getting started content
+#### New contributor getting started content
 
 The Backstage OSS **community** is visible and accessible on a [community
 page][backstage-community] reached via a top-level menu item on the website.
@@ -408,18 +410,18 @@ the Getting Started documentation.
 
 Backstage is listed in the [Clotributor][] tool.
 
-### Project governance documentation
+#### Project governance documentation
 
 Governance is clearly documented in [GOVERNANCE.md][backstage-governance].
 
-## Recommendations: contributor documentation
+### Recommendations: contributor documentation
 
 As an open source project, Backstage looks healthy and well run.
 
 The only recommendation here is to disentangle the contributor documentation
 from the product documentation.
 
-# Website
+## Website
 
 | Criteria                                    | 1   | 2   | 3   | 4   | 5   |
 | ------------------------------------------- | --- | --- | --- | --- | --- |
@@ -443,9 +445,9 @@ Scale:
 - 3 = (Is present, but needs work)
 - 5 = (Is executed extremely well or no improvement required)
 
-## Comments: website
+### Comments: website
 
-### Single-source requirement
+#### Single-source requirement
 
 The source files for the website and technical documentation reside in two
 separate directories of the Backstage GitHub repo, built as a single unit by
@@ -453,7 +455,7 @@ _Docusaurus_. There is no separate **website repo**.
 
 The strategy for **generating the docs** is documented but obscure.
 
-### Minimal website requirements
+#### Minimal website requirements
 
 Listed and acknowledged below are the (cumulative) _minimal_ website
 requirements for projects based on their [maturity level][cncf-maturity-stages]:
@@ -474,14 +476,14 @@ sandbox, incubating, graduated and archived.
 | Archived   | Archived status of the project is obvious to site visitors                           | n/a  |
 | Archived   | Link to successor project website and/or migration documentation (if it exists)      | n/a  |
 
-### Branding and design
+#### Branding and design
 
 The Backstage **brand** is easily recognizable through the logo and color
 scheme. The scheme is **used consistently** across the website and docs.
 
 The website **typography** is easy to read.
 
-### Case studies/social proof
+#### Case studies/social proof
 
 **Case studies** and **testimonials** are not prominent and are not readily
 findable from the website. There is no **logo wall** of participating
@@ -490,7 +492,7 @@ organizations.
 The project has an **active blog**. **Community discussions** are available on
 the website.
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 **Analytics**
 
@@ -513,7 +515,7 @@ The current **custodian(s)** of the following accounts are **not** clearly
 documented: analytics, Google Search Console, site-search (such as Google CSE or
 Algolia).
 
-### Maintenance planning
+#### Maintenance planning
 
 The **website tooling** (Docusaurus static site build) is well supported.
 
@@ -524,14 +526,14 @@ build time** was under 30 seconds for a local build on a Mac M1. Maintainers
 have sufficient **permissions** to download and build the doc. Checking in the
 doc requires a PR and approval from a project maintainer.
 
-### Usability, accessibility and devices
+#### Usability, accessibility and devices
 
 Backstage.io is partially conformant with [WCAG 2.1 level
 AA][wcag-understanding] with respect to **accessibility**.
 
-## Recommendations: website
+### Recommendations: website
 
-### Single-source repo
+#### Single-source repo
 
 The documentation is isolated from the code by virtue of being in its own
 directories; however, its location and build instructions are hard to find.
@@ -545,7 +547,7 @@ many repositories. Creating one more for documentation would make the project
 organization cleaner and make it easier to contribute to the project
 documentation.
 
-### Minimum website requirements for maturity level
+#### Minimum website requirements for maturity level
 
 To meet the maturity level standards for a graduated project, the following
 aspects should be updated as described in [Project documentation][proj-doc]:
@@ -555,22 +557,22 @@ aspects should be updated as described in [Project documentation][proj-doc]:
 - Update and reorganize the documentation with respect to user orientation and
   task-based support of use cases.
 
-### Case studies/social proof
+#### Case studies/social proof
 
 Implement a **logo wall** of participating organizations, with links to
 testimonials and/or case studies.
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 Add documentation and website custodians to the project maintainer lists in
 `OWNERS.md` and wherever else project maintainers are documented.
 
-### Maintenance planning
+#### Maintenance planning
 
 Add a prominent call for website and documentation maintainers in the project
 introduction alongside the call for code maintainers.
 
-### Accessibility
+#### Accessibility
 
 Improve compliance in these areas:
 

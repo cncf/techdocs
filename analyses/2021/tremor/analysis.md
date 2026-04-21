@@ -4,6 +4,8 @@ tags: [tremor]
 cSpell:ignore: Horgan onramps offramps LLDB Wayfair
 ---
 
+<!-- markdownlint-disable no-emphasis-as-heading -->
+
 # Assessment: Project Tremor
 
 Prepared by: Celeste Horgan Date: July 2021

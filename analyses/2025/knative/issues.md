@@ -399,7 +399,7 @@ Related material in the current doc:
 - https://knative.dev/docs/getting-started/next-steps/
 - https://knative.dev/docs/bookstore/page-0/welcome-knative-bookstore-tutorial/
 - https://knative.dev/docs/bookstore/disclaimer/
-- https://knative.dev/docs/bookstore/* (all bookstore pages)
+- all pages in the Bookstore tutorial
 - https://knative.dev/docs/serving/architecture/
 - https://knative.dev/docs/serving/request-flow/
 - https://knative.dev/docs/serving/encryption/encryption-overview/
