@@ -592,7 +592,7 @@ We evaluate on the following:
   - Matrix (preferred): `#flatcar:matrix.org`
   - Slack: `#flatcar` (Kubernetes Slack)
   - GitHub Discussions: `flatcar/Flatcar/discussions`
-  - Mailing List (Users): `#flatcar-linux-user`
+  - Mailing List (Users): `#flatcar-Linux-user`
 
 #### Project governance documentation
 
