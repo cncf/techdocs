@@ -43,17 +43,17 @@ TO DO: Create the GitHub issues in helm-www repo and add links here
 > in the issue itself. In the GitHub umbrella issue, link to the sub-issue using
 > a Markdown checkbox as shown below.
 
-Reorganize the sidebar (using the proposed sidebar in `helm-implementation.md`
-as a guide) by creating new folders for each category and moving files
-accordingly. Add redirects and update links as needed. Needs to be done for each
-locale for v4 only.
+Reorganize the sidebar (using the proposed sidebar in `implementation.md` as a
+guide) by creating new folders for each category and moving files accordingly.
+Add redirects and update links as needed. Needs to be done for each locale for
+v4 only.
 
 ### Issue: Add a technical/conceptual overview of Helm
 
 Use existing content in
 [Helm Architecture](https://helm.sh/docs/topics/architecture) to add a
-high-level Helm overview page. See the proposed sidebar in
-`helm-implementation.md` for instruction on where to put it.
+high-level Helm overview page. See the proposed sidebar in `implementation.md`
+for instruction on where to put it.
 
 ### Issue: Prune out-of-date content
 

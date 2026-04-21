@@ -39,6 +39,6 @@ presented in these files:
 
 - [Survey of existing documentation](./survey-of-existing-doc.md) (as of
   September 2023)
-- [Analysis](./in-toto-analysis.md)
-- [Recommendations and implementation](./in-toto-implementation.md)
-- [Proposed actionable issues](./in-toto-doc-issues.md)
+- [Analysis](./analysis.md)
+- [Recommendations and implementation](./implementation.md)
+- [Proposed actionable issues](./doc-issues.md)
