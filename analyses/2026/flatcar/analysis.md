@@ -504,7 +504,7 @@ We evaluate on the following:
 
 - **Is there a direct link to your GitHub organization/repository?**
 
-  Not from the `flatacar.org` website, but listed in the README file of the
+  Not from the `Flatacar.org` website, but listed in the README file of the
   Flatcar GitHub repository.
 
 - **Are project meetings documented? Is it clear how someone can join those
