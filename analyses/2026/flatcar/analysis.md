@@ -504,7 +504,7 @@ We evaluate on the following:
 
 - **Is there a direct link to your GitHub organization/repository?**
 
-  Not from the `Flatacar.org` website, but listed in the README file of the
+  Not from the `Flatcar.org` website, but listed in the README file of the
   Flatcar GitHub repository.
 
 - **Are project meetings documented? Is it clear how someone can join those
@@ -605,7 +605,7 @@ We evaluate on the following:
 
   Yes,
   [Flatcar Project Governance](https://github.com/flatcar/Flatcar/blob/main/governance.md)
-  document projects values of openness, fairness, community, inclusivity, and
+  document projects values of openness, fairness, community and
   participation. For an incubating project, Flatcar is laying the foundation for
   vigorous community participation.
 
