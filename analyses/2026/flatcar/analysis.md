@@ -605,9 +605,9 @@ We evaluate on the following:
 
   Yes,
   [Flatcar Project Governance](https://github.com/flatcar/Flatcar/blob/main/governance.md)
-  document projects values of openness, fairness, community and
-  participation. For an incubating project, Flatcar is laying the foundation for
-  vigorous community participation.
+  document projects values of openness, fairness, community and participation.
+  For an incubating project, Flatcar is laying the foundation for vigorous
+  community participation.
 
 ### Recommendations
 
