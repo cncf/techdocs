@@ -611,8 +611,13 @@ We evaluate on the following:
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
+The Flatcar team is off to a robust start with it Community outreach and
+involvement. All the pertinent criteria has been met for an incubating project.
+As the project evolves, the following recommendations should be considered:
+
+- Put a link to community participation portal content on the main Flatcar.org
+  website.
+- Include direct links to documentation issues in listings.
 
 #### Communication methods documented
 
