@@ -116,7 +116,7 @@ structuring should evolve.
 Use this sheet, or a sheet derived from it, to arrived at a signed-off
 structure:
 
-https://docs.google.com/spreadsheets/d/1SJEsvwF70GYQlK0JUU6JWslJRmMMeE8LVfL5MOR6EPU/edit
+(link to be provided)
 
 Suggested changes:
 
