@@ -6,6 +6,8 @@ modified: 2026-04-24
 author: Bruce Hamilton (@iRaindrop)
 ---
 
+<!-- markdownlint-disable no-duplicate-heading -->
+
 ## Sign-off on the documentation restructure
 
 ### Overview
@@ -162,7 +164,7 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 ### Possible Implementation
 
 The roadmap should be a flow-based narrative starting with the list of paths and
-each path should have a checklist of prerequsites and next steps that cover
+each path should have a checklist of prerequisites and next steps that cover
 provisioning tools and deployment.
 
 Configuration might be too granular for this roadmap.
@@ -395,6 +397,8 @@ offered to write the overview draft from which good ideas could be gleaned.
 ## Consolidate Concepts in the Community Supported Platforms overview
 
 ### Overview
+
+Note: This node has just been renamed to "Virtualization Options".
 
 The Community Supported Platforms node,
 https://www.flatcar.org/docs/latest/installing/community-platforms/, has a

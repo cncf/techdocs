@@ -424,9 +424,9 @@ be malleable.
 - Add at least one architectural diagram to top overviews that depict a
   container, a container with Flatcar, and perhaps nodes and clusters.
 
-- Nodes like "Virtual Machines", "Cloud Providers", and "Security Options" have
-  subtopics where common tasks and concepts could be discussed in the overview,
-  leaving the subtopics with simpler procedures and minimal repetition.
+- Nodes like "Virtual Machines", "Cloud Providers", have subtopics where common
+  tasks and concepts could be discussed in the overview, leaving the subtopics
+  with simpler procedures and minimal repetition.
 
 #### Content maintainability and site mechanics
 
