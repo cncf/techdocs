@@ -390,21 +390,15 @@ Reference and Contributor Documentation. These recommendations are designed to
 be malleable.
 
 - Create a Getting Started node with the following sections:
-  - Create an "Installation roadmap" page for users that enables them to
-    determine how they want to deploy containers with Flatcar. The starting
-    points for the discussion are whether the user comes from an on-prem or
-    cloud environment and many users will use both. This purpose of this page is
-    to provide users with a procedure for installation.
-  - Prerequisites regarding client operating systems including running VMs from
-    macOS and Windows.
-  - Prerequisites for the Quickstart.
-  - Any guidance on installing binaries directly or using programs like brew.
-  - Create a "Configuration and Provisioning" page that covers the YAML coding,
-    using Butane and employing other configurations. Link this page from the
-    "Installation roadmap".
-  - Create a "Deployment" page, covering scenarios for Kubernetes, clustering
-    and distributed systems. Cover on-prem and cloud. Link from the
-    "Installation roadmap".
+  - Create an "Roadmap" page for users that enables them to determine how they
+    want to deploy containers with Flatcar. The starting points for the
+    discussion are whether the user comes from an on-prem or cloud environment
+    and many users will use both. This purpose of this page is to provide users
+    with a procedure for installation.
+    - Prerequisites regarding client operating systems including running VMs
+      from macOS and Windows.
+    - Prerequisites for the Quickstart.
+    - Any guidance on installing binaries directly or using programs like brew.
 
 - For the middle functional nodes of the table of contents, devise the
   categories of tools, technologies, products, and terms pertinent areas for
@@ -429,6 +423,10 @@ be malleable.
 
 - Add at least one architectural diagram to top overviews that depict a
   container, a container with Flatcar, and perhaps nodes and clusters.
+
+- Nodes like "Virtual Machines", "Cloud Providers", and "Security Options" have
+  subtopics where common tasks and concepts could be discussed in the overview,
+  leaving the subtopics with simpler procedures and minimal repetition.
 
 #### Content maintainability and site mechanics
 
