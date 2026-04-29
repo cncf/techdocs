@@ -54,8 +54,8 @@ Here is the recommended structure summary of the top two nodes.
 |                                    | Host Configuration            |
 |                                    | Networking & Remote Access    |
 |                                    | Storage & File Systems        |
-| System Extensions (Sysext)         | Overview                      |
-|                                    | Systemext-bakery              |
+| System Extensions (SYSEXT)         | Overview                      |
+|                                    | Ready to Use Extensions       |
 | Deployments                        | Overview                      |
 |                                    | Cloud Providers               |
 |                                    | Virtualization Options        |
@@ -143,8 +143,8 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 ### Possible Implementation
 
 The roadmap should be a flow-based narrative starting with the list of paths and
-each path should have a checklist of prerequisites and high-level steps that cover
-provisioning tools and deployment.
+each path should have a checklist of prerequisites and high-level steps that
+cover provisioning tools and deployment.
 
 The user paths include:
 
@@ -161,8 +161,8 @@ on configuration and deployment.
 
 ### Overview
 
-Update or create the overview pages for each of the top two tiers of nodes. The overview
-should be brief tour of the node's content. Also update the very top
+Update or create the overview pages for each of the top two tiers of nodes. The
+overview should be brief tour of the node's content. Also update the very top
 introduction page.
 
 ### Context
@@ -173,13 +173,18 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-Create or update Overview.md in each top nodes in the Flatcar documentation. If the node contains several subtopics you can use AI to glean content for an effective overview. See [Consolidate Concepts in Virtual Machines Overview](#consolidate-concepts-in-virtual-machines-overview) issue for an example.
+Create or update Overview.md in each top nodes in the Flatcar documentation. If
+the node contains several subtopics you can use AI to glean content for an
+effective overview. See
+[Consolidate Concepts in Virtual Machines Overview](#consolidate-concepts-in-virtual-machines-overview)
+issue for an example.
 
 ## Create Architectural Diagrams
 
 ### Overview
 
-An architectural flow diagram will optimize the documentation. At least one is needed for the top page and others where appliable and helpful.
+An architectural flow diagram will optimize the documentation. At least one is
+needed for the top page and others where applicable and helpful.
 
 ### Context
 
@@ -189,21 +194,33 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-The writer should propose a diagram when the architectural and technical flow is understood for a subject area or precise process. Use Mermaid Chart to create the Mermaid code that renders on the web and in Visual Studio Code.
+The writer should propose a diagram when the architectural and technical flow is
+understood for a subject area or precise process. Use Mermaid Chart to create
+the Mermaid code that renders on the web and in Visual Studio Code.
 
-Prompt AI with a description of the flow to create the code that you can refine in Mermaid Chart.
+Prompt AI with a description of the flow to create the code that you can refine
+in Mermaid Chart.
 
 ## Add Step Numbering and Context to Procedures
 
 ### Overview
 
-Add numbering or bullets to introduce code blocks with context of where the code is run.
+Add numbering or bullets to introduce code blocks with context of where the code
+is run.
 
-The Flatcar team already has an issue to add code block capabilities with a copy button. When this is in place, you can add Markdown fencing syntax with the language in all pages with code.
+The Flatcar team already has an issue to add code block capabilities with a copy
+button. When this is in place, you can add Markdown fencing syntax with the
+language in all pages with code.
 
-Currently few if any of the procedural how-to topics have numbered steps. While in some cases the casual tone is appreciated, it detracts from being able to reference exact steps and users expect numbering. Use bullets for one or two-step procedures.
+Currently few if any of the procedural how-to topics have numbered steps. While
+in some cases the casual tone is appreciated, it detracts from being able to
+reference exact steps and users expect numbering. Use bullets for one or
+two-step procedures.
 
-New users may be confused as to where a particular code block is run. Is it on the client machine, in a VM, in a CLI? So introduce code blocks with verbiage such as "In the VM window in a container, run the following command...". No need to do it for every block if it's obvious.
+New users may be confused as to where a particular code block is run. Is it on
+the client machine, in a VM, in a CLI? So introduce code blocks with verbiage
+such as "In the VM window in a container, run the following command...". No need
+to do it for every block if it's obvious.
 
 ### Context
 
@@ -219,11 +236,14 @@ Make these change every time you edit a page with code.
 
 ### Overview
 
-The current metadata at the top of Flatcar Markdown files has values for `title`, `linktitle`, and `weight`.
+The current metadata at the top of Flatcar Markdown files has values for
+`title`, `link title`, and `weight`.
 
-Adding a `content-type` or `type` value to the metadata will be great for managing the repository and achieving consistency in the content.
+Adding a `content-type` or `type` value to the metadata will be great for
+managing the repository and achieving consistency in the content.
 
-Apparently the `weight` value is no longer of benefit for the team and there's discussion of removing it.
+Apparently the `weight` value is no longer of benefit for the team and there's
+discussion of removing it.
 
 ### Context
 
@@ -233,13 +253,19 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-After the restructured repository has stabilized, a Python or other script could walk the repository and update each Markdown file's metadata.
+After the restructured repository has stabilized, a Python or other script could
+walk the repository and update each Markdown file's metadata.
 
 ## Add indexing file to repository to assist AI agents
 
-The CTO of CNCF just suggested that all CNCF doc maintainers run a 'sanity check' with this tool that measures how well AI agents can read, navigate, and use a documentation site using this tool:  https://afdocs.dev/
+The CTO of CNCF just suggested that all CNCF doc maintainers run a 'sanity
+check' with this tool that measures how well AI agents can read, navigate, and
+use a documentation site using this tool: https://afdocs.dev/
 
-One of the main ways to improve AI capabilities is by creating a `llms.txt` file to reside at the root of the repository that contains links to key sections, essentially a high level index. AI agents look for this file to navigate the site.
+One of the main ways to improve AI capabilities is by creating a `LLMS.TXT` file
+to reside at the root of the repository that contains links to key sections,
+essentially a high level index. AI agents look for this file to navigate the
+site.
 
 ### Context
 
@@ -249,7 +275,8 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-Visit https://llmstxt.org to learn about the `llms.txt` file. Consult with the Flatcar team to determine key sections and check in the file.
+Visit https://llmstxt.org to learn about the `LLMS.TXT` file. Consult with the
+Flatcar team to determine key sections and check in the file.
 
 ## Consolidate Concepts in Virtual Machines Overview
 
