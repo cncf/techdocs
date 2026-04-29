@@ -2,13 +2,13 @@
 title: Flatcar Issues
 tags: [Flatcar]
 created: 2026-04-24
-modified: 2026-04-24
+modified: 2026-04-29
 author: Bruce Hamilton (@iRaindrop)
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
 
-## Sign-off on the documentation restructure
+## Sign-off and create the documentation restructure
 
 ### Overview
 
@@ -21,74 +21,67 @@ Flatcar differs from a typical application or library documentation set because
 it's not so much installation as is its provisioning, or creating, a container
 with an immutable operating system. As such the user path, or journey,
 throughout the documentation is one of tailoring an efficient first boot of the
-container with the desired operating system settings and capabilities.
+container with the desired OS settings and capabilities.
 
 The recommended structure is a table of contents of just two nodes deep. While
-there can be deeper nodes, only two levels is recommended and facilitates a
-positive user experience by improving discoverability. With only two levels
-deep, the length of the structure, from the top Getting Started to the bottom,
-gets longer.
+there can be deeper nodes, only two primary levels is recommended and
+facilitates a positive user experience by improving discoverability.
 
 The structure should have all top-of-mind concepts and technologies in the first
-and second tiers. Some of these nodes need to be buckets to group concepts and
-procedures. Strategic planning should be able to arrive at a structure where new
-nodes and changes can be accommodated without re-architecting the structure.
+and second tiers. Some of these nodes need to be broader categories to group
+concepts and procedures. Strategic planning should be able to arrive at a
+structure where naming changes can be accommodated without re-architecting the
+structure.
 
-Here is the recommended structure:
+Here is the recommended structure summary of the top two nodes.
 
-| Level 1 Nodes                      | Level 2 Nodes/topics          |
+| Level A                            | Level B                       |
 | ---------------------------------- | ----------------------------- |
+| Flatcar Container Linux            | Top intro/overview            |
 | Getting Started                    | Overview                      |
 |                                    | Roadmap                       |
-|                                    | Tutorial                      |
-|                                    | CoreOS Migration              |
+|                                    | Quickstart                    |
+|                                    | Learning Series               |
+|                                    | Minecraft Flatcar Apps        |
 | First Boot & Provisioning          | Overview                      |
 |                                    | Butane Config Transpiler      |
+|                                    | Ignition                      |
 |                                    | Infrastructure as Code        |
 |                                    | Image Customization           |
-|                                    | OS Extensions                 |
 |                                    | Virtual Machines              |
-| Core OS Configuration              | Overview                      |
+| OS Configuration                   | Overview                      |
 |                                    | Systemd & Process Management  |
 |                                    | Host Configuration            |
 |                                    | Networking & Remote Access    |
 |                                    | Storage & File Systems        |
-| Security                           | Overview                      |
-|                                    | Hardening & Compliance        |
-|                                    | Encryption & Storage          |
-|                                    | Certificates & Authentication |
+| System Extensions (Sysext)         | Overview                      |
+|                                    | Systemext-bakery              |
 | Deployments                        | Overview                      |
 |                                    | Cloud Providers               |
+|                                    | Virtualization Options        |
 |                                    | Bare Metal                    |
 | Orchestration & Container Runtimes | Overview                      |
 |                                    | Managing Clusters             |
 |                                    | Kubernetes                    |
 |                                    | Container Runtimes            |
-| Updates & Releases                 | Overview                      |
-|                                    | Nebraska Update Manger        |
+| Nebraska Update Manager & Releases | Overview                      |
+|                                    | Nebraska Update Manager       |
 |                                    | Managing Releases             |
-| Diagnostics & Fixing Issues        | Overview                      |
-|                                    | Debugging Guide               |
-| Reference                          | Overview                      |
+| Security                           | Overview                      |
+|                                    | Hardening & Compliance        |
+|                                    | Encryption & Storage          |
+|                                    | Certificates & Authentication |
+|                                    | Supply Chain                  |
 |                                    | Integrations                  |
 |                                    | Constants & IDs               |
-|                                    | Supply Chain                  |
+| Diagnostics & Fixing Issues        | Overview                      |
+|                                    | Debugging Guide               |
+| CoreOS Migration                   | Overview                      |
+|                                    | Updating from CoreOS          |
 | Developer Guides                   | Overview                      |
 |                                    | SDK                           |
 | How to Contribute                  | Overview                      |
 |                                    | Docs Style & Formatting       |
-
-Notes:
-
-The second and third nodes, "First Boot & Provisioning" and "Core OS
-Configuration" are buckets of topics related to configuration and provisioning.
-The difference between the two is that an argument can be made that users will
-different needs and options for provisioning as well as configuring core
-settings.
-
-An argument could be made that "Orchestration & Container Runtimes" should have
-Kubernetes in the title. In that case perhaps "Kubernetes & Orchestration" would
-suffice.
 
 Audience: All
 
@@ -108,44 +101,30 @@ https://www.flatcar.org/docs/latest
 
 Refers to the entire left-hand navigation table of contents.
 
-The recommended structure is available in a Google sheet, with links to the
-existing content. See the README tab for information about using this data. This
-sheet has a row for every page in the documentation, but the hierarchical
-arrangement of topics under the second note is at a level of granularity beneath
-the scope of the recommended restructure. As the structure evolves, the deeper
-structuring should evolve.
+The recommended detailed and summary structures are available in this
+spreadsheet:
 
-Use this sheet, or a sheet derived from it, to arrived at a signed-off
-structure:
+(link)
 
-(link to be provided)
+The detailed sheet has a row for each of the current files in the repository.
+The files under node level 2 are not listed in the summary sheet. These
+recommended structure does not map the hierarchical sequence of these files on
+the website and is assumed there will be churn in this granularity. As the
+structure evolves, the deeper structuring should also evolve.
 
-Suggested changes:
+At this writing, there is initial approval of the recommended structure and
+after a final approval from the team the structure would be ready to
+incorporate. A repository restructure is preferred over using a mapping file
+like Nav.yaml.
 
-After the Flatcar team has agreed on a structure, this issue is complete.
+The sheet has columns of `old path` and `new path`. The team needs to determine
+the names of the directories that correspond to the names of the nodes, e.g. the
+"First Boot & Provisioning" could have 'provisioning' as the name of the
+directory (folder).
 
-## Create the NAV.YML file
-
-### Overview
-
-After the Flatcar team has signed off on the recommended structure, the website
-team will probably use a NAV.YML YAML file to map the structure to the folders
-and files in the repository.
-
-### Context
-
-This issue tracks recommended changes resulting from an analysis of the Flatcar
-documentation commissioned by CNCF. The analysis and supporting documents are
-here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
-
-### Possible Implementation
-
-The NAV.YML file can be constructed using data from the level-a, level-b, and
-path columns in recommended structure sheet, columns D, E, and F, respectively.
-
-Then create a PR to add NAV.YML to the root of the Flatcar docs repository:
-
-https://github.com/flatcar/flatcar-website/tree/main/content/docs/latest
+After approval from the team, a bash script could be coded from the values of
+`old path` and `new path` with the `git mv` command to create the new
+repository.
 
 ## Write a Roadmap topic
 
@@ -164,10 +143,8 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 ### Possible Implementation
 
 The roadmap should be a flow-based narrative starting with the list of paths and
-each path should have a checklist of prerequisites and next steps that cover
+each path should have a checklist of prerequisites and high-level steps that cover
 provisioning tools and deployment.
-
-Configuration might be too granular for this roadmap.
 
 The user paths include:
 
@@ -184,7 +161,7 @@ on configuration and deployment.
 
 ### Overview
 
-Update or create the Overview pages for each of the top nodes. The overview
+Update or create the overview pages for each of the top two tiers of nodes. The overview
 should be brief tour of the node's content. Also update the very top
 introduction page.
 
@@ -196,12 +173,14 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-Create or update Overview.md in each top nodes in the Flatcar documentation.
+Create or update Overview.md in each top nodes in the Flatcar documentation. If the node contains several subtopics you can use AI to glean content for an effective overview. See [Consolidate Concepts in Virtual Machines Overview](#consolidate-concepts-in-virtual-machines-overview) issue for an example.
 
 ## Create Architectural Diagrams
 
 ### Overview
 
+An architectural flow diagram will optimize the documentation. At least one is needed for the top page and others where appliable and helpful.
+
 ### Context
 
 This issue tracks recommended changes resulting from an analysis of the Flatcar
@@ -210,12 +189,21 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-## Add Step Numbering to Procedures
+The writer should propose a diagram when the architectural and technical flow is understood for a subject area or precise process. Use Mermaid Chart to create the Mermaid code that renders on the web and in Visual Studio Code.
+
+Prompt AI with a description of the flow to create the code that you can refine in Mermaid Chart.
+
+## Add Step Numbering and Context to Procedures
 
 ### Overview
 
-Add numbering or bullets Introduce code blocks with context Summarize procedures
-in Overview Set content type to How-to in metadata
+Add numbering or bullets to introduce code blocks with context of where the code is run.
+
+The Flatcar team already has an issue to add code block capabilities with a copy button. When this is in place, you can add Markdown fencing syntax with the language in all pages with code.
+
+Currently few if any of the procedural how-to topics have numbered steps. While in some cases the casual tone is appreciated, it detracts from being able to reference exact steps and users expect numbering. Use bullets for one or two-step procedures.
+
+New users may be confused as to where a particular code block is run. Is it on the client machine, in a VM, in a CLI? So introduce code blocks with verbiage such as "In the VM window in a container, run the following command...". No need to do it for every block if it's obvious.
 
 ### Context
 
@@ -225,10 +213,18 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
 
-## Add Content Type to Metadata
+Make these change every time you edit a page with code.
+
+## Add Content Type and make other updates to metadata
 
 ### Overview
 
+The current metadata at the top of Flatcar Markdown files has values for `title`, `linktitle`, and `weight`.
+
+Adding a `content-type` or `type` value to the metadata will be great for managing the repository and achieving consistency in the content.
+
+Apparently the `weight` value is no longer of benefit for the team and there's discussion of removing it.
+
 ### Context
 
 This issue tracks recommended changes resulting from an analysis of the Flatcar
@@ -236,6 +232,24 @@ documentation commissioned by CNCF. The analysis and supporting documents are
 here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
 
 ### Possible Implementation
+
+After the restructured repository has stabilized, a Python or other script could walk the repository and update each Markdown file's metadata.
+
+## Add indexing file to repository to assist AI agents
+
+The CTO of CNCF just suggested that all CNCF doc maintainers run a 'sanity check' with this tool that measures how well AI agents can read, navigate, and use a documentation site using this tool:  https://afdocs.dev/
+
+One of the main ways to improve AI capabilities is by creating a `llms.txt` file to reside at the root of the repository that contains links to key sections, essentially a high level index. AI agents look for this file to navigate the site.
+
+### Context
+
+This issue tracks recommended changes resulting from an analysis of the Flatcar
+documentation commissioned by CNCF. The analysis and supporting documents are
+here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
+
+### Possible Implementation
+
+Visit https://llmstxt.org to learn about the `llms.txt` file. Consult with the Flatcar team to determine key sections and check in the file.
 
 ## Consolidate Concepts in Virtual Machines Overview
 
@@ -398,7 +412,7 @@ offered to write the overview draft from which good ideas could be gleaned.
 
 ### Overview
 
-Note: This node has just been renamed to "Virtualization Options".
+Note: This node will be renamed to "Virtualization Options".
 
 The Community Supported Platforms node,
 https://www.flatcar.org/docs/latest/installing/community-platforms/, has a
