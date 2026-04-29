@@ -325,49 +325,6 @@ has a minimal overview with several complex subtopics. Each of the subtopics in
 this node contain a very similar workflow that differ only by platform. To
 determine the commonalities among the subtopics, you can use AI. Here is a
 suggested AI prompt: "Review the subtopics in this link (link) and provide a
-list of common tasks that each of the Virtual Machine topics have in common. The
-aim is to make the overview page contain most of the concepts so that each of
-the subtopics can be simpler How-to topics."
-
-Repeat this prompt for the current Community Supported Platforms node,
-https://www.flatcar.org/docs/latest/installing/community-platforms/, which the
-Flatcar team agrees can be combined with the Cloud Providers node as proposed in
-the recommended structure.
-
-Here are the common steps determined by Copilot without the details. Run the
-prompt for full context.
-
-1. Choose a Flatcar Release Channel
-2. Obtain or Reference the Flatcar Image
-3. Prepare an Ignition (or Butane) Configuration
-4. Create or Launch the Instance
-5. Pass Ignition to the Instance
-6. Boot and Verify the Instance
-7. Access the Instance (SSH)
-8. Optional: Automate Deployment
-
-### Context
-
-This issue tracks recommended changes resulting from an analysis of the Flatcar
-documentation commissioned by CNCF. The analysis and supporting documents are
-here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
-
-### Possible Implementation
-
-Use AI and your own research to gather key concepts and common procedures that
-each of the subtopics have so that the overview contains the conceptual guidance
-and common tasks that need not be repeated by the subtopics. Copilot also
-offered to write the overview draft from which good ideas could be gleaned.
-
-## Consolidate Concepts in the Cloud Providers Overview
-
-### Overview
-
-The Cloud Providers node, https://www.flatcar.org/docs/latest/installing/cloud/,
-has a minimal overview with several complex subtopics. Each of the subtopics in
-this node contain a very similar workflow that differ only by platform. To
-determine the commonalities among the subtopics, you can use AI. Here is a
-suggested AI prompt: "Review the subtopics in this link (link) and provide a
 list of common tasks that each of the Cloud Providers topics have in common. The
 aim is to make the overview page contain most of the concepts so that each of
 the subtopics can be simpler How-to topics."
