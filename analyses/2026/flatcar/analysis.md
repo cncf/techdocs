@@ -131,11 +131,11 @@ be developing professional-quality documentation alongside the project code.
 The following sections contain brief assessments of each element of the project
 documentation.
 
-The current Flatcar documentation navigation structure, table of contents,
-defines the needed areas of knowledge to install and provision Flatcar, but it
-does not readily show the different paths for new users depending on their
+The current Flatcar documentation navigation structure, the *table of contents* (TOC),
+defines the areas of knowledge needed to install and provision Flatcar, but it
+does not show the different paths for new users depending on their
 environment and expectations. However, the initial structures of documentation
-sets such as Flatcar reflect the understanding, passions, and motivations of the
+sets such as Flatcar reflect the understanding and motivations of the
 team.
 
 The following comments are in regard to the top-tier nodes in the current table
