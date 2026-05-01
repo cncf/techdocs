@@ -286,8 +286,7 @@ The Virtual Machines topic, https://www.flatcar.org/docs/latest/installing/vms/,
 has a minimal overview with several complex subtopics. Each of the subtopics in
 this topic contain a similar workflow that differ only by platform. 
 
-Here are the common steps determined by Copilot without the details. Run the
-prompt for full context.
+Here are the common steps determined by Copilot without the details. 
 
 1. Select a Release Channel
 1. Download the Appropriate VM Image
