@@ -2,7 +2,7 @@
 title: Flatcar Documentation Analysis
 tags: [Flatcar]
 created: 2026-02-26
-modified: 2026-04-04
+modified: 2026-04-30
 author: Bruce Hamilton (@iRaindrop)
 ---
 
@@ -131,24 +131,24 @@ be developing professional-quality documentation alongside the project code.
 The following sections contain brief assessments of each element of the project
 documentation.
 
-The current Flatcar documentation navigation structure, the *table of contents* (TOC),
-defines the areas of knowledge needed to install and provision Flatcar, but it
-does not show the different paths for new users depending on their
+The current Flatcar documentation navigation structure, the _table of contents_
+(TOC), defines the areas of knowledge needed to install and provision Flatcar,
+but it does not show the different paths for new users depending on their
 environment and expectations. However, the initial structures of documentation
-sets such as Flatcar reflect the understanding and motivations of the
-team.
+sets such as Flatcar reflect the understanding and motivations of the team.
 
 The following comments are in regard to the top-tier nodes in the current table
 of contents:
 
 - The top "Flatcar Container Linux" page contains references and links that
-  appear to refer to an alternate version of the table of contents. While its good to
-  provide quick links, the user wonders whether the TOC node references the same
-  content, or if the links in the overview (right side) are supplemental.
-- The "Installing" node contains the large "Cloud Providers" node, which might be
-better as top tier node. The same with "Bare Metal". The team agrees that
-"Community supported platforms" could be merged into the "Cloud Providers"
-node.
+  appear to refer to an alternate version of the table of contents. While its
+  good to provide quick links, the user wonders whether the TOC node references
+  the same content, or if the links in the overview (right side) are
+  supplemental.
+- The "Installing" node contains the large "Cloud Providers" node, which might
+  be better as top tier node. The same with "Bare Metal". The team agrees that
+  "Community supported platforms" could be merged into the "Cloud Providers"
+  node.
 - The installation node should address all the new user paths, providing an
   installation roadmap or strategy. The "Learning Series" node, introduced into
   the documentation recently, outlines the key steps for provisioning,
@@ -157,9 +157,9 @@ node.
   of the docs relate to this section.
 - The "Nebraska" node is about updates, but a top node should convey the
   functionality rather than a product name.
-- The "Setup and Operations" node casts too wide a net in its heading.
-  How does "setup" differ from installation? The node contains several important
-content areas that should be more discoverable. For instance:
+- The "Setup and Operations" node casts too wide a net in its heading. How does
+  "setup" differ from installation? The node contains several important content
+  areas that should be more discoverable. For instance:
   - "Managing Clusters" might be better at a higher level because it's an
     initial evaluation in deploying Flatcar.
   - The Storage and Security nodes are typically at a higher level.
