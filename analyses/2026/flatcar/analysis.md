@@ -157,9 +157,9 @@ node.
   of the docs relate to this section.
 - The "Nebraska" node is about updates, but a top node should convey the
   functionality rather than a product name.
-- The "Setup and Operations" node casts too much of a wide net in its heading.
+- The "Setup and Operations" node casts too wide a net in its heading.
   How does "setup" differ from installation? The node contains several important
-  content areas that should be more discoverable, for instance:
+content areas that should be more discoverable. For instance:
   - "Managing Clusters" might be better at a higher level because it's an
     initial evaluation in deploying Flatcar.
   - The Storage and Security nodes are typically at a higher level.
