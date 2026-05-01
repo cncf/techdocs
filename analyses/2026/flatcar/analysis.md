@@ -430,6 +430,18 @@ the best arbiters of what changes are appropriate to the project.
   common tasks and concepts could be discussed in the overview, leaving the
   subtopics with simpler procedures and minimal repetition.
 
+- CNCF suggests that all CNCF doc maintainers run check with this tool that
+  measures how well AI agents can read, navigate, and use a documentation site
+  using this tool: https://afdocs.dev/
+
+  One of the main ways to improve AI capabilities is by creating an index file
+  to reside at the root of the repository that contains links to key sections,
+  essentially a high level index. AI agents look for this file to navigate the
+  site.
+
+  Visit https://llmstxt.org to learn about the index file. Consult with the
+  Flatcar team to determine key sections and check in the file.
+
 #### Content maintainability and site mechanics
 
 - Edit each procedural topic into a formal How-to topic with numbered steps.

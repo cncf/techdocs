@@ -251,28 +251,6 @@ list of common content types that apply to most files:
 - explanation
 - reference
 
-## Add indexing file to repository to assist AI agents
-
-The CTO of CNCF just suggested that all CNCF doc maintainers run check with this
-tool that measures how well AI agents can read, navigate, and use a
-documentation site using this tool: https://afdocs.dev/
-
-One of the main ways to improve AI capabilities is by creating an index file to
-reside at the root of the repository that contains links to key sections,
-essentially a high level index. AI agents look for this file to navigate the
-site.
-
-### Context
-
-This issue tracks recommended changes resulting from an analysis of the Flatcar
-documentation commissioned by CNCF. The analysis and supporting documents are
-here: https://github.com/cncf/techdocs/tree/main/analyses under `2026/Flatcar`.
-
-### Possible Implementation
-
-Visit https://llmstxt.org to learn about the index file. Consult with the
-Flatcar team to determine key sections and check in the file.
-
 ## Consolidate Concepts in Virtual Machines Overview
 
 ### Overview
