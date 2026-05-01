@@ -635,7 +635,9 @@ project evolves, the following recommendations should be considered:
 
 - Put a link to community participation portal content on the main Flatcar.org
   website.
-- Include direct links to documentation issues in listings.
+- Include direct links to documentation issues in the
+  [Finding Issues](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#finding-issueslistings)
+  section of the Contributing guide.
 
 #### Communication methods documented
 

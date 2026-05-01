@@ -13,6 +13,9 @@ the [analysis](analysis.md) document. Not all recommendations become issues.
 
 Teams are encouraged to create GitHub issues based on this document.
 
+As part of the CNCF analysis process, the analyst has added these issues to the
+Flatcar documentation GitHub repository.
+
 ## Sign-off and create the documentation restructure
 
 ### Overview
@@ -118,8 +121,8 @@ down the hierarchy.
 
 At this writing, there is initial approval of the recommended structure and
 after a final approval from the team the structure would be ready to
-incorporate. A repository restructure is preferred over using a mapping file
-like Nav.yaml.
+incorporate. The team prefers restructuring the repository instead of using
+mapping file such as Nav.yaml.
 
 The spreadsheet has `old path` and `new path` columns. The team needs to
 determine the names of the directories that correspond to the names of the
