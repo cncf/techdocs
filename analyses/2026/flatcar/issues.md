@@ -282,14 +282,9 @@ Flatcar team to determine key sections and check in the file.
 
 ### Overview
 
-The Virtual Machines node, https://www.flatcar.org/docs/latest/installing/vms/,
+The Virtual Machines topic, https://www.flatcar.org/docs/latest/installing/vms/,
 has a minimal overview with several complex subtopics. Each of the subtopics in
-this node contain a very similar workflow that differ only by platform. To
-determine the commonalities among the subtopics, you can use AI. Here is a
-suggested AP prompt: "Review the subtopics in this link (link) and provide a
-list of common tasks that each of the Virtual Machine topics have in common. The
-aim is to make the overview page contain most of the concepts so that each of
-the subtopics can be simpler How-to topics."
+this topic contain a similar workflow that differ only by platform. 
 
 Here are the common steps determined by Copilot without the details. Run the
 prompt for full context.
