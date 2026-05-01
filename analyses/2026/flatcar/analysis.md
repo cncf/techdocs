@@ -142,7 +142,7 @@ The following comments are in regard to the top-tier nodes in the current table
 of contents:
 
 - The top "Flatcar Container Linux" page contains references and links that
-  appear to an alternate version of the table of contents. While its good to
+  appear to refer to an alternate version of the table of contents. While its good to
   provide quick links, the user wonders whether the TOC node references the same
   content, or if the links in the overview (right side) are supplemental.
 - The "Installing" node contains the large "Cloud Providers" node, that might be
