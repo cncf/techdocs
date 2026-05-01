@@ -106,10 +106,8 @@ https://www.flatcar.org/docs/latest
 
 Refers to the entire left-hand navigation table of contents.
 
-The recommended detailed and summary structures are available in this
-spreadsheet:
-
-(link)
+The recommended detailed and summary structures are available in the "Flatcar
+Analysis" Google sheet made available to the team.
 
 The detailed sheet has a row for each of the current files in the repository.
 The files under node level 2 are not listed in the summary tab of spreadsheet
