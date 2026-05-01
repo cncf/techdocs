@@ -145,10 +145,10 @@ of contents:
   appear to refer to an alternate version of the table of contents. While its good to
   provide quick links, the user wonders whether the TOC node references the same
   content, or if the links in the overview (right side) are supplemental.
-- The "Installing" node contains the large "Cloud Providers" node, that might be
-  better as top tier node, same with "Bare Metal". The team agrees that
-  "Community supported platforms" could be merged into the "Cloud Providers"
-  node.
+- The "Installing" node contains the large "Cloud Providers" node, which might be
+better as top tier node. The same with "Bare Metal". The team agrees that
+"Community supported platforms" could be merged into the "Cloud Providers"
+node.
 - The installation node should address all the new user paths, providing an
   installation roadmap or strategy. The "Learning Series" node, introduced into
   the documentation recently, outlines the key steps for provisioning,
