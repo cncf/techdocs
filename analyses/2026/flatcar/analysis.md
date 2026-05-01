@@ -2,12 +2,11 @@
 title: Flatcar Documentation Analysis
 tags: [Flatcar]
 created: 2026-02-26
-modified: 2026-04-04
+modified: 2026-04-30
 author: Bruce Hamilton (@iRaindrop)
 ---
 
-<!-- markdownlint-disable line-length -->
-<!-- markdownlint-disable no-duplicate-heading link-image-reference-definitions -->
+<!-- markdownlint-disable no-duplicate-heading -->
 
 ## Introduction
 
@@ -26,9 +25,8 @@ efforts.
 
 This document was written to analyze the current state of Flatcar documentation.
 It aims to provide project leaders with an informed understanding of potential
-problems in current project documentation. A second [implementation] document
-outlines an actionable plan for improvement. A third document is an [issues
-list] of issues to be added to the project documentation repository. These
+problems in current project documentation. A second document is an **issues
+list** of issues to be added to the project documentation repository. These
 issues can be taken up by contributors to improve the documentation.
 
 This document:
@@ -89,7 +87,7 @@ into a series of issues and entered as GitHub project-doc-website/issues.
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the [implementation][] plan and [issues list][].
+read the **issues list**.
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -119,46 +117,46 @@ to legal requirements such as copyright and licensing issues.
 Flatcar is an **incubating** project of CNCF. This means that the project should
 be developing professional-quality documentation alongside the project code.
 
-| Criterion                  | [Rating (1-5)] |
-| -------------------------- | -------------- |
-| Information architecture   | 3              |
-| New user content           | 3              |
-| Content maintainability    | 3              |
-| Content creation processes | 4              |
-| Inclusive language         | 4              |
+| Criterion                                                | [Rating (1-5)] |
+| -------------------------------------------------------- | -------------- |
+| Information architecture meets expectations              | 3              |
+| New user content meets expectations                      | 3              |
+| Content maintainability meets expectations               | 3              |
+| Content creation processes meets or exceeds expectations | 3              |
+| Inclusive language meets or exceeds expectations         | 4              |
 
 ### Comments
 
 The following sections contain brief assessments of each element of the project
 documentation.
 
-The current Flatcar documentation table of contents defines the needed areas of
-knowledge to install and provision Flatcar, but it does not readily show the
-different paths for new users depending on their environment.
+The current Flatcar documentation navigation structure, the _table of contents_
+(TOC), defines the areas of knowledge needed to install and provision Flatcar,
+but it does not show the different paths for new users depending on their
+environment and expectations.
 
-The following comments regard the top-tier nodes in the current table of
-contents:
+The following comments are in regard to the top-tier nodes in the current table
+of contents:
 
 - The top "Flatcar Container Linux" page contains references and links that
-  appear to an alternate version of the table of contents. While its good to
-  provide quick links, the user wonders whether the TOC node reference the same
-  content, or if the links in the overview are supplemental.
-- The "Installing" node contains the large "Cloud Providers" node, that might be
-  better as top tier node, same with "Bare Metal". The team agrees that
+  appear to refer to an alternate version of the TOC. While its good to provide
+  quick links, the user wonders whether the TOC node references the same
+  content, or if the links in the overview (right side) are supplemental.
+- The "Installing" node contains the large "Cloud Providers" node, which might
+  be better as top tier node. The same with "Bare Metal". The team agrees that
   "Community supported platforms" could be merged into the "Cloud Providers"
   node.
 - The installation node should address all the new user paths, providing an
   installation roadmap or strategy. The "Learning Series" node, introduced into
-  the documentation recently, outlines the key steps for installing,
-  configuring, and managing Flatcar conveying the life cycle. It would be good
-  for the top nodes to have a similar flow.
+  the documentation recently, outlines the key steps for provisioning,
+  configuring, and managing Flatcar throughout the life cycle.
 - The "Provisioning Tools" title is descriptive, but its unclear how other areas
   of the docs relate to this section.
 - The "Nebraska" node is about updates, but a top node should convey the
   functionality rather than a product name.
-- The "Setup and Operations" node casts too much of a wide net in its title. How
-  does "setup" differ from installation? The node contains several important
-  content areas that should be more discoverable, for instance:
+- The "Setup and Operations" node casts too wide a net in its heading. How does
+  "setup" differ from installation? The node contains several important content
+  areas that should be more discoverable. For instance:
   - "Managing Clusters" might be better at a higher level because it's an
     initial evaluation in deploying Flatcar.
   - The Storage and Security nodes are typically at a higher level.
@@ -171,48 +169,45 @@ contents:
 - The "Migrating from CoreOS" node might be better placed earlier or within an
   Installation node, as it is an installation scenario.
 - The "Reference" node contains expected look-up information such as "Constants
-  and IDs" and "Supply chain security mechanisms" but the following sections
-  could have better placement:
+  and IDs" and "Supply chain security mechanisms" but these sections could be
+  better placed:
   - "Integrations" could be incorporated into the Cloud Providers documentation.
   - "Developer Guides" contains conceptual content typically not found in a
-    Reference section, so "Developer Guides" or something more descriptive like
-    "Flatcar Development Guides" should be a top-tier node.
+    Reference section and would be better as a top-tier node.
 - The "How to Contribute" node is well-placed and has the expected content.
 
 The documentation also includes an FAQ, accessible from the top banner of the
-home page. This FAQ has some content that would be prudent to verify that it's
-also in the docs, such as historical context and how images are updated.
-Conversely, there should be a few top-of-mind installation and support FAQ items
-derived from the docs.
+home page. This FAQ has some content that could also be in the docs, such as
+historical context and how images are updated. Conversely, there should be a few
+top-of-mind installation and support FAQ items derived from the docs.
 
-Code blocks are different from other documentation sets as they are not
+Code blocks are different from those in other documentation sets as they are not
 bordered, don't have a different fill background, don't have a copy button, and
-the language is not indicated.
+the language is not indicated. There is already a GitHub issue on this.
 
-New users might not be sure of the context for a given block of code. Is the
-Linux prompt in a VM, in a client computer, or in a CLI session with a cloud
-provider? Normally this can be deduced by the narrative, such as starting a
-procedure with "In the VM window, use the following command to ..." or similar
-guidance.
+In several topics, new users might not be sure of the context for a given block
+of code. Is the Linux prompt on a VM, in a client computer, or in a CLI session
+with a cloud provider? Normally this can be reinforced by the narrative, such as
+starting a procedure with "In the VM window, use the following command to ..."
+or similar guidance.
 
-In pages with code examples the narrative follows a casual and conversational
-flow, introducing the steps such as "First do this", show a block of code,
-followed by "Now do this", followed by the next block of code. While at first
-this tone may seem refreshing from sterile nature of technical documentation, it
-inhibits learning because it inhibits scanning and the ability to reference the
-exact steps. It's easier to go back a numbered step in a procedure that to read
-the narrative again to find that step.
+In pages with code examples the narrative follows a conversational flow,
+introducing the steps such as "First do this", show a block of code, followed by
+"Now do this", followed by the next block of code. While at first this tone may
+seem refreshing from sterile nature of technical documentation, it inhibits
+learning because it inhibits scanning and the ability to reference the exact
+steps. It's easier to go back a numbered step in a procedure that to read the
+narrative again to find that step.
 
-Essentially, the pertinent areas of knowledge to install and run Flatcar have
-been identified and documented. They just need to be better organized. The next
-step is to structure the documentation so that it meets these objectives:
+The pertinent areas of knowledge to install and run Flatcar have been identified
+and documented. They just need to be better organized. The next task is to
+structure the documentation so that it meets these objectives:
 
 - The node and topic titles provide expected guidance, such as "Getting
   Started", with nodes and sections organized for precise purposes, rather than
   headings that serve as broad categories such as "Setup and Operations".
 - The structure provides the expected flow and orientation so that users can
-  identify a pathway for learning about and deploying Flatcar efficiently and
-  optimally.
+  identify a pathway for learning about and deploying Flatcar efficiently.
 - The structure provides effective navigation and identification of the tools
   and technologies so that users can identify the ones they need to learn about
   and use.
@@ -225,40 +220,38 @@ documentation. We evaluate on the following:
 ##### Is there high-level conceptual or About content?
 
 The current content is comprehensive on the key concepts needed for
-understanding the processes and technologies involved. It's just a matter of
-organizing discussion of the concepts to map to the user the path for installing
-and configuring Flatcar.
+understanding the processes and technologies involved. Now the objective is to
+organize the concepts to map to the user the path for provisioning and
+configuring Flatcar.
 
 - **Is the documentation feature complete?**
 
-  Yes, given that Flatcar is essentially an operating system and new features
-  and capabilities would be readily documented. Those features and areas need to
-  be continuously updated.
+  There are GitHub issues to document how to use Flatcar with particular
+  providers and tools.
 
 - **Are there step-by-step instructions (tasks, tutorials) documented for
   features?**
 
   Procedures, mainly invoking bash commands, are introduced informally and do
   not follow the typical style of numbered steps that read "Use the following
-  command to ..." verbiage. It would be easy to rewrite for meet that
-  conformity.
+  command to ..." verbiage that would clarify the context.
 
 - **Are there any key features which are documented but missing task
   documentation?**
 
-  Not so much regarding features, but there are tasks in using provisioning
-  tools where step-by-step guidance would be appreciated.
+  Yes, there are such features identified in GitHub issues.
 
 - **Are tasks clearly named according to user goals providing a happy path for
   users to get their tasks accomplished?**
 
-  Not currently. The content areas are established and just need to be
-  coordinated into a "Flatcar installation roadmap" for most user paths.
+  Not currently. The content areas are established but should be coordinated
+  into a "Flatcar provisioning roadmap" for most user paths.
 
 - **If the documentation does not suffice, is there a clear escalation path for
   users needing more help? (FAQ)**
 
-  The current FAQ does not provide this information.
+  The FAQ does not currently provide that guidance. Flatcar users of the GitHub
+  Flatcar repository can find help and community support in the README file.
 
 - **If the product exposes an API, is there a complete reference?**
 
@@ -273,40 +266,42 @@ specifically for them. We evaluate on the following:
 
 - **Is “getting started” or similar clearly labeled?**
 
-The "Learning Series" is a well-documented getting started guide. There is a
-Heading 3 heading "Getting started" in the overview.
+  The "Learning Series" is a well-documented getting started guide. There is a
+  Heading 3 heading "Getting started" in the overview.
 
 - **Is installation documented step-by-step?**
 
-Procedures are not formal step-by-steps, but rather sufficient descriptions of
-the purpose and result of running the provided code example.
+  Procedures are not formal step-by-steps, but rather sufficient descriptions of
+  the purpose and result of running the provided code example.
 
-Even if the new user does not know anything about the technologies, the guidance
-still works but would be helped greatly with numbered steps.
+  Even if the new user does not know anything about the technologies, the
+  guidance still works but would be helped greatly with numbered steps.
 
 - **If needed, are multiple OSes documented?**
 
-Users are typically running a Linux machine, or a Virtual Machine running on
-Windows or macOS. It would be beneficial to acquaint the user with any specific
-client guidance, particularly when installing tools and images. For example,
-brew may not install all components one gets from directly installing binaries.
+  Users are typically running a Linux machine, or a Virtual Machine running on
+  Windows or macOS. It would be beneficial to acquaint the user with any
+  specific client guidance, particularly when installing tools and images. For
+  example, brew may not install all components one gets from directly installing
+  binaries.
 
 - **Do users know where to go after reading the getting started guide?**
 
-Intuitively perhaps, as the Learning Services provides sufficient content to get
-Flatcar instances running. It would be good to have listings of next steps for
-the various deployment scenarios.
+  The Learning Series section provides sufficient content to get Flatcar
+  instances running. It would be good to have listings of next steps for the
+  various deployment scenarios.
 
 - **Is your new user content clearly signposted on your site’s homepage or at
   the top of your information architecture?**
 
-Other than being a top level node in the table of contents, no.
+  Other than being a top level node in the TOC, no.
 
 - **Is there sample code or other example content that can easily be
   copy-pasted?**
 
-Yes, most pages have code samples, but currently the UI does not show code
-example blocks with copy buttons. The code is simply in a different font.
+  Yes, most pages have code samples, but currently the UI does not show code
+  example blocks with copy buttons. The code is simply in a different font.
+  There is a GitHub issue to fix this.
 
 ##### Content maintainability & site mechanics
 
@@ -317,12 +312,12 @@ We evaluate on the following:
 
 - **Is your documentation searchable?**
 
-Yes, the home page has a search bar where any results populate a dropdown for
-selection.
+  Yes, the home page has a search bar where any results populate a dropdown for
+  selection.
 
 - **Are you planning for localization/internationalization?**
 
-There are currently no plans for localization.
+  There are currently no plans for localization.
 
 - **Do you have a clearly documented method for versioning your content?**
 
@@ -338,21 +333,23 @@ We evaluate on the following:
 - **Is there a clearly documented (ongoing) contribution process for
   documentation?**
 
-Yes. There is a 'How to contribute' node with guidance for using the GitHub
-repository, formatting, and style.
+  Yes. There is a 'How to contribute' section with guidance for using the GitHub
+  repository, formatting, and style.
 
 - **Does your code release process account for documentation creation &
   updates?**
 
-The team regularly updates content as the project is incubating.
+  Not yet a formal process, but the team regularly updates content.
 
 - **Who reviews and approves documentation pull requests?**
 
-Maintainers delegate doc approval to experienced code contributors.
+  Maintainers delegate doc approval to experienced code contributors.
 
 - **Does the website have a clear owner/maintainer?**
 
-Yes.
+  Yes, the GitHub repository has a
+  [Maintainers](https://github.com/flatcar/Flatcar/blob/main/MAINTAINERS.md)
+  document.
 
 ##### Inclusive language
 
@@ -369,50 +366,49 @@ those only "abort" would necessitate a fix on eight occurrences.
 
 - **Does the project use language like "simple", "easy", etc.?**
 
-Yes, there are about 53 hits of "easy" to replace. The word "simple" is used,
-but the context is a simpler piece of code or process rather than a task being
-simple.
+  Yes, there are about 53 hits of "easy" to replace. The word "simple" is used,
+  but the context is a simpler piece of code or process rather than a task being
+  simple.
 
 ### Recommendations
 
-The Flatcar documentation is naturally evolving into comprehensive and
-understandable guidance. Technical savvy readers are well suited to gather the
-information they need. New users can still find their path, but they need more
-context of the technologies and tools involved, why they're needed, and the
-environments they're used in.
+The Flatcar documentation is evolving into comprehensive and understandable
+guidance. Technical savvy readers are well suited to gather the information they
+need. New users can still find their path, but they need more context of the
+technologies and tools involved, why they're needed, and the environments
+they're used in.
 
 #### Information architecture
 
-The high-level recommendations follow a three tier approach to Flatcar
-documentation. The first tier (node) should be a Getting Started, followed by
-several nodes devoted to operations that span several categories organized by
-functionality, and the last tier or group will be related content such as the
-Reference and Contributor Documentation. These recommendations are designed to
-be malleable.
+At a high level, we recommend organizing the Flatcar documentation into three
+segments:
+
+- The first segment is a Getting Started guide.
+- The second segment comprises several chapters or guides devoted to operations
+  that span several categories organized by functionality.
+- The last segment contains supporting content such as the Reference and
+  Contributor Documentation.
+
+These recommendations are intended to be malleable; as always, the documentation
+should serve the needs of the project, and the maintainers and contributors are
+the best arbiters of what changes are appropriate to the project.
 
 - Create a Getting Started node with the following sections:
-  - Create an "Installation roadmap" page for users that enables them to
-    determine how they want to deploy containers with Flatcar. The starting
-    points for the discussion are whether the user comes from an on-prem or
-    cloud environment and many users will use both. This purpose of this page is
-    to provide users with a procedure for installation.
-  - Prerequisites regarding client operating systems including running VMs from
-    macOS and Windows.
-  - Prerequisites for the Quickstart.
-  - Any guidance on installing binaries directly or using programs like brew.
-  - Create a "Configuration and Provisioning" page that covers the YAML coding,
-    using Butane and employing other configurations. Link this page from the
-    "Installation roadmap".
-  - Create a "Deployment" page, covering scenarios for Kubernetes, clustering
-    and distributed systems. Cover on-prem and cloud. Link from the
-    "Installation roadmap".
+  - Create an "Roadmap" page for users that enables them to determine how they
+    want to deploy containers with Flatcar. The starting points for the
+    discussion are whether the user comes from an on-prem or cloud environment
+    and many users will use both. This purpose of this page is to provide users
+    with a procedure for installation.
+    - Prerequisites regarding client operating systems including running VMs
+      from macOS and Windows.
+    - Prerequisites for the Quickstart.
+    - Any guidance on installing binaries directly or using programs like brew.
 
-- For the middle functional nodes of the table of contents, devise the
-  categories of tools, technologies, products, and terms pertinent areas for
-  Flatcar. While these could be under a broader umbrella, such as Operations,
-  nine or headings in the navigation bar is not too much, and speeds up
-  discovery. Given a list of about 60 tools, technologies, etc., Copilot devised
-  the following categories:
+- For the middle functional nodes of the TOC, devise the categories of tools,
+  technologies, products, and terms pertinent areas for Flatcar. While these
+  could be under a broader umbrella, such as Operations, nine or headings in the
+  navigation bar is not too much, and speeds up discovery. Given a list of about
+  60 tools, technologies, etc., Copilot devised the following categories:
   - Virtualization and Hypervisors
   - Cloud and Hosting Platforms
   - Bare Metal Booting and Installation
@@ -422,26 +418,38 @@ be malleable.
   - Provisioning Configuration and Automation
   - Container and Orchestration
 
-  Work with the team to devise the categories and keep to it!
-
 - Update the top Overview page to accommodate an introduction to the overall
   documentation to guide users into determining their happy path to accomplish
   their Flatcar objectives.
 
-- Add at least one architectural diagram to top overviews that depict a
-  container, a container with Flatcar, and perhaps nodes and clusters.
+- Add at least one architectural diagram that depicts a Flatcar container,
+  clusters, capabilities or other ideas for diagrams.
+
+- Sections like "Virtual Machines" and "Cloud Providers" have subtopics where
+  common tasks and concepts could be discussed in the overview, leaving the
+  subtopics with simpler procedures and minimal repetition.
+
+- CNCF suggests that all CNCF doc maintainers run check with this tool that
+  measures how well AI agents can read, navigate, and use a documentation site
+  using this tool: https://afdocs.dev/
+
+  One of the main ways to improve AI capabilities is by creating an index file
+  to reside at the root of the repository that contains links to key sections,
+  essentially a high level index. AI agents look for this file to navigate the
+  site.
+
+  Visit https://llmstxt.org to learn about the index file. Consult with the
+  Flatcar team to determine key sections and check in the file.
 
 #### Content maintainability and site mechanics
 
-- Edit each procedural topic, page with code examples, into a semiformal How-to
-  topic with numbered steps. While the conversational flow is inviting, it
-  inhibits scanning, predictability, and troubleshooting when needed to
-  reference a particular code block. No need to go granular, but at least have
-  then main steps numbered.
+- Edit each procedural topic into a formal How-to topic with numbered steps.
+  While the conversational flow is inviting, it inhibits scanning,
+  predictability, and troubleshooting when needed to reference a particular code
+  block. No need to go granular, but at least have then main steps numbered.
 
-- For most, but not every, code block make sure the user has the right context
-  of where the code is being run. Preceded each step with clauses such as the
-  following:
+- For all code blocks, clearly indicate where the code is to be run. Preceded
+  each step with clauses such as the following:
   - On your local machine, use the following command to...
   - Inside the Flatcar instance, ...
   - SSH into the instance and then run ...
@@ -452,7 +460,9 @@ be malleable.
 #### Inclusive language and tone
 
 - Consider replacing the eight occurrences of "abort".
-- Remove occurrences of "easy" where it's implied that a task is easy.
+- Remove occurrences of "easy" that could be construed as ableist or
+  condescending; that is, where they imply that a task should be trivial for the
+  user.
 
 ## Contributor documentation
 
@@ -461,47 +471,109 @@ be developing professional-quality documentation alongside the project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
-| Communication methods documented          | [rating (1-5)] |
-| Beginner friendly issue backlog           | [rating (1-5)] |
-| “New contributor” getting started content | [rating (1-5)] |
-| Project governance documentation          | [rating (1-5)] |
+| Communication methods documented          | 3              |
+| Beginner friendly issue backlog           | 4              |
+| “New contributor” getting started content | 3              |
+| Project governance documentation          | 4              |
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Contributor Documentation
-> here.
-
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
-
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the contributor documentation might
-> be contained in the documentation repository. (Criteria are copied from
-> criteria.md)
 
 #### Communication methods documented
 
 One of the easiest ways to attract new contributors is making sure they know how
 to reach you.
 
+The Flatcar team casts a wide net for gathering feedback and contributions.
+Their effort spans documentation, code, community platforms, Flatcar apps,
+blogs, presentations, workshops, bug fixing events, developer challenges, and
+web design workshops.
+
+The team provides links to aggregated GitHub issues for newcomers and advanced
+users to work on.
+
+The team encourages users to create a Flatcar app, a reference implementation
+showing how to run a specific service on Flatcar, as a compelling way learn
+Flatcar and help the user community.
+
 We evaluate on the following:
 
-- Is there a Slack/Discord/Discourse/etc. community and is it prominently linked
-  from your website?
-- Is there a direct link to your GitHub organization/repository?
-- Are weekly/monthly project meetings documented? Is it clear how someone can
-  join those meetings?
-- Are mailing lists documented?
+- **Is there a Slack or similar resource and is it linked from your website?**
+
+  Yes, however these chat and social media links are on the README file of the
+  Flatcar GitHub repository: https://github.com/flatcar/Flatcar.
+
+  Chats:
+  - Matrix: https://app.element.io/#/room/#flatcar:matrix.org
+  - Slack: https://kubernetes.slack.com/archives/C03GQ8B5XNJ
+
+  Social media:
+  - Mastodon: https://hachyderm.io/@flatcar
+  - X: https://x.com/flatcar
+
+- **Is there a direct link to your GitHub organization/repository?**
+
+  Not from the `Flatcar.org` website, but listed in the README file of the
+  Flatcar GitHub repository.
+
+- **Are project meetings documented? Is it clear how someone can join those
+  meetings?**
+
+  Yes. Office Hours are promoted and scheduled monthly.
+  - When: 2nd Wednesday of every month at 2:30pm UTC
+  - Where: https://meet.flatcar.org/OfficeHours
+  - Agenda:
+    https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours
+
+  There are also Developer Syncs.
+  - When: 4th Wednesday of every month at 2:30pm UTC
+  - Where: https://meet.flatcar.org/OfficeHours
+  - Agenda: Developer Sync Discussions
+
+- **Are mailing lists documented?**
+
+  Yes, in the README of the Flatcar GitHub repository:
+  - Flatcar Users: https://groups.google.com/g/flatcar-linux-user
+  - Flatcar Developers: https://groups.google.com/g/flatcar-linux-dev
 
 #### Beginner-friendly issue backlog
 
 We evaluate on the following:
 
-- Are docs issues well-triaged?
-- Is there a clearly marked way for new contributors to make code or
-  documentation contributions (i.e. a “good first issue” label)?
-- Are issues well-documented (i.e., more than just a title)?
-- Are issues maintained for staleness?
+- **Are docs issues well-triaged?**
+
+  Yes, this URL shows doc issues being tracked in GitHub:
+  https://github.com/flatcar/Flatcar/issues?q=state%3Aopen%20label%3Akind%2Fdocs
+
+- **Is it easy for new contributors to make contributions (i.e. a “good first
+  issue” label)?**
+
+  The Contributing Guide,
+  https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md, linked from the
+  repository README file welcomes new contributors. The "Finding issues"
+  subsection has these helpful links:
+  - **Good first issue** - Displays pages of coding and documentation tasks
+    marked `good first issue` in DevOps. These issues have guidance to help
+    newcomers with the task.
+  - **Help wanted issues** - suitable for non-core maintainers.
+
+  Each documentation page has these two links at the bottom:
+  - **Edit this page** - link opens the page for editing in GitHub if a fork
+    exists, otherwise shows the option to fork the repository.
+  - **File documentation issue** - link opens a new GitHub issue.
+
+- **Are issues well-documented (i.e., more than just a title)?**
+
+  Yes, most issues are thoroughly described with detailed proposed solutions.
+  See the
+  [Finding Issues](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#finding-issues)
+  section in the Contributing document in the repository.
+
+- **Are issues maintained for staleness?**
+
+  Yes. Confident the team has freshness as a continuing objective.
 
 #### New contributor getting started content
 
@@ -511,9 +583,35 @@ in easily?
 
 We evaluate on the following:
 
-- Do you have a community repository or section on your website?
-- Is there a document specifically for new contributors/your first contribution?
-- Do new users know where to get help?
+- **Do you have a community repository or section on your website?**
+
+  Not currently.
+
+- **Is there a document specifically for new contributors/your first
+  contribution?**
+
+  Yes. There is a
+  [How to contribute](https://www.flatcar.org/docs/latest/contribute/) node at
+  the bottom of the navigation tree, and contains guidance on making pull
+  requests in the Flatcar GitHub repository. Also included is guidance style and
+  formatting with links to style guides.
+
+  In addition to the website, there is guidance for contributors on the README
+  page of the Flatcar GitHub repository, in
+  [Participate and Contribute](https://github.com/flatcar/Flatcar/tree/main?tab=readme-ov-file#participate-and-contribute)
+  section.
+
+- **Do new users know where to get help?**
+
+  That would be Flatcar's Slack and Matrix chat channels.
+  - Matrix (preferred): `#flatcar:matrix.org`
+  - Slack: `#flatcar` (Kubernetes Slack)
+  - GitHub Discussions: `flatcar/Flatcar/discussions`
+  - Mailing List (Users): `#flatcar-Linux-user`
+
+  These and other resources are listed in the
+  [Onboarding](https://github.com/flatcar/Flatcar/blob/main/ONBOARDING.md)
+  guide.
 
 #### Project governance documentation
 
@@ -521,12 +619,25 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-- Is project governance clearly documented?
+- **Is project governance clearly documented?**
+
+  Yes, the
+  [Flatcar Project Governance](https://github.com/flatcar/Flatcar/blob/main/governance.md)
+  document projects values of openness, fairness, community and participation.
+  For an incubating project, Flatcar is laying the foundation for vigorous
+  community participation.
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
+The Flatcar team has a robust Community outreach effort and seems to have good
+participation. All the criteria have been met for an incubating project. As the
+project evolves, the following recommendations should be considered:
+
+- Put a link to community participation portal content on the main Flatcar.org
+  website.
+- Include direct links to documentation issues in the
+  [Finding Issues](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#finding-issueslistings)
+  section of the Contributing guide.
 
 #### Communication methods documented
 
@@ -701,8 +812,8 @@ We evaluate on the following:
 
 #### Other
 
-- Is your website accessible via HTTPS?
-- Does HTTP access, if any, redirect to HTTPS?
+- Is your website accessible via HTTPS? Yes
+- Does HTTP access, if any, redirect to HTTPS? Yes
 
 ### Recommendations
 
@@ -725,12 +836,6 @@ We evaluate on the following:
 
 #### Other
 
-#### Companion documents
-
-Separate implementation and issues-list documents are not yet available for this
-analysis. Use this page's recommendations and notes as the current source for
-follow-up work.
-
 #### References and notes
 
 ##### Rating values
@@ -743,10 +848,11 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: /docs/analysis/criteria.md
-[implementation]: #companion-documents
-[issues list]: #companion-documents
+<!--
+[criteria]: ../../../docs/criteria.md
+[implementation]: ./implementation.md
+[issues list]: ./issues-list.md
 [project-website]: _PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: /docs/website-guidelines-checklist.md
+[website guidelines]: ../../website-guidelines-checklist.md -->
