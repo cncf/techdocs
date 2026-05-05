@@ -1,6 +1,8 @@
 ---
 title: Implementing Flatcar Doc Improvements
-tags: Flatcar
+created: 2026-05-05
+modified: 2026-05-05
+author: Bruce Hamilton (@iRaindrop)
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
