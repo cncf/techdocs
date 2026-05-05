@@ -25,9 +25,11 @@ efforts.
 
 This document was written to analyze the current state of Flatcar documentation.
 It aims to provide project leaders with an informed understanding of potential
-problems in current project documentation. A second document is an **issues
-list** of issues to be added to the project documentation repository. These
-issues can be taken up by contributors to improve the documentation.
+problems in current project documentation. A second implementation document,
+[Implementation](implementation.md), outlines an actionable plan for
+improvement. A third document, [Issues](issues.md) is an issues list of issues
+to be added to the project documentation repository. These issues can be taken
+up by contributors to improve the documentation.
 
 This document:
 
