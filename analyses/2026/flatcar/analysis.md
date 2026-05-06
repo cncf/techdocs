@@ -2,7 +2,7 @@
 title: Flatcar Documentation Analysis
 tags: [Flatcar]
 created: 2026-02-26
-modified: 2026-04-30
+modified: 2026-05-05
 author: Bruce Hamilton (@iRaindrop)
 ---
 
@@ -119,13 +119,13 @@ to legal requirements such as copyright and licensing issues.
 Flatcar is an **incubating** project of CNCF. This means that the project should
 be developing professional-quality documentation alongside the project code.
 
-| Criterion                                                | [Rating (1-5)] |
-| -------------------------------------------------------- | -------------- |
-| Information architecture meets expectations              | 3              |
-| New user content meets expectations                      | 3              |
-| Content maintainability meets expectations               | 3              |
-| Content creation processes meets or exceeds expectations | 3              |
-| Inclusive language meets or exceeds expectations         | 4              |
+| Criterion                        | Rating (1-5)          |
+| -------------------------------- | --------------------- |
+| Information architecture         | 2 - Needs improvement |
+| New user content                 | 2 - Needs improvement |
+| Content maintainability          | 2 - Needs improvement |
+| Content creation processes meets | 2 - Needs improvement |
+| Inclusive language               | 3 - Meets standards   |
 
 ### Comments
 
@@ -143,7 +143,10 @@ of contents:
 - The top "Flatcar Container Linux" page contains references and links that
   appear to refer to an alternate version of the TOC. While its good to provide
   quick links, the user wonders whether the TOC node references the same
-  content, or if the links in the overview (right side) are supplemental.
+  content, or if the links in the overview (right side) are supplemental. On
+  mobile the left-side TOC is not available, so the links in this overview serve
+  as the navigation.
+
 - The "Installing" node contains the large "Cloud Providers" node, which might
   be better as top tier node. The same with "Bare Metal". The team agrees that
   "Community supported platforms" could be merged into the "Cloud Providers"
@@ -471,12 +474,12 @@ the best arbiters of what changes are appropriate to the project.
 Flatcar is an **incubating** project of CNCF. This means that the project should
 be developing professional-quality documentation alongside the project code.
 
-| Criterion                                 | [Rating (1-5)] |
-| ----------------------------------------- | -------------- |
-| Communication methods documented          | 3              |
-| Beginner friendly issue backlog           | 4              |
-| “New contributor” getting started content | 3              |
-| Project governance documentation          | 4              |
+| Criterion                                 | Rating (1-5)          |
+| ----------------------------------------- | --------------------- |
+| Communication methods documented          | 3 - meets standards   |
+| Beginner friendly issue backlog           | 2 - needs improvement |
+| “New contributor” getting started content | 2 - needs improvement |
+| Project governance documentation          | 4 - meets standards   |
 
 ### Comments
 
@@ -593,8 +596,8 @@ We evaluate on the following:
   contribution?**
 
   Yes. There is a
-  [How to contribute](https://www.flatcar.org/docs/latest/contribute/) node at
-  the bottom of the navigation tree, and contains guidance on making pull
+  [How to contribute](https://www.flatcar.org/docs/latest/contribute/) section
+  at the bottom of the navigation tree, and contains guidance on making pull
   requests in the Flatcar GitHub repository. Also included is guidance style and
   formatting with links to style guides.
 
@@ -643,15 +646,33 @@ project evolves, the following recommendations should be considered:
 
 #### Communication methods documented
 
+Information is well documented and discoverable from the repository's
+[Contributing](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md) and
+[Onboarding](https://github.com/flatcar/Flatcar/blob/main/ONBOARDING.md) guides
+linked to from the README file.
+
 #### Beginner-friendly issue backlog
+
+Suggest adding a link to documentation issues in the Contributing guide's
+[Finding Issues](https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#finding-issues)
+section.
 
 #### New contributor getting started content
 
+The team plans to expand the guidance in
+[How to contribute](https://www.flatcar.org/docs/latest/contribute/) section on
+the website to parallel the guidance in the repository's Contributing guide as
+appropriate.
+
 #### Project governance documentation
+
+The
+[Flatcar Project Governance](https://github.com/flatcar/Flatcar/blob/main/governance.md)
+document is comprehensive, and appears well-maintained and up-to-date.
 
 ## Website and infrastructure
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
+> The analysis for this section is not complete.
 
 Flatcar is an **incubating** project of CNCF. This means that the project should
 be developing professional-quality documentation alongside the project code.
