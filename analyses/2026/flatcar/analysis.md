@@ -2,7 +2,7 @@
 title: Flatcar Documentation Analysis
 tags: [Flatcar]
 created: 2026-02-26
-modified: 2026-05-05
+modified: 2026-05-11
 author: Bruce Hamilton (@iRaindrop)
 ---
 
@@ -12,9 +12,9 @@ author: Bruce Hamilton (@iRaindrop)
 
 This document is an analysis of the effectiveness and completeness of the
 [Flatcar](https://www.flatcar.org/docs/latest) open source software (OSS)
-project's documentation. It is funded by the CNCF Foundation as part
-of its overall effort to incubate, grow, and graduate open source cloud native
-software projects.
+project's documentation. It is funded by the CNCF Foundation as part of its
+overall effort to incubate, grow, and graduate open source cloud native software
+projects.
 
 According to CNCF best practices guidelines, effective documentation is a
 prerequisite for program graduation. The documentation analysis is the first
@@ -39,8 +39,9 @@ This document:
 
 ### Scope of analysis
 
-The documentation discussed here includes the entire contents of the technical documentation and documentation for contributors and users on the
-Flatcar GitHub repository.
+The documentation discussed here includes the entire contents of the technical
+documentation and documentation for contributors and users on the Flatcar GitHub
+repository.
 
 The Flatcar website and documentation are written in Markdown and are compiled
 using the Hugo generator with the Flatcar theme and served from a GitHub
