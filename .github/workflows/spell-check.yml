@@ -3,6 +3,9 @@ name: Spelling checks
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   spelling-check:
     name: SPELLING check

@@ -3,6 +3,9 @@ name: Format checks
 on:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   format-check:
     name: FILE FORMAT

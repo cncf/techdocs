@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
 
+# Only posts to NETLIFY_CONTRIBUTE_SITE_BUILD_HOOK; no GitHub API.
+permissions: {}
+
 jobs:
   trigger:
     runs-on: ubuntu-latest
