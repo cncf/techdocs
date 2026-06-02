@@ -1,5 +1,5 @@
 ---
-title: Implementing KubeVIRT Doc Improvements
+title: Implementing KubeVirt Doc Improvements
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
@@ -23,7 +23,7 @@ things. Few recommendations here are meant to be prescriptive. Rather,
 recommendations are based on documentation best practices as understood by the
 reviewers. The recommended implementations represent the reviewers' experience
 with how to apply those best practices. In other words, borrowing terminology
-from the lexicon of [RFCs][rfc-keywords], the changes described here should be
+from the lexicon of RFCs (rfc-keywords), the changes described here should be
 understood as "recommended" or "should" at the strongest, and "optional" or
 "may" in many cases. Any "must" or "required" actions are clearly denoted as
 such, and pertain to legal requirements such as copyright and licensing issues.
