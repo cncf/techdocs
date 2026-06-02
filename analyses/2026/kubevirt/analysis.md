@@ -1,5 +1,5 @@
 ---
-title: KubeVirt Documentation Analysis
+title: _PROJECT_ Documentation Analysis
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
@@ -10,7 +10,7 @@ author: iRaindrop
 ## Introduction
 
 This document is an analyzes the effectiveness and completeness of the
-[KubeVirt](https://KubeVIRT.io) open source software (OSS) project's
+[_PROJECT_](https://_PROJECT_.io) open source software (OSS) project's
 documentation and website. It is funded by the Cloud Native Computing Foundation
 (CNCF) Foundation as part of its overall effort to incubate, grow, and graduate
 open source cloud native software projects.
@@ -22,7 +22,7 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of KubeVirt
+This document was written to analyze the current state of _PROJECT_
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 [implementation](implementation.md) document outlines an actionable plan for
@@ -32,7 +32,7 @@ by contributors to improve the documentation.
 
 This document:
 
-- Analyzes the current KubeVirt technical documentation and website
+- Analyzes the current _PROJECT_ technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
 
@@ -40,38 +40,38 @@ This document:
 
 The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
-KubeVirt GitHub repository.
+_PROJECT_ GitHub repository.
 
-The KubeVirt website and documentation are written in Markdown and are compiled
+The _PROJECT_ website and documentation are written in Markdown and are compiled
 using the [Hugo, Docusaurus, Sphinx, other] static site generator with the
 [Docsy, other] theme and served from [the Netlify platform, other]. The site's
-code is stored on the KubeVirt GitHub repo.
+code is stored on the _PROJECT_ GitHub repo.
 
 #### In scope
 
-- Website: https://KubeVIRT.io
-- Documentation: https://KubeVIRT.io/user-guide
-- Website repo: https://github.com/KubeVIRT/user-guide
+- Website: https://_PROJECT_.io
+- Documentation: https://_PROJECT_.io/user-guide
+- Website repo: https://github.com/_PROJECT_/user-guide
 
 #### Out of scope
 
-- Other KubeVirt GitHub repositories besides `user-guide`.
+- Other _PROJECT_ GitHub repositories besides `user-guide`.
 
 ### How this document is organized
 
 This document is divided into two sections that represent two major areas of
 concern:
 
-- **Project documentation:** concerns documentation for users of the KubeVirt
+- **Project documentation:** concerns documentation for users of the _PROJECT_
   software, aimed at people who intend to use the project software.
 - **Contributor documentation:** concerns documentation for new and existing
-  contributors to the KubeVirt OSS project.
+  contributors to the _PROJECT_ OSS project.
 
 Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, with a focus on
-  how it does or does not help KubeVirt users achieve their goals.
+  how it does or does not help _PROJECT_ users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
@@ -80,7 +80,7 @@ recommendations down into concrete actions that can be implemented by project
 contributors. Its focus is on drilling down to specific, achievable work that
 can be completed in constrained blocks of time. Ultimately, the implementation
 items are decomposed into a series of issues and entered on GitHub
-`https://github.com/KubeVirt/KubeVIRT/issues`.
+`https://github.com/_PROJECT_/_PROJECT_/issues`.
 
 ### How to use this document
 
@@ -112,7 +112,7 @@ to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-KubeVirt is an **incubating** project of CNCF. This means that the project
+_PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
@@ -221,7 +221,7 @@ We evaluate on the following:
 
 ## Contributor documentation
 
-KubeVirt is an **incubating** project of CNCF. This means that the project
+_PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
