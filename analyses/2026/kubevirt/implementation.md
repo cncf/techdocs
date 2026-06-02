@@ -1,5 +1,6 @@
 ---
-title: Implementing _PROJECT_ Doc Improvements
+title: Implementing KubeVirt Doc Improvements
+tags: KubeVirt
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
@@ -23,7 +24,7 @@ things. Few recommendations here are meant to be prescriptive. Rather,
 recommendations are based on documentation best practices as understood by the
 reviewers. The recommended implementations represent the reviewers' experience
 with how to apply those best practices. In other words, borrowing terminology
-from the lexicon of RFCs (rfc-keywords), the changes described here should be
+from the lexicon of [RFCs][rfc-keywords], the changes described here should be
 understood as "recommended" or "should" at the strongest, and "optional" or
 "may" in many cases. Any "must" or "required" actions are clearly denoted as
 such, and pertain to legal requirements such as copyright and licensing issues.
@@ -48,4 +49,4 @@ The top-level documentation recommendations for this project are:
 
 ### Issue 2
 
-<!-- [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119 -->
+[rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119

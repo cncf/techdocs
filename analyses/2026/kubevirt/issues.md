@@ -1,9 +1,15 @@
 ---
-title: _PROJECT_ Issue
+title: KubeVirt Issue
+tags: KubeVirt
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
 ---
+
+> AUTHOR NOTE: This template provides one possible format for the individual
+> issues filed in the Issues of a project repository. Within the CNCF tech docs
+> repo, include all issues in one document, `_PROJECT_-issues.md`. See any
+> completed analysis for an example.
 
 ## Overview
 
@@ -34,6 +40,9 @@ here: https://github.com/cncf/techdocs/tree/main/analyses under `00NN-project`.
 > change:
 
 Related material in the current doc:
+
+- For example,
+  `https://github.com/_PROJECT_/website/tree/main/content/en/docs/v3.5/tutorials`
 
 > AUTHOR NOTE: Describe in detail a suggested way to achieve the goals of the
 > issue. This should be specific enough to provide a contributor with a recipe

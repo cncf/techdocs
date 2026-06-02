@@ -1,5 +1,6 @@
 ---
-title: _PROJECT_ Umbrella Issue and Issues List
+title: KubeVirt Umbrella Issue and Issues List
+tags: KubeVirt
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
@@ -24,7 +25,7 @@ author: iRaindrop
 This issue tracks recommended changes resulting from an analysis of the
 _PROJECT_ documentation commissioned by CNCF. The analysis and supporting
 documents are here: https://github.com/cncf/techdocs/tree/main/analyses under
-`2026`.
+`00NN-project`.
 
 The CNCF _PROJECT_ documentation effort is tracked in the CNCF Tech Docs repo:
 https://github.com/cncf/techdocs/issues
@@ -38,7 +39,7 @@ https://github.com/cncf/techdocs/issues
 This is a list of issues representing the recommended work on the _PROJECT_
 website and technical documentation.
 
-> AUTHOR NOTE: Consider using the issue.md template.
+> AUTHOR NOTE: Consider using the [issue](issue.md) template.
 
 ### Issue: Item 1
 
@@ -47,6 +48,8 @@ website and technical documentation.
 > in the issue itself. In the GitHub umbrella issue, link to the sub-issue using
 > a Markdown checkbox as shown below.
 
-<!-- - [ ] `https://github.com/_PROJECT_/repo/issues/NNN` -->
+- [ ] `https://github.com/_PROJECT_/repo/issues/NNN`
 
 ### Issue: Item 2
+
+> AUTHOR NOTE: ... and so on.
