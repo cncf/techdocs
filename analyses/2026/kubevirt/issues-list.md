@@ -1,6 +1,5 @@
 ---
 title: KubeVIRT Umbrella Issue and Issues List
-tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
@@ -51,4 +50,3 @@ website and technical documentation.
 <!-- - [ ] `https://github.com/_PROJECT_/repo/issues/NNN` -->
 
 ### Issue: Item 2
-
