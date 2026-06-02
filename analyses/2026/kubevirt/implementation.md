@@ -1,6 +1,5 @@
 ---
 title: Implementing KubeVIRT Doc Improvements
-tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
