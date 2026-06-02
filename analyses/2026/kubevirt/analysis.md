@@ -1,9 +1,9 @@
 ---
-title: Kubevirt Documentation Analysis
-tags: Kubevirt
+title: KubeVIRT Documentation Analysis
+tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
-author: @iRaindrop
+author: iRaindrop
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -11,7 +11,7 @@ author: @iRaindrop
 ## Introduction
 
 This document is an analyzes the effectiveness and completeness of the
-[Kubevirt](https://Kubevirt.io) open source software (OSS) project's
+[KubeVIRT](https://KubeVIRT.io) open source software (OSS) project's
 documentation and website. It is funded by the Cloud Native Computing Foundation
 (CNCF) Foundation as part of its overall effort to incubate, grow, and graduate
 open source cloud native software projects.
@@ -23,7 +23,7 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of Kubevirt
+This document was written to analyze the current state of KubeVIRT
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 [implementation](.implementation.md) document outlines an actionable plan for
@@ -33,7 +33,7 @@ by contributors to improve the documentation.
 
 This document:
 
-- Analyzes the current Kubevirt technical documentation and website
+- Analyzes the current KubeVIRT technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
 
@@ -41,38 +41,38 @@ This document:
 
 The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
-Kubevirt GitHub repository.
+KubeVIRT GitHub repository.
 
-The Kubevirt website and documentation are written in Markdown and are compiled
+The KubeVIRT website and documentation are written in Markdown and are compiled
 using the [Hugo, Docusaurus, Sphinx, other] static site generator with the
 [Docsy, other] theme and served from [the Netlify platform, other]. The site's
-code is stored on the Kubevirt GitHub repo.
+code is stored on the KubeVIRT GitHub repo.
 
 #### In scope
 
-- Website: https://Kubevirt.io
-- Documentation: https://Kubevirt.io/user-guide
-- Website repo: https://github.com/Kubevirt/user-guide
+- Website: https://KubeVIRT.io
+- Documentation: https://KubeVIRT.io/user-guide
+- Website repo: https://github.com/KubeVIRT/user-guide
 
 #### Out of scope
 
-- Other Kubevirt GitHub repositories besides `user-guide`.
+- Other KubeVIRT GitHub repositories besides `user-guide`.
 
 ### How this document is organized
 
 This document is divided into two sections that represent two major areas of
 concern:
 
-- **Project documentation:** concerns documentation for users of the Kubevirt
+- **Project documentation:** concerns documentation for users of the KubeVIRT
   software, aimed at people who intend to use the project software.
 - **Contributor documentation:** concerns documentation for new and existing
-  contributors to the Kubevirt OSS project.
+  contributors to the KubeVIRT OSS project.
 
 Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, with a focus on
-  how it does or does not help Kubevirt users achieve their goals.
+  how it does or does not help KubeVIRT users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
@@ -81,7 +81,7 @@ recommendations down into concrete actions that can be implemented by project
 contributors. Its focus is on drilling down to specific, achievable work that
 can be completed in constrained blocks of time. Ultimately, the implementation
 items are decomposed into a series of issues and entered on GitHub
-`https://github.com/Kubevirt/Kubevirt/issues`.
+`https://github.com/KubeVIRT/KubeVIRT/issues`.
 
 ### How to use this document
 
@@ -113,7 +113,7 @@ to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-Kubevirt is an **incubating** project of CNCF. This means that the project
+KubeVIRT is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
@@ -224,12 +224,12 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-Kubevirt is a **graduated** project of CNCF. This means that the project should
+KubeVIRT is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-Kubevirt is an **incubating** project of CNCF. This means that the project
+KubeVIRT is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -314,12 +314,12 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-Kubevirt is a **graduated** project of CNCF. This means that the project should
+KubeVIRT is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-Kubevirt is an **incubating** project of CNCF. This means that the project
+KubeVIRT is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -517,10 +517,10 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
+<!-- [criteria]: ../criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
-[project-website]: ?fixme-target-dne=https://Kubevirt.o
+[project-website]: ?fixme-target-dne=https://KubeVIRT.o
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[website guidelines]: ../../website-guidelines-checklist.md -->

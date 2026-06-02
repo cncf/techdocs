@@ -1,9 +1,9 @@
 ---
-title: Kubevirt Issue
-tags: Kubevirt
+title: KubeVIRT Issue
+tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
-author: @iRaindrop
+author: iRaindrop
 ---
 
 > AUTHOR NOTE: This template provides one possible format for the individual

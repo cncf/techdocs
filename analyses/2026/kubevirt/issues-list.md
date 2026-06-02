@@ -1,9 +1,9 @@
 ---
-title: Kubevirt Umbrella Issue and Issues List
-tags: Kubevirt
+title: KubeVIRT Umbrella Issue and Issues List
+tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
-author: @iRaindrop
+author: iRaindrop
 ---
 
 ## Overview
@@ -48,8 +48,7 @@ website and technical documentation.
 > in the issue itself. In the GitHub umbrella issue, link to the sub-issue using
 > a Markdown checkbox as shown below.
 
-- [ ] `https://github.com/_PROJECT_/repo/issues/NNN`
+<!-- - [ ] `https://github.com/_PROJECT_/repo/issues/NNN` -->
 
 ### Issue: Item 2
 
-> AUTHOR NOTE: ... and so on.
