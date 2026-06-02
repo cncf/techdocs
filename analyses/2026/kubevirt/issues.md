@@ -1,5 +1,5 @@
 ---
-title: KubeVirt Issue
+title: _PROJECT_ Issue
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
