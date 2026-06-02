@@ -9,11 +9,11 @@ author: iRaindrop
 
 ## Introduction
 
-This document is an analyzes the effectiveness and completeness of the
-[_PROJECT_](https://_PROJECT_.io) open source software (OSS) project's
-documentation and website. It is funded by the Cloud Native Computing Foundation
-(CNCF) Foundation as part of its overall effort to incubate, grow, and graduate
-open source cloud native software projects.
+This document is an analyzes the effectiveness and completeness of the _PROJECT_
+open source software (OSS) project's documentation and website. It is funded by
+the Cloud Native Computing Foundation (CNCF) Foundation as part of its overall
+effort to incubate, grow, and graduate open source cloud native software
+projects.
 
 According to CNCF best practices guidelines, effective documentation is a
 prerequisite for program graduation. The documentation analysis is the first
