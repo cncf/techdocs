@@ -1,6 +1,6 @@
 ---
-title: Kubevirt Issue
-tags: Kubevirt
+title: KubeVIRT Issue
+tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop

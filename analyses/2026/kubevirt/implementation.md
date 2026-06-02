@@ -1,6 +1,6 @@
 ---
-title: Implementing Kubevirt Doc Improvements
-tags: Kubevirt
+title: Implementing KubeVIRT Doc Improvements
+tags: KubeVIRT
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
@@ -49,4 +49,4 @@ The top-level documentation recommendations for this project are:
 
 ### Issue 2
 
-[rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119
+<!-- [rfc-keywords]: https://www.rfc-editor.org/rfc/rfc2119 -->
