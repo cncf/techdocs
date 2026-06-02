@@ -1,6 +1,6 @@
 ---
-title: Implementing KubeVirt Doc Improvements
-tags: KubeVirt
+title: Implementing Kubevirt Doc Improvements
+tags: Kubevirt
 created: 2026-05-24
 modified: 2026-05-31
 author: @iRaindrop

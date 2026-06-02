@@ -1,6 +1,6 @@
 ---
-title: KubeVirt Umbrella Issue and Issues List
-tags: KubeVirt
+title: Kubevirt Umbrella Issue and Issues List
+tags: Kubevirt
 created: 2026-05-24
 modified: 2026-05-31
 author: @iRaindrop

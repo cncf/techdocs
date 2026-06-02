@@ -1,6 +1,6 @@
 ---
-title: KubeVirt Documentation Analysis
-tags: KubeVirt
+title: Kubevirt Documentation Analysis
+tags: Kubevirt
 created: 2026-05-24
 modified: 2026-05-31
 author: @iRaindrop
@@ -11,7 +11,7 @@ author: @iRaindrop
 ## Introduction
 
 This document is an analyzes the effectiveness and completeness of the
-[KubeVirt](https://kubevirt.io) open source software (OSS) project's
+[Kubevirt](https://Kubevirt.io) open source software (OSS) project's
 documentation and website. It is funded by the Cloud Native Computing Foundation
 (CNCF) Foundation as part of its overall effort to incubate, grow, and graduate
 open source cloud native software projects.
@@ -23,17 +23,17 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of KubeVirt
+This document was written to analyze the current state of Kubevirt
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
-[implementation](implementation.md) document outlines an actionable plan for
+[implementation](.implementation.md) document outlines an actionable plan for
 improvement. A third document is an [issues list](issues-list.md) of issues to
 be added to the project documentation repository. These issues can be taken up
 by contributors to improve the documentation.
 
 This document:
 
-- Analyzes the current KubeVirt technical documentation and website
+- Analyzes the current Kubevirt technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
 
@@ -41,51 +41,53 @@ This document:
 
 The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
-KubeVirt GitHub repository.
+Kubevirt GitHub repository.
 
-The KubeVirt website and documentation are written in Markdown and are compiled using the [Hugo, Docusaurus, Sphinx, other] static
-site generator with the [Docsy, other] theme and served from [the Netlify
-platform, other]. The site's code is stored on the KubeVirt GitHub repo.
+The Kubevirt website and documentation are written in Markdown and are compiled
+using the [Hugo, Docusaurus, Sphinx, other] static site generator with the
+[Docsy, other] theme and served from [the Netlify platform, other]. The site's
+code is stored on the Kubevirt GitHub repo.
 
 #### In scope
 
-- Website: https://kubevirt.io
-- Documentation: https://kubevirt.io/user-guide
-- Website repo: https://github.com/kubevirt/user-guide
-
+- Website: https://Kubevirt.io
+- Documentation: https://Kubevirt.io/user-guide
+- Website repo: https://github.com/Kubevirt/user-guide
 
 #### Out of scope
 
-- Other KubeVirt GitHub repositories besides `user-guide`.
+- Other Kubevirt GitHub repositories besides `user-guide`.
 
 ### How this document is organized
 
 This document is divided into two sections that represent two major areas of
 concern:
 
-- **Project documentation:** concerns documentation for users of the KubeVirt
+- **Project documentation:** concerns documentation for users of the Kubevirt
   software, aimed at people who intend to use the project software.
 - **Contributor documentation:** concerns documentation for new and existing
-  contributors to the KubeVirt OSS project.
+  contributors to the Kubevirt OSS project.
 
 Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, with a focus on
-  how it does or does not help KubeVirt users achieve their goals.
+  how it does or does not help Kubevirt users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
-The accompanying [implementation](./implementation.md) document breaks the recommendations down into
-concrete actions that can be implemented by project contributors. Its focus is
-on drilling down to specific, achievable work that can be completed in
-constrained blocks of time. Ultimately, the implementation items are decomposed
-into a series of issues and entered on GitHub `https://github.com/kubevirt/kubevirt/issues`.
+The accompanying [implementation](./implementation.md) document breaks the
+recommendations down into concrete actions that can be implemented by project
+contributors. Its focus is on drilling down to specific, achievable work that
+can be completed in constrained blocks of time. Ultimately, the implementation
+items are decomposed into a series of issues and entered on GitHub
+`https://github.com/Kubevirt/Kubevirt/issues`.
 
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the [implementation](./implementation.md) plan and [issues list](./issues-list.md).
+read the [implementation](./implementation.md) plan and
+[issues list](./issues-list.md).
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
@@ -104,15 +106,16 @@ and suggests possible improvements. In most cases there is more than one way to
 do things. Few recommendations here are meant to be prescriptive. Rather, the
 recommended implementations represent the reviewers' experience with how to
 apply documentation best practices. In other words, borrowing terminology from
-the lexicon of RFCs, the changes described here should be understood
-as "recommended" or "should" at the strongest, and "optional" or "may" in many
+the lexicon of RFCs, the changes described here should be understood as
+"recommended" or "should" at the strongest, and "optional" or "may" in many
 cases. Any "must" or "required" actions are clearly denoted as such, and pertain
 to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-KubeVirt is an **incubating** project of CNCF. This means that the project
-should be developing professional-quality documentation alongside the project code.
+Kubevirt is an **incubating** project of CNCF. This means that the project
+should be developing professional-quality documentation alongside the project
+code.
 
 | Criterion                  | [Rating (1-5)] |
 | -------------------------- | -------------- |
@@ -221,12 +224,12 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-KubeVirt is a **graduated** project of CNCF. This means that the project should
+Kubevirt is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-KubeVirt is an **incubating** project of CNCF. This means that the project
+Kubevirt is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -311,12 +314,12 @@ We evaluate on the following:
 
 > AUTHOR NOTE: Pick the CNCF maturity level of the project:
 
-KubeVirt is a **graduated** project of CNCF. This means that the project should
+Kubevirt is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
 > AUTHOR NOTE: or
 
-KubeVirt is an **incubating** project of CNCF. This means that the project
+Kubevirt is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
@@ -517,7 +520,7 @@ The numeric rating values used in this document are as follows
 [criteria]: ../criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
-[project-website]: ?fixme-target-dne=https://kubevirt.o
+[project-website]: ?fixme-target-dne=https://Kubevirt.o
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
 [website guidelines]: ../../website-guidelines-checklist.md
