@@ -49,9 +49,9 @@ code is stored on the _PROJECT_ GitHub repo.
 
 #### In scope
 
-- Website: https://_PROJECT_.io
+<!-- - Website: https://_PROJECT_.io
 - Documentation: https://_PROJECT_.io/user-guide
-- Website repo: https://github.com/_PROJECT_/user-guide
+- Website repo: https://github.com/_PROJECT_/user-guide -->
 
 #### Out of scope
 
@@ -79,8 +79,9 @@ The accompanying [implementation](implementation.md) document breaks the
 recommendations down into concrete actions that can be implemented by project
 contributors. Its focus is on drilling down to specific, achievable work that
 can be completed in constrained blocks of time. Ultimately, the implementation
-items are decomposed into a series of issues and entered on GitHub
-`https://github.com/_PROJECT_/_PROJECT_/issues`.
+items are decomposed into a series of issues and entered on GitHub.
+
+(provide link)
 
 ### How to use this document
 
