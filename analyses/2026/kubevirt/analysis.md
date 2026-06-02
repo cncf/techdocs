@@ -25,7 +25,7 @@ efforts.
 This document was written to analyze the current state of KubeVirt
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
-[implementation](.implementation.md) document outlines an actionable plan for
+[implementation](implementation.md) document outlines an actionable plan for
 improvement. A third document is an [issues list](issues-list.md) of issues to
 be added to the project documentation repository. These issues can be taken up
 by contributors to improve the documentation.
@@ -75,7 +75,7 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
-The accompanying [implementation](./implementation.md) document breaks the
+The accompanying [implementation](implementation.md) document breaks the
 recommendations down into concrete actions that can be implemented by project
 contributors. Its focus is on drilling down to specific, achievable work that
 can be completed in constrained blocks of time. Ultimately, the implementation
@@ -85,7 +85,7 @@ items are decomposed into a series of issues and entered on GitHub
 ### How to use this document
 
 Readers interested only in actionable improvements should skip this document and
-read the [implementation](./implementation.md) plan and
+read the [implementation](implementation.md) plan and
 [issues list](./issues-list.md).
 
 Readers interested in the current state of the documentation and the reasoning
