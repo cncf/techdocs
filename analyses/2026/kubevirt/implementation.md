@@ -1,5 +1,5 @@
 ---
-title: Implementing KubeVirt Doc Improvements
+title: Implementing _PROJECT_ Doc Improvements
 created: 2026-05-24
 modified: 2026-05-31
 author: iRaindrop
