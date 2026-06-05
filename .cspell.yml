@@ -29,10 +29,11 @@ words:
   - fluxcd
   - github
   - keda
-  - knative
   - kedacore
+  - knative
   - krator
   - krook
+  - kubevirt
   - mkdocs
   - nate
   - nvmrc
