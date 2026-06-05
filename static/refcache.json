@@ -1,7 +1,15 @@
 {
+  "https://afdocs.dev/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:41.375771-04:00"
+  },
   "https://analytics.google.com": {
     "StatusCode": 200,
     "LastSeen": "2026-03-30T15:42:08.467987-04:00"
+  },
+  "https://app.element.io/#/room/%23flatcar:matrix.org": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:42.38701-04:00"
   },
   "https://app.harness.io/auth/#/signin": {
     "StatusCode": 206,
@@ -795,6 +803,46 @@
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:22.154617-04:00"
   },
+  "https://github.com/flatcar/Flatcar": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:42.207107-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:47.649257-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#finding-issues": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:48.217076-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/blob/main/CONTRIBUTING.md#finding-issueslistings": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:51.447963-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/blob/main/MAINTAINERS.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:41.164136-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/blob/main/ONBOARDING.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:49.789502-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/blob/main/governance.md": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:50.505453-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/discussions/categories/flatcar-office-hours": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:45.366911-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/issues": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:47.005443-04:00"
+  },
+  "https://github.com/flatcar/Flatcar/tree/main": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:49.08531-04:00"
+  },
   "https://github.com/flatcar/flatcar-website": {
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:14.378227-04:00"
@@ -1475,6 +1523,18 @@
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:20.286722-04:00"
   },
+  "https://groups.google.com/g/flatcar-linux-dev": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:45.962441-04:00"
+  },
+  "https://groups.google.com/g/flatcar-linux-user": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:45.679295-04:00"
+  },
+  "https://hachyderm.io/@flatcar": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:43.844389-04:00"
+  },
   "https://helm.sh/": {
     "StatusCode": 206,
     "LastSeen": "2026-03-30T15:42:12.576727-04:00"
@@ -2131,6 +2191,10 @@
     "StatusCode": 206,
     "LastSeen": "2026-03-30T15:42:03.476847-04:00"
   },
+  "https://kubernetes.slack.com/archives/C03GQ8B5XNJ": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:42.871005-04:00"
+  },
   "https://litmus.com/": {
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:15.638313-04:00"
@@ -2219,9 +2283,17 @@
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:19.992011-04:00"
   },
+  "https://llmstxt.org": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:41.57083-04:00"
+  },
   "https://lunrjs.com/": {
     "StatusCode": 206,
     "LastSeen": "2026-03-30T15:42:04.679563-04:00"
+  },
+  "https://meet.flatcar.org/OfficeHours": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:44.522066-04:00"
   },
   "https://miro.com/app/board/uXjVO_1cS9k=/": {
     "StatusCode": 200,
@@ -2459,6 +2531,26 @@
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:12.609579-04:00"
   },
+  "https://www.flatcar.org/docs/latest/contribute/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:48.396805-04:00"
+  },
+  "https://www.flatcar.org/docs/latest/installing/bare-metal/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:41.854798-04:00"
+  },
+  "https://www.flatcar.org/docs/latest/installing/cloud/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:41.403718-04:00"
+  },
+  "https://www.flatcar.org/docs/latest/installing/community-platforms/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:42.372936-04:00"
+  },
+  "https://www.flatcar.org/docs/latest/installing/vms/": {
+    "StatusCode": 206,
+    "LastSeen": "2026-06-05T09:08:41.004954-04:00"
+  },
   "https://www.fluentd.org/testimonials": {
     "StatusCode": 206,
     "LastSeen": "2026-03-30T15:42:12.835994-04:00"
@@ -2506,6 +2598,10 @@
   "https://www.w3.org/WAI/WCAG21/Understanding/": {
     "StatusCode": 206,
     "LastSeen": "2026-04-16T21:15:22.934277-04:00"
+  },
+  "https://x.com/flatcar": {
+    "StatusCode": 200,
+    "LastSeen": "2026-06-05T09:08:44.027814-04:00"
   },
   "https://zoom-lfx.platform.linuxfoundation.org/meeting/95471930872": {
     "StatusCode": 206,
