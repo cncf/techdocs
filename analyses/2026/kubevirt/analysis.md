@@ -1,7 +1,7 @@
 ---
 title: KubeVirt Documentation Analysis
 created: 2026-05-24
-modified: 2026-06-02
+modified: 2026-06-11
 author: iRaindrop
 ---
 
@@ -22,7 +22,7 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of _PROJECT_
+This document was written to analyze the current state of KubeVirt
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 [implementation](implementation.md) document outlines an actionable plan for
@@ -32,7 +32,7 @@ by contributors to improve the documentation.
 
 This document:
 
-- Analyzes the current _PROJECT_ technical documentation and website
+- Analyzes the current KubeVirt technical documentation and website
 - Compares existing documentation against the CNCF’s standards
 - Recommends a program of key improvements with the largest return on investment
 
@@ -40,38 +40,38 @@ This document:
 
 The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
-_PROJECT_ GitHub repository.
+KubeVirt GitHub repository.
 
-The _PROJECT_ website and documentation are written in Markdown and are compiled
+The KubeVirt website and documentation are written in Markdown and are compiled
 using the [Hugo, Docusaurus, Sphinx, other] static site generator with the
 [Docsy, other] theme and served from [the Netlify platform, other]. The site's
-code is stored on the _PROJECT_ GitHub repo.
+code is stored on the KubeVirt GitHub repo.
 
 #### In scope
 
-<!-- - Website: https://_PROJECT_.io
-- Documentation: https://_PROJECT_.io/user-guide
-- Website repo: https://github.com/_PROJECT_/user-guide -->
+<!-- - Website: https://kubevirt.io
+- Documentation: https://kubevirt.io/user-guide
+- Website repo: https://github.com/kubevirt/user-guide -->
 
 #### Out of scope
 
-- Other _PROJECT_ GitHub repositories besides `user-guide`.
+- Other KubeVirt GitHub repositories besides `user-guide`.
 
 ### How this document is organized
 
 This document is divided into two sections that represent two major areas of
 concern:
 
-- **Project documentation:** concerns documentation for users of the _PROJECT_
+- **Project documentation:** concerns documentation for users of the KubeVirt
   software, aimed at people who intend to use the project software.
 - **Contributor documentation:** concerns documentation for new and existing
-  contributors to the _PROJECT_ OSS project.
+  contributors to the KubeVirt OSS project.
 
 Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, with a focus on
-  how it does or does not help _PROJECT_ users achieve their goals.
+  how it does or does not help KubeVirt users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
@@ -113,7 +113,7 @@ to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
+KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
@@ -127,14 +127,8 @@ code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Project Documentation here.
-
 The following sections contain brief assessments of each element of the Project
 Documentation rubric.
-
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items, and
-> especially the technical documentation, meet these criteria. (Criteria are
-> copied from criteria.md)
 
 #### Information architecture
 
@@ -222,7 +216,7 @@ We evaluate on the following:
 
 ## Contributor documentation
 
-_PROJECT_ is an **incubating** project of CNCF. This means that the project
+KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
@@ -235,8 +229,8 @@ code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Contributor Documentation
-> here.
+The KubeVirt documentation provides a well-organzied documemation set that can
+accommodate recommended improvements without a major restructure.
 
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
