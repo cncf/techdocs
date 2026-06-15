@@ -1,5 +1,5 @@
 ---
-title: _PROJECT_Documentation Analysis
+title: KubeVirtDocumentation Analysis
 created: 2026-05-24
 modified: 2026-06-15
 author: iRaindrop
@@ -22,7 +22,7 @@ efforts.
 
 ### Purpose
 
-This document was written to analyze the current state of _PROJECT_
+This document was written to analyze the current state of KubeVirt's
 documentation. It aims to provide project leaders with an informed understanding
 of potential problems in current project documentation. A second
 **implementation** document outlines an actionable plan for improvement. A third
