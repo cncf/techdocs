@@ -24,7 +24,7 @@ TO USE THIS TEMPLATE, search and replace the named IDs:
   stored; this might be its own repo or a directory in the project main repo
 
 Replace link placeholders in brackets, such as [_PROJECT_][project-website],
-with the actual link surrounded by parenthesis.
+with a Markdown-style link.
 
 For the analysis procedure, see [Analysis how-to](../howto.md).
 
@@ -89,11 +89,14 @@ This document is divided into three sections that represent three major areas of
 concern:
 
 - **Project documentation:** concerns documentation for users of the _PROJECT_
-  software, aimed at people who intend to use the project software
+  software, aimed at people who intend to use the project software.
 - **Contributor documentation:** concerns documentation for new and existing
-  contributors to the _PROJECT_ OSS project
+  contributors to the _PROJECT_ OSS project.
 - **Website:** concerns the mechanics of publishing the documentation, and
-  includes branding, website structure, and maintainability
+  includes branding, website structure, and maintainability.
+
+A fourth area of concern, AI optimization and discovery, might be included in
+this analysis. If so, it is discussed in a separate document, `ai-guidance.md`.
 
 Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
@@ -102,6 +105,12 @@ Each section begins with summary ratings based on a rubric with appropriate
   how it does or does not help _PROJECT_ users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
+
+> Author's note: We recommend writing implementation notes only for large
+> projects. An implementation plan can bridge the gap between the high-level
+> recommendations in this document and individual issues entered in the doc
+> repo. Remove the sentences about the implementation doc if you didn't write
+> one.
 
 The accompanying [implementation] document breaks the recommendations down into
 concrete actions that can be implemented by project contributors. Its focus is
@@ -178,8 +187,8 @@ documentation. We evaluate on the following:
   complete? (i.e., each product feature is documented)
 - Are there step-by-step instructions (tasks, tutorials) documented for
   features?
-- Are there any key features which are documented but missing task
-  documentation?
+- Are there any features that are documented (for example, described
+  conceptually) but are missing task documentation?
 - Is the “happy path”/most common use case documented? Does task and tutorial
   content demonstrate atomicity and isolation of concerns? (Are tasks clearly
   named according to user goals?)

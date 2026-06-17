@@ -15,7 +15,7 @@ referred to in the criteria.
 
 How your technical information is organized, laid out, and presented. This
 includes structure (pages/subpages/sections/subsections), information types
-(conceptual/instructional/reference), and matching documentation content to user
+(conceptual/instructional/reference), and content that matches user
 expectations.
 
 We evaluate on the following:
@@ -23,7 +23,8 @@ We evaluate on the following:
 - Is there high level conceptual content?
 - Is every product feature documented?
 - Does the documentation define all user roles (personas) for the product?
-- Are there instructions (tasks, tutorials) documented for features?
+- Do instructions (tasks, tutorials) cover the intended purposes of all
+  user-facing features?
 - Are there instructions for all major use cases for each user role?
 - Are tasks organized by user role and use case?
 - Does instructional content demonstrate atomicity — are individual tasks
@@ -31,8 +32,8 @@ We evaluate on the following:
 - Are tasks written as numbered step-by-step instructions?
 - Do task descriptions in headings and the TOC describe the task with a verb
   phrase?
-- Is the documentation free of any key features which are documented but missing
-  task documentation?
+- Are there any features that are documented (for example, described
+  conceptually) but are missing task documentation?
 - Is the “happy path” — the most common use case — documented?
 - If the documentation does not suffice, is there a clear escalation path for
   users needing more help?
@@ -60,7 +61,8 @@ We evaluate on the following:
 - Are different types of installation documented (development, test, production)
   if necessary?
 - If needed, are multiple OSes documented?
-- Do users know where to go after reading the getting started guide?
+- Is there guidance for what to read next after reading the getting started
+  guide?
 - Is your new user content clearly signposted on your site’s homepage or at the
   top of your information architecture?
 - Is there easily copy-pastable sample code or other example content?
@@ -128,20 +130,18 @@ We evaluate on the following:
 
 ### AI Optimization and Discoverability
 
-Configurations for AI agents to optimize the understanding of content are
-emerging and should be utilized.
+Tools and techniques are emerging that enable AI agents to use documentation as
+input. For example, many repositories now include "AI-friendly" Markdown files
+that enable LLMs to ingest content. We encourage projects to optimize for
+AI-based documentation use.
 
 We evaluate on the following:
 
 - Is there an llms.txt file in the root of the website or documentation
   repository?
 
-  The llms.txt file is a proposed open standard for a Markdown file that
-  websites can host at the root. It helps large language models (LLMs) and AI
-  agents quickly understand a site's purpose, key content, and where to find
-  reliable information.
-
-  For more information, see https://llmstxt.org/
+  The leading proposal for an AI-enabling file for websites is at
+  [llms-txt](https://llmstxt.org/ llms.txt).
 
   Task can be accomplished manually or by tools.
 
@@ -169,10 +169,14 @@ Example:
 
 We evaluate on the following:
 
-- Are docs issues well-triaged?
+- Are docs issues triaged with respect to effort level and required expertise?
 - Is there a clearly marked way for new contributors to make code or
   documentation contributions (i.e. a “good first issue” label)?
-- Are issues well-documented (i.e., more than just a title)?
+- Are issues documented with:
+  - What is missing, incorrect, or improperly presented?
+  - What impact the issue has on documentation users?
+  - A suggested remedy?
+  - An estimate of the effort required to address the issue?
 - Are issues maintained for staleness?
 
 Example:
@@ -191,7 +195,7 @@ We evaluate on the following:
 - Do you have a community repository or section on your website?
 - Is there a document specifically welcoming new contributors and documenting a
   first contribution process?
-- Can new users find where to get help?
+- Are there prominently displayed resources for new users to find help?
 
 Example:
 
@@ -203,7 +207,7 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-- Is project governance clearly documented?
+- Does the project governance align with CNCF guidelines and values?
 
 Example:
 
@@ -258,8 +262,8 @@ requirements for sandbox projects._
     Incubating status.
 - Is there rudimentary **project documentation**, or a placeholder or
   substitute?
-  - It is acceptable at this maturity level to link out to documentation that
-    hasn't yet been integrated into the website.
+  - It is acceptable at this maturity level to link to documentation that hasn't
+    yet been integrated into the website.
   - _Example_: website with a single homepage, without any documentation or, as
     was mentioned above, linking out to an external (preexisting) source for
     docs.
@@ -285,7 +289,7 @@ requirements for sandbox projects._
 #### Graduated
 
 - Are follow-through actions from the [Docs assessment][] complete?
-- Does **project documentation** fully addresses the needs of key stakeholders?
+- Does **project documentation** fully addresses the needs of stakeholders?
 
 #### Archived
 
@@ -293,7 +297,7 @@ requirements for sandbox projects._
 - Is the archived status of the project obvious to those visiting the website,
   such as through the use of a prominent banner?
 - If a successor project exists, are there links to its website and/or migration
-  documentation.
+  documentation?
 
 [archived state]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
@@ -314,12 +318,8 @@ We evaluate on the following:
 
 - Is the website usable from mobile?
 - Are doc pages readable?
-- Are all or most website features accessible from mobile -- such as the
-  top-nav, site search, and in-page table of contents?
 - Might a [mobile-first][] design make sense for your project?
-- Are color contrasts significant enough for color-impaired readers?
 - Are most website features usable using a keyboard only?
-- Does text-to-speech offer listeners a good experience?
 
 [mobile-first]:
   https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
@@ -329,8 +329,8 @@ Plan for suitable [accessibility][] measures for your website.
 We evaluate on the following:
 
 - Are color contrasts significant enough for color-impaired readers?
-- Are most website features usable using a keyboard only?
-- Does text-to-speech offer listeners a good experience?
+- Are all vital website features usable using a keyboard only?
+- Does text-to-speech offer listeners a usable experience?
 
 It is up to each project to set their own guidelines.
 
