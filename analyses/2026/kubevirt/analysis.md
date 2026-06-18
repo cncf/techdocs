@@ -2,7 +2,7 @@
 title: KubeVirtDocumentation Analysis
 created: 2026-05-24
 modified: 2026-06-17
-author: Bruce Hamilton (GitHUb: iraindrop)
+author: Bruce Hamilton
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -162,8 +162,7 @@ getting started or as administration tasks.
 QuickStarts:
 
 The Labs, which are used in conjunction with the QuickStarts, are not shown
-until select a QuickStart (other than Killercoda). Labs should in the navigation
-bar.
+until select a QuickStart. Labs should in the navigation bar.
 
 Creating a VM for KubeVirt would be an obvious paramount QuickStart. But there
 are currently two topics to do this. The user starts with either start with
