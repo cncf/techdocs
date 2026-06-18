@@ -1,8 +1,8 @@
 ---
 title: KubeVirtDocumentation Analysis
 created: 2026-05-24
-modified: 2026-06-15
-author: iRaindrop
+modified: 2026-06-17
+author: Bruce Hamilton (GitHUb: iraindrop)
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -128,6 +128,48 @@ code.
 
 The following sections contain brief assessments of each element of the Project
 Documentation rubric.
+
+The following observations are my initial observations on the KubeVirt
+documentation (https://kubevirt.io/user-guide).
+
+Docs welcome page:
+
+- From the home page, selecting **Docs** from the top navigation tabs opens the
+  **KubeVirt User Guide** page - with the main sections of the documentation as
+  options on the top navigation tabs. This differs from having the navigation
+  tabs the choices of all of the web site. This is unusual, but not a negative
+  experience.
+- Selecting the KubeVirt icon on the upper-left should return to home page but
+  stays on the same page. To return to the home page, you must use the browser.
+- On the Welcome page, the bulleted list of selection descriptions needed
+  consistent editing would read better as a two-column table (table head not
+  needed).
+- The **Try it out** heading should include "QuickStarts" (besides the URL) so
+  that the reader doesn't wonder if its something different.
+
+Architecture:
+
+This page describes essentials and core concepts as expected for an Architecture
+page but could be organized better to coordinate with the graphics. The
+Application Layout subsection would be better closer to the top.
+
+The diagram labeled "simplified version" would be better with its own
+description.
+
+The How to and When to use a virtual machine sections would be better placed in
+getting started or as administration tasks.
+
+QuickStarts:
+
+The Labs, which are used in conjunction with the QuickStarts, are not shown
+until select a QuickStart (other than Killercoda). Labs should in the navigation
+bar.
+
+Creating a VM for KubeVirt would be an obvious paramount QuickStart. But there
+are currently two topics to do this. The user starts with either start with
+"KubeVirt QuickStart with Kind" or "KubeVirt QuickStart with Minikube", followed
+by "Use KubeVirt" to create the VM. Perhaps the could be one main topic with
+references to Kind and MiniKube. Such thoughts may have been considered before.
 
 #### Information architecture
 
