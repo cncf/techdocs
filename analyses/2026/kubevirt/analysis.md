@@ -374,7 +374,7 @@ We evaluate on the following:
 
 Creating inclusive project communities is a key goal for all CNCF projects.
 
-We evluate on the following:
+We evaluate on the following:
 
 - Are there any customer-facing utilities, endpoints, class names, or feature
   names that use non-recommended words as documented by the
