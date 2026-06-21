@@ -283,7 +283,6 @@ Release notes:
 
 - Examples of Compute tasks identified by AI:
 
-- Complete the truncated KubeVirtVMGuestMemoryPressure entry.
 - Add missing Kubernetes support matrix line to v1.1.0 section.
 - Establish and document a release notes template.
 - Add release notes maintenance guidance to contributing.md.
