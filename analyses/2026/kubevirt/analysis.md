@@ -1,7 +1,7 @@
 ---
 title: KubeVirtDocumentation Analysis
 created: 2026-05-24
-modified: 2026-06-19
+modified: 2026-06-20
 author: Bruce Hamilton
 ---
 
@@ -112,6 +112,8 @@ to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
+Section analysis by author unless otherwise indicated
+
 KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
@@ -132,6 +134,9 @@ Documentation rubric.
 The following observations are my initial observations on the KubeVirt
 documentation (https://kubevirt.io/user-guide) by its sections as shown on the
 top navigation bar.
+
+This comment section refers to some of the high priority tasks identified by AI,
+Claude Sonnet 4.6. For For all tasks and details, see TBD.
 
 Docs welcome page:
 
@@ -160,6 +165,12 @@ Architecture:
 - The How to and When to use a virtual machine sections would be better placed
   in getting started or as administration tasks.
 
+- Examples of Architecture tasks identified by AI:
+  - Separate conceptual and procedural content.
+  - Update deprecated spec.running references.
+  - Verify and update force-restart grace-period limitation.
+  - Review and restructure section ordering for new-user flow.
+
 QuickStarts:
 
 - The Labs, which are used in conjunction with the Quickstarts, are not shown
@@ -172,6 +183,14 @@ QuickStarts:
   topic with references to Kind and MiniKube. Such thoughts may have been
   considered before.
 
+- Examples of Quickstart tasks identified by AI:
+  - Add common prerequisites section.
+  - Add labs link to top-level navigation.
+  - Fix accessModes error and add it as an explicit troubleshooting step.
+  - Add cleanup and reset instructions.
+  - Update dv_fedora.yml to current CDI API and image reference.
+  - Investigate and fix SSH connectivity issues.
+
 Cluster Administration:
 
 - The top (first) page in the section, Installation, has guidance what would be
@@ -180,6 +199,119 @@ Cluster Administration:
 - The "Confidential computing" topic might be better titled as "Encrypted
   Virtualization".
 - The "KubeVirt Tekton" topic might be better titled as "Tekton pipelines."
+
+- Examples of Cluster Administration tasks identified by AI:
+  - Audit and update OKD Service Catalog APB section.
+  - Update outdated `--admission-control` flag reference.
+  - Replace internal dev image references with public images.
+  - Verify and update API stability status.
+  - Replace deprecated `--delete-local-data` flag.
+  - Remove outdated live-migration-not-yet-supported note.
+  - Add installation instructions for KubeVirt Tekton Tasks.
+
+User Workloads:
+
+- The top overview for this section should describe the concept of User
+  Workloads and how it's pertinent to KubeVirt, such as to use workload
+  partitioning to accommodate resources spikes.
+- The "Lifecycle" topic contains useful How-to guidance on VMs with Kubectl.
+- The "Basic Use" topic has useful KubeVirt intro content.
+- Helpful `virtctl` summary guidance could be aggregated from `virtctl in the
+  title.split computing
+- The "Templates" and "Virtual Machine Templates" share the same content.
+
+- Examples of User Workload tasks identified by AI:
+  - Add VirtualMachine (VM) vs VirtualMachineInstance (VMI) distinction.
+  - Add macOS and Windows install instructions.
+  - Fix conflicting kernelArgs documentation.
+  - Add `virtctl` commands for querying guest info.
+  - Add the list of available common instance types.
+  - Add deprecation note pointing to VirtualMachinePool.
+  - Replace kubevirt/fedora-cloud-container-disk-demo image with public image.
+  - Update RestartRequired limitation about revert workaround.
+
+Compute:
+
+- The topics comprise a variety of tasks that read well and have needs for
+  mostly tasks such as defining terms and providing examples. Adding subsections
+  to the left-side navigation bar could be helpful for discovery.
+
+- Examples of Compute tasks identified by AI:
+  - Add a KubeVirt-specific hugepages configuration example.
+  - Create Compute section overview page.
+  - Add a live-migration cancellation section.
+  - Reconcile page content with the live migration lab.
+  - Add introduction distinguishing nodeSelector vs affinity vs toleration.
+  - Flag alpha label for auto-memory-limits-ratio as potentially unstable.
+  - Add a summary table of resource allocation rules.
+  - Add WaitAsReceiver RunStrategy documentation.
+
+Network:
+
+- Essentially reference content. Task-based titles could help discovery.
+
+- Examples of Compute tasks identified by AI:
+
+- Create Network section overview page.
+- Replace unofficial container disk image.
+- Add a 'How DNS resolution works for VMs' conceptual intro.
+- Update API reference links from 'master' to 'main'.
+- Add a network binding comparison table.
+- Replace internal dev container image in VMI example.
+- Add an egress NetworkPolicy example.
+- Add a hot-unplug step-by-step example.
+
+Storage:
+
+- Essentially reference content. Task-based titles could help discovery.
+
+- Examples of Compute tasks identified by AI:
+  - Create Storage section overview page.
+  - Replace hardcoded personal path in example command.
+  - Replace 'master' branch in API reference links with 'main'.
+  - Replace unofficial kubevirt dev images in examples.
+  - Remove stale pre-v0.20 registryDisk migration note.
+  - Replace dev image in disk-sharing example.
+  - Clarify Migration Controller vs Migration Operator naming.
+  - Replace dev images in volume migration examples.
+
+Release notes:
+
+- A unusual prominent location for release notes, but clearly convenient.
+  Improvements suggests could be formatting, consistency edits, and perhaps data
+  aggregation.
+
+- Examples of Compute tasks identified by AI:
+
+- Complete the truncated KubeVirtVMGuestMemoryPressure entry.
+- Add missing Kubernetes support matrix line to v1.1.0 section.
+- Establish and document a release notes template.
+- Add release notes maintenance guidance to contributing.md.
+
+Contributing:
+
+- Provide an engaging page about ways to contribute. A large part of the content
+  could be in a more discoverable two-column table of links and descriptions.
+
+- Examples of Contributing tasks identified by AI:
+
+- Verify New Contributor session recording playlist link.
+- Add PR CI process overview.
+- Add local-preview workflow to Contributing page.
+- Add link-checking and spell-check steps to Contributing page.
+
+Virtualization Debugging:
+
+- Specifies the page is about KubeVirt debugging, so having "Virtualization" in
+  the title makes it seem like it might be subset of KubeVirt debugging.
+
+- Overview needs examples of debugging scenarios.
+
+Examples of Virtualization Debugging tasks identified by AI:
+
+- Fix 'master' branch in LogVerbosity API reference link.
+- Fix stale operations/ path in cross-link to debug page.
+- Replace unofficial dev image in logging example VMI.
 
 #### Information architecture
 
@@ -243,7 +375,7 @@ We evaluate on the following:
 
 Creating inclusive project communities is a key goal for all CNCF projects.
 
-We evaluate on the following:
+We evluate on the following:
 
 - Are there any customer-facing utilities, endpoints, class names, or feature
   names that use non-recommended words as documented by the
@@ -267,8 +399,8 @@ We evaluate on the following:
 
 ## Contributor documentation
 
-The analysis in this section was generated by AI, Claude Sonnet 4.6, and
-comprises the answers to questions, findings, and rating evaluations.
+Section analysis generated by AI, Claude Sonnet 4.6, and includes the answers to
+questions, findings, and rating evaluations.
 
 KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
@@ -448,8 +580,8 @@ actionable backlog, new contributors who follow the guidance reach a dead end.
 
 ## Website and infrastructure
 
-The analysis in this section was generated by AI, Claude Sonnet 4.6, and
-comprises the answers to questions, findings, and rating evaluations.
+Section analysis generated by AI, Claude Sonnet 4.6, and includes the answers to
+questions, findings, and rating evaluations.
 
 KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
