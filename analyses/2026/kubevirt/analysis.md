@@ -612,17 +612,19 @@ a direct adoption opportunity. Closing these documentation gaps is the
 highest-leverage action the project can take to convert evaluators into
 production users.
 
-**A third, concrete finding comes from the page-level task analysis**. (kubevirt-analysis.csv): 266 discrete tasks were identified across 94 pages. Of these, 66 are high-priority, 86 medium, and 114 low. The high-priority tasks
+**A third, concrete finding comes from the page-level task analysis**.
+(kubevirt-analysis.csv): 266 discrete tasks were identified across 94 pages. Of
+these, 66 are high-priority, 86 medium, and 114 low. The high-priority tasks
 fall into five clusters — each representing a category of technical debt that
 erodes reader trust independently of any structural improvement:
 
-| Cluster                                    | High-pri task count | Examples |
-| ------------------------------------------ | ---| -----------------------|
-| Unofficial/internal dev images in examples | 17 | internal registry refs |
-| Broken or stale links                      | 15 | Broken bridge link |
-| Outdated or removed content                | 11 | `--delete-local-data` flag |
-| Deprecated API references                  | 6  | `spec.running` |
-| User-visible typos in code                 | 6  | (see csv file) |
+| Cluster                                    | High-pri tasks |
+| ------------------------------------------ | -------------- |
+| Unofficial/internal dev images in examples | 17             |
+| Broken or stale links                      | 15             |
+| Outdated or removed content                | 11             |
+| Deprecated API references                  | 6              |
+| User-visible typos in code                 | 6              |
 
 These are independent of audience targeting or architecture improvements — they
 are factual errors and broken examples that any reader can encounter today. They
@@ -647,7 +649,7 @@ production has reason to distrust the entire page.
 
 ##### 1. Replace unofficial and internal dev images in examples
 
-**Priority: High — 17 occurrences across 11+ files**
+> Priority: High — 17 occurrences across 11+ files
 
 Multiple pages embed container image references from internal development
 registries or personal/unofficial namespaces that readers cannot pull:
@@ -751,7 +753,7 @@ issue is resolved). Others (pre-v0.20 notes, `--delete-local-data`, OKD APB) can
 be deleted without verification — they describe behavior removed in Kubernetes
 or OKD versions that are no longer in the support matrix.
 
-##### 6. Fix the JSON syntax error in the passt registration example
+##### 6. Fix the JSON syntax error in the registration example
 
 > Priority: High — 1 occurrence
 
@@ -1086,9 +1088,9 @@ contributions.
 > Priority: Medium (A08-T01 in kubevirt-analysis.csv)
 
 The `release_notes.md` file has inconsistent formatting across releases, two
-incomplete entries (a truncated note, a placeholder — see Technical Debt
-§7), and no documented template for contributors. Create a release notes
-template (either a comment block at the top of `release_notes.md` or a separate
+incomplete entries (a truncated note, a placeholder — see Technical Debt §7),
+and no documented template for contributors. Create a release notes template
+(either a comment block at the top of `release_notes.md` or a separate
 `docs/release-notes-template.md`) that specifies:
 
 - Required sections per release (breaking changes, new features, deprecations,
@@ -1111,11 +1113,11 @@ Approximately 45 occurrences of "simple" or "easy" exist across 42 files. Most
 are in code example resource names (acceptable) but some are in prose that can
 be improved:
 
-| Current                               | Suggested replacement                         |
-| ------------------------------------- | --------------------------------------------- |
-| "a simple example"                    | "the following example" / "a minimal example" |
-| "easy ways to fix them"               | "common ways to resolve them"                 |
-| "simplest" as a workaround descriptor | "the most direct" / "the least-invasive"      |
+| Current                 | Suggested replacement                        |
+| ----------------------- | -------------------------------------------- |
+| "a simple example"      | "the following example", "a minimal example" |
+| "easy ways to fix them" | "common ways to resolve them"                |
+| "simplest"              | "the most direct" / "the least-invasive"     |
 
 This is a low-effort improvement that aligns with CNCF inclusive language
 guidance from the [Inclusive Naming Initiative](https://inclusivenaming.org).
@@ -1323,11 +1325,19 @@ We evaluate on the following:
 
 - Is project governance clearly documented?
 
-**Answer:** Yes. KubeVirt's governance documentation is comprehensive and well-structured in the `kubevirt/community` repository — covering maintainer roles, SIG/WG charters, a contributor ladder, voting rules, and active maintainer/emeritus lists. The primary gap is discoverability: the main `kubevirt/kubevirt` repository does not link to `GOVERNANCE.md` directly.
+**Answer:** Yes. KubeVirt's governance documentation is comprehensive and
+well-structured in the `kubevirt/community` repository — covering maintainer
+roles, SIG/WG charters, a contributor ladder, voting rules, and active
+maintainer/emeritus lists. The primary gap is discoverability: the main
+`kubevirt/kubevirt` repository does not link to `GOVERNANCE.md` directly.
 
 ##### Recommendations
 
-KubeVirt's governance documentation is comprehensive and well-structured in the `kubevirt/community` repository — covering maintainer roles, SIG/WG charters, a contributor ladder, voting rules, and active maintainer/emeritus lists. The primary gap is discoverability: the main `kubevirt/kubevirt` repository does not link to `GOVERNANCE.md` directly.
+KubeVirt's governance documentation is comprehensive and well-structured in the
+`kubevirt/community` repository — covering maintainer roles, SIG/WG charters, a
+contributor ladder, voting rules, and active maintainer/emeritus lists. The
+primary gap is discoverability: the main `kubevirt/kubevirt` repository does not
+link to `GOVERNANCE.md` directly.
 
 #### Communication methods documented
 
