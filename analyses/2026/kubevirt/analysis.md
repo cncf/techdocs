@@ -562,7 +562,7 @@ editing.
 
 ### Recommendations
 
-##### Author overall recommendations:
+#### Author overall recommendations
 
 The AI results capture my recommendations except for the following pressing
 needs I see as a novice user:
@@ -582,7 +582,7 @@ needs I see as a novice user:
   save a lot of time for other users to get on the right path as soon as
   possible.
 
-##### AI overall recommendations:
+#### AI overall recommendations
 
 The KubeVirt user guide is a substantive, professionally maintained
 documentation site with 94 Markdown pages covering architecture, installation,
@@ -612,36 +612,21 @@ a direct adoption opportunity. Closing these documentation gaps is the
 highest-leverage action the project can take to convert evaluators into
 production users.
 
-**A third, concrete finding comes from the page-level task analysis**
-(kubevirt-analysis.csv): 266 discrete tasks were identified across 94 pages. Of
-these, 66 are high-priority, 86 medium, and 114 low. The high-priority tasks
+**A third, concrete finding comes from the page-level task analysis**. (kubevirt-analysis.csv): 266 discrete tasks were identified across 94 pages. Of these, 66 are high-priority, 86 medium, and 114 low. The high-priority tasks
 fall into five clusters — each representing a category of technical debt that
 erodes reader trust independently of any structural improvement:
 
-| Cluster                                    | High-pri task count | Examples                                                                   |
-| ------------------------------------------ | ------------------- | -------------------------------------------------------------------------- |
-| Unofficial/internal dev images in examples | 17                  | `kubevirt/fedora-cloud-container-disk-demo`, internal registry refs        |
-| Broken or stale links                      | 15                  | Broken bridge link in live_migration.md, stale OKD 3.9 link                |
-| Outdated or removed content                | 11                  | `--delete-local-data` flag, `--admission-control`, pre-v0.34 taint notes   |
-| Deprecated API references                  | 6                   | `spec.running`, `rbac.authorization.k8s.io/v1beta1`, OKD openshift-ansible |
-| User-visible typos in code                 | 6                   | (see csv file)                                                             |
+| Cluster                                    | High-pri task count | Examples |
+| ------------------------------------------ | ---| -----------------------|
+| Unofficial/internal dev images in examples | 17 | internal registry refs |
+| Broken or stale links                      | 15 | Broken bridge link |
+| Outdated or removed content                | 11 | `--delete-local-data` flag |
+| Deprecated API references                  | 6  | `spec.running` |
+| User-visible typos in code                 | 6  | (see csv file) |
 
 These are independent of audience targeting or architecture improvements — they
 are factual errors and broken examples that any reader can encounter today. They
 should be addressed before or alongside any larger structural work.
-
-**Summary scores across all rubric areas:**
-
-| Area                                     | Rating (1–5) | Primary Gap                                                                                      |
-| ---------------------------------------- | ------------ | ------------------------------------------------------------------------------------------------ |
-| Information architecture                 | 3            | No self-contained happy path; missing user-facing troubleshooting; no section overview pages     |
-| New user content                         | 3            | Quickstarts delegates entirely to external content; Basic Use page too thin                      |
-| Content maintainability & site mechanics | 2            | No versioning, no localization framework                                                         |
-| Content creation processes               | 3            | No release-gating on docs; documentation SIG un-staffed; no release notes template               |
-| Inclusive language                       | 3            | Occasional "simple"/"easy" in prose; "master" in API links                                       |
-| Website & infrastructure                 | 2–4 (varies) | No analytics, no preview-build noindex, no account custodians                                    |
-| Contributor experience                   | 3            | Onboarding info spread across four repos; no active good-first-issues                            |
-| **Technical debt (accuracy)**            | **2**        | **17 unofficial images, 15 broken links, 11 outdated sections, 6 deprecated APIs, 6 code typos** |
 
 #### Technical Debt & Content Accuracy
 
@@ -683,7 +668,7 @@ to prevent regressions.
 
 ##### 2. Fix broken and stale links
 
-**Priority: High — 15 occurrences across 10+ files**
+> Priority: High — 15 occurrences across 10+ files
 
 Broken links identified include:
 
@@ -707,7 +692,7 @@ Information Architecture §2) — a single pass replaces all of them.
 
 ##### 3. Remove or update deprecated API references
 
-**Priority: High — 6 occurrences across 5 files**
+> Priority: High — 6 occurrences across 5 files
 
 - `spec.running` field references throughout `architecture.md` (A01-T02) —
   deprecated in favor of `spec.runStrategy`
@@ -731,7 +716,7 @@ as it actively misleads users into using a feature that is being removed.
 
 ##### 4. Fix user-visible typos in code and API field names
 
-**Priority: High — 6 occurrences, some in copy-pasteable code**
+> Priority: High — 6 occurrences, some in copy-pasteable code
 
 (see CSV file)
 
@@ -741,7 +726,7 @@ verbatim and then debug why their manifest doesn't work.
 
 ##### 5. Remove or archive outdated historical content
 
-**Priority: High/Medium — 11 occurrences**
+> Priority: High/Medium — 11 occurrences
 
 Sections describing behavior specific to unsupported releases confuse readers on
 current versions and signal that the docs are not maintained:
@@ -753,8 +738,7 @@ current versions and signal that the docs are not maintained:
   (A05-B06-T03)
 - "Future release" language in `cluster_admin/installation.md` AppArmor section
   (A03-B01-T01) — the referenced issue may already be resolved
-- "Future release" language in `compute/persistent_tpm_and_uefi_state.md`
-  (A05-B14-T01)
+- "Future release" language in (A05-B14-T01)
 - `--delete-local-data` flag (deprecated in kubectl 1.20, removed in 1.27) in
   `cluster_admin/node_maintenance.md` (A03-B12-T01)
 - OKD Service Catalog APB section in `cluster_admin/installation.md`
@@ -769,15 +753,15 @@ or OKD versions that are no longer in the support matrix.
 
 ##### 6. Fix the JSON syntax error in the passt registration example
 
-**Priority: High — 1 occurrence**
+> Priority: High — 1 occurrence
 
-(A06-B04-T01) See sheet for a JSON syntax error in the passt plugin registration
+(A06-B04-T01) See sheet for a JSON syntax error in the plugin registration
 example. A reader following this example will get an error with no indication
 the source is the doc. Fix immediately.
 
 ##### 7. Complete truncated and placeholder release notes entries
 
-**Priority: High/Medium — 2 occurrences**
+> Priority: High/Medium — 2 occurrences
 
 - The `KubeVirtVMGuestMemoryPressure` entry in `release_notes.md` is truncated
   mid-sentence (A08-B01-T05)
@@ -793,7 +777,7 @@ The recommendations in this section were generated by AI.
 
 ##### 1. Add section overview pages for every major section
 
-**Priority: Medium — 6 new pages identified in kubevirt-anlaysis.csv**
+> Priority: Medium — 6 new pages identified in kubevirt-analysis.csv
 
 Every major section of the user guide (Cluster Administration, User Workloads,
 Compute, Network, Storage, Debug) is missing an `overview.md` landing page.
@@ -829,7 +813,7 @@ documentation home.
 
 ##### 3. Fix API reference links — scheme and versioning
 
-**Priority: High**
+> Priority: High
 
 All in-guide links to the API reference use `http://` and hardcode the
 `/api-reference/master/` path. Both are problems:
@@ -845,7 +829,7 @@ page), not just inline in prose.
 
 ##### 4. Refactor large reference pages into focused task pages
 
-**Priority: Medium**
+> Priority: Medium
 
 `disks_and_volumes.md` is the largest single page in the guide and attempts to
 cover conceptual explanation, reference tables, and task instructions in one
@@ -863,7 +847,7 @@ complete task per page that a reader can follow from start to finish.
 
 ##### 5. Add a "Coming from VMware" onboarding path
 
-**Priority: Medium** (High if targeting the 2024–2026 VMware migration window)
+> Priority: Medium (High if targeting the 2024–2026 VMware migration window)
 
 Organizations migrating from VMware bring traditional virtualization
 expectations and limited Kubernetes fluency. There is no documentation bridge.
@@ -884,7 +868,7 @@ shortcomings they will discover in production.
 
 ##### 6. Create an end-to-end instancetype/preference tutorial
 
-**Priority: Medium**
+> Priority: Medium
 
 `instancetypes.md` and `creating_it_pref.md` describe the instancetype model but
 do not walk through a complete "VM from scratch using instancetype and
@@ -899,7 +883,7 @@ The recommendations in this section were generated by AI.
 
 ##### 1. Create a self-contained "Getting Started" page
 
-**Priority: High**
+> Priority: High
 
 The current `quickstarts.md` is a curated list of four external links. It
 contains no embedded steps and provides no guidance for a user without access to
@@ -918,7 +902,7 @@ This page should be completable without leaving the user guide site.
 
 ##### 2. Expand the Basic Use page into a meaningful getting-started flow
 
-**Priority: Medium** (A04-B02-T01 in kubevirt-anlaysis.csv)
+> Priority: Medium (A04-B02-T01 in kubevirt-analysis.csv)
 
 `user_workloads/basic_use.md` is currently a thin page that covers VM start/stop
 commands but does not walk through a meaningful first-use scenario. It is the
@@ -939,7 +923,7 @@ while the quickstart is the narrative onboarding experience.
 
 ##### 3. Add a common prerequisites section to Quickstarts
 
-**Priority: Medium** (A02-T04 in kubevirt-analysis.csv)
+> Priority: Medium (A02-T04 in kubevirt-analysis.csv)
 
 The Quickstarts page links to four separate external environments but does not
 list shared prerequisites. A reader needs kubectl, virtctl, and cluster access
@@ -956,7 +940,7 @@ prerequisites link is useful for all readers.
 
 ##### 4. Add "What to read next" sections
 
-**Priority: Medium**
+> Priority: Medium
 
 The Quickstarts page and the Installation page both end without directing users
 to their next logical step. Add a brief "Next steps" section to each:
@@ -966,7 +950,7 @@ to their next logical step. Add a brief "Next steps" section to each:
 
 ##### 5. Add an audience orientation statement to the homepage
 
-**Priority: Medium**
+> Priority: Medium
 
 From the high-level review (kubevirt-reviews.md): the guide currently tries to
 serve Kubernetes-native engineers and traditional VM operators simultaneously
@@ -981,7 +965,7 @@ The recommendations in this section were generated by AI.
 
 ##### 1. Adopt doc versioning via the `mike` plugin
 
-**Priority: High**
+> Priority: High
 
 KubeVirt maintains a support matrix (latest three Kubernetes releases). Users on
 older KubeVirt versions currently see docs and API reference links that reflect
@@ -995,7 +979,7 @@ version dropdown in the header. Recommended approach:
 
 ##### 2. Prepare the directory structure for localization
 
-**Priority: Medium**
+> Priority: Medium
 
 There is an open issue proposing Simplified Chinese (zh-CN) documentation.
 Currently the directory structure does not support language subdirectories,
@@ -1006,7 +990,7 @@ populated initially. Cost is low now; cost grows with every page added.
 
 ##### 3. Enable analytics on the user guide
 
-**Priority: High** (from website analysis)
+> Priority: High (from website analysis)
 
 The user guide has no analytics configured. Without analytics:
 
@@ -1022,7 +1006,7 @@ analytics and search indexes.
 
 ##### 4. Document account custodians
 
-**Priority: Medium** (from website analysis)
+> Priority: Medium (from website analysis)
 
 There is no documentation of who owns the analytics account, Google Search
 Console, or site-search configuration for the user guide. Add a named section to
@@ -1032,7 +1016,7 @@ transitions.
 
 ##### 5. Fix the sitemap URL double-slash
 
-**Priority: Low**
+> Priority: Low
 
 The root `robots.txt` references the sitemap with a double slash
 (`//sitemap.xml`). Correct to `https://kubevirt.io/user-guide/sitemap.xml`.
@@ -1043,7 +1027,7 @@ The recommendations in this section were generated by AI.
 
 ##### 1. Document a release-docs checklist
 
-**Priority: High**
+> Priority: High
 
 There is no documented policy requiring documentation updates as part of the
 code release process. Features are regularly released without corresponding user
@@ -1058,7 +1042,7 @@ to `CONTRIBUTING.md` (or a new `docs/release-process.md`):
 
 ##### 2. Staff the documentation SIG
 
-**Priority: High**
+> Priority: High
 
 The `sig-list.md` in the community repo lists `sig/documentation` with no
 chairs, no contact persons, and no meeting schedule. This means documentation
@@ -1069,7 +1053,7 @@ existing committer is significantly better than the current vacuum.
 
 ##### 3. Curate an active good-first-issue backlog
 
-**Priority: Medium** (from contributor docs review)
+> Priority: Medium (from contributor docs review)
 
 The `good-first-issue` label infrastructure exists but the user-guide repo has
 no open good-first issues at the time of review. New contributors who follow the
@@ -1086,7 +1070,7 @@ incoming issues.
 
 ##### 4. Consolidate new contributor onboarding
 
-**Priority: Medium** (from contributor docs review)
+> Priority: Medium (from contributor docs review)
 
 New contributor guidance is spread across at least four locations:
 `kubevirt/kubevirt` CONTRIBUTING.md, `docs/getting-started.md`, the user-guide
@@ -1099,10 +1083,10 @@ contributions.
 
 ##### 5. Establish a release notes template
 
-**Priority: Medium** (A08-T01 in kubevirt-anlaysis.csv)
+> Priority: Medium (A08-T01 in kubevirt-analysis.csv)
 
 The `release_notes.md` file has inconsistent formatting across releases, two
-incomplete entries (a truncated note, a `NONR` placeholder — see Technical Debt
+incomplete entries (a truncated note, a placeholder — see Technical Debt
 §7), and no documented template for contributors. Create a release notes
 template (either a comment block at the top of `release_notes.md` or a separate
 `docs/release-notes-template.md`) that specifies:
@@ -1121,7 +1105,7 @@ The recommendations in this section were generated by AI.
 
 ##### 1. Replace prose uses of "simple" and "easy"
 
-**Priority: Low**
+> Priority: Low
 
 Approximately 45 occurrences of "simple" or "easy" exist across 42 files. Most
 are in code example resource names (acceptable) but some are in prose that can
@@ -1138,7 +1122,7 @@ guidance from the [Inclusive Naming Initiative](https://inclusivenaming.org).
 
 ##### 2. Track the "master" API reference URL path
 
-**Priority: Low**
+> Priority: Low
 
 All deep-links to the API reference use
 `/api-reference/master/definitions.html`. This is the upstream API reference
@@ -1215,6 +1199,8 @@ Contributor Documentation rubric.
 > AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
 > these criteria. Keep in mind that much of the contributor documentation might
 > be contained in the documentation repository.
+
+The answers and rating paragraphs in this section were generated by AI:
 
 #### Communication methods documented
 
@@ -1337,10 +1323,11 @@ We evaluate on the following:
 
 - Is project governance clearly documented?
 
-### Recommendations
+**Answer:** Yes. KubeVirt's governance documentation is comprehensive and well-structured in the `kubevirt/community` repository — covering maintainer roles, SIG/WG charters, a contributor ladder, voting rules, and active maintainer/emeritus lists. The primary gap is discoverability: the main `kubevirt/kubevirt` repository does not link to `GOVERNANCE.md` directly.
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
-> previous section.
+##### Recommendations
+
+KubeVirt's governance documentation is comprehensive and well-structured in the `kubevirt/community` repository — covering maintainer roles, SIG/WG charters, a contributor ladder, voting rules, and active maintainer/emeritus lists. The primary gap is discoverability: the main `kubevirt/kubevirt` repository does not link to `GOVERNANCE.md` directly.
 
 #### Communication methods documented
 
@@ -1350,7 +1337,7 @@ and CONTRIBUTING.md, but discoverability from the main website and the
 did not render meaningful content during evaluation, which is a missed
 opportunity for new visitors.
 
-**Recommendations:**
+##### Recommendations
 
 - Add a visible "Community" section to the `kubevirt/kubevirt` README (or expand
   the existing one) that lists Slack channels with direct join links, the
