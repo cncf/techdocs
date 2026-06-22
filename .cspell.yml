@@ -49,8 +49,29 @@ words:
   - kubevirt
   - Quickstart
   - Quickstarts
+  - quickstart
+  - quickstarts
   - Killercoda
   - Tekton
+  - tekton
   - cncf
   - virtctl
   - hugepages
+  - virt
+  - virsh
+  - Hotplug
+  - hotplug
+  - NUMA
+  - instancetype
+  - instancetypes
+  - virtio
+  - vsock
+  - CirrOS
+  - Cirros
+  - cirros
+  - openshift
+  - ansible
+  - pasteable
+  - portgroup
+  - Multus
+  - multus
