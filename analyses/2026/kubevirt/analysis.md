@@ -1,7 +1,7 @@
 ---
-title: KubeVirtDocumentation Analysis
+title: KubeVirt Documentation Analysis
 created: 2026-05-24
-modified: 2026-06-21
+modified: 2026-06-22
 author: Bruce Hamilton
 ---
 
@@ -1099,7 +1099,7 @@ and no documented template for contributors. Create a release notes template
 - The Kubernetes support matrix line format (several releases are missing this)
 - Who is responsible for completing the notes before release tag
 
-This pairs with the release-docs checklist recommendation (§1 above).
+This pairs with the release-docs checklist recommendation (#1 above).
 
 #### Inclusive language
 
@@ -1331,23 +1331,7 @@ roles, SIG/WG charters, a contributor ladder, voting rules, and active
 maintainer/emeritus lists. The primary gap is discoverability: the main
 `kubevirt/kubevirt` repository does not link to `GOVERNANCE.md` directly.
 
-##### Recommendations
-
-KubeVirt's governance documentation is comprehensive and well-structured in the
-`kubevirt/community` repository — covering maintainer roles, SIG/WG charters, a
-contributor ladder, voting rules, and active maintainer/emeritus lists. The
-primary gap is discoverability: the main `kubevirt/kubevirt` repository does not
-link to `GOVERNANCE.md` directly.
-
-#### Communication methods documented
-
-KubeVirt documents its communication channels thoroughly in the community repo
-and CONTRIBUTING.md, but discoverability from the main website and the
-`kubevirt/kubevirt` README could be improved. The `kubevirt.io/community/` page
-did not render meaningful content during evaluation, which is a missed
-opportunity for new visitors.
-
-##### Recommendations
+### Recommendations
 
 - Add a visible "Community" section to the `kubevirt/kubevirt` README (or expand
   the existing one) that lists Slack channels with direct join links, the
@@ -1358,6 +1342,14 @@ opportunity for new visitors.
 - Promote the `#virtualization` and `#kubevirt-dev` Slack channel links more
   prominently on the user-guide Contributing page (currently only mentioned in
   passing with no direct join URL).
+
+#### Communication methods documented
+
+KubeVirt documents its communication channels thoroughly in the community repo
+and CONTRIBUTING.md, but discoverability from the main website and the
+`kubevirt/kubevirt` README could be improved. The `kubevirt.io/community/` page
+did not render meaningful content during evaluation, which is a missed
+opportunity for new visitors.
 
 #### Beginner friendly issue backlog
 
