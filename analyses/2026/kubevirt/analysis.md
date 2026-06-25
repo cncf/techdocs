@@ -1494,7 +1494,7 @@ represent a systematic erosion of reader trust: a reader who hits a broken link,
 an image that won't pull, or a typo in a field name they're about to paste into
 production has reason to distrust the entire page.
 
-##### 1. Replace unofficial and internal dev images in examples
+#### 1. Replace unofficial and internal dev images in examples
 
 > Priority: High — 17 occurrences across 11+ files
 
@@ -1515,7 +1515,7 @@ references in one PR, then add a CI linting rule (e.g., a grep check on
 `registry.k8s.io` or known internal registry host names in Markdown code blocks)
 to prevent regressions.
 
-##### 2. Fix broken and stale links
+#### 2. Fix broken and stale links
 
 > Priority: High — 15 occurrences across 10+ files
 
@@ -1539,7 +1539,7 @@ treat link failures as blocking. For the `master`-branch API reference links,
 this is the same fix as the broader API link scheme recommendation (see
 Information Architecture §2) — a single pass replaces all of them.
 
-##### 3. Remove or update deprecated API references
+#### 3. Remove or update deprecated API references
 
 > Priority: High — 6 occurrences across 5 files
 
@@ -1563,7 +1563,7 @@ SME judgment — they are factually wrong or out of date. Batch into a single
 "deprecated API cleanup" PR. Add the Presets deprecation admonition immediately
 as it actively misleads users into using a feature that is being removed.
 
-##### 4. Fix user-visible typos in code and API field names
+#### 4. Fix user-visible typos in code and API field names
 
 > Priority: High — 6 occurrences, some in copy-pasteable code
 
@@ -1573,7 +1573,7 @@ as it actively misleads users into using a feature that is being removed.
 changes. The field name typos are especially damaging because users copy them
 verbatim and then debug why their manifest doesn't work.
 
-##### 5. Remove or archive outdated historical content
+#### 5. Remove or archive outdated historical content
 
 > Priority: High/Medium — 11 occurrences
 
@@ -1600,7 +1600,7 @@ issue is resolved). Others (pre-v0.20 notes, `--delete-local-data`, OKD APB) can
 be deleted without verification — they describe behavior removed in Kubernetes
 or OKD versions that are no longer in the support matrix.
 
-##### 6. Fix the JSON syntax error in the registration example
+#### 6. Fix the JSON syntax error in the registration example
 
 > Priority: High — 1 occurrence
 
@@ -1608,7 +1608,7 @@ or OKD versions that are no longer in the support matrix.
 example. A reader following this example will get an error with no indication
 the source is the doc. Fix immediately.
 
-##### 7. Complete truncated and placeholder release notes entries
+#### 7. Complete truncated and placeholder release notes entries
 
 > Priority: High/Medium — 2 occurrences
 
