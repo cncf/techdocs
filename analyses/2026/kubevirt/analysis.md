@@ -134,7 +134,7 @@ Documentation rubric.
 This section includes AI observations generated from Claude Sonnet 4.6 and are
 indicated as AI.
 
-#### Overall comments - Author
+#### Overall- Author
 
 The KubeVirt has a well-thought out structure that can accommodate improvements
 without having to restructure sections on a wide basis.
@@ -237,7 +237,7 @@ Virtualization Debugging:
 
 - Overview needs examples of debugging scenarios.
 
-#### Overall comments - AI
+#### Overall- AI
 
 The KubeVirt user guide is a comprehensive, well-organized documentation site
 covering architecture, installation, cluster administration, user workloads,
@@ -558,7 +558,7 @@ editing.
 
 ### Recommendations
 
-#### Overall recommendations - Author
+#### Overall - Author
 
 The AI results capture my recommendations except for the following pressing
 needs I see as a novice user:
@@ -588,7 +588,7 @@ needs I see as a novice user:
   and Getting Started content and ideally for each major section. Mermaid code
   is recommended and be created initially by AI.
 
-#### Overall recommendations - AI
+#### Overall - AI
 
 The KubeVirt user guide is a substantive, professionally maintained
 documentation site with 94 Markdown pages covering architecture, installation,
@@ -642,9 +642,9 @@ should be addressed before or alongside any larger structural work.
 
 ##### Information Architecture Recommendations - AI
 
-1. Add section overview pages for every major section
+###### Add section overview pages for every major section
 
-> Priority: Medium — 6 new pages identified in kubevirt-analysis.csv
+> Priority: High — 6 new pages identified in kubevirt-analysis.csv
 
 Every major section of the user guide (Cluster Administration, User Workloads,
 Compute, Network, Storage, Debug) is missing an `overview.md` landing page.
@@ -664,7 +664,7 @@ reader (cluster admin vs. VM user), and link to the two or three most important
 pages within the section. These are low-word-count pages with high impact on
 navigability.
 
-2. Add a user-facing troubleshooting page
+###### Add a user-facing troubleshooting page
 
 (virsh, QEMU strace, GDB). There is no troubleshooting page for common end-user
 failures. Create `user_workloads/troubleshooting.md` covering:
@@ -678,7 +678,7 @@ failures. Create `user_workloads/troubleshooting.md` covering:
 This is the most common support escalation path and currently has no
 documentation home.
 
-3. Fix API reference links — scheme and versioning
+###### Fix API reference links — scheme and versioning
 
 > Priority: High
 
@@ -694,56 +694,6 @@ introduce a versioned link macro tied to the MkDocs release variable. Surface
 the API reference link in the site navigation (currently only on the Welcome
 page), not just inline in prose.
 
-4. Refactor large reference pages into focused task pages
-
-> Priority: Medium
-
-`disks_and_volumes.md` is the largest single page in the guide and attempts to
-cover conceptual explanation, reference tables, and task instructions in one
-document. Split it into:
-
-- `disks_and_volumes/concepts.md` — what volumes and disks are, how they relate
-  to PVCs
-- `disks_and_volumes/reference.md` — field catalog and type descriptions
-- `disks_and_volumes/tasks/` — individual how-tos (attach a DataVolume, hotplug
-  a disk, etc.)
-
-Similarly, `network_binding_plugins.md` and `hook-sidecar.md` describe
-architecture well but provide no end-to-end worked examples. Add at minimum one
-complete task per page that a reader can follow from start to finish.
-
-5. Add a "Coming from VMware" onboarding path
-
-> Priority: Medium (High if targeting the 2024–2026 VMware migration window)
-
-Organizations migrating from VMware bring traditional virtualization
-expectations and limited Kubernetes fluency. There is no documentation bridge.
-Create a short guide that maps:
-
-| VMware concept    | KubeVirt equivalent                     | Notes/gaps |
-| ----------------- | --------------------------------------- | ---------- |
-| vCenter / vSphere | Kubernetes API server + KubeVirt        |            |
-| VM template       | VirtualMachineInstancetype + Preference |            |
-| vMotion           | Live migration                          |            |
-| Datastore         | PVC / DataVolume (CDI)                  |            |
-| vDS / portgroup   | Multus / secondary networks             |            |
-| Snapshots         | VM snapshot API                         |            |
-
-Be honest about gaps (DRS-style scheduling, mature backup tooling, deep Windows
-integration) — building trust with evaluators is more valuable than obscuring
-shortcomings they will discover in production.
-
-6. Create an end-to-end instancetype/preference tutorial
-
-> Priority: Medium
-
-`instancetypes.md` and `creating_it_pref.md` describe the instancetype model but
-do not walk through a complete "VM from scratch using instancetype and
-preference" scenario. Add a single tutorial page that goes from defining an
-instancetype and preference through creating a VM and verifying resource
-allocation. This scenario represents the KubeVirt-recommended path for VM
-resource management and deserves a dedicated page.
-
 #### New user content
 
 ##### New user content Recommendations - Author
@@ -752,7 +702,7 @@ resource management and deserves a dedicated page.
 
 The recommendations in this section were generated by AI.
 
-1. Create a self-contained "Getting Started" page
+###### Create a self-contained "Getting Started" page
 
 > Priority: High
 
@@ -771,70 +721,11 @@ the current Quickstarts — that walks through:
 
 This page should be completable without leaving the user guide site.
 
-2. Expand the Basic Use page into a meaningful getting-started flow
-
-> Priority: Medium (A04-B02-T01 in kubevirt-analysis.csv)
-
-`user_workloads/basic_use.md` is currently a thin page that covers VM start/stop
-commands but does not walk through a meaningful first-use scenario. It is the
-logical destination after Installation but does not build on it. Expand to
-include:
-
-- The VM/VMI distinction (A04-B01-T01 — many readers do not understand that a
-  `VirtualMachine` manages lifecycle while a `VirtualMachineInstance` is the
-  running unit)
-- Start, stop, restart, and migrate commands in a single reference table
-  (A04-B01-T03)
-- How to verify the VM is running (status fields, events)
-- A "What to read next" pointer to Networking and Storage pages
-
-This is distinct from the "Getting Started" self-contained quickstart (§1 above)
-— the Basic Use page is the permanent reference for the most common operations,
-while the quickstart is the narrative onboarding experience.
-
-3. Add a common prerequisites section to Quickstarts
-
-> Priority: Medium (A02-T04 in kubevirt-analysis.csv)
-
-The Quickstarts page links to four separate external environments but does not
-list shared prerequisites. A reader needs kubectl, virtctl, and cluster access
-for all of them. Add a brief prerequisites block at the top of `quickstarts.md`:
-
-- `kubectl` configured against a cluster
-- `virtctl` plugin installed (link to virtctl_client_tool.md)
-- Minimum cluster resources (RAM, CPUs)
-- KubeVirt operator installed (link to installation.md)
-
-Also ensure the `virtctl_client_tool.md` page covers macOS and Windows install
-instructions (A04-B05-T01, currently high-priority missing content) so the
-prerequisites link is useful for all readers.
-
-4. Add "What to read next" sections
-
-> Priority: Medium
-
-The Quickstarts page and the Installation page both end without directing users
-to their next logical step. Add a brief "Next steps" section to each:
-
-- After Quickstarts: point to User Workloads → Basic Use, and Storage → CDI
-- After Installation: point to Quickstarts, then Feature Gates and Authorization
-
-5. Add an audience orientation statement to the homepage
-
-> Priority: Medium
-
-From the high-level review (kubevirt-reviews.md): the guide currently tries to
-serve Kubernetes-native engineers and traditional VM operators simultaneously
-without acknowledging either. Add a brief orientation paragraph near the top of
-`index.md` that identifies who the guide is for and what prerequisite knowledge
-is assumed (Kubernetes familiarity, cluster access). This sets expectations
-correctly and reduces early drop-off from users who feel lost.
-
 #### Content maintainability & site mechanics
 
 The recommendations in this section were generated by AI.
 
-1. Adopt doc versioning via the `mike` plugin
+##### Adopt doc versioning via the mike plugin
 
 > Priority: High
 
@@ -848,7 +739,7 @@ version dropdown in the header. Recommended approach:
 - Mark older versions with a clear deprecation notice
 - Replace hardcoded `/master/` API reference links with a version variable
 
-2. Prepare the directory structure for localization
+##### Prepare the directory structure for localization
 
 > Priority: Medium
 
@@ -859,7 +750,7 @@ the MkDocs Material `i18n` plugin and add a documented convention for how
 language variants are organized (`docs/zh-CN/`, etc.), even if only English is
 populated initially. Cost is low now; cost grows with every page added.
 
-3. Enable analytics on the user guide
+##### Enable analytics on the user guide
 
 > Priority: High (from website analysis)
 
@@ -875,7 +766,7 @@ requires no cookie consent banner) via the `extra.analytics` key in
 (`X-Robots-Tag: noindex` via Netlify headers) to avoid polluting production
 analytics and search indexes.
 
-4. Document account custodians
+##### Document account custodians
 
 > Priority: Medium (from website analysis)
 
@@ -885,7 +776,7 @@ CONTRIBUTING.md or the community repo listing the current custodians. This is a
 low-effort change that prevents account access loss during maintainer
 transitions.
 
-5. Fix the sitemap URL double-slash
+##### Fix the sitemap URL double-slash
 
 > Priority: Low
 
@@ -911,7 +802,7 @@ to `CONTRIBUTING.md` (or a new `docs/release-process.md`):
 - How the sig/documentation SIG is involved in release sign-off
 - What the escalation path is for undocumented features discovered post-release
 
-2. Staff the documentation SIG
+##### Staff the documentation SIG
 
 > Priority: High
 
@@ -922,85 +813,9 @@ contact for the CNCF documentation review process. Nominate at least one SIG
 chair and add them to the sig-list entry. Even a part-time commitment from an
 existing committer is significantly better than the current vacuum.
 
-3. Curate an active good-first-issue backlog
-
-> Priority: Medium (from contributor docs review)
-
-The `good-first-issue` label infrastructure exists but the user-guide repo has
-no open good-first issues at the time of review. New contributors who follow the
-contributing guide reach a dead end. Maintain a rolling set of 3–5 small,
-well-scoped documentation tasks:
-
-- Missing feature documentation stubs
-- Broken or stale links
-- Pages needing a "What to read next" section
-- Prose uses of "simple"/"easy" that can be replaced
-
-Activate the `help-wanted` label and use it consistently as a triage step for
-incoming issues.
-
-4. Consolidate new contributor onboarding
-
-> Priority: Medium (from contributor docs review)
-
-New contributor guidance is spread across at least four locations:
-`kubevirt/kubevirt` CONTRIBUTING.md, `docs/getting-started.md`, the user-guide
-Contributing page, and the community repo. Create a single "New Contributor
-Guide" landing page that aggregates the full end-to-end path, and add a "Quick
-Start (docs only)" path at the top for contributors who only want to fix
-documentation — the current guide leads immediately into
-Bazel/Docker/nested-virtualization setup that is unnecessary for documentation
-contributions.
-
-5. Establish a release notes template
-
-> Priority: Medium (A08-T01 in kubevirt-analysis.csv)
-
-The `release_notes.md` file has inconsistent formatting across releases, two
-incomplete entries (a truncated note, a placeholder — see Technical Debt §7),
-and no documented template for contributors. Create a release notes template
-(either a comment block at the top of `release_notes.md` or a separate
-`docs/release-notes-template.md`) that specifies:
-
-- Required sections per release (breaking changes, new features, deprecations,
-  bug fixes, known issues)
-- How to link to the corresponding GitHub milestone
-- The Kubernetes support matrix line format (several releases are missing this)
-- Who is responsible for completing the notes before release tag
-
-This pairs with the release-docs checklist recommendation (#1 above).
-
 #### Inclusive language
 
 The recommendations in this section were generated by AI.
-
-1. Replace prose uses of "simple" and "easy"
-
-> Priority: Low
-
-Approximately 45 occurrences of "simple" or "easy" exist across 42 files. Most
-are in code example resource names (acceptable) but some are in prose that can
-be improved:
-
-| Current                 | Suggested replacement                        |
-| ----------------------- | -------------------------------------------- |
-| "a simple example"      | "the following example", "a minimal example" |
-| "easy ways to fix them" | "common ways to resolve them"                |
-| "simplest"              | "the most direct" / "the least-invasive"     |
-
-This is a low-effort improvement that aligns with CNCF inclusive language
-guidance from the [Inclusive Naming Initiative](https://inclusivenaming.org).
-
-2. Track the "master" API reference URL path
-
-> Priority: Low
-
-All deep-links to the API reference use
-`/api-reference/master/definitions.html`. This is the upstream API reference
-site's URL structure, not a KubeVirt-owned naming choice — but it does embed a
-non-recommended term in user-visible URLs. Open an issue (or add a link-checker
-CI note) to flag when the upstream adopts a non-master stable URL, at which
-point all deep-links can be updated in a single pass.
 
 #### Additional Recommendations
 
@@ -1804,3 +1619,198 @@ the source is the doc. Fix immediately.
 **Recommendation:** These are the most visible credibility issues in the release
 notes. Retrieve the complete text from the corresponding GitHub PR or release
 tag and complete both entries.
+
+### Appendix B - Medium and low recommendations - AI
+
+#### Information Architecture
+
+##### Refactor large reference pages into focused task pages
+
+> Priority: Medium
+
+`disks_and_volumes.md` is the largest single page in the guide and attempts to
+cover conceptual explanation, reference tables, and task instructions in one
+document. Split it into:
+
+- `disks_and_volumes/concepts.md` — what volumes and disks are, how they relate
+  to PVCs
+- `disks_and_volumes/reference.md` — field catalog and type descriptions
+- `disks_and_volumes/tasks/` — individual how-tos (attach a DataVolume, hotplug
+  a disk, etc.)
+
+Similarly, `network_binding_plugins.md` and `hook-sidecar.md` describe
+architecture well but provide no end-to-end worked examples. Add at minimum one
+complete task per page that a reader can follow from start to finish.
+
+##### Add a "Coming from VMware" onboarding path
+
+> Priority: Medium (High if targeting the 2024–2026 VMware migration window)
+
+Organizations migrating from VMware bring traditional virtualization
+expectations and limited Kubernetes fluency. There is no documentation bridge.
+Create a short guide that maps:
+
+| VMware concept    | KubeVirt equivalent                     | Notes/gaps |
+| ----------------- | --------------------------------------- | ---------- |
+| vCenter / vSphere | Kubernetes API server + KubeVirt        |            |
+| VM template       | VirtualMachineInstancetype + Preference |            |
+| vMotion           | Live migration                          |            |
+| Datastore         | PVC / DataVolume (CDI)                  |            |
+| vDS / portgroup   | Multus / secondary networks             |            |
+| Snapshots         | VM snapshot API                         |            |
+
+Be honest about gaps (DRS-style scheduling, mature backup tooling, deep Windows
+integration) — building trust with evaluators is more valuable than obscuring
+shortcomings they will discover in production.
+
+##### Create an end-to-end instancetype/preference tutorial
+
+> Priority: Medium
+
+`instancetypes.md` and `creating_it_pref.md` describe the instancetype model but
+do not walk through a complete "VM from scratch using instancetype and
+preference" scenario. Add a single tutorial page that goes from defining an
+instancetype and preference through creating a VM and verifying resource
+allocation. This scenario represents the KubeVirt-recommended path for VM
+resource management and deserves a dedicated page.
+
+#### New User Content
+
+##### Expand the Basic Use page into a meaningful getting-started flow
+
+> Priority: Medium (A04-B02-T01 in kubevirt-analysis.csv)
+
+`user_workloads/basic_use.md` is currently a thin page that covers VM start/stop
+commands but does not walk through a meaningful first-use scenario. It is the
+logical destination after Installation but does not build on it. Expand to
+include:
+
+- The VM/VMI distinction (A04-B01-T01 — many readers do not understand that a
+  `VirtualMachine` manages lifecycle while a `VirtualMachineInstance` is the
+  running unit)
+- Start, stop, restart, and migrate commands in a single reference table
+  (A04-B01-T03)
+- How to verify the VM is running (status fields, events)
+- A "What to read next" pointer to Networking and Storage pages
+
+This is distinct from the "Getting Started" self-contained quickstart (§1 above)
+— the Basic Use page is the permanent reference for the most common operations,
+while the quickstart is the narrative onboarding experience.
+
+##### Add a common prerequisites section to Quickstarts
+
+> Priority: Medium (A02-T04 in kubevirt-analysis.csv)
+
+The Quickstarts page links to four separate external environments but does not
+list shared prerequisites. A reader needs kubectl, virtctl, and cluster access
+for all of them. Add a brief prerequisites block at the top of `quickstarts.md`:
+
+- `kubectl` configured against a cluster
+- `virtctl` plugin installed (link to virtctl_client_tool.md)
+- Minimum cluster resources (RAM, CPUs)
+- KubeVirt operator installed (link to installation.md)
+
+Also ensure the `virtctl_client_tool.md` page covers macOS and Windows install
+instructions (A04-B05-T01, currently high-priority missing content) so the
+prerequisites link is useful for all readers.
+
+##### Add "What to read next" sections
+
+> Priority: Medium
+
+The Quickstarts page and the Installation page both end without directing users
+to their next logical step. Add a brief "Next steps" section to each:
+
+- After Quickstarts: point to User Workloads → Basic Use, and Storage → CDI
+- After Installation: point to Quickstarts, then Feature Gates and Authorization
+
+##### Add an audience orientation statement to the homepage
+
+> Priority: Medium
+
+From the high-level review (kubevirt-reviews.md): the guide currently tries to
+serve Kubernetes-native engineers and traditional VM operators simultaneously
+without acknowledging either. Add a brief orientation paragraph near the top of
+`index.md` that identifies who the guide is for and what prerequisite knowledge
+is assumed (Kubernetes familiarity, cluster access). This sets expectations
+correctly and reduces early drop-off from users who feel lost.
+
+#### Content creation process
+
+##### Curate an active good-first-issue backlog
+
+> Priority: Medium (from contributor docs review)
+
+The `good-first-issue` label infrastructure exists but the user-guide repo has
+no open good-first issues at the time of review. New contributors who follow the
+contributing guide reach a dead end. Maintain a rolling set of 3–5 small,
+well-scoped documentation tasks:
+
+- Missing feature documentation stubs
+- Broken or stale links
+- Pages needing a "What to read next" section
+- Prose uses of "simple"/"easy" that can be replaced
+
+Activate the `help-wanted` label and use it consistently as a triage step for
+incoming issues.
+
+##### Consolidate new contributor onboarding
+
+> Priority: Medium (from contributor docs review)
+
+New contributor guidance is spread across at least four locations:
+`kubevirt/kubevirt` CONTRIBUTING.md, `docs/getting-started.md`, the user-guide
+Contributing page, and the community repo. Create a single "New Contributor
+Guide" landing page that aggregates the full end-to-end path, and add a "Quick
+Start (docs only)" path at the top for contributors who only want to fix
+documentation — the current guide leads immediately into
+Bazel/Docker/nested-virtualization setup that is unnecessary for documentation
+contributions.
+
+##### Establish a release notes template
+
+> Priority: Medium (A08-T01 in kubevirt-analysis.csv)
+
+The `release_notes.md` file has inconsistent formatting across releases, two
+incomplete entries (a truncated note, a placeholder — see Technical Debt §7),
+and no documented template for contributors. Create a release notes template
+(either a comment block at the top of `release_notes.md` or a separate
+`docs/release-notes-template.md`) that specifies:
+
+- Required sections per release (breaking changes, new features, deprecations,
+  bug fixes, known issues)
+- How to link to the corresponding GitHub milestone
+- The Kubernetes support matrix line format (several releases are missing this)
+- Who is responsible for completing the notes before release tag
+
+This pairs with the release-docs checklist recommendation (#1 above).
+
+#### Inclusive Language
+
+##### Replace prose uses of "simple" and "easy"
+
+> Priority: Low
+
+Approximately 45 occurrences of "simple" or "easy" exist across 42 files. Most
+are in code example resource names (acceptable) but some are in prose that can
+be improved:
+
+| Current                 | Suggested replacement                        |
+| ----------------------- | -------------------------------------------- |
+| "a simple example"      | "the following example", "a minimal example" |
+| "easy ways to fix them" | "common ways to resolve them"                |
+| "simplest"              | "the most direct" / "the least-invasive"     |
+
+This is a low-effort improvement that aligns with CNCF inclusive language
+guidance from the [Inclusive Naming Initiative](https://inclusivenaming.org).
+
+##### Track the "master" API reference URL path
+
+> Priority: Low
+
+All deep-links to the API reference use
+`/api-reference/master/definitions.html`. This is the upstream API reference
+site's URL structure, not a KubeVirt-owned naming choice — but it does embed a
+non-recommended term in user-visible URLs. Open an issue (or add a link-checker
+CI note) to flag when the upstream adopts a non-master stable URL, at which
+point all deep-links can be updated in a single pass.
