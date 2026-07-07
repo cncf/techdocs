@@ -223,4 +223,3 @@ Create issues in the project documentation GitHub repository for:
 [project maturity level]: https://www.cncf.io/project-metrics
 [templates]: ./templates/index.md
 [issues list]: ./templates/issues-list.md
-
