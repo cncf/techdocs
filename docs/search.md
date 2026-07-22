@@ -35,8 +35,8 @@ website.
 ## Pagefind
 
 [Pagefind](https://pagefind.app/) is an open source search tool for static
-sites. It indexes your built site during your build process and serves search
-results directly from static assets.
+sites. It indexes your built site as a post-build step and serves search results
+directly from static assets.
 
 ### Pros
 
