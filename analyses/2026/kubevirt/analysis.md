@@ -333,7 +333,7 @@ with its "Monitoring" and "Workloads" clusters—would make each section easier 
 scan and would bring the guide closer to the clear concept/task/reference
 separation modeled by the Prometheus documentation.
 
-Two secondary issues also affect wayfinding. First, most pages are named as
+Two secondary issues also affect navigation. First, most pages are named as
 nouns or feature names ("hugepages", "live_migration", "host-devices") rather
 than as goal-oriented verb phrases, which makes it harder for users to locate
 content by the task they are trying to accomplish. Second, the new-user path is
@@ -493,7 +493,7 @@ and enforces ordering explicitly through per-directory `.nav.yml` files rather
 than relying on alphabetical sorting. Search is enabled out of the box via the
 `search` plugin, and the contribution workflow is well documented: the README
 describes forking, signing commits, and local validation through `make` targets
-that check spelling (yaspeller) and links (HTMLProofer). Page moves are handled
+that check spelling and links (HTMLProofer). Page moves are handled
 gracefully through an extensive `redirects` map in `mkdocs.yml`, which preserves
 old URLs and reduces link rot. These are strong maintainability practices.
 
@@ -535,7 +535,7 @@ We evaluate on the following:
   links to community resources such as the Code of Conduct, membership policy,
   and governance. The repository README complements this with the local
   authoring workflow: where content lives (`./docs`), how to sign commits, and
-  how to validate changes with `make` targets for spelling (yaspeller) and link
+  how to validate changes with `make` targets for spelling and link
   checking (HTMLProofer) before opening a PR.
 
 - Does the code release process account for documentation creation & updates?
@@ -575,7 +575,7 @@ target for first-time contributors, and links to essential community documents
 such as the Code of Conduct, membership policy, and governance. The README
 reinforces this with practical authoring guidance: where content lives, how to
 sign commits, and how to validate changes locally with `make` targets that run
-spelling (yaspeller) and link (HTMLProofer) checks. Together these give new and
+spelling and link (HTMLProofer) checks. Together these give new and
 returning contributors a well-signposted, repeatable path to landing changes.
 
 Ownership and review are handled robustly through Kubernetes-style OWNERS files
@@ -664,7 +664,7 @@ preserve legitimate proper nouns and identifiers, such as the passt project's
 resource names like `simple-vm`.
 
 To make this sustainable, the project could add the flagged minimizing terms to
-its existing yaspeller-based checks or adopt a dedicated inclusive-language
+its existing spelling check checks or adopt a dedicated inclusive-language
 linter in CI. Automating detection would keep new contributions consistent and
 reduce the manual review burden, building on the strong naming foundation the
 guide already demonstrates.
@@ -1089,13 +1089,13 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
+<!-- [criteria]: ../criteria.md
 [implementation]: ./implementation.md
 [issues list]: ./issues-list.md
 [project-website]: ?fixme-target-dne=_PROJECT-WEBSITE_
 [Rating (1-5)]: #rating-values
 [rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[website guidelines]: ../../website-guidelines-checklist.md -->
 
 ## Appendices
 
