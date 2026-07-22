@@ -493,9 +493,9 @@ and enforces ordering explicitly through per-directory `.nav.yml` files rather
 than relying on alphabetical sorting. Search is enabled out of the box via the
 `search` plugin, and the contribution workflow is well documented: the README
 describes forking, signing commits, and local validation through `make` targets
-that check spelling and links (HTMLProofer). Page moves are handled
-gracefully through an extensive `redirects` map in `mkdocs.yml`, which preserves
-old URLs and reduces link rot. These are strong maintainability practices.
+that check spelling and links (HTMLProofer). Page moves are handled gracefully
+through an extensive `redirects` map in `mkdocs.yml`, which preserves old URLs
+and reduces link rot. These are strong maintainability practices.
 
 The most significant gap is content versioning. The site publishes a single
 "latest" build from the `main` branch, with no versioning tooling such as `mike`
@@ -535,8 +535,8 @@ We evaluate on the following:
   links to community resources such as the Code of Conduct, membership policy,
   and governance. The repository README complements this with the local
   authoring workflow: where content lives (`./docs`), how to sign commits, and
-  how to validate changes with `make` targets for spelling and link
-  checking (HTMLProofer) before opening a PR.
+  how to validate changes with `make` targets for spelling and link checking
+  (HTMLProofer) before opening a PR.
 
 - Does the code release process account for documentation creation & updates?
 
@@ -575,8 +575,8 @@ target for first-time contributors, and links to essential community documents
 such as the Code of Conduct, membership policy, and governance. The README
 reinforces this with practical authoring guidance: where content lives, how to
 sign commits, and how to validate changes locally with `make` targets that run
-spelling and link (HTMLProofer) checks. Together these give new and
-returning contributors a well-signposted, repeatable path to landing changes.
+spelling and link (HTMLProofer) checks. Together these give new and returning
+contributors a well-signposted, repeatable path to landing changes.
 
 Ownership and review are handled robustly through Kubernetes-style OWNERS files
 enforced by Prow. The root `OWNERS` and `OWNERS_ALIASES` define active reviewers
@@ -775,7 +775,7 @@ KubeVirt user guide.
   cadence.
 - Preserve and continue to signpost the existing strengths—the clear
   `docs/contributing.md` GitHub workflow, the README's local authoring and
-  validation guidance (yaspeller and HTMLProofer `make` targets), and the
+  validation guidance (spell check and HTMLProofer `make` targets), and the
   per-section `OWNERS` delegation to KubeVirt SIGs.
 - Keep the automatic `kind/documentation` labeling and per-section `OWNERS`
   files current as new topic areas are added under `docs/`, so review
@@ -793,9 +793,9 @@ user guide.
 - Preserve legitimate proper nouns and identifiers when revising, such as the
   passt project's "Plug A Simple Socket Transport", the "PCI Simple" Windows
   device, and example resource names like `simple-vm` and `simple-dv`.
-- Add the flagged minimizing terms to the existing yaspeller-based checks, or
-  adopt a dedicated inclusive-language linter or Vale style rule in CI, to
-  automate detection and keep new contributions consistent.
+- Add the flagged minimizing terms to the existing spell check checks, or adopt
+  a dedicated inclusive-language linter or Vale style rule in CI, to automate
+  detection and keep new contributions consistent.
 - Leave the "master" occurrences unchanged, since they appear only in contexts
   the project does not own—external URLs and Git branch names, API reference
   version paths, a third-party CNI bonding field, a Kubernetes node-label
