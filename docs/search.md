@@ -90,7 +90,8 @@ experience on your website.
 ### Cons
 
 - Search index is managed and hosted on Algolia servers
-- Free plans are limited, and larger indexes may require a paid plan
+- To use the free DocSearch program, you must apply and be approved
+- The free DocSearch program requires displaying the "Search by Algolia" logo
 - Less control over indexing and search behavior than self-hosted options
 
 ## When Is It Best To Use One Over Another?
