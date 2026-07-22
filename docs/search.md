@@ -97,8 +97,8 @@ experience on your website.
 ## When Is It Best To Use One Over Another?
 
 If you are looking to create a search capability for your open source project
-without having to depend on a third-party service, then you should consider using
-[Pagefind](https://pagefind.app/) first. If you need a more custom
+without having to depend on a third-party service, then you should consider
+using [Pagefind](https://pagefind.app/) first. If you need a more custom
 implementation that runs entirely in the browser, you can also consider
 [Lunr](https://lunrjs.com/). You can take a look at
 [this custom implementation](https://github.com/vitessio/website/pull/1119) or
