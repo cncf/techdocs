@@ -118,18 +118,69 @@ KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
-| Criterion                                | Rating (1-5) |
-| ---------------------------------------- | ------------ |
-| Information architecture                 | 4            |
-| New user content                         | 3            |
-| Content maintainability & site mechanics | 2            |
-| Content creation processes               | 3            |
-| Inclusive language                       | 3            |
+| Criterion                  | Rating (1-5)                   |
+| -------------------------- | ------------------------------ |
+| Information architecture   | 4 - Meets or exceeds standards |
+| New user content           | 3 - Meets standards            |
+| Content maintainability    | 3 - Meets standards            |
+| Content creation processes | 4 - Meets or exceeds standards |
+| Inclusive language         | 3 - Meets standards            |
 
 ### Comments
 
 The following sections contain assessments of each element of the Project
 Documentation rubric.
+
+#### Overall (AI)
+
+The KubeVirt user guide's project documentation is in good shape, rating between
+"meets standards" and "meets or exceeds standards" across the five criteria. Its
+structural foundations are strong: content is organized into clear
+domains—cluster administration, user workloads, compute, network, and
+storage—with explicit navigation ordering, and it layers conceptual, task, and
+reference material effectively. The site is built on a maintainable MkDocs and
+`mkdocs-material` stack with all content in Markdown, working search, and a
+redirects map that prevents link rot. Contribution is well signposted through
+`docs/contributing.md` and Kubernetes-style OWNERS files enforced by Prow, and
+the guide is already clean on inclusive naming, with no non-recommended terms
+coined by the project. No reorganization is required; the recommended
+improvements are additive.
+
+The most significant cross-cutting gap is that documentation is decoupled from
+KubeVirt's release cadence. The site publishes a single "latest" build from
+`main` with no versioning tooling (such as `mike`) or version selector, so
+readers running an older release cannot find documentation that matches their
+deployment. This is compounded on the process side, where nothing requires
+user-facing feature changes in `kubevirt/kubevirt` to ship with corresponding
+user-guide updates, which risks content drift over time. Adopting MkDocs
+versioning and establishing an expectation—such as a release checklist item or a
+cross-repository issue link—that features land together with their documentation
+would be the highest-impact investment for this section. Kubernetes is a good
+model of versioned CNCF documentation.
+
+A second theme is that users lack clear guided paths into and through the
+content. New-user material is fragmented across differently named locations—a
+top-level "Quickstarts" entry, an "Installation" page buried under "Cluster
+Administration," and "Try it out" and "KubeVirt Labs" sections on the
+homepage—none of which is labeled "Getting Started," and the guide leans on
+external labs rather than a self-contained, first-VM walkthrough. Similarly,
+when a task page falls short, help is scattered across individual feature pages
+with no consolidated troubleshooting or FAQ entry point. Consolidating a single
+"Getting Started" section, adding an in-guide end-to-end tutorial with an
+explicit "Next steps" pointer from installation to first use, and creating a
+symptom-based troubleshooting hub would give users a predictable path from setup
+through to problem resolution.
+
+Finally, the guide would benefit from light language and consistency polish
+backed by automation. Although naming is inclusive, minimizing words such as
+"simple" and "easy" appear roughly 80 times and can discourage readers who find
+a task harder than described; replacing them with concrete, factual descriptions
+would improve tone without losing information. Normalizing the minority of
+noun-based task headings into goal-oriented verb phrases would further improve
+scanning and consistency. Extending the existing spell checks—or adding a
+dedicated inclusive-language linter or a Vale style rule in CI—would keep both
+language and future contributions consistent, building on the solid foundation
+this section already demonstrates.
 
 #### Overall (Author)
 
@@ -861,25 +912,63 @@ KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
-| Criterion                                 | [Rating (1-5)] |
-| ----------------------------------------- | -------------- |
-| Communication methods documented          | [rating (1-5)] |
-| Beginner friendly issue backlog           | [rating (1-5)] |
-| “New contributor” getting started content | [rating (1-5)] |
-| Project governance documentation          | [rating (1-5)] |
+| Criterion                                 | Rating (1-5)                   |
+| ----------------------------------------- | ------------------------------ |
+| Communication methods documented          | 3 - Meets standards            |
+| Beginner friendly issue backlog           | 3 - Meets standards            |
+| "New contributor" getting started content | 4 - Meets or exceeds standards |
+| Project governance documentation          | 4 - Meets or exceeds standards |
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Contributor Documentation
-> here.
+KubeVirt's contributor documentation is in good overall shape, rating between
+"meets standards" and "meets or exceeds standards" across the four criteria. Its
+strongest assets are a well-organized onboarding path and mature governance: the
+user guide's Contributing page acts as a single, canonical entry point covering
+prerequisites, a clear "Your first contribution" section, and separate tracks
+for documentation and code, while the `kubevirt/community` repository provides
+comprehensive, CNCF-aligned governance through `GOVERNANCE.md`, a maintained
+`MAINTAINERS.md`, and a well-defined contributor ladder. The essential
+communication channels—Slack, the kubevirt-dev mailing list, and the issue
+tracker—are documented and correctly linked. No structural overhaul is needed;
+the recommended improvements are additive.
+
+The highest-impact gap is that the beginner-friendly issue backlog is
+effectively empty, and this weakness undermines the otherwise excellent
+onboarding content. Both the beginner-backlog and new-contributor analyses found
+that the Contributing page tells newcomers to look for `good-first-issue` items,
+yet at review time there were no open beginner issues in either the user-guide
+or core repository, so a motivated first-timer who follows the documentation
+reaches a dead end. This is compounded by a fixable labeling inconsistency—the
+team applies the hyphenated `good-first-issue` label while GitHub's native
+"Contribute" experience and discovery tooling key off the standard spaced
+`good first issue`, hiding the project's real beginner issues. Curating a small
+pool of triaged beginner issues and consolidating on the standard label would
+let the strong onboarding path deliver on its promise.
+
+A second cross-cutting theme is discoverability from within the user guide
+itself. Governance is reachable only through a single "Important community
+resources" list on the Contributing page, with no dedicated community or
+governance entry in the site navigation; project meetings are absent from the
+guide entirely and documented only on the external community page; and the
+"Getting help" section is a thin, inconsistent list that omits the community
+page and the `#kubevirt-dev` Slack channel that appear elsewhere. Because so
+much contributor-facing information lives outside the guide or is scattered
+within it, a reader who stays on the documentation site can miss where to ask
+questions, when meetings happen, or how the project is governed.
+
+Addressing these two themes together would move the section from good to strong.
+Consolidating the communication channels, meeting cadence and calendar, and
+governance pointers into a single, clearly labeled community landing area—each
+channel given a one-line description of its purpose—would resolve the
+discoverability gaps across three of the four areas at once. Pairing that with a
+light triage pass that keeps a curated set of beginner issues open would close
+the backlog gap. The underlying content is comprehensive and current; the
+remaining work is largely about surfacing and maintaining it where contributors
+are already reading.
 
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
-
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the contributor documentation might
-> be contained in the documentation repository. (Criteria are copied from
-> criteria.md)
 
 #### Communication methods documented
 
@@ -1319,21 +1408,24 @@ Rating: 4 - Meets or exceeds standards
 
 ## Website and infrastructure
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
-
 KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
+
+| Criterion                             | Rating (1-5)                   |
+| ------------------------------------- | ------------------------------ |
+| Usability, accessibility, and design  | 4 - Meets or exceeds standards |
+| Branding and design                   | 4 - Meets or exceeds standards |
+| Case studies/social proof             | 3 - Meets standards            |
+| SEO, Analytics, and site-local search | 2 - Needs improvement          |
+| Maintenance planning                  | 4 - Meets or exceeds standards |
+
+Other metrics TBD:
 
 | Criterion                                   | [Rating (1-5)] |
 | ------------------------------------------- | -------------- |
 | Single-source for all files                 | [rating (1-5)] |
 | Meets min website req. (for maturity level) | [rating (1-5)] |
-| Usability, accessibility, and design        | [rating (1-5)] |
-| Branding and design                         | [rating (1-5)] |
-| Case studies/social proof                   | [rating (1-5)] |
-| SEO, Analytics, and site-local search       | [rating (1-5)] |
-| Maintenance planning                        | [rating (1-5)] |
 | A11y plan & implementation                  | [rating (1-5)] |
 | Mobile-first plan & impl.                   | [rating (1-5)] |
 | HTTPS access & HTTP redirect                | [rating (1-5)] |
@@ -1344,18 +1436,61 @@ code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Website and documentation
-> infrastructure here.
+KubeVirt's website and infrastructure are on a strong footing overall, rating
+"meets or exceeds standards" in three of the five criteria. The Material for
+MkDocs foundation delivers a responsive, mobile-friendly site with clean
+typography, semantic landmarks, descriptive ARIA labels, a "Skip to content"
+link, and complete image alt text, so usability and accessibility are strong at
+the structural level. The brand is clear and consistently applied, with the teal
+palette and logo defined at the theme level rather than per author. Maintenance
+is dependable and not dependent on a single person: the repository uses the
+Kubernetes-style OWNERS model, draws on roughly 49 distinct authors over the
+last year, builds quickly through Netlify previews and Prow CI, and serves
+securely over HTTPS. The recommended improvements are mostly targeted fixes
+rather than structural changes.
+
+The highest-impact gap—and the section's lowest rating—is the complete absence
+of analytics. Neither the user guide nor the main site includes any analytics
+tags, so there is no visibility into traffic, popular pages, search terms, or
+broken inbound links, and 404 reports cannot be generated to guide maintenance.
+This absence is consistent with the project's privacy posture, which is a
+legitimate trade-off, but if the project wants data to drive documentation
+improvements, adopting a privacy-respecting option (GA4 or an alternative),
+enabling it only on the production deploy, and documenting the account
+custodians would close an important blind spot. Two smaller SEO fixes accompany
+it: make the preview `noindex` behavior an explicit project setting rather than
+relying on the Netlify default, and correct the double slash in the `robots.txt`
+sitemap URL.
+
+A cross-cutting accessibility theme surfaces in both the usability and branding
+analyses: color contrast on the brand teal. The primary teal (`#0db2b6` in
+`docs/stylesheets/extra.css`) yields only about 2.6:1 against white header
+text—below the WCAG AA thresholds of 4.5:1 for normal text and 3:1 for large
+text—and body links darkened with `filter: brightness(80%)` reach only about
+3.96:1. Because this styling is defined once at the theme level, darkening the
+primary teal (or the text on it) and re-checking links in both the light and
+dark schemes is a small, high-value change that affects color-impaired and
+low-vision readers most. Adding an automated contrast and accessibility check to
+the build would keep the fix from regressing.
+
+Two further themes concern connecting the guide to the wider project and
+hardening the stack. The strong adoption and community content—an active blog,
+curated talk playlists, and an extensive adopter logo wall—lives on
+`kubevirt.io` and is not linked from the user guide at all, so readers have no
+easy path to this social proof; the guide would also benefit from a few
+narrative case studies or testimonials that explain how and why organizations
+use KubeVirt. This mirrors a broader cross-property gap, since the MkDocs guide
+and the separate main site share a logo and color family but not an identical
+look and feel. Documenting a small set of shared brand values and adding
+targeted links (for example, a "Community" or "Adopters" entry) would align the
+two properties and surface existing content. On the infrastructure side, the
+build installs MkDocs and its plugins without pinned versions in `netlify.toml`
+and the `Makefile`, which risks non-reproducible builds; pinning versions and
+periodically reviewing the overhead of maintaining two separate stacks would
+sustain the section's already solid maintenance posture.
 
 The following sections contain brief assessments of each element of the Website
 and documentation infrastructure rubric.
-
-> AUTHOR NOTE: for each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the website infrastructure criteria
-> depend on the tools (static site generator, website framework and hosting,
-> analytics tools, etc.) and processes (project CI, release procedures,
-> governance, etc.) used to produce the documentation. (Criteria are copied from
-> criteria.md)
 
 #### Single-source requirement
 
@@ -1571,8 +1706,18 @@ organizations using it.
 
 We evaluate on the following:
 
-fic organizations adopted and benefited from KubeVirt. The user guide itself
-contains only technical documentation and does not link to any case studies.
+- Are there case studies available for the project and are they documented on
+  the website?
+
+  There are case studies available for KubeVirt, but they are not documented on
+  the project website. The kubevirt.io navigation includes Blogs, Videos,
+  Gallery, Docs, Labs, and Community, but it has no dedicated case studies
+  section.
+
+  Case studies live on external sites instead, such as the CNCF Swisscom case
+  study and third-party write-ups like Puzzle ITC's continuous integration
+  story. Because these are not linked from or hosted on kubevirt.io, a visitor
+  cannot find them from the project website.
 
 - Are there user testimonials available?
 
