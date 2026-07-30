@@ -168,12 +168,12 @@ Scale:
 
 ## Contributor documentation
 
-| Criteria                                  | 1   | 2   | 3   | 4   | 5   |
+| Criteria                                  | 1   | 2   | 3   | 4   | 5   |     |
 | ----------------------------------------- | --- | --- | --- | --- | --- | --- |
 | Communication methods documented          |     |     |     |     | ✅  | NW  |
-| Beginner friendly issue backlog           |     |     |     |     | ✅  |
-| “New contributor” getting started content |     |     |     | ✅  |     |
-| Project governance documentation          |     |     |     |     | ✅  |
+| Beginner friendly issue backlog           |     |     |     |     | ✅  |     |
+| “New contributor” getting started content |     |     |     | ✅  |     |     |
+| Project governance documentation          |     |     |     |     | ✅  |     |
 
 Scale:
 
