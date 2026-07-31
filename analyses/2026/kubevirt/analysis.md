@@ -131,7 +131,7 @@ code.
 The following sections contain assessments of each element of the Project
 Documentation rubric.
 
-#### Overall (AI)
+#### Overall
 
 The KubeVirt user guide's project documentation is in good shape, rating between
 "meets standards" and "meets or exceeds standards" across the five criteria. Its
@@ -767,7 +767,7 @@ Rating: 3 - Meets standards
 
 ### Recommendations
 
-#### Overall - Author
+#### Overall (Author)
 
 The AI results capture my recommendations except for the following pressing
 needs I see as a novice user:
