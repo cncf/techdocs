@@ -50,7 +50,6 @@ directly from static assets.
 ### Cons
 
 - Requires a build step to generate and update the search index
-- Search is limited to content available in the built site
 - UI customization may require some JavaScript and CSS work
 
 ## Lunr
