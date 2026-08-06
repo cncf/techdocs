@@ -41,7 +41,7 @@ directly from static assets.
 ### Pros
 
 - No hosted service or third-party search provider required
-- Works well with static site generators
+- Works with any static site generator (it indexes the built HTML)
 - Free and open source
 - Support for multi-language search
 - Fetches index data on demand, which helps it scale better than fully
