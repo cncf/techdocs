@@ -212,7 +212,10 @@ Each phase runs the same six steps:
    when phase B is skipped; section 6).
 2. Accept. A technical writer triages and explicitly accepts the request, for
    every phase, not just A; eligibility alone does not start work (P-1).
-3. Draft. The drafter produces the deliverable as a draft PR.
+3. Draft. The drafter produces the deliverable as a draft PR. When the phase's
+   drafter takes data-collection outputs as input (section 14), delegation
+   produces them first: they are generated deterministically at session start,
+   before any model runs, and committed with the draft as its evidence (HC-5).
 4. Review. The verifier's fact-check pass runs first. The reviewer then refines
    the draft in conversation with the drafter, verifies findings against source
    (HC-7), and marks it ready.
@@ -420,8 +423,9 @@ infrastructure we build and maintain ourselves.
 - Execution environment. The agent runs in an ephemeral [GitHub Actions-based
   environment][cloud-agent-env] with a hard session cap (currently 59 minutes).
   That cap shapes the design: deterministic data collection (section 13) runs as
-  committed scripts rather than inside drafting sessions, so the agent spends
-  its session on judgment, not inventory. The environment is prepared by
+  committed scripts in the session's setup steps, before the model starts, so
+  the agent spends its session on judgment, not inventory. The environment,
+  those steps included, is prepared by
   `.github/workflows/copilot-setup-steps.yml`.
 - Delegation is permission-gated. Only users with [write access to the
   repository][cloud-agent-access] can delegate work to the agent, which lets the
@@ -510,7 +514,10 @@ points at the methodology, it never restates it (P-2).
   `scripts/assessment/`. CI that fails a deliverable PR whose provenance block
   is missing or malformed (section 15).
 - Data collection: `scripts/assessment/`. The deterministic inventory scripts
-  behind HC-5 (section 15).
+  behind HC-5 (section 15). The drafting session's setup steps (section 11) run
+  them and leave the outputs in the workspace; the drafter commits them
+  unmodified with the draft. Unmodified is checkable, not assumed: re-running
+  the committed command reproduces the committed outputs or exposes the edit.
 - Labels: `.github/settings.yml`. An `assessment` label, per-phase labels, and
   the phase B skip marker (section 12), managed declaratively alongside the
   repository's existing label set.
@@ -568,7 +575,8 @@ Rules common to all profiles, in tension-order with Part I:
 The three drafting profiles:
 
 - Assessment drafter (Phase A). Input: the intake issue, the methodology at the
-  pinned SHA, and the data-collection outputs for the project. Output: a draft
+  pinned SHA, and the data-collection outputs for the project. Output: the
+  collection outputs committed unmodified (section 13), then a draft
   `analysis.md` in the project's deliverables directory, rating each criterion
   with cited evidence.
 - Plan drafter (Phase B). Input: the merged `analysis.md` plus the intake and
@@ -710,7 +718,8 @@ The build steps, in dependency order, each sized to one issue:
    agent session's logs show the prepared environment.
 5. Data-collection scripts (`scripts/assessment/`). Done when running the
    committed command against a sample project twice yields the same committed
-   outputs (HC-5).
+   outputs (HC-5), and a delegated session's draft PR contains the outputs its
+   setup steps produced.
 6. Provenance check (workflow plus `scripts/assessment/`). Done when a fixture
    PR with a malformed or unfilled block fails, a well-formed one passes, and
    the draft-versus-ready leniency behaves as section 15 specifies.
@@ -741,13 +750,13 @@ chosen, deliberately, per the caveat in section 10.
   verifier run is invoked against an existing PR (section 12); whether
   delegation reliably opens a draft pull request (section 11); whether assigning
   an issue to Copilot offers the choice of agent profile, or selection needs the
-  Agents panel (section 12); whether a full phase A draft fits the session cap
-  or the drafting needs decomposing (section 11); whether effort level can be
-  pinned in a profile or anywhere else, the one model-choice question the
-  documentation leaves open (section 14); and whether the cloud-agent
-  configuration read endpoint, in public preview as of this writing, returns the
-  fields the snapshot needs and what credential the snapshot script must hold to
-  call it (section 13).
+  Agents panel (section 12); whether a full phase A draft, with its setup-step
+  collection sharing the envelope, fits the session cap or the drafting needs
+  decomposing (section 11); whether effort level can be pinned in a profile or
+  anywhere else, the one model-choice question the documentation leaves open
+  (section 14); and whether the cloud-agent configuration read endpoint, in
+  public preview as of this writing, returns the fields the snapshot needs and
+  what credential the snapshot script must hold to call it (section 13).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one. It would be human-run with its own credential and the project's explicit
