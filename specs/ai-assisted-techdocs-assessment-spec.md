@@ -556,6 +556,17 @@ The verification profile:
   fine), so it does not share the drafter's failure mode (G-2). Its tool list is
   read-only; it edits nothing.
 
+Model and effort. Profiles state capability requirements, never model names:
+models change faster than this spec. Drafting warrants the most capable model
+and effort available to the repository; verification does not need the drafter's
+configuration, and running the verifier on a different model is preferable where
+the platform allows it, since two models are less likely to share one blind
+spot. The platform exposes model choice as a per-task picker at delegation time,
+so the writer applies this policy when delegating; whether a profile can pin its
+own model is a build-time check (section 17). Which models are available to
+cncf/techdocs is organization policy, handled with the CNCF GitHub organization
+administrators by the administrator/platform owner (section 4).
+
 ## 15. The provenance block
 
 The provenance block is where Part I's disclosure and evidence duties converge
@@ -667,8 +678,10 @@ chosen, deliberately, per the caveat in section 10.
   documentation, to be answered by observation during the build (section 16) and
   recorded: the agent token's effective permission scopes (section 11); the
   agent's branch naming; whether review-comment revisions require write access
-  (section 12); whether Actions runs on agent PRs wait for approval; and how a
-  verifier run is invoked against an existing PR (section 12).
+  (section 12); whether Actions runs on agent PRs wait for approval; how a
+  verifier run is invoked against an existing PR (section 12); and whether an
+  agent profile can pin a model and effort level, or model choice rides entirely
+  on the per-task picker (section 14).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one, and it must preserve HC-1.
