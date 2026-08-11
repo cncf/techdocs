@@ -649,6 +649,12 @@ chosen, deliberately, per the caveat in section 10.
 
 ## 17. Open questions and future work
 
+- Build-time checks. Platform behavior we could not verify from public
+  documentation, to be answered by observation during the build (section 16) and
+  recorded: the agent token's effective permission scopes (section 11); the
+  agent's branch naming; whether review-comment revisions require write access
+  (section 12); whether Actions runs on agent PRs wait for approval; and how a
+  verifier run is invoked against an existing PR (section 12).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one, and it must preserve HC-1.
@@ -659,8 +665,6 @@ chosen, deliberately, per the caveat in section 10.
   updated as this process changes.
 - AI-readiness criteria. Whether and how the criteria evolve for AI consumption
   (for example llms.txt), tracked in PR #357.
-- Pilot measurement. How we capture the G-1 time decomposition and cycle-time
-  data to test the 2-week hypothesis (section 10).
 - Assessment-quality rubric. Define the meta-rubric that scores an assessment's
   quality, distinct from `criteria.md` (which scores a project's docs), and
   validate it by scoring the Flatcar, Knative, and Helm baselines to set a
