@@ -599,7 +599,9 @@ methodology corpus and its templates are not modified (P-2, NG-4).
   one, and it must preserve HC-1.
 - Intake relationship. How the request template fits with the existing CNCF
   service desk and assistance-program intake (section 7), without a competing
-  front door.
+  front door. Related: the contribute.cncf.io site needs a page for projects on
+  requesting an assessment and what to expect, including the AI disclosure,
+  updated as this process changes.
 - AI-readiness criteria. Whether and how the criteria evolve for AI consumption
   (for example llms.txt), tracked in PR #357.
 - Pilot measurement. How we capture the G-1 time decomposition and cycle-time
