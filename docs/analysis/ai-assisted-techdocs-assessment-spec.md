@@ -5,11 +5,14 @@ title: AI-assisted TechDocs Assessment
 # AI-assisted TechDocs Assessment
 
 **What this is.** A working specification for an AI-assisted, human-supervised
-CNCF TechDocs assessment workflow. It is requirements-first: it defines the
-outcomes the system must produce and the boundaries it must never cross, then
-lets tooling follow.
+CNCF TechDocs assessment workflow, in two parts. Part I is requirements: the
+outcomes the system must produce and the boundaries it must never cross. Part II
+is the operational specification: how those requirements bind to concrete
+tooling, and the plan for building the system.
 
 ---
+
+## Part I: Requirements
 
 ## 1. Background and problem
 
@@ -64,7 +67,7 @@ the labor. AI drafts, humans decide, all in the open.
   see HC-1 in section 3.)
 - NG-2: No auto-filing of issues. The backlog is delivered as files in
   cncf/techdocs. Filing them as real issues in project repos is future work (a
-  separate, opt-in script; see section 11), explicitly out of scope now. The
+  separate, opt-in script; see section 17), explicitly out of scope now. The
   per-file backlog format proposed in section 6 is chosen partly to make that
   future script straightforward.
 - NG-3: Not a replacement for human judgment. No unattended, end-to-end
@@ -219,7 +222,7 @@ it by hand.
   `templates/issue.md`). This spec proposes splitting the individual issues into
   one file each while keeping a single umbrella/index document. Rationale: a
   directory of one-issue-per-file is the natural input for the future filing
-  script (NG-2, section 11), which can batch-create issues with `gh` instead of
+  script (NG-2, section 17), which can batch-create issues with `gh` instead of
   someone copy-pasting from a large combined file; it also keeps any single file
   readable. This is raised as a proposal for discussion; the methodology docs
   are not changed by this PR.
@@ -230,7 +233,7 @@ Every deliverable carries a header noting it was AI-drafted and human-reviewed
 Scope note: phase one produces plans (assessment, implementation, backlog), not
 documentation changes, and the backlog lands as files in cncf/techdocs rather
 than as issues where writers work (NG-2, HC-3). Until the optional filing tool
-exists (section 11), the reviewer and stakeholders route the backlog to writers
+exists (section 17), the reviewer and stakeholders route the backlog to writers
 by hand. The pilot therefore measures output, not documentation outcomes, a
 distinction we state so we don't mistake one for the other.
 
@@ -301,7 +304,7 @@ inform implementation.
 The system is acceptable when, on a pilot assessment:
 
 - Quality. The deliverable is scored against an assessment-quality rubric (its
-  definition is an open item; section 11). Verification is not a token sample:
+  definition is an open item; section 17). Verification is not a token sample:
   the reviewer checks every rating-bearing finding, or at minimum a set number
   per criterion, biased toward the highest-risk claims, and records in the
   deliverable which findings were verified (HC-7). Final sign-off is given by
@@ -322,7 +325,25 @@ Pilot caveat: one assessment is n=1 for a quality claim. Choose the pilot
 deliberately, neither a flattering easy project nor an impossibly hard one,
 state the choice, and broaden before drawing general conclusions.
 
-## 11. Open questions and future work
+---
+
+## Part II: Operational specification
+
+Part I defines what must be true and what must never happen. Part II binds those
+requirements to concrete tooling: named products, file paths, configuration, and
+the plan for building the system. The layers are deliberately separate (P-3).
+Requirements govern: if a binding here conflicts with Part I, Part I wins, and
+the tooling can be swapped without reopening the requirements.
+
+The binding targets the GitHub Copilot cloud agent (documented until recently as
+"Copilot coding agent"). Its behavior as stated here is taken from GitHub's
+public documentation as of August 2026; platform behavior we could not verify
+from public documentation is treated as a build-time check (section 17), not
+assumed. Part II covers, in order: the platform binding, lifecycle bindings,
+components and repository layout, agent definitions, the provenance block, and
+the build plan.
+
+## 17. Open questions and future work
 
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
