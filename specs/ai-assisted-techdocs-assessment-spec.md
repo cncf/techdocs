@@ -371,13 +371,17 @@ containment model satisfies HC-1 as shipped, rather than requiring credential
 infrastructure we build and maintain ourselves.
 
 - The write boundary (HC-1). The cloud agent can only make changes in the
-  repository where its task was started, on a single branch, through a single
-  pull request per task, using a token the platform issues for that run. The
-  built-in GitHub MCP server connects with read-only access to the current
-  repository by default. Together these provide the enforced write boundary Part
-  I requires; we mint and manage no credential of our own. The platform does not
-  publicly enumerate the agent token's exact permission scopes, so confirming
-  them empirically is a build-time check (section 17).
+  repository where its task was started, on a single branch, using a token the
+  platform issues for that run. It can open at most one pull request per task,
+  and a run can also end leaving changes on its branch with no pull request at
+  all, so "every change reaches main through a reviewed PR" is enforced by this
+  spec's lifecycle (HC-4, section 12), not by the platform alone. The built-in
+  GitHub MCP server connects with read-only access to the current repository by
+  default. Together these provide the enforced write boundary Part I requires;
+  we mint and manage no credential of our own. The platform does not publicly
+  enumerate the agent token's exact permission scopes, so confirming them
+  empirically is a build-time check (section 17), as is confirming that
+  delegation reliably opens a draft pull request.
 - Outbound network. The agent's internet access is governed by a [default-deny
   firewall][cloud-agent-firewall] with an allowlist. The default allowlist
   covers package registries and GitHub content domains, not the general web, so
@@ -387,14 +391,26 @@ infrastructure we build and maintain ourselves.
   them at acceptance, making each assessment's external reads an explicit,
   auditable, reversible contract. Requests the firewall blocks are disclosed
   automatically in the pull request, which feeds the safety audit in section 10.
-- MCP policy. The firewall does not apply to MCP servers, and MCP tools are the
-  one documented mechanism that can widen the agent's write reach, so [MCP
-  configuration][cloud-agent-mcp] is the control surface that matters most.
-  Policy: the GitHub MCP server stays at its read-only default; any additional
-  MCP server must be read-only with its tools explicitly allowlisted; no
-  write-capable MCP tool is permitted. MCP configuration lives in repository
+  The firewall's scope is the agent's own session: the environment-setup
+  workflow (see Execution environment below) runs outside it, so what setup
+  fetches is governed by review of that versioned workflow file, not by the
+  firewall.
+- MCP policy. The firewall does not apply to MCP servers, and MCP tools are one
+  of the two documented mechanisms that can widen the agent's write reach (a
+  secret is the other; see the next bullet), so [MCP
+  configuration][cloud-agent-mcp] is a control surface requiring explicit
+  policy. Policy: the GitHub MCP server stays at its read-only default; any
+  additional MCP server must be read-only with its tools explicitly allowlisted;
+  no write-capable MCP tool is permitted. MCP configuration lives in repository
   settings rather than in a versioned file, so the administrator/platform owner
   records the current configuration in the operational docs whenever it changes.
+- Secrets policy. Repository or organization secrets can be made available to
+  the agent's environment during setup and execution. A secret carrying a
+  credential (a personal access token, for example) would hand the agent write
+  reach past HC-1's boundary. Policy: the agent's environment gets no secrets
+  beyond what the platform itself requires; any exception is a recorded
+  administrator/platform owner decision, like MCP changes, and a write-capable
+  credential is never acceptable.
 - Execution environment. The agent runs in an ephemeral [GitHub Actions-based
   environment][cloud-agent-env] with a hard session cap (currently 59 minutes).
   That cap shapes the design: deterministic data collection (section 13) runs as
@@ -679,7 +695,8 @@ chosen, deliberately, per the caveat in section 10.
   recorded: the agent token's effective permission scopes (section 11); the
   agent's branch naming; whether review-comment revisions require write access
   (section 12); whether Actions runs on agent PRs wait for approval; how a
-  verifier run is invoked against an existing PR (section 12); and whether an
+  verifier run is invoked against an existing PR (section 12); whether
+  delegation reliably opens a draft pull request (section 11); and whether an
   agent profile can pin a model and effort level, or model choice rides entirely
   on the per-task picker (section 14).
 - Filing issues into project repos. A separate, opt-in tool to create the
