@@ -166,11 +166,11 @@ them; they may not replace them.
 - Verifier. An agent that runs an adversarial fact-check pass over each draft
   before human review: resolving citations, checking claims against the sources
   they cite, and flagging anything unsupported. It is prompted to find
-  unsupported claims, not to confirm the draft, so it does not inherit the
-  drafter's blind spots. Its report feeds the reviewer's verification (HC-7); it
-  never substitutes for it. The layering exists because a fabrication that
-  reaches a project's maintainers wastes their time and costs the system its
-  credibility.
+  unsupported claims, not to confirm the draft, making it less likely to inherit
+  the drafter's blind spots. Its report feeds the reviewer's verification
+  (HC-7); it never substitutes for it. The layering exists because a fabrication
+  that reaches a project's maintainers wastes their time and costs the system
+  its credibility.
 - Reviewer. Accepts a request to begin work, then reviews and refines each draft
   in conversation, verifies findings against source (HC-7), and marks it ready.
   Owns the draft's quality, but does not give its final sign-off; that is
@@ -328,12 +328,13 @@ The system is acceptable when, on a pilot assessment:
 
 - Quality. The deliverable is scored against an assessment-quality rubric (its
   definition is an open item; section 17). Verification is not a token sample:
-  the reviewer checks every rating-bearing finding, or at minimum a set number
-  per criterion, biased toward the highest-risk claims, and records in the
-  deliverable which findings were verified (HC-7). Final sign-off is given by
-  the approver (section 4), who was neither the drafter nor a reviewer of that
-  phase, to avoid signing off on one's own work. The bar is parity with the
-  human baselines (Flatcar, Knative, Helm).
+  for the pilot, the reviewer checks every rating-bearing finding, biased first
+  toward the highest-risk claims, and records in the deliverable which findings
+  were verified (HC-7); any cheaper sampling rule is future work, set with the
+  rubric (section 17). Final sign-off is given by the approver (section 4), who
+  was neither the drafter nor a reviewer of that phase, to avoid signing off on
+  one's own work. The bar is parity with the human baselines (Flatcar, Knative,
+  Helm).
 - Safety. Zero writes outside cncf/techdocs, audited from the platform's
   activity records, and no unmitigated prompt-injection incident.
 - Completeness and reproducibility. Every phase's deliverable produced (all
@@ -402,8 +403,9 @@ infrastructure we build and maintain ourselves.
   policy. Policy: the GitHub MCP server stays at its read-only default; any
   additional MCP server must be read-only with its tools explicitly allowlisted;
   no write-capable MCP tool is permitted. MCP configuration lives in repository
-  settings rather than in a versioned file, so the administrator/platform owner
-  records the current configuration in the operational docs whenever it changes.
+  settings rather than in a versioned file, so its effective state is captured
+  by the agent-configuration snapshot (section 13), and settings changes appear
+  in the organization audit log.
 - Secrets policy. Repository or organization secrets can be made available to
   the agent's environment during setup and execution. A secret carrying a
   credential (a personal access token, for example) would hand the agent write
@@ -508,6 +510,14 @@ points at the methodology, it never restates it (P-2).
 - Labels: `.github/settings.yml`. An `assessment` label, per-phase labels, and
   the phase B skip marker (section 12), managed declaratively alongside the
   repository's existing label set.
+- Agent-configuration snapshot: `scripts/assessment/`. The agent's effective
+  configuration (MCP servers, firewall state, and custom allowlist) is readable
+  from a documented endpoint, so a deterministic script captures it alongside
+  each assessment's data outputs (HC-5): what the agent could reach when a draft
+  was produced is committed evidence. The organization audit log remains the
+  authoritative history of who changed a setting and when. The endpoint does not
+  expose organization-level allowlist entries; the administrator/platform owner
+  records those by hand when they exist.
 - Deliverables: `analyses/<year>/<project>/`. The existing convention:
   `analysis.md`, `implementation.md`, and the backlog.
 - Backlog files: `analyses/<year>/<project>/issues/`. One file per proposed
@@ -570,10 +580,13 @@ The verification profile:
 
 - Verifier (every phase). Input: the draft PR's deliverable and the sources it
   cites. Output: a report on the PR listing each checked claim as supported,
-  unsupported, or unverifiable, with the failing ones quoted. Its prompt is
-  adversarial (find unsupported claims), not confirmatory (check the draft is
-  fine), so it does not share the drafter's failure mode (G-2). Its tool list is
-  read-only; it edits nothing.
+  unsupported, or unverifiable, with the failing ones quoted. The report is
+  delivered whole: a finding tucked behind an all-clear summary line is G-2's
+  fluent-but-wrong failure mode reappearing in review clothing, and the reviewer
+  reads the list, not the headline. Its prompt is adversarial (find unsupported
+  claims), not confirmatory (check the draft is fine), making it less likely to
+  share the drafter's failure mode (G-2). Its tool list is read-only; it edits
+  nothing.
 
 Model and effort. Profiles state capability requirements, never model names:
 models change faster than this spec. Drafting warrants the most capable model
@@ -707,12 +720,19 @@ chosen, deliberately, per the caveat in section 10.
   agent's branch naming; whether review-comment revisions require write access
   (section 12); whether Actions runs on agent PRs wait for approval; how a
   verifier run is invoked against an existing PR (section 12); whether
-  delegation reliably opens a draft pull request (section 11); and whether an
-  agent profile can pin a model and effort level, or model choice rides entirely
-  on the per-task picker (section 14).
+  delegation reliably opens a draft pull request (section 11); whether assigning
+  an issue to Copilot offers the choice of agent profile, or selection needs the
+  Agents panel (section 12); whether a full phase A draft fits the session cap
+  or the drafting needs decomposing (section 11); whether an agent profile can
+  pin a model and effort level, or model choice rides entirely on the per-task
+  picker (section 14); and whether the cloud-agent configuration read endpoint,
+  in public preview as of this writing, returns the fields the snapshot needs
+  (section 13).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
-  one, and it must preserve HC-1.
+  one. It would be human-run with its own credential and the project's explicit
+  opt-in, entirely outside the agent's trust boundary; HC-1 continues to bind
+  the agent unchanged.
 - Intake relationship. How the request template fits with the existing CNCF
   service desk and assistance-program intake (section 7), without a competing
   front door. Related: the contribute.cncf.io site needs a page for projects on
