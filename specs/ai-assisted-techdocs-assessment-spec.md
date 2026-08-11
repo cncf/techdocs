@@ -57,8 +57,10 @@ the labor. AI drafts, humans decide, all in the open.
   project with minimal per-project setup.
 - G-6: Lower the request barrier. A structured intake lets a project (or the
   TechDocs team) request an assessment with all needed context up front.
-- G-7: Produce the three standard deliverables. Assessment, implementation plan,
-  and an issue backlog, matching the existing methodology.
+- G-7: Produce the standard deliverables. Assessment, implementation plan, and
+  an issue backlog, matching the existing methodology, including its skip path:
+  small projects whose recommendations are already independent and time-bound
+  may go straight from assessment to backlog ([howto]).
 
 ### Non-goals (phase one)
 
@@ -199,8 +201,9 @@ them; they may not replace them.
 
 Each phase runs the same six steps:
 
-1. Request. Phase A is triggered by the intake issue (section 7); phases B and C
-   become eligible once the previous phase is merged.
+1. Request. Phase A is triggered by the intake issue (section 7); the next phase
+   becomes eligible once the previous one is merged (phase C directly after A
+   when phase B is skipped; section 6).
 2. Accept. A technical writer triages and explicitly accepts the request, for
    every phase, not just A; eligibility alone does not start work (P-1).
 3. Draft. The drafter produces the deliverable as a draft PR.
@@ -222,12 +225,16 @@ end up slower than doing it by hand.
 ## 6. Phases and deliverables
 
 - Phase A: Assessment (`analysis.md`). Detailed first.
-- Phase B: Implementation plan (`implementation.md`).
-- Phase C: Issue backlog. Each proposed issue is a separate file scoped to
-  roughly 4 hours for someone experienced with the project and comfortable
-  writing, plus an umbrella/index file that lists them. Effort estimates are the
-  agent's first pass and are sanity-checked by the reviewer; agent estimates are
-  not reliable on their own.
+- Phase B: Implementation plan (`implementation.md`). Per the methodology, this
+  phase may be skipped for a small project whose recommendations are already
+  independent and time-bound; the reviewer and stakeholders make that call
+  during phase A's review and record it on the phase A PR before merge. One of
+  the human baselines (Knative) took this path.
+- Phase C: Issue backlog. Each proposed issue is a separate file scoped to the
+  methodology's time bound (a few hours to a couple of days at most for someone
+  experienced with the project and comfortable writing), plus an umbrella/index
+  file that lists them. Effort estimates are the agent's first pass and are
+  sanity-checked by the reviewer; agent estimates are not reliable on their own.
 
   Proposed methodology change. The current method delivers the backlog as one
   `_PROJECT_-issues.md` file (`howto.md`, `templates/issues-list.md`,
@@ -297,16 +304,18 @@ its documented guarantees are specified in Part II (section 11).
 Every requirement here derives from the existing methodology, so the system
 automates the current method rather than inventing a new one (P-2):
 
-- The three deliverables (G-7) and the phase order (section 5) follow the
-  [howto]: analysis, then implementation plan, then issue backlog.
+- The deliverables (G-7) and the phase order (section 5) follow the [howto]:
+  analysis, then implementation plan, then issue backlog, keeping the howto's
+  own skip path for the implementation plan (section 6).
 - Assessment content, ratings, and criteria come from `criteria.md`.
 - Each deliverable's structure comes from the templates in
   `docs/analysis/templates/` (`analysis.md`, `implementation.md`,
   `issues-list.md`, `issue.md`).
 - Scope and maturity framing (section 7) come from the analysis template's
   "About" and "Scope" sections and the criteria's maturity levels.
-- The 4-hour, independent, time-bounded issue scoping (Phase C) follows the
-  howto and assistance-program guidance on backlog creation.
+- The independent, time-bounded issue scoping (Phase C, a few hours to a couple
+  of days per issue) follows the howto and assistance-program guidance on
+  backlog creation.
 
 Prior prototyping has explored parts of this workflow; that experience will
 inform implementation.
@@ -329,7 +338,8 @@ The system is acceptable when, on a pilot assessment:
   quiet redefinition.
 - Safety. Zero writes outside cncf/techdocs, audited from the platform's
   activity records, and no unmitigated prompt-injection incident.
-- Completeness and reproducibility. All three deliverables produced; every
+- Completeness and reproducibility. Every phase's deliverable produced (all
+  three, or two where the implementation plan was skipped per section 6); every
   quantitative claim reproducible from a committed step (HC-5); AI involvement
   disclosed (HC-6).
 
@@ -441,8 +451,10 @@ always readable from its issues and pull requests.
   merge-triggered GitHub Actions workflow (standard `GITHUB_TOKEN` with
   `issues: write`) then opens the next phase's tracking issue, linking the
   intake and the merged deliverable, and assigns no one: eligible, not started
-  (HC-2, P-1). Approver independence cannot be natively enforced by GitHub; it
-  is verifiable from the public PR record, and an advisory CI check that flags a
+  (HC-2, P-1). The phase B skip decision (section 6) is recorded as a label on
+  the phase A PR, which the workflow reads to open phase C's tracking issue
+  instead. Approver independence cannot be natively enforced by GitHub; it is
+  verifiable from the public PR record, and an advisory CI check that flags a
   violation is a build-plan candidate (section 16).
 - Failure and abort leave a trail. Discarding a draft (section 5) is closing its
   PR with the reason recorded in a comment; the tracking issue stays open for a
@@ -475,8 +487,9 @@ points at the methodology, it never restates it (P-2).
   is missing or malformed (section 15).
 - Data collection: `scripts/assessment/`. The deterministic inventory scripts
   behind HC-5 (section 15).
-- Labels: `.github/settings.yml`. An `assessment` label plus per-phase labels,
-  managed declaratively alongside the repository's existing label set.
+- Labels: `.github/settings.yml`. An `assessment` label, per-phase labels, and
+  the phase B skip marker (section 12), managed declaratively alongside the
+  repository's existing label set.
 - Deliverables: `analyses/<year>/<project>/`. The existing convention:
   `analysis.md`, `implementation.md`, and the backlog.
 - Backlog files: `analyses/<year>/<project>/issues/`. One file per proposed
@@ -529,10 +542,11 @@ The three drafting profiles:
   methodology. Output: a draft `implementation.md` derived from the assessment's
   findings only; a gap discovered while planning is flagged in the PR, not
   silently promoted into a new finding.
-- Backlog drafter (Phase C). Input: the merged `implementation.md`. Output: the
-  issue backlog in the layout section 6 settles on, each item scoped to roughly
-  4 hours, with effort estimates marked as first-pass for reviewer
-  sanity-checking.
+- Backlog drafter (Phase C). Input: the merged `implementation.md`, or the
+  merged `analysis.md` where phase B was skipped (section 6). Output: the issue
+  backlog in the layout section 6 settles on, each item scoped to the
+  methodology's time bound (section 6), with effort estimates marked as
+  first-pass for reviewer sanity-checking.
 
 The verification profile:
 
@@ -637,7 +651,8 @@ The build steps, in dependency order, each sized to one issue:
    and the verifier's report correctly flags a planted unsupported claim.
 8. Phase-advance workflow (`.github/workflows/assessment-phase.yml`). Done when
    a merged fixture PR opens the next phase's tracking issue, linked and
-   unassigned (section 12).
+   unassigned, on both the default route and the phase B skip route (section
+   12).
 9. Approver-independence check (advisory; a build-plan candidate from section
    12). Comments when a phase's approver also drafted or reviewed it; never
    blocks. Done when it flags a staged violation, or explicitly deferred.
