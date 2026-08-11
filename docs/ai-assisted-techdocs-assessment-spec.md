@@ -437,6 +437,46 @@ always readable from its issues and pull requests.
   pilot's cycle-time decomposition (section 10) is harvested from the GitHub
   timeline rather than a separate log.
 
+## 13. Components and repository layout
+
+Everything the system is made of lives in cncf/techdocs, versioned and
+reviewable like any other change; none of it exists yet. The operational layer
+points at the methodology, it never restates it (P-2).
+
+- Intake template: `.github/ISSUE_TEMPLATE/assessment-request.yml`. The
+  structured request form (section 7), including the up-front AI disclosure
+  (HC-6).
+- Repository instructions: `.github/copilot-instructions.md`. Ground rules for
+  any agent work in this repository.
+- Agent profiles: `.github/agents/*.agent.md`. One per phase: the drafter's
+  task, inputs, and constraints (section 14).
+- Environment setup: `.github/workflows/copilot-setup-steps.yml`. Prepares the
+  agent's ephemeral environment (section 11).
+- Phase-advance workflow: `.github/workflows/assessment-phase.yml`. On merge,
+  opens the next phase's tracking issue (section 12).
+- Provenance check: a workflow in `.github/workflows/` backed by
+  `scripts/assessment/`. CI that fails a deliverable PR whose provenance block
+  is missing or malformed (section 15).
+- Data collection: `scripts/assessment/`. The deterministic inventory scripts
+  behind HC-5 (section 15).
+- Labels: `.github/settings.yml`. An `assessment` label plus per-phase labels,
+  managed declaratively alongside the repository's existing label set.
+- Deliverables: `analyses/<year>/<project>/`. The existing convention:
+  `analysis.md`, `implementation.md`, and the backlog.
+- Backlog files: `analyses/<year>/<project>/issues/`. One file per proposed
+  issue plus an index, if the section 6 proposal is accepted.
+
+Notes:
+
+- The methodology corpus at [docs/analysis/][analysis-dir] is deliberately
+  absent from this list: the system reads it, but owns no file in it (P-2,
+  NG-4). This spec likewise lives outside the corpus.
+- The backlog file naming across existing analyses already varies (`issues.md`,
+  `issues-list.md`); whatever the section 6 decision, the layout above pins one
+  convention going forward.
+- MCP configuration is the one component not in the list because the platform
+  keeps it in repository settings, not a file (section 11).
+
 ## 17. Open questions and future work
 
 - Filing issues into project repos. A separate, opt-in tool to create the
