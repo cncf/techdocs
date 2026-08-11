@@ -456,11 +456,14 @@ always readable from its issues and pull requests.
   require write access, and how a verifier run is invoked against an existing
   PR, are build-time checks (section 17).
 - Stakeholder review (step 5): mention, not access. The reviewer marks the PR
-  ready for review and mentions the stakeholders named in the intake.
-  cncf/techdocs is public, so stakeholders can review and comment without any
-  special access; formal review requests are limited to collaborators, which is
-  why the binding is a mention plus a factual-accuracy confirmation recorded on
-  the PR, with any disagreement recorded in the deliverable itself (HC-2).
+  ready for review and mentions the stakeholders named in the intake. The
+  draft-to-ready flip carries the real-world meaning: draft while the assessing
+  team is still working the deliverable over, ready when they would put it in
+  front of the requesting project. cncf/techdocs is public, so stakeholders can
+  review and comment without any special access; formal review requests are
+  limited to collaborators, which is why the binding is a mention plus a
+  factual-accuracy confirmation recorded on the PR, with any disagreement
+  recorded in the deliverable itself (HC-2).
 - Merge (step 6): merge plus one workflow. The approver (section 4) merges. A
   merge-triggered GitHub Actions workflow (standard `GITHUB_TOKEN` with
   `issues: write`) then opens the next phase's tracking issue, linking the
@@ -600,14 +603,19 @@ renderer, and the fixed labels make it machine-checkable.
 
 Its fields, each a labeled bullet:
 
-- Disclosure. A fixed sentence: this deliverable was drafted by an AI agent and
-  reviewed, verified, and approved by humans (HC-6).
+- Disclosure. A fixed sentence with two forms matching the deliverable's state
+  (HC-6). The draft form: drafted by an AI agent, human review pending. The
+  final form: drafted by an AI agent and reviewed, verified, and approved by
+  humans. A draft asserting the final form would be claiming a review that has
+  not happened yet.
 - Drafter. The agent profile that produced the draft, by name and ref (section
   14).
 - Verifier. The verifier profile, by name and ref, and a link to its report on
   the PR (section 14).
 - Methodology. The ref of the methodology corpus the draft was produced against
   (P-2), so the deliverable pins the criteria and templates it was measured by.
+  The ref is set at phase A and carried unchanged by every later phase's
+  deliverable: one assessment is measured against one methodology.
 - Data. The data-collection commands that were run and the committed paths of
   their outputs, so every quantitative claim traces to a reproducible step
   (HC-5).
@@ -619,15 +627,18 @@ disclosure, its own profile, the methodology ref, and the data paths. The
 verifier field and the verification record belong to the review step: the report
 link is added once the verifier's pass runs, and the record starts as a marked
 placeholder that only the reviewer fills; a drafter asserting its own work
-verified would be a fabrication about fabrication-checking.
+verified would be a fabrication about fabrication-checking. The disclosure's
+flip from draft form to final form belongs to review for the same reason: it
+happens when the PR is marked ready.
 
 The provenance check (section 13) enforces the block in CI: a deliverable PR
 fails if the block is missing, a field is absent or malformed, the methodology
-ref does not resolve, or a listed data path is not in the tree. While the PR is
-a draft, the verification record may be a placeholder; once it is marked ready
-for review, the check runs strict and an unfilled record fails. Judgment stays
-human: CI proves the block is present and well-formed, the approver confirms the
-verification behind it was real (section 10).
+ref does not resolve or differs from the pin set at phase A, or a listed data
+path is not in the tree. While the PR is a draft, the verification record may be
+a placeholder and the disclosure carries its draft form; once it is marked ready
+for review, the check runs strict: an unfilled record or a draft-form disclosure
+fails. Judgment stays human: CI proves the block is present and well-formed, the
+approver confirms the verification behind it was real (section 10).
 
 The block is defined by this spec and layered above the template body, so the
 methodology corpus and its templates are not modified (P-2, NG-4).
