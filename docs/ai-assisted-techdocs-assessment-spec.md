@@ -130,8 +130,7 @@ the labor. AI drafts, humans decide, all in the open.
   errors, which is required to advance. Agreement with the conclusions: not
   required, and a project's disagreement is recorded in the deliverable rather
   than allowed to block or soften it. Merging phase N makes phase N+1 eligible;
-  a technical writer still starts it (section 5). A reviewer/stakeholder dispute
-  is arbitrated by the platform owner (section 4).
+  a technical writer still starts it (section 5).
 - HC-3: Deliverables are files in cncf/techdocs. Including the issue backlog
   (one file per proposed issue). Nothing is filed to an external repo.
 - HC-4: No unattended autonomy. Any change to repository state lands through a
@@ -177,10 +176,10 @@ tool), and one actor may fill more than one role.
   that phase, so no one signs off on work they produced or refined, and the role
   spreads across the team instead of bottlenecking. Confirms the verification in
   section 10 was done.
-- Platform owner. Owns the machine itself: the prompts, the operational layer,
-  and the configuration that enforces the write boundary (HC-1). Sets policy,
-  handles aborts (section 5), and arbitrates a reviewer/stakeholder dispute
-  (HC-2). A central role, kept out of the per-assessment critical path.
+- Administrator/platform owner. Owns the machine itself: the prompts, the
+  operational layer, and the configuration that enforces the write boundary
+  (HC-1). Sets policy and handles aborts (section 5). A central role, kept out
+  of the per-assessment critical path.
 
 ## 5. Lifecycle
 
@@ -201,9 +200,9 @@ Each phase runs the same six steps:
 
 Failure path: if a draft is bad enough that fixing it would cost more than
 starting over, the reviewer may discard it and restart or write by hand rather
-than sink time into editing. Repeated failure is escalated to the platform
-owner, who may abort the run. An assessment must never end up slower than doing
-it by hand.
+than sink time into editing. Repeated failure is escalated to the
+administrator/platform owner, who may abort the run. An assessment must never
+end up slower than doing it by hand.
 
 ## 6. Phases and deliverables
 
@@ -361,18 +360,18 @@ infrastructure we build and maintain ourselves.
   covers package registries and GitHub content domains, not the general web, so
   reading an assessed project's live documentation site requires an explicit
   allowlist entry. We treat this as a feature: the intake (section 7) collects
-  the project's documentation domains, and the platform owner adds them at
-  acceptance, making each assessment's external reads an explicit, auditable,
-  reversible contract. Requests the firewall blocks are disclosed automatically
-  in the pull request, which feeds the safety audit in section 10.
+  the project's documentation domains, and the administrator/platform owner adds
+  them at acceptance, making each assessment's external reads an explicit,
+  auditable, reversible contract. Requests the firewall blocks are disclosed
+  automatically in the pull request, which feeds the safety audit in section 10.
 - MCP policy. The firewall does not apply to MCP servers, and MCP tools are the
   one documented mechanism that can widen the agent's write reach, so [MCP
   configuration][cloud-agent-mcp] is the control surface that matters most.
   Policy: the GitHub MCP server stays at its read-only default; any additional
   MCP server must be read-only with its tools explicitly allowlisted; no
   write-capable MCP tool is permitted. MCP configuration lives in repository
-  settings rather than in a versioned file, so the platform owner records the
-  current configuration in the operational docs whenever it changes.
+  settings rather than in a versioned file, so the administrator/platform owner
+  records the current configuration in the operational docs whenever it changes.
 - Execution environment. The agent runs in an ephemeral [GitHub Actions-based
   environment][cloud-agent-env] with a hard session cap (currently 59 minutes).
   That cap shapes the design: deterministic data collection (section 13) runs as
@@ -430,8 +429,8 @@ always readable from its issues and pull requests.
   violation is a build-plan candidate (section 16).
 - Failure and abort leave a trail. Discarding a draft (section 5) is closing its
   PR with the reason recorded in a comment; the tracking issue stays open for a
-  restart or a hand-written phase. A platform-owner abort closes the tracking
-  issue, with the rationale recorded there.
+  restart or a hand-written phase. An administrator/platform owner abort closes
+  the tracking issue, with the rationale recorded there.
 - The timeline is the measurement. Gate transitions (opened, accepted, draft PR,
   ready, approved, merged) are timestamped in issue and PR history, so the
   pilot's cycle-time decomposition (section 10) is harvested from the GitHub
