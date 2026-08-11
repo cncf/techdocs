@@ -42,7 +42,9 @@ the labor. AI drafts, humans decide, all in the open.
 ### Goals
 
 - G-1: Compress the cycle. Reduce the 6–8 week assessment toward roughly 2
-  weeks, a pilot hypothesis to validate rather than a commitment (section 10).
+  weeks. This is the motivation and a pilot hypothesis, not an acceptance
+  criterion (section 10): the pilot succeeds or fails on quality and safety, and
+  the elapsed time simply gets reported.
 - G-2: Hold quality. Output meets or exceeds the current human baseline
   (Flatcar, Knative, Helm), verified by the method in section 10, not asserted.
   AI drafts fail by being fluent, well-formatted, and generically wrong, a mode
@@ -332,10 +334,6 @@ The system is acceptable when, on a pilot assessment:
   the approver (section 4), who was neither the drafter nor a reviewer of that
   phase, to avoid signing off on one's own work. The bar is parity with the
   human baselines (Flatcar, Knative, Helm).
-- Cycle time. Measured against the time decomposition from G-1 (writer working
-  time versus waiting on people). The roughly 2-week target is evaluated as a
-  hypothesis; missing it prompts a look at which gates or waits dominate, not a
-  quiet redefinition.
 - Safety. Zero writes outside cncf/techdocs, audited from the platform's
   activity records, and no unmitigated prompt-injection incident.
 - Completeness and reproducibility. Every phase's deliverable produced (all
@@ -460,10 +458,11 @@ always readable from its issues and pull requests.
   PR with the reason recorded in a comment; the tracking issue stays open for a
   restart or a hand-written phase. An administrator/platform owner abort closes
   the tracking issue, with the rationale recorded there.
-- The timeline is the measurement. Gate transitions (opened, accepted, draft PR,
-  ready, approved, merged) are timestamped in issue and PR history, so the
-  pilot's cycle-time decomposition (section 10) is harvested from the GitHub
-  timeline rather than a separate log.
+- The timeline records elapsed time. Gate transitions (opened, accepted, draft
+  PR, ready, approved, merged) are timestamped in issue and PR history, so how
+  long a pilot took, and where the time went, can be read from the GitHub
+  timeline after the fact. This reports on G-1 without adding a log or an
+  acceptance gate.
 
 ## 13. Components and repository layout
 
