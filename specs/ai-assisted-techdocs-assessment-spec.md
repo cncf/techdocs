@@ -101,9 +101,9 @@ the labor. AI drafts, humans decide, all in the open.
   behavior, and no parallel copy can drift. This addresses the
   criteria-duplication concern raised in PR #357 review.
   - Reproducibility pin. For a given assessment run, the agent binds to a
-    specific ref (commit or tag) of the methodology docs so the run is
-    reproducible (P-4). "Auto-updates" means each new assessment picks up the
-    latest canonical docs, not that an in-flight assessment shifts under review.
+    specific commit SHA of the methodology docs so the run is reproducible
+    (P-4). "Auto-updates" means each new assessment picks up the latest
+    canonical docs, not that an in-flight assessment shifts under review.
   - Consumability is a contract. Because the docs are the interface, an
     operational layer may add how-to-run guidance (output format, file naming,
     orchestration) but must reference the canonical content, never restate it.
