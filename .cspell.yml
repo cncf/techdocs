@@ -20,19 +20,26 @@ ignorePaths:
 #     ignoreRegExpList:
 #       - CodeBlock
 words:
+  - agentic
   - backstore
+  - bottlenecking
   - Chalin
   - CLOTributor
   - CNCF
+  - cncf
+  - consumability
   - Docsy
   - dwelsch
+  - exfiltrate
   - fluxcd
   - github
+  - howto
   - keda
   - knative
   - kedacore
   - krator
   - krook
+  - llms
   - mkdocs
   - nate
   - nvmrc

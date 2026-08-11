@@ -23,16 +23,16 @@ Two things make now the moment to change that:
 
 - The method is sound; the throughput isn't. The existing methodology
   ([criteria], the [howto], and the analysis, implementation, and issues
-  deliverables) is well-established. The problem to solve is speed and scale, not
-  what a good assessment is.
-- Maintainers now have agentic AI. GitHub has granted CNCF maintainers
-  [Copilot Enterprise][copilot-blog]. That lets us put an AI agent on the
-  mechanical and first-draft work, supervised by a human expert, to compress the
-  cycle. We treat the roughly 2-week figure as a pilot hypothesis, not a fixed
-  target (G-1).
+  deliverables) is well-established. The problem to solve is speed and scale,
+  not what a good assessment is.
+- Maintainers now have agentic AI. GitHub has granted CNCF maintainers [Copilot
+  Enterprise][copilot-blog]. That lets us put an AI agent on the mechanical and
+  first-draft work, supervised by a human expert, to compress the cycle. We
+  treat the roughly 2-week figure as a pilot hypothesis, not a fixed target
+  (G-1).
 
-Thesis: keep the methodology and the human judgment; use an AI agent to
-compress the labor. AI drafts, humans decide, all in the open.
+Thesis: keep the methodology and the human judgment; use an AI agent to compress
+the labor. AI drafts, humans decide, all in the open.
 
 ## 2. Goals and non-goals
 
@@ -74,8 +74,9 @@ compress the labor. AI drafts, humans decide, all in the open.
   unchanged. Evolving the criteria (for example AI-readiness) is tracked
   separately (see PR #357). This spec does propose one deliberate, limited
   structural change to the methodology: the issue-backlog file layout (section
-  6), framed as a proposal for discussion, not a silent change. Editorial changes
-  to keep the methodology docs machine-consumable (P-2) are also allowed.
+  6), framed as a proposal for discussion, not a silent change. Editorial
+  changes to keep the methodology docs machine-consumable (P-2) are also
+  allowed.
 - NG-5: Not a public self-serve tool. Scope is CNCF projects assessed through
   the defined process, not arbitrary external users.
 
@@ -125,9 +126,9 @@ compress the labor. AI drafts, humans decide, all in the open.
   confirm they have read the deliverable and had the chance to correct factual
   errors, which is required to advance. Agreement with the conclusions: not
   required, and a project's disagreement is recorded in the deliverable rather
-  than allowed to block or soften it. Merging phase N makes phase N+1 eligible; a
-  technical writer still starts it (section 5). A reviewer/stakeholder dispute is
-  arbitrated by the platform owner (section 4).
+  than allowed to block or soften it. Merging phase N makes phase N+1 eligible;
+  a technical writer still starts it (section 5). A reviewer/stakeholder dispute
+  is arbitrated by the platform owner (section 4).
 - HC-3: Deliverables are files in cncf/techdocs. Including the issue backlog
   (one file per proposed issue). Nothing is filed to an external repo.
 - HC-4: No unattended autonomy. Any change to repository state lands through a
@@ -163,15 +164,16 @@ tool), and one actor may fill more than one role.
   They set priorities, provide project-level context, and confirm factual
   accuracy at each phase gate. They do not hold a veto over the conclusions;
   disagreement is recorded, not used to block or soften a deliverable (HC-2).
-- SMEs (subject-matter experts). Supply and verify technical ground truth for the
-  areas under assessment: answering detailed questions and checking findings and
-  recommendations for accuracy. Often maintainers or experienced contributors,
-  but the role is knowledge, not authority; an SME need not have sign-off.
-- Writers. The audience for the issue backlog: community members who take up
-  the resulting issues and do the documentation work.
+- SMEs (subject-matter experts). Supply and verify technical ground truth for
+  the areas under assessment: answering detailed questions and checking findings
+  and recommendations for accuracy. Often maintainers or experienced
+  contributors, but the role is knowledge, not authority; an SME need not have
+  sign-off.
+- Writers. The audience for the issue backlog: community members who take up the
+  resulting issues and do the documentation work.
 - Approver. Gives each phase its independent quality sign-off and merges the PR.
-  A qualified technical writer who was neither the drafter nor a reviewer of that
-  phase, so no one signs off on work they produced or refined, and the role
+  A qualified technical writer who was neither the drafter nor a reviewer of
+  that phase, so no one signs off on work they produced or refined, and the role
   spreads across the team instead of bottlenecking. Confirms the verification in
   section 10 was done.
 - Platform owner. Owns the machine itself: the prompts, the operational layer,
@@ -219,8 +221,8 @@ it by hand.
   directory of one-issue-per-file is the natural input for the future filing
   script (NG-2, section 11), which can batch-create issues with `gh` instead of
   someone copy-pasting from a large combined file; it also keeps any single file
-  readable. This is raised as a proposal for discussion; the methodology docs are
-  not changed by this PR.
+  readable. This is raised as a proposal for discussion; the methodology docs
+  are not changed by this PR.
 
 Every deliverable carries a header noting it was AI-drafted and human-reviewed
 (HC-6).
@@ -251,19 +253,19 @@ assistance-program intake, so we don't create a competing front door.
 HC-1 is guaranteed primarily by credential scoping: the agent runs under a
 credential (fine-grained token or GitHub App) that can write only to
 cncf/techdocs, so writes elsewhere are impossible, not merely disallowed. Tool
-allowlisting (reads and web research permitted; GitHub-write tools constrained to
-the one repo) and the human review gates are defense in depth.
+allowlisting (reads and web research permitted; GitHub-write tools constrained
+to the one repo) and the human review gates are defense in depth.
 
 Threat cases:
 
-1. Prompt injection (primary threat). The agent's core job is ingesting untrusted
-   content from assessed repositories, which may contain instructions aimed at
-   the agent. Scoping blocks writes outside cncf/techdocs, but injection can
-   still try to (a) plant poisoned or misleading content into a deliverable
-   inside cncf/techdocs, or (b) trigger outbound web requests to exfiltrate or
-   fetch. Mitigations: treat all repo and web content as data, never
-   instructions; human review of every deliverable before merge (HC-4); constrain
-   outbound network access; and keep secrets out of the agent's reach.
+1. Prompt injection (primary threat). The agent's core job is ingesting
+   untrusted content from assessed repositories, which may contain instructions
+   aimed at the agent. Scoping blocks writes outside cncf/techdocs, but
+   injection can still try to (a) plant poisoned or misleading content into a
+   deliverable inside cncf/techdocs, or (b) trigger outbound web requests to
+   exfiltrate or fetch. Mitigations: treat all repo and web content as data,
+   never instructions; human review of every deliverable before merge (HC-4);
+   constrain outbound network access; and keep secrets out of the agent's reach.
 2. Write outside cncf/techdocs. Blocked architecturally by the scoped credential
    (HC-1).
 3. Unverified content in a deliverable. Qualitative findings must be checked
@@ -302,29 +304,29 @@ The system is acceptable when, on a pilot assessment:
   definition is an open item; section 11). Verification is not a token sample:
   the reviewer checks every rating-bearing finding, or at minimum a set number
   per criterion, biased toward the highest-risk claims, and records in the
-  deliverable which findings were verified (HC-7). Final sign-off is given by the
-  approver (section 4), who was neither the drafter nor a reviewer of that phase,
-  to avoid signing off on one's own work. The bar is parity with the human
-  baselines (Flatcar, Knative, Helm).
+  deliverable which findings were verified (HC-7). Final sign-off is given by
+  the approver (section 4), who was neither the drafter nor a reviewer of that
+  phase, to avoid signing off on one's own work. The bar is parity with the
+  human baselines (Flatcar, Knative, Helm).
 - Cycle time. Measured against the time decomposition from G-1 (writer working
   time versus waiting on people). The roughly 2-week target is evaluated as a
   hypothesis; missing it prompts a look at which gates or waits dominate, not a
   quiet redefinition.
-- Safety. Zero writes outside cncf/techdocs, audited from the scoped credential's
-  activity, and no unmitigated prompt-injection incident.
+- Safety. Zero writes outside cncf/techdocs, audited from the scoped
+  credential's activity, and no unmitigated prompt-injection incident.
 - Completeness and reproducibility. All three deliverables produced; every
   quantitative claim reproducible from a committed step (HC-5); AI involvement
   disclosed (HC-6).
 
 Pilot caveat: one assessment is n=1 for a quality claim. Choose the pilot
-deliberately, neither a flattering easy project nor an impossibly hard one, state
-the choice, and broaden before drawing general conclusions.
+deliberately, neither a flattering easy project nor an impossibly hard one,
+state the choice, and broaden before drawing general conclusions.
 
 ## 11. Open questions and future work
 
-- Filing issues into project repos. A separate, opt-in tool to create the backlog
-  issues in a project's own repository (NG-2). Out of scope for phase one, and it
-  must preserve HC-1.
+- Filing issues into project repos. A separate, opt-in tool to create the
+  backlog issues in a project's own repository (NG-2). Out of scope for phase
+  one, and it must preserve HC-1.
 - Intake relationship. How the request template fits with the existing CNCF
   service desk and assistance-program intake (section 7), without a competing
   front door.
@@ -346,4 +348,5 @@ the choice, and broaden before drawing general conclusions.
 [criteria]: https://github.com/cncf/techdocs/blob/main/docs/analysis/criteria.md
 [howto]: https://github.com/cncf/techdocs/blob/main/docs/analysis/howto.md
 [analysis-dir]: https://github.com/cncf/techdocs/tree/main/docs/analysis
-[copilot-blog]: https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers/
+[copilot-blog]:
+  https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers/
