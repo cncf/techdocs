@@ -598,11 +598,15 @@ models change faster than this spec. Drafting warrants the most capable model
 and effort available to the repository; verification does not need the drafter's
 configuration, and running the verifier on a different model is preferable where
 the platform allows it, since two models are less likely to share one blind
-spot. The platform exposes model choice as a per-task picker at delegation time,
-so the writer applies this policy when delegating; whether a profile can pin its
-own model is a build-time check (section 17). Which models are available to
-cncf/techdocs is organization policy, handled with the CNCF GitHub organization
-administrators by the administrator/platform owner (section 4).
+spot. The platform offers model choice in two documented places: a `model`
+property in the profile's front matter, which inherits the default when unset,
+and a per-task picker at delegation time [custom-agents-config]. Our profiles
+leave `model` unset by policy: a pinned name turns model churn into profile
+churn, and the writer applies this policy through the picker when delegating.
+Whether effort level can be pinned anywhere is a build-time check (section 17).
+Which models the picker offers to cncf/techdocs is organization policy, handled
+with the CNCF GitHub organization administrators by the administrator/platform
+owner (section 4).
 
 ## 15. The provenance block
 
@@ -735,11 +739,12 @@ chosen, deliberately, per the caveat in section 10.
   delegation reliably opens a draft pull request (section 11); whether assigning
   an issue to Copilot offers the choice of agent profile, or selection needs the
   Agents panel (section 12); whether a full phase A draft fits the session cap
-  or the drafting needs decomposing (section 11); whether an agent profile can
-  pin a model and effort level, or model choice rides entirely on the per-task
-  picker (section 14); and whether the cloud-agent configuration read endpoint,
-  in public preview as of this writing, returns the fields the snapshot needs
-  and what credential the snapshot script must hold to call it (section 13).
+  or the drafting needs decomposing (section 11); whether effort level can be
+  pinned in a profile or anywhere else, the one model-choice question the
+  documentation leaves open (section 14); and whether the cloud-agent
+  configuration read endpoint, in public preview as of this writing, returns the
+  fields the snapshot needs and what credential the snapshot script must hold to
+  call it (section 13).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one. It would be human-run with its own credential and the project's explicit
@@ -784,3 +789,5 @@ chosen, deliberately, per the caveat in section 10.
   https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management
 [cloud-agent-config-api]:
   https://docs.github.com/en/rest/copilot/copilot-cloud-agent-management
+[custom-agents-config]:
+  https://docs.github.com/en/copilot/reference/custom-agents-configuration
