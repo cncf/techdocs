@@ -148,17 +148,31 @@ the labor. AI drafts, humans decide, all in the open.
 ## 4. Roles
 
 Roles are defined by function. Each is filled by an actor (a person, group, or
-tool), and one actor may fill more than one role.
+tool), and one actor may fill more than one role. Not every role may be filled
+by a tool: the drafter is expected to be one and the verifier is one by
+definition, while the reviewer and approver are human-only, because they hold
+the human judgment that G-3, NG-3, and HC-2 require. Machine checks may assist
+them; they may not replace them.
 
 - Requester. A stakeholder who initiates the assessment by filing the request
   (section 7); for example a maintainer, tech lead, or trusted community member.
   Filing does not start an assessment.
 - Drafter. Produces the first-pass draft of each phase's deliverable as a draft
   PR, then refines it in conversation with the reviewer.
+- Verifier. An agent that runs an adversarial fact-check pass over each draft
+  before human review: resolving citations, checking claims against the sources
+  they cite, and flagging anything unsupported. It is prompted to find
+  unsupported claims, not to confirm the draft, so it does not inherit the
+  drafter's blind spots. Its report feeds the reviewer's verification (HC-7); it
+  never substitutes for it. The layering exists because a fabrication that
+  reaches a project's maintainers wastes their time and costs the system its
+  credibility.
 - Reviewer. Accepts a request to begin work, then reviews and refines each draft
   in conversation, verifies findings against source (HC-7), and marks it ready.
   Owns the draft's quality, but does not give its final sign-off; that is
-  independent (see Approver).
+  independent (see Approver). A human role: it starts from the verifier's report
+  and the machine checks (provenance lint, template conformance), but the
+  verification and the readiness call are the reviewer's own.
 - Stakeholders. The project party with a stake in its documentation and
   direction: maintainers, tech leads, trusted community members, and others.
   They set priorities, provide project-level context, and confirm factual
@@ -189,9 +203,10 @@ Each phase runs the same six steps:
    become eligible once the previous phase is merged.
 2. Accept. A technical writer triages and explicitly accepts the request, for
    every phase, not just A; eligibility alone does not start work (P-1).
-3. Draft. The agent produces the deliverable as a draft PR.
-4. Review. The reviewer refines the draft in conversation with the agent,
-   verifies findings against source (HC-7), and marks it ready.
+3. Draft. The drafter produces the deliverable as a draft PR.
+4. Review. The verifier's fact-check pass runs first. The reviewer then refines
+   the draft in conversation with the drafter, verifies findings against source
+   (HC-7), and marks it ready.
 5. Stakeholder review. Stakeholders confirm factual accuracy (required to
    advance) and record any disagreement with the conclusions (not required;
    HC-2).
@@ -409,11 +424,13 @@ always readable from its issues and pull requests.
 - Draft (step 3): a draft pull request. The agent works on its own branch in
   cncf/techdocs and opens a draft PR linked to the tracking issue, carrying the
   provenance block (section 15).
-- Review (step 4): PR review comments. The reviewer refines the draft in
-  conversation, handing revisions back by mentioning `@copilot` in review
-  comments, and performs the verification required by section 10. Whether
-  mention-triggered revisions require write access is a build-time check
-  (section 17).
+- Review (step 4): PR review comments. The reviewer triggers the verifier's pass
+  on the draft PR; its report lands as a PR comment, part of the same public
+  record. The reviewer then refines the draft in conversation, handing revisions
+  back by mentioning `@copilot` in review comments, and performs the
+  verification required by section 10. Whether mention-triggered revisions
+  require write access, and how a verifier run is invoked against an existing
+  PR, are build-time checks (section 17).
 - Stakeholder review (step 5): mention, not access. The reviewer marks the PR
   ready for review and mentions the stakeholders named in the intake.
   cncf/techdocs is public, so stakeholders can review and comment without any
@@ -447,8 +464,8 @@ points at the methodology, it never restates it (P-2).
   (HC-6).
 - Repository instructions: `.github/copilot-instructions.md`. Ground rules for
   any agent work in this repository.
-- Agent profiles: `.github/agents/*.agent.md`. One per phase: the drafter's
-  task, inputs, and constraints (section 14).
+- Agent profiles: `.github/agents/*.agent.md`. One per phase for drafting, plus
+  one for verification: each agent's task, inputs, and constraints (section 14).
 - Environment setup: `.github/workflows/copilot-setup-steps.yml`. Prepares the
   agent's ephemeral environment (section 11).
 - Phase-advance workflow: `.github/workflows/assessment-phase.yml`. On merge,
@@ -478,15 +495,15 @@ Notes:
 
 ## 14. Agent definitions
 
-The drafter role (section 4) is filled by the cloud agent running under a
-per-phase agent profile: a versioned file in `.github/agents/` whose header
+The drafter and verifier roles (section 4) are filled by the cloud agent running
+under an agent profile: a versioned file in `.github/agents/` whose header
 declares the agent's name, description, and allowed tools, and whose body is its
-standing prompt. The writer who accepts a phase selects its profile when
-delegating (section 12). Profiles are plain files, so changing an agent means a
-reviewed PR, owned by the administrator/platform owner, like any other change to
-the machine.
+standing prompt. The writer who accepts a phase selects its drafting profile
+when delegating (section 12). Profiles are plain files, so changing an agent
+means a reviewed PR, owned by the administrator/platform owner, like any other
+change to the machine.
 
-Rules common to all three profiles, in tension-order with Part I:
+Rules common to all profiles, in tension-order with Part I:
 
 - Point, do not restate. A profile carries the task shape, output paths, and
   discipline; the criteria, process, and templates are read from the methodology
@@ -502,7 +519,7 @@ Rules common to all three profiles, in tension-order with Part I:
 - Least tools. A profile's tool list is the minimum its phase needs; none may
   include a write-capable MCP tool (section 11).
 
-The three profiles:
+The three drafting profiles:
 
 - Assessment drafter (Phase A). Input: the intake issue, the methodology at the
   pinned ref, and the data-collection outputs for the project. Output: a draft
@@ -516,6 +533,15 @@ The three profiles:
   issue backlog in the layout section 6 settles on, each item scoped to roughly
   4 hours, with effort estimates marked as first-pass for reviewer
   sanity-checking.
+
+The verification profile:
+
+- Verifier (every phase). Input: the draft PR's deliverable and the sources it
+  cites. Output: a report on the PR listing each checked claim as supported,
+  unsupported, or unverifiable, with the failing ones quoted. Its prompt is
+  adversarial (find unsupported claims), not confirmatory (check the draft is
+  fine), so it does not share the drafter's failure mode (G-2). Its tool list is
+  read-only; it edits nothing.
 
 ## 17. Open questions and future work
 
