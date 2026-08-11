@@ -275,6 +275,10 @@ sections, plus maturity and contacts).
 
 Filing a request does not start an assessment: it gathers context, and a
 technical writer triages and explicitly accepts it to begin Phase A (NG-5, P-1).
+A request can also be filed by the assessing team rather than the project, and
+HC-6's up-front promise must not depend on who filed: phase A is not delegated
+until the project contacts named in the request have been notified on the intake
+issue.
 
 Open question: how this relates to the existing CNCF service desk and TechDocs
 assistance-program intake, so we don't create a competing front door.
@@ -453,8 +457,11 @@ always readable from its issues and pull requests.
   eligibility is not work.
 - Accept (step 2): assignment. A writer accepts by assigning the issue to
   Copilot, adding themselves as an assignee to record who accepted; they act as
-  the phase's reviewer. Because only users with write access can delegate to the
-  agent (section 11), P-1 is enforced by repository permissions, not convention.
+  the phase's reviewer. For phase A, accepting includes mentioning the named
+  project contacts on the intake issue, so the AI disclosure reaches the project
+  before drafting starts, whoever filed the request (HC-6, section 7). Because
+  only users with write access can delegate to the agent (section 11), P-1 is
+  enforced by repository permissions, not convention.
 - Draft (step 3): a draft pull request. The agent works on its own branch in
   cncf/techdocs and opens a draft PR linked to the tracking issue, carrying the
   provenance block (section 15).
