@@ -543,6 +543,55 @@ The verification profile:
   fine), so it does not share the drafter's failure mode (G-2). Its tool list is
   read-only; it edits nothing.
 
+## 15. The provenance block
+
+The provenance block is where Part I's disclosure and evidence duties converge
+(HC-5, HC-6, HC-7, P-2): a fixed-format section at the top of every
+deliverable's body, immediately after the title. It is body content rather than
+front matter because of how deliverables are published: cncf/techdocs is the
+source of truth, and its content is synced at build time into the
+[contribute.cncf.io site][contribute-site-sync], whose rebuild a merge to main
+triggers. Body content survives that sync verbatim and renders wherever the
+deliverable is read (the repository, the site, a fork); front matter is consumed
+as metadata and does not reach the page. HC-6 requires that no project discover
+AI involvement after the fact, so the disclosure rides in the content itself. As
+plain markdown (a heading and labeled bullets) it needs nothing from any
+renderer, and the fixed labels make it machine-checkable.
+
+Its fields, each a labeled bullet:
+
+- Disclosure. A fixed sentence: this deliverable was drafted by an AI agent and
+  reviewed, verified, and approved by humans (HC-6).
+- Drafter. The agent profile that produced the draft, by name and ref (section
+  14).
+- Verifier. The verifier profile, by name and ref, and a link to its report on
+  the PR (section 14).
+- Methodology. The ref of the methodology corpus the draft was produced against
+  (P-2), so the deliverable pins the criteria and templates it was measured by.
+- Data. The data-collection commands that were run and the committed paths of
+  their outputs, so every quantitative claim traces to a reproducible step
+  (HC-5).
+- Verification record. Which rating-bearing findings the reviewer verified
+  against source, satisfying the section 10 floor (HC-7).
+
+The fields have owners. The drafter emits the block with everything it can know:
+disclosure, its own profile, the methodology ref, and the data paths. The
+verifier field and the verification record belong to the review step: the report
+link is added once the verifier's pass runs, and the record starts as a marked
+placeholder that only the reviewer fills; a drafter asserting its own work
+verified would be a fabrication about fabrication-checking.
+
+The provenance check (section 13) enforces the block in CI: a deliverable PR
+fails if the block is missing, a field is absent or malformed, the methodology
+ref does not resolve, or a listed data path is not in the tree. While the PR is
+a draft, the verification record may be a placeholder; once it is marked ready
+for review, the check runs strict and an unfilled record fails. Judgment stays
+human: CI proves the block is present and well-formed, the approver confirms the
+verification behind it was real (section 10).
+
+The block is defined by this spec and layered above the template body, so the
+methodology corpus and its templates are not modified (P-2, NG-4).
+
 ## 17. Open questions and future work
 
 - Filing issues into project repos. A separate, opt-in tool to create the
@@ -569,6 +618,8 @@ The verification profile:
 [criteria]: https://github.com/cncf/techdocs/blob/main/docs/analysis/criteria.md
 [howto]: https://github.com/cncf/techdocs/blob/main/docs/analysis/howto.md
 [analysis-dir]: https://github.com/cncf/techdocs/tree/main/docs/analysis
+[contribute-site-sync]:
+  https://github.com/cncf/techdocs/blob/main/.github/workflows/trigger-contribute-site-netlify.yml
 [copilot-blog]:
   https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers/
 [cloud-agent-about]:
