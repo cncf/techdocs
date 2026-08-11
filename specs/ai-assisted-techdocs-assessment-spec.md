@@ -592,6 +592,61 @@ verification behind it was real (section 10).
 The block is defined by this spec and layered above the template body, so the
 methodology corpus and its templates are not modified (P-2, NG-4).
 
+## 16. Build plan
+
+The system is built the way it runs. Each component in section 13 starts as a
+tracking issue in cncf/techdocs, is drafted by the cloud agent where a file is
+the deliverable, and lands through a human-reviewed PR: the same
+issue-to-draft-to-review loop the assessments will use (section 5). Building the
+system with its own loop is the point: by the time the first project is
+assessed, every role has rehearsed and the platform's behavior has been observed
+rather than assumed. The earliest steps run before the instructions and
+environment components exist; the loop holds anyway, just with less scaffolding.
+
+Preflight, before any build step: the administrator/platform owner works through
+the preconditions in section 11: cloud agent and MCP policies enabled for
+cncf/techdocs, MCP left at its read-only default, writer access confirmed, and
+the credit cap reviewed. These are organization and repository settings, not
+files, so this step is recorded in its tracking issue rather than a PR.
+
+The build steps, in dependency order, each sized to one issue:
+
+1. Labels (`.github/settings.yml`). Deliberately trivial first delegation: its
+   real product is observed platform behavior: the agent's branch naming, what
+   access review-comment revisions require, whether Actions runs on agent PRs
+   wait for approval, and the token's effective scopes. Done when the labels
+   exist and the observations are recorded against the section 17 checks.
+2. Repository instructions (`.github/copilot-instructions.md`). Ground rules for
+   any agent work in this repository, carrying the section 8 discipline. Done
+   when merged after review against sections 8 and 14.
+3. Intake template (`.github/ISSUE_TEMPLATE/assessment-request.yml`). Done when
+   a dry-run request files cleanly, collecting the section 7 fields, the
+   project's documentation domains for the firewall allowlist (section 11), and
+   the up-front AI disclosure (HC-6).
+4. Environment setup (`.github/workflows/copilot-setup-steps.yml`). Done when an
+   agent session's logs show the prepared environment.
+5. Data-collection scripts (`scripts/assessment/`). Done when running the
+   committed command against a sample project twice yields the same committed
+   outputs (HC-5).
+6. Provenance check (workflow plus `scripts/assessment/`). Done when a fixture
+   PR with a malformed or unfilled block fails, a well-formed one passes, and
+   the draft-versus-ready leniency behaves as section 15 specifies.
+7. Agent profiles (`.github/agents/`, one PR per profile). The three drafters,
+   then the verifier (section 14). Done when each profile, run against a
+   fixture, writes only its declared outputs with the provenance block present,
+   and the verifier's report correctly flags a planted unsupported claim.
+8. Phase-advance workflow (`.github/workflows/assessment-phase.yml`). Done when
+   a merged fixture PR opens the next phase's tracking issue, linked and
+   unassigned (section 12).
+9. Approver-independence check (advisory; a build-plan candidate from section
+   12). Comments when a phase's approver also drafted or reviewed it; never
+   blocks. Done when it flags a staged violation, or explicitly deferred.
+
+The build is complete when steps 1 through 8 are merged, the section 17
+build-time checks have recorded answers, and one end-to-end walkthrough of the
+section 5 lifecycle on a fixture project has run clean. Then the pilot is
+chosen, deliberately, per the caveat in section 10.
+
 ## 17. Open questions and future work
 
 - Filing issues into project repos. A separate, opt-in tool to create the
