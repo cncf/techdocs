@@ -135,8 +135,9 @@ the labor. AI drafts, humans decide, all in the open.
   required, and a project's disagreement is recorded in the deliverable rather
   than allowed to block or soften it. Merging phase N makes phase N+1 eligible;
   a technical writer still starts it (section 5).
-- HC-3: Deliverables are files in cncf/techdocs. Including the issue backlog
-  (one file per proposed issue). Nothing is filed to an external repo.
+- HC-3: Deliverables are files in cncf/techdocs. Including the issue backlog, in
+  whatever layout the methodology prescribes (section 6 proposes one file per
+  issue). Nothing is filed to an external repo.
 - HC-4: No unattended autonomy. Repository content the agent produces lands only
   through a human-reviewed PR, and the agent never self-merges. Deterministic
   lifecycle bookkeeping fired by a human decision, such as the merge-triggered
@@ -253,7 +254,10 @@ end up slower than doing it by hand.
   script (NG-2, section 17), which can batch-create issues with `gh` instead of
   someone copy-pasting from a large combined file; it also keeps any single file
   readable. This is raised as a proposal for discussion; the methodology docs
-  are not changed by this PR.
+  are not changed by this PR. The order matters (P-2): the agent follows the
+  methodology as it stands, so until the change is accepted there, the backlog
+  drafter produces the single combined file, and the split layout waits for the
+  methodology, never the other way around.
 
 Every deliverable carries a header noting it was AI-drafted and human-reviewed
 (HC-6).
@@ -542,7 +546,9 @@ points at the methodology, it never restates it (P-2).
 - Deliverables: `analyses/<year>/<project>/`. The existing convention:
   `analysis.md`, `implementation.md`, and the backlog.
 - Backlog files: `analyses/<year>/<project>/issues/`. One file per proposed
-  issue plus an index, if the section 6 proposal is accepted.
+  issue plus an index, if the section 6 proposal is accepted into the
+  methodology first; until then, the combined file the methodology prescribes
+  (P-2).
 
 Notes:
 
