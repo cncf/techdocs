@@ -618,9 +618,10 @@ Its fields, each a labeled bullet:
 
 - Disclosure. A fixed sentence with two forms matching the deliverable's state
   (HC-6). The draft form: drafted by an AI agent, human review pending. The
-  final form: drafted by an AI agent and reviewed, verified, and approved by
-  humans. A draft asserting the final form would be claiming a review that has
-  not happened yet.
+  final form: drafted by an AI agent, reviewed and verified by humans. Each form
+  asserts only what has already happened at the moment it may appear; approval
+  is not claimed in the sentence because it is evidenced by the PR record
+  itself, which no body text can substitute for.
 - Drafter. The agent profile that produced the draft, by name and ref (section
   14).
 - Verifier. The verifier profile, by name and ref, and a link to its report on
@@ -642,7 +643,8 @@ link is added once the verifier's pass runs, and the record starts as a marked
 placeholder that only the reviewer fills; a drafter asserting its own work
 verified would be a fabrication about fabrication-checking. The disclosure's
 flip from draft form to final form belongs to review for the same reason: it
-happens when the PR is marked ready.
+happens when the PR is marked ready, at which point the review and verification
+it asserts have both occurred.
 
 The provenance check (section 13) enforces the block in CI: a deliverable PR
 fails if the block is missing, a field is absent or malformed, the methodology
