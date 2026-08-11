@@ -339,11 +339,13 @@ The system is acceptable when, on a pilot assessment:
 
 - Quality. The deliverable is scored against an assessment-quality rubric (its
   definition is an open item; section 17). Verification is not a token sample:
-  for the pilot, the reviewer checks every rating-bearing finding, biased first
-  toward the highest-risk claims, and records in the deliverable which findings
-  were verified (HC-7); any cheaper sampling rule is future work, set with the
-  rubric (section 17). Final sign-off is given by the approver (section 4), who
-  was neither the drafter nor a reviewer of that phase, to avoid signing off on
+  for the pilot, the reviewer checks every rating-bearing finding in the
+  analysis and, in the phases that carry no ratings, every claim about the
+  project's current state that a recommendation stands on, biased first toward
+  the highest-risk claims, and records in the deliverable which findings were
+  verified (HC-7); any cheaper sampling rule is future work, set with the rubric
+  (section 17). Final sign-off is given by the approver (section 4), who was
+  neither the drafter nor a reviewer of that phase, to avoid signing off on
   one's own work. The bar is parity with the human baselines (Flatcar, Knative,
   Helm).
 - Safety. Zero writes outside cncf/techdocs, audited from the platform's
@@ -660,15 +662,17 @@ Its fields, each a labeled bullet:
   their outputs, so every quantitative claim traces to a reproducible step
   (HC-5), plus the commit SHA of each assessed repository at collection time and
   the retrieval date for each live site. The pins record which state of the
-  sources each claim describes: the reviewer verifies findings against what the
-  drafter actually saw (section 10), and when the sources move on, drift reads
-  as drift rather than error. They promise no re-run of the assessment itself,
-  which is judgment: two honest runs converge without matching.
-- Verification record. Which rating-bearing findings the reviewer verified
-  against source, satisfying the section 10 floor (HC-7).
+  sources each claim describes: a pinned repository lets the reviewer check out
+  exactly what the drafter saw (section 10), a dated site bounds when the claim
+  held, and when the sources move on, drift reads as drift rather than error.
+  They promise no re-run of the assessment itself, which is judgment: two honest
+  runs converge without matching.
+- Verification record. Which findings the reviewer verified against source,
+  satisfying the section 10 floor (HC-7): the rating-bearing findings in phase
+  A, the claims grounding the recommendations in phases B and C.
 
 The fields have owners. The drafter emits the block with everything it can know:
-disclosure, its own profile, the methodology ref, and the data paths. The
+disclosure, its own profile, the methodology SHA, and the data paths. The
 verifier field and the verification record belong to the review step: the report
 link is added once the verifier's pass runs, and the record starts as a marked
 placeholder that only the reviewer fills; a drafter asserting its own work
