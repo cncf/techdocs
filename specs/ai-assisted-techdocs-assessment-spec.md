@@ -515,12 +515,13 @@ points at the methodology, it never restates it (P-2).
   repository's existing label set.
 - Agent-configuration snapshot: `scripts/assessment/`. The agent's effective
   configuration (MCP servers, firewall state, and custom allowlist) is readable
-  from a documented endpoint, so a deterministic script captures it alongside
-  each assessment's data outputs (HC-5): what the agent could reach when a draft
-  was produced is committed evidence. The organization audit log remains the
-  authoritative history of who changed a setting and when. The endpoint does not
-  expose organization-level allowlist entries; the administrator/platform owner
-  records those by hand when they exist.
+  from a [documented endpoint][cloud-agent-config-api], so a deterministic
+  script captures it alongside each assessment's data outputs (HC-5): what the
+  agent could reach when a draft was produced is committed evidence. The
+  organization audit log remains the authoritative history of who changed a
+  setting and when. The endpoint does not expose organization-level allowlist
+  entries; the administrator/platform owner records those by hand when they
+  exist.
 - Deliverables: `analyses/<year>/<project>/`. The existing convention:
   `analysis.md`, `implementation.md`, and the backlog.
 - Backlog files: `analyses/<year>/<project>/issues/`. One file per proposed
@@ -737,7 +738,7 @@ chosen, deliberately, per the caveat in section 10.
   pin a model and effort level, or model choice rides entirely on the per-task
   picker (section 14); and whether the cloud-agent configuration read endpoint,
   in public preview as of this writing, returns the fields the snapshot needs
-  (section 13).
+  and what credential the snapshot script must hold to call it (section 13).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one. It would be human-run with its own credential and the project's explicit
@@ -753,7 +754,9 @@ chosen, deliberately, per the caveat in section 10.
 - Assessment-quality rubric. Define the meta-rubric that scores an assessment's
   quality, distinct from `criteria.md` (which scores a project's docs), and
   validate it by scoring the Flatcar, Knative, and Helm baselines to set a
-  reference band (sections 2, 10).
+  reference band (sections 2, 10). This work also sets any post-pilot sampling
+  rule for verification, replacing the pilot's check-every-finding floor
+  (section 10).
 - Small-team staffing. Sustaining the approver separation (a phase's approver
   must be neither the drafter nor a reviewer of that phase; sections 4, 10) when
   the same few writers wear multiple hats.
@@ -778,3 +781,5 @@ chosen, deliberately, per the caveat in section 10.
   https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment
 [cloud-agent-access]:
   https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management
+[cloud-agent-config-api]:
+  https://docs.github.com/en/rest/copilot/copilot-cloud-agent-management
