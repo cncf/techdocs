@@ -64,14 +64,18 @@ compress the labor. AI drafts, humans decide, all in the open.
   see HC-1 in section 3.)
 - NG-2: No auto-filing of issues. The backlog is delivered as files in
   cncf/techdocs. Filing them as real issues in project repos is future work (a
-  separate, opt-in script), explicitly out of scope now.
+  separate, opt-in script; see section 11), explicitly out of scope now. The
+  per-file backlog format proposed in section 6 is chosen partly to make that
+  future script straightforward.
 - NG-3: Not a replacement for human judgment. No unattended, end-to-end
   autonomous assessments; no bypassing writer review or stakeholder sign-off.
-- NG-4: Not a change to the criteria or methodology. We automate the existing
-  method. Evolving the criteria (for example AI-readiness) is tracked separately
-  (see PR #357). The one exception P-2 allows is editorial change to keep the
-  methodology docs machine-consumable (formatting, structure); changes to the
-  criteria themselves are out of scope.
+- NG-4: Not a change to the criteria or evaluation method. We automate the
+  existing assessment method; the criteria and how a project is evaluated are
+  unchanged. Evolving the criteria (for example AI-readiness) is tracked
+  separately (see PR #357). This spec does propose one deliberate, limited
+  structural change to the methodology: the issue-backlog file layout (section
+  6), framed as a proposal for discussion, not a silent change. Editorial changes
+  to keep the methodology docs machine-consumable (P-2) are also allowed.
 - NG-5: Not a public self-serve tool. Scope is CNCF projects assessed through
   the defined process, not arbitrary external users.
 
@@ -166,9 +170,10 @@ tool), and one actor may fill more than one role.
 - Writers. The audience for the issue backlog: community members who take up
   the resulting issues and do the documentation work.
 - Approver. Gives each phase its independent quality sign-off and merges the PR.
-  Any qualified technical writer who did not draft that phase, so no one signs
-  off on their own work and the role spreads across the team instead of
-  bottlenecking. Confirms the verification in section 10 was done.
+  A qualified technical writer who was neither the drafter nor a reviewer of that
+  phase, so no one signs off on work they produced or refined, and the role
+  spreads across the team instead of bottlenecking. Confirms the verification in
+  section 10 was done.
 - Platform owner. Owns the machine itself: the prompts, the operational layer,
   and the scoped credential (HC-1). Sets policy, handles aborts (section 5), and
   arbitrates a reviewer/stakeholder dispute (HC-2). A central role, kept out of
@@ -201,10 +206,21 @@ it by hand.
 
 - Phase A: Assessment (`analysis.md`). Detailed first.
 - Phase B: Implementation plan (`implementation.md`).
-- Phase C: Issue backlog (`issues/*.md`, one file per issue, each scoped to
+- Phase C: Issue backlog. Each proposed issue is a separate file scoped to
   roughly 4 hours for someone experienced with the project and comfortable
-  writing). Effort estimates are the agent's first pass and are sanity-checked
-  by the reviewer; agent estimates are not reliable on their own.
+  writing, plus an umbrella/index file that lists them. Effort estimates are the
+  agent's first pass and are sanity-checked by the reviewer; agent estimates are
+  not reliable on their own.
+
+  Proposed methodology change. The current method delivers the backlog as one
+  `_PROJECT_-issues.md` file (`howto.md`, `templates/issues-list.md`,
+  `templates/issue.md`). This spec proposes splitting the individual issues into
+  one file each while keeping a single umbrella/index document. Rationale: a
+  directory of one-issue-per-file is the natural input for the future filing
+  script (NG-2, section 11), which can batch-create issues with `gh` instead of
+  someone copy-pasting from a large combined file; it also keeps any single file
+  readable. This is raised as a proposal for discussion; the methodology docs are
+  not changed by this PR.
 
 Every deliverable carries a header noting it was AI-drafted and human-reviewed
 (HC-6).
@@ -287,9 +303,9 @@ The system is acceptable when, on a pilot assessment:
   the reviewer checks every rating-bearing finding, or at minimum a set number
   per criterion, biased toward the highest-risk claims, and records in the
   deliverable which findings were verified (HC-7). Final sign-off is given by the
-  approver (section 4), a writer who did not draft that phase, to avoid grading
-  one's own work. The bar is parity with the human baselines (Flatcar, Knative,
-  Helm).
+  approver (section 4), who was neither the drafter nor a reviewer of that phase,
+  to avoid signing off on one's own work. The bar is parity with the human
+  baselines (Flatcar, Knative, Helm).
 - Cycle time. Measured against the time decomposition from G-1 (writer working
   time versus waiting on people). The roughly 2-week target is evaluated as a
   hypothesis; missing it prompts a look at which gates or waits dominate, not a
@@ -321,8 +337,8 @@ the choice, and broaden before drawing general conclusions.
   validate it by scoring the Flatcar, Knative, and Helm baselines to set a
   reference band (sections 2, 10).
 - Small-team staffing. Sustaining the approver separation (a phase's approver
-  must be a writer who did not draft it; sections 4, 10) when the same few
-  writers wear multiple hats.
+  must be neither the drafter nor a reviewer of that phase; sections 4, 10) when
+  the same few writers wear multiple hats.
 - Scaling. Running assessments for several projects concurrently.
 
 ---
