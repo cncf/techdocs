@@ -635,7 +635,12 @@ Its fields, each a labeled bullet:
   deliverable: one assessment is measured against one methodology.
 - Data. The data-collection commands that were run and the committed paths of
   their outputs, so every quantitative claim traces to a reproducible step
-  (HC-5).
+  (HC-5), plus the commit SHA of each assessed repository at collection time and
+  the retrieval date for each live site. The pins record which state of the
+  sources each claim describes: the reviewer verifies findings against what the
+  drafter actually saw (section 10), and when the sources move on, drift reads
+  as drift rather than error. They promise no re-run of the assessment itself,
+  which is judgment: two honest runs converge without matching.
 - Verification record. Which rating-bearing findings the reviewer verified
   against source, satisfying the section 10 floor (HC-7).
 
