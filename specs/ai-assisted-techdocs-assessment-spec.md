@@ -586,6 +586,11 @@ Rules common to all profiles, in tension-order with Part I:
 - Provenance. Every draft opens with the provenance block (section 15).
 - Least tools. A profile's tool list is the minimum its phase needs; none may
   include a write-capable MCP tool (section 11).
+- Explicit selection only. By default the platform may auto-select a custom
+  agent from task context [custom-agents-config], which would let an unrelated
+  delegation in cncf/techdocs pull in an assessment profile. Every profile sets
+  `disable-model-invocation`, so a profile runs only when the writer selects it
+  (P-1, section 12).
 
 The three drafting profiles:
 
