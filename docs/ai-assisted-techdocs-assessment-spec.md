@@ -120,8 +120,8 @@ the labor. AI drafts, humans decide, all in the open.
   research (web, public repos), but must never write to any GitHub resource
   outside cncf/techdocs: no files, PRs, issues, comments, reviews, labels,
   releases, or workflow runs. This is enforced architecturally, not by
-  instruction: the agent runs with a credential scoped to cncf/techdocs only, so
-  a write elsewhere is impossible, not merely disallowed. Full design in
+  instruction: the agent runs inside a write boundary scoped to cncf/techdocs,
+  so a write elsewhere is impossible, not merely disallowed. Full design in
   section 8.
 - HC-2: Phase gating. Each phase (assessment, implementation, backlog) is
   reviewed by a technical writer, then goes to stakeholders before the next
@@ -180,9 +180,9 @@ tool), and one actor may fill more than one role.
   spreads across the team instead of bottlenecking. Confirms the verification in
   section 10 was done.
 - Platform owner. Owns the machine itself: the prompts, the operational layer,
-  and the scoped credential (HC-1). Sets policy, handles aborts (section 5), and
-  arbitrates a reviewer/stakeholder dispute (HC-2). A central role, kept out of
-  the per-assessment critical path.
+  and the configuration that enforces the write boundary (HC-1). Sets policy,
+  handles aborts (section 5), and arbitrates a reviewer/stakeholder dispute
+  (HC-2). A central role, kept out of the per-assessment critical path.
 
 ## 5. Lifecycle
 
@@ -253,11 +253,11 @@ assistance-program intake, so we don't create a competing front door.
 
 ## 8. Safety and guardrails
 
-HC-1 is guaranteed primarily by credential scoping: the agent runs under a
-credential (fine-grained token or GitHub App) that can write only to
-cncf/techdocs, so writes elsewhere are impossible, not merely disallowed. Tool
-allowlisting (reads and web research permitted; GitHub-write tools constrained
-to the one repo) and the human review gates are defense in depth.
+HC-1 is guaranteed primarily by an enforced write boundary: the agent can write
+only to cncf/techdocs, so writes elsewhere are impossible, not merely
+disallowed. Tool allowlisting (reads and web research permitted; GitHub-write
+tools constrained to the one repo) and the human review gates are defense in
+depth.
 
 Threat cases:
 
@@ -276,9 +276,9 @@ Threat cases:
 4. Self-merge or unattended change. Prevented by human-reviewed PRs; the agent
    never merges (HC-4).
 
-The credential mechanism (fine-grained PAT versus GitHub App, both scoped to
-cncf/techdocs) is an implementation choice; the required property is that the
-write boundary is enforced, not advisory (P-3).
+The enforcement mechanism is an implementation choice; the required property is
+that the write boundary is enforced, not advisory (P-3). The chosen binding and
+its documented guarantees are specified in Part II (section 11).
 
 ## 9. Grounding in methodology
 
@@ -315,8 +315,8 @@ The system is acceptable when, on a pilot assessment:
   time versus waiting on people). The roughly 2-week target is evaluated as a
   hypothesis; missing it prompts a look at which gates or waits dominate, not a
   quiet redefinition.
-- Safety. Zero writes outside cncf/techdocs, audited from the scoped
-  credential's activity, and no unmitigated prompt-injection incident.
+- Safety. Zero writes outside cncf/techdocs, audited from the platform's
+  activity records, and no unmitigated prompt-injection incident.
 - Completeness and reproducibility. All three deliverables produced; every
   quantitative claim reproducible from a committed step (HC-5); AI involvement
   disclosed (HC-6).
@@ -342,6 +342,58 @@ from public documentation is treated as a build-time check (section 17), not
 assumed. Part II covers, in order: the platform binding, lifecycle bindings,
 components and repository layout, agent definitions, the provenance block, and
 the build plan.
+
+## 11. Platform binding
+
+The system runs on the [GitHub Copilot cloud agent][cloud-agent-about] operating
+inside cncf/techdocs. This binding is chosen because the platform's documented
+containment model satisfies HC-1 as shipped, rather than requiring credential
+infrastructure we build and maintain ourselves.
+
+- The write boundary (HC-1). The cloud agent can only make changes in the
+  repository where its task was started, on a single branch, through a single
+  pull request per task, using a token the platform issues for that run. The
+  built-in GitHub MCP server connects with read-only access to the current
+  repository by default. Together these provide the enforced write boundary Part
+  I requires; we mint and manage no credential of our own. The platform does not
+  publicly enumerate the agent token's exact permission scopes, so confirming
+  them empirically is a build-time check (section 17).
+- Outbound network. The agent's internet access is governed by a [default-deny
+  firewall][cloud-agent-firewall] with an allowlist. The default allowlist
+  covers package registries and GitHub content domains, not the general web, so
+  reading an assessed project's live documentation site requires an explicit
+  allowlist entry. We treat this as a feature: the intake (section 7) collects
+  the project's documentation domains, and the platform owner adds them at
+  acceptance, making each assessment's external reads an explicit, auditable,
+  reversible contract. Requests the firewall blocks are disclosed automatically
+  in the pull request, which feeds the safety audit in section 10.
+- MCP policy. The firewall does not apply to MCP servers, and MCP tools are the
+  one documented mechanism that can widen the agent's write reach, so [MCP
+  configuration][cloud-agent-mcp] is the control surface that matters most.
+  Policy: the GitHub MCP server stays at its read-only default; any additional
+  MCP server must be read-only with its tools explicitly allowlisted; no
+  write-capable MCP tool is permitted. MCP configuration lives in repository
+  settings rather than in a versioned file, so the platform owner records the
+  current configuration in the operational docs whenever it changes.
+- Execution environment. The agent runs in an ephemeral [GitHub Actions-based
+  environment][cloud-agent-env] with a hard session cap (currently 59 minutes).
+  That cap shapes the design: deterministic data collection (section 13) runs as
+  committed scripts rather than inside drafting sessions, so the agent spends
+  its session on judgment, not inventory. The environment is prepared by
+  `.github/workflows/copilot-setup-steps.yml`.
+- Delegation is permission-gated. Only users with [write access to the
+  repository][cloud-agent-access] can delegate work to the agent, which lets the
+  lifecycle enforce P-1 with platform permissions instead of process discipline
+  (section 12). Scheduled or event-triggered agent runs are not available on
+  public repositories, which costs us nothing: every run is human-started by
+  design (P-1).
+- Preconditions. For CNCF's GitHub organization, the cloud agent and MCP
+  policies are disabled by default and must be enabled by organization
+  administrators, with repository access granted for cncf/techdocs. Usage draws
+  on the AI credits pooled across CNCF's Copilot Enterprise seats plus GitHub
+  Actions minutes, and spending beyond the included credits is enabled by
+  default at the organization level, so administrators should review the cap.
+  These preconditions open the build plan (section 16).
 
 ## 17. Open questions and future work
 
@@ -371,3 +423,13 @@ the build plan.
 [analysis-dir]: https://github.com/cncf/techdocs/tree/main/docs/analysis
 [copilot-blog]:
   https://contribute.cncf.io/blog/2025/12/16/github-copilot-enterprise-for-maintainers/
+[cloud-agent-about]:
+  https://docs.github.com/en/copilot/concepts/agents/cloud-agent/about-cloud-agent
+[cloud-agent-firewall]:
+  https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-the-firewall
+[cloud-agent-mcp]:
+  https://docs.github.com/en/copilot/concepts/agents/cloud-agent/mcp-and-cloud-agent
+[cloud-agent-env]:
+  https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/customize-the-agent-environment
+[cloud-agent-access]:
+  https://docs.github.com/en/copilot/concepts/agents/cloud-agent/access-management
