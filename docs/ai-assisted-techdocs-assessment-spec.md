@@ -146,8 +146,6 @@ the labor. AI drafts, humans decide, all in the open.
   against the actual project sources, not accepted because they read plausibly.
   The verification method is in section 10.
 
----
-
 ## 4. Roles
 
 Roles are defined by function. Each is filled by an actor (a person, group, or
@@ -394,6 +392,50 @@ infrastructure we build and maintain ourselves.
   Actions minutes, and spending beyond the included credits is enabled by
   default at the organization level, so administrators should review the cap.
   These preconditions open the build plan (section 16).
+
+## 12. Lifecycle bindings
+
+Each lifecycle step (section 5) binds to a native GitHub primitive, so the
+workflow needs no orchestration layer of its own. An assessment's state is
+always readable from its issues and pull requests.
+
+- Request (step 1): an issue. Phase A's request is the intake issue (section 7);
+  phase B's and C's tracking issues are opened automatically when the previous
+  phase merges (see Merge below). An issue may sit unassigned indefinitely;
+  eligibility is not work.
+- Accept (step 2): assignment. A writer accepts by assigning the issue to
+  Copilot, adding themselves as an assignee to record who accepted; they act as
+  the phase's reviewer. Because only users with write access can delegate to the
+  agent (section 11), P-1 is enforced by repository permissions, not convention.
+- Draft (step 3): a draft pull request. The agent works on its own branch in
+  cncf/techdocs and opens a draft PR linked to the tracking issue, carrying the
+  provenance block (section 15).
+- Review (step 4): PR review comments. The reviewer refines the draft in
+  conversation, handing revisions back by mentioning `@copilot` in review
+  comments, and performs the verification required by section 10. Whether
+  mention-triggered revisions require write access is a build-time check
+  (section 17).
+- Stakeholder review (step 5): mention, not access. The reviewer marks the PR
+  ready for review and mentions the stakeholders named in the intake.
+  cncf/techdocs is public, so stakeholders can review and comment without any
+  special access; formal review requests are limited to collaborators, which is
+  why the binding is a mention plus a factual-accuracy confirmation recorded on
+  the PR, with any disagreement recorded in the deliverable itself (HC-2).
+- Merge (step 6): merge plus one workflow. The approver (section 4) merges. A
+  merge-triggered GitHub Actions workflow (standard `GITHUB_TOKEN` with
+  `issues: write`) then opens the next phase's tracking issue, linking the
+  intake and the merged deliverable, and assigns no one: eligible, not started
+  (HC-2, P-1). Approver independence cannot be natively enforced by GitHub; it
+  is verifiable from the public PR record, and an advisory CI check that flags a
+  violation is a build-plan candidate (section 16).
+- Failure and abort leave a trail. Discarding a draft (section 5) is closing its
+  PR with the reason recorded in a comment; the tracking issue stays open for a
+  restart or a hand-written phase. A platform-owner abort closes the tracking
+  issue, with the rationale recorded there.
+- The timeline is the measurement. Gate transitions (opened, accepted, draft PR,
+  ready, approved, merged) are timestamped in issue and PR history, so the
+  pilot's cycle-time decomposition (section 10) is harvested from the GitHub
+  timeline rather than a separate log.
 
 ## 17. Open questions and future work
 
