@@ -217,9 +217,10 @@ Each phase runs the same six steps:
    drafter takes data-collection outputs as input (section 14), delegation
    produces them first: they are generated deterministically at session start,
    before any model runs, and committed with the draft as its evidence (HC-5).
-4. Review. The verifier's fact-check pass runs first. The reviewer then refines
-   the draft in conversation with the drafter, verifies findings against source
-   (HC-7), and marks it ready.
+4. Review. The verifier's fact-check pass runs first; the reviewer may skip it
+   deliberately, recording why (section 12). The reviewer then refines the draft
+   in conversation with the drafter, verifies findings against source (HC-7),
+   and marks it ready.
 5. Stakeholder review. Stakeholders confirm factual accuracy (required to
    advance) and record any disagreement with the conclusions (not required;
    HC-2).
@@ -453,58 +454,113 @@ infrastructure we build and maintain ourselves.
 
 ## 12. Lifecycle bindings
 
-Each lifecycle step (section 5) binds to a native GitHub primitive, so the
-workflow needs no orchestration layer of its own. An assessment's state is
-always readable from its issues and pull requests.
+Each lifecycle step (section 5) binds to a native GitHub primitive, and the
+workflow keeps no state of its own: an assessment's state is always readable
+from its issues and pull requests.
+
+The human acts that move a phase are issued as slash commands (`/accept`,
+`/decline`, `/verify`, `/ready`, `/confirm`, `/discard`, `/skip-implementation`)
+written as ordinary comments, following [Kubernetes issue
+triage][k8s-issue-triage] practice and the comment-command automation already
+running in [cncf/mentoring][mentoring-commands]. An `issue_comment` workflow
+parses the command, checks the commenter against the role bindings below, and
+performs the corresponding native operations, so a command grants no power the
+commenter does not already hold. Commands are deterministic bookkeeping fired by
+a recorded human decision (HC-4); the one that starts a model run, `/verify`, is
+an explicit delegation by the phase's reviewer (P-1). Labels applied by the
+commands and workflows record where each assessment stands: an issue search
+filtered by phase label is the portfolio view, with no dashboard to build.
 
 - Request (step 1): an issue. Phase A's request is the intake issue (section 7);
   phase B's and C's tracking issues are opened automatically when the previous
-  phase merges (see Merge below). An issue may sit unassigned indefinitely;
-  eligibility is not work.
-- Accept (step 2): assignment. A writer accepts by assigning the issue to
-  Copilot, adding themselves as an assignee to record who accepted; they act as
-  the phase's reviewer. For phase A, accepting includes mentioning the named
-  project contacts on the intake issue, so the AI disclosure reaches the project
-  before drafting starts, whoever filed the request (HC-6, section 7). Because
-  only users with write access can delegate to the agent (section 11), P-1 is
-  enforced by repository permissions, not convention.
+  phase merges (see Merge below). A request issue opens labeled `needs-triage`,
+  applied by the intake form or by the phase-advance workflow. An issue may sit
+  unassigned indefinitely; eligibility is not work. The intake issue doubles as
+  the assessment's umbrella issue, open end to end: every phase's tracking issue
+  and pull request links back to it, so cross-references accumulate on its
+  timeline; its labels carry the current phase; and the workflows post each
+  transition to it (see Merge below). Where an assessment stands, and what has
+  to happen next, is readable from that one issue. (The backlog's umbrella,
+  section 6, is the same pattern applied to the resulting doc work; a different
+  artifact.)
+- Accept (step 2): the `/accept` command. A writer accepts by commenting
+  `/accept` on the request issue: the workflow assigns the issue to them,
+  recording who accepted and who acts as the phase's reviewer, and swaps
+  `needs-triage` for `triage/accepted`. For phase A, the same command posts the
+  mention of the named project contacts on the intake issue, so the AI
+  disclosure reaches the project before drafting starts, whoever filed the
+  request, and the step cannot be forgotten (HC-6, section 7). The writer then
+  delegates to the agent directly, selecting the phase's drafting profile
+  (section 14); the command does not start the agent. Because only users with
+  write access can delegate (section 11), P-1 is enforced by repository
+  permissions, not convention, and the workflow refuses `/accept` from a
+  commenter without write access. For phases B and C, whose tracking issues are
+  separate from the intake, the workflow also notes the acceptance on the intake
+  issue: an unaccepted eligible phase is the stall mode, so the umbrella shows
+  when work actually started and by whom. The triage verdict has a counterpart:
+  a writer declines an unaccepted request with `/decline <reason>`, under the
+  same authorization as `/accept`; the workflow labels it `triage/declined`,
+  posts the reason, and closes the issue as not planned. Declining the intake
+  means the assessment never starts. Declining a phase B or C tracking issue
+  ends the assessment there, noted on the intake issue, which the workflow
+  closes, so an open intake still means work in flight. A project's request to
+  stop is honored the same way: the writer records a decline rather than leaving
+  the request to sit unanswered.
 - Draft (step 3): a draft pull request. The agent works on its own branch in
   cncf/techdocs and opens a draft PR linked to the tracking issue, carrying the
   provenance block (section 15).
 - Review (step 4): PR review comments. The reviewer triggers the verifier's pass
-  on the draft PR; its report lands as a PR comment, part of the same public
-  record. The reviewer then refines the draft in conversation, handing revisions
-  back by mentioning `@copilot` in review comments, and performs the
-  verification required by section 10. Whether mention-triggered revisions
-  require write access, and how a verifier run is invoked against an existing
-  PR, are build-time checks (section 17).
-- Stakeholder review (step 5): mention, not access. The reviewer marks the PR
-  ready for review and mentions the stakeholders named in the intake. The
-  draft-to-ready flip carries the real-world meaning: draft while the assessing
-  team is still working the deliverable over, ready when they would put it in
-  front of the requesting project. cncf/techdocs is public, so stakeholders can
-  review and comment without any special access; formal review requests are
-  limited to collaborators, which is why the binding is a mention plus a
-  factual-accuracy confirmation recorded on the PR, with any disagreement
-  recorded in the deliverable itself (HC-2).
+  by commenting `/verify` on the draft PR; its report lands as a PR comment,
+  part of the same public record, and the workflow applies the `verified` label
+  to the PR when it does. The label means the verification this PR needs is
+  satisfied, not that the agent ran: a reviewer who deliberately skips the pass
+  (section 5), judging the human check sufficient or the verifier unavailable,
+  applies the label by hand with the reason in a comment, and the timeline
+  records who and when. The label is the gate: `/ready` refuses without it, and
+  the strict provenance check fails a ready PR that lacks it (section 15). The
+  reviewer refines the draft in conversation, handing revisions back by
+  mentioning `@copilot` in review comments, and performs the verification
+  required by section 10. Whether mention-triggered revisions require write
+  access, and whether a comment-triggered workflow can start the verifier
+  against an existing PR, as `/verify` requires, are build-time checks (section
+  17).
+- Stakeholder review (step 5): mention, not access. The reviewer comments
+  `/ready`: the workflow marks the PR ready for review and mentions the
+  stakeholders named in the intake, one act instead of two. The draft-to-ready
+  flip carries the real-world meaning: draft while the assessing team is still
+  working the deliverable over, ready when they would put it in front of the
+  requesting project. cncf/techdocs is public, so stakeholders can review and
+  comment without any special access; formal review requests are limited to
+  collaborators, which is why the binding is a mention plus a factual-accuracy
+  confirmation, recorded by the stakeholder commenting `/confirm`, which the
+  workflow checks against the names in the intake, no repository access
+  required. Any disagreement with the conclusions is recorded in the deliverable
+  itself (HC-2).
 - Merge (step 6): merge plus one workflow. The approver (section 4) merges. A
   merge-triggered GitHub Actions workflow (standard `GITHUB_TOKEN` with
-  `issues: write`) then opens the next phase's tracking issue, linking the
-  intake and the merged deliverable, and assigns no one: eligible, not started
-  (HC-2, P-1). The phase B skip decision (section 6) is recorded as a label on
-  the phase A PR, which the workflow reads to open phase C's tracking issue
-  instead. Approver independence cannot be natively enforced by GitHub; it is
-  verifiable from the public PR record, and an advisory CI check that flags a
+  `issues: write`) then opens the next phase's tracking issue, labeled for its
+  phase and `needs-triage`, linking the intake and the merged deliverable, and
+  assigns no one: eligible, not started (HC-2, P-1). The phase B skip decision
+  (section 6) is recorded with `/skip-implementation` on the phase A PR,
+  applying the label the workflow reads to open phase C's tracking issue
+  instead. The same workflow keeps the umbrella current: it posts the transition
+  on the intake issue, what merged and what is now eligible with the command
+  that starts it, and swaps the intake's phase label. The final phase's merge
+  closes the intake issue: an open intake is an assessment in flight, a closed
+  one is done. Approver independence cannot be natively enforced by GitHub; it
+  is verifiable from the public PR record, and an advisory CI check that flags a
   violation is a build-plan candidate (section 16).
-- Failure and abort leave a trail. Discarding a draft (section 5) is closing its
-  PR with the reason recorded in a comment; the tracking issue stays open for a
-  restart or a hand-written phase. An administrator/platform owner abort closes
-  the tracking issue, with the rationale recorded there.
+- Failure and abort leave a trail. The reviewer discards a draft (section 5)
+  with `/discard <reason>`, which closes the PR with the reason recorded in the
+  command comment and notes the discard on the intake issue; the tracking issue
+  stays open for a restart or a hand-written phase. An administrator/platform
+  owner abort closes the tracking issue, with the rationale recorded there.
 - The timeline records elapsed time. Gate transitions (opened, accepted, draft
   PR, ready, approved, merged) are timestamped in issue and PR history, so how
   long a pilot took, and where the time went, can be read from the GitHub
-  timeline after the fact. This reports on G-1 without adding a log or an
-  acceptance gate.
+  timeline after the fact. The intake issue aggregates the phase boundaries, so
+  the reading starts from one place. This reports on G-1 without adding a log or
+  an acceptance gate.
 
 ## 13. Components and repository layout
 
@@ -523,6 +579,12 @@ points at the methodology, it never restates it (P-2).
   agent's ephemeral environment (section 11).
 - Phase-advance workflow: `.github/workflows/assessment-phase.yml`. On merge,
   opens the next phase's tracking issue (section 12).
+- Command workflow: `.github/workflows/assessment-commands.yml`, backed by a
+  parser in `scripts/assessment/`. The `issue_comment` glue behind the slash
+  commands (section 12): parse the comment, authorize the commenter against the
+  role bindings, act. The parser is a plain unit-tested function and the
+  workflow is thin glue over it, the pattern proven by the [cncf/mentoring
+  automation][mentoring-commands].
 - Provenance check: a workflow in `.github/workflows/` backed by
   `scripts/assessment/`. CI that fails a deliverable PR whose provenance block
   is missing or malformed (section 15).
@@ -531,9 +593,13 @@ points at the methodology, it never restates it (P-2).
   them and leave the outputs in the workspace; the drafter commits them
   unmodified with the draft. Unmodified is checkable, not assumed: re-running
   the committed command reproduces the committed outputs or exposes the edit.
-- Labels: `.github/settings.yml`. An `assessment` label, per-phase labels, and
-  the phase B skip marker (section 12), managed declaratively alongside the
-  repository's existing label set.
+- Labels: `.github/settings.yml`. The repository's existing `Docs analysis`
+  label marks assessment work, unchanged from the human-run analyses; AI
+  involvement is indicated by the provenance block and the disclosure, not a
+  label. Added for the workflow: per-phase labels, the
+  `needs-triage`/`triage/accepted`/`triage/declined` triage set, the `verified`
+  gate (section 12), and the phase B skip marker (section 12), managed
+  declaratively alongside the existing label set.
 - Agent-configuration snapshot: `scripts/assessment/`. The agent's effective
   configuration (MCP servers, firewall state, and custom allowlist) is readable
   from a [documented endpoint][cloud-agent-config-api], so a deterministic
@@ -653,16 +719,22 @@ renderer, and the fixed labels make it machine-checkable.
 
 Its fields, each a labeled bullet:
 
-- Disclosure. A fixed sentence with two forms matching the deliverable's state
+- Disclosure. A fixed sentence with three forms matching the deliverable's state
   (HC-6). The draft form: drafted by an AI agent, human review pending. The
   final form: drafted by an AI agent, reviewed and verified by humans. Each form
   asserts only what has already happened at the moment it may appear; approval
   is not claimed in the sentence because it is evidenced by the PR record
-  itself, which no body text can substitute for.
+  itself, which no body text can substitute for. The third form covers a phase
+  the reviewer wrote by hand after discarding the draft (sections 5, 12):
+  written by humans, with `none` in the agent fields. The block rides every
+  deliverable either way, so the reader always learns how the document was
+  produced, including that no agent was involved.
 - Drafter. The agent profile that produced the draft, by name and ref (section
   14).
 - Verifier. The verifier profile, by name and ref, and a link to its report on
-  the PR (section 14).
+  the PR (section 14); `none` when the reviewer deliberately skipped the pass,
+  with the reason recorded on the PR where the `verified` label was applied by
+  hand (section 12).
 - Methodology. The commit SHA of the methodology corpus the draft was produced
   against (P-2), so the deliverable pins the criteria and templates it was
   measured by. A resolved SHA, not a branch or tag name: a name can move after
@@ -698,9 +770,13 @@ pin is not a resolved commit SHA, does not resolve, or differs from the SHA set
 at phase A, or a listed data path is not in the tree. While the PR is a draft,
 the verification record may be a placeholder and the disclosure carries its
 draft form; once it is marked ready for review, the check runs strict: an
-unfilled record or a draft-form disclosure fails. Judgment stays human: CI
-proves the block is present and well-formed, the approver confirms the
-verification behind it was real (section 10).
+unfilled record, a draft-form disclosure, or a missing `verified` label
+(section 12) fails. A hand-written deliverable carries the human-written
+disclosure form with `none` in the agent fields, and the check accepts that
+shape: the provenance regime describes agent work, it does not block the failure
+path's hand-written phase (section 12). Judgment stays human: CI proves the
+block is present and well-formed, the approver confirms the verification behind
+it was real (section 10).
 
 The block is defined by this spec and layered above the template body, so the
 methodology corpus and its templates are not modified (P-2, NG-4).
@@ -751,13 +827,20 @@ The build steps, in dependency order, each sized to one issue:
    and the verifier's report correctly flags a planted unsupported claim.
 8. Phase-advance workflow (`.github/workflows/assessment-phase.yml`). Done when
    a merged fixture PR opens the next phase's tracking issue, linked and
-   unassigned, on both the default route and the phase B skip route (section
-   12).
-9. Approver-independence check (advisory; a build-plan candidate from section
-   12). Comments when a phase's approver also drafted or reviewed it; never
-   blocks. Done when it flags a staged violation, or explicitly deferred.
+   unassigned, on both the default route and the phase B skip route, posts the
+   transition on the intake issue and swaps its phase label, and the final
+   phase's merge closes the intake (section 12).
+9. Command workflow (`.github/workflows/assessment-commands.yml` plus parser in
+   `scripts/assessment/`). Done when each command performs its section 12
+   actions for an authorized commenter, refuses an unauthorized one with a
+   visible reply, `/ready` refuses without the `verified` label, a manually
+   applied label is honored, and the parser's unit tests cover recognition,
+   argument handling, and authorization decisions.
+10. Approver-independence check (advisory; a build-plan candidate from section
+    12). Comments when a phase's approver also drafted or reviewed it; never
+    blocks. Done when it flags a staged violation, or explicitly deferred.
 
-The build is complete when steps 1 through 8 are merged, the section 17
+The build is complete when steps 1 through 9 are merged, the section 17
 build-time checks have recorded answers, and one end-to-end walkthrough of the
 section 5 lifecycle on a fixture project has run clean. Then the pilot is
 chosen, deliberately, per the caveat in section 10.
@@ -768,19 +851,20 @@ chosen, deliberately, per the caveat in section 10.
   documentation, to be answered by observation during the build (section 16) and
   recorded: the agent token's effective permission scopes (section 11); the
   agent's branch naming; whether review-comment revisions require write access
-  (section 12); whether Actions runs on agent PRs wait for approval; how a
-  verifier run is invoked against an existing PR (section 12); whether
-  delegation reliably opens a draft pull request (section 11); whether assigning
-  an issue to Copilot offers the choice of agent profile, or selection needs the
-  Agents panel (section 12); how the assessment's target project reaches the
-  setup steps that run collection, or whether collection needs a different
-  trigger (section 13); whether a full phase A draft, with its setup-step
-  collection sharing the envelope, fits the session cap or the drafting needs
-  decomposing (section 11); whether effort level can be pinned in a profile or
-  anywhere else, the one model-choice question the documentation leaves open
-  (section 14); and whether the cloud-agent configuration read endpoint, in
-  public preview as of this writing, returns the fields the snapshot needs and
-  what credential the snapshot script must hold to call it (section 13).
+  (section 12); whether Actions runs on agent PRs wait for approval; whether a
+  comment-triggered workflow can start the verifier against an existing PR, as
+  `/verify` requires (section 12); whether delegation reliably opens a draft
+  pull request (section 11); whether assigning an issue to Copilot offers the
+  choice of agent profile, or selection needs the Agents panel (section 12); how
+  the assessment's target project reaches the setup steps that run collection,
+  or whether collection needs a different trigger (section 13); whether a full
+  phase A draft, with its setup-step collection sharing the envelope, fits the
+  session cap or the drafting needs decomposing (section 11); whether effort
+  level can be pinned in a profile or anywhere else, the one model-choice
+  question the documentation leaves open (section 14); and whether the
+  cloud-agent configuration read endpoint, in public preview as of this writing,
+  returns the fields the snapshot needs and what credential the snapshot script
+  must hold to call it (section 13).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one. It would be human-run with its own credential and the project's explicit
@@ -827,3 +911,6 @@ chosen, deliberately, per the caveat in section 10.
   https://docs.github.com/en/rest/copilot/copilot-cloud-agent-management
 [custom-agents-config]:
   https://docs.github.com/en/copilot/reference/custom-agents-configuration
+[k8s-issue-triage]: https://www.kubernetes.dev/docs/guide/issue-triage/
+[mentoring-commands]:
+  https://github.com/cncf/mentoring/blob/main/.github/workflows/lfx-proposal-approvals.yml
