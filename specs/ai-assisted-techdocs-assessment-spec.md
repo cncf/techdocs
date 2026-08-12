@@ -836,6 +836,24 @@ cncf/techdocs, MCP left at its read-only default, writer access confirmed, and
 the credit cap reviewed. These are organization and repository settings, not
 files, so this step is recorded in its tracking issue rather than a PR.
 
+Test discipline, for every step: the done-when below is the step's acceptance
+test. Deterministic components, the parser, the collection scripts, the checks
+(section 13), are developed test-first, the failing test written before the
+component that must pass it, and their tests run in CI on every pull request.
+The workflows stay thin glue over tested scripts because logic in a script can
+be asserted while logic in workflow YAML can only be exercised live. What CI
+cannot assert, agent behavior and the workflows' live wiring, is tested in the
+live environment, deliberately: during the build, each step's own delegations
+and draft PRs are the test bed, closed unmerged and linked to the step's
+tracking issue so they read as what they are; the first assessment is the
+end-to-end test, run with a pilot project that agreed to exactly that role
+(section 10). There is no separate test repository and no fixture assessment:
+the workflows automate bookkeeping a human can do by hand (HC-4, section 12), so
+a wiring fault found live is recovered by hand and fixed forward, never
+rehearsed against fake assessments in the production tracker. Agent runs draw on
+the credit pool (section 11), so a profile change is exercised deliberately,
+before it merges, never per push.
+
 The build steps, in dependency order, each sized to one issue:
 
 1. Labels (`.github/settings.yml`). Deliberately trivial first delegation: its
@@ -856,37 +874,43 @@ The build steps, in dependency order, each sized to one issue:
    committed command against a sample project twice yields the same committed
    outputs (HC-5), and a delegated session's draft PR contains the outputs its
    setup steps produced.
-6. Provenance check (workflow plus `scripts/assessment/`). Done when a fixture
-   PR with a malformed or unfilled block fails, a well-formed one passes, and
-   the draft-versus-ready leniency behaves as section 15 specifies.
+6. Provenance check (workflow plus `scripts/assessment/`). Done when the check's
+   unit tests cover the malformed, unfilled, and well-formed block shapes and
+   the draft-versus-ready leniency as section 15 specifies, and the step's own
+   draft PR exercises the workflow wiring live.
 7. Agent profiles (`.github/agents/`, one PR per profile). The three drafters,
-   then the verifier (section 14). Done when each profile, run against a
-   fixture, writes only its declared outputs with the provenance block present,
-   and the verifier's report correctly flags a planted unsupported claim.
+   then the verifier (section 14). Done when each profile, delegated during the
+   build against a sample target and its draft closed unmerged, writes only its
+   declared outputs with the provenance block present, and the verifier's report
+   correctly flags an unsupported claim planted in that draft.
 8. Phase-advance workflow (`.github/workflows/assessment-phase.yml`). Done when
-   a merged fixture PR opens the next phase's tracking issue, linked and
-   unassigned, on both the default route and the phase B skip route, posts the
-   transition on the intake issue and swaps its phase label, closes the intake
-   on the final phase's merge, and, with two fixture assessments in flight,
-   lands every action on the intake the merged PR links, never the other
-   (section 12).
+   its logic lives in a script whose unit tests cover opening the next phase's
+   tracking issue, linked and unassigned, on both the default route and the
+   phase B skip route, posting the transition on the intake issue and swapping
+   its phase label, closing the intake on the final phase's merge, and, with two
+   assessments in flight, landing every action on the intake the merged PR
+   links, never the other (section 12). The live wiring is verified on the
+   pilot's first phase transition, with manual bookkeeping as the fallback
+   (HC-4).
 9. Command workflow (`.github/workflows/assessment-commands.yml` plus parser in
-   `scripts/assessment/`). Done when each command performs its section 12
-   actions for an authorized commenter, refuses an unauthorized one with a
-   visible reply, `/ready` refuses without the `verified` label, `/confirm` from
-   a stakeholder in the acceptance-frozen set applies the `confirmed` label and
-   from a name outside it is refused, a manually applied label is honored, and
-   the parser's unit tests cover recognition, argument handling, and
-   authorization decisions.
+   `scripts/assessment/`). Done when the parser's unit tests cover recognition,
+   argument handling, and every section 12 action and authorization decision: an
+   unauthorized commenter refused with a visible reply, `/ready` refusing
+   without the `verified` label, `/confirm` from a stakeholder in the
+   acceptance-frozen set applying the `confirmed` label and from a name outside
+   it refused, and a manually applied label honored. The live wiring is verified
+   on each command's first real use, with manual bookkeeping as the fallback
+   (HC-4).
 10. Approver-independence check (advisory; a build-plan candidate from section
     12). Comments when a phase's approver also drafted or reviewed it; never
     blocks. Done when it flags a staged violation, or explicitly deferred.
 
-The build is complete when steps 1 through 9 are merged, the section 17
-build-time checks have recorded answers, and one end-to-end walkthrough of the
-section 5 lifecycle on a fixture project has run clean with a second fixture
-assessment in flight, proving assessments do not cross (section 12). Then the
-pilot is chosen, deliberately, per the caveat in section 10.
+The build is complete when steps 1 through 9 are merged and the section 17
+build-time checks have recorded answers. There is no fixture walkthrough: the
+pilot, chosen deliberately per the caveat in section 10 and run with a project
+that agreed to be the live test, is the end-to-end test of the section 5
+lifecycle, and the concurrency claim is verified the first time a second
+assessment overlaps it (section 12).
 
 ## 17. Open questions and future work
 
