@@ -467,12 +467,13 @@ parses the command, authorizes the commenter against the role bindings below,
 and performs the corresponding native operations: a command is honored only from
 the role the lifecycle assigns that act, so the write-gated commands grant no
 power the commenter does not already hold, and `/confirm` is authorized by the
-stakeholder names in the intake rather than by repository access (see
-Stakeholder review below). Commands are deterministic bookkeeping fired by a
-recorded human decision (HC-4); the one that starts a model run, `/verify`, is
-an explicit delegation by the phase's reviewer (P-1). Labels applied by the
-commands and workflows record where each assessment stands: an issue search
-filtered by phase label is the portfolio view, with no dashboard to build.
+stakeholder set validated and frozen at acceptance rather than by repository
+access (see Stakeholder review below). Commands are deterministic bookkeeping
+fired by a recorded human decision (HC-4); the one that starts a model run,
+`/verify`, is an explicit delegation by the phase's reviewer (P-1). Labels
+applied by the commands and workflows record where each assessment stands: an
+issue search filtered by phase label is the portfolio view, with no dashboard to
+build.
 
 - Request (step 1): an issue. Phase A's request is the intake issue (section 7);
   phase B's and C's tracking issues are opened automatically when the previous
@@ -492,17 +493,23 @@ filtered by phase label is the portfolio view, with no dashboard to build.
   `needs-triage` for `triage/accepted`. For phase A, the same command posts the
   mention of the named project contacts on the intake issue, so the AI
   disclosure reaches the project before drafting starts, whoever filed the
-  request, and the step cannot be forgotten (HC-6, section 7). The writer then
-  delegates to the agent directly, selecting the phase's drafting profile
-  (section 14); the command does not start the agent, because delegation carries
-  choices a comment cannot: the profile and the model picker (section 14).
-  Because only users with write access can delegate (section 11), P-1 is
-  enforced by repository permissions, not convention, and the workflow refuses
-  `/accept` from a commenter without write access. For phases B and C, whose
-  tracking issues are separate from the intake, the workflow also notes the
-  acceptance on the intake issue: an unaccepted eligible phase is the stall
-  mode, so the umbrella shows when work actually started and by whom. The triage
-  verdict has a counterpart: a writer declines an unaccepted request with
+  request, and the step cannot be forgotten (HC-6, section 7). Accepting also
+  freezes who may later confirm: the intake's contact list is requester-supplied
+  and its body stays editable, so the writer validates the named contacts
+  against the project's own public records (maintainer lists, governance files)
+  before accepting, and the workflow's acceptance comment records the validated
+  set, which `/confirm` authorizes against; a later phase's acceptance may
+  revalidate and update the set the same way (HC-2). The writer then delegates
+  to the agent directly, selecting the phase's drafting profile (section 14);
+  the command does not start the agent, because delegation carries choices a
+  comment cannot: the profile and the model picker (section 14). Because only
+  users with write access can delegate (section 11), P-1 is enforced by
+  repository permissions, not convention, and the workflow refuses `/accept`
+  from a commenter without write access. For phases B and C, whose tracking
+  issues are separate from the intake, the workflow also notes the acceptance on
+  the intake issue: an unaccepted eligible phase is the stall mode, so the
+  umbrella shows when work actually started and by whom. The triage verdict has
+  a counterpart: a writer declines an unaccepted request with
   `/decline <reason>`, under the same authorization as `/accept`; the workflow
   labels it `triage/declined`, posts the reason, and closes the issue as not
   planned. Declining the intake means the assessment never starts. Declining a
@@ -530,17 +537,18 @@ filtered by phase label is the portfolio view, with no dashboard to build.
   17).
 - Stakeholder review (step 5): mention, not access. The reviewer comments
   `/ready`: the workflow marks the PR ready for review and mentions the
-  stakeholders named in the intake, one act instead of two. The draft-to-ready
-  flip carries the real-world meaning: draft while the assessing team is still
-  working the deliverable over, ready when they would put it in front of the
-  requesting project. cncf/techdocs is public, so stakeholders can review and
-  comment without any special access; formal review requests are limited to
-  collaborators, which is why the binding is a mention plus a factual-accuracy
-  confirmation, recorded by the stakeholder commenting `/confirm`, which the
-  workflow checks against the names in the intake, no repository access
-  required, and records by applying the `confirmed` label to the PR. Any
-  disagreement with the conclusions is recorded in the deliverable itself
-  (HC-2).
+  stakeholders from the set frozen at acceptance, one act instead of two. The
+  draft-to-ready flip carries the real-world meaning: draft while the assessing
+  team is still working the deliverable over, ready when they would put it in
+  front of the requesting project. cncf/techdocs is public, so stakeholders can
+  review and comment without any special access; formal review requests are
+  limited to collaborators, which is why the binding is a mention plus a
+  factual-accuracy confirmation, recorded by the stakeholder commenting
+  `/confirm`, which the workflow checks against the stakeholder set frozen at
+  acceptance (see Accept above), never the requester-editable intake body, no
+  repository access required, and records by applying the `confirmed` label to
+  the PR. Any disagreement with the conclusions is recorded in the deliverable
+  itself (HC-2).
 - Merge (step 6): merge plus one workflow. The approver (section 4) merges,
   checking the `confirmed` label is present first: stakeholder confirmation is
   required to advance (step 5, HC-2), and because a ready PR awaiting
@@ -866,9 +874,10 @@ The build steps, in dependency order, each sized to one issue:
    `scripts/assessment/`). Done when each command performs its section 12
    actions for an authorized commenter, refuses an unauthorized one with a
    visible reply, `/ready` refuses without the `verified` label, `/confirm` from
-   an intake-named stakeholder applies the `confirmed` label, a manually applied
-   label is honored, and the parser's unit tests cover recognition, argument
-   handling, and authorization decisions.
+   a stakeholder in the acceptance-frozen set applies the `confirmed` label and
+   from a name outside it is refused, a manually applied label is honored, and
+   the parser's unit tests cover recognition, argument handling, and
+   authorization decisions.
 10. Approver-independence check (advisory; a build-plan candidate from section
     12). Comments when a phase's approver also drafted or reviewed it; never
     blocks. Done when it flags a staged violation, or explicitly deferred.
