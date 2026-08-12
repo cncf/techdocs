@@ -605,8 +605,8 @@ The three drafting profiles:
   silently promoted into a new finding.
 - Backlog drafter (Phase C). Input: the merged `implementation.md`, or the
   merged `analysis.md` where phase B was skipped (section 6). Output: the issue
-  backlog in the layout section 6 settles on, each item scoped to the
-  methodology's time bound (section 6), with effort estimates marked as
+  backlog in the layout the methodology prescribes (section 6), each item scoped
+  to the methodology's time bound (section 6), with effort estimates marked as
   first-pass for reviewer sanity-checking.
 
 The verification profile:
@@ -772,7 +772,9 @@ chosen, deliberately, per the caveat in section 10.
   verifier run is invoked against an existing PR (section 12); whether
   delegation reliably opens a draft pull request (section 11); whether assigning
   an issue to Copilot offers the choice of agent profile, or selection needs the
-  Agents panel (section 12); whether a full phase A draft, with its setup-step
+  Agents panel (section 12); how the assessment's target project reaches the
+  setup steps that run collection, or whether collection needs a different
+  trigger (section 13); whether a full phase A draft, with its setup-step
   collection sharing the envelope, fits the session cap or the drafting needs
   decomposing (section 11); whether effort level can be pinned in a profile or
   anywhere else, the one model-choice question the documentation leaves open
