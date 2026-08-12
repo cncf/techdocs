@@ -514,9 +514,9 @@ build.
   labels it `triage/declined`, posts the reason, and closes the issue as not
   planned. Declining the intake means the assessment never starts. Declining a
   phase B or C tracking issue ends the assessment there, noted on the intake
-  issue, which the workflow closes, so an open intake still means work in
-  flight. A project's request to stop is honored the same way: the writer
-  records a decline rather than leaving the request to sit unanswered.
+  issue, which the workflow closes as not planned, so an open intake still means
+  work in flight. A project's request to stop is honored the same way: the
+  writer records a decline rather than leaving the request to sit unanswered.
 - Draft (step 3): a draft pull request. The agent works on its own branch in
   cncf/techdocs and opens a draft PR linked to the tracking issue, carrying the
   provenance block (section 15).
@@ -550,29 +550,33 @@ build.
   the PR. Any disagreement with the conclusions is recorded in the deliverable
   itself (HC-2).
 - Merge (step 6): merge plus one workflow. The approver (section 4) merges,
-  checking the `confirmed` label is present first: stakeholder confirmation is
-  required to advance (step 5, HC-2), and because a ready PR awaiting
-  stakeholders is a normal state rather than a failure, the check is the
-  approver's duty, not CI's. A merge-triggered GitHub Actions workflow (standard
-  `GITHUB_TOKEN` with `issues: write`) then opens the next phase's tracking
-  issue, labeled for its phase and `needs-triage`, linking the intake and the
-  merged deliverable, and assigns no one: eligible, not started (HC-2, P-1). The
-  reviewer records the phase B skip decision, the joint call with stakeholders
-  (section 6), with `/skip-implementation` on the phase A PR, applying the label
-  the workflow reads to open phase C's tracking issue instead. The same workflow
-  keeps the umbrella current: it posts the transition on the intake issue, what
-  merged and what is now eligible with the command that starts it, and swaps the
-  intake's phase label. The final phase's merge closes the intake issue: an open
-  intake is an assessment in flight, a closed one is done. Approver independence
-  cannot be natively enforced by GitHub; it is verifiable from the public PR
-  record, and an advisory CI check that flags a violation is a build-plan
-  candidate (section 16).
+  first checking the confirmation behind the `confirmed` label: the label is the
+  record, mutable by any collaborator with triage access, so what the approver
+  reads is the `/confirm` on the PR timeline from a stakeholder in the
+  acceptance-frozen set (HC-2). Stakeholder confirmation is required to advance
+  (step 5), and because a ready PR awaiting stakeholders is a normal state
+  rather than a failure, the check is the approver's duty, not CI's. A
+  merge-triggered GitHub Actions workflow (standard `GITHUB_TOKEN` with
+  `issues: write`) then opens the next phase's tracking issue, labeled for its
+  phase and `needs-triage`, linking the intake and the merged deliverable, and
+  assigns no one: eligible, not started (HC-2, P-1). The reviewer records the
+  phase B skip decision, the joint call with stakeholders (section 6), with
+  `/skip-implementation` on the phase A PR, applying the label the workflow
+  reads to open phase C's tracking issue instead. The same workflow keeps the
+  umbrella current: it posts the transition on the intake issue, what merged and
+  what is now eligible with the command that starts it, and swaps the intake's
+  phase label. The final phase's merge closes the intake issue as completed: an
+  open intake is an assessment in flight, a closed one has ended, and the close
+  reason and labels say how it ended, completed at the final merge, not planned
+  on a decline or an abort. Approver independence cannot be natively enforced by
+  GitHub; it is verifiable from the public PR record, and an advisory CI check
+  that flags a violation is a build-plan candidate (section 16).
 - Failure and abort leave a trail. The reviewer discards a draft (section 5)
   with `/discard <reason>`, which closes the PR with the reason recorded in the
   command comment and notes the discard on the intake issue; the tracking issue
   stays open for a restart or a hand-written phase. An administrator/platform
-  owner abort closes the tracking issue and the intake with it, the rationale
-  recorded on both, so an open intake still means work in flight.
+  owner abort closes the tracking issue and the intake with it as not planned,
+  the rationale recorded on both, so an open intake still means work in flight.
 - The timeline records elapsed time. Gate transitions (opened, accepted, draft
   PR, ready, approved, merged) are timestamped in issue and PR history, so how
   long a pilot took, and where the time went, can be read from the GitHub
@@ -779,12 +783,15 @@ Its fields, each a labeled bullet:
 - Data. The data-collection commands that were run and the committed paths of
   their outputs, so every quantitative claim traces to a reproducible step
   (HC-5), plus the commit SHA of each assessed repository at collection time and
-  the retrieval date for each live site. The pins record which state of the
-  sources each claim describes: a pinned repository lets the reviewer check out
-  exactly what the drafter saw (section 10), a dated site bounds when the claim
-  held, and when the sources move on, drift reads as drift rather than error.
-  They promise no re-run of the assessment itself, which is judgment: two honest
-  runs converge without matching.
+  the retrieval date for each live site. A dated site is not a bare reference:
+  what collection fetched from it is among the committed outputs, so the
+  snapshot the drafter saw is in the tree and the date labels it (P-4). The pins
+  record which state of the sources each claim describes: a pinned repository
+  lets the reviewer check out exactly what the drafter saw (section 10), a dated
+  site's claims check against its committed fetch, and when the sources move on,
+  drift reads as drift rather than error. They promise no re-run of the
+  assessment itself, which is judgment: two honest runs converge without
+  matching.
 - Verification record. Which findings the reviewer verified against source,
   satisfying the section 10 floor (HC-7): the rating-bearing findings in phase
   A, the claims grounding the recommendations in phases B and C.
