@@ -572,6 +572,21 @@ filtered by phase label is the portfolio view, with no dashboard to build.
   the reading starts from one place. This reports on G-1 without adding a log or
   an acceptance gate.
 
+Assessments run concurrently; the lifecycle is sequential within an assessment,
+never across assessments. The bindings above need no coordination between two
+assessments in flight because each one resolves its assessment from the artifact
+it fires on: a command from the issue or PR it is commented on, the
+phase-advance workflow from the tracking issue the merged PR links. Each
+assessment keeps its own namespace, the intake issue and the deliverable
+directory (`analyses/<year>/<project>/`, section 13), one assessment per project
+per year, with the tracking-issue link authoritative and the path the
+human-readable key. Admission control is `/accept` itself: eligible issues wait
+until a writer with review capacity takes one, so how many assessments run at
+once is bounded by the humans available, not by a mechanism (P-1). What
+concurrent assessments do share is the credit pool, watched by the
+administrator/platform owner (section 11), and the small team sustaining
+approver independence across them (section 17).
+
 ## 13. Components and repository layout
 
 Everything the system is made of lives in cncf/techdocs, versioned and
@@ -843,8 +858,10 @@ The build steps, in dependency order, each sized to one issue:
 8. Phase-advance workflow (`.github/workflows/assessment-phase.yml`). Done when
    a merged fixture PR opens the next phase's tracking issue, linked and
    unassigned, on both the default route and the phase B skip route, posts the
-   transition on the intake issue and swaps its phase label, and the final
-   phase's merge closes the intake (section 12).
+   transition on the intake issue and swaps its phase label, closes the intake
+   on the final phase's merge, and, with two fixture assessments in flight,
+   lands every action on the intake the merged PR links, never the other
+   (section 12).
 9. Command workflow (`.github/workflows/assessment-commands.yml` plus parser in
    `scripts/assessment/`). Done when each command performs its section 12
    actions for an authorized commenter, refuses an unauthorized one with a
@@ -858,8 +875,9 @@ The build steps, in dependency order, each sized to one issue:
 
 The build is complete when steps 1 through 9 are merged, the section 17
 build-time checks have recorded answers, and one end-to-end walkthrough of the
-section 5 lifecycle on a fixture project has run clean. Then the pilot is
-chosen, deliberately, per the caveat in section 10.
+section 5 lifecycle on a fixture project has run clean with a second fixture
+assessment in flight, proving assessments do not cross (section 12). Then the
+pilot is chosen, deliberately, per the caveat in section 10.
 
 ## 17. Open questions and future work
 
@@ -902,8 +920,8 @@ chosen, deliberately, per the caveat in section 10.
   (section 10).
 - Small-team staffing. Sustaining the approver separation (a phase's approver
   must be neither the drafter nor a reviewer of that phase; sections 4, 10) when
-  the same few writers wear multiple hats.
-- Scaling. Running assessments for several projects concurrently.
+  the same few writers wear multiple hats, felt sooner now that assessments run
+  concurrently (section 12).
 
 ---
 
