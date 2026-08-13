@@ -74,10 +74,11 @@ the labor. AI drafts, humans decide, all in the open.
   file, PR, issue, comment, or setting outside cncf/techdocs. (Hard constraint;
   see HC-1 in section 3.)
 - NG-2: No auto-filing of issues. The backlog is delivered as files in
-  cncf/techdocs. Filing them as real issues in project repos is future work (a
-  separate, opt-in script; see section 17), explicitly out of scope now. The
-  per-file backlog format proposed in section 6 is chosen partly to make that
-  future script straightforward.
+  cncf/techdocs. The methodology's follow-up, a human filing those issues in the
+  project's repository ([howto]), remains as it is today, human-run and outside
+  this system's boundary; what is out of scope is automating it (a separate,
+  opt-in script; see section 17). The per-file backlog format proposed in
+  section 6 is chosen partly to make that future script straightforward.
 - NG-3: Not a replacement for human judgment. No unattended, end-to-end
   autonomous assessments; no bypassing writer review or stakeholder sign-off.
 - NG-4: Not a change to the criteria or evaluation method. We automate the
@@ -173,8 +174,9 @@ them; they may not replace them.
 - Drafter. Produces the first-pass draft of each phase's deliverable as a draft
   PR, then refines it in conversation with the reviewer.
 - Verifier. An agent that runs an adversarial fact-check pass over each draft
-  before human review: resolving citations, checking claims against the sources
-  they cite, and flagging anything unsupported. It is prompted to find
+  before human review (a reviewer may skip a phase's pass deliberately,
+  recording why; section 5): resolving citations, checking claims against the
+  sources they cite, and flagging anything unsupported. It is prompted to find
   unsupported claims, not to confirm the draft, making it less likely to inherit
   the drafter's blind spots. Its report feeds the reviewer's verification
   (HC-7); it never substitutes for it. The layering exists because a fabrication
@@ -266,8 +268,9 @@ end up slower than doing it by hand.
   drafter produces the single combined file, and the split layout waits for the
   methodology, never the other way around.
 
-Every deliverable carries a header noting it was AI-drafted and human-reviewed
-(HC-6).
+Every deliverable carries a provenance header recording how it was produced:
+AI-drafted and human-reviewed in the normal path, hand-written when a reviewer
+restarts by hand (section 15, HC-6).
 
 Scope note: phase one produces plans (assessment, implementation, backlog), not
 documentation changes, and the backlog lands as files in cncf/techdocs rather
@@ -418,8 +421,11 @@ infrastructure we build and maintain ourselves.
   automatically in the pull request, which feeds the safety audit in section 10.
   The firewall's scope is the agent's own session: the environment-setup
   workflow (see Execution environment below) runs outside it, so what setup
-  fetches is governed by review of that versioned workflow file, not by the
-  firewall.
+  fetches is governed not by the firewall but by review of that versioned
+  workflow file and by where the collection scripts are pointed: the
+  documentation domains recorded at acceptance, the same human-reviewed list the
+  allowlist is built from, with every fetch's output committed as evidence
+  (HC-5).
 - MCP policy. The firewall does not apply to MCP servers, and MCP tools are one
   of the two documented mechanisms that can widen the agent's write reach (a
   secret is the other; see the next bullet), so [MCP
@@ -598,14 +604,17 @@ assessments in flight because each one resolves its assessment from the artifact
 it fires on: a command from the issue or PR it is commented on, the
 phase-advance workflow from the tracking issue the merged PR links. Each
 assessment keeps its own namespace, the intake issue and the deliverable
-directory (`analyses/<year>/<project>/`, section 13), one assessment per project
-per year, with the tracking-issue link authoritative and the path the
-human-readable key. Admission control is `/accept` itself: eligible issues wait
-until a writer with review capacity takes one, so how many assessments run at
-once is bounded by the humans available, not by a mechanism (P-1). What
-concurrent assessments do share is the credit pool, watched by the
-administrator/platform owner (section 11), and the small team sustaining
-approver independence across them (section 17).
+directory (`analyses/<year>/<project>/`, section 13), with the tracking-issue
+link authoritative and the path the human-readable key. A completed assessment
+never blocks a new request: a project reassessed within the same year, say for a
+maturity move, takes a distinct directory named at acceptance (a suffix on the
+default path). What `/accept` refuses is a duplicate request for a project whose
+assessment is still in flight, pointing at the open intake instead. Admission
+control is `/accept` itself: eligible issues wait until a writer with review
+capacity takes one, so how many assessments run at once is bounded by the humans
+available, not by a mechanism (P-1). What concurrent assessments do share is the
+credit pool, watched by the administrator/platform owner (section 11), and the
+small team sustaining approver independence across them (section 17).
 
 ## 13. Components and repository layout
 
@@ -636,8 +645,12 @@ points at the methodology, it never restates it (P-2).
 - Data collection: `scripts/assessment/`. The deterministic inventory scripts
   behind HC-5 (section 15). The drafting session's setup steps (section 11) run
   them and leave the outputs in the workspace; the drafter commits them
-  unmodified with the draft. Unmodified is checkable, not assumed: re-running
-  the committed command reproduces the committed outputs or exposes the edit.
+  unmodified with the draft. Unmodified is checkable, not assumed: the scripts
+  write a content-hash manifest alongside the outputs, so an edit after
+  collection breaks the manifest, and re-running the committed command
+  reproduces the outputs drawn from pinned sources; a live site's fetch is
+  vouched by the manifest alone, since a later refetch reads ordinary drift, not
+  tampering (P-4).
 - Labels: `.github/settings.yml`. The repository's existing `Docs analysis`
   label marks assessment work, unchanged from the human-run analyses; AI
   involvement is indicated by the provenance block and the disclosure, not a
@@ -918,12 +931,13 @@ The build steps, in dependency order, each sized to one issue:
 9. Command workflow (`.github/workflows/assessment-commands.yml` plus parser in
    `scripts/assessment/`). Done when the parser's unit tests cover recognition,
    argument handling, and every section 12 action and authorization decision: an
-   unauthorized commenter refused with a visible reply, `/ready` refusing
-   without the `verified` label, `/confirm` from a stakeholder in the
-   acceptance-frozen set applying the `confirmed` label and from a name outside
-   it refused, and a manually applied label honored. The live wiring is verified
-   on each command's first real use, with manual bookkeeping as the fallback
-   (HC-4).
+   unauthorized commenter refused with a visible reply, a second `/accept` for a
+   project whose assessment is still in flight refused with a pointer to the
+   open intake, `/ready` refusing without the `verified` label, `/confirm` from
+   a stakeholder in the acceptance-frozen set applying the `confirmed` label and
+   from a name outside it refused, and a manually applied label honored. The
+   live wiring is verified on each command's first real use, with manual
+   bookkeeping as the fallback (HC-4).
 10. Participant guide (`docs/assessment-guide.md`, section 13). Late in the
     order because it documents the system that now exists. Done when review
     confirms every ask the lifecycle makes of a requester, stakeholder, or
@@ -936,11 +950,15 @@ The build steps, in dependency order, each sized to one issue:
     blocks. Done when it flags a staged violation, or explicitly deferred.
 
 The build is complete when steps 1 through 10 are merged and the section 17
-build-time checks have recorded answers. There is no fixture walkthrough: the
-pilot, chosen deliberately per the caveat in section 10 and run with a project
-that agreed to be the live test, is the end-to-end test of the section 5
-lifecycle, and the concurrency claim is verified the first time a second
-assessment overlaps it (section 12).
+build-time checks have recorded answers, any negative answer landing on its
+documented fallback rather than an unbuilt path. One thing more must exist
+before the pilot's first deliverable is scored: the assessment-quality rubric
+(sections 10, 17), defined and validated against the human baselines; a pilot
+scored without it would leave G-2 asserted, not verified. There is no fixture
+walkthrough: the pilot, chosen deliberately per the caveat in section 10 and run
+with a project that agreed to be the live test, is the end-to-end test of the
+section 5 lifecycle, and the concurrency claim is verified the first time a
+second assessment overlaps it (section 12).
 
 ## 17. Open questions and future work
 
@@ -978,9 +996,10 @@ assessment overlaps it (section 12).
 - Assessment-quality rubric. Define the meta-rubric that scores an assessment's
   quality, distinct from `criteria.md` (which scores a project's docs), and
   validate it by scoring the Flatcar, Knative, and Helm baselines to set a
-  reference band (sections 2, 10). This work also sets any post-pilot sampling
-  rule for verification, replacing the pilot's check-every-finding floor
-  (section 10).
+  reference band (sections 2, 10), sequenced before the pilot's first
+  deliverable is scored (section 16). This work also sets any post-pilot
+  sampling rule for verification, replacing the pilot's check-every-finding
+  floor (section 10).
 - Small-team staffing. Sustaining the approver separation (a phase's approver
   must be neither the drafter nor a reviewer of that phase; sections 4, 10) when
   the same few writers wear multiple hats, felt sooner now that assessments run
