@@ -538,17 +538,19 @@ build.
 - Stakeholder review (step 5): mention, not access. The reviewer comments
   `/ready`: the workflow marks the PR ready for review and mentions the
   stakeholders from the set frozen at acceptance, one act instead of two. The
-  draft-to-ready flip carries the real-world meaning: draft while the assessing
-  team is still working the deliverable over, ready when they would put it in
-  front of the requesting project. cncf/techdocs is public, so stakeholders can
-  review and comment without any special access; formal review requests are
-  limited to collaborators, which is why the binding is a mention plus a
-  factual-accuracy confirmation, recorded by the stakeholder commenting
-  `/confirm`, which the workflow checks against the stakeholder set frozen at
-  acceptance (see Accept above), never the requester-editable intake body, no
-  repository access required, and records by applying the `confirmed` label to
-  the PR. Any disagreement with the conclusions is recorded in the deliverable
-  itself (HC-2).
+  mention carries a link to the participant guide (section 13), so what is being
+  asked and how to answer it arrive with the ask. The draft-to-ready flip
+  carries the real-world meaning: draft while the assessing team is still
+  working the deliverable over, ready when they would put it in front of the
+  requesting project. cncf/techdocs is public, so stakeholders can review and
+  comment without any special access; formal review requests are limited to
+  collaborators, which is why the binding is a mention plus a factual-accuracy
+  confirmation, recorded by the stakeholder commenting `/confirm`, which the
+  workflow checks against the stakeholder set frozen at acceptance (see Accept
+  above), never the requester-editable intake body, no repository access
+  required, and records by applying the `confirmed` label to the PR. Any
+  disagreement with the conclusions is recorded in the deliverable itself
+  (HC-2).
 - Merge (step 6): merge plus one workflow. The approver (section 4) merges,
   first checking the confirmation behind the `confirmed` label: the label is the
   record, mutable by any collaborator with triage access, so what the approver
@@ -652,12 +654,20 @@ points at the methodology, it never restates it (P-2).
   issue plus an index, if the section 6 proposal is accepted into the
   methodology first; until then, the combined file the methodology prescribes
   (P-2).
+- Participant guide: `docs/assessment-guide.md`. The lifecycle from the outside,
+  one page for the three audiences the system asks something of: how a project
+  requests an assessment and what AI involvement it consents to (HC-6), what
+  `/confirm` asks of a stakeholder and who may give it, and the operator's
+  reference for the commands, the labels, and the by-hand bookkeeping that
+  stands in when a workflow fails (HC-4). Command replies and mentions link to
+  it, so the explanation arrives with the ask. How-to-run guidance only: it
+  references the methodology, never restates it (P-2).
 
 Notes:
 
 - The methodology corpus at [docs/analysis/][analysis-dir] is deliberately
   absent from this list: the system reads it, but owns no file in it (P-2,
-  NG-4). This spec likewise lives outside the corpus.
+  NG-4). This spec and the participant guide likewise live outside the corpus.
 - The backlog file naming across existing analyses already varies (`issues.md`,
   `issues-list.md`); whatever the section 6 decision, the layout above pins one
   convention going forward.
@@ -908,11 +918,18 @@ The build steps, in dependency order, each sized to one issue:
    it refused, and a manually applied label honored. The live wiring is verified
    on each command's first real use, with manual bookkeeping as the fallback
    (HC-4).
-10. Approver-independence check (advisory; a build-plan candidate from section
+10. Participant guide (`docs/assessment-guide.md`, section 13). Late in the
+    order because it documents the system that now exists. Done when review
+    confirms every ask the lifecycle makes of a requester, stakeholder, or
+    operator appears with the section 12 behavior it triggers, including the
+    by-hand procedure a failed workflow falls back to (HC-4), referencing the
+    methodology rather than restating it (P-2). The pilot is its live test: a
+    participant who needs an ad hoc explanation has found a guide defect.
+11. Approver-independence check (advisory; a build-plan candidate from section
     12). Comments when a phase's approver also drafted or reviewed it; never
     blocks. Done when it flags a staged violation, or explicitly deferred.
 
-The build is complete when steps 1 through 9 are merged and the section 17
+The build is complete when steps 1 through 10 are merged and the section 17
 build-time checks have recorded answers. There is no fixture walkthrough: the
 pilot, chosen deliberately per the caveat in section 10 and run with a project
 that agreed to be the live test, is the end-to-end test of the section 5
