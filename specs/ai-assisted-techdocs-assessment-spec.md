@@ -19,15 +19,16 @@ tooling, and the plan for building the system.
 A CNCF TechDocs assessment evaluates a project's documentation against the
 TechDocs [criteria] and produces a prioritized improvement plan. It is valuable
 and in demand, but each assessment takes 6–8 weeks of a skilled technical
-writer's time, and that expertise is scarce. Throughput is the constraint: more
-projects want assessments than the expert pool can serve.
+writer's time, and that time is what the program pays for. The constraint is
+budget, which can only fund a few assessments a year, so more projects want
+assessments than the program can serve.
 
 Two things make now the moment to change that:
 
-- The method is sound; the throughput isn't. The existing methodology
+- The method is sound; the economics aren't. The existing methodology
   ([criteria], the [howto], and the analysis, implementation, and issues
-  deliverables) is well-established. The problem to solve is speed and scale,
-  not what a good assessment is.
+  deliverables) is well-established. The problem to solve is what an assessment
+  costs in expert hours, not what a good assessment is.
 - Maintainers now have agentic AI. GitHub has granted CNCF maintainers [Copilot
   Enterprise][copilot-blog]. That lets us put an AI agent on the mechanical and
   first-draft work, supervised by a human expert, to compress the cycle. We
@@ -42,15 +43,18 @@ the labor. AI drafts, humans decide, all in the open.
 ### Goals
 
 - G-1: Compress the cycle. Reduce the 6–8 week assessment toward roughly 2
-  weeks. This is the motivation and a pilot hypothesis, not an acceptance
-  criterion (section 10): the pilot succeeds or fails on quality and safety, and
-  the elapsed time simply gets reported.
+  weeks, so the budget that funds assessments serves more projects (section 1).
+  This is the motivation and a pilot hypothesis, not an acceptance criterion
+  (section 10): the pilot succeeds or fails on quality and safety, and the
+  elapsed time simply gets reported.
 - G-2: Hold quality. Output meets or exceeds the current human baseline
   (Flatcar, Knative, Helm), verified by the method in section 10, not asserted.
   AI drafts fail by being fluent, well-formatted, and generically wrong, a mode
   that survives a readability pass, so catching it is an explicit requirement.
-- G-3: Human in the loop throughout. The agent proposes; a technical writer and
-  project stakeholders dispose. Every phase is reviewed before it advances.
+- G-3: Expert in the loop throughout. The agent proposes; an experienced
+  technical writer and project stakeholders dispose. The reviewer has to know
+  what good looks like, which is why the role takes an experienced writer, not
+  just any human (section 4). Every phase is reviewed before it advances.
 - G-4: Work in the open. The whole process happens on cncf/techdocs via issues
   and PRs, and the deliverables are public. Assessments can be candid about a
   project's documentation gaps; publishing in the open is deliberate and shapes
@@ -128,13 +132,13 @@ the labor. AI drafts, humans decide, all in the open.
   so a write elsewhere is impossible, not merely disallowed. Full design in
   section 8.
 - HC-2: Phase gating. Each phase (assessment, implementation, backlog) is
-  reviewed by a technical writer, then goes to stakeholders before the next
-  begins. Sign-off separates two things. A factual-accuracy check: stakeholders
-  confirm they have read the deliverable and had the chance to correct factual
-  errors, which is required to advance. Agreement with the conclusions: not
-  required, and a project's disagreement is recorded in the deliverable rather
-  than allowed to block or soften it. Merging phase N makes phase N+1 eligible;
-  a technical writer still starts it (section 5).
+  reviewed by an experienced technical writer, then goes to stakeholders before
+  the next begins. Sign-off separates two things. A factual-accuracy check:
+  stakeholders confirm they have read the deliverable and had the chance to
+  correct factual errors, which is required to advance. Agreement with the
+  conclusions: not required, and a project's disagreement is recorded in the
+  deliverable rather than allowed to block or soften it. Merging phase N makes
+  phase N+1 eligible; a technical writer still starts it (section 5).
 - HC-3: Deliverables are files in cncf/techdocs. Including the issue backlog, in
   whatever layout the methodology prescribes (section 6 proposes one file per
   issue). Nothing is filed to an external repo.
@@ -179,9 +183,11 @@ them; they may not replace them.
 - Reviewer. Accepts a request to begin work, then reviews and refines each draft
   in conversation, verifies findings against source (HC-7), and marks it ready.
   Owns the draft's quality, but does not give its final sign-off; that is
-  independent (see Approver). A human role: it starts from the verifier's report
-  and the machine checks (provenance lint, template conformance), but the
-  verification and the readiness call are the reviewer's own.
+  independent (see Approver). An expert role, filled by an experienced technical
+  writer: the reviewer must know what a good assessment looks like. The reviewer
+  starts from the verifier's report and the machine checks (provenance lint,
+  template conformance), but the verification and the readiness call are the
+  reviewer's own.
 - Stakeholders. The project party with a stake in its documentation and
   direction: maintainers, tech leads, trusted community members, and others.
   They set priorities, provide project-level context, and confirm factual
@@ -195,7 +201,7 @@ them; they may not replace them.
 - Writers. The audience for the issue backlog: community members who take up the
   resulting issues and do the documentation work.
 - Approver. Gives each phase its independent quality sign-off and merges the PR.
-  A qualified technical writer who was neither the drafter nor a reviewer of
+  An experienced technical writer who was neither the drafter nor a reviewer of
   that phase, so no one signs off on work they produced or refined, and the role
   spreads across the team instead of bottlenecking. Confirms the verification in
   section 10 was done.
