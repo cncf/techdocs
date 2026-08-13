@@ -654,9 +654,11 @@ points at the methodology, it never restates it (P-2).
 - Labels: `.github/settings.yml`. The repository's existing `Docs analysis`
   label marks assessment work, unchanged from the human-run analyses; AI
   involvement is indicated by the provenance block and the disclosure, not a
-  label. Added for the workflow: per-phase labels, the
+  label. Added for the workflow: the per-phase labels `phase/assessment`,
+  `phase/implementation`, and `phase/backlog`, the
   `needs-triage`/`triage/accepted`/`triage/declined` triage set, the `verified`
-  and `confirmed` gates (section 12), and the phase B skip marker (section 12),
+  and `confirmed` gates (section 12), and the phase B skip marker
+  `skip-implementation`, named for the command that applies it (section 12),
   managed declaratively alongside the existing label set.
 - Agent-configuration snapshot: `scripts/assessment/`. The agent's effective
   configuration (MCP servers, firewall state, and custom allowlist) is readable
