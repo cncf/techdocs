@@ -29,11 +29,25 @@ body:
   - type: dropdown
     id: maturity
     attributes:
-      label: CNCF maturity level
+      label: Current CNCF maturity level
+      description: The project's level today.
       options:
         - Sandbox
         - Incubating
         - Graduated
+    validations:
+      required: true
+  - type: dropdown
+    id: moving-levels
+    attributes:
+      label: Is this project applying to move levels?
+      description:
+        If yes, the assessment runs against the next level's criteria; otherwise
+        against the current level's.
+      options:
+        - 'No'
+        - 'Yes'
+      default: 0
     validations:
       required: true
   - type: input
