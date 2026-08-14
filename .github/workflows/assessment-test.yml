@@ -1,0 +1,19 @@
+name: Assessment tests
+
+on:
+  pull_request:
+    paths:
+      - scripts/assessment/**
+      - .github/workflows/assessment-test.yml
+
+permissions:
+  contents: read
+
+jobs:
+  assessment-test:
+    name: ASSESSMENT tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: ./.github/actions/npm-ci-via-cached-nvmrc
+      - run: npm run test:assessment

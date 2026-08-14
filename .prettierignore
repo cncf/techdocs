@@ -1,1 +1,5 @@
 /docs/localization/ja
+
+# Test fixtures are frozen inputs; formatting would change the bytes
+# the assessment collection tests hash.
+/scripts/assessment/test/fixtures/

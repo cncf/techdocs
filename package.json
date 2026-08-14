@@ -37,6 +37,7 @@
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run docus:serve",
+    "test:assessment": "node --test scripts/assessment/test/*.test.mjs",
     "test:unit": "node --experimental-strip-types --test 'lib/**/*.test.mts'",
     "test": "npm run check && npm run test:unit",
     "typecheck": "tsc",
