@@ -1,0 +1,128 @@
+name: Documentation assessment request
+description: Request an AI-assisted assessment of your project's documentation.
+title: '[Assessment request]: '
+labels:
+  - Docs analysis
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in a documentation assessment.
+
+        Filing this request does not start an assessment. It gathers
+        context. A technical writer triages every request and
+        explicitly accepts it before any work begins.
+
+        Assessments produced through this process are AI-drafted and
+        human-reviewed: an AI agent writes the draft, and a technical
+        writer reviews every finding before anything is published. The
+        project contacts named below are notified on this issue before
+        drafting begins.
+  - type: input
+    id: project-name
+    attributes:
+      label: Project name
+      description: The CNCF project to assess.
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: CNCF maturity level
+      options:
+        - Sandbox
+        - Incubating
+        - Graduated
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Project website
+      placeholder: https://example.io
+    validations:
+      required: true
+  - type: input
+    id: docs-url
+    attributes:
+      label: Documentation site
+      description: Leave blank if the documentation lives on the website above.
+    validations:
+      required: false
+  - type: input
+    id: repo
+    attributes:
+      label: Website or documentation repository
+      placeholder: https://github.com/org/repo
+    validations:
+      required: true
+  - type: textarea
+    id: other-scope
+    attributes:
+      label: Other repositories or sites in scope
+      description:
+        Demo servers, governance sites, or other repositories the assessment
+        should cover. One per line.
+    validations:
+      required: false
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Anything the assessment should not cover, and why.
+    validations:
+      required: false
+  - type: textarea
+    id: domains
+    attributes:
+      label: Documentation domains
+      description:
+        Every domain the assessment needs to read, one per line, for example the
+        documentation site and any demo or governance sites. The assessing agent
+        runs behind a firewall and can only reach domains added to its
+        allowlist; these entries are added at acceptance and removed afterward.
+      placeholder: |
+        docs.example.io
+        demo.example.io
+    validations:
+      required: true
+  - type: textarea
+    id: contacts
+    attributes:
+      label: Project contacts
+      description:
+        GitHub handles of project community members available to help with the
+        assessment, one per line. They are notified on this issue before
+        drafting begins.
+      placeholder: '@community-member'
+    validations:
+      required: true
+  - type: input
+    id: tooling
+    attributes:
+      label: Site tooling
+      description:
+        Static site generator, theme, and hosting, if you know them, for example
+        Hugo with Docsy on Netlify.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description:
+        Context that would help the assessment, such as known problem areas or
+        recent documentation work.
+    validations:
+      required: false
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: AI involvement disclosure
+      options:
+        - label:
+            I understand this assessment will be AI-drafted and human-reviewed,
+            and that the project contacts named above will be notified before
+            drafting begins.
+          required: true
