@@ -859,20 +859,37 @@ methodology corpus and its templates are not modified (P-2, NG-4).
 
 ## 16. Build plan
 
-The system is built the way it runs. Each component in section 13 starts as a
-tracking issue in cncf/techdocs, is drafted by the cloud agent where a file is
-the deliverable, and lands through a human-reviewed PR: the same
-issue-to-draft-to-review loop the assessments will use (section 5). Building the
-system with its own loop is the point: by the time the first project is
-assessed, every role has rehearsed and the platform's behavior has been observed
-rather than assumed. The earliest steps run before the instructions and
-environment components exist; the loop holds anyway, just with less scaffolding.
+The system runs on the cloud agent (section 11) but is not built by it. Where a
+file is the deliverable, the component is drafted locally with GitHub Copilot
+CLI, which keeps model choice and effort under the operator's direct control,
+and lands through a human-reviewed PR. Each component in section 13 starts as a
+tracking issue in cncf/techdocs: the same issue-to-draft-to-review loop the
+assessments will use (section 5), rehearsed by the human roles on every step.
+The CLI performs no GitHub writes; the operator executes every push, pull
+request, issue, label, and delegation. Build PRs also get Copilot code review,
+requested when the PR opens: with drafting done locally, it restores an
+independent automated reader. Its findings are input to the human review;
+approval stays with humans (P-1). The cloud agent's own behavior is observed
+rather than assumed: a probe delegation (below) and the delegated exercises in
+later steps put it on record before the first project is assessed.
 
-Preflight, before any build step: the administrator/platform owner works through
-the preconditions in section 11: cloud agent and MCP policies enabled for
-cncf/techdocs, MCP left at its read-only default, writer access confirmed, and
-the credit cap reviewed. These are organization and repository settings, not
-files, so this step is recorded in its tracking issue rather than a PR.
+Preflight, before any delegation to the cloud agent: the administrator/platform
+owner works through the preconditions in section 11: cloud agent and MCP
+policies enabled for cncf/techdocs, MCP left at its read-only default, writer
+access confirmed, and the credit cap reviewed. These are organization and
+repository settings, not files, so this step is recorded in its tracking issue
+rather than a PR. Steps whose deliverable is a locally drafted file do not wait
+on preflight; the probe and every delegated exercise do.
+
+Probe delegation, once preflight closes: the first delegation to the cloud agent
+is a deliberately disposable task whose real product is observed platform
+behavior: the agent's branch naming, whether delegation reliably opens a draft
+pull request, what access review-comment revisions require, whether Actions runs
+on agent PRs wait for approval, and the token's effective scopes. The draft
+closes unmerged, linked to the probe's tracking issue, and the answers are
+recorded against the section 17 checks. The probe runs early because its answers
+parameterize later steps, and it may run before the instructions and environment
+components exist: the loop holds anyway, just with less scaffolding.
 
 Test discipline, for every step: the done-when below is the step's acceptance
 test. Deterministic components, the parser, the collection scripts, the checks
@@ -881,24 +898,21 @@ component that must pass it, and their tests run in CI on every pull request.
 The workflows stay thin glue over tested scripts because logic in a script can
 be asserted while logic in workflow YAML can only be exercised live. What CI
 cannot assert, agent behavior and the workflows' live wiring, is tested in the
-live environment, deliberately: during the build, each step's own delegations
-and draft PRs are the test bed, closed unmerged and linked to the step's
-tracking issue so they read as what they are; the first assessment is the
-end-to-end test, run with a pilot project that agreed to exactly that role
-(section 10). There is no separate test repository and no fixture assessment:
-the workflows automate bookkeeping a human can do by hand (HC-4, section 12), so
-a wiring fault found live is recovered by hand and fixed forward, never
-rehearsed against fake assessments in the production tracker. Agent runs draw on
-the credit pool (section 11), so a profile change is exercised deliberately,
-before it merges, never per push.
+live environment, deliberately: during the build, the probe delegation and the
+delegated exercises later steps require are the test bed, their drafts closed
+unmerged and linked to the owning step's tracking issue so they read as what
+they are; the first assessment is the end-to-end test, run with a pilot project
+that agreed to exactly that role (section 10). There is no separate test
+repository and no fixture assessment: the workflows automate bookkeeping a human
+can do by hand (HC-4, section 12), so a wiring fault found live is recovered by
+hand and fixed forward, never rehearsed against fake assessments in the
+production tracker. Agent runs draw on the credit pool (section 11), so a
+profile change is exercised deliberately, before it merges, never per push.
 
 The build steps, in dependency order, each sized to one issue:
 
-1. Labels (`.github/settings.yml`). Deliberately trivial first delegation: its
-   real product is observed platform behavior: the agent's branch naming, what
-   access review-comment revisions require, whether Actions runs on agent PRs
-   wait for approval, and the token's effective scopes. Done when the labels
-   exist and the observations are recorded against the section 17 checks.
+1. Labels (`.github/settings.yml`). Done when the labels exist on the
+   repository.
 2. Repository instructions (`.github/copilot-instructions.md`). Ground rules for
    any agent work in this repository, carrying the section 8 discipline. Done
    when merged after review against sections 8 and 14.
@@ -965,24 +979,25 @@ second assessment overlaps it (section 12).
 ## 17. Open questions and future work
 
 - Build-time checks. Platform behavior we could not verify from public
-  documentation, to be answered by observation during the build (section 16) and
-  recorded: the agent token's effective permission scopes (section 11); the
-  agent's branch naming; whether review-comment revisions require write access
-  (section 12); whether Actions runs on agent PRs wait for approval; whether a
-  comment-triggered workflow can start the verifier against an existing PR, as
-  `/verify` requires, and whether that invocation can carry the model choice the
-  section 14 policy prefers (section 12); whether delegation reliably opens a
-  draft pull request (section 11); whether assigning an issue to Copilot offers
-  the choice of agent profile, or selection needs the Agents panel (section 12);
-  how the assessment's target project reaches the setup steps that run
-  collection, or whether collection needs a different trigger (section 13);
-  whether a full phase A draft, with its setup-step collection sharing the
-  envelope, fits the session cap or the drafting needs decomposing (section 11);
-  whether effort level can be pinned in a profile or anywhere else, the one
-  model-choice question the documentation leaves open (section 14); and whether
-  the cloud-agent configuration read endpoint, in public preview as of this
-  writing, returns the fields the snapshot needs and what credential the
-  snapshot script must hold to call it (section 13).
+  documentation, to be answered by the probe delegation and the delegated
+  exercises during the build (section 16) and recorded: the agent token's
+  effective permission scopes (section 11); the agent's branch naming; whether
+  review-comment revisions require write access (section 12); whether Actions
+  runs on agent PRs wait for approval; whether a comment-triggered workflow can
+  start the verifier against an existing PR, as `/verify` requires, and whether
+  that invocation can carry the model choice the section 14 policy prefers
+  (section 12); whether delegation reliably opens a draft pull request (section
+  11); whether assigning an issue to Copilot offers the choice of agent profile,
+  or selection needs the Agents panel (section 12); how the assessment's target
+  project reaches the setup steps that run collection, or whether collection
+  needs a different trigger (section 13); whether a full phase A draft, with its
+  setup-step collection sharing the envelope, fits the session cap or the
+  drafting needs decomposing (section 11); whether effort level can be pinned in
+  a profile or anywhere else, the one model-choice question the documentation
+  leaves open (section 14); and whether the cloud-agent configuration read
+  endpoint, in public preview as of this writing, returns the fields the
+  snapshot needs and what credential the snapshot script must hold to call it
+  (section 13).
 - Filing issues into project repos. A separate, opt-in tool to create the
   backlog issues in a project's own repository (NG-2). Out of scope for phase
   one. It would be human-run with its own credential and the project's explicit
