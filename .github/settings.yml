@@ -49,79 +49,107 @@ repository:
 # Labels: define labels for Issues and Pull Requests
 labels:
   - name: admin
-    color: #d93f0b
-  - name: meta
-    description: Tracker issue
-    color: #0E8A16
+    description: 'TechDocs administration activities'
+    color: 'd93f0b'
   - name: CI/infra
     description: CI & infrastructure
-    color: #696969
+    color: '696969'
   - name: p0-critical
-    color: B60205
+    color: 'B60205'
   - name: p1-high
-    color: D93F0B
+    color: 'D93F0B'
   - name: p2-medium
-    color: FBCA04
+    color: 'FBCA04'
   - name: p3-low
-    color: FEF2C0
+    color: 'FEF2C0'
   - name: e0-minutes
     description: 'Effort: < 60 min'
-    color: e6ccb3
+    color: 'e6ccb3'
   - name: e1-hours
     description: 'Effort: < 8 hrs'
-    color: d9b38c
+    color: 'd9b38c'
   - name: e2-days
     description: 'Effort: < 5 days'
-    color: cc9966
+    color: 'cc9966'
   - name: e3-weeks
     description: 'Effort: < 4 weeks'
-    color: bf8040
+    color: 'bf8040'
   - name: e4-months
     description: 'Effort: 1+ months'
-    color: 996633
+    color: '996633'
   - name: Docs analysis
     description: CNCF technical documentation assistance
-    color: c2e0c6
+    color: 'c2e0c6'
   - name: Website Update
     description: 'CNCF Help request for project website updates'
-    color: BFAFE3
+    color: 'BFAFE3'
   - name: suggested doc
     description: 'New doc suggestions for the docs/ section'
-    color: 89E295
-  - name: admin
-    description: 'TechDocs administration activities'
-    color: 000000
+    color: 'd93f0b'
   # Default new repo labels
   - name: bug
     description: "Something isn't working"
-    color: d73a4a
+    color: 'd73a4a'
   - name: documentation
     description: Improvements or additions to the TechDocs documentation
-    color: 0075ca
+    color: '0075ca'
   - name: duplicate
     description: This issue or pull request already exists
-    color: cfd3d7
+    color: 'cfd3d7'
   - name: enhancement
     description: New feature or request
-    color: a2eeef
+    color: 'a2eeef'
   - name: good first issue
     description: Good for newcomers
-    color: 7057ff
+    color: '7057ff'
   - name: help wanted
     description: Extra attention is needed
-    color: 008672
+    color: '008672'
   - name: invalid
     description: "This doesn't seem right"
-    color: e4e669
+    color: 'e4e669'
   - name: question
     description: Further information is requested
-    color: d876e3
+    color: 'd876e3'
   - name: wontfix
     description: This will not be worked on
-    color: ffffff
+    color: 'ffffff'
   - name: ops/service-desk
     description: Service desk and support operations
-    color: 32CD32
+    color: '32CD32'
   - name: CNCF Service Desk
     description: This issue has a related CNCF Service Desk ticket
-    color: 0CD9EF
+    color: '0CD9EF'
+  - name: broken-link
+    description: Broken links found by automated link checker
+    color: 'd73a4a'
+  - name: techdocs-upstream
+    color: 'ededed'
+  # Assessment workflow labels
+  - name: needs-triage
+    description: Assessment request awaiting triage
+    color: 'EDEDED'
+  - name: triage/accepted
+    description: Assessment request accepted
+    color: 'C2E0C6'
+  - name: triage/declined
+    description: Assessment request declined, reason posted
+    color: 'F9D0C4'
+  - name: phase/assessment
+    description: 'Assessment phase A: analysis'
+    color: 'C5DEF5'
+  - name: phase/implementation
+    description: 'Assessment phase B: implementation plan'
+    color: '84B6EB'
+  - name: phase/backlog
+    description: 'Assessment phase C: issue backlog'
+    color: '1D76DB'
+  - name: verified
+    description: Verification complete for this deliverable PR
+    color: '0E8A16'
+  - name: confirmed
+    description: Stakeholder confirmation recorded for this deliverable PR
+    color: '006B75'
+  - name: skip-implementation
+    description: Phase B skipped; phase A merge opens phase C
+    color: 'D4C5F9'
