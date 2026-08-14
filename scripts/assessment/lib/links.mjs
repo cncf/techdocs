@@ -1,9 +1,43 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const INLINE_LINK = /!?\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
+// Deliberate limitations, documented rather than hidden: destinations
+// with unescaped parentheses need the angle-bracket form to be seen,
+// and indented (non-fenced) code blocks are still scanned. A markdown
+// AST would lift both at the cost of a new dependency.
+const INLINE_LINK = /!?\[[^\]]*\]\(([^)\s<][^)\s]*)(?:\s+"[^"]*")?\)/g;
+const ANGLE_LINK = /!?\[[^\]]*\]\(<([^>]+)>(?:\s+"[^"]*")?\)/g;
 const REFERENCE_DEFINITION = /^\s*\[[^\]]+\]:\s*(\S+)/gm;
 const AUTOLINK = /<(https?:\/\/[^>\s]+)>/g;
+
+const FENCE = /^ {0,3}(`{3,}|~{3,})/;
+
+// Blanks out fenced code blocks and inline code spans so example
+// links inside them (common in documentation about documentation) do
+// not pollute the inventory.
+function stripCodeRegions(markdown) {
+  const out = [];
+  let fence = null;
+  for (const line of markdown.split('\n')) {
+    const opener = line.match(FENCE);
+    if (fence) {
+      if (
+        opener &&
+        opener[1][0] === fence[0] &&
+        opener[1].length >= fence.length
+      ) {
+        fence = null;
+      }
+      out.push('');
+    } else if (opener) {
+      fence = opener[1];
+      out.push('');
+    } else {
+      out.push(line.replace(/(`+)[^`]*\1/g, ' '));
+    }
+  }
+  return out.join('\n');
+}
 
 function classify(url) {
   if (url.startsWith('#')) return 'anchor';
@@ -12,9 +46,15 @@ function classify(url) {
 }
 
 export function extractLinks(markdown) {
+  const source = stripCodeRegions(markdown);
   const urls = new Set();
-  for (const pattern of [INLINE_LINK, REFERENCE_DEFINITION, AUTOLINK]) {
-    for (const match of markdown.matchAll(pattern)) {
+  for (const pattern of [
+    INLINE_LINK,
+    ANGLE_LINK,
+    REFERENCE_DEFINITION,
+    AUTOLINK,
+  ]) {
+    for (const match of source.matchAll(pattern)) {
       urls.add(match[1]);
     }
   }

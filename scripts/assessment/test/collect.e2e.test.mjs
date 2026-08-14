@@ -67,3 +67,62 @@ test('collect refuses unknown flags and missing arguments', () => {
   assert.notEqual(run(['--repo', fixture]).status, 0);
   assert.notEqual(run(['--bogus']).status, 0);
 });
+
+test('collect rejects a flag consumed as another flag value', () => {
+  const r = run(['--repo', fixture, '--out', '--check-links']);
+  assert.equal(r.status, 2);
+  assert.match(r.stderr, /--out/);
+  const trailing = run(['--repo', fixture, '--out']);
+  assert.equal(trailing.status, 2);
+  assert.match(trailing.stderr, /--out/);
+});
+
+test('collect rejects an output directory at the repository root', () => {
+  const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'aiaa-root-'));
+  fs.writeFileSync(path.join(repo, 'README.md'), '# r\n');
+  const r = run(['--repo', repo, '--out', repo]);
+  assert.equal(r.status, 2);
+  assert.match(r.stderr, /repository root/);
+});
+
+test('an unreachable site is recorded as evidence, not a crash', () => {
+  const out = fs.mkdtempSync(path.join(os.tmpdir(), 'aiaa-badsite-'));
+  const r = run(['--repo', fixture, '--site', 'not-a-url', '--out', out]);
+  assert.equal(r.status, 0, r.stderr);
+  const fetches = JSON.parse(
+    fs.readFileSync(path.join(out, 'site-fetches.json'), 'utf8'),
+  );
+  assert.equal(fetches.sites.length, 1);
+  assert.equal(fetches.sites[0].url, 'not-a-url');
+  assert.equal(fetches.sites[0].status, null);
+  assert.ok(fetches.sites[0].error);
+  assert.equal(run(['verify', '--out', out]).status, 0);
+});
+
+test('rerunning into an in-repository output stays byte-identical', () => {
+  const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'aiaa-inrepo-'));
+  fs.cpSync(fixture, repo, { recursive: true });
+  const out = path.join(repo, 'collected');
+  const first = spawnSync(
+    process.execPath,
+    [cli, '--repo', repo, '--out', out],
+    { encoding: 'utf8' },
+  );
+  assert.equal(first.status, 0, first.stderr);
+  const tree1 = readTree(out);
+  const second = spawnSync(
+    process.execPath,
+    [cli, '--repo', repo, '--out', out],
+    { encoding: 'utf8' },
+  );
+  assert.equal(second.status, 0, second.stderr);
+  const tree2 = readTree(out);
+  assert.deepEqual(Object.keys(tree1), Object.keys(tree2));
+  for (const name of Object.keys(tree1)) {
+    assert.ok(tree1[name].equals(tree2[name]), `differs: ${name}`);
+  }
+  const inventory = JSON.parse(tree2['inventory.json'].toString());
+  const paths = inventory.repos[0].files.map((f) => f.path);
+  assert.ok(!paths.some((p) => p.startsWith('collected')), paths.join(','));
+  assert.equal(run(['verify', '--out', out]).status, 0);
+});

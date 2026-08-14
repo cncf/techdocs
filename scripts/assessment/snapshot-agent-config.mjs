@@ -15,17 +15,32 @@ import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 import { snapshotAgentConfig } from './lib/snapshot.mjs';
+import { upsertOutput } from './lib/manifest.mjs';
 import { stableStringify } from './lib/util.mjs';
 
 const USAGE =
   'usage: snapshot-agent-config.mjs --repo <owner/name> --out <dir>';
 
+function takeValue(argv, i, flag) {
+  const value = argv[i + 1];
+  if (value == null || value.startsWith('--')) {
+    throw new Error(`missing value for ${flag}`);
+  }
+  return value;
+}
+
 function parseArgs(argv) {
   const args = { repo: null, out: null };
-  for (let i = 0; i < argv.length; i += 1) {
-    if (argv[i] === '--repo') args.repo = argv[(i += 1)];
-    else if (argv[i] === '--out') args.out = argv[(i += 1)];
-    else throw new Error(`unknown flag: ${argv[i]}`);
+  let i = 0;
+  while (i < argv.length) {
+    const flag = argv[i];
+    if (flag === '--repo') {
+      args.repo = takeValue(argv, i, flag);
+      i += 2;
+    } else if (flag === '--out') {
+      args.out = takeValue(argv, i, flag);
+      i += 2;
+    } else throw new Error(`unknown flag: ${flag}`);
   }
   if (!args.repo || !args.repo.includes('/')) {
     throw new Error('missing --repo owner/name');
@@ -44,19 +59,31 @@ async function main() {
   }
   const [owner, repo] = args.repo.split('/');
   const token = process.env.GITHUB_TOKEN ?? process.env.GH_TOKEN ?? '';
-  const result = await snapshotAgentConfig({ owner, repo, token });
+  const apiBase = process.env.GITHUB_API_URL || 'https://api.github.com';
+  const result = await snapshotAgentConfig({ owner, repo, token, apiBase });
   fs.mkdirSync(args.out, { recursive: true });
+  // Whichever way the call went, the opposite record from an earlier
+  // run is removed and the manifest updated, so a directory never
+  // carries both a configuration and an error for the same step.
+  const command = `snapshot-agent-config.mjs --repo ${args.repo}`;
   if (result.ok) {
-    fs.writeFileSync(
-      path.join(args.out, 'agent-config.json'),
-      stableStringify({ repository: args.repo, config: result.config }) + '\n',
-    );
+    upsertOutput(args.out, {
+      command,
+      name: 'agent-config.json',
+      content:
+        stableStringify({ repository: args.repo, config: result.config }) +
+        '\n',
+      remove: ['agent-config.error.json'],
+    });
     process.stdout.write('agent configuration captured\n');
   } else {
-    fs.writeFileSync(
-      path.join(args.out, 'agent-config.error.json'),
-      stableStringify({ repository: args.repo, error: result.error }) + '\n',
-    );
+    upsertOutput(args.out, {
+      command,
+      name: 'agent-config.error.json',
+      content:
+        stableStringify({ repository: args.repo, error: result.error }) + '\n',
+      remove: ['agent-config.json'],
+    });
     process.stdout.write(
       `agent configuration unavailable: ${result.error.message}\n`,
     );
