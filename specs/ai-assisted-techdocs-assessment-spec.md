@@ -253,7 +253,7 @@ end up slower than doing it by hand.
   methodology's time bound (a few hours to a couple of days at most for someone
   experienced with the project and comfortable writing), plus an umbrella/index
   file that lists them. Effort estimates are the agent's first pass and are
-  sanity-checked by the reviewer; agent estimates are not reliable on their own.
+  coherence-checked by the reviewer; agent estimates are not reliable on their own.
 
   Proposed methodology change. The current method delivers the backlog as one
   `_PROJECT_-issues.md` file (`howto.md`, `templates/issues-list.md`,
