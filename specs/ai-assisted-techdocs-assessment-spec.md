@@ -29,7 +29,7 @@ Two things make now the moment to change that:
   ([criteria], the [howto], and the analysis, implementation, and issues
   deliverables) is well-established. The problem to solve is what an assessment
   costs in expert hours, not what a good assessment is.
-- Maintainers now have agentic AI. GitHub has granted CNCF maintainers [Copilot
+- GitHub has granted CNCF and CNCF project maintainers [Copilot
   Enterprise][copilot-blog]. That lets us put an AI agent on the mechanical and
   first-draft work, supervised by a human expert, to compress the cycle. We
   treat the roughly 2-week figure as a pilot hypothesis, not a fixed target
