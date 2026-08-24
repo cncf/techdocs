@@ -69,6 +69,10 @@
   "overrides": {
     "@docusaurus/bundler": {
       "webpackbar": "^7.0.0"
+    },
+    "serialize-javascript": "^7.1.0",
+    "sockjs": {
+      "uuid": "^11.1.1"
     }
   },
   "private": true,
