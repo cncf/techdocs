@@ -14,7 +14,7 @@ The following links are loosely sorted into conceptual categories.
 **GitHub repo for home page**: https://github.com/in-toto/in-toto.io
 
 **Specifications**  
- https://github.com/in-toto/docs/blob/master/in-toto-spec.md (also contains most
+https://github.com/in-toto/docs/blob/master/in-toto-spec.md (also contains most
 of the user doc)
 
 https://github.com/in-toto/attestation
