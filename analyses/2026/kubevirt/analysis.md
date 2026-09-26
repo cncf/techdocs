@@ -49,15 +49,19 @@ code is stored on the KubeVirt GitHub repo.
 
 #### In scope
 
-<!-- - Website: https://KubeVirt.io
+- Website: https://KubeVirt.io
 - Documentation: https://KubeVirt.io/user-guide
-- Website repo: https://github.com/KubeVirt/user-guide -->
+- Website repo: https://github.com/KubeVirt/user-guide
+- Labs documentation: https://github.com/kubevirt/kubevirt.github.io
 
 #### Out of scope
 
 - Other KubeVirt GitHub repositories besides `user-guide`.
 
 ### How this document is organized
+
+Note: Current organization is different, if not accepted the following will be
+implemented:
 
 This document is divided into two sections that represent two major areas of
 concern:
@@ -66,6 +70,8 @@ concern:
   software, aimed at people who intend to use the project software.
 - **Contributor documentation:** concerns documentation for new and existing
   contributors to the KubeVirt OSS project.
+- **Website & Infrastructure:** concerns the mechanics of publishing the
+  documentation, and includes branding, website structure, and maintainability.
 
 Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
@@ -94,6 +100,7 @@ to their area of concern:
 
 - [Project documentation](#project-documentation)
 - [Contributor documentation](#contributor-documentation)
+- [Website and documentation infrastructure](#website-and-infrastructure)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
@@ -124,55 +131,35 @@ code.
 | Content creation processes | 3 - Meets standards            |
 | Inclusive language         | 4 - Meets or exceeds standards |
 
-The KubeVirt user guide meets CNCF standards for project documentation. Its
-foundations are sound: content is organized by audience and layer with
-deliberate ordering and preserved URLs, feature coverage is broad and kept
-current by the developers who ship the features, the toolchain is simple and
-searchable, documentation is a required checklist item in both the
-kubevirt/kubevirt pull request template and the VEP release process, and
-KubeVirt-controlled names avoid non-recommended terminology. Where pages have
-been written or revised recently they follow a consistent, pasteable pattern.
-The guide is a reliable reference for someone who already knows what they are
-looking for.
+The KubeVirt user guide meets the standard for an incubating project across
+every area and exceeds it on inclusive language. Its feature coverage is deep,
+its top-level structure is sensible, the toolchain is simple, and documentation
+is coupled to the release process so that new features land with their pages.
+The guide's problems are not gaps in what it covers but gaps in how it guides
+readers and contributors through it.
 
-The most important cross-cutting gap is the absence of a guided path for new
-users. Information architecture and new user content both find that the happy
-path from install to a running, reachable VM is spread across five pages in two
-sections and delegated to external Killercoda scenarios and kubevirt.io labs.
-Installation buries its four-command procedure under advanced and legacy content
-and ends without a next step, the foundational Basic Use and Lifecycle pages are
-dated, VMI-centric, and reference a manifest that is never shown, and `virtctl`
-install covers only Linux amd64. A single "Getting started" page that strings
-the existing content together, plus a restructured Installation page with a
-"Next steps" section, would address findings in two of the five areas at once.
+Three themes recur across the areas:
 
-The second theme is that the project's processes are real but undocumented,
-which puts maintainability at risk as the project grows. Release branches exist
-for v1.7 through v1.9, yet the site publishes `main` only, has no version
-selector, and no document explains the branching or cherry-pick workflow.
-Ownership is clear from `OWNERS` files but there is no MAINTAINERS file, no
-named documentation lead, and no record of who runs the Netlify deployment or
-the release-notes script. The per-SIG reviewer aliases are defined but never
-routed to directories, and a backlog of twelve open pull requests suggests
-review capacity is limited to core maintainers. A documentation contributor
-guide covering review flow, versioning, and ownership would close most of these
-gaps in one document.
+- No guided path. The guide reads as a well-organized encyclopedia. New users
+  must assemble the install-to-first-VM sequence from five pages in two
+  sections, and the oldest foundational pages contradict the
+  VirtualMachine-first approach used elsewhere. Both the information
+  architecture and new user content areas rate this as the most important
+  weakness.
+- Uneven page age. Older pages use `$`-prefixed code blocks, reference manifests
+  that are never shown, carry legacy distribution content, and use the most
+  minimizing language. Newer pages are clean and pasteable. The gap shows up in
+  new user content, information architecture, and inclusive language alike.
+- Implicit process and ownership. The release checklist makes documentation
+  happen, but nothing explains who reviews, how release branches are meant to be
+  used, whether the site will ever be versioned, or what a good page looks like.
+  Content maintainability and content creation process both trace their
+  weaknesses to this missing written guidance.
 
-The third theme is inconsistency between older and newer content, which surfaces
-in every area. Older pages use `$`-prefixed code blocks mixed with output while
-newer ones use clean fenced blocks; feature-state banners appear on a minority
-of pages; minimizing words such as "simply" and "easily" appear on 40 percent of
-pages; and legacy content (OKD Service Catalog, k3OS, a duplicate Windows
-drivers page, an orphaned Plugins page, 14 links to the legacy
-`/api-reference/master/` path) remains alongside current material. A short style
-guide, a standard feature-state admonition, enabling the theme's copy button,
-and a lint check for minimizing language are low-effort changes that would raise
-consistency across the whole guide and prevent regression.
-
-Inclusive language is the section's strongest area and can serve as an example:
-the project's own APIs, CLI, and feature gates are clean, "allowlist" is used
-consistently, and the remaining issues are mechanical link updates and prose
-tightening rather than naming changes.
+The project does two things well enough to point to as examples: feature
+developers document their own features in the same release cycle because the
+pull request template and VEP checklist require it, and the project's own names,
+commands, and feature gates are free of non-inclusive terms.
 
 The following sections contain assessments of each element of the Project
 Documentation rubric.
