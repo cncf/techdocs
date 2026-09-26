@@ -100,7 +100,7 @@ to their area of concern:
 
 - [Project documentation](#project-documentation)
 - [Contributor documentation](#contributor-documentation)
-- [Website and documentation infrastructure](#website-and-infrastructure)
+- [Website & infrastructure](#website--infrastructure)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
