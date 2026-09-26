@@ -898,56 +898,33 @@ code.
 | "New contributor" getting started content | 3 - Meets standards            |
 | Project governance documentation          | 4 - Meets or exceeds standards |
 
-KubeVirt's contributor documentation is strong at the community level and uneven
-at the point where a newcomer actually tries to contribute. The
-kubevirt/community repository is a model of its kind: governance with concrete
-voting thresholds and maintainer selection rules, a full contributor ladder with
-an inactivity policy, generated SIG lists, a detailed weekly meeting document,
-and a help-wanted label guide. Communication channels are established and
-active, with two purpose-specific Slack channels, a mailing list, a public
-calendar, and recorded meetings, all gathered on the kubevirt.io Community page.
-The user guide's Contributing page is a genuine, welcoming first-contribution
-document and is the canonical entry point that both the repository and the
-community repo point to.
+KubeVirt's contributor documentation is strong at the community level and thin
+at the point of use. The kubevirt/community repository holds mature governance,
+membership, SIG, and meeting documentation, the communication channels are
+active and well described, and the user guide has a welcoming Contributing page
+that is the canonical entry point. Two of the four areas exceed the standard for
+an incubating project. The one area that falls short, the beginner issue
+backlog, is the one a newcomer hits first when trying to act on that welcome.
 
-The highest-impact gap is that the path the Contributing page describes leads
-nowhere. It tells newcomers to look for `good-first-issue`, but the label has
-zero open items in kubevirt/user-guide and zero documentation-related items in
-kubevirt/kubevirt, because every beginner issue closed in the past year was
-auto-closed by the stale bot rather than fixed, including a well-written batch
-of eight feature-lifecycle documentation tasks. Half of the small open backlog
-is unlabeled and nothing is assigned or marked `triage/accepted`, so lifecycle
-automation runs without a human deciding what should survive it. Reopening and
-freezing that batch, seeding a standing set of single-page starter tasks, and
-exempting beginner-labeled issues from auto-close would move this area from
-needs-improvement to meets-standards quickly.
+Two themes recur across the areas:
 
-The second cross-cutting theme is that excellent material in kubevirt/community
-is not surfaced where users and contributors look. Three of the four areas note
-the same pattern: governance, the maintainers list, and the SIG list are not
-linked from the kubevirt.io Community page; the community meeting's day, time,
-and join link appear only in the community repository; the help-wanted guide and
-MAINTAINERS file are not linked from the guide; and the user guide's own
-"Getting help" section is three bare URLs on the Welcome page with no guidance
-on which channel suits which question and no mention of `#kubevirt-dev`. The
-mkdocs-material header and footer carry no repository or social icons because
-`repo_url` and `extra.social` are unset. Fixing these is largely a matter of
-adding links and one-sentence descriptions.
+- The good material is not surfaced where contributors and users are.
+  Governance, maintainers, the SIG list, the help-wanted guide, and the
+  community meeting details all live in the community repository and are barely
+  linked from kubevirt.io or the user guide. The guide's header and footer carry
+  no repository or chat icons, and its only help section is three bare URLs on
+  the Welcome page.
+- The path from invitation to first contribution breaks. The Contributing page
+  motivates newcomers and then stops before the mechanics of claiming an issue,
+  opening a pull request, and getting a review. It sends them to
+  `good-first-issue` lists that are empty because every beginner issue from the
+  past year was auto-closed by the stale bot rather than fixed or exempted.
+  Nothing names a channel or person a stuck contributor can ask.
 
-The third theme is the missing hand-off from motivation to mechanics. The
-Contributing page ends before explaining how to claim an issue, fork, sign off,
-open a pull request, or interpret Prow labels, and it names no channel, person,
-or meeting where a stuck contributor can ask for help. Those mechanics exist in
-the repository README and in kubevirt/kubevirt's CONTRIBUTING.md and
-getting-started guide but are not presented as the next step. A "Making your
-first documentation change" section and a "Where to ask for help" section on the
-Contributing page, drawing on content that already exists, would close this gap
-and reinforce the beginner backlog and communication fixes above.
-
-Project governance is the section's strongest area and, alongside the
-communication infrastructure, shows that the project has done the hard
-organizational work. The remaining effort is editorial and operational: link
-what exists, keep the beginner backlog alive, and finish the Contributing page.
+The governance documentation and the September 2025 batch of scoped,
+self-contained beginner issues are both good enough to cite as models for other
+projects; the backlog problem is one of triage follow-through, not of knowing
+how to write the issues.
 
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
@@ -1423,8 +1400,8 @@ KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
-| Criterion                                   | Rating (1-5)                   |
-| ------------------------------------------- | ------------------------------ |
+|                                             | Criterion                      | Rating (1-5) |
+| ------------------------------------------- | ------------------------------ | ------------ |
 | Single-source for all files                 | 2 - Needs improvement          |
 | Meets min website req. (for maturity level) | 3 - Meets standards            |
 | Usability, accessibility, and design        | 3 - Meets standards            |
@@ -1445,52 +1422,35 @@ Other Metrics:
 | Intra-site / local search                   | 4 - Meets or exceeds standards |
 | Account custodians are documented           | 1 - Not present                |
 
-The KubeVirt web presence rests on a sound foundation. The user guide runs on
-MkDocs Material, which supplies responsive layout, keyboard, screen-readers,
-full-text search, dark mode, and sitemaps with little project effort, and a Prow
-pipeline republishes both sites to GitHub Pages over HTTPS within a minute or
-two of merge. Branding is applied once at the theme level and stays consistent
-across roughly one hundred pages, the main website footer is a model of CNCF
-compliance for an incubating project, and the project has real adoption evidence
-in its adopters list, CNCF case studies, Summit recordings, and blog. Most of
-what a reader needs is present; the shortfalls are in measurement, connection,
-and stewardship rather than in the platform.
+The KubeVirt web presence rests on a sound platform. MkDocs Material gives the
+user guide responsive layout, accessibility features, full-text search, and
+sitemaps for free; a Prow pipeline republishes both sites to GitHub Pages over
+HTTPS within a minute or two of merge; branding is applied once at the theme
+level; and the main website footer is a model of CNCF compliance. The project
+also has more adoption evidence than most incubating projects. The shortfalls
+are in measurement, connection, and stewardship rather than in the tooling.
 
-The most consequential gap is that the user guide is invisible to the project.
-It carries no analytics at all, so maintainers cannot see which pages are read,
-which searches fail, or which inbound links break, and the main site's Adobe
-Analytics tag runs on previews as well as production. The same blind spot
-appears in governance: nobody is documented as custodian of the analytics,
-Netlify, Search Console, DNS, or GitHub Pages accounts, the community
-`sig/documentation` entry has no chairs or members, and commit history shows
-both repositories leaning on one active documentation maintainer. Instrumenting
-the guide and writing down who owns the infrastructure are low-effort changes
-that would unblock every other improvement in this section.
+Three themes recur across the areas:
 
-The second recurring theme, and the one that drives the two lowest ratings, is
-that KubeVirt's web properties do not act as one. Pages under `kubevirt.io` are
-built from three repositories with no submodule linkage, user-facing content
-also sits in the `docs/` directories of the core and CDI repositories, and no
-README explains which content belongs where. The guide and `kubevirt.io` use
-different static-site generators, logo variants, typefaces, and header
-treatments; neither site's search covers the other; and the guide's header,
-footer, and landing page contain no link to adopters, case studies, talks, the
-blog, or `kubevirt.io` itself. The guide's footer also omits the copyright, CNCF
-affiliation, and trademark links the main site carries, so a documentation
-reader sees no visible connection to CNCF. A shared header and footer, a
-documented content boundary, cross-links from the guide's landing page, and a
-`robots.txt` that lists both sitemaps would close most of this gap.
+- The user guide is invisible to the project. It carries no analytics, so nobody
+  can see which pages are read, which searches fail, or which inbound links
+  break. Nobody is documented as custodian of the analytics, Netlify, Search
+  Console, DNS, or GitHub Pages accounts, the community `sig/documentation`
+  entry has no members, and both repositories lean on one active documentation
+  maintainer.
+- The web properties do not act as one. Pages under `kubevirt.io` are built from
+  three repositories with no documented content boundary, and user-facing
+  content also sits in the core and CDI code repositories. The guide and the
+  main site differ in generator, logo, typeface, header, and footer; neither
+  search covers the other; and the guide links to none of the adopters, case
+  studies, talks, or blog that make the project's case. The guide's footer also
+  lacks the copyright, CNCF, and trademark elements the main site carries.
+- Small defects touch every page. Header text fails WCAG AA contrast,
+  `robots.txt` has a malformed sitemap URL, `netlify.toml` carries dead
+  configuration, and production lacks an HSTS header. Each is a one-line fix.
 
-Finally, a handful of small defects affect every page and are each a one-line
-fix: white-on-teal header text at roughly 2.6:1 contrast fails WCAG AA,
-`robots.txt` references a malformed sitemap URL, `netlify.toml` contains a dead
-`sed` step and unpinned dependencies, the main site's copyright line lacks the ©
-symbol, and production responses lack an HSTS header. Content-side accessibility
-issues (an ASCII-art architecture diagram with no text alternative, `$`-prefixed
-code blocks, and 500-plus-line pages) belong with the content-maintainability
-work rather than infrastructure. The branding implementation, the automated
-publish pipeline, and the main website footer are strong enough to cite as
-examples for other projects.
+The branding implementation, the automated publish pipeline, and the main
+website footer are strong enough to cite as examples for other projects.
 
 ### Single-source requirement
 
