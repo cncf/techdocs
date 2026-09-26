@@ -1400,8 +1400,8 @@ KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
 code.
 
-|                                             | Criterion                      | Rating (1-5) |
-| ------------------------------------------- | ------------------------------ | ------------ |
+| Criterion                                   | Rating (1-5)
+| ------------------------------------------- | ------------------------------ |
 | Single-source for all files                 | 2 - Needs improvement          |
 | Meets min website req. (for maturity level) | 3 - Meets standards            |
 | Usability, accessibility, and design        | 3 - Meets standards            |
