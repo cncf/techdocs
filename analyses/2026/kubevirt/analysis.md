@@ -111,9 +111,9 @@ Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
 to their area of concern:
 
-- [Project documentation](#project-documentation)
-- [Contributor documentation](#contributor-documentation)
-- [Website & Infrastructure](#website--infrastructure)
+- Project documentation
+- Contributor documentation
+- [Website & Infrastructure]
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
