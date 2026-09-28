@@ -11,9 +11,8 @@ author: Bruce Hamilton
 
 This document is an analysis of the effectiveness and completeness of the open
 source software (OSS) project's documentation and website. It is funded by the
-Cloud Native Computing Foundation (CNCF) Foundation as part of its overall
-effort to incubate, grow, and graduate open source cloud native software
-projects.
+Cloud Native Computing Foundation (CNCF) as part of its overall effort to
+incubate, grow, and graduate open source cloud native software projects.
 
 According to CNCF best practices guidelines, effective documentation is a
 prerequisite for program graduation. The documentation analysis is the first
@@ -42,28 +41,31 @@ The documentation discussed here includes the entire contents of the website,
 the technical documentation, and documentation for contributors and users on the
 KubeVirt GitHub repository.
 
-The KubeVirt website and documentation are written in Markdown and are compiled
-using the [Hugo, Docusaurus, Sphinx, other] static site generator with the
-[Docsy, other] theme and served from [the Netlify platform, other]. The site's
-code is stored on the KubeVirt GitHub repo.
+The KubeVirt user guide is written in Markdown and built with MkDocs using the
+Material for MkDocs theme. The main website is a Jekyll site. Both are published
+to GitHub Pages by Prow jobs, and Netlify provides pull-request previews for the
+user guide. The sources are stored in the `kubevirt/user-guide` and
+`kubevirt/kubevirt.github.io` repositories.
 
 #### In scope
 
-- Website: https://KubeVirt.io
-- Documentation: https://KubeVirt.io/user-guide
-- Website repo: https://github.com/KubeVirt/user-guide
-- Labs documentation: https://github.com/kubevirt/kubevirt.github.io
+- Website: https://kubevirt.io
+- Documentation: https://kubevirt.io/user-guide
+- User guide repo: https://github.com/kubevirt/user-guide
+- Website and labs repo: https://github.com/kubevirt/kubevirt.github.io
 
 #### Out of scope
 
-- Other KubeVirt GitHub repositories besides `user-guide`.
+- Other KubeVirt GitHub repositories, except where their documentation or
+  processes affect the user guide (for example, `kubevirt/kubevirt` and
+  `kubevirt/community`).
 
 ### How this document is organized
 
 Note: Current organization is different, if not accepted the following will be
 implemented:
 
-This document is divided into two sections that represent two major areas of
+This document is divided into three sections that represent three major areas of
 concern:
 
 - **Project documentation:** concerns documentation for users of the KubeVirt
@@ -159,7 +161,7 @@ Three themes recur across the areas:
 The project does two things well enough to point to as examples: feature
 developers document their own features in the same release cycle because the
 pull request template and VEP checklist require it, and the project's own names,
-commands, and feature gates are free of non-inclusive te rms.
+commands, and feature gates are free of non-inclusive terms.
 
 The following sections contain assessments of each element of the Project
 Documentation rubric.
@@ -688,15 +690,12 @@ Rating: 4 - Meets or exceeds standards
 
 ### Information architecture
 
-- Add a "Getting started" page to the User Workloads section (or expand Basic
-  Use into one) that walks through the happy path on a single page: install
-  KubeVirt, install `virtctl`, create a VirtualMachine with `virtctl create vm`
-  or a sample manifest, start it, connect over console or SSH, and stop it. Link
-  to the existing detailed pages at each step rather than duplicating them.
+- Add a "Getting started" page that walks through the happy path on a single
+  page. See the New user content recommendations for the proposed content and
+  placement.
 - Rewrite Basic Use and Lifecycle to present VirtualMachine as the primary
-  object and VirtualMachineInstance as the running instance it manages. Include
-  a complete minimal `vm.yaml`, since both pages currently reference `vmi.yaml`
-  without providing it.
+  object and VirtualMachineInstance as the running instance it manages. See the
+  New user content recommendations for the proposed page content.
 - Add `cluster_admin/plugins.md` to `docs/cluster_admin/.nav.yml` so the Plugins
   page is discoverable from somewhere other than the deprecated Hook Sidecar
   page.
@@ -772,18 +771,20 @@ Rating: 4 - Meets or exceeds standards
   arm64, and include the `chmod +x` and `PATH` steps. Rename the page to
   "Installing virtctl" and move it to sit next to Installation, or link to it
   from Installation's Next steps.
-- Rewrite Basic Use into a short "Your first VirtualMachine" page that includes
-  a complete minimal `vm.yaml` using a public containerDisk image, the
-  `kubectl apply`, `virtctl start`, `virtctl console`, and `virtctl stop`
-  commands, and explicit links to the next pages. Update Lifecycle to reference
-  that manifest instead of the undefined `vmi.yaml`.
+- Rewrite Basic Use into a short "Your first VirtualMachine" page that presents
+  VirtualMachine as the primary object and includes a complete minimal `vm.yaml`
+  using a public containerDisk image, the `kubectl apply`, `virtctl start`,
+  `virtctl console`, and `virtctl stop` commands, and explicit links to the next
+  pages. Update Lifecycle to reference that manifest instead of the undefined
+  `vmi.yaml`.
 - Enable `content.code.copy` under `theme.features` in `mkdocs.yml` to add a
   copy button to every code block.
-- Convert `$`-prefixed indented code blocks on the new-user path (Installation,
-  `virtctl`, Basic Use, Lifecycle) to fenced `shell` blocks without prompt
-  characters, and place example output in a separate block or a `title="Output"`
-  annotation so commands paste cleanly. Extend the same treatment to Disks and
-  Volumes and Export API over time.
+- Convert `$`-prefixed indented code blocks to fenced `shell` blocks without
+  prompt characters, and place example output in a separate block or a
+  `title="Output"` annotation so commands paste cleanly. Start with the new-user
+  path (Installation, `virtctl`, Basic Use, Lifecycle), then the longest
+  reference pages (Disks and Volumes, Export API). This also helps screen
+  readers and mobile scrolling.
 - Give the Quickstarts page a one-paragraph introduction that states
   prerequisites (a laptop with virtualization enabled, or a browser for
   Killercoda), the expected time, and what the reader will have at the end, and
@@ -836,9 +837,10 @@ Rating: 4 - Meets or exceeds standards
   `mkdocs.yml`, and when a change needs a cherry-pick to a `release-vX.Y-stable`
   branch. Model it on the Thanos "How to contribute to docs" page.
 - Add a MAINTAINERS.md (or a "Maintainers" section on the Contributing page)
-  that names the user guide approvers, the person or group responsible for the
-  Netlify deployment and the release-notes script, and how to reach them. Model
-  it on the NATS site MAINTAINERS file.
+  that names the user guide approvers and the person or group responsible for
+  the release-notes script, and how to reach them. Model it on the NATS site
+  MAINTAINERS file. Infrastructure accounts are covered in the Maintenance
+  planning recommendations.
 - Add a short documentation style guide covering page structure (title, short
   concept, feature-state banner, procedure, related links), the standard
   feature-state admonition, code block conventions (fenced blocks, no `$`
@@ -856,10 +858,9 @@ Rating: 4 - Meets or exceeds standards
 - Ask the maintainers to consider a documentation-focused reviewer role or SIG
   Docs alias, so that writers who are not core code approvers can share the
   review load and reduce the open PR backlog.
-- Document the release-cycle touch points for the user guide on the Contributing
-  page: when a release branch is cut, that the VEP checklist requires the docs
-  PR to be merged by code freeze, and how the release notes page is regenerated
-  with `update_changelog.sh`.
+- State on the Contributing page that the VEP checklist requires the docs PR to
+  be merged by code freeze. The release-branch and release-notes processes are
+  covered in the Content maintainability recommendations.
 - Triage the twelve open pull requests, closing or merging the oldest, and add a
   stale-PR policy to CONTRIBUTING.md so contributors know what to expect.
 
@@ -1302,29 +1303,22 @@ Rating: 4 - Meets or exceeds standards
 
 ### Communication methods documented
 
-- Add a dedicated "Community and communication" section to the user guide that
-  consolidates Slack, the forum, the kubevirt-dev mailing list, community
-  meetings, and social accounts in one clearly labeled place, rather than
-  spreading these links across the home page and Contributing page.
-- Document community meetings within the guide itself: state the cadence (for
-  example, weekly or monthly), list the meeting times, and include the public
-  Google Calendar link (`kubevirt@cncf.io`) so readers can join without leaving
-  the guide.
-- Give each communication channel a one-line description of its purpose so
-  newcomers know where to ask a question, where to hold discussions, and where
-  to follow announcements (for example, Slack for real-time chat, the mailing
-  list or forum for longer discussions).
-- Improve the discoverability of existing links by surfacing the Slack, mailing
-  list, and GitHub links more prominently—such as in the persistent site
-  navigation or a footer—instead of only in a short "Getting help" list near the
-  bottom of the landing page.
-- Clarify how the mailing list, the forum, and Slack relate to one another,
-  since all three are currently presented as bare links; a brief note on when to
-  use each avoids confusion for first-time contributors.
-- Keep the community page and the user guide consistent so that channels
-  documented on `kubevirt.io/community` (meetings, calendar, YouTube, social
-  accounts) are either mirrored or clearly linked from the guide, ensuring
-  readers who stay in the user guide are not missing key channels.
+- Add a "Community and communication" section to the user guide that
+  consolidates the Slack channels, the kubevirt-dev mailing list, community
+  meetings, and social accounts in one place, and keep it consistent with
+  `kubevirt.io/community` so readers who stay in the guide do not miss a
+  channel. Give each channel a one-line description of its purpose (for example,
+  `#virtualization` for usage questions, `#kubevirt-dev` for contributor
+  discussion, the mailing list for announcements and longer threads) so
+  newcomers know where to ask.
+- Document community meetings within the guide itself: state the cadence, list
+  the meeting times, and include the public calendar link (`kubevirt@cncf.io`)
+  so readers can join without leaving the guide.
+- Set `repo_url` and an `extra.social` block in `mkdocs.yml` so the GitHub,
+  Slack, and mailing list links appear in the guide's header and footer on every
+  page, instead of only in the "Getting help" list on the Welcome page.
+- Replace the raw Slack URL on the Welcome page with the channel name and a link
+  to the Kubernetes Slack invitation page.
 
 ### Beginner friendly issue backlog
 
@@ -1350,9 +1344,6 @@ Rating: 4 - Meets or exceeds standards
   templates, and add a short "good first issue" checklist to those templates
   (affected page, expected outcome, pointers to relevant docs) so beginner
   issues are self-contained.
-- Link directly to a filtered beginner view from the contributing page — for
-  example, the repository's `good first issue` label query — so newcomers reach
-  actionable issues in one click instead of browsing the full issue list.
 - Publish a lightweight triage cadence (for example, a periodic
   documentation-issue triage during a SIG or community meeting) to keep
   labeling, acceptance, and staleness decisions consistent over time.
@@ -1366,12 +1357,12 @@ Rating: 4 - Meets or exceeds standards
   `git commit -s`, open the pull request, and what to expect from Prow
   (`ok-to-test`, `lgtm`, `approved`) and reviewers. Move the build and test
   steps from the repository README here or link them prominently.
-- Add a "Where to ask for help" section to the Contributing page that names
-  `#kubevirt-dev` on Kubernetes Slack for contributor questions and
-  `#virtualization` for usage questions, links the Slack invitation page, states
-  that the weekly community meeting includes newcomer introductions with the
-  day, time, and Zoom link, and identifies the documentation approvers or a docs
-  contact.
+- Add a "Where to ask for help" section to the Contributing page, and repeat it
+  in CONTRIBUTING.md, that names `#kubevirt-dev` on Kubernetes Slack for
+  contributor questions and `#virtualization` for usage questions, links the
+  Slack invitation page, states that the weekly community meeting includes
+  newcomer introductions with the day, time, and Zoom link, and identifies the
+  documentation approvers or a docs contact.
 - Link the kubevirt/community resources that newcomers need directly from the
   Contributing page: the SIG list (to find the right SIG for a topic), the
   help-wanted guide (to understand the labels), the community meeting document,
@@ -1389,9 +1380,6 @@ Rating: 4 - Meets or exceeds standards
   or could be offered for first-time contributors, and document it on the
   Contributing page if so; the help-wanted guide already promises "extra
   assistance" on `good first issue` items, so state how to request it.
-- Repeat the "Getting help" links from the Welcome page in CONTRIBUTING.md and
-  on the Contributing page so contributors do not have to navigate back to the
-  home page to find a channel.
 
 ### Project governance documentation
 
@@ -1402,7 +1390,8 @@ Rating: 4 - Meets or exceeds standards
   and `sig-list.md`.
 - Expand the "Important community resources" list on the user guide's
   Contributing page so each governance link has a one-sentence description of
-  what the reader will find, and add the maintainers list and SIG list to it.
+  what the reader will find. The New contributor recommendations add the
+  maintainers list and SIG list to the same list.
 - Add a short "How the project is run" paragraph to the Contributing page, above
   the resource list, that names the maintainer group, explains that work is
   organized in SIGs, and states that decisions default to lazy consensus, so a
@@ -1470,8 +1459,8 @@ Three themes recur across the areas:
 The branding implementation, the automated publish pipeline, and the main
 website footer are strong enough to cite as examples for other projects.
 
-The following sections contain assessments of each element of the website and
-infrastructure rubric.
+The following sections contain assessments of each element of the Website &
+Infrastructure rubric.
 
 ### Single-source requirement
 
@@ -1501,7 +1490,7 @@ evaluate on the following:
   `kubevirt/user-guide`. The API reference (`kubevirt.github.io/api-reference`)
   is generated into `kubevirt/api-reference` from the code in
   `kubevirt/kubevirt`. Each repository is published independently by its own
-  Prow post submit job to its own `gh-pages` branch, and the website's
+  Prow post-submit job to its own `gh-pages` branch, and the website's
   `pages/docs.md` is a one-line stub that simply links to the user guide.
 
   User-facing documentation is also spread across code repositories. The `docs/`
@@ -1912,12 +1901,11 @@ organizations using it. We evaluate on the following:
   Yes. The `kubevirt.io/videos` section has pages for Talks, Demos, Interviews,
   KubeVirt Summit, and Weekly Meetings, each embedding a curated YouTube
   playlist. The Summit page links per-year playlists for five past editions and
-  advertises the sixth annual KubeVirt Summit in October 2The following
-  recommendations address the SEO Analytics and Site Search of the KubeVirt user
-  guide.026 with its CfP dates. The Talks page also points to the community
-  Events wiki for upcoming CfPs and conference sessions. The user guide's
-  `contributing.md` links only to the New Contributor session recording; nothing
-  in the user guide points to the talks, demos, or Summit content.
+  advertises the sixth annual KubeVirt Summit in October 2026 with its CfP
+  dates. The Talks page also points to the community Events wiki for upcoming
+  CfPs and conference sessions. The user guide's `contributing.md` links only to
+  the New Contributor session recording; nothing in the user guide points to the
+  talks, demos, or Summit content.
 
 - Is there a logo wall of users/participating organizations?
 
@@ -1957,10 +1945,10 @@ Rating: 3 - Meets standards
 
 ### SEO, Analytics and site-local search
 
-SEO helps users find your project and it's documentation, and analytics helps
-you monitor site traffic and diagnose issues like page 404s. Intra-site search,
-while optional, can offer your readers a site-focused search results. We
-evaluate on the following:
+SEO helps users find your project and its documentation, and analytics helps you
+monitor site traffic and diagnose issues like page 404s. Intra-site search,
+while optional, can offer your readers site-focused search results. We evaluate
+on the following:
 
 - Is analytics enabled for the production server?
 
@@ -2079,7 +2067,8 @@ project maintainers aren’t web developers. We evaluate on the following:
   design changes fall entirely on the project. The two sites use different
   static-site generators, so maintainers need to know both toolchains.
 
-- Is there active cultivating website maintainers from within the community?
+- Is the project actively cultivating website maintainers from within the
+  community?
 
   Only informally. Both repositories have `OWNERS` files with active reviewer
   and approver lists, and the main website's `OWNERS` file records emeritus
@@ -2094,9 +2083,9 @@ project maintainers aren’t web developers. We evaluate on the following:
 
 - Are site build times reasonable?
 
-  Yes. Both sites are built by a Prow post submit job that runs `make build` and
+  Yes. Both sites are built by a Prow post-submit job that runs `make build` and
   pushes the output to a `gh-pages` branch served by GitHub Pages. Comparing
-  commit timestamps on `main` with the corresponding post submit site update
+  commit timestamps on `main` with the corresponding post-submit site update
   commits on `gh-pages` shows the user guide is republished within about 40
   seconds of a merge and the main website within about 90 seconds. Pull-request
   previews for the user guide build on Netlify from a pinned `netlify.toml`
@@ -2224,22 +2213,18 @@ Rating: 3 - Meets standards
   `--md-primary-fg-color` to a teal that gives at least 4.5:1 against white (for
   example `#007a7e` or darker), or keep the brand teal for decorative elements
   only and set the header and tab text to a dark foreground. Check links against
-  the same 4.5:1 target and remove the `filter: brightness(80%)` hack in favor
-  of an explicit color. Verify both light and dark schemes with a contrast
-  checker.
+  the same 4.5:1 target in both schemes and replace the
+  `filter: brightness(80%)` rule with explicit `--md-typeset-a-color` values per
+  scheme. Verify both light and dark schemes with a contrast checker.
 - Replace the ASCII stack diagram on the Architecture page with an image that
   has descriptive alt text or, better, a Mermaid diagram (enable
   `pymdownx.superfences` custom fences for `mermaid` in `mkdocs.yml`)
   accompanied by a one-paragraph prose description of the layers, so screen
   reader users and mobile readers get the same information.
-- Convert `$`-prefixed indented code blocks to fenced blocks with a language tag
-  and no prompt, and separate output into its own block. Start with the pages on
-  the new-user path (Installation, Lifecycle, `virtctl`) and the longest
-  reference pages (Disks and Volumes, Export API). This helps screen readers,
-  copy-paste, and mobile scrolling at once.
-- Enable `content.code.copy` in `theme.features` so long commands can be copied
-  without horizontal scrolling, and break commands over 100 characters across
-  lines with `\` continuations in the source.
+- Convert `$`-prefixed indented code blocks to fenced blocks and enable the code
+  copy button, as described in the New user content recommendations. Break
+  commands over 100 characters across lines with `\` continuations in the source
+  so they do not require horizontal scrolling on mobile.
 - Verify on a phone that tables on the Arm64 feature-gate and device status
   pages scroll horizontally rather than overflowing the page; if they overflow,
   remove the `display: table; width: max-content` override from `extra.css` or
@@ -2253,7 +2238,7 @@ Rating: 3 - Meets standards
 - Set the logo alt text to "KubeVirt" by adding `extra.homepage` or a custom
   `partials/logo.html` override, and add a short caption or introductory
   sentence above each wide status table stating what the table shows.
-- Add an accessibility check to the Makefile and Prow pre submit, for example
+- Add an accessibility check to the Makefile and Prow pre-submit, for example
   running `pa11y-ci` or Lighthouse against the built site for a sample of pages,
   so contrast regressions are caught in pull requests.
 
@@ -2269,21 +2254,13 @@ Rating: 3 - Meets standards
   hoc `#0db2b6` primary with a value from the documented scale (for example,
   `$kv-color--green-300`, `#00aab2`), or add `#0db2b6` to the scale so both
   properties draw from the same list.
-- Add an `extra.social` block and a `copyright` line to `mkdocs.yml` so the
-  Material footer shows the project's GitHub, Slack, and `kubevirt.io` links.
-  This gives readers a visual and navigational link between the guide and the
-  main site at almost no cost.
+- Add an `extra.social` block to `mkdocs.yml` so the Material footer shows the
+  project's GitHub, Slack, and `kubevirt.io` links. This gives readers a visual
+  and navigational link between the guide and the main site at almost no cost.
+  (The `copyright` line is covered in the Website requirements recommendations.)
 - Consider using the horizontal `KubeVirt_logo_color.svg` wordmark in the
   guide's header, or add the wordmark to the main site's header alongside the
   icon, so both properties present the same logo variant.
-- Check the `filter: brightness(80%)` link rule against WCAG AA contrast in both
-  the light and dark schemes. If it fails, replace the filter with explicit
-  `--md-typeset-a-color` values per scheme so the link color is deliberate
-  rather than derived.
-- Review the `.md-typeset table:not([class]) { width: max-content; }` rule on a
-  narrow viewport. If wide tables push past the content column, scope the rule
-  to a class applied only to tables that need it, or wrap those tables so they
-  scroll within the column.
 - Remove the unused legacy assets `asciibinder-logo-horizontal.png`,
   `asciibinder_web_logo.svg`, and `book_pages_bg.jpg` from `docs/assets` so the
   repository contains only current brand assets.
@@ -2351,11 +2328,10 @@ Rating: 3 - Meets standards
   searchable, and add a link from the main site's search page to the user guide
   search (or vice versa) so users can find documentation from either entry
   point.
-- Document analytics custodianship. Add a short "Site infrastructure" section to
-  the README of each repository (or to the SIG Docs or community repository)
-  that names the owners or aliases responsible for the Adobe Analytics property,
-  the Netlify sites, and Google Search Console, and describes how a maintainer
-  requests access or a 404 report.
+- Name the custodians of the Adobe Analytics property and Google Search Console
+  in the "Site infrastructure" section proposed in the Maintenance planning
+  recommendations, and describe how a maintainer requests access or a 404
+  report.
 - Once analytics are in place, set up a recurring 404 report (for example, a
   saved report filtered on the not-found page title) and use it to add missing
   entries to the `redirects` plugin map in `mkdocs.yml`.
@@ -2365,8 +2341,9 @@ Rating: 3 - Meets standards
 - Document infrastructure ownership. Add a "Site infrastructure" section to the
   README of both `kubevirt/user-guide` and `kubevirt/kubevirt.github.io` (or a
   page in `kubevirt/community`) that lists who administers the Netlify site,
-  GitHub Pages and custom-domain settings, DNS for kubevirt.io, and the Prow job
-  definitions in `kubevirt/project-infra`, and how a maintainer requests access.
+  GitHub Pages and custom-domain settings, DNS for kubevirt.io, the analytics
+  and Search Console accounts, and the Prow job definitions in
+  `kubevirt/project-infra`, and how a maintainer requests access.
 - Give documentation a formal home. Populate the `sig/documentation` entry in
   the community `sig-list.md` with chairs, a meeting cadence or async channel,
   and a charter that includes both the user guide and the website, so newcomers
@@ -2383,10 +2360,9 @@ Rating: 3 - Meets standards
   Material or another Hugo/Docusaurus-style generator with a supported theme so
   a single skill set covers both sites, and track the decision in an issue even
   if the migration is deferred.
-- Clean up `netlify.toml` in the user-guide repository: remove the obsolete
-  `sed` line that targets `site_url: https://kubevirt.io/docs`, and pin the
-  MkDocs package versions (or use a `requirements.txt`) so preview builds are
-  reproducible and match the Prow image.
+- Pin the MkDocs package versions in `netlify.toml` (or use a
+  `requirements.txt`) so preview builds are reproducible and match the Prow
+  image. Removing the obsolete `sed` line is covered in the SEO recommendations.
 - Add a `Strict-Transport-Security` header. GitHub Pages does not let you set
   response headers directly, so either enable HSTS through the DNS/CDN provider
   in front of kubevirt.io or, if none exists, record the limitation in the
@@ -2399,9 +2375,11 @@ Rating: 3 - Meets standards
 
 ### References and notes
 
+[criteria]: https://github.com/cncf/techdocs/blob/main/docs/analysis/criteria.md
+
 ### Rating values
 
-The numeric rating values used in this document are as follows
+The numeric rating values used in this document are as follows:
 
 1. Not present
 2. Needs improvement
