@@ -100,7 +100,7 @@ to their area of concern:
 
 - [Project documentation](#project-documentation)
 - [Contributor documentation](#contributor-documentation)
-- [Website & infrastructure](#website--infrastructure)
+- [Website & Infrastructure](#website--infrastructure)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
 from the [criteria] specification.
@@ -159,7 +159,7 @@ Three themes recur across the areas:
 The project does two things well enough to point to as examples: feature
 developers document their own features in the same release cycle because the
 pull request template and VEP checklist require it, and the project's own names,
-commands, and feature gates are free of non-inclusive terms.
+commands, and feature gates are free of non-inclusive te rms.
 
 The following sections contain assessments of each element of the Project
 Documentation rubric.
@@ -300,6 +300,8 @@ documentation. We evaluate on the following:
   pages exist outside the navigation. Release Notes, a 3,000-line page, sits in
   the main navigation between Storage and Contributing.
 
+#### Comment
+
 Strengths:
 
 - Audience- and layer-based top-level sections with explicit, intentional page
@@ -391,6 +393,8 @@ specifically for them. We evaluate on the following:
   `virtctl create vm` invocations, `kubectl` lifecycle commands, and YAML
   manifests. These are formatted for direct copy-paste.
 
+#### Comment
+
 Strengths:
 
 - Installation gives a correct, short operator-based procedure with expected
@@ -475,6 +479,8 @@ evaluate on the following:
   flow against `main` only. Release notes are maintained by a script
   (`update_changelog.sh`) that regenerates the page from kubevirt/kubevirt tags,
   but that process is also undocumented outside the script itself.
+
+#### Comment
 
 Strengths:
 
@@ -580,6 +586,8 @@ the following:
   process. Ownership is inferable from Git history and OWNERS files but is not
   documented.
 
+#### Comment
+
 Strengths:
 
 - The kubevirt/kubevirt PR template and the VEP release checklist both require a
@@ -653,6 +661,8 @@ evaluate on the following:
   gendered pronouns, no "guys", and no other ableist or exclusionary terms in
   prose. The repository's spelling check does not include an inclusive-language
   or minimizing-language rule, so nothing prevents new occurrences.
+
+#### Comment
 
 Strengths:
 
@@ -926,8 +936,8 @@ self-contained beginner issues are both good enough to cite as models for other
 projects; the backlog problem is one of triage follow-through, not of knowing
 how to write the issues.
 
-The following sections contain brief assessments of each element of the
-Contributor Documentation rubric.
+The following sections contain assessments of each element of the Contributor
+Documentation rubric.
 
 ### Communication methods documented
 
@@ -1000,6 +1010,8 @@ to reach you. We evaluate on the following:
   development discussion. There is no separate user-oriented list, and the guide
   does not say so. The Contributing page does not mention the mailing list at
   all.
+
+#### Comment
 
 Strengths:
 
@@ -1098,6 +1110,8 @@ We evaluate on the following:
   triage and, without a human in the loop, it erases the entry points the
   Contributing page advertises.
 
+#### Comment
+
 Strengths:
 
 - Full Prow label taxonomy, org-level issue templates, and automated lifecycle
@@ -1192,6 +1206,8 @@ in easily? We evaluate on the following:
   URLs on the Welcome page and are not repeated on the Contributing page or in
   CONTRIBUTING.md.
 
+#### Comment
+
 Strengths:
 
 - A dedicated, welcoming Contributing page that is the canonical entry point
@@ -1256,6 +1272,8 @@ following:
   the SIG list, and neither site summarizes how decisions are made or who the
   maintainers are. A user or prospective adopter evaluating the project's
   governance must know to open the community repository.
+
+#### Comment
 
 Strengths:
 
@@ -1394,7 +1412,7 @@ Rating: 4 - Meets or exceeds standards
   meeting cadence and Slack channel, so the generated SIG list can serve as the
   single place to find how to participate in each group.
 
-## Website & infrastructure
+## Website & Infrastructure
 
 KubeVirt is an **incubating** project of CNCF. This means that the project
 should be developing professional-quality documentation alongside the project
@@ -1452,6 +1470,9 @@ Three themes recur across the areas:
 The branding implementation, the automated publish pipeline, and the main
 website footer are strong enough to cite as examples for other projects.
 
+The following sections contain assessments of each element of the website and
+infrastructure rubric.
+
 ### Single-source requirement
 
 Source files for _all website pages_ should reside in a single repo. Among other
@@ -1505,6 +1526,8 @@ evaluate on the following:
   contributing guide explains the division of content between the website, the
   user guide, and the code repositories' `docs/` directories, so contributors
   have to infer where a new page belongs.
+
+#### Comment
 
 Strengths:
 
@@ -1600,6 +1623,8 @@ for which a tech docs analysis can be requested. We evaluate on the following:
   `CODE_OF_CONDUCT.md` in its root; GitHub applies the organization-wide default
   from the `kubevirt/.github` repository, so the code of conduct is visible on
   the repository page but is not a file in the repository as the checklist asks.
+
+#### Comment
 
 Strengths:
 
@@ -1722,6 +1747,8 @@ following:
   Arm64 feature-gate table with a status column per gate) are readable but
   tedious without a caption or summary row.
 
+#### Comment
+
 Strengths:
 
 - Responsive mkdocs-material theme with viewport meta, mobile drawer navigation,
@@ -1805,6 +1832,8 @@ this is branding and marketing. We evaluate on the following:
   wide tables extend past the content column and rely on horizontal scrolling,
   which is useful for the many API-field tables but can crowd narrow view ports.
   Typography differs from the main site, which uses Open Sans at a 16px base.
+
+#### Comment
 
 Strengths:
 
@@ -1899,6 +1928,8 @@ organizations using it. We evaluate on the following:
   name in a tooltip. The wall shows who uses KubeVirt but not how or why,
   because the use-case text is not carried over. The user guide does not display
   or link to the logo wall.
+
+#### Comment
 
 Strengths:
 
@@ -2007,6 +2038,8 @@ evaluate on the following:
   from redhat.com, access to the data appears to be held by Red Hat staff rather
   than by the project, and that dependency is not recorded anywhere.
 
+#### Comment
+
 Strengths:
 
 - Full-text local search in the user guide, with a tuned separator for technical
@@ -2100,6 +2133,8 @@ project maintainers aren’t web developers. We evaluate on the following:
   include a `Strict-Transport-Security` header, so browsers rely on the redirect
   rather than HSTS to enforce HTTPS on repeat visits.
 
+#### Comment
+
 Strengths:
 
 - MkDocs Material for the user guide is well supported and common among CNCF
@@ -2127,7 +2162,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-## Website & infrastructure recommendations
+## Website & Infrastructure recommendations
 
 ### Single-source requirement
 
