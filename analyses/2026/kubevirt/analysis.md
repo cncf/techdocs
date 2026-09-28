@@ -2390,11 +2390,11 @@ Rating: 3 - Meets standards
 
 # Related information
 
-### References and notes
+## References and notes
 
 [criteria]: https://github.com/cncf/techdocs/blob/main/docs/analysis/criteria.md
 
-### Rating values
+## Rating values
 
 The numeric rating values used in this document are as follows:
 
