@@ -659,4 +659,3 @@ author: Bruce Hamilton
   dated emeritus entries as the website repository already does, so the approver
   list reflects who is actually active
   **3 - Put in backlog**
-
