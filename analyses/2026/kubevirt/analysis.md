@@ -83,12 +83,17 @@ concern:
 - **Website & Infrastructure:** concerns the mechanics of publishing the
   documentation, and includes branding, website structure, and maintainability.
 
-Each section begins with the summary ratings of the areas of the section, based on a rubric with appropriate
-[criteria] for the section.
+Each section begins with the summary ratings of the areas of the section, based
+on a rubric with appropriate [criteria] for the section.
 
 Each area in a section has the following areas of analysis:
-- Comments, includes answers to criteria questions, strengths and weaknesses, Provides observations about the existing documentation, with a focus on how it does or does not help KubeVirt users achieve their goals.
-- Each section has a Recommendations section that covers each of its areas. Provides suggested changes that would improve the effectiveness of the documentation.
+
+- Comments, includes answers to criteria questions, strengths and weaknesses,
+  Provides observations about the existing documentation, with a focus on how it
+  does or does not help KubeVirt users achieve their goals.
+- Each section has a Recommendations section that covers each of its areas.
+  Provides suggested changes that would improve the effectiveness of the
+  documentation.
 
 The accompanying **implementation** document breaks the recommendations down
 into concrete actions that can be implemented by project contributors. Its focus
