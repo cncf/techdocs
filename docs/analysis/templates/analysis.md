@@ -191,7 +191,7 @@ Documentation rubric.
 
 #### Information architecture
 
-The overall structure (pages/subpages/sections/subsections) of your project
+The overall structure (pages/subpages/sections/subsections) of the project
 documentation. We evaluate on the following:
 
 - Is there high level conceptual/“About” content? Is the documentation feature
@@ -218,8 +218,8 @@ specifically for them. We evaluate on the following:
 - Is installation documented step-by-step?
 - If needed, are multiple OSes documented?
 - Do users know where to go after reading the getting started guide?
-- Is your new user content clearly signposted on your site’s homepage or at the
-  top of your information architecture?
+- Is the new user content clearly signposted on the site’s homepage or at the
+  top of the information architecture?
 - Is there sample code or other example content that can easily be copy-pasted?
 
 #### Content maintainability & site mechanics
@@ -229,10 +229,10 @@ become large maintenance burdens, particularly if you don’t plan for them.
 
 We evaluate on the following:
 
-- Is your documentation searchable?
+- Is the documentation searchable?
 - Are you planning for localization/internationalization with regards to site
   directory structure? Is a localization framework present?
-- Do you have a clearly documented method for versioning your content?
+- Do you have a clearly documented method for versioning the content?
 
 #### Content creation processes
 
@@ -243,7 +243,7 @@ We evaluate on the following:
 
 - Is there a clearly documented (ongoing) contribution process for
   documentation?
-- Does your code release process account for documentation creation & updates?
+- Does the code release process account for documentation creation & updates?
 - Who reviews and approves documentation pull requests?
 - Does the website have a clear owner/maintainer?
 
@@ -314,8 +314,8 @@ to reach you.
 We evaluate on the following:
 
 - Is there a Slack/Discord/Discourse/etc. community and is it prominently linked
-  from your website?
-- Is there a direct link to your GitHub organization/repository?
+  from the website?
+- Is there a direct link to the GitHub organization/repository?
 - Are weekly/monthly project meetings documented? Is it clear how someone can
   join those meetings?
 - Are mailing lists documented?
@@ -338,8 +338,8 @@ in easily?
 
 We evaluate on the following:
 
-- Do you have a community repository or section on your website?
-- Is there a document specifically for new contributors/your first contribution?
+- Do you have a community repository or section on the website?
+- Is there a document specifically for new contributors/the first contribution?
 - Do new users know where to get help?
 
 #### Project governance documentation
@@ -461,19 +461,19 @@ We evaluate on the following:
 #### Usability, accessibility and devices
 
 Most CNCF websites are accessed from mobile and other non-desktop devices at
-least 10-20% of the time. Planning for this early in your website's design will
+least 10-20% of the time. Planning for this early in the website's design will
 be much less effort than retrofitting a desktop-first design.
 
 - Is the website usable from mobile?
 - Are doc pages readable?
 - Are all / most website features accessible from mobile -- such as the top-nav,
   site search and in-page table of contents?
-- Might a [mobile-first] design make sense for your project?
+- Might a [mobile-first] design make sense for the project?
 
 [mobile-first]:
   https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
 
-Plan for suitable [accessibility][] measures for your website. For example:
+Plan for suitable [accessibility][] measures for the website. For example:
 
 - Are color contrasts significant enough for color-impaired readers?
 - Are most website features usable using a keyboard only?
@@ -511,16 +511,16 @@ We evaluate on the following:
 
 #### SEO, Analytics and site-local search
 
-SEO helps users find your project and it's documentation, and analytics helps
-you monitor site traffic and diagnose issues like page 404s. Intra-site search,
-while optional, can offer your readers a site-focused search results.
+SEO helps users find the project and it's documentation, and analytics helps you
+monitor site traffic and diagnose issues like page 404s. Intra-site search,
+while optional, can offer the readers a site-focused search results.
 
 We evaluate on the following:
 
 - Analytics:
   - Is analytics enabled for the production server?
   - Is analytics disabled for all other deploys?
-  - If your project used Google Analytics, have you migrated to GA4?
+  - If the project used Google Analytics, have you migrated to GA4?
   - Can Page-not-found (404) reports easily be generated from you site
     analytics? Provide a sample of the site's current top-10 404s.
 - Is site indexing supported for the production server, while disabled for
@@ -536,7 +536,7 @@ project maintainers aren’t web developers.
 
 We evaluate on the following:
 
-- Is your website tooling well supported by the community (i.e., Hugo with the
+- Is the website tooling well supported by the community (i.e., Hugo with the
   Docsy theme) or commonly used by CNCF projects (our recommended tech stack?)
 - Are you actively cultivating website maintainers from within the community?
 - Are site build times reasonable?
@@ -544,7 +544,7 @@ We evaluate on the following:
 
 #### Other
 
-- Is your website accessible via HTTPS?
+- Is the website accessible via HTTPS?
 - Does HTTP access, if any, redirect to HTTPS?
 
 ### Recommendations
