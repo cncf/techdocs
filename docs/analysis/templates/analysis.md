@@ -455,8 +455,8 @@ only two levels for which a tech docs analysis can be requested.)
 
 We evaluate on the following:
 
-- Are most of the applicable guidelines satisfied as described in the
-  [Webiste guidelines & checklist](https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md)?
+- Are most of the applicable guidelines satisfied as described in the Webiste
+  guidelines and checklist?
 
 #### Usability, accessibility and devices
 
