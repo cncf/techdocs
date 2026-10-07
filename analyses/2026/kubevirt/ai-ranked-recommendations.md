@@ -2,6 +2,7 @@
 title: AI Ranked Recommendations
 created: 2026-09-30
 modified: 2026-09-30
+toc_max_heading_level: 4
 author: Bruce Hamilton
 ---
 
