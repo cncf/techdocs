@@ -9,6 +9,10 @@ IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
   - \?no-link-check
+  # Bot wall (403): sign-in wall for members and strangers alike, so channel
+  # existence is unverifiable. Same rule as docsy.dev's lychee.toml, widened to
+  # the whole host since the workspace root 403s too.
+  - ^https://cloud-native\.slack\.com
   # Old analysis pages are not updated. Ignore broken links:
   - ^https://(docs|www).tremor.rs/
   - ^https://knative.dev/docs/(concepts|reference|relnotes)/
