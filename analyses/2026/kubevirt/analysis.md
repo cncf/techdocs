@@ -1,7 +1,8 @@
 ---
 title: KubeVirt Documentation Analysis
 created: 2026-05-24
-modified: 2026-09-30
+modified: 2026-10-07
+toc_max_heading_level: 4
 author: Bruce Hamilton
 ---
 
@@ -69,9 +70,6 @@ user guide. The sources are stored in the `kubevirt/user-guide` and
   `kubevirt/community`).
 
 ### How this document is organized
-
-Note: Current organization is different, if not accepted the following will be
-implemented:
 
 This document is divided into three sections that represent three major areas of
 concern:
@@ -179,7 +177,9 @@ commands, and feature gates are free of non-inclusive terms.
 The following sections contain assessments of each element of the Project
 Documentation rubric.
 
-### Information architecture
+### Comments
+
+#### Information architecture
 
 The overall structure (pages/subpages/sections/subsections) of your project
 documentation. We evaluate on the following:
@@ -318,7 +318,7 @@ documentation. We evaluate on the following:
   - Release Notes, a 3,000-line page, sits in the main navigation between
     Storage and Contributing.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -351,7 +351,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### New user content
+#### New user content
 
 New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
@@ -407,7 +407,7 @@ specifically for them. We evaluate on the following:
   `virtctl create vm` invocations, `kubectl` lifecycle commands, and YAML
   manifests. These are formatted for direct copy-paste.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -437,7 +437,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### Content maintainability & site mechanics
+#### Content maintainability & site mechanics
 
 As a project scales, concerns like localized (translated) content and versioning
 become large maintenance burdens, particularly if you don’t plan for them. We
@@ -495,7 +495,7 @@ evaluate on the following:
   regenerates the page from kubevirt/kubevirt tags, but that process is also
   undocumented outside the script itself.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -523,7 +523,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### Content creation processes
+#### Content creation processes
 
 Documentation is only as useful as it is accurate and well-maintained, and
 requires the same kind of review and approval processes as code. We evaluate on
@@ -606,7 +606,7 @@ the following:
   process. Ownership is inferable from Git history and OWNERS files but is not
   documented.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -634,7 +634,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### Inclusive language
+#### Inclusive language
 
 Creating inclusive project communities is a key goal for all CNCF projects. We
 evaluate on the following:
@@ -684,7 +684,7 @@ evaluate on the following:
   prose. The repository's spelling check has no inclusive-language or
   minimizing-language rule, so nothing prevents new occurrences.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -960,7 +960,9 @@ how to write the issues.
 The following sections contain assessments of each element of the Contributor
 Documentation rubric.
 
-### Communication methods documented
+### Comments
+
+#### Communication methods documented
 
 One of the easiest ways to attract new contributors is making sure they know how
 to reach you. We evaluate on the following:
@@ -1031,7 +1033,7 @@ to reach you. We evaluate on the following:
   does not say so. The Contributing page does not mention the mailing list at
   all.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1058,7 +1060,7 @@ Weaknesses:
 
 Rating: 4 - Meets or exceeds standards
 
-### Beginner friendly issue backlog
+#### Beginner friendly issue backlog
 
 We evaluate on the following:
 
@@ -1130,7 +1132,7 @@ We evaluate on the following:
   triage and, without a human in the loop, it erases the entry points the
   Contributing page advertises.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1158,7 +1160,7 @@ Weaknesses:
 
 Rating: 2 - Needs improvement
 
-### New contributor getting started content
+#### New contributor getting started content
 
 Open source is complex and projects have many processes to manage that. Are
 processes easy to understand and written down so that new contributors can jump
@@ -1227,7 +1229,7 @@ in easily? We evaluate on the following:
   URLs on the Welcome page and are not repeated on the Contributing page or in
   CONTRIBUTING.md.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1254,7 +1256,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### Project governance documentation
+#### Project governance documentation
 
 One of the CNCF’s core project values is open governance. We evaluate on the
 following:
@@ -1297,7 +1299,7 @@ following:
   maintainers are. A user or prospective adopter evaluating the project's
   governance must know to open the community repository.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1484,7 +1486,9 @@ website footer are strong enough to cite as examples for other projects.
 The following sections contain assessments of each element of the Website &
 Infrastructure rubric.
 
-### Single-source requirement
+### Comments
+
+#### Single-source requirement
 
 Source files for _all website pages_ should reside in a single repo. Among other
 problems, keeping source files in two places:
@@ -1539,7 +1543,7 @@ evaluate on the following:
   content between the website, the user guide, and the code repositories'
   `docs/` directories, so contributors have to infer where a new page belongs.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1564,7 +1568,7 @@ Weaknesses:
 
 Rating: 2 - Needs improvement
 
-### Website requirements
+#### Website requirements
 
 Listed here are the minimal website requirements for projects based on their
 maturity level, either incubating or graduated. These are the only two levels
@@ -1636,7 +1640,7 @@ for which a tech docs analysis can be requested. We evaluate on the following:
   from the `kubevirt/.github` repository, so the code of conduct is visible on
   the repository page but is not a file in the repository as the checklist asks.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1660,7 +1664,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### Usability, accessibility and devices
+#### Usability, accessibility and devices
 
 Most CNCF websites are accessed from mobile and other non-desktop devices at
 least 10-20% of the time. Planning for this early in your website's design will
@@ -1759,7 +1763,7 @@ following:
   Arm64 feature-gate table with a status column per gate) are readable but
   tedious without a caption or summary row.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1786,7 +1790,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### Branding and design
+#### Branding and design
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing. We evaluate on the following:
@@ -1846,7 +1850,7 @@ this is branding and marketing. We evaluate on the following:
   viewports. Typography also differs from the main site, which uses Open Sans at
   a 16px base.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1872,7 +1876,7 @@ Weaknesses:
 
 Rating: 4 - Meets or exceeds standards
 
-### Case studies/social proof
+#### Case studies/social proof
 
 One of the best ways to advertise an open source project is to show other
 organizations using it. We evaluate on the following:
@@ -1942,7 +1946,7 @@ organizations using it. We evaluate on the following:
   because the use-case text is not carried over. The user guide does not display
   or link to the logo wall.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -1968,7 +1972,7 @@ Weaknesses:
 
 Rating: 3 - Meets standards
 
-### SEO, Analytics and site-local search
+#### SEO, Analytics and site-local search
 
 SEO helps users find your project and its documentation, and analytics helps you
 monitor site traffic and diagnose issues like page 404s. Intra-site search,
@@ -2054,7 +2058,7 @@ on the following:
   from redhat.com, access to the data appears to be held by Red Hat staff rather
   than by the project, and that dependency is not recorded anywhere.
 
-#### Comment
+##### Comment
 
 Strengths:
 
@@ -2077,7 +2081,7 @@ Weaknesses:
 
 Rating: 2 - Needs improvement
 
-### Maintenance planning
+#### Maintenance planning
 
 Website maintenance is an important part of project success, especially when
 project maintainers aren’t web developers. We evaluate on the following:
@@ -2149,7 +2153,7 @@ project maintainers aren’t web developers. We evaluate on the following:
   include a `Strict-Transport-Security` header, so browsers rely on the redirect
   rather than HSTS to enforce HTTPS on repeat visits.
 
-#### Comment
+##### Comment
 
 Strengths:
 
