@@ -33,7 +33,6 @@
     "docusaurus": "docusaurus",
     "fix:format": "npm run _check:format -- --write",
     "fix": "npm run seq -- $(npm -s run _list:fix:*)",
-    "postinstall": "node scripts/postinstall-webpackbar-notice.mjs",
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run docus:serve",
@@ -65,14 +64,28 @@
     "prettier": "^3.9.6",
     "typescript": "~7.0.2"
   },
-  "//": "TEMP overrides (webpackbar): remove after @docusaurus/* ships webpackbar ^7 — https://github.com/facebook/docusaurus/issues/11923",
+  "//": [
+    "Security overrides: drop one once the parent below accepts a patched version, that is, npm audit stays clean without it.",
+    "katex: micromark-extension-math, via markdownlint",
+    "markdownlint-cli (js-yaml), smol-toml: markdownlint-cli",
+    "serialize-javascript: @docusaurus/bundler, via its copy and CSS-minimizer webpack plugins",
+    "sockjs (uuid): sockjs is unmaintained, so drop once webpack-dev-server stops using it",
+    "tinypool: @docusaurus/core, expected in Docusaurus v4"
+  ],
   "overrides": {
-    "@docusaurus/bundler": {
-      "webpackbar": "^7.0.0"
-    }
+    "katex": "^0.18.2",
+    "markdownlint-cli": {
+      "js-yaml": "^5.4.1"
+    },
+    "serialize-javascript": "^7.1.0",
+    "smol-toml": "^1.9.0",
+    "sockjs": {
+      "uuid": "^11.1.1"
+    },
+    "tinypool": "^2.1.2"
   },
   "private": true,
-  "spelling": "cSpell:ignore ACMR docus HTMLTEST loglevel webpackbar -",
+  "spelling": "cSpell:ignore ACMR docus HTMLTEST katex loglevel smol sockjs -",
   "prettier": {
     "proseWrap": "always",
     "singleQuote": true
