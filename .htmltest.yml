@@ -9,6 +9,9 @@ IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
   - \?no-link-check
+  # Bot wall: Slack returns 403 to htmltest's user agent while the workspace
+  # and channel pages load in a browser.
+  - ^https://cloud-native\.slack\.com
   # Old analysis pages are not updated. Ignore broken links:
   - ^https://(docs|www).tremor.rs/
   - ^https://knative.dev/docs/(concepts|reference|relnotes)/
