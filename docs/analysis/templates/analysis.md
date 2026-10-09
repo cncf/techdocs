@@ -3,6 +3,7 @@ title: _PROJECT_ Documentation Analysis
 tags: [_PROJECT_]
 created: YYYY-MM-DD
 modified: YYYY-MM-DD
+toc_max_heading_level: 4
 author: _NAME_ (@_HANDLE_)
 ---
 
