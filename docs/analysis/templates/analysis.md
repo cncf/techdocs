@@ -11,26 +11,26 @@ author: _NAME_ (@_HANDLE_)
 
 ## About this template
 
-TO USE THIS TEMPLATE, search and replace the named IDs:
+To use this template, use a copy of this file with the same `analysis.md`
+filename and search and replace the named placeholder IDs:
 
-- `_PROJECT_`: project name
-- `YYYY-MM-DD`: creation and modification dates of the analysis document
-- `_NAME_`: name of the analysis author
-- `@_HANDLE_`: GitHub handle of the analysis author
-- `_PROJECT-WEBSITE_`: landing page of the project's information website
-- `_PROJECT-DOC-URL_`: main page of the technical documentation for the current
-  project revision; this might be on the main website server, for example as
-  _PROJECT-WEBSITE_/doc
-- `_PROJECT-DOC-REPO_`: repository where the project technical documentation is
-  stored; this might be its own repo or a directory in the project main repo
+| ID                   | Description                                         |
+| -------------------- | --------------------------------------------------- |
+| `_PROJECT_`          | Project name                                        |
+| `YYYY-MM-DD`         | Creation & modification dates of this document      |
+| `_NAME_`             | Author's, technical writer, name                    |
+| `@_HANDLE_`          | Author's GitHub handle                              |
+| `_PROJECT-WEBSITE_`  | Main Landing page of the project's website          |
+| `_PROJECT-DOC-URL_`  | Main page of the Project's documentation            |
+| `_PROJECT-DOC-REPO_` | GitHub repository where the project's documentation |
 
 Replace link placeholders in brackets, such as [_PROJECT_][project-website],
 with a Markdown-style link.
 
 For the analysis procedure, see [Analysis how-to](../howto.md).
 
-> Note: delete this "About this template" section after you have customized this
-> template for a specific project.
+> Author's Note: Delete this "About this template" section after you have
+> customized this template for a specific project.
 
 ## Introduction
 
@@ -160,12 +160,12 @@ to legal requirements such as copyright and licensing issues.
 
 ## Project documentation
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
+> Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
-> AUTHOR NOTE: or
+> Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
@@ -181,13 +181,13 @@ the project code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Project Documentation here.
+> Author's Note: make any overall comments about the Project Documentation here.
 
 The following sections contain brief assessments of each element of the Project
 Documentation rubric.
 
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items, and
-> especially the technical documentation, meet these criteria. (Criteria are
+> Author's Note: For each heading below, discuss how well the in-scope items,
+> and especially the technical documentation, meet these criteria. (Criteria are
 > copied from criteria.md)
 
 #### Information architecture
@@ -261,7 +261,7 @@ We evaluate on the following:
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
+> Author's Note: Write general recommendations based on the comments from the
 > previous section.
 
 #### Information architecture
@@ -276,12 +276,12 @@ We evaluate on the following:
 
 ## Contributor documentation
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
+> Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
-> AUTHOR NOTE: or
+> Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
@@ -296,15 +296,15 @@ the project code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Contributor Documentation
+> Author's Note: make any overall comments about the Contributor Documentation
 > here.
 
 The following sections contain brief assessments of each element of the
 Contributor Documentation rubric.
 
-> AUTHOR NOTE: For each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the contributor documentation might
-> be contained in the documentation repository. (Criteria are copied from
+> Author's Note: For each heading below, discuss how well the in-scope items
+> meet these criteria. Keep in mind that much of the contributor documentation
+> might be contained in the documentation repository. (Criteria are copied from
 > criteria.md)
 
 #### Communication methods documented
@@ -353,7 +353,7 @@ We evaluate on the following:
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
+> Author's Note: Write general recommendations based on the comments from the
 > previous section.
 
 #### Communication methods documented
@@ -366,12 +366,12 @@ We evaluate on the following:
 
 ## Website and infrastructure
 
-> AUTHOR NOTE: Pick the CNCF maturity level of the project:
+> Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
 have [_very high_][criteria] standards for documentation.
 
-> AUTHOR NOTE: or
+> Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
@@ -396,16 +396,16 @@ the project code.
 
 ### Comments
 
-> AUTHOR NOTE: make any overall comments about the Website and documentation
+> Author's Note: make any overall comments about the Website and documentation
 > infrastructure here.
 
 The following sections contain brief assessments of each element of the Website
 and documentation infrastructure rubric.
 
-> AUTHOR NOTE: for each heading below, discuss how well the in-scope items meet
-> these criteria. Keep in mind that much of the website infrastructure criteria
-> depend on the tools (static site generator, website framework and hosting,
-> analytics tools, etc.) and processes (project CI, release procedures,
+> Author's Note: for each heading below, discuss how well the in-scope items
+> meet these criteria. Keep in mind that much of the website infrastructure
+> criteria depend on the tools (static site generator, website framework and
+> hosting, analytics tools, etc.) and processes (project CI, release procedures,
 > governance, etc.) used to produce the documentation. (Criteria are copied from
 > criteria.md)
 
@@ -550,7 +550,7 @@ We evaluate on the following:
 
 ### Recommendations
 
-> AUTHOR NOTE: Write general recommendations based on the comments from the
+> Author's Note: Write general recommendations based on the comments from the
 > previous section.
 
 #### Single-source requirement
