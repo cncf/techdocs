@@ -23,7 +23,7 @@ This report maps every recommendation in `.github/input/ai-ranked-recommendation
 
 ## Recommendation mapping
 
-| # | Section | Area | CSV priority | Issue file | Sub-issue |
+<!-- | # | Section | Area | CSV priority | Issue file | Sub-issue |
 |---|---|---|---|---|---|
 | 1 | Project Documentation | Information architecture | 2 - High | `U-create-getting-started-path.md` | Add a Getting Started page after Architecture |
 | 2 | Project Documentation | Information architecture | 2 - High | `U-create-getting-started-path.md` | Rewrite Basic Use as "Your first VirtualMachine" |
@@ -138,13 +138,13 @@ This report maps every recommendation in `.github/input/ai-ranked-recommendation
 | 111 | Website & Infrastructure | Maintenance planning | 2 - High | `U-document-site-ownership.md` | Record the repository and toolchain decisions |
 | 112 | Website & Infrastructure | Maintenance planning | 1 - Urgent | `U-mkdocs-improvements.md` | Make preview builds reproducible and non-indexable |
 | 113 | Website & Infrastructure | Maintenance planning | 2 - High | `U-document-site-ownership.md` | Add a Strict-Transport-Security header or record the gap |
-| 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | `U-document-site-ownership.md` | Publish a maintainer ladder and keep OWNERS_ALIASES current |
+| 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | `U-document-site-ownership.md` | Publish a maintainer ladder and keep OWNERS_ALIASES current | -->
 
 ## Priority adjustments
 
 Umbrella labels follow the highest-priority sub-issue, with these exceptions:
 
-| Recommendation | CSV priority | Issue label | Reason |
+<!-- | Recommendation | CSV priority | Issue label | Reason |
 |---|---|---|---|
 | 42, 43 (legacy `master` links and node-name example) | 1 - Urgent | high (`U-inclusive-language-updates.md`) | Two small fixes in an umbrella whose remaining work is backlog-priority prose cleanup. They are the first sub-issue so they can be done immediately; split them out if the umbrella's label matters. |
 | 81, 83 (mobile table check and captions) | 1 - Urgent | high (`U-accessibility-improvements.md`) | The logo alt-text half of 83 is in the urgent configuration issue. The remaining verification and caption work is small and sits alongside the other accessibility fixes. |
@@ -154,7 +154,7 @@ Umbrella labels follow the highest-priority sub-issue, with these exceptions:
 | 74, 85, 95, 104 (vendor logos, brand reference, blog categories, site search) | 3 - Backlog | urgent (`U-fix-kubevirt-io-gaps.md`) | Grouped with the urgent website compliance fixes because all land in `kubevirt/kubevirt.github.io`; these are the last four sub-issues and can be deferred. |
 | 27, 29 (release-notes process, localization) | 3 - Backlog | high (`U-publish-versioned-docs.md`) | Both are short `CONTRIBUTING.md` additions that belong next to the versioning model. |
 | 106 (404 report) | 3 - Backlog | high (`U-enable-analytics.md`) | Depends on the analytics sub-issues in the same umbrella. |
-| 68, 69, 109, 114 (content audits, maintainer ladder, OWNERS_ALIASES) | 3 - Backlog | high (`U-document-site-ownership.md`) | Grouped with the ownership and boundary documentation they implement. |
+| 68, 69, 109, 114 (content audits, maintainer ladder, OWNERS_ALIASES) | 3 - Backlog | high (`U-document-site-ownership.md`) | Grouped with the ownership and boundary documentation they implement. | -->
 
 ## Notes for the writer
 
