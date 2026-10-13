@@ -52,7 +52,7 @@ will have at the end. Add a closing link to the Getting Started page.
 Done when: both pages link to Getting Started and the Quickstarts page states
 its prerequisites.
 
-### Rewrite Basic Use as "Your first VirtualMachine" and fix the Lifecycle manifest reference
+### Rewrite Basic Use as and fix the Lifecycle manifest reference
 
 Rewrite `docs/user_workloads/basic_use.md` into a short page that presents
 VirtualMachine as the primary object and VirtualMachineInstance as the running
@@ -94,7 +94,7 @@ Accessing Virtual Machines.
 
 Done when: the Installation page no longer ends on an advanced topic.
 
-### Expand the virtctl page to cover all client binaries and rename it "Installing virtctl"
+### Expand the virtctl page and rename it "Installing virtctl"
 
 Expand `docs/user_workloads/virtctl_client_tool.md` to cover every published
 client binary. Use the Material theme's content tabs for Linux, macOS, and

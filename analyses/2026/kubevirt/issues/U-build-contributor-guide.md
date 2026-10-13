@@ -107,7 +107,7 @@ linked.
 
 Done when: new pull requests open with the checklist.
 
-### State the code-freeze requirement and a stale-PR policy, and triage open pull requests
+### Code-freeze requirement, stale-PR policy, triage open pull requests
 
 - On the Contributing page, state that the VEP checklist requires the docs PR to
   be merged by code freeze.

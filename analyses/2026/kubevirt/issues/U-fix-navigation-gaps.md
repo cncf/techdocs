@@ -21,7 +21,7 @@ order; when a file name changes, add a redirect in `mkdocs.yml`.
 
 ## Sub-issues
 
-### Add the Plugins page to the navigation and delete the duplicate Windows virtio drivers page
+### Add the Plugins page and delete duplicate Windows virtio drivers page
 
 Add `plugins.md` to `docs/cluster_admin/.nav.yml` so the Plugins page is
 discoverable from somewhere other than the deprecated Hook Sidecar page.
