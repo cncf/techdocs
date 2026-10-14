@@ -32,7 +32,6 @@ and the maintainers' decision about a single search index is recorded.
 ## URL
 
 - https://kubevirt.io/user-guide/ (search box)
-- https://kubevirt.io/search/
 - https://github.com/kubevirt/kubevirt.github.io/blob/main/_layouts/search.html
 
 ## Additional context
