@@ -1,6 +1,6 @@
 # Issue coverage report
 
-This report maps every recommendation in 
+This report maps every recommendation in
 `.github/input/ai-ranked-recommendations.csv` to the numbered issue files in
 `.github/output/issues/`. It is kept outside the issues directory so it is not
 uploaded as an issue.
@@ -10,7 +10,7 @@ uploaded as an issue.
 <!-- markdownlint-disable MD013 -->
 
 | Issue | Title | Label | File |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | #9001 | Add a Getting Started page after Architecture | high | `9001-add-getting-started-page.md` |
 | #9002 | Rewrite Basic Use as "Your first VirtualMachine" | high | `9002-rewrite-basic-use.md` |
 | #9003 | Add a Start here link and fix the Slack link on the Welcome page | urgent | `9003-fix-welcome-page-links.md` |
@@ -87,7 +87,7 @@ uploaded as an issue.
 ## Umbrella issues
 
 | Umbrella | Label | Sub-issues |
-|---|---|---|
+| --- | --- | --- |
 | #9061 Create a new-user getting started path | urgent | #9006, #9004, #9005, #9001, #9002, #9003, #9007 |
 | #9062 Fix navigation gaps and reorganize information architecture | urgent | #9008, #9042, #9011, #9009, #9010, #9050, #9051 |
 | #9063 Fill feature and reference coverage gaps | high | #9012, #9013, #9014, #9015, #9016 |
@@ -106,7 +106,7 @@ Standalone issues outside any umbrella: none. Each umbrella takes the highest la
 ## Recommendation mapping
 
 | # | Section | Area | CSV priority | Issue(s) |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | 1 | Project Documentation | Information architecture | 2 - High | #9001 |
 | 2 | Project Documentation | Information architecture | 2 - High | #9002 |
 | 3 | Project Documentation | Information architecture | 1 - Urgent | #9008 |
@@ -227,7 +227,7 @@ Standalone issues outside any umbrella: none. Each umbrella takes the highest la
 No issue takes a label lower than its highest-ranked recommendation. Each issue takes the highest ranking among its recommendations, so these recommendations were raised by bundling with higher-ranked work on the same pages or files:
 
 | Issue | Label | Recommendations raised (original ranking) | Reason |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | #9001 | high | 22 (backlog) | The Quickstarts introduction links to the new Getting Started page. |
 | #9004 | urgent | 15, 17 (high) | Same page edit as the urgent "Next steps" section. |
 | #9018 | high | 27, 29 (backlog) | Short `CONTRIBUTING.md` additions that belong next to the versioning model. |
