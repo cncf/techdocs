@@ -8,7 +8,6 @@ uploaded as an issue.
 ## Issues
 
 <!-- markdownlint-disable MD013 -->
-
 | Issue | Title | Label | File |
 | --- | --- | --- | --- |
 | #9001 | Add a Getting Started page after Architecture | high | `9001-add-getting-started-page.md` |
@@ -83,7 +82,6 @@ uploaded as an issue.
 | #9070 | Fix website compliance and adopter content | urgent | `U-9070-fix-website-compliance.md` |
 | #9071 | Enable analytics and fix SEO configuration | urgent | `U-9071-enable-analytics-seo.md` |
 | #9072 | Document site ownership and content boundaries | high | `U-9072-document-site-ownership.md` |
-
 <!-- markdownlint-enable MD013 -->
 
 ## Counts
