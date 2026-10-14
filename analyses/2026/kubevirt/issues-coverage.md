@@ -8,10 +8,12 @@ uploaded as an issue.
 ## Issues
 
 <!-- markdownlint-disable MD013 -->
-| Issue | Title | Label | File |
-| --- | --- | --- | --- |
-| #9001 | Add a Getting Started page after Architecture | high | `9001-add-getting-started-page.md` |
-| #9002 | Rewrite Basic Use as "Your first VirtualMachine" | high | `9002-rewrite-basic-use.md` |
+
+| Issue | Title                                            | Label | File                               |
+| ----- | ------------------------------------------------ | ----- | ---------------------------------- |
+| #9001 | Add a Getting Started page after Architecture    | high  | `9001-add-getting-started-page.md` |
+| #9002 | Rewrite Basic Use as "Your first VirtualMachine" | high  | `9002-rewrite-basic-use.md`        |
+
 <!-- markdownlint-enable MD013 -->
 
 ## Counts
