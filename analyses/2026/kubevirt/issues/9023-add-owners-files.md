@@ -34,7 +34,7 @@ experts, while root approvers still approve site-wide changes.
 - Repository: https://github.com/kubevirt/user-guide
 - `OWNERS` and `OWNERS_ALIASES` in the repository root
 - New files: `docs/network/OWNERS`, `docs/storage/OWNERS`, `docs/compute/OWNERS`
-- Guide sections: 
+- Guide sections:
   `https://kubevirt.io/user-guide/compute/`
   `https://kubevirt.io/user-guide/network/`
   `https://kubevirt.io/user-guide/storage/`

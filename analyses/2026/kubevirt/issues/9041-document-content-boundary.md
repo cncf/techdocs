@@ -36,9 +36,9 @@ guidance.
 ## URL
 
 - https://kubevirt.io/user-guide/contributing/ (`docs/contributing.md`)
-- https://github.com/kubevirt/user-guide/blob/main/README.md
-- https://github.com/kubevirt/kubevirt.github.io/blob/main/README.md
-- https://github.com/kubevirt/kubevirt/blob/main/README.md
+- `https://github.com/kubevirt/user-guide/blob/main/README.md`
+- `https://github.com/kubevirt/kubevirt.github.io/blob/main/README.md`
+- `https://github.com/kubevirt/kubevirt/blob/main/README.md`
 
 ## Additional context
 
