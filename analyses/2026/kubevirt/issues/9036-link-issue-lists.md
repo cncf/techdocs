@@ -37,7 +37,7 @@ beginner-friendly issues, and knows what each label means.
 
 Depends on #9038 (the label name must be standardized before linking the filter)
 and works best after #9039 (populated, triaged backlog). Related: #9034, #9035,
-#9037.
+and #9037.
 
 This issue tracks recommended changes resulting from an analysis of the KubeVirt
 documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).

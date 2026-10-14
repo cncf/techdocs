@@ -6,9 +6,16 @@ repo: https://github.com/kubevirt/user-guide/issues
 
 ## Umbrella Issue
 
-`CONTRIBUTING.md` is a pointer, and the repository has no pull request template, style guide, per-area reviewers, or stale-PR policy. The sub-issues below give contributors the guidance and tooling they need to propose, write, and review a documentation change. Start with the pull request template and style guide, which are quick wins, then expand the contributor guide that links to them.
+`CONTRIBUTING.md` is a pointer, and the repository has no pull request template,
+style guide, per-area reviewers, or stale-PR policy. The sub-issues below give
+contributors the guidance and tooling they need to propose, write, and review a
+documentation change. Start with the pull request template and style guide,
+which are quick wins, then expand the contributor guide that links to them.
 
-This umbrella issue tracks recommended changes resulting from an analysis of the KubeVirt documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/). The assistance request is tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
+This umbrella issue tracks recommended changes resulting from an analysis of the
+KubeVirt documentation commissioned by
+[CNCF](https://www.cncf.io/projects/kubevirt/). The assistance request is
+tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 

@@ -41,11 +41,13 @@ infrastructure, how to request access, and the known HSTS gap.
 
 ## Additional context
 
-Related: #9041 adds a "Where documentation lives" section to the same READMEs,
-#9056 and #9057 enable and gate analytics, and #9045 records the toolchain
-decision.
+Related: #9041 adds a "Where documentation lives" section to the same 
+READMEs, #9056 and #9057 enable and gate analytics, and #9045 records the 
+toolchain decision.
 
-This issue tracks recommended changes resulting from an analysis of the KubeVirt
-documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).
+This issue tracks recommended changes resulting from an analysis of the 
+KubeVirt documentation commissioned by 
+[CNCF](https://www.cncf.io/projects/kubevirt/).
+
 The assistance request is tracked in
 [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).

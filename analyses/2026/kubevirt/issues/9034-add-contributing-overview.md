@@ -37,8 +37,8 @@ link states what it leads to.
 Related: #9035, #9036, and #9037 (other additions to the same page; coordinate
 to avoid conflicts), #9026 (`MAINTAINERS.md` for the user guide), #9040
 (governance text on the Community page, which should use the same wording), and
-#9020 (`CONTRIBUTING.md`). Question for the maintainers: Which maintainers list
-should the page link, the community one or a user guide one?
+issue #9020 (`CONTRIBUTING.md`). Question for the maintainers: Which maintainers
+list should the page link, the community one or a user guide one?
 
 This issue tracks recommended changes resulting from an analysis of the KubeVirt
 documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).

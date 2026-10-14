@@ -1,8 +1,13 @@
 # Issue coverage report
 
-This report maps every recommendation in `.github/input/ai-ranked-recommendations.csv` to the numbered issue files in `.github/output/issues/`. It is kept outside the issues directory so it is not uploaded as an issue.
+This report maps every recommendation in
+`.github/input/ai-ranked-recommendations.csv` to the numbered issue files in
+`.github/output/issues/`. It is kept outside the issues directory so it is not
+uploaded as an issue.
 
-This data contains tables with long line lengths. See [issues-coverage.md](https://github.com/iRaindrop/kubevirt-work/blob/main/.github/output/issues-coverage.md) in iRaindrop/kubevirt-work.
+This data contains tables with long line lengths. See
+[issues-coverage.md](https://github.com/iRaindrop/kubevirt-work/blob/main/.github/output/issues-coverage.md)
+in iRaindrop/kubevirt-work.
 
 ## Counts
 

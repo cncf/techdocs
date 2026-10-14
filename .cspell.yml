@@ -101,3 +101,7 @@ words:
   - kubevirt
   - viewports
   - rniw
+  - zstd
+  - vmexport
+  - numa
+  - uefi
