@@ -229,9 +229,9 @@ label among its sub-issues.
 | 111 | Website & Infrastructure | Maintenance planning | 2 - High | #9045 |
 | 112 | Website & Infrastructure | Maintenance planning | 1 - Urgent | #9058 |
 | 113 | Website & Infrastructure | Maintenance planning | 2 - High | #9060 |
-| 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | #9026 | 
+| 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | #9026 |
 
-<!-- markdownlint-enable MD013 -->                                                                                                     |
+<!-- markdownlint-enable MD013 -->
 
 ## Priority adjustments
 
