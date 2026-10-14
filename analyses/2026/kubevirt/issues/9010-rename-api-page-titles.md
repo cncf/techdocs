@@ -12,11 +12,16 @@ the User Workloads "Workloads" group mixes current and legacy mechanisms.
 Rename these titles, changing the first H1 in each file and the `.nav.yml`
 entry:
 
-Current title (path under `docs/storage`) Proposed title:
+<!-- markdownlint-disable MD013 -->
 
-(`clone_api.md`): Cloning VMs (`export_api.md`): Exporting VMs and volumes
-(`snapshot_restore_api.md`): Snapshotting and restoring VMs
-(`migration_controller.md`): A title that states what is accomplished
+| Current title | Proposed title |
+| --- | --- |
+| Clone API (`docs/storage/clone_api.md`) | Cloning VirtualMachines |
+| Export API (`docs/storage/export_api.md`) | Exporting VirtualMachines and volumes |
+| Snapshot Restore API (`docs/storage/snapshot_restore_api.md`) | Snapshotting and restoring VirtualMachines |
+| Migration Controller (`docs/storage/migration_controller.md`) | A title that states what the reader accomplishes |
+
+<!-- markdownlint-disable MD013 -->
 
 Choose the last title after reading the page; ask the maintainers if the 
 purpose is unclear. If you rename a file, add a redirect in `mkdocs.yml`
