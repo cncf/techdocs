@@ -6,18 +6,27 @@ repo: https://github.com/kubevirt/user-guide/issues
 
 ## Description
 
-This issue affects the main website, `kubevirt/kubevirt.github.io`. KubeVirt has two published CNCF case studies (NTT Docomo Business and Swisscom), but `kubevirt.io` does not link to them. The landing page shows an End Users logo wall, and evaluators have no single page that shows adoption evidence.
+This issue affects the main website, `kubevirt/kubevirt.github.io`. KubeVirt has
+two published CNCF case studies (NTT Docomo Business and Swisscom), but
+`kubevirt.io` does not link to them. The landing page shows an End Users logo
+wall, and evaluators have no single page that shows adoption evidence.
 
 Make two changes in `kubevirt/kubevirt.github.io`:
 
-1. Add a "Case Studies" block beneath the End Users logo wall on the landing page that links to the two CNCF case studies. The content already exists, so this change needs no new writing.
-2. Create an `/adopters/` (or `/case-studies/`) page that renders the full adopters table with the columns type, name, since, and use case, and links to the CNCF case studies. Add the page to `_data/site_nav_pages.yml`.
+1. Add a "Case Studies" block beneath the End Users logo wall on the landing
+   page that links to the two CNCF case studies. The content already exists, so
+   this change needs no new writing.
+2. Create an `/adopters/` (or `/case-studies/`) page that renders the full
+   adopters table with the columns type, name, since, and use case, and links to
+   the CNCF case studies. Add the page to `_data/site_nav_pages.yml`.
 
-Build the table from `_data/adopters.yml`, which the website already generates from `ADOPTERS.md`, rather than copying data by hand.
+Build the table from `_data/adopters.yml`, which the website already generates
+from `ADOPTERS.md`, rather than copying data by hand.
 
 ## What you expected
 
-An evaluator reaches the two case studies from the landing page and finds all adopters on one page that is listed in the site navigation.
+An evaluator reaches the two case studies from the landing page and finds all
+adopters on one page that is listed in the site navigation.
 
 ## URL
 
@@ -27,6 +36,10 @@ An evaluator reaches the two case studies from the landing page and finds all ad
 
 ## Additional context
 
-Related: #9054 adds the use-case text and KubeVirt-specific vendor links to the same data and page.
+Related: #9054 adds the use-case text and KubeVirt-specific vendor links to the
+same data and page.
 
-This issue tracks recommended changes resulting from an analysis of the KubeVirt documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/). The assistance request is tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
+This issue tracks recommended changes resulting from an analysis of the KubeVirt
+documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).
+The assistance request is tracked in
+[cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).

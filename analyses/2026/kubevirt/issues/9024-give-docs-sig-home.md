@@ -6,17 +6,27 @@ repo: https://github.com/kubevirt/user-guide/issues
 
 ## Description
 
-Documentation has no clear organizational home. The `sig/documentation` entry in the community `sig-list.md` lacks chairs, a meeting cadence or async channel, and a charter. Newcomers cannot tell where to volunteer, and maintainers have no succession path. The SIG Storage charter has a "Meeting Mechanics" section, but it is unclear whether every SIG charter does.
+Documentation has no clear organizational home. The `sig/documentation` entry in
+the community `sig-list.md` lacks chairs, a meeting cadence or async channel,
+and a charter. Newcomers cannot tell where to volunteer, and maintainers have no
+succession path. The SIG Storage charter has a "Meeting Mechanics" section, but
+it is unclear whether every SIG charter does.
 
 Open a pull request against kubevirt/community that does the following:
 
-- Populates the `sig/documentation` entry in `sig-list.md` with chairs, a meeting cadence or an async channel, and a charter covering both the user guide and the website.
-- Records each SIG's meeting cadence and Slack channel in `sigs.yaml`, so the generated SIG list shows how to join every group.
-- Adds a "Meeting Mechanics" section to each SIG charter that lacks one, modeled on the SIG Storage charter.
+- Populates the `sig/documentation` entry in `sig-list.md` with chairs, a
+  meeting cadence or an async channel, and a charter covering both the user
+  guide and the website.
+- Records each SIG's meeting cadence and Slack channel in `sigs.yaml`, so the
+  generated SIG list shows how to join every group.
+- Adds a "Meeting Mechanics" section to each SIG charter that lacks one, modeled
+  on the SIG Storage charter.
 
 ## What you expected
 
-A newcomer can find the documentation group in the SIG list, see who leads it and when or where it meets, and find the same details for every other SIG in one generated list.
+A newcomer can find the documentation group in the SIG list, see who leads it
+and when or where it meets, and find the same details for every other SIG in one
+generated list.
 
 ## URL
 
@@ -28,10 +38,16 @@ A newcomer can find the documentation group in the SIG list, see who leads it an
 
 Questions for the maintainers:
 
-- Should documentation become its own SIG, or a working group under an existing SIG?
+- Should documentation become its own SIG, or a working group under an existing
+  SIG?
 - Who volunteers as chair, and does the group meet or work asynchronously?
 - Does every SIG charter already contain "Meeting Mechanics"?
 
-Related: #9023 (per-directory `OWNERS` files), #9026 (`MAINTAINERS.md` and maintainer ladder), and #9039 (triage cadence, which could run in the group's meeting).
+Related: #9023 (per-directory `OWNERS` files), #9026 (`MAINTAINERS.md` and
+maintainer ladder), and #9039 (triage cadence, which could run in the group's
+meeting).
 
-This issue tracks recommended changes resulting from an analysis of the KubeVirt documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/). The assistance request is tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
+This issue tracks recommended changes resulting from an analysis of the KubeVirt
+documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).
+The assistance request is tracked in
+[cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).

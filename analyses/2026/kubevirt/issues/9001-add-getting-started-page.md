@@ -6,9 +6,15 @@ repo: https://github.com/kubevirt/user-guide/issues
 
 ## Description
 
-A new user who has a working cluster has no single page that leads from installation to a running VirtualMachine. The path is spread across Installation, `virtctl`, Basic Use, and Lifecycle, so readers must assemble it themselves. The Quickstarts page also has no introduction that explains what it offers.
+A new user who has a working cluster has no single page that leads from
+installation to a running VirtualMachine. The path is spread across
+Installation, `virtctl`, Basic Use, and Lifecycle, so readers must assemble it
+themselves. The Quickstarts page also has no introduction that explains what it
+offers.
 
-Add a `docs/getting_started.md` page and place it immediately after Architecture in `docs/.nav.yml`. The page walks the reader through one happy path and links to the detailed page at each step:
+Add a `docs/getting_started.md` page and place it immediately after Architecture
+in `docs/.nav.yml`. The page walks the reader through one happy path and links
+to the detailed page at each step:
 
 1. Install KubeVirt (link to Installation).
 2. Install `virtctl` (link to the `virtctl` page).
@@ -17,11 +23,17 @@ Add a `docs/getting_started.md` page and place it immediately after Architecture
 5. Connect with `virtctl console`.
 6. Stop the VirtualMachine.
 
-Add a "Try it in a sandbox" section that links to, or folds in, the Quickstarts page. Give the Quickstarts page a one-paragraph introduction that states the prerequisites (a laptop with virtualization enabled, or a browser for Killercoda), the expected time, and what the reader has at the end. Close that page with a link back to Getting Started.
+Add a "Try it in a sandbox" section that links to, or folds in, the Quickstarts
+page. Give the Quickstarts page a one-paragraph introduction that states the
+prerequisites (a laptop with virtualization enabled, or a browser for
+Killercoda), the expected time, and what the reader has at the end. Close that
+page with a link back to Getting Started.
 
 ## What you expected
 
-A new user opens one page after Architecture and reaches a running, accessible VirtualMachine by following numbered steps. The Quickstarts page states its prerequisites and outcome up front.
+A new user opens one page after Architecture and reaches a running, accessible
+VirtualMachine by following numbered steps. The Quickstarts page states its
+prerequisites and outcome up front.
 
 ## URL
 
@@ -31,6 +43,10 @@ A new user opens one page after Architecture and reaches a running, accessible V
 
 ## Additional context
 
-Reuse the manifest from #9002 in step 3 so the two pages do not drift. If you fold Quickstarts into the new page, add a redirect in `mkdocs.yml`.
+Reuse the manifest from #9002 in step 3 so the two pages do not drift. If you
+fold Quickstarts into the new page, add a redirect in `mkdocs.yml`.
 
-This issue tracks recommended changes resulting from an analysis of the KubeVirt documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/). The assistance request is tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
+This issue tracks recommended changes resulting from an analysis of the KubeVirt
+documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).
+The assistance request is tracked in
+[cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
