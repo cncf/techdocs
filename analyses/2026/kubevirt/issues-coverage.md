@@ -22,7 +22,7 @@ uploaded as an issue.
 | #9009 | Add landing pages to Compute, Network, and Storage | backlog | `9009-add-section-landing-pages.md` |
 | #9010 | Rename API-centric titles and group legacy workload pages | backlog | `9010-rename-api-page-titles.md` |
 | #9011 | Remove or archive legacy installation content | high | `9011-remove-legacy-installation-content.md` |
-| #9012 | Document the VirtualMachineBackup API | high | `9012-document-virtualmachinebackup-api.md` |
+| #9012 | Document the VirtualMachineBackup API | high | `9012-document-virtual-machine-backup-api.md` |
 | #9013 | Document the CrossArchitectureVirtualization gate, PortRanges, and migration compression | high | `9013-document-v19-features.md` |
 | #9014 | Create a virtctl command reference | high | `9014-create-virtctl-reference.md` |
 | #9015 | Add a feature-gate table | high | `9015-add-feature-gate-table.md` |
@@ -84,26 +84,35 @@ uploaded as an issue.
 | #9071 | Enable analytics and fix SEO configuration | urgent | `U-9071-enable-analytics-seo.md` |
 | #9072 | Document site ownership and content boundaries | high | `U-9072-document-site-ownership.md` |
 
+<!-- markdownlint-enable MD013 -->
+
 ## Umbrella issues
 
-| Umbrella | Label | Sub-issues |
-| --- | --- | --- |
-| #9061 Create a new-user getting started path | urgent | #9006, #9004, #9005, #9001, #9002, #9003, #9007 |
-| #9062 Fix navigation gaps and reorganize information architecture | urgent | #9008, #9042, #9011, #9009, #9010, #9050, #9051 |
-| #9063 Fill feature and reference coverage gaps | high | #9012, #9013, #9014, #9015, #9016 |
-| #9064 Publish versioned docs and standardize feature states | high | #9017, #9018, #9019 |
-| #9065 Build a documentation contributor guide | urgent | #9022, #9021, #9020, #9023, #9026, #9025 |
-| #9066 Improve the Contributing page for new contributors | urgent | #9038, #9034, #9036, #9035, #9037, #9039 |
-| #9067 Document community channels and governance | urgent | #9032, #9030, #9031, #9040, #9024 |
-| #9068 Apply inclusive language and legacy naming updates | urgent | #9029, #9027, #9028 |
-| #9069 Apply accessibility and branding improvements | urgent | #9033, #9049, #9048, #9052 |
-| #9070 Fix website compliance and adopter content | urgent | #9047, #9046, #9053, #9054, #9055 |
-| #9071 Enable analytics and fix SEO configuration | urgent | #9058, #9057, #9056, #9059 |
-| #9072 Document site ownership and content boundaries | high | #9041, #9060, #9045, #9043, #9044 |
+<!-- markdownlint-disable MD013 -->
 
-Standalone issues outside any umbrella: none. Each umbrella takes the highest label among its sub-issues.
+| Umbrella                                                          | Label  | Sub-issues                                      |
+| ----------------------------------------------------------------- | ------ | ----------------------------------------------- |
+| #9061 Create a new-user getting started path                      | urgent | #9006, #9004, #9005, #9001, #9002, #9003, #9007 |
+| #9062 Fix navigation gaps and reorganize information architecture | urgent | #9008, #9042, #9011, #9009, #9010, #9050, #9051 |
+| #9063 Fill feature and reference coverage gaps                    | high   | #9012, #9013, #9014, #9015, #9016               |
+| #9064 Publish versioned docs and standardize feature states       | high   | #9017, #9018, #9019                             |
+| #9065 Build a documentation contributor guide                     | urgent | #9022, #9021, #9020, #9023, #9026, #9025        |
+| #9066 Improve the Contributing page for new contributors          | urgent | #9038, #9034, #9036, #9035, #9037, #9039        |
+| #9067 Document community channels and governance                  | urgent | #9032, #9030, #9031, #9040, #9024               |
+| #9068 Apply inclusive language and legacy naming updates          | urgent | #9029, #9027, #9028                             |
+| #9069 Apply accessibility and branding improvements               | urgent | #9033, #9049, #9048, #9052                      |
+| #9070 Fix website compliance and adopter content                  | urgent | #9047, #9046, #9053, #9054, #9055               |
+| #9071 Enable analytics and fix SEO configuration                  | urgent | #9058, #9057, #9056, #9059                      |
+| #9072 Document site ownership and content boundaries              | high   | #9041, #9060, #9045, #9043, #9044               |
+
+<!-- markdownlint-enable MD013 -->
+
+Standalone issues outside any umbrella: none. Each umbrella takes the highest
+label among its sub-issues.
 
 ## Recommendation mapping
+
+<!-- markdownlint-disable MD013 -->
 
 | # | Section | Area | CSV priority | Issue(s) |
 | --- | --- | --- | --- | --- |
@@ -220,34 +229,40 @@ Standalone issues outside any umbrella: none. Each umbrella takes the highest la
 | 111 | Website & Infrastructure | Maintenance planning | 2 - High | #9045 |
 | 112 | Website & Infrastructure | Maintenance planning | 1 - Urgent | #9058 |
 | 113 | Website & Infrastructure | Maintenance planning | 2 - High | #9060 |
-| 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | #9026 |
+| 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | #9026 | 
+
+<!-- markdownlint-enable MD013 -->                                                                                                     |
 
 ## Priority adjustments
 
-No issue takes a label lower than its highest-ranked recommendation. Each issue takes the highest ranking among its recommendations, so these recommendations were raised by bundling with higher-ranked work on the same pages or files:
+No issue takes a label lower than its highest-ranked recommendation. Each issue
+takes the highest ranking among its recommendations, so these recommendations
+were raised by bundling with higher-ranked work on the same pages or files:
 
-| Issue | Label | Recommendations raised (original ranking) | Reason |
-| --- | --- | --- | --- |
-| #9001 | high | 22 (backlog) | The Quickstarts introduction links to the new Getting Started page. |
-| #9004 | urgent | 15, 17 (high) | Same page edit as the urgent "Next steps" section. |
-| #9018 | high | 27, 29 (backlog) | Short `CONTRIBUTING.md` additions that belong next to the versioning model. |
-| #9021 | urgent | 33 (high) | The style guide carries the urgent minimizing-language rule. |
-| #9026 | high | 109, 114 (backlog) | Maintainer documentation belongs with the `MAINTAINERS.md` work. |
-| #9027 | high | 39 (backlog) | Shares prose edits with the high-ranked cancel terminology question. |
-| #9029 | urgent | 45 (backlog) | Same legacy-branch link cleanup as the urgent `master` links. |
-| #9030 | high | 47 (backlog) | Meeting details belong on the same community page. |
-| #9035 | urgent | 58, 62 (high) | Same Contributing page section as the urgent VEP deadline. |
-| #9036 | urgent | 53 (backlog) | Label explanation sits beside the urgent filtered issue links. |
-| #9037 | high | 61 (backlog) | Same walkthrough section of the Contributing page. |
-| #9038 | urgent | 54 (backlog) | Same label and lifecycle policy as the urgent label consolidation. |
-| #9039 | high | 55 (backlog) | The issue checklist supports the triage cadence. |
-| #9047 | urgent | 77 (backlog) | Same footer file edits as the urgent copyright fix. |
-| #9049 | urgent | 79 (backlog) | Both fix content that fails on mobile or for screen readers. |
-| #9053 | urgent | 93 (backlog) | The adopters page is where the urgent case study links live. |
-| #9054 | high | 74 (backlog) | Same `ADOPTERS.md` data work. |
-| #9056 | high | 106 (backlog) | Depends on the analytics setup in the same issue. |
-| #9057 | urgent | 100 (high) | Same `robots.txt` and head template changes on the website. |
-| #9059 | high | 104 (backlog) | Same search index work as the high-ranked question. |
+<!-- markdownlint-disable MD013 -->
+
+| Issue | Label  | Recommendations raised (original ranking) | Reason                                                                      |
+| ----- | ------ | ----------------------------------------- | --------------------------------------------------------------------------- |
+| #9001 | high   | 22 (backlog)                              | The Quickstarts introduction links to the new Getting Started page.         |
+| #9004 | urgent | 15, 17 (high)                             | Same page edit as the urgent "Next steps" section.                          |
+| #9018 | high   | 27, 29 (backlog)                          | Short `CONTRIBUTING.md` additions that belong next to the versioning model. |
+| #9021 | urgent | 33 (high)                                 | The style guide carries the urgent minimizing-language rule.                |
+| #9026 | high   | 109, 114 (backlog)                        | Maintainer documentation belongs with the `MAINTAINERS.md` work.            |
+| #9027 | high   | 39 (backlog)                              | Shares prose edits with the high-ranked cancel terminology question.        |
+| #9029 | urgent | 45 (backlog)                              | Same legacy-branch link cleanup as the urgent `master` links.               |
+| #9030 | high   | 47 (backlog)                              | Meeting details belong on the same community page.                          |
+| #9035 | urgent | 58, 62 (high)                             | Same Contributing page section as the urgent VEP deadline.                  |
+| #9036 | urgent | 53 (backlog)                              | Label explanation sits beside the urgent filtered issue links.              |
+| #9037 | high   | 61 (backlog)                              | Same walkthrough section of the Contributing page.                          |
+| #9038 | urgent | 54 (backlog)                              | Same label and lifecycle policy as the urgent label consolidation.          |
+| #9039 | high   | 55 (backlog)                              | The issue checklist supports the triage cadence.                            |
+| #9047 | urgent | 77 (backlog)                              | Same footer file edits as the urgent copyright fix.                         |
+| #9049 | urgent | 79 (backlog)                              | Both fix content that fails on mobile or for screen readers.                |
+| #9053 | urgent | 93 (backlog)                              | The adopters page is where the urgent case study links live.                |
+| #9054 | high   | 74 (backlog)                              | Same `ADOPTERS.md` data work.                                               |
+| #9056 | high   | 106 (backlog)                             | Depends on the analytics setup in the same issue.                           |
+| #9057 | urgent | 100 (high)                                | Same `robots.txt` and head template changes on the website.                 |
+| #9059 | high   | 104 (backlog)                             | Same search index work as the high-ranked question.                         |
 
 <!-- markdownlint-enable MD013 -->
 
