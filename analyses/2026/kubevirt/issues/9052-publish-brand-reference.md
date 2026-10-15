@@ -38,8 +38,8 @@ stylesheet points to it.
 ## Additional context
 
 Related: #9048 aligns the guide's primary color with the website scale, and
-#9033 fixes the logo alt text. Complete #9048 first so the reference lists the
-final values.
+issue #9033 fixes the logo alt text. Complete #9048 first so the reference lists
+the final values.
 
 This issue tracks recommended changes resulting from an analysis of the KubeVirt
 documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).
