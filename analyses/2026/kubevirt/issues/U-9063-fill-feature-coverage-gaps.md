@@ -20,8 +20,8 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Doc VirtualMachineBackup #9012](9012-document-virtualmachinebackup-api.md)
-- [Doc CrossArchitectureVirtualization #9013](9013-document-v19-features.md)
+- [Document the VirtualMachineBackup API #9012](9012-document-virtualmachinebackup-api.md)
+- [Document the CrossArchitectureVirtualization gate, PortRanges, and migration compression #9013](9013-document-v19-features.md)
 - [Create a virtctl command reference #9014](9014-create-virtctl-reference.md)
 - [Add a feature-gate table #9015](9015-add-feature-gate-table.md)
-- [Add user-facing Troubleshooting #9016](9016-add-troubleshooting-page.md)
+- [Add a user-facing Troubleshooting page #9016](9016-add-troubleshooting-page.md)

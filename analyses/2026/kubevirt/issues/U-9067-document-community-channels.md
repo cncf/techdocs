@@ -20,8 +20,8 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Add repository and social links #9032](9032-add-footer-social-links.md)
-- [Add a Community and communication page #9030](9030-add-community-page.md)
-- [Add a Community and adoption block #9031](9031-add-community-adoption-links.md)
-- [Add a Governance section #9040](9040-add-governance-section.md)
-- [Give documentation a SIG home #9024](9024-give-docs-sig-home.md)
+- [Add repository and social links to the footer #9032](9032-add-footer-social-links.md)
+- [Add a Community and communication page to the guide #9030](9030-add-community-page.md)
+- [Add a Community and adoption block to the index and Contributing page #9031](9031-add-community-adoption-links.md)
+- [Add a Governance section to the kubevirt.io Community page #9040](9040-add-governance-section.md)
+- [Give documentation a SIG home and clarify SIG meeting mechanics #9024](9024-give-docs-sig-home.md)

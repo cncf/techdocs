@@ -21,7 +21,7 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 - [Add a pull request template #9022](9022-add-pull-request-template.md)
 - [Add a documentation style guide #9021](9021-add-style-guide.md)
-- [Expand CONTRIBUTING.md #9020](9020-expand-contributing-guide.md)
+- [Expand CONTRIBUTING.md into a documentation contributor guide #9020](9020-expand-contributing-guide.md)
 - [Add per-directory OWNERS files #9023](9023-add-owners-files.md)
-- [Add MAINTAINERS.md #9026](9026-add-maintainers-file.md)
-- [Triage open pull requests #9025](9025-triage-open-prs.md)
+- [Add MAINTAINERS.md and a maintainer ladder #9026](9026-add-maintainers-file.md)
+- [Triage open pull requests and add a stale-PR policy #9025](9025-triage-open-prs.md)

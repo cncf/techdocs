@@ -20,7 +20,7 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Fix logo alt text #9033](9033-fix-logo-and-unused-assets.md)
-- [Fix mobile tables #9049](9049-fix-mobile-tables.md)
-- [Fix header and link contrast #9048](9048-fix-contrast-and-colors.md)
+- [Fix logo alt text and remove unused assets and config #9033](9033-fix-logo-and-unused-assets.md)
+- [Fix mobile tables and replace the Architecture diagram #9049](9049-fix-mobile-tables.md)
+- [Fix header and link contrast and align brand colors #9048](9048-fix-contrast-and-colors.md)
 - [Publish a brand reference #9052](9052-publish-brand-reference.md)

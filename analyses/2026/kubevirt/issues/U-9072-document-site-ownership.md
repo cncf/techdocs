@@ -21,8 +21,8 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Doc where documentation lives #9041](9041-document-content-boundary.md)
-- [Doc site infrastructure #9060](9060-document-site-infrastructure.md)
-- [Decide whether to converge #9045](9045-decide-converge-toolchains.md)
-- [Audit kubevirt/kubevirt docs #9043](9043-audit-kubevirt-docs.md)
-- [Audit CDI documentation #9044](9044-audit-cdi-docs.md)
+- [Document where documentation lives #9041](9041-document-content-boundary.md)
+- [Document site infrastructure ownership #9060](9060-document-site-infrastructure.md)
+- [Decide whether to converge the website and user guide #9045](9045-decide-converge-toolchains.md)
+- [Audit kubevirt/kubevirt docs for user-facing content #9043](9043-audit-kubevirt-docs.md)
+- [Audit CDI documentation for storage pages #9044](9044-audit-cdi-docs.md)

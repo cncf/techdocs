@@ -20,10 +20,10 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Enable code copy features #9006](9006-enable-code-copy-search.md)
-- [Restructure Install page #9004](9004-restructure-installation-page.md)
-- [Create Install virtctl page #9005](9005-create-installing-virtctl-page.md)
-- [Add a Getting Started page #9001](9001-add-getting-started-page.md)
-- [Rewrite Basic Use #9002](9002-rewrite-basic-use.md)
-- [Add a Start here link #9003](9003-fix-welcome-page-links.md)
-- [Convert shell code blocks #9007](9007-convert-shell-code-blocks.md)
+- [Enable code copy and search features in mkdocs.yml #9006](9006-enable-code-copy-search.md)
+- [Restructure the Installation page around the core procedure #9004](9004-restructure-installation-page.md)
+- [Create an Installing virtctl page #9005](9005-create-installing-virtctl-page.md)
+- [Add a Getting Started page after Architecture #9001](9001-add-getting-started-page.md)
+- [Rewrite Basic Use as "Your first VirtualMachine" #9002](9002-rewrite-basic-use.md)
+- [Add a Start here link and fix the Slack link on the Welcome page #9003](9003-fix-welcome-page-links.md)
+- [Convert shell code blocks to fenced blocks #9007](9007-convert-shell-code-blocks.md)

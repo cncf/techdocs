@@ -38,7 +38,7 @@ first-time contributors exist, or could one be offered? If not, remove the
 mentoring note. Who is the docs contact?
 
 Related: #9030 (Community page, for meeting times), #9026 (`MAINTAINERS.md`),
-and #9034, #9036, #9037 (same page), and #9020.
+#9034, #9036, #9037 (same page), and #9020.
 
 This issue tracks recommended changes resulting from an analysis of the KubeVirt
 documentation commissioned by [CNCF](https://www.cncf.io/projects/kubevirt/).

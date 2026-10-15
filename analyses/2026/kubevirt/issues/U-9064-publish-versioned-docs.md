@@ -20,6 +20,6 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Standardize feature #9017](9017-standardize-feature-state-admonition.md)
-- [Document the content versioning #9018](9018-document-versioning-model.md)
-- [Publish versioned documentation #9019](9019-publish-versioned-docs.md)
+- [Standardize the feature-state admonition #9017](9017-standardize-feature-state-admonition.md)
+- [Document the content versioning model, release-notes process, and localization #9018](9018-document-versioning-model.md)
+- [Publish versioned documentation with a version selector #9019](9019-publish-versioned-docs.md)

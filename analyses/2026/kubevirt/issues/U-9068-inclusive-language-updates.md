@@ -19,6 +19,6 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Fix legacy master links #9029](9029-fix-legacy-master-references.md)
-- [Reword minimizing language #9027](9027-reword-minimizing-language.md)
-- [Add accessibility #9028](9028-add-ci-doc-checks.md)
+- [Fix legacy master links and the node-name example #9029](9029-fix-legacy-master-references.md)
+- [Reword minimizing language and cancel terminology #9027](9027-reword-minimizing-language.md)
+- [Add accessibility and language checks to CI #9028](9028-add-ci-doc-checks.md)

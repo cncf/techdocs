@@ -20,7 +20,7 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Make guide preview builds reproducible #9058](9058-fix-guide-preview-builds.md)
-- [Fix robots.txt #9057](9057-fix-robots-and-site-analytics.md)
-- [Enable production-only analytics #9056](9056-enable-guide-analytics.md)
-- [Unify search across the guide #9059](9059-unify-search.md)
+- [Make guide preview builds reproducible and non-indexable #9058](9058-fix-guide-preview-builds.md)
+- [Fix robots.txt and gate analytics on kubevirt.io #9057](9057-fix-robots-and-site-analytics.md)
+- [Enable production-only analytics and a 404 report on the user guide #9056](9056-enable-guide-analytics.md)
+- [Unify search across the guide and the website #9059](9059-unify-search.md)

@@ -34,9 +34,9 @@ the role, and can trust that the approver list reflects active people.
 - Repository: https://github.com/kubevirt/user-guide (`OWNERS`,
   `OWNERS_ALIASES`, README)
 - Contributing page: https://kubevirt.io/user-guide/contributing/
-  - (`docs/contributing.md`)
+  (`docs/contributing.md`)
 - kubevirt/community membership policy:
-  - (`https://github.com/kubevirt/community/blob/main/membership_policy.md`)
+  https://github.com/kubevirt/community/blob/main/membership_policy.md
 
 ## Additional context
 

@@ -20,10 +20,10 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Fix orphaned pages and Release Notes #9008](9008-fix-navigation-orphans.md)
-- [Add an API reference entry #9042](9042-add-api-reference-link.md)
-- [Remove legacy install #9011](9011-remove-legacy-installation-content.md)
-- [Add landing pages #9009](9009-add-section-landing-pages.md)
-- [Rename API-centric titles #9010](9010-rename-api-page-titles.md)
-- [Split the Disks and Volume #9050](9050-split-disks-networks-pages.md)
-- [Split the Live Migration #9051](9051-split-migration-release-notes.md)
+- [Fix orphaned pages and Release Notes placement in navigation #9008](9008-fix-navigation-orphans.md)
+- [Add an API reference entry to the guide navigation #9042](9042-add-api-reference-link.md)
+- [Remove or archive legacy installation content #9011](9011-remove-legacy-installation-content.md)
+- [Add landing pages to Compute, Network, and Storage #9009](9009-add-section-landing-pages.md)
+- [Rename API-centric titles and group legacy workload pages #9010](9010-rename-api-page-titles.md)
+- [Split the Disks and Volumes and Interfaces and Networks pages #9050](9050-split-disks-networks-pages.md)
+- [Split the Live Migration and Release Notes pages #9051](9051-split-migration-release-notes.md)

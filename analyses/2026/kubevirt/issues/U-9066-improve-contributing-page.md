@@ -19,9 +19,9 @@ tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
 
 ## Sub-issues
 
-- [Standardize the good first issue #9038](9038-standardize-good-first-issue.md)
-- [Add a project overview #9034](9034-add-contributing-overview.md)
-- [Link filtered issue lists #9036](9036-link-issue-lists.md)
-- [Add where-to-ask-help #9035](9035-add-help-and-vep-guidance.md)
-- [Add a first documentation #9037](9037-add-first-change-walkthrough.md)
-- [Triage the issue backlog #9039](9039-triage-issue-backlog.md)
+- [Standardize the good first issue label #9038](9038-standardize-good-first-issue.md)
+- [Add a project overview and resource descriptions to the Contributing page #9034](9034-add-contributing-overview.md)
+- [Link filtered issue lists and explain labels on the Contributing page #9036](9036-link-issue-lists.md)
+- [Add where-to-ask-help and the VEP docs deadline to the Contributing page #9035](9035-add-help-and-vep-guidance.md)
+- [Add a first documentation change walkthrough to the Contributing page #9037](9037-add-first-change-walkthrough.md)
+- [Triage the issue backlog and publish a triage cadence #9039](9039-triage-issue-backlog.md)
