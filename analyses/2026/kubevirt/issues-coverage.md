@@ -9,10 +9,10 @@ uploaded as an issue.
 
 <!-- markdownlint-disable MD013 -->
 
-| Issue | Title                                            | Label | File                               |
-| ----- | ------------------------------------------------ | ----- | ---------------------------------- |
-| #9001 | Add a Getting Started page after Architecture    | high  | `9001-add-getting-started-page.md` |
-| #9002 | Rewrite Basic Use as "Your first VirtualMachine" | high  | `9002-rewrite-basic-use.md`        |
+| Issue | Title | Label | File |
+| --- | --- | --- | --- |
+| #9001 | Add a Getting Started page after Architecture | high | `9001-add-getting-started-page.md` |
+| #9002 | Rewrite Basic Use as "Your first VirtualMachine" | high | `9002-rewrite-basic-use.md` |
 | #9003 | Add a Start here link and fix the Slack link on the Welcome page | urgent | `9003-fix-welcome-page-links.md` |
 | #9004 | Restructure the Installation page around the core procedure | urgent | `9004-restructure-installation-page.md` |
 | #9005 | Create an Installing virtctl page | high | `9005-create-installing-virtctl-page.md` |
@@ -22,7 +22,7 @@ uploaded as an issue.
 | #9009 | Add landing pages to Compute, Network, and Storage | backlog | `9009-add-section-landing-pages.md` |
 | #9010 | Rename API-centric titles and group legacy workload pages | backlog | `9010-rename-api-page-titles.md` |
 | #9011 | Remove or archive legacy installation content | high | `9011-remove-legacy-installation-content.md` |
-| #9012 | Document the VirtualMachineBackup API | high | `9012-document-virtualmachinebackup-api.md` |
+| #9012 | Document the VirtualMachineBackup API | high | `9012-document-virtual-machine-backup-api.md` |
 | #9013 | Document the CrossArchitectureVirtualization gate, PortRanges, and migration compression | high | `9013-document-v19-features.md` |
 | #9014 | Create a virtctl command reference | high | `9014-create-virtctl-reference.md` |
 | #9015 | Add a feature-gate table | high | `9015-add-feature-gate-table.md` |
@@ -84,11 +84,7 @@ uploaded as an issue.
 | #9071 | Enable analytics and fix SEO configuration | urgent | `U-9071-enable-analytics-seo.md` |
 | #9072 | Document site ownership and content boundaries | high | `U-9072-document-site-ownership.md` |
 
-<!-- markdownlint-enable MD013 -->
-
 ## Umbrella issues
-
-<!-- markdownlint-disable MD013 -->
 
 | Umbrella | Label | Sub-issues |
 | --- | --- | --- |
@@ -105,17 +101,13 @@ uploaded as an issue.
 | #9071 Enable analytics and fix SEO configuration | urgent | #9058, #9057, #9056, #9059 |
 | #9072 Document site ownership and content boundaries | high | #9041, #9060, #9045, #9043, #9044 |
 
-<!-- markdownlint-enable MD013 -->
-
 Standalone issues outside any umbrella: none. Each umbrella takes the highest
 label among its sub-issues.
 
 ## Recommendation mapping
 
-<!-- markdownlint-enable MD013 -->
-
 | # | Section | Area | CSV priority | Issue(s) |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | 1 | Project Documentation | Information architecture | 2 - High | #9001 |
 | 2 | Project Documentation | Information architecture | 2 - High | #9002 |
 | 3 | Project Documentation | Information architecture | 1 - Urgent | #9008 |
@@ -231,13 +223,11 @@ label among its sub-issues.
 | 113 | Website & Infrastructure | Maintenance planning | 2 - High | #9060 |
 | 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | #9026 |
 
-<!-- markdownlint-enable MD013 -->
 
 ## Priority adjustments
 
 No issue takes a label lower than its highest-ranked recommendation. Each issue takes the highest ranking among its recommendations, so these recommendations were raised by bundling with higher-ranked work on the same pages or files:
 
-<!-- markdownlint-disable MD013 -->
 
 | Issue | Label | Recommendations raised (original ranking) | Reason |
 | --- | --- | --- | --- |
