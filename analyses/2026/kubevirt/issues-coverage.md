@@ -223,11 +223,9 @@ label among its sub-issues.
 | 113 | Website & Infrastructure | Maintenance planning | 2 - High | #9060 |
 | 114 | Website & Infrastructure | Maintenance planning | 3 - Backlog | #9026 |
 
-
 ## Priority adjustments
 
 No issue takes a label lower than its highest-ranked recommendation. Each issue takes the highest ranking among its recommendations, so these recommendations were raised by bundling with higher-ranked work on the same pages or files:
-
 
 | Issue | Label | Recommendations raised (original ranking) | Reason |
 | --- | --- | --- | --- |
