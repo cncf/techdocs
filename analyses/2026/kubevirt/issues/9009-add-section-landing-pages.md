@@ -32,9 +32,9 @@ page for each common task.
 
 ## URL
 
-- https://kubevirt.io/user-guide/compute/
-- https://kubevirt.io/user-guide/network/
-- https://kubevirt.io/user-guide/storage/
+- `https://kubevirt.io/user-guide/compute/`
+- `https://kubevirt.io/user-guide/network/`
+- `https://kubevirt.io/user-guide/storage/`
 - New files `docs/compute/index.md`, `docs/network/index.md`,
   `docs/storage/index.md`; the existing `.nav.yml` files in each directory
 
