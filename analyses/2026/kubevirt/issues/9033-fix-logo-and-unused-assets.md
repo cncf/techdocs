@@ -8,10 +8,10 @@ repo: https://github.com/kubevirt/user-guide/issues
 
 Three small problems affect the guide's branding and repository hygiene.
 
-- **Logo alt text.** The header logo has no useful alternative text, so screen
-  readers cannot name it. Set the alt text to "KubeVirt" by adding
-  `extra.homepage` or a custom `partials/logo.html` override in the theme
-  overrides.
+- **Logo alt text.** Set the header logo image's alternative text to "KubeVirt"
+  using a custom `partials/logo.html` in the theme overrides. Configure
+  `theme.custom_dir` in `mkdocs.yml` if needed, and verify the rendered image's
+  `alt` attribute.
 - **Unused legacy assets.** Delete `asciibinder-logo-horizontal.png`,
   `asciibinder_web_logo.svg`, and `book_pages_bg.jpg` from `docs/assets`.
   Confirm with `grep -rn` that nothing references them first.

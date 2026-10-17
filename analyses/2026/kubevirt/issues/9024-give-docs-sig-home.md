@@ -14,9 +14,9 @@ it is unclear whether every SIG charter does.
 
 Open a pull request against kubevirt/community that does the following:
 
-- Populates the `sig/documentation` entry in `sig-list.md` with chairs, a
-  meeting cadence or an async channel, and a charter covering both the user
-  guide and the website.
+- Populates the documentation group's entry in `sigs.yaml` with chairs, a
+  meeting cadence or an async channel, a charter covering both the user guide
+  and the website, and then regenerates `sig-list.md`.
 - Records each SIG's meeting cadence and Slack channel in `sigs.yaml`, so the
   generated SIG list shows how to join every group.
 - Adds a "Meeting Mechanics" section to each SIG charter that lacks one, modeled

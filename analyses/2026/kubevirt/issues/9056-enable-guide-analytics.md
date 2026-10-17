@@ -17,9 +17,10 @@ Enable analytics on the guide in `kubevirt/user-guide`:
    `mkdocs.yml` (the Material theme supports Google Analytics 4), or add an
    `overrides/main.html` partial that loads the same Adobe Analytics tag as the
    website. Ask the maintainers which service to use.
-2. Load the snippet only in production. Template it from the Netlify `CONTEXT`
-   variable in the `netlify.toml` build command, so it is injected only when
-   `CONTEXT` equals `production`.
+2. Load the snippet only in the canonical production build. Use an explicit
+   build flag consumed by the guide configuration or template, and set it in the
+   Prow post-submit job in `kubevirt/project-infra` that runs `make build` and
+   publishes to `gh-pages`. Leave it disabled in Netlify and local builds.
 3. Create a recurring 404 report, for example a saved report filtered on the
    not-found page title.
 4. Use the report to add missing entries to the `redirects` map in `mkdocs.yml`,

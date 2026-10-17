@@ -35,7 +35,7 @@ mention KubeVirt.
 
 - https://kubevirt.io/ (End Users and Vendors logo walls)
 - https://github.com/kubevirt/kubevirt.github.io/blob/main/_data/adopters.yml
-- `https://github.com/kubevirt/kubevirt.github.io/blob/main/ADOPTERS.md`
+- https://github.com/kubevirt/kubevirt/blob/main/ADOPTERS.md
 
 ## Additional context
 

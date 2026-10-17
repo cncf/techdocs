@@ -20,8 +20,10 @@ Make two changes in `kubevirt/kubevirt.github.io`:
    adopters table with the columns type, name, since, and use case, and links to
    the CNCF case studies. Add the page to `_data/site_nav_pages.yml`.
 
-Build the table from `_data/adopters.yml`, which the website already generates
-from `ADOPTERS.md`, rather than copying data by hand.
+Build the table from `_data/adopters.yml` rather than copying data by hand.
+Extend `_data/adopters.py` to preserve both the Since and Use-Case columns from
+`kubevirt/kubevirt/ADOPTERS.md`, regenerate the YAML, and then render the table.
+Coordinate these shared generator changes with #9054.
 
 ## What you expected
 

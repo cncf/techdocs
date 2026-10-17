@@ -18,8 +18,9 @@ Make these changes in `kubevirt/kubevirt.github.io`:
    and add a second line, `Sitemap: https://kubevirt.io/user-guide/sitemap.xml`.
 2. In `_includes/head.html`, wrap the `dpal.js` include in a check on
    `jekyll.environment == "production"`.
-3. Set `JEKYLL_ENV=production` only in the Netlify production context in
-   `netlify.toml`.
+3. Set `JEKYLL_ENV=production` in the Prow post-submit job in
+   `kubevirt/project-infra` that runs `make build` and publishes the website to
+   `gh-pages`. Keep Netlify previews and local builds in `development`.
 4. Emit `X-Robots-Tag: noindex` for non-production deploys from a `_headers`
    file or a `[context.deploy-preview]` and `[context.branch-deploy]` section in
    `netlify.toml`.

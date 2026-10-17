@@ -7,19 +7,17 @@ repo: https://github.com/kubevirt/user-guide/issues
 ## Description
 
 Readers cannot search the full KubeVirt documentation set from one place. The
-guide's search covers only the user guide, and the main website search (the lunr
-index in `_layouts/search.html` of `kubevirt/kubevirt.github.io`) covers only
-`site.posts`. The API reference and quickstarts are not searchable from either.
+user guide and main website use separate search indexes, so readers must know
+which site contains the content they need.
 
 Work on this in two steps:
 
 1. Ask the website maintainers whether the API reference and quickstarts can be
    indexed by the same search as the guide, for example by moving the guide
    search to a site-wide index. Record the answer in this issue.
-2. Implement the quick improvements in `kubevirt/kubevirt.github.io`: extend the
-   lunr index in `_layouts/search.html` to include `site.pages` in addition to
-   `site.posts`, and add a link from the website search page to the guide search
-   (and the other way around).
+2. Add a link from the website search page to the guide search and a link back
+   from the guide. The website's `_layouts/search.html` already indexes
+   `site.posts`, `site.galleries`, and `site.pages`.
 
 If the maintainers choose a site-wide index, open a follow-up issue for it with
 the agreed scope.
