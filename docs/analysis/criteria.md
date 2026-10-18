@@ -270,7 +270,7 @@ requirements for sandbox projects._
 - Does **project documentation** meet these standards?:
   - Stakeholders / personas are identified and their core needs (in terms of
     docs) documented.
-  - Hosted directly on the website.
+  - Hosted, internally or externally, on the website.
   - The [single-source requirement][] met.
   - Doc is comprehensive, addressing most stakeholder needs.
 
@@ -411,7 +411,7 @@ We evaluate on the following:
   repository?
 
   The leading proposal for an AI-enabling file for websites is at
-  [llms-txt](https://llmstxt.org/ llms.txt).
+  [llms-txt](https://llmstxt.org/).
 
   Task can be accomplished manually or by tools.
 

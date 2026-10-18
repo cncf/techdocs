@@ -459,7 +459,7 @@ only two levels for which a tech docs analysis can be requested.)
 
 We evaluate on the following:
 
-- Are most of the applicable guidelines satisfied as described in the Website
+- Are all of the applicable guidelines satisfied as described in the Website
   guidelines and checklist?
 
 #### Usability, accessibility and devices
@@ -559,7 +559,7 @@ We evaluate on the following:
   repository?
 
   The leading proposal for an AI-enabling file for websites is at
-  [llms-txt](https://llmstxt.org/ llms.txt).
+  [llms-txt](https://llmstxt.org).
 
   Task can be accomplished manually or by tools.
 
