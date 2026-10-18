@@ -42,6 +42,11 @@ We evaluate on the following:
 - Is content up to date and accurate?
 - Does the documentation separate conceptual, instructional, and reference
   information?
+- If the product builds on or incorporates another product (such as Kubernetes),
+  are there external references where needed to install and configure those
+  products?
+- Does the documentation organization and navigation need a high-level
+  restructuring?
 
 Example:
 
@@ -127,23 +132,6 @@ We evaluate on the following:
   names that use non-recommended words as documented by the
   [Inclusive Naming Initiative](https://inclusivenaming.org) website?
 - Does the project use language like "simple", "easy", etc.?
-
-### AI Optimization and Discoverability
-
-Tools and techniques are emerging that enable AI agents to use documentation as
-input. For example, many repositories now include "AI-friendly" Markdown files
-that enable LLMs to ingest content. We encourage projects to optimize for
-AI-based documentation use.
-
-We evaluate on the following:
-
-- Is there an llms.txt file in the root of the website or documentation
-  repository?
-
-  The leading proposal for an AI-enabling file for websites is at
-  [llms-txt](https://llmstxt.org/ llms.txt).
-
-  Task can be accomplished manually or by tools.
 
 ## Contributor documentation
 
@@ -352,7 +340,7 @@ Example:
 
 - https://helm.sh/
 
-### Case studies/social proof
+### Case studies and social proof
 
 One of the best ways to advertise an open source project is to show other
 organizations using it.
@@ -386,7 +374,7 @@ We evaluate on the following:
   - Is analytics disabled for all other deploys?
   - If your project used Google Analytics, have you migrated to GA4?
   - Can Page-not-found (404) reports easily be generated from you site
-    analytics? Provide a sample of the site's current top-10 404s.
+    analytics?
 - Is site indexing supported for the production server, while disabled for
   website previews and builds for non-default branches?
 - Is local intra-site search available from the website?
@@ -409,6 +397,23 @@ We evaluate on the following:
 Example:
 
 - https://kubernetes.io
+
+### AI Optimization and Discoverability
+
+Tools and techniques are emerging that enable AI agents to use documentation as
+input. For example, many repositories now include "AI-friendly" Markdown files
+that enable LLMs to ingest content. We encourage projects to optimize for
+AI-based documentation use.
+
+We evaluate on the following:
+
+- Is there an llms.txt file in the root of the website or documentation
+  repository?
+
+  The leading proposal for an AI-enabling file for websites is at
+  [llms-txt](https://llmstxt.org/ llms.txt).
+
+  Task can be accomplished manually or by tools.
 
 ### Other
 
