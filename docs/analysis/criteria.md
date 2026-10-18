@@ -2,8 +2,6 @@
 title: Assessment criteria and examples
 ---
 
-# Assessment criteria and examples
-
 We recommend reading the
 [CNCF sandbox project documentation primer](../sandbox-doc-primer.md) before
 reviewing these criteria. The primer contains key definitions concepts that are
