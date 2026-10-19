@@ -29,6 +29,11 @@ For each split:
    page so existing links keep working.
 4. Fix internal links with `grep` for the old paths.
 
+Copilot noted: Reserve the redirects map for removed or renamed pages and
+require old anchor IDs to remain with links to the moved sections, or specify a
+fragment-aware redirect mechanism. Verify representative old section links after
+each split.
+
 ## What you expected
 
 Each resulting page is a manageable length, the overview pages guide readers to

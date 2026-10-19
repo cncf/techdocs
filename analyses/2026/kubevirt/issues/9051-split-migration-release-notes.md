@@ -30,6 +30,11 @@ For both pages:
 3. Add old paths and anchors to the `redirects` map in `mkdocs.yml`.
 4. Fix internal links to the moved sections.
 
+Copilot noted: Reserve the redirects map for removed or renamed pages and
+require old anchor IDs to remain with links to the moved sections, or specify a
+fragment-aware redirect mechanism. Verify representative old section links after
+each split.
+
 ## What you expected
 
 Each page is a manageable length, the Release Notes tab opens the newest
