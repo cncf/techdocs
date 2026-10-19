@@ -113,8 +113,8 @@ Each section begins with summary ratings based on a rubric with appropriate
 [criteria] for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, including answers
-  to critera questions from the criteria specfication for the current area. Comments focus on how it does or does
-  not help _PROJECT_ users achieve their goals.
+  to questions from the criteria specfication. Comments focus on how it does or
+  does not help _PROJECT_ users achieve their goals.
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
