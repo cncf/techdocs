@@ -13,4 +13,5 @@
 ## Comment guidance
 
 - Good examples: None.
-- Additional instructions: Focus the comment on any inclusive language concerns in the documentation.
+- Additional instructions: Focus the comment on any inclusive language concerns
+  in the documentation.

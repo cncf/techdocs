@@ -5,7 +5,8 @@
 
 ## Questions
 
-- Does the project have a single source for its documentation? If not, is there a reason?
+- Does the project have a single source for its documentation? If not, is there
+  a reason?
 
 ## Comment guidance
 

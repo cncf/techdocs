@@ -5,7 +5,8 @@
 
 ## Questions
 
-- Is the website tooling well supported by the community (i.e., Hugo with the Docsy theme) or commonly used by CNCF projects?
+- Is the website tooling well supported by the community (i.e., Hugo with the
+  Docsy theme) or commonly used by CNCF projects?
 - Is there active cultivating website maintainers from within the community?
 - Are site build times reasonable?
 - Do site maintainers have adequate permissions?

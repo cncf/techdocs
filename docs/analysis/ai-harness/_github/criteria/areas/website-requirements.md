@@ -5,7 +5,8 @@
 
 ## Questions
 
-- Are most of the applicable CNCF Website Guidelines satisfied? See https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
+- Are most of the applicable CNCF Website Guidelines satisfied? See
+  https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
 
 ## Comment guidance
 
