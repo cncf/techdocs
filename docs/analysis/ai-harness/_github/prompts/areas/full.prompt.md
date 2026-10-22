@@ -77,7 +77,7 @@ writing so each file contains only its own kind of content.
 
 ### Phase 3: Write
 
-5. Write the three files in this order, since the recommendations engine expects
+1. Write the three files in this order, since the recommendations engine expects
    the first two to exist:
    1. Answers: `.github/prompts/areas/answers.prompt.md` output.
    2. Comment: `.github/prompts/areas/comment.prompt.md` output.

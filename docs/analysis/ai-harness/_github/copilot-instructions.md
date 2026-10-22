@@ -344,7 +344,7 @@ In writing the issues, Copilot should use the following guidelines:
   GitHub-flavored Markdown.
 - Ensure the following front matter (metadata) is included at the top of each
   issue file.
-  - Create a title and append the simulated issue number as ` #{issue number}`.
+  - Create a title and append the simulated issue number as `#{issue number}`.
     It becomes the GitHub issue title.
   - Set `labels` to the priority label (`urgent`, `high`, or `backlog`) plus
     `help wanted`. Labels become GitHub issue labels.
