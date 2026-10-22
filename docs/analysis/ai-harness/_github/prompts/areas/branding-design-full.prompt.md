@@ -5,6 +5,8 @@ description:
   recommendations) for the documentation.
 ---
 
+# Branding and Design full analysis
+
 Run the shared **full** analysis for the `branding-design` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/branding-design.md`.

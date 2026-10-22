@@ -4,6 +4,8 @@ description:
   Answer the CNCF TechDocs new user content questions for the documentation.
 ---
 
+# New User Content answers
+
 Run the shared **answers** analysis for the `new-user-content` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/new-user-content.md`.

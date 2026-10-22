@@ -5,6 +5,8 @@ description:
   the documentation.
 ---
 
+# Beginner Friendly Issue Backlog recommendations
+
 Run the shared **recommendations** analysis for the `beginner-issue-backlog`
 criteria area.
 

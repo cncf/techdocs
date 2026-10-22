@@ -3,6 +3,8 @@ mode: agent
 description: Write a comment on the new user content of the documentation.
 ---
 
+# New User Content comment
+
 Run the shared **comment** analysis for the `new-user-content` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/new-user-content.md`.

@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Information Architecture answers
+
 Run the shared **answers** analysis for the `information-architecture` criteria
 area.
 

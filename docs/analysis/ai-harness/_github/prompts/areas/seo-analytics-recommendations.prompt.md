@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# SEO, Analytics, and Site Search recommendations
+
 Run the shared **recommendations** analysis for the `seo-analytics` criteria
 area.
 

@@ -3,6 +3,8 @@ mode: agent
 description: Write a comment on the case studies of the documentation.
 ---
 
+# Case Studies comment
+
 Run the shared **comment** analysis for the `case-studies` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/case-studies.md`.

@@ -5,6 +5,8 @@ description:
   recommendations) for the documentation.
 ---
 
+# Content Creation Process full analysis
+
 Run the shared **full** analysis for the `content-creation-process` criteria
 area.
 

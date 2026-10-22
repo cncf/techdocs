@@ -5,6 +5,8 @@ description:
   for the documentation.
 ---
 
+# Case Studies full analysis
+
 Run the shared **full** analysis for the `case-studies` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/case-studies.md`.

@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Maintenance Planning recommendations
+
 Run the shared **recommendations** analysis for the `maintenance-planning`
 criteria area.
 

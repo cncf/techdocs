@@ -5,6 +5,8 @@ description:
   content of the documentation.
 ---
 
+# New Contributor Getting Started Content recommendations
+
 Run the shared **recommendations** analysis for the `new-contributor-content`
 criteria area.
 

@@ -3,6 +3,8 @@ mode: agent
 description: Write a comment on the project governance of the documentation.
 ---
 
+# Project Governance Documentation comment
+
 Run the shared **comment** analysis for the `project-governance-documentation`
 criteria area.
 

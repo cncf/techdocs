@@ -5,6 +5,8 @@ description:
   recommendations) for the documentation.
 ---
 
+# Inclusive Language full analysis
+
 Run the shared **full** analysis for the `inclusive-language` criteria area.
 
 1. Read the criteria definition in

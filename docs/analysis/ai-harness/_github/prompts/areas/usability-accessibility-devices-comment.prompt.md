@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Usability, Accessibility and Devices comment
+
 Run the shared **comment** analysis for the `usability-accessibility-devices`
 criteria area.
 

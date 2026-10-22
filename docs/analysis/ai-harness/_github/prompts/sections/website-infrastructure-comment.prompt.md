@@ -5,6 +5,8 @@ description:
   synthesizing its per-area comment files.
 ---
 
+# Website & Infrastructure section comment
+
 Run the shared **section-comment** analysis for the `website-infrastructure`
 section.
 

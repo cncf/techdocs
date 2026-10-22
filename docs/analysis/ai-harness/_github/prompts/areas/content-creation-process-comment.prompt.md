@@ -4,6 +4,8 @@ description:
   Write a comment on the content creation process of the documentation.
 ---
 
+# Content Creation Process comment
+
 Run the shared **comment** analysis for the `content-creation-process` criteria
 area.
 

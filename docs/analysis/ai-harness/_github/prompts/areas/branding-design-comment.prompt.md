@@ -3,6 +3,8 @@ mode: agent
 description: Write a comment on the branding and design of the documentation.
 ---
 
+# Branding and Design comment
+
 Run the shared **comment** analysis for the `branding-design` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/branding-design.md`.

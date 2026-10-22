@@ -4,6 +4,8 @@ description:
   Write a comment on the seo, analytics & site search of the documentation.
 ---
 
+# SEO, Analytics, and Site Search comment
+
 Run the shared **comment** analysis for the `seo-analytics` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/seo-analytics.md`.

@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Communication Methods Documented answers
+
 Run the shared **answers** analysis for the `communication-methods-documented`
 criteria area.
 

@@ -4,6 +4,8 @@ description:
   Answer the CNCF TechDocs branding and design questions for the documentation.
 ---
 
+# Branding and Design answers
+
 Run the shared **answers** analysis for the `branding-design` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/branding-design.md`.

@@ -4,6 +4,8 @@ description:
   Answer the CNCF TechDocs case studies questions for the documentation.
 ---
 
+# Case Studies answers
+
 Run the shared **answers** analysis for the `case-studies` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/case-studies.md`.

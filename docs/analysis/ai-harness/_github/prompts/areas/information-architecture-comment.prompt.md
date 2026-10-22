@@ -4,6 +4,8 @@ description:
   Write a comment on the information architecture of the documentation.
 ---
 
+# Information Architecture comment
+
 Run the shared **comment** analysis for the `information-architecture` criteria
 area.
 

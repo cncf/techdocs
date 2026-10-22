@@ -4,6 +4,8 @@ description:
   Write a comment on the content maintainability of the documentation.
 ---
 
+# Content Maintainability comment
+
 Run the shared **comment** analysis for the `content-maintainability` criteria
 area.
 

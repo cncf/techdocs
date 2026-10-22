@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Single-Source Requirement recommendations
+
 Run the shared **recommendations** analysis for the `single-source-requirement`
 criteria area.
 

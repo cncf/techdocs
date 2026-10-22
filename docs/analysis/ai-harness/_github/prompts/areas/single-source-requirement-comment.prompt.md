@@ -4,6 +4,8 @@ description:
   Write a comment on the single-source requirement of the documentation.
 ---
 
+# Single-Source Requirement comment
+
 Run the shared **comment** analysis for the `single-source-requirement` criteria
 area.
 

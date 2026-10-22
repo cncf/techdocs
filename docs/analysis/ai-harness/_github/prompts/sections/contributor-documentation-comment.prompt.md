@@ -5,6 +5,8 @@ description:
   synthesizing its per-area comment files.
 ---
 
+# Contributor Documentation section comment
+
 Run the shared **section-comment** analysis for the `contributor-documentation`
 section.
 

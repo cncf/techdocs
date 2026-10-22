@@ -5,6 +5,8 @@ description:
   and recommendations) for the documentation.
 ---
 
+# Communication Methods Documented full analysis
+
 Run the shared **full** analysis for the `communication-methods-documented`
 criteria area.
 

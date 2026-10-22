@@ -4,6 +4,8 @@ description:
   Write a comment on the communication methods documented of the documentation.
 ---
 
+# Communication Methods Documented comment
+
 Run the shared **comment** analysis for the `communication-methods-documented`
 criteria area.
 

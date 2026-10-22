@@ -5,6 +5,8 @@ description:
   the documentation.
 ---
 
+# Communication Methods Documented recommendations
+
 Run the shared **recommendations** analysis for the
 `communication-methods-documented` criteria area.
 

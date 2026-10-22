@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Inclusive Language recommendations
+
 Run the shared **recommendations** analysis for the `inclusive-language`
 criteria area.
 

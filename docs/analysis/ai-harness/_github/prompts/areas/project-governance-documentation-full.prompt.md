@@ -5,6 +5,8 @@ description:
   and recommendations) for the documentation.
 ---
 
+# Project Governance Documentation full analysis
+
 Run the shared **full** analysis for the `project-governance-documentation`
 criteria area.
 

@@ -5,6 +5,8 @@ description:
   recommendations) for the documentation.
 ---
 
+# Maintenance Planning full analysis
+
 Run the shared **full** analysis for the `maintenance-planning` criteria area.
 
 1. Read the criteria definition in

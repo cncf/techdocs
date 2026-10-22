@@ -4,6 +4,8 @@ description:
   Answer the CNCF TechDocs inclusive language questions for the documentation.
 ---
 
+# Inclusive Language answers
+
 Run the shared **answers** analysis for the `inclusive-language` criteria area.
 
 1. Read the criteria definition in

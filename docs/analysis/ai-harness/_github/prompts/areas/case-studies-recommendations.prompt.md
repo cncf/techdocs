@@ -4,6 +4,8 @@ description:
   Provide recommendations for improving the case studies of the documentation.
 ---
 
+# Case Studies recommendations
+
 Run the shared **recommendations** analysis for the `case-studies` criteria
 area.
 

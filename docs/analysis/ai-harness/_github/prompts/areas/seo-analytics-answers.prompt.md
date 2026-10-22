@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# SEO, Analytics, and Site Search answers
+
 Run the shared **answers** analysis for the `seo-analytics` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/seo-analytics.md`.

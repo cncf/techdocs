@@ -5,6 +5,8 @@ description:
   for the documentation.
 ---
 
+# New User Content full analysis
+
 Run the shared **full** analysis for the `new-user-content` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/new-user-content.md`.

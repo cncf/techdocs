@@ -3,6 +3,8 @@ mode: agent
 description: Write a comment on the maintenance planning of the documentation.
 ---
 
+# Maintenance Planning comment
+
 Run the shared **comment** analysis for the `maintenance-planning` criteria
 area.
 

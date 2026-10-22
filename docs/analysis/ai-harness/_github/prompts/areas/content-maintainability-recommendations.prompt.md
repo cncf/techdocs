@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Content Maintainability recommendations
+
 Run the shared **recommendations** analysis for the `content-maintainability`
 criteria area.
 

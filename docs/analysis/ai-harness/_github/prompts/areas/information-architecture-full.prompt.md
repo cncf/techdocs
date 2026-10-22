@@ -5,6 +5,8 @@ description:
   recommendations) for the documentation.
 ---
 
+# Information Architecture full analysis
+
 Run the shared **full** analysis for the `information-architecture` criteria
 area.
 

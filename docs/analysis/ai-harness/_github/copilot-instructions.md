@@ -94,6 +94,8 @@ and prompt Markdown files. These files are organized further by `areas` and
 `.github/prompts/sections` respectively. Generated output lives in
 `.github/output`.
 
+<!-- markdownlint-disable MD013 -->
+
 ```
 .github/
   copilot-instructions.md
@@ -120,6 +122,8 @@ and prompt Markdown files. These files are organized further by `areas` and
     issues/U-<number>-<short-slug>.md          # Generated umbrella issue files
     issues-coverage.md                         # Issue list and recommendation-to-issue mapping
 ```
+
+<!-- markdownlint-enable MD013 -->
 
 Criteria files for an area define the per-area data: display name, output-file
 stem, question set, and comment guidance. The area name is the criteria filename
@@ -187,14 +191,20 @@ into section-level overall comments.
 
 Sections (for the section-level overall comment):
 
+<!-- markdownlint-disable MD013 -->
+
 | Section                   | Section slug              | Member areas (comment-file stems)                                                                                                                    |
 | ------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Project Documentation     | project-documentation     | information-architecture, new-user, content-maintainability, content-creation-process, inclusive-language                                            |
 | Contributor Documentation | contributor-documentation | communication-methods-docd, beginner-issue-backlog, new-contributor, project-governance                                                              |
 | Website & Infrastructure  | website-infrastructure    | single-source-requirement, website-requirements, usability-accessibility-devices, branding-design, case-studies, seo-analytics, maintenance-planning |
 
+<!-- markdownlint-enable MD013 -->
+
 Areas (the Area column is the criteria filename under `.github/criteria/areas/`
 and the prefix of the per-area wrapper prompts):
+
+<!-- markdownlint-disable MD013 -->
 
 | Area                             | Display Name                            | Output File Stem                | Section in analysis.md    |
 | -------------------------------- | --------------------------------------- | ------------------------------- | ------------------------- |
@@ -214,6 +224,8 @@ and the prefix of the per-area wrapper prompts):
 | single-source-requirement        | Single-Source Requirement               | single-source-requirement       | Website & Infrastructure  |
 | usability-accessibility-devices  | Usability, Accessibility and Devices    | usability-accessibility-devices | Website & Infrastructure  |
 | website-requirements             | Website Requirements                    | website-requirements            | Website & Infrastructure  |
+
+<!-- markdownlint-enable MD013 -->
 
 ### Example: invoking a predefined prompt
 
@@ -244,6 +256,8 @@ Predefined prompts create Markdown files of their AI generated output. The
 content from these files, without the temporary H1 headings at the top, is
 copied into specific locations in the analysis.md file.
 
+<!-- markdownlint-disable MD013 -->
+
 | Output file                                           | Location in analysis.md                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<project-slug>-project-documentation-comment.md`     | **Start**: After the ratings table that follows the first paragraph that follows the "Project Documentation" H2.<br>**End**: Before the sentence "The following sections contain assessments of each element of the Project Documentation rubric."                                                                                                            |
@@ -252,6 +266,8 @@ copied into specific locations in the analysis.md file.
 | `<project-slug>-<stem>-answers.md`                    | **Start**: After the first paragraph that follows the H3 heading for an area, e.g. "### Information Architecture". That first paragraph should end with the sentence: "We evaluate on the following:".<br>**End**: Before the H4 "Comment" heading.                                                                                                           |
 | `<project-slug>-<stem>-comment.md`                    | **Start**: After the H4 "Comment" heading.<br>**End**: Before the next H3 or H2 heading.<br>**Note**: Currently, only the Strengths and Weaknesses of the area comments are pasted into analysis.md.<br>**Note**: The rating for the area (last line in the output) is later manually copied by a writer into the area summary ratings table for the section. |
 | `<project-slug>-<stem>-recommendations.md`            | **Start**: Under the H2 headings "Project documentation recommendations", "Contributor documentation recommendations", or "Website & infrastructure recommendations" and under the H3 heading for the area.<br>**End**: Before the next H3 or H2 heading.                                                                                                     |
+
+<!-- markdownlint-enable MD013 -->
 
 ## Recommendations and Issues
 
@@ -376,6 +392,8 @@ lowercase, hyphenated version of the issue title, no more than about five words:
 
 Examples of a file name built from a full title:
 
+<!-- markdownlint-disable MD013 -->
+
 | Issue title                                                       | File name                               |
 | ----------------------------------------------------------------- | --------------------------------------- |
 | Add a user-facing troubleshooting page #9007                      | `9007-add-troubleshooting-page.md`      |
@@ -384,6 +402,7 @@ Examples of a file name built from a full title:
 | Create a new-user getting started path #9061                      | `U-9061-create-getting-started-path.md` |
 | Fix navigation gaps and reorganize information architecture #9062 | `U-9062-fix-navigation-gaps.md`         |
 
+<!-- markdownlint-enable MD013 -->
 Previous runs are archived in sub-folders of `.github/output/issues/` (for
 example, `prev_1/`). The prompts ignore those sub-folders.
 

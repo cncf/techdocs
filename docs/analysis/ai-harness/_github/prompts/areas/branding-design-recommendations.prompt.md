@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Branding and Design recommendations
+
 Run the shared **recommendations** analysis for the `branding-design` criteria
 area.
 

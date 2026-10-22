@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# New User Content recommendations
+
 Run the shared **recommendations** analysis for the `new-user-content` criteria
 area.
 

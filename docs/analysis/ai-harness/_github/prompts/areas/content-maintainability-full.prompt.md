@@ -5,6 +5,8 @@ description:
   recommendations) for the documentation.
 ---
 
+# Content Maintainability full analysis
+
 Run the shared **full** analysis for the `content-maintainability` criteria
 area.
 

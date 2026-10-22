@@ -9,6 +9,8 @@ Each row is an area in this section: its criterion label (used for the summary
 ratings table) and the stem of its existing per-area comment file
 (`<project-slug>-<stem>-comment.md`).
 
+<!-- markdownlint-disable MD013 -->
+
 | Criterion                                   | Comment file stem               |
 | ------------------------------------------- | ------------------------------- |
 | Single-source for all files                 | single-source-requirement       |
@@ -18,3 +20,5 @@ ratings table) and the stem of its existing per-area comment file
 | Case studies/social proof                   | case-studies                    |
 | SEO, Analytics, and site-local search       | seo-analytics                   |
 | Maintenance planning                        | maintenance-planning            |
+
+<!-- markdownlint-enable MD013 -->

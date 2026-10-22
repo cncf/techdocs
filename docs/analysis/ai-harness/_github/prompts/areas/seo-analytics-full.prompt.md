@@ -5,6 +5,8 @@ description:
   for the documentation.
 ---
 
+# SEO, Analytics, and Site Search full analysis
+
 Run the shared **full** analysis for the `seo-analytics` criteria area.
 
 1. Read the criteria definition in `.github/criteria/areas/seo-analytics.md`.

@@ -3,6 +3,8 @@ mode: agent
 description: Write a comment on the inclusive language of the documentation.
 ---
 
+# Inclusive Language comment
+
 Run the shared **comment** analysis for the `inclusive-language` criteria area.
 
 1. Read the criteria definition in

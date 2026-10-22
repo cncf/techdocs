@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# New Contributor Getting Started Content comment
+
 Run the shared **comment** analysis for the `new-contributor-content` criteria
 area.
 

@@ -5,6 +5,8 @@ description:
   documentation.
 ---
 
+# Content Creation Process answers
+
 Run the shared **answers** analysis for the `content-creation-process` criteria
 area.
 
