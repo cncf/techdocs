@@ -31,7 +31,7 @@ For the analysis procedure, see [Analysis how-to](../howto.md).
 
 ## Introduction
 
-This document is an analysis the effectiveness and completeness of the
+This document is an analysis of the effectiveness and completeness of the
 [_PROJECT_][project-website] open source software (OSS) project's documentation
 and website. It is funded by the CNCF Foundation as part of its overall effort
 to incubate, grow, and graduate open source cloud native software projects.
