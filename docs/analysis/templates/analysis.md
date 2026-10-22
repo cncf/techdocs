@@ -132,8 +132,8 @@ into a series of issues and entered on GitHub `PROJECT-DOC-WEBSITE/issues`.
 
 ### How to use this document
 
-Readers interested only in actionable improvements should skip this
-document and read the [implementation][] plan (if provided) and [issues list][].
+Readers interested only in actionable improvements should skip this document and
+read the [implementation][] plan (if provided) and [issues list][].
 
 Readers interested in the current state of the documentation and the reasoning
 behind the recommendations should read the section of this document pertaining
