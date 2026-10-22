@@ -96,7 +96,7 @@ and prompt Markdown files. These files are organized further by `areas` and
 
 <!-- markdownlint-disable MD013 -->
 
-```
+```text
 .github/
   copilot-instructions.md
   criteria/
@@ -358,7 +358,7 @@ In writing the issues, Copilot should use the following guidelines:
   ---
   ```
 
-#### Issue numbers
+### Issue numbers
 
 Issue numbers simulate GitHub issue numbers so that files can reference each
 other before upload. They are five digits, start at 9001, and increment by one
@@ -403,6 +403,7 @@ Examples of a file name built from a full title:
 | Fix navigation gaps and reorganize information architecture #9062 | `U-9062-fix-navigation-gaps.md`         |
 
 <!-- markdownlint-enable MD013 -->
+
 Previous runs are archived in sub-folders of `.github/output/issues/` (for
 example, `prev_1/`). The prompts ignore those sub-folders.
 
@@ -421,7 +422,7 @@ recommendation-to-issue mapping, priority adjustments, and counts.
 
 To re-run after coaching Copilot on scope, run the command again and add the
 corrections in the same message, for example
-`run /create-issues — split the "Getting started" issue into two; it is more than four hours`.
+`run /create-issues — split the "Getting started" issue into two`.
 
 ### Create umbrella issues AI prompt
 
@@ -465,7 +466,7 @@ documentation-only site built with [MkDocs](https://www.mkdocs.org/) using the
 
 ### Content Architecture
 
-```
+```text
 docs/
   .nav.yml              # Top-level navigation order
   index.md

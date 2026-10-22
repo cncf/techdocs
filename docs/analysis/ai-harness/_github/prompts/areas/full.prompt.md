@@ -47,18 +47,18 @@ writing so each file contains only its own kind of content.
 
 ### Phase 2: Analyze and sort
 
-3. Investigate the documentation as the answers engine directs. As you work,
+1. Investigate the documentation as the answers engine directs. As you work,
    keep three running lists:
    - Findings: factual observations that answer a question (what exists, where
      it is, what is missing).
    - Assessments: high-level judgments about strengths and weaknesses, and the
      evidence for the rating.
    - Fixes: anything you would tell the project to change or add.
-4. Whenever an observation suggests a fix, record the fix in the Fixes list and
+2. Whenever an observation suggests a fix, record the fix in the Fixes list and
    keep only the underlying finding in the Findings or Assessments list. A
    finding may state that something is missing or unclear; it must not say what
    to do about it.
-5. Draft all three documents in memory from these lists:
+3. Draft all three documents in memory from these lists:
    - Answers, from the Findings list, following the answers engine's Output
      section.
    - Comment, from the Assessments list, following the comment engine's
@@ -66,7 +66,7 @@ writing so each file contains only its own kind of content.
    - Recommendations, from the Fixes list, following the recommendations
      engine's Output section. Base each recommendation on a finding or
      assessment that appears in the drafted answers or comment.
-6. Review the drafts against each other before writing anything to disk:
+4. Review the drafts against each other before writing anything to disk:
    - Remove any imperative or "should" phrasing from the answers and comment;
      move it to the recommendations.
    - Confirm every recommendation traces back to something stated in the answers
@@ -77,7 +77,7 @@ writing so each file contains only its own kind of content.
 
 ### Phase 3: Write
 
-7. Write the three files in this order, since the recommendations engine expects
+5. Write the three files in this order, since the recommendations engine expects
    the first two to exist:
    1. Answers: `.github/prompts/areas/answers.prompt.md` output.
    2. Comment: `.github/prompts/areas/comment.prompt.md` output.

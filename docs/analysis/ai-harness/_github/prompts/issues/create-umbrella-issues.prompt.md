@@ -86,10 +86,14 @@ Follow `umbrella-issue.md` and keep its two headings:
   formatted as a link whose text is the sub-issue title followed by its number
   and whose target is the sub-issue file name relative to the umbrella file:
 
+  <!-- markdownlint-disable MD013 -->
+
   ```markdown
   - [Add a Getting Started page that walks through creating and starting a VirtualMachine #9001](9001-add-getting-started-page.md)
   - [Rewrite Basic Use as "Your first VirtualMachine" #9002](9002-rewrite-basic-use.md)
   ```
+
+  <!-- markdownlint-enable MD013 -->
 
   The upload process replaces the `#<number>` references with real issue numbers
   and links, so every title and number must match the sub-issue's front matter
