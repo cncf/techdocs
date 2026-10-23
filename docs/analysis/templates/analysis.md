@@ -118,6 +118,7 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
+> Author's note: We recommend writing implementation notes only for large projects. An implementation plan can bridge the gap between the high-level recommendations in this document and individual issues entered in the doc repo. Remove the sentences about the implementation doc if you didn't write one.   
 > Author's note: We recommend writing implementation notes only for large
 > projects. An implementation plan can bridge the gap between the high-level
 > recommendations in this document and individual issues entered in the doc
