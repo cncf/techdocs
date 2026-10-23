@@ -481,6 +481,8 @@ prompt; the issue prompts stop if a placeholder is still present. See
 `examples/kubevirt/current-repository.md` in the harness for a completed
 example.
 
+<!-- markdownlint-disable MD013 -->
+
 - Project name:
   <!-- FILL IN: e.g. KubeVirt; the engines derive the project slug by lowercasing it and replacing spaces with hyphens -->
 - Documentation label:
@@ -499,6 +501,8 @@ example.
 - CNCF project page URL:
   <!-- FILL IN: e.g. https://www.cncf.io/projects/<project>/ -->
 - Assistance-request issue: <!-- FILL IN: cncf/techdocs#NNN -->
+
+<!-- markdownlint-enable MD013 -->
 
 Copilot shall output Markdown files from the AI-assisted analysis to the
 `.github/output/analysis` directory and issue files to the
