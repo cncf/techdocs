@@ -21,4 +21,4 @@ the base name for all three output files (`<title>-answers.md`,
 `<title>-comment.md`, `<title>-recommendations.md`); otherwise use each engine's
 default (`<project-slug>-<stem>-<type>.md`).
 
-Output the file to the `.github/output` directory.
+Output the file to the `.github/output/analysis` directory.

@@ -36,9 +36,10 @@ normally invoked through a per-area wrapper prompt (for example,
   Format each question as a bullet, not as a heading. Do not bold the answers.
 - If an answer is "yes" or "no", provide a brief explanation.
 - Aim for two to three paragraphs.
-- Write the result to a Markdown file in the `.github/output` directory:
+- Write the result to a Markdown file in the `.github/output/analysis`
+  directory:
   - If a title was provided, name the file `<title>.md`.
   - Otherwise name it `<project-slug>-<stem>-answers.md`.
   - If a file exists by the same name, overwrite it.
 
-Output the file to the `.github/output` directory.
+Output the file to the `.github/output/analysis` directory.

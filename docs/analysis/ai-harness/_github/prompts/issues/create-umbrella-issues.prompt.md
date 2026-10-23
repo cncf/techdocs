@@ -6,26 +6,34 @@ description:
   reviewed the issues.
 ---
 
-# Create umbrella issues from the KubeVirt documentation issues
+# Create umbrella issues from the documentation issues
 
 ## Role and goal
 
 You are a senior technical writer on the CNCF TechDocs team. The
-`/create-issues` prompt has already turned the KubeVirt documentation analysis
+`/create-issues` prompt has already turned the project's documentation analysis
 into numbered, standalone issue files. Group those issues into umbrella issues
 so maintainers can track related work as a unit and so CNCF can report progress
 on the analysis. Each umbrella issue is itself an uploadable issue file that
 links to its sub-issues; it does not repeat their content.
 
+## Project context
+
+Read the "Current Repository" section of `.github/copilot-instructions.md` for
+the project name, the issues repository URL (`<issues repo URL>`), the CNCF
+project page URL (`<CNCF project URL>`), and the assistance-request issue
+(`cncf/techdocs#<NNN>`). If any of these is still a placeholder, stop and ask
+the writer to fill it in.
+
 ## Sources
 
 - `.github/output/issues/<number>-*.md` — the standalone issue files. Read every
-  one. Ignore `.github/output/issues/prev_1/`, which is an archive from a
-  previous run.
+  one. Ignore `readme.md` and any sub-folders of `.github/output/issues/`; the
+  sub-folders are archives of previous runs.
 - `.github/output/issues-coverage.md` — the coverage report. Its `## Issues`
   table lists every issue number, title, label, and file; use it to look up
   titles and to find the next free issue number.
-- `.github/issue_template/umbrella-issue.md` — the umbrella issue template.
+- `.github/templates/umbrella-issue.md` — the umbrella issue template.
 - https://github.com/kedacore/keda-docs/issues/1361 — an example umbrella issue
   from a previous CNCF TechDocs analysis. Match its purpose: a short statement
   of what the group achieves, followed by a checklist of sub-issues. Do not copy
@@ -69,19 +77,20 @@ Every umbrella file starts with this front matter, followed by the body:
 ---
 title: <umbrella issue title> #<issue number>
 labels: [<urgent | high | backlog>, help wanted]
-repo: https://github.com/kubevirt/user-guide/issues
+repo: <issues repo URL>
 ---
 ```
 
-Follow `umbrella-issue.md` and keep its two headings:
+Follow `umbrella-issue.md`, replacing its `{issues repo URL}` placeholder with
+the issues repository URL, and keep its two headings:
 
 - `## Umbrella Issue` — in one or two paragraphs, state the problem the theme
   addresses, how the sub-issues together resolve it, and the order in which to
   work them if it matters. End with this sentence, adapted as needed: "This
   umbrella issue tracks recommended changes resulting from an analysis of the
-  KubeVirt documentation commissioned by
-  [CNCF](https://www.cncf.io/projects/kubevirt/). The assistance request is
-  tracked in [cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343)."
+  <project name> documentation commissioned by [CNCF](<CNCF project URL>). The
+  assistance request is tracked in
+  [cncf/techdocs#<NNN>](https://github.com/cncf/techdocs/issues/<NNN>)."
 - `## Sub-issues` — a bulleted list with one line per sub-issue, in work order,
   formatted as a link whose text is the sub-issue title followed by its number
   and whose target is the sub-issue file name relative to the umbrella file:
@@ -89,8 +98,8 @@ Follow `umbrella-issue.md` and keep its two headings:
   <!-- markdownlint-disable MD013 -->
 
   ```markdown
-  - [Add a Getting Started page that walks through creating and starting a VirtualMachine #9001](9001-add-getting-started-page.md)
-  - [Rewrite Basic Use as "Your first VirtualMachine" #9002](9002-rewrite-basic-use.md)
+  - [Add a Getting Started page that walks through the first deployment #9001](9001-add-getting-started-page.md)
+  - [Rewrite Basic Use as "Your first deployment" #9002](9002-rewrite-basic-use.md)
   ```
 
   <!-- markdownlint-enable MD013 -->

@@ -1,7 +1,7 @@
 ---
 title: { title } #{Issue number}
 labels: [high, help wanted]
-repo: https://github.com/kubevirt/user-guide/issues
+repo: { issues repo URL }
 ---
 
 ## Umbrella Issue

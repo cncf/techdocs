@@ -58,14 +58,16 @@ Analysis criteria is further specified in the prompt files under
 
 ## Analysis responses style
 
-Readers of the analysis are Kubernetes subject-matter experts who want to
-improve the documentation quickly. Write for them: be concise and actionable,
-and skip explanations they don't need.
+Readers of the analysis are subject-matter experts in the project's ecosystem
+(named in the "Current Repository" section) who want to improve the
+documentation quickly. Write for them: be concise and actionable, and skip
+explanations they don't need.
 
 - Write in complete sentences, using active voice and the imperative mood.
 - Fragments are fine inside a bulleted list that follows an introductory
   sentence.
-- Explain any term or acronym that a senior Kubernetes engineer might not know.
+- Explain any term or acronym that a senior engineer in the project's ecosystem
+  might not know.
 - Don't list technologies in parentheses; readers already know them.
 - Use parentheses only when the content is needed to understand the
   recommendation.
@@ -78,12 +80,14 @@ and skip explanations they don't need.
 - Treat any paragraph limit in a prompt as a maximum, not a target.
 - If you're unsure whether something is technically wrong, phrase it as a
   question for the SME rather than asserting it.
-- Follow Kubernetes documentation conventions: UpperCamelCase for API objects
-  (Pod, Deployment), and code formatting for commands, fields, and file names.
+- Follow the project's documentation conventions as described in "Current
+  Repository". For Kubernetes-ecosystem projects that means UpperCamelCase for
+  API objects (Pod, Deployment) and code formatting for commands, fields, and
+  file names.
 
 ## Analysis Criteria and Predefined Prompts
 
-The KubeVirt analysis has three sections (Project Documentation, Contributor
+The analysis has three sections (Project Documentation, Contributor
 Documentation, and Website & Infrastructure). Each section contains multiple
 areas, and each area has its own criteria and prompts for evaluation.
 
@@ -92,7 +96,7 @@ and prompt Markdown files. These files are organized further by `areas` and
 `sections` folders. These files live under `.github/criteria/areas`,
 `.github/criteria/sections`, `.github/prompts/areas`, and
 `.github/prompts/sections` respectively. Generated output lives in
-`.github/output`.
+`.github/output/analysis` and `.github/output/issues`.
 
 <!-- markdownlint-disable MD013 -->
 
@@ -113,14 +117,20 @@ and prompt Markdown files. These files are organized further by `areas` and
       section-comment.prompt.md  # Shared engine
       <section>-comment.prompt.md  # Per-section wrappers
     issues/
+      rank-recommendations.prompt.md    # Ranks recommendations into input/ai-ranked-recommendations.csv
       create-issues.prompt.md           # Generates numbered issue files from ranked recommendations
       create-umbrella-issues.prompt.md  # Groups issue files into umbrella issues
+  templates/
+    doc-issue.md                 # Documentation issue template (replace with the project's own)
+    umbrella-issue.md            # Umbrella issue template
+  input/
+    ai-ranked-recommendations.csv                # Written by /rank-recommendations, read by /create-issues
   output/
-    <project-slug>-<stem>-<type>.md            # Per-area outputs
-    <project-slug>-<section-slug>-comment.md   # Section-level comments
-    issues/<number>-<short-slug>.md            # Generated standalone issue files
-    issues/U-<number>-<short-slug>.md          # Generated umbrella issue files
-    issues-coverage.md                         # Issue list and recommendation-to-issue mapping
+    analysis/<project-slug>-<stem>-<type>.md            # Per-area outputs
+    analysis/<project-slug>-<section-slug>-comment.md   # Section-level comments
+    issues/<number>-<short-slug>.md                     # Generated standalone issue files
+    issues/U-<number>-<short-slug>.md                   # Generated umbrella issue files
+    issues-coverage.md                                  # Issue list and recommendation-to-issue mapping
 ```
 
 <!-- markdownlint-enable MD013 -->
@@ -165,7 +175,7 @@ name, slug, and member areas with the stem of each area's comment file. A
 per-section wrapper (for example, `/project-documentation-comment`) invokes it.
 Because the per-area comment files are a precondition, run the relevant
 `<area>-comment` prompts first. By default the output is written to
-`.github/output/<project-slug>-<section-slug>-comment.md` (for example,
+`.github/output/analysis/<project-slug>-<section-slug>-comment.md` (for example,
 `kubevirt-project-documentation-comment.md`), overridable with a `title` input.
 
 Each criteria area needs three wrapper files (`answers`, `comment`,
@@ -174,7 +184,7 @@ name and embed the display name in the description. A `full` wrapper is optional
 per area.
 
 By default a prompt writes to `<project-slug>-<stem>-<type>.md` in the
-`.github/output` directory (for example,
+`.github/output/analysis` directory (for example,
 `kubevirt-information-architecture-answers.md`). Provide an optional `title`
 input to override the filename. To add or change questions for an area, edit
 only its `.github/criteria/areas/<area>.md` file.
@@ -238,7 +248,7 @@ run /information-architecture-answers
 
 This runs the `information-architecture` questions through the shared `answers`
 engine and writes the result to the default file
-`.github/output/kubevirt-information-architecture-answers.md`.
+`.github/output/analysis/kubevirt-information-architecture-answers.md`.
 
 To override the output filename, pass a `title` input:
 
@@ -246,9 +256,10 @@ To override the output filename, pass a `title` input:
 run /information-architecture-answers title: my-analysis
 ```
 
-That writes the answers to `.github/output/my-analysis.md` instead of the
-default filename. The same pattern applies to every area and output type — for
-example, `/inclusive-language-recommendations` or `/new-user-content-comment`.
+That writes the answers to `.github/output/analysis/my-analysis.md` instead of
+the default filename. The same pattern applies to every area and output type —
+for example, `/inclusive-language-recommendations` or
+`/new-user-content-comment`.
 
 ## Analysis.md and Output Files Mapping
 
@@ -271,8 +282,8 @@ copied into specific locations in the analysis.md file.
 
 ## Recommendations and Issues
 
-Currently, a writer took the recommendations from the Copilot analysis and asked
-Copilot to rank them. The writer created a file,
+The `/rank-recommendations` prompt collects the recommendations from the
+per-area recommendations files in `.github/output/analysis/` and ranks them into
 `.github/input/ai-ranked-recommendations.csv`, with the following columns:
 
 - `Section` - Either the "Project Documentation", "Contributor documentation",
@@ -288,10 +299,10 @@ Copilot to rank them. The writer created a file,
 
 The priority labels used for issues are `urgent`, `high`, and `backlog`,
 matching the CSV ranking without its number prefix. The upload process maps them
-to the `kubevirt/user-guide` repository labels `priority/critical-urgent`,
-`priority/high`, and `priority/backlog`. The repository already has the first
-and last; a request has been made to add `priority/high`. Assume all three are
-available when writing the issue files.
+to the target repository's own labels using the "Priority label mapping" table
+in the "Current Repository" section. Assume all three mapped labels exist when
+writing the issue files; the pre-flight checklist in the harness `index.md`
+covers creating them.
 
 Every issue also gets the `help wanted` label. It exists in the repository and
 signals that maintainers are seeking community help; CNCF uses it to surface
@@ -308,8 +319,7 @@ the KEDA
 [standalone issue example](https://github.com/kedacore/keda-docs/issues/1363),
 and the KEDA
 [umbrella issue example](https://github.com/kedacore/keda-docs/issues/1361). The
-KubeVirt assistance request is
-[cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343).
+project's own assistance request is listed in the "Current Repository" section.
 
 Copilot will create Markdown files of the issues with updated priorities as
 applicable. These files will be stored in the `.github/output/issues/`
@@ -325,17 +335,19 @@ In writing the issues, Copilot should use the following guidelines:
 
 - Source the issues only from the ranked recommendations CSV and the per-area
   recommendations files in `.github/output/analysis/`. Do not add issues from
-  general knowledge of the KubeVirt repositories; that over-generates issues the
-  assessment did not identify.
+  general knowledge of the project's repositories; that over-generates issues
+  the assessment did not identify.
 - Ensure that the issues are clearly described and actionable. Follow the
-  headings of the `.github/issue_template/kubevirt-doc-issue.md` template; it is
-  the KubeVirt team's documentation issue format.
+  headings of the documentation issue template under `.github/templates/`
+  (`doc-issue.md` by default; the "Current Repository" section names the file).
+  Replace the default with the project's own documentation issue format when it
+  has one.
 - Each issue should take about two to four hours for a technical writer, or
-  engineer, with KubeVirt context to complete.
+  engineer, with project context to complete.
 - Small tasks can be consolidated into one issue where appropriate. Avoid
   flooding the project: aim for far fewer issues than recommendations.
 - Umbrella issues group three to ten related issues. Follow the
-  `.github/issue_template/umbrella-issue.md` template: an `## Umbrella Issue`
+  `.github/templates/umbrella-issue.md` template: an `## Umbrella Issue`
   overview and a `## Sub-issues` list that links to the sub-issue files. The
   umbrella does not contain the sub-issue content.
 - Copilot is at liberty to create subheadings in the issue files as needed to
@@ -348,13 +360,14 @@ In writing the issues, Copilot should use the following guidelines:
     It becomes the GitHub issue title.
   - Set `labels` to the priority label (`urgent`, `high`, or `backlog`) plus
     `help wanted`. Labels become GitHub issue labels.
-  - Set `repo` to `https://github.com/kubevirt/user-guide/issues`.
+  - Set `repo` to the issues repository URL from the "Current Repository"
+    section.
 
   ```yaml
   ---
   title: Add a user-facing troubleshooting page #9007
   labels: [high, help wanted]
-  repo: https://github.com/kubevirt/user-guide/issues
+  repo: https://github.com/<org>/<docs-repo>/issues
   ---
   ```
 
@@ -404,8 +417,24 @@ Examples of a file name built from a full title:
 
 <!-- markdownlint-enable MD013 -->
 
-Previous runs are archived in sub-folders of `.github/output/issues/` (for
-example, `prev_1/`). The prompts ignore those sub-folders.
+To archive a previous run, move its files into a sub-folder of
+`.github/output/issues/` (for example, `prev_1/`). The prompts ignore
+sub-folders and the folder's `readme.md`.
+
+### Rank recommendations AI prompt
+
+The prompt lives in `.github/prompts/issues/rank-recommendations.prompt.md`. Run
+it after all sixteen area recommendations files exist:
+
+```text
+run /rank-recommendations
+```
+
+It reads every `<project-slug>-*-recommendations.md` file in
+`.github/output/analysis/`, assigns each recommendation a `1 - Urgent`,
+`2 - High`, or `3 - Backlog` priority by impact and effort, and writes
+`.github/input/ai-ranked-recommendations.csv`. Review the ranking before running
+`/create-issues`; to adjust it, re-run with the corrections in the same message.
 
 ### Create issues AI prompt
 
@@ -446,67 +475,70 @@ message, for example
 
 ## Current Repository
 
-Main repository: [KubeVirt](https://github.com/kubevirt/kubevirt)
+This section is the single place the engines and issue prompts read project
+context from. Replace every `<!-- FILL IN -->` placeholder before running any
+prompt; the issue prompts stop if a placeholder is still present. See
+`examples/kubevirt/current-repository.md` in the harness for a completed
+example.
 
-Secondary repository (lab docs):
-[KubeVirt.github.io](https://github.com/kubevirt/kubevirt.github.io)
-
-As writers will be working in different repositories, Copilot should complete
-the rest of this section as shown below.
+- Project name:
+  <!-- FILL IN: e.g. KubeVirt; the engines derive the project slug by lowercasing it and replacing spaces with hyphens -->
+- Documentation label:
+  <!-- FILL IN: how the engines refer to the docs, e.g. "the KubeVirt user guide" -->
+- Ecosystem:
+  <!-- FILL IN: the readers' domain, e.g. Kubernetes; used for terminology and style conventions -->
+- Main repository: <!-- FILL IN: [Name](https://github.com/<org>/<repo>) -->
+- Secondary repositories:
+  <!-- FILL IN: website or lab repos the analysis also covers, or "None" -->
+- Published documentation URL: <!-- FILL IN: e.g. https://example.io/docs -->
+- Project website URL: <!-- FILL IN -->
+- Issues repository URL:
+  <!-- FILL IN: e.g. https://github.com/<org>/<docs-repo>/issues; used for `repo:` in issue front matter -->
+- Issue template file:
+  <!-- FILL IN: file name under .github/templates/, doc-issue.md unless the project supplies its own -->
+- CNCF project page URL:
+  <!-- FILL IN: e.g. https://www.cncf.io/projects/<project>/ -->
+- Assistance-request issue: <!-- FILL IN: cncf/techdocs#NNN -->
 
 Copilot shall output Markdown files from the AI-assisted analysis to the
-`.github/output` directory in the current directory.
+`.github/output/analysis` directory and issue files to the
+`.github/output/issues` directory in the current repository.
+
+### Priority label mapping
+
+The upload process maps the harness labels to the issue repository's labels.
+Confirm each target label exists before uploading.
+
+| Harness label | Repository label                                |
+| ------------- | ----------------------------------------------- |
+| `urgent`      | <!-- FILL IN: e.g. priority/critical-urgent --> |
+| `high`        | <!-- FILL IN: e.g. priority/high -->            |
+| `backlog`     | <!-- FILL IN: e.g. priority/backlog -->         |
+| `help wanted` | `help wanted`                                   |
 
 ### What This Repo Is
 
-This is the [KubeVirt user guide](https://kubevirt.io/user-guide), a
-documentation-only site built with [MkDocs](https://www.mkdocs.org/) using the
-`mkdocs-material` theme and `mkdocs-awesome-nav` plugin. All content lives in
-`./docs` as Markdown files. There is no application code.
+<!-- FILL IN: one paragraph. What the repository publishes, the site generator
+and theme, where the content lives, and whether there is application code. -->
 
 ### Content Architecture
 
+<!-- FILL IN: a short tree of the documentation source folders with a comment
+per folder. -->
+
 ```text
 docs/
-  .nav.yml              # Top-level navigation order
   index.md
-  architecture.md
-  cluster_admin/        # Installation, feature gates, RBAC, node ops
-  user_workloads/       # VM lifecycle, instancetypes, virtctl, startup scripts
-  compute/              # CPU/memory, live migration, hugepages, NUMA
-  network/              # Interfaces, hotplug, binding plugins, Istio
-  storage/              # CDI, volumes, snapshots, clone, export
-  debug_virt_stack/     # Debugging guides
 ```
 
 ### Key Conventions
 
-#### Navigation order via `.nav.yml`
-
-Every subdirectory under `docs/` has a `.nav.yml` that explicitly controls page
-ordering. Alphabetical order is intentionally not used. When adding a new page,
-add it to the relevant `.nav.yml`.
-
-#### Redirects in `mkdocs.yml`
-
-Old page paths (e.g. `operations/`, `virtual_machines/`) are redirected to their
-new locations via the `redirects` plugin in `mkdocs.yml`. When moving or
-renaming a page, add an entry there.
+<!-- FILL IN: one H4 per convention Copilot must respect when reading or
+referencing files: navigation configuration, redirects, spelling dictionaries,
+Markdown extensions, and anything else. Keep the "No commits" convention. -->
 
 #### No commits
 
-This work is solely for documentation analysis. There are no commits to the
-application code in this repository.
-
-#### Spelling dictionary
-
-The yaspeller dictionary is sourced from
-`kubevirt/project-infra/images/yaspeller/.yaspeller.json`. If a technical term
-causes false positives, it needs to be added there (upstream), not locally —
-unless a local `yaspeller.json` override is present.
-
-#### MkDocs extensions in use
-
-Pages can use: `admonition`, `footnotes`, `toc` with `permalink`,
-`pymdownx.highlight`, `pymdownx.superfences`, `attr_list`, and `pymdownx.emoji`.
-These are already configured in `mkdocs.yml` — no additional setup needed.
+This work is solely for documentation analysis. Copilot makes no commits to the
+documentation or application code in this repository; it writes only to
+`.github/input` and `.github/output`.

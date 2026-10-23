@@ -18,4 +18,4 @@ Optional output filename override: `${input:title}` — if non-empty, use it as
 the output filename; otherwise use the engine's default
 (`<project-slug>-<stem>-comment.md`).
 
-Output the file to the `.github/output` directory.
+Output the file to the `.github/output/analysis` directory.

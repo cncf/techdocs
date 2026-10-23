@@ -91,7 +91,7 @@ share the `<title>` base name described under "Inputs".
 
 ## Output
 
-- Produce all three Markdown files in the `.github/output` directory:
+- Produce all three Markdown files in the `.github/output/analysis` directory:
   - Answers: `<title>-answers.md`, or `<project-slug>-<stem>-answers.md` by
     default.
   - Comment: `<title>-comment.md`, or `<project-slug>-<stem>-comment.md` by
@@ -100,4 +100,4 @@ share the `<title>` base name described under "Inputs".
     `<project-slug>-<stem>-recommendations.md` by default.
 - After writing them, list the three filenames you created.
 
-Output the file to the `.github/output` directory.
+Output the file to the `.github/output/analysis` directory.

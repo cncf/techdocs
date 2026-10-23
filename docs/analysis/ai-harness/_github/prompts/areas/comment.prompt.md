@@ -45,9 +45,10 @@ invoked through a per-area wrapper prompt (for example,
 
 ## Output
 
-- Write the result to a Markdown file in the `.github/output` directory:
+- Write the result to a Markdown file in the `.github/output/analysis`
+  directory:
   - If a title was provided, name the file `<title>.md`.
   - Otherwise name it `<project-slug>-<stem>-comment.md`.
   - If a file exists by the same name, overwrite it.
 
-Output the file to the `.github/output` directory.
+Output the file to the `.github/output/analysis` directory.
