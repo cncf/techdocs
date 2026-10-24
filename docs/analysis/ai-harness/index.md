@@ -33,9 +33,9 @@ The prompts were validated with:
 - GitHub Copilot CLI 1.0.x (`copilot --version`; 1.0.103 at the time of
   writing), run from the root of the target project's documentation repository
   so that `.github/copilot-instructions.md` is picked up automatically.
-- Claude Fable 5.1. (`/model` in the CLI shows the current one). The `full` engine
-  asks for "Claude default" output style; other models work but may need the
-  style section tuned.
+- Claude Fable 5.1. (`/model` in the CLI shows the current one). The `full`
+  engine asks for "Claude default" output style; other models work but may need
+  the style section tuned.
 - Node.js and Prettier (`npm run check:format` in `cncf/techdocs`) for
   formatting the generated Markdown before pasting it into `analysis.md`.
 - Prompt files that rely on two Copilot prompt-file features: `mode: agent` in
