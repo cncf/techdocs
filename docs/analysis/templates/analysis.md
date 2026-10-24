@@ -118,8 +118,11 @@ Each section begins with summary ratings based on a rubric with appropriate
 - **Recommendations**: suggested changes that would improve the effectiveness of
   the documentation.
 
-> Author's note: We recommend writing implementation notes only for large projects. An implementation plan can bridge the gap between the high-level recommendations in this document and individual issues entered in the doc repo. Remove the sentences about the implementation doc if you didn't write one.   
 > Author's note: We recommend writing implementation notes only for large
+> projects. An implementation plan can bridge the gap between the high-level
+> recommendations in this document and individual issues entered in the doc
+> repo. Remove the sentences about the implementation doc if you didn't write
+> one. Author's note: We recommend writing implementation notes only for large
 > projects. An implementation plan can bridge the gap between the high-level
 > recommendations in this document and individual issues entered in the doc
 > repo. Remove the sentences about the implementation doc if you didn't write
@@ -551,14 +554,14 @@ We evaluate on the following:
 
 #### AI Agent Readiness
 
-AI agents—coding assistants, chatbots, and agentic search tools—increasingly
-read documentation on a user's behalf, making them a new audience alongside
-human readers. Preparing your site for them lets agents retrieve accurate,
-up-to-date answers and send users back to the project, rather than relying on
-stale or third-party sources that can misrepresent it. Many agent-readiness
-practices, such as serving clean Markdown, rendering content server-side, and
-publishing an  llms.txt  index of your key pages, also make the documentation
-faster, more portable, and easier to maintain.
+AI agents—coding assistants, bots, and agentic search tools—increasingly read
+documentation on a user's behalf, making them a new audience alongside human
+readers. Preparing your site for them lets agents retrieve accurate, up-to-date
+answers and send users back to the project, rather than relying on stale or
+third-party sources that can misrepresent it. Many agent-readiness practices,
+such as serving clean Markdown, rendering content server-side, and publishing
+an  llms.txt  index of your key pages, also make the documentation faster, more
+portable, and easier to maintain.
 
 We evaluate on the following:
 

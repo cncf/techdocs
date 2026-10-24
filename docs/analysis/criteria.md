@@ -398,14 +398,14 @@ Example:
 
 ### AI Agent Readiness
 
-AI agents—coding assistants, chatbots, and agentic search tools—increasingly
-read documentation on a user's behalf, making them a new audience alongside
-human readers. Preparing your site for them lets agents retrieve accurate,
-up-to-date answers and send users back to the project, rather than relying on
-stale or third-party sources that can misrepresent it. Many agent-readiness
-practices, such as serving clean Markdown, rendering content server-side, and
-publishing an  llms.txt  index of your key pages, also make the documentation
-faster, more portable, and easier to maintain.
+AI agents—coding assistants, bots, and agentic search tools—increasingly read
+documentation on a user's behalf, making them a new audience alongside human
+readers. Preparing your site for them lets agents retrieve accurate, up-to-date
+answers and send users back to the project, rather than relying on stale or
+third-party sources that can misrepresent it. Many agent-readiness practices,
+such as serving clean Markdown, rendering content server-side, and publishing
+an  llms.txt  index of your key pages, also make the documentation faster, more
+portable, and easier to maintain.
 
 We evaluate on the following:
 
