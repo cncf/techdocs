@@ -75,8 +75,9 @@ renaming a page, add an entry there.
 
 #### No commits
 
-This work is solely for documentation analysis. There are no commits to the
-application code in this repository.
+This work is solely for documentation analysis. Copilot makes no commits to the
+documentation or application code in this repository; it writes only to
+`.github/input` and `.github/output`.
 
 #### Spelling dictionary
 

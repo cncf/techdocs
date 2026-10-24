@@ -1,6 +1,6 @@
 # Information architecture - Project Documentation
 
-- Display name: Information architecture
+- Display name: Information Architecture
 - File stem: information-architecture
 
 ## Questions

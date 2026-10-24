@@ -1,6 +1,6 @@
 # Usability, accessibility and devices - Website and Infrastructure
 
-- Display name: Usability Accessibility and Devices
+- Display name: Usability, Accessibility and Devices
 - File stem: usability-accessibility-devices
 
 ## Questions

@@ -12,7 +12,7 @@ Describe the umbrella issue and how the sub-issues work to resolve it.
 
 <!-- One line per sub-issue: the title and simulated number as link text,
 the sub-issue file name (sibling of this file in .github/output/issues/)
-as the target. -->
+as the target. For example:
+- [Reorganize Concepts #9938](9938-reorganize-concepts.md) -->
 
 - [{issue title} #{issue number}]({issue-number}-{condensed-issue-title}.md)
-- [Reorganize Concepts #9938](9938-reorganize-concepts.md)

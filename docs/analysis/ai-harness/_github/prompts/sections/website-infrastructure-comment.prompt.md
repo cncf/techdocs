@@ -1,7 +1,7 @@
 ---
 mode: agent
 description:
-  Write an overall comment on the Website and Infrastructure analysis section by
+  Write an overall comment on the Website & Infrastructure analysis section by
   synthesizing its per-area comment files.
 ---
 

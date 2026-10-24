@@ -35,7 +35,7 @@ normally invoked through a per-area wrapper prompt (for example,
 - Present the answers as indented paragraphs by two spaces under each question.
   Format each question as a bullet, not as a heading. Do not bold the answers.
 - If an answer is "yes" or "no", provide a brief explanation.
-- Aim for two to three paragraphs.
+- Keep each answer to one or two short paragraphs.
 - Write the result to a Markdown file in the `.github/output/analysis`
   directory:
   - If a title was provided, name the file `<title>.md`.

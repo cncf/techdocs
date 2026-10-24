@@ -1,6 +1,6 @@
-# Website and Infrastructure
+# Website & Infrastructure
 
-- Display name: Website and Infrastructure
+- Display name: Website & Infrastructure
 - Section slug: website-infrastructure
 
 ## Areas

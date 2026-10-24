@@ -1,6 +1,6 @@
 # SEO, analytics, and local site search - Website and Infrastructure
 
-- Display name: SEO Analytics and Site Search
+- Display name: SEO, Analytics, and Site Search
 - File stem: seo-analytics
 
 ## Questions

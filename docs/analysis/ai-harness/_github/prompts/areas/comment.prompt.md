@@ -28,7 +28,7 @@ invoked through a per-area wrapper prompt (for example,
    replacing spaces with hyphens.
 3. Write one to three paragraphs for a high-level comment. No need to replicate
    points from the answers output. Follow with two bulleted lists: one of
-   strengths and one of weaknesses. Preceded the lists with labels (not bold)
+   strengths and one of weaknesses. Precede the lists with labels (not bold)
    "Strengths:" and "Weaknesses:".
 4. You can follow with any "Additional instructions" from the criteria file. You
    may reference the listed "good examples" as models of quality.

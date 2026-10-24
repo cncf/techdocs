@@ -72,6 +72,11 @@ partial section comment.
    | Intra-site / local search                   | [rating (1-5)] |
    | Account custodians are documented           | [rating (1-5)] |
 
+   Fill each row from the relevant area comments (`website-requirements`,
+   `usability-accessibility-devices`, `seo-analytics`, `maintenance-planning`).
+   If the comments do not support a rating for a row, leave `[rating (1-5)]` in
+   place for the writer to complete.
+
 7. Write a two to five paragraph overall comment on the section beneath the
    table(s). Synthesize rather than concatenate: lead with the section's overall
    standing, describe only the most important cross-cutting themes that recur
