@@ -81,7 +81,7 @@ Complete these before the first prompt run:
    `.github/templates/` with the four headings `Description`,
    `What you expected`, `URL`, and `Additional context`, and name it in the
    "Issue template file" field.
-3. **Run the area prompts.** For each of the sixteen areas, run `/<area>-full`
+3. **Run the area prompts.** For each of the seventeen areas, run `/<area>-full`
    (for example `/information-architecture-full`). Each run writes three files
    to `.github/output/analysis/`: answers, comment, and recommendations. Start a
    new session for each area so context from one area does not leak into the

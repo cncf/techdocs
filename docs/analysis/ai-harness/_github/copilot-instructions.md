@@ -203,11 +203,11 @@ Sections (for the section-level overall comment):
 
 <!-- markdownlint-disable MD013 -->
 
-| Section                   | Section slug              | Member areas (comment-file stems)                                                                                                                    |
-| ------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Project Documentation     | project-documentation     | information-architecture, new-user, content-maintainability, content-creation-process, inclusive-language                                            |
-| Contributor Documentation | contributor-documentation | communication-methods-docd, beginner-issue-backlog, new-contributor, project-governance                                                              |
-| Website & Infrastructure  | website-infrastructure    | single-source-requirement, website-requirements, usability-accessibility-devices, branding-design, case-studies, seo-analytics, maintenance-planning |
+| Section                   | Section slug              | Member areas (comment-file stems)                                                                                                                                     |
+| ------------------------- | ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Project Documentation     | project-documentation     | information-architecture, new-user, content-maintainability, content-creation-process, inclusive-language                                                             |
+| Contributor Documentation | contributor-documentation | communication-methods-docd, beginner-issue-backlog, new-contributor, project-governance                                                                               |
+| Website & Infrastructure  | website-infrastructure    | single-source-requirement, website-requirements, usability-accessibility-devices, branding-design, case-studies, seo-analytics, maintenance-planning, agent-readiness |
 
 <!-- markdownlint-enable MD013 -->
 
@@ -218,6 +218,7 @@ and the prefix of the per-area wrapper prompts):
 
 | Area                             | Display Name                            | Output File Stem                | Section in analysis.md    |
 | -------------------------------- | --------------------------------------- | ------------------------------- | ------------------------- |
+| agent-readiness                  | AI Agent Readiness                      | agent-readiness                 | Website & Infrastructure  |
 | beginner-issue-backlog           | Beginner Friendly Issue Backlog         | beginner-issue-backlog          | Contributor Documentation |
 | branding-design                  | Branding and Design                     | branding-design                 | Website & Infrastructure  |
 | case-studies                     | Case Studies                            | case-studies                    | Website & Infrastructure  |
@@ -424,7 +425,7 @@ sub-folders and the folder's `readme.md`.
 ### Rank recommendations AI prompt
 
 The prompt lives in `.github/prompts/issues/rank-recommendations.prompt.md`. Run
-it after all sixteen area recommendations files exist:
+it after all seventeen area recommendations files exist:
 
 ```text
 run /rank-recommendations

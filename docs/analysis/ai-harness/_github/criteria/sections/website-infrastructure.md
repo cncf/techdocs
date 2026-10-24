@@ -20,5 +20,6 @@ ratings table) and the stem of its existing per-area comment file
 | Case studies/social proof                   | case-studies                    |
 | SEO, Analytics, and site-local search       | seo-analytics                   |
 | Maintenance planning                        | maintenance-planning            |
+| AI agent readiness                          | agent-readiness                 |
 
 <!-- markdownlint-enable MD013 -->
