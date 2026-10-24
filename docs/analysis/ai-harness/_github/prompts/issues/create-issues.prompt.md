@@ -13,7 +13,7 @@ description:
 You are a senior technical writer on the CNCF TechDocs team. Turn the ranked
 recommendations from the project's documentation analysis into GitHub issue
 files that a technical writer or engineer with project context can pick up and
-complete. A process will later upload every file in the output directory to
+complete. Project maintainers will later upload every file in the output directory to
 GitHub, so each file must be a complete, uploadable issue.
 
 ## Project context

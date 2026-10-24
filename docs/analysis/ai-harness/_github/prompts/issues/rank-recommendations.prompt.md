@@ -60,7 +60,8 @@ first.
 ## Output
 
 Write `.github/input/ai-ranked-recommendations.csv`, overwriting any existing
-file. Use these columns, in this order, with a header row:
+file. This file will be used later to create issues based on the ranked recommendations.
+Use these columns, in this order, with a header row:
 
 ```csv
 Section,Area,Recommendation,Suggested Priority
