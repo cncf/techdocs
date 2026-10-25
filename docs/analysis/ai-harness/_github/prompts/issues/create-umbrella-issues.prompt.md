@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Group the numbered issue files in .github/output/issues/ into umbrella issues
   of 3-10 sub-issues each. Run after /create-issues and after the writer has

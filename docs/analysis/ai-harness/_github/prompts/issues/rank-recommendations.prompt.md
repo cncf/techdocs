@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Collect every recommendation from the per-area recommendations files in
   .github/output/analysis/ and rank them into

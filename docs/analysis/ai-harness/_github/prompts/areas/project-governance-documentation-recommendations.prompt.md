@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Provide recommendations for improving the project governance of the
   documentation.

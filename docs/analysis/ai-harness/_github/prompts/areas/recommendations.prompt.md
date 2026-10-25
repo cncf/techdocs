@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Shared engine for producing analysis recommendations. Normally run via a
   per-area wrapper such as /information-architecture-recommendations.

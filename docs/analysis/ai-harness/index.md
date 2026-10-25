@@ -38,7 +38,7 @@ The prompts were validated with:
   the style section tuned.
 - Node.js and Prettier (`npm run check:format` in `cncf/techdocs`) for
   formatting the generated Markdown before pasting it into `analysis.md`.
-- Prompt files that rely on two Copilot prompt-file features: `mode: agent` in
+- Prompt files that rely on two Copilot prompt-file features: `agent: agent` in
   the front matter and the `${input:title}` variable for the optional output
   filename override. The prompts are invoked as slash commands
   (`/information-architecture-full`), which requires the files to end in

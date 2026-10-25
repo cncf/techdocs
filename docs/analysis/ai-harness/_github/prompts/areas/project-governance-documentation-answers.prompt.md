@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Answer the CNCF TechDocs project governance questions for the documentation.
 ---

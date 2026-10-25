@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Provide recommendations for improving the information architecture of the
   documentation.

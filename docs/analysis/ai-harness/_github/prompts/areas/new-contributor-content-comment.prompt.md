@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Write a comment on the new contributor getting started content of the
   documentation.

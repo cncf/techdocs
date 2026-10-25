@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Answer the CNCF TechDocs communication methods documented questions for the
   documentation.

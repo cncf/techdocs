@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Provide recommendations for improving the case studies of the documentation.
 ---

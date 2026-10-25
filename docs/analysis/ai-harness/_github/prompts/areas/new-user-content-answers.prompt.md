@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Answer the CNCF TechDocs new user content questions for the documentation.
 ---

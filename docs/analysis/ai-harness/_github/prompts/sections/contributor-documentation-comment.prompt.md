@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Write an overall comment on the Contributor Documentation analysis section by
   synthesizing its per-area comment files.

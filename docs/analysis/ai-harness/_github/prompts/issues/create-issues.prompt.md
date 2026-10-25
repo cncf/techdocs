@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Create numbered GitHub issue files in .github/output/issues/ from the ranked
   analysis recommendations, one file per issue, each scoped to 2-4 hours. Run

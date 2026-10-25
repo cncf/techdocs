@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Answer the CNCF TechDocs information architecture questions for the
   documentation.

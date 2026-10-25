@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Answer the CNCF TechDocs maintenance planning questions for the documentation.
 ---

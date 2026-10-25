@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Run the full `new-contributor-content` analysis (answers, comment, and
   recommendations) for the documentation.

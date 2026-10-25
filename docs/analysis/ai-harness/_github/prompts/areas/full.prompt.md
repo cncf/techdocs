@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Shared engine for running all three analyses (answers, comment,
   recommendations) for one area. Normally run via a per-area wrapper such as

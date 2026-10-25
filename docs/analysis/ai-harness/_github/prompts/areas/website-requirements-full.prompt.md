@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Run the full `website-requirements` analysis (answers, comment, and
   recommendations) for the documentation.

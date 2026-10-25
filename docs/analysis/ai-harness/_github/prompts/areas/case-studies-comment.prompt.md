@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description: Write a comment on the case studies of the documentation.
 ---
 

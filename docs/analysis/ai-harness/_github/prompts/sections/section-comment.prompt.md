@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Shared engine for producing an overall comment on an analysis section by
   synthesizing its per-area comment files. Normally run via a per-section

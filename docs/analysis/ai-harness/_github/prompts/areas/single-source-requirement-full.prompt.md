@@ -1,5 +1,5 @@
 ---
-mode: agent
+agent: agent
 description:
   Run the full `single-source-requirement` analysis (answers, comment, and
   recommendations) for the documentation.
