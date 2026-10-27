@@ -309,8 +309,9 @@ We evaluate on the following:
 
 - Is the website usable from mobile?
 - Are doc pages readable?
+- Are all or most website features accessible from mobile -- such as the
+  top-nav, site search, and in-page table of contents?
 - Might a [mobile-first][] design make sense for your project?
-- Are most website features usable using a keyboard only?
 
 [mobile-first]:
   https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first

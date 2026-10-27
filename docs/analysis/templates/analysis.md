@@ -479,8 +479,8 @@ be much less effort than retrofitting a desktop-first design.
 
 - Is the website usable from mobile?
 - Are doc pages readable?
-- Are all / most website features accessible from mobile -- such as the top-nav,
-  site search and in-page table of contents?
+- Are all or most website features accessible from mobile -- such as the
+  top-nav, site search, and in-page table of contents?
 - Might a [mobile-first] design make sense for the project?
 
 [mobile-first]:
@@ -489,8 +489,8 @@ be much less effort than retrofitting a desktop-first design.
 Plan for suitable [accessibility][] measures for the website. For example:
 
 - Are color contrasts significant enough for color-impaired readers?
-- Are most website features usable using a keyboard only?
-- Does text-to-speech offer listeners a good experience?
+- Are all vital website features usable using a keyboard only?
+- Does text-to-speech offer listeners a usable experience?
 
 It is up to each project to set their own guidelines.
 
