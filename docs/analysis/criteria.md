@@ -2,12 +2,15 @@
 title: Assessment criteria and examples
 ---
 
-# Assessment criteria and examples
-
 We recommend reading the
 [CNCF sandbox project documentation primer](../sandbox-doc-primer.md) before
 reviewing these criteria. The primer contains key definitions concepts that are
 referred to in the criteria.
+
+The criteria in this document are duplicated in the
+[analysis template](templates/analysis.md). Keep the two files in sync: don't
+add, remove, or reword a criterion here without making the same change in the
+template, and vice versa.
 
 ## Project documentation
 
@@ -15,7 +18,7 @@ referred to in the criteria.
 
 How your technical information is organized, laid out, and presented. This
 includes structure (pages/subpages/sections/subsections), information types
-(conceptual/instructional/reference), and matching documentation content to user
+(conceptual/instructional/reference), and content that matches user
 expectations.
 
 We evaluate on the following:
@@ -23,7 +26,8 @@ We evaluate on the following:
 - Is there high level conceptual content?
 - Is every product feature documented?
 - Does the documentation define all user roles (personas) for the product?
-- Are there instructions (tasks, tutorials) documented for features?
+- Do instructions (tasks, tutorials) cover the intended purposes of all
+  user-facing features?
 - Are there instructions for all major use cases for each user role?
 - Are tasks organized by user role and use case?
 - Does instructional content demonstrate atomicity — are individual tasks
@@ -31,8 +35,8 @@ We evaluate on the following:
 - Are tasks written as numbered step-by-step instructions?
 - Do task descriptions in headings and the TOC describe the task with a verb
   phrase?
-- Is the documentation free of any key features which are documented but missing
-  task documentation?
+- Are there any features that are documented (for example, described
+  conceptually) but are missing task documentation?
 - Is the “happy path” — the most common use case — documented?
 - If the documentation does not suffice, is there a clear escalation path for
   users needing more help?
@@ -41,6 +45,11 @@ We evaluate on the following:
 - Is content up to date and accurate?
 - Does the documentation separate conceptual, instructional, and reference
   information?
+- If the product builds on or incorporates another product (such as Kubernetes),
+  are there external references where needed to install and configure those
+  products?
+- Does the documentation organization and navigation need a high-level
+  restructuring?
 
 Example:
 
@@ -60,7 +69,8 @@ We evaluate on the following:
 - Are different types of installation documented (development, test, production)
   if necessary?
 - If needed, are multiple OSes documented?
-- Do users know where to go after reading the getting started guide?
+- Is there guidance for what to read next after reading the getting started
+  guide?
 - Is your new user content clearly signposted on your site’s homepage or at the
   top of your information architecture?
 - Is there easily copy-pastable sample code or other example content?
@@ -103,8 +113,8 @@ the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
-- Is there a clearly documented (ongoing) contribution process for
-  documentation?
+- Is there a clear path to the contributor documentation for new users who want
+  to contribute to the project?
 - Does your code release process account for documentation creation & updates?
 - Who reviews and approves documentation pull requests?
 - Does the website have a clear owner/maintainer?
@@ -150,10 +160,14 @@ Example:
 
 We evaluate on the following:
 
-- Are docs issues well-triaged?
+- Are docs issues triaged with respect to effort level and required expertise?
 - Is there a clearly marked way for new contributors to make code or
   documentation contributions (i.e. a “good first issue” label)?
-- Are issues well-documented (i.e., more than just a title)?
+- Are issues documented with:
+  - What is missing, incorrect, or improperly presented?
+  - What impact the issue has on documentation users?
+  - A suggested remedy?
+  - An estimate of the effort required to address the issue?
 - Are issues maintained for staleness?
 
 Example:
@@ -172,7 +186,7 @@ We evaluate on the following:
 - Do you have a community repository or section on your website?
 - Is there a document specifically welcoming new contributors and documenting a
   first contribution process?
-- Can new users find where to get help?
+- Are there prominently displayed resources for new users to find help?
 
 Example:
 
@@ -239,8 +253,8 @@ requirements for sandbox projects._
     Incubating status.
 - Is there rudimentary **project documentation**, or a placeholder or
   substitute?
-  - It is acceptable at this maturity level to link out to documentation that
-    hasn't yet been integrated into the website.
+  - It is acceptable at this maturity level to link to documentation that hasn't
+    yet been integrated into the website.
   - _Example_: website with a single homepage, without any documentation or, as
     was mentioned above, linking out to an external (preexisting) source for
     docs.
@@ -266,7 +280,7 @@ requirements for sandbox projects._
 #### Graduated
 
 - Are follow-through actions from the [Docs assessment][] complete?
-- Does **project documentation** fully addresses the needs of key stakeholders?
+- Does **project documentation** fully addresses the needs of stakeholders?
 
 #### Archived
 
@@ -274,7 +288,7 @@ requirements for sandbox projects._
 - Is the archived status of the project obvious to those visiting the website,
   such as through the use of a prominent banner?
 - If a successor project exists, are there links to its website and/or migration
-  documentation.
+  documentation?
 
 [archived state]:
   https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories
@@ -298,9 +312,6 @@ We evaluate on the following:
 - Are all or most website features accessible from mobile -- such as the
   top-nav, site search, and in-page table of contents?
 - Might a [mobile-first][] design make sense for your project?
-- Are color contrasts significant enough for color-impaired readers?
-- Are most website features usable using a keyboard only?
-- Does text-to-speech offer listeners a good experience?
 
 [mobile-first]:
   https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
@@ -310,8 +321,8 @@ Plan for suitable [accessibility][] measures for your website.
 We evaluate on the following:
 
 - Are color contrasts significant enough for color-impaired readers?
-- Are most website features usable using a keyboard only?
-- Does text-to-speech offer listeners a good experience?
+- Are all vital website features usable using a keyboard only?
+- Does text-to-speech offer listeners a usable experience?
 
 It is up to each project to set their own guidelines.
 
@@ -333,7 +344,7 @@ Example:
 
 - https://helm.sh/
 
-### Case studies/social proof
+### Case studies and social proof
 
 One of the best ways to advertise an open source project is to show other
 organizations using it.
@@ -367,7 +378,7 @@ We evaluate on the following:
   - Is analytics disabled for all other deploys?
   - If your project used Google Analytics, have you migrated to GA4?
   - Can Page-not-found (404) reports easily be generated from you site
-    analytics? Provide a sample of the site's current top-10 404s.
+    analytics?
 - Is site indexing supported for the production server, while disabled for
   website previews and builds for non-default branches?
 - Is local intra-site search available from the website?
@@ -390,6 +401,39 @@ We evaluate on the following:
 Example:
 
 - https://kubernetes.io
+
+### AI Agent Readiness
+
+AI agents—coding assistants, bots, and agentic search tools—increasingly read
+documentation on a user's behalf, making them a new audience alongside human
+readers. Preparing your site for them lets agents retrieve accurate, up-to-date
+answers and send users back to the project, rather than relying on stale or
+third-party sources that can misrepresent it. Many agent-readiness practices,
+such as serving clean Markdown, rendering content server-side, and publishing an
+`llms.txt` index of your key pages, also make the documentation faster, more
+portable, and easier to maintain.
+
+We evaluate on the following:
+
+- Does the documentation site publish an `llms.txt` file at the site or docs
+  root that follows the llmstxt.org structure (H1 title, blockquote summary, H2
+  sections of link lists)?
+- Do all links in `llms.txt` resolve, point to Markdown versions of pages, and
+  stay in sync with the published site (for example, generated at build time)?
+- Do HTML and Markdown pages include a directive near the top pointing agents to
+  `llms.txt`?
+- Is a clean Markdown version of each page served at the same URL with `.md`
+  appended or substituted, with content matching the HTML version?
+- Are pages rendered server-side or statically generated, with the main content
+  starting near the top of the response rather than behind large navigation or
+  script payloads?
+- Are pages small enough to avoid truncation in an agent's context window, and
+  do tabbed components and code fences serialize cleanly to Markdown?
+- Is the documentation publicly reachable without authentication gates or CDN
+  bot challenges, and do pages use correct HTTP status codes and standard HTTP
+  redirects?
+- Does the project monitor its CLOMonitor "Agent readiness" checks or run
+  `afdocs check` against the site, ideally in CI?
 
 ### Other
 
