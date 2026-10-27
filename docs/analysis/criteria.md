@@ -198,7 +198,7 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-- Does the project governance align with CNCF guidelines and values?
+- Is project governance clearly documented?
 
 Example:
 
