@@ -4,7 +4,7 @@ DirectoryPath: build
 TestFilesConcurrently: true
 IgnoreDirs:
   # We don't fix broken links on old analysis pages.
-  # - analyses/202[0-5]/
+  - analyses/202[0-3]/
 IgnoreInternalURLs: # list of paths
 IgnoreURLs: # list of regexes of URLs or path to be ignored
   - ^https?://localhost
