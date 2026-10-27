@@ -7,6 +7,11 @@ We recommend reading the
 reviewing these criteria. The primer contains key definitions concepts that are
 referred to in the criteria.
 
+The criteria in this document are duplicated in the
+[analysis template](templates/analysis.md). Keep the two files in sync: don't
+add, remove, or reword a criterion here without making the same change in the
+template, and vice versa.
+
 ## Project documentation
 
 ### Information architecture
@@ -108,8 +113,8 @@ the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
-- Is there a clearly documented (ongoing) contribution process for
-  documentation?
+- Is there a clear path to the contributor documentation for new users who want
+  to contribute to the project?
 - Does your code release process account for documentation creation & updates?
 - Who reviews and approves documentation pull requests?
 - Does the website have a clear owner/maintainer?

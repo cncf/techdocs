@@ -26,6 +26,10 @@ filename and search and replace the named placeholder IDs:
 
 For the analysis procedure, see [Analysis how-to](../howto.md).
 
+The criteria questions under each area heading are copied from
+[criteria.md](../criteria.md). Keep the two files in sync: don't add, remove, or
+reword a criterion in one file without making the same change in the other.
+
 > Author's Note: Delete this "About this template" section after you have
 > customized this template for a specific project.
 
@@ -194,8 +198,8 @@ documentation. We evaluate on the following:
 
 - Is there high level conceptual/“About” content? Is the documentation feature
   complete? (i.e., each product feature is documented)
-- Are there step-by-step instructions (tasks, tutorials) documented for
-  features?
+- Do instructions (tasks, tutorials) cover the intended purposes of all
+  user-facing features?
 - Are there any features that are documented (for example, described
   conceptually) but are missing task documentation?
 - Is the “happy path”/most common use case documented? Does task and tutorial
@@ -220,7 +224,8 @@ specifically for them. We evaluate on the following:
   “First steps”, etc.)
 - Is installation documented step-by-step?
 - If needed, are multiple OSes documented?
-- Do users know where to go after reading the getting started guide?
+- Is there guidance for what to read next after reading the getting started
+  guide?
 - Is the new user content clearly signposted on the site’s homepage or at the
   top of the information architecture?
 - Is there sample code or other example content that can easily be copy-pasted?
@@ -327,10 +332,14 @@ We evaluate on the following:
 
 We evaluate on the following:
 
-- Are docs issues well-triaged?
+- Are docs issues triaged with respect to effort level and required expertise?
 - Is there a clearly marked way for new contributors to make code or
   documentation contributions (i.e. a “good first issue” label)?
-- Are issues well-documented (i.e., more than just a title)?
+- Are issues documented with:
+  - What is missing, incorrect, or improperly presented?
+  - What impact the issue has on documentation users?
+  - A suggested remedy?
+  - An estimate of the effort required to address the issue?
 - Are issues maintained for staleness?
 
 #### New contributor getting started content
@@ -343,7 +352,7 @@ We evaluate on the following:
 
 - Do you have a community repository or section on the website?
 - Is there a document specifically for new contributors/the first contribution?
-- Do new users know where to get help?
+- Are there prominently displayed resources for new users to find help?
 
 #### Project governance documentation
 
