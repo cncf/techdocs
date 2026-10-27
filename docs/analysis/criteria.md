@@ -273,7 +273,7 @@ requirements for sandbox projects._
 - Does **project documentation** meet these standards?:
   - Stakeholders / personas are identified and their core needs (in terms of
     docs) documented.
-  - Hosted, internally or externally, on the website.
+  - Hosted directly on the website.
   - The [single-source requirement][] met.
   - Doc is comprehensive, addressing most stakeholder needs.
 
