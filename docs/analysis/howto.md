@@ -218,7 +218,7 @@ Create issues in the project documentation GitHub repository for:
 - An umbrella issue that provides a context for the previously created
   individual issues.
 
-[analyses]: ../../analyses/
+[analyses]: ../../analyses
 [criteria]: ./criteria.md
 [project maturity level]: https://www.cncf.io/project-metrics
 [templates]: ./templates/index.md
