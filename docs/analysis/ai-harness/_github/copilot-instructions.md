@@ -344,7 +344,7 @@ In writing the issues, Copilot should use the following guidelines:
   Replace the default with the project's own documentation issue format when it
   has one.
 - Each issue should take about two to four hours for a technical writer or
-  engineer, with project context to complete.
+  engineer with project context to complete.
 - Small tasks can be consolidated into one issue where appropriate. Avoid
   flooding the project: aim for far fewer issues than recommendations.
 - Umbrella issues group three to ten related issues. Follow the
