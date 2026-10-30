@@ -6,7 +6,7 @@ applyTo: **/*.md
 # CNCF TechDocs Analysis Copilot Instructions
 
 The CNCF TechDocs analysis focuses on evaluating the quality and completeness of
-project documentation. Until now human reviewers have been performing this
+project documentation. Human reviewers will continue performing this
 analysis, and still will be. The goal of this project is to provide a harness
 and workflow for writers to use for having Copilot to provide responses. As
 such, predefined prompts are provided to guide Copilot in providing analysis
