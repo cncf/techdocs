@@ -12,7 +12,7 @@ prompts for each step, issue templates, and input and output folders. The
 harness is project-agnostic; everything project-specific lives in one section of
 `copilot-instructions.md`.
 
-The harness was built for the KubeVirt analysis
+The harness was initially built for the KubeVirt analysis
 ([cncf/techdocs#343](https://github.com/cncf/techdocs/issues/343)). A worked
 example of its project-specific section is in `_github/examples/kubevirt/`.
 
