@@ -450,7 +450,7 @@ It deletes issue files from a previous run, writes the numbered standalone issue
 files, and writes `.github/output/issues-coverage.md` with the issue table, the
 recommendation-to-issue mapping, priority adjustments, and counts.
 
-To re-run after coaching Copilot on scope, run the command again and add the
+To re-run after coaching Copilot on scope, run the command again and describe the
 corrections in the same message, for example
 `run /create-issues — split the "Getting started" issue into two`.
 
