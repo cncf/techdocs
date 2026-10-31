@@ -18,13 +18,14 @@ example of its project-specific section is in `_github/examples/kubevirt/`.
 
 ## How it fits the analysis
 
-The harness is a human-driven, AI-assisted analysis tool. A writer still owns the analysis. The harness has Copilot answer the
-[criteria](../criteria.md) questions, draft comments and ratings, propose
-recommendations, rank them, and write issue files, all in a consistent format
-that maps onto the [analysis template](../templates/analysis.md). The writer
-reviews and edits every output before it goes into `analysis.md` or the
-project's issue tracker. For how Copilot should write, see "Analysis responses
-style" in `_github/copilot-instructions.md`.
+The harness is a human-driven, AI-assisted analysis tool. A writer still owns
+the analysis. The harness has Copilot answer the [criteria](../criteria.md)
+questions, draft comments and ratings, propose recommendations, rank them, and
+write issue files, all in a consistent format that maps onto the
+[analysis template](../templates/analysis.md). The writer reviews and edits
+every output before it goes into `analysis.md` or the project's issue tracker.
+For how Copilot should write, see "Analysis responses style" in
+`_github/copilot-instructions.md`.
 
 ## Validated toolchain
 

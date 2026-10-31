@@ -6,12 +6,11 @@ applyTo: **/*.md
 # CNCF TechDocs Analysis Copilot Instructions
 
 The CNCF TechDocs analysis focuses on evaluating the quality and completeness of
-project documentation. Human reviewers will continue performing this
-analysis, and still will be. The goal of this project is to provide a harness
-and workflow for writers to use with Copilot. As
-such, predefined prompts are provided to guide Copilot in providing analysis
-responses. Predefined prompts should also alleviate inconsistencies resulting
-from having the writer craft the prompt.
+project documentation. Human reviewers will continue performing this analysis,
+and still will be. The goal of this project is to provide a harness and workflow
+for writers to use with Copilot. As such, predefined prompts are provided to
+guide Copilot in providing analysis responses. Predefined prompts should also
+alleviate inconsistencies resulting from having the writer craft the prompt.
 
 Given that the analysis writers are providing their own analysis, the Copilot
 analysis must be written as to require minimal editing by the writers, such as
@@ -351,8 +350,6 @@ In writing the issues, Copilot should use the following guidelines:
   `.github/templates/umbrella-issue.md` template: an `## Umbrella Issue`
   overview and a `## Sub-issues` list that links to the sub-issue files. The
   umbrella does not contain the sub-issue content.
-- Copilot is at liberty to create subheadings in the issue files as needed to
-  organize the content effectively, but keeps the template's top-level headings.
 - Everything outside the front matter is the issue description and must be
   GitHub-flavored Markdown.
 - Ensure the following front matter (metadata) is included at the top of each
@@ -450,8 +447,8 @@ It deletes issue files from a previous run, writes the numbered standalone issue
 files, and writes `.github/output/issues-coverage.md` with the issue table, the
 recommendation-to-issue mapping, priority adjustments, and counts.
 
-To re-run after coaching Copilot on scope, run the command again and describe the
-corrections in the same message, for example
+To re-run after coaching Copilot on scope, run the command again and describe
+the corrections in the same message, for example
 `run /create-issues — split the "Getting started" issue into two`.
 
 ### Create umbrella issues AI prompt
