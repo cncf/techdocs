@@ -20,6 +20,7 @@ ignorePaths:
 #     ignoreRegExpList:
 #       - CodeBlock
 words:
+  - afdocs
   - backstore
   - Chalin
   - CLOTributor
@@ -30,6 +31,8 @@ words:
   - github
   - keda
   - knative
+  - llms
+  - llmstxt
   - kedacore
   - krator
   - krook
