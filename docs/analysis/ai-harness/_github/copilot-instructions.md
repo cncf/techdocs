@@ -7,10 +7,10 @@ applyTo: **/*.md
 
 The CNCF TechDocs analysis focuses on evaluating the quality and completeness of
 project documentation. Human reviewers will continue performing this analysis.
-The goal of this project is to provide a harness and workflow
-for writers to use with Copilot. As such, predefined prompts are provided to
-guide Copilot in providing analysis responses. Predefined prompts should also
-alleviate inconsistencies resulting from having the writer craft the prompt.
+The goal of this project is to provide a harness and workflow for writers to use
+with Copilot. As such, predefined prompts are provided to guide Copilot in
+providing analysis responses. Predefined prompts should also alleviate
+inconsistencies resulting from having the writer craft the prompt.
 
 Given that the analysis writers are providing their own analysis, the Copilot
 analysis must be written as to require minimal editing by the writers, such as
