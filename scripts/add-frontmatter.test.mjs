@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { describe, it } from 'node:test';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -81,5 +81,30 @@ describe('add-frontmatter.mjs', () => {
       'no-heading.md': original,
     });
     assert.equal(results['no-heading.md'], original);
+  });
+
+  it('skips a file whose frontmatter title already matches the heading', async () => {
+    const original = '---\ntitle: My Page\n---\n\n# My Page\n\nBody text.\n';
+    const results = await runOnFixture({
+      'matching-title.md': original,
+    });
+    assert.equal(results['matching-title.md'], original);
+  });
+
+  it('reports an error instead of crashing when a file cannot be read', async () => {
+    const dir = await mkdtemp(path.join(tmpdir(), 'add-frontmatter-'));
+    try {
+      // Create a directory named "broken.md" so readFile() rejects with
+      // EISDIR, exercising processFile()'s catch block.
+      await mkdir(path.join(dir, 'docs', 'broken.md'), { recursive: true });
+
+      const result = spawnSync('node', [scriptPath], {
+        cwd: dir,
+        encoding: 'utf8',
+      });
+      assert.match(result.stderr, /Error processing docs\/broken\.md/);
+    } finally {
+      await rm(dir, { recursive: true, force: true });
+    }
   });
 });
