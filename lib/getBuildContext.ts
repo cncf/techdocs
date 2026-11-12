@@ -1,5 +1,5 @@
-import getCurrentBranch from './getCurrentBranch';
-import getGitHubRepoUrl from './getGitHubRepoUrl';
+import getCurrentBranch from './getCurrentBranch.ts';
+import getGitHubRepoUrl from './getGitHubRepoUrl.ts';
 
 export interface BuildContext {
   buildEnv: string;
