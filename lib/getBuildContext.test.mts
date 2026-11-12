@@ -88,4 +88,31 @@ describe('getBuildContext', () => {
       `${ctx.assetRepo}/blob/${ctx.assetBranch}`,
     );
   });
+
+  it('uses the main/repo-arg fallbacks in deploy-preview mode when branch/remote cannot be resolved', async () => {
+    process.env.BUILD_ENV = 'dev';
+    process.env.DEPLOY_PRIME_URL =
+      'https://deploy-preview-1--example.netlify.app';
+    // Outside any git repository, getCurrentBranch() and getGitHubRepoUrl()
+    // both deterministically return undefined, forcing the '|| main' and
+    // '|| repo' fallback branches rather than leaving them to chance.
+    const { mkdtemp } = await import('node:fs/promises');
+    const { tmpdir } = await import('node:os');
+    const path = await import('node:path');
+    const dir = await mkdtemp(path.join(tmpdir(), 'getBuildContext-'));
+    const originalCwd = process.cwd();
+    process.chdir(dir);
+    try {
+      const ctx = getBuildContext('https://github.com/cncf/techdocs');
+      assert.strictEqual(ctx.isDeployPreview, true);
+      assert.strictEqual(ctx.assetBranch, 'main');
+      assert.strictEqual(ctx.assetRepo, 'https://github.com/cncf/techdocs');
+      assert.strictEqual(
+        ctx.assetBaseUrl,
+        'https://github.com/cncf/techdocs/blob/main',
+      );
+    } finally {
+      process.chdir(originalCwd);
+    }
+  });
 });
