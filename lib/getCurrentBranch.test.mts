@@ -63,4 +63,52 @@ describe('getCurrentBranch', () => {
     // call must not throw and must not read any of the env vars above.
     assert.doesNotThrow(() => getCurrentBranch());
   });
+
+  it('returns undefined instead of throwing when `git branch --show-current` fails', async () => {
+    clearEnv();
+    const { mkdtemp } = await import('node:fs/promises');
+    const { tmpdir } = await import('node:os');
+    const path = await import('node:path');
+    const dir = await mkdtemp(path.join(tmpdir(), 'getCurrentBranch-'));
+    const originalCwd = process.cwd();
+    // Outside any git repository, `git branch --show-current` exits non-zero
+    // and execSync throws; the function must swallow that and return
+    // undefined rather than propagating the error.
+    process.chdir(dir);
+    try {
+      assert.strictEqual(getCurrentBranch(), undefined);
+    } finally {
+      process.chdir(originalCwd);
+    }
+  });
+
+  it('returns undefined instead of an empty string when HEAD is detached', async () => {
+    clearEnv();
+    const { mkdtemp } = await import('node:fs/promises');
+    const { tmpdir } = await import('node:os');
+    const path = await import('node:path');
+    const { execFileSync } = await import('node:child_process');
+    const dir = await mkdtemp(path.join(tmpdir(), 'getCurrentBranch-'));
+    const originalCwd = process.cwd();
+    // In detached-HEAD state, `git branch --show-current` succeeds but
+    // prints an empty string; the function must normalize that falsy result
+    // to undefined rather than returning ''.
+    execFileSync('git', ['init', '-q'], { cwd: dir });
+    execFileSync('git', ['config', 'user.email', 'test@example.com'], {
+      cwd: dir,
+    });
+    execFileSync('git', ['config', 'user.name', 'Test'], { cwd: dir });
+    await import('node:fs/promises').then(({ writeFile }) =>
+      writeFile(path.join(dir, 'f.txt'), 'hi'),
+    );
+    execFileSync('git', ['add', '.'], { cwd: dir });
+    execFileSync('git', ['commit', '-q', '-m', 'init'], { cwd: dir });
+    execFileSync('git', ['checkout', '-q', '--detach', 'HEAD'], { cwd: dir });
+    process.chdir(dir);
+    try {
+      assert.strictEqual(getCurrentBranch(), undefined);
+    } finally {
+      process.chdir(originalCwd);
+    }
+  });
 });
