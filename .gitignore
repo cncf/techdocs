@@ -11,3 +11,6 @@ dist
 node_modules/
 
 /tmp
+
+# c8 coverage output (npm run test:coverage)
+coverage/
