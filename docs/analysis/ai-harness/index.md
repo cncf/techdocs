@@ -136,7 +136,6 @@ to real numbers in `.github/input/` for the `issues-list.md` step.
 
 ```text
 ai-harness/
-  README.md                    # Short pointer to this file
   index.md                     # This file
   _github/                     # Copy to <project repo>/.github/
     copilot-instructions.md    # Run-time instructions; fill in "Current Repository"
