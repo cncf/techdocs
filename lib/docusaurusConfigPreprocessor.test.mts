@@ -29,6 +29,15 @@ test('markdown.preprocessor (root README.md import)', async (t) => {
     );
   });
 
+  await t.test('strips .md from reference-style link definitions', () => {
+    const result = preprocessor({
+      fileContent: 'See [docs][1].\n\n[1]: /docs/foo.md',
+      filePath: importedReadmePath,
+    });
+
+    assert.equal(result, 'See [docs][1].\n\n[1]: /docs/foo/');
+  });
+
   await t.test('leaves non-README imports untouched', () => {
     const fileContent = 'See [docs](/docs/foo.md).';
     const result = preprocessor({
