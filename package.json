@@ -36,7 +36,7 @@
     "precheck:links": "npm run build",
     "seq": "bash -c 'for cmd in \"$@\"; do npm run $cmd || exit 1; done' - ",
     "serve": "npm run docus:serve",
-    "test:coverage": "c8 --reporter=text --reporter=lcov --check-coverage --lines 99 --statements 99 --branches 97 --functions 100 npm run test:unit",
+    "test:coverage": "c8 --reporter=text --reporter=lcov --exclude 'docusaurus.config.ts' --exclude 'lib/testHelpers/**' --check-coverage --lines 99 --statements 99 --branches 97 --functions 100 npm run test:unit",
     "test:unit": "node --experimental-strip-types --experimental-test-module-mocks --test 'lib/**/*.test.mts' 'scripts/**/*.test.mjs'",
     "test": "npm run check && npm run test:unit",
     "typecheck": "tsc",
