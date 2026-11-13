@@ -13,4 +13,3 @@ In short:
   the predefined prompts, and the issue templates.
 - `_github/examples/kubevirt/` is a worked example of the project-specific
   section of `copilot-instructions.md`.
-
