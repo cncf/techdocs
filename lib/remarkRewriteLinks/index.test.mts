@@ -91,6 +91,20 @@ describe('rewriteHref (cross-plugin links)', () => {
       '/analyses/2024/keda/analysis/',
     );
   });
+
+  it('strips .mdx from site-absolute /docs/.../foo.mdx', () => {
+    assert.strictEqual(
+      rewriteHref('/docs/analysis/criteria.mdx', 'analyses/2025/x/a.md'),
+      '/docs/analysis/criteria/',
+    );
+  });
+
+  it('adds a trailing slash to a bare (../)+docs link with no sub-path', () => {
+    assert.strictEqual(
+      rewriteHref('../docs', 'analyses/2025/x/a.md'),
+      '/docs/',
+    );
+  });
 });
 
 describe('rewriteHref (asset links)', () => {
@@ -151,6 +165,10 @@ describe('rewriteHref (passthroughs)', () => {
       '../../../docs/images/gapi_info_arch.png',
     );
   });
+
+  it('leaves a bare query/fragment href (empty path) untouched', () => {
+    assert.strictEqual(rewriteHref('?view=raw', source), '?view=raw');
+  });
 });
 
 describe('remarkRewriteLinks (full pipeline)', () => {
@@ -193,5 +211,15 @@ describe('remarkRewriteLinks (full pipeline)', () => {
     const md = '[x](../../docs/analysis/criteria.md "a title")';
     const out = await run(md, 'analyses/2023/backstage/x.md');
     assert.strictEqual(out, '[x](/docs/analysis/criteria/ "a title")');
+  });
+
+  it('runs without a VFile path, falling back to an empty sourceFile', async () => {
+    const file = new VFile({ value: '[x](../../docs/analysis/criteria.md)' });
+    const out = await unified()
+      .use(remarkParse)
+      .use(remarkRewriteLinks, { assetBaseUrl: ASSET_BASE })
+      .use(remarkStringify)
+      .process(file);
+    assert.strictEqual(String(out).trim(), '[x](/docs/analysis/criteria/)');
   });
 });
