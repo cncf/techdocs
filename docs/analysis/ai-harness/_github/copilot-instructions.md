@@ -1,8 +1,3 @@
----
-title: Copilot instructions for CNCF TechDocs analysis
-applyTo: **/*.md
----
-
 # CNCF TechDocs Analysis Copilot Instructions
 
 The CNCF TechDocs analysis focuses on evaluating the quality and completeness of
