@@ -12,7 +12,19 @@ import { resolve } from './testHelpers/resolveExtensionlessTs.mjs';
 registerHooks({ resolve });
 
 const { default: config } = await import('../docusaurus.config.ts');
+// `Config['markdown']` is typed as `DeepPartial<MarkdownConfig> | undefined`
+// (only title/url/baseUrl/future are required on Config), so TS can't infer
+// that this repo's docusaurus.config.ts always defines markdown.preprocessor
+// without these runtime assertions narrowing the type first.
+assert.ok(
+  config.markdown,
+  'docusaurus.config.ts must define a markdown config',
+);
 const { preprocessor } = config.markdown;
+assert.ok(
+  preprocessor,
+  'docusaurus.config.ts must define markdown.preprocessor',
+);
 const importedReadmePath = path.resolve('README.md');
 
 test('markdown.preprocessor (root README.md import)', async (t) => {
