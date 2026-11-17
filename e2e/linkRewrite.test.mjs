@@ -25,7 +25,11 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
     outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-build-'));
     execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
       cwd: repoRoot,
-      env: { ...process.env, BUILD_ENV: 'dev' },
+      // Clear DEPLOY_PRIME_URL so an inherited value from the invoking
+      // environment can't flip getBuildContext into deploy-preview mode,
+      // which would make the csv assertion target the current branch
+      // instead of the asserted `blob/main` canonical URL.
+      env: { ...process.env, BUILD_ENV: 'dev', DEPLOY_PRIME_URL: '' },
       stdio: 'inherit',
     });
   });
