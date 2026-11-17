@@ -83,6 +83,10 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
     } = readConfigUrls({
       BUILD_ENV: 'deploy-preview',
       DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+      // Pinned explicitly (rather than left to fall back to this checkout's
+      // real branch/remote) so the test is deterministic on any contributor
+      // checkout, not only a detached-HEAD CI checkout of 'main'.
+      GITHUB_REF_NAME: 'main',
     });
 
     assert.equal(
@@ -91,9 +95,6 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
     );
     assert.equal(docsEditUrl, undefined);
     assert.equal(analysesEditUrl, undefined);
-    // No branch/repo override is given here, so getCurrentBranch()/
-    // getGitHubRepoUrl() fall back to this checkout's real 'main' branch
-    // and 'cncf/techdocs' origin remote.
     assert.equal(assetBaseUrl, 'https://github.com/cncf/techdocs/blob/main');
   });
 
