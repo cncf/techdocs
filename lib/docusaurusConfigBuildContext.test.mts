@@ -63,6 +63,10 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
     } = readConfigUrls({
       BUILD_ENV: 'production',
       DEPLOY_PRIME_URL: '',
+      // Pinned (rather than left to fall back to this checkout's real
+      // `origin` remote) so the test is deterministic on a fork clone, not
+      // only a checkout whose `origin` is cncf/techdocs.
+      REPOSITORY_URL: 'https://github.com/cncf/techdocs.git',
     });
 
     assert.equal(siteUrl, 'https://cncf-techdocs.netlify.app');
@@ -85,8 +89,9 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
       DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
       // Pinned explicitly (rather than left to fall back to this checkout's
       // real branch/remote) so the test is deterministic on any contributor
-      // checkout, not only a detached-HEAD CI checkout of 'main'.
+      // checkout, not only a detached-HEAD CI checkout of cncf/techdocs' 'main'.
       GITHUB_REF_NAME: 'main',
+      REPOSITORY_URL: 'https://github.com/cncf/techdocs.git',
     });
 
     assert.equal(
@@ -112,6 +117,11 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
       BUILD_ENV: 'deploy-preview',
       DEPLOY_PRIME_URL: 'https://deploy-preview-42--cncf-techdocs.netlify.app',
       GITHUB_REF_NAME: 'my-feature-branch',
+      // Pinned (see the production/deploy-preview cases above) so this
+      // assertion of a hardcoded cncf/techdocs URL stays deterministic on a
+      // fork clone, whose real `origin` remote getGitHubRepoUrl() would
+      // otherwise fall back to.
+      REPOSITORY_URL: 'https://github.com/cncf/techdocs.git',
     });
 
     assert.equal(
