@@ -85,12 +85,14 @@ GitHub Pages.
 
 - Project website: [hivecommons.dev](https://hivecommons.dev)
 - Documentation site: [docs.hivecommons.dev](https://docs.hivecommons.dev)
-- Website/doc repository: <https://github.com/hivecommons/docs>
+- Website/doc repository:
+  [https://github.com/hivecommons/docs](https://github.com/hivecommons/docs)
 - Website source repository:
-  <https://github.com/hivecommons/hivecommons.github.io> (source for
-  hivecommons.dev)
-- <https://github.com/hivecommons/hive> - `src/docs/` only (in-repo reference
-  docs: api-reference, design, env-vars, agent-configuration)
+  [https://github.com/hivecommons/hivecommons.github.io](https://github.com/hivecommons/hivecommons.github.io)
+  (source for hivecommons.dev)
+- [https://github.com/hivecommons/hive](https://github.com/hivecommons/hive) -
+  `src/docs/` only (in-repo reference docs: api-reference, design, env-vars,
+  agent-configuration)
 
 #### Out of scope
 
