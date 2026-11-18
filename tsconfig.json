@@ -3,7 +3,11 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "ignoreDeprecations": "6.0",
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    // @docusaurus/tsconfig still sets baseUrl, which TS 5.5+ (we're on ~7.0.2)
+    // rejects with TS5102 ("Option 'baseUrl' has been removed"). Overriding it
+    // to null here strips the inherited value from the merged config.
+    "baseUrl": null
   },
   "exclude": [".docusaurus", "build"]
 }

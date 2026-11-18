@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { describe, it } from 'node:test';
+import { describe, it, mock } from 'node:test';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -83,6 +83,19 @@ describe('add-frontmatter.mjs', () => {
     assert.equal(results['no-heading.md'], original);
   });
 
+  it('inserts a title into frontmatter that is present but empty', async () => {
+    // Exercises the falsy branch of the `frontmatterWithoutTitle ? ... : ''`
+    // ternary: frontmatter exists (so the title-less remainder is rebuilt
+    // from it) but has no other keys to preserve alongside the new title.
+    const results = await runOnFixture({
+      'empty-frontmatter.md': '---\n\n---\n\n# My Page\n\nBody text.\n',
+    });
+    assert.match(
+      results['empty-frontmatter.md'],
+      /^---\ntitle: My Page\n---\n\n# My Page\n\nBody text\.\n$/,
+    );
+  });
+
   it('skips a file whose frontmatter title already matches the heading', async () => {
     const original = '---\ntitle: My Page\n---\n\n# My Page\n\nBody text.\n';
     const results = await runOnFixture({
@@ -105,6 +118,36 @@ describe('add-frontmatter.mjs', () => {
       assert.match(result.stderr, /Error processing docs\/broken\.md/);
     } finally {
       await rm(dir, { recursive: true, force: true });
+    }
+  });
+
+  it("reports an error instead of crashing when the glob dependency's call itself rejects", async () => {
+    // Exercises main()'s own top-level try/catch (distinct from
+    // processFile()'s per-file catch above), which is otherwise unreachable
+    // because glob() never rejects for missing/unreadable directories -
+    // mock the dependency to force the failure path deterministically.
+    const globMock = mock.module('glob', {
+      exports: {
+        glob: async () => {
+          throw new Error('boom');
+        },
+      },
+    });
+    const exitMock = mock.method(process, 'exit', () => {});
+    const errorMock = mock.method(console, 'error', () => {});
+    try {
+      // Cache-bust so re-running this test file re-executes main().
+      await import(`${url.pathToFileURL(scriptPath).href}?t=${Date.now()}`);
+      // main()'s async body needs a tick to run past its awaited glob() call.
+      await new Promise((resolve) => setTimeout(resolve, 0));
+
+      assert.deepEqual(exitMock.mock.calls[0]?.arguments, [1]);
+      assert.equal(errorMock.mock.calls[0]?.arguments[0], 'Error:');
+      assert.match(errorMock.mock.calls[0]?.arguments[1]?.message, /boom/);
+    } finally {
+      globMock.restore();
+      exitMock.mock.restore();
+      errorMock.mock.restore();
     }
   });
 });
