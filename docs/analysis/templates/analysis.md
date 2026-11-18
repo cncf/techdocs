@@ -196,14 +196,16 @@ Documentation rubric.
 The overall structure (pages/subpages/sections/subsections) of the project
 documentation. We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#information-architecture-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#information-architecture-questions).
 
 #### New user content
 
 New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
 
 #### Content maintainability & site mechanics
 
@@ -212,8 +214,8 @@ become large maintenance burdens, particularly if you don’t plan for them.
 
 We evaluate on the following:
 
-
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
 
 #### Content creation processes
 
@@ -222,7 +224,8 @@ requires the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#content-creation-processes-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#content-creation-processes-questions).
 
 #### Inclusive language
 
@@ -230,7 +233,8 @@ Creating inclusive project communities is a key goal for all CNCF projects.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#inclusive-language-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#inclusive-language-questions).
 
 ### Recommendations
 
@@ -287,13 +291,15 @@ to reach you.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#communication-methods-documented-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#communication-methods-documented-questions).
 
 #### Beginner friendly issue backlog
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
 
 #### New contributor getting started content
 
@@ -303,7 +309,8 @@ in easily?
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
 
 #### Project governance documentation
 
@@ -311,7 +318,8 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#project-governance-documentation-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#project-governance-documentation-questions).
 
 ### Recommendations
 
@@ -339,16 +347,15 @@ _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be [_developing_][criteria] professional-quality documentation alongside
 the project code.
 
-| Criterion                                   | [Rating (1-5)] |
-| ------------------------------------------- | -------------- |
-| Core website requirements                   | [rating (1-5)] |
-| Usability, accessibility, and design        | [rating (1-5)] |
-| Branding and design                         | [rating (1-5)] |
-| Case studies and social proof               | [rating (1-5)] |
-| SEO, Analytics, and site-local search       | [rating (1-5)] |
-| Maintenance planning                        | [rating (1-5)] |
-| AI agent readiness                          | [rating (1-5)] |
-
+| Criterion                             | [Rating (1-5)] |
+| ------------------------------------- | -------------- |
+| Core website requirements             | [rating (1-5)] |
+| Usability, accessibility, and design  | [rating (1-5)] |
+| Branding and design                   | [rating (1-5)] |
+| Case studies and social proof         | [rating (1-5)] |
+| SEO, Analytics, and site-local search | [rating (1-5)] |
+| Maintenance planning                  | [rating (1-5)] |
+| AI agent readiness                    | [rating (1-5)] |
 
 ### Comments
 
@@ -367,7 +374,9 @@ and documentation infrastructure rubric.
 
 #### Core website requirements
 
-The core, or minimal, set of requirements include a check that source files for _all website pages_ should reside in a single repo. Among other problems, keeping source files in two places:
+The core, or minimal, set of requirements include a check that source files for
+_all website pages_ should reside in a single repo. Among other problems,
+keeping source files in two places:
 
 - confuses contributors
 - requires you to keep two sources in sync
@@ -375,17 +384,18 @@ The core, or minimal, set of requirements include a check that source files for 
 - makes it more complicated to generate the documentation from source files
 
 Ideally, all website files should be in the **website repo** itself.
-Alternatively, files should be brought into the website repo via [git
-submodules][git-submodules].
+Alternatively, files should be brought into the website repo via git submodules
 
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
 
-The core requirements also include criteria for maturity levels but are applicable to all maturity levels.
+The core requirements also include criteria for maturity levels but are
+applicable to all maturity levels.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#core-website-requirements-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#core-website-requirements-questions).
 
 #### Usability, accessibility and devices
 
@@ -394,23 +404,26 @@ least 10-20% of the time. Planning for this early in the website's design will
 be much less effort than retrofitting a desktop-first design.
 
 See also:
-- [mobile-first](
-  https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
-  
-- [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) measures for the website. 
+
+- [mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
+
+- [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+  measures for the website.
 
 It is up to each project to set their own guidelines.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
 
 #### Branding and design
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#core-website-requirements-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#core-website-requirements-questions).
 
 #### Case studies and social proof
 
@@ -421,7 +434,8 @@ We evaluate on the following:
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
 
 #### SEO, Analytics and site-local search
 
@@ -431,7 +445,8 @@ while optional, can offer the readers a site-focused search results.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
 
 #### Maintenance planning
 
@@ -440,7 +455,8 @@ project maintainers aren’t web developers.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#maintenance-planning-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#maintenance-planning-questions).
 
 #### AI Agent Readiness
 
@@ -455,7 +471,8 @@ portable, and easier to maintain.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#ai-agent-readiness-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#ai-agent-readiness-questions).
 
 #### Other
 
@@ -497,10 +514,8 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-[criteria]: ../criteria.md
-[implementation]: ./implementation.md
-[issues list]: ./issues-list.md
-[project-website]: ?fixme-target-dne=_PROJECT-WEBSITE_
-[Rating (1-5)]: #rating-values
-[rfc-spec]: https://www.rfc-editor.org/rfc/rfc2119
-[website guidelines]: ../../website-guidelines-checklist.md
+[criteria](../criteria.md) [implementation](../implementation.md)
+[issues list](../issues-list.md) [project-website] TODO:
+?fixme-target-dne=_PROJECT-WEBSITE_ [Rating (1-5)](#rating-values)
+[rfc-spec](https://www.rfc-editor.org/rfc/rfc2119)
+[website guidelines](../../website-guidelines-checklist.md)

@@ -253,7 +253,9 @@ Alternatively, files should be brought into the website repo via
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
 
-The other requirements are derived from the maturity level requirements but are applicable to all projects. See [Appendix A](#appendix-a---maturity-levels) for more information and context.
+The other requirements are derived from the maturity level requirements but are
+applicable to all projects. See [Appendix A](#appendix-a---maturity-levels) for
+more information and context.
 
 #### Core website requirements questions
 
@@ -428,7 +430,7 @@ portable, and easier to maintain.
 Requirements are cumulative through project maturity levels so, for example,
 incubating projects must satisfy the requirements for sandbox projects.
 
-#### Sandbox
+### Sandbox
 
 - Are a majority of the [Website guidelines](../website-guidelines-checklist.md)
   satisfied?
@@ -454,19 +456,19 @@ incubating projects must satisfy the requirements for sandbox projects.
     CNCF TechDocs anytime, including answers to individual questions or a
     documentation workshop.
 
-#### Incubating
+### Incubating
 
-- Are all [Website guidelines][] satisfied?
-- Has a [Docs assessment][] or reassessment been requested through the CNCF
-  [service desk][]?
+- Are all Website guidelines satisfied?
+- Has a Docs assessment or reassessment been requested through the CNCF service
+  desk?
 - Does **project documentation** meet these standards?:
   - Stakeholders / personas are identified and their core needs (in terms of
     docs) documented.
   - Hosted directly on the website.
-  - The [single-source requirement][] met.
+  - The single-source requirement met.
   - Doc is comprehensive, addressing most stakeholder needs.
 
-#### Graduated
+### Graduated
 
-- Are follow-through actions from the [Docs assessment][] complete?
+- Are follow-through actions from the Docs assessment complete?
 - Does **project documentation** fully addresses the needs of stakeholders?
