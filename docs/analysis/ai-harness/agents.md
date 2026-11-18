@@ -1,4 +1,4 @@
-# CNCF TechDocs analysis harness: agent instructions
+# AI Assisted Analysis Harness: agent instructions
 
 > **Prototype.** This file is a proposal to replace the `_github/` template
 > folder (Copilot instructions, criteria files, prompt engines, prompt wrappers,
