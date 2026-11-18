@@ -1,11 +1,11 @@
 ---
 title: Hive Commons Documentation Analysis
 created: 2026-11-17
-modified: 2026-11-17
+modified: 2026-11-18
 toc_max_heading_level: 4
 author:
-  AI-assisted draft (pilot), reviewed by a CNCF TechDocs technical writer
-  (@clubanderson)
+  AI-assisted draft (pilot). Not yet reviewed by a human; (@clubanderson) is a
+  Hive Commons project maintainer, not a CNCF TechDocs technical writer.
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
@@ -26,12 +26,14 @@ efforts.
 ### Pilot of the AI-assisted assessment workflow
 
 This analysis is a **pilot run** of the `cncf-techdocs-assessment` AI-assisted
-assessment workflow model (see [cncf/techdocs#395][issue-395]). Hive Commons is
-not yet a CNCF project under assessment in the ordinary sense; the project
-volunteered to be the first end-to-end test case for the intake → accept → draft
-→ verify → stakeholder review → approval loop, before the workflow is run
-against CNCF member projects. Hive Commons' own maintainers are also the authors
-of the workflow model being piloted (see
+assessment workflow model (see [cncf/techdocs#395][issue-395]). This is a pilot
+of the assessment *process*, not a question of CNCF membership: Hive Commons is
+already a CNCF Sandbox project (see [cncf/sandbox#545][sandbox-545]), and the
+project volunteered to be the first end-to-end test case for the intake →
+accept → draft → verify → stakeholder review → approval loop, before the
+workflow is run against other CNCF projects undergoing a documentation
+assessment. Hive Commons' own maintainers are also the authors of the workflow
+model being piloted (see
 `hivecommons/hive:src/docs/workflows/techdocs-assessment.md`), so this
 assessment doubles as dogfooding of their own tooling.
 
@@ -197,13 +199,16 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   thin: each has only 1-4 pages on the docs site, effectively stub-level next to
   Hive's ~100+ pages. These are out of scope for ratings here but affect the
   overall impression of the Hive Commons docs site as a whole.
-- **Is there a complete API reference?** Yes, and unusually thorough for a
-  Sandbox project - 16 hand-maintained pages covering ~650 routes. The page
-  itself documents its own maintenance risk: "There is no generator; update this
-  page in the same change that adds or renames a route," and explicitly excludes
-  request/response schemas ("see the handler source"). This is a process gap
-  worth flagging (see Recommendations) even though the content that does exist
-  is comprehensive.
+- **Is there a complete API reference?** Partially. 16 hand-maintained pages
+  cover ~650 routes, but the page itself frames this as a "pragmatic v1
+  endpoint index," not a complete reference, and explicitly excludes
+  request/response schemas ("see the handler source"). A separate, machine-
+  generated OpenAPI spec (`dashboard/openapi.json`) is linked from the
+  documentation map alongside the hand-written index, so the combined
+  reference may cover payloads more completely than the hand-written index
+  alone suggests; this combination was not independently assessed for
+  completeness. The hand-written index's lack of a generator and drift risk
+  remains a process gap worth flagging (see Recommendations).
 - **Are there CLI references?** Partial. `hivectl.md` and `crux-cli.md` exist
   under "Operations," but there is no discrete, top-level "CLI reference" nav
   entry comparable to the API reference section.
@@ -231,16 +236,20 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   source (`hivecommons/hive:src/docs/getting-started.md`, titled "Zero to
   Automation: Getting Started with Hive"), and a direct "Install" link from the
   project README.
-- **Is installation documented step-by-step?** Yes, with four distinct,
-  dedicated install paths documented in a table in the README: Docker Compose,
-  Podman, Kubernetes, and a hosted option. Each has its own guide
+- **Is installation documented step-by-step?** Partially. Four distinct,
+  dedicated install paths are documented in a table in the README: Docker
+  Compose, Podman, Kubernetes, and a hosted option, each with its own guide
   (`quickstart-docker-compose.md`, `quickstart-podman.md`,
-  `kubernetes-deployment.md`, `hosted-hub.md`).
+  `kubernetes-deployment.md`, `hosted-hub.md`). However, the Docker Compose
+  quickstart places several required configuration changes inside comments
+  within one large shell command block (lines 25-53) rather than as separate
+  numbered steps, which does not fully meet the criteria's "numbered
+  step-by-step instructions" bar; a Flatcar assessment flagged the same
+  pattern.
 - **Are different types of installation documented if necessary?** Yes, Docker
   Compose, Podman (explicitly described as "a parallel supported choice, not an
-  experiment"), Kubernetes, and hosted are all first-class options, which is
-  more install-path coverage than most Sandbox or even Incubating projects
-  provide.
+  experiment"), Kubernetes, and hosted are all first-class options, giving
+  broader install-path coverage than a single-path project would have.
 - **Are multiple OSes documented?** Yes, the Docker Compose quickstart states
   explicit support for "Linux, macOS, or Windows (WSL2) host on amd64 or arm64."
 - **Is there guidance for what to read next?** Yes, the getting-started page
@@ -256,11 +265,16 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   `/api/search` route backing in-site search. The marketing site
   (`hivecommons.dev`) has no search, but it is a single static page, so this is
   appropriate for its scope.
-- **Is the project planning for localization?** Already implemented, not just
-  planned: the docs site supports 10 locales via `next-intl` (en, hi, ja, es,
-  de, fr, it, Simplified Chinese, Traditional Chinese, pt), with message files
-  per locale and a language-switcher component. This is well beyond what most
-  Sandbox or Incubating projects have in place.
+- **Is the project planning for localization?** A localization framework is
+  installed, but published documentation is not actually served in 10
+  languages. The docs site uses `next-intl` with message files for 10 locales
+  (en, hi, ja, es, de, fr, it, Simplified Chinese, Traditional Chinese, pt) and
+  a language-switcher component, but a routing rule
+  (`src/proxy.ts`) strips locale prefixes from any `/docs` URL and redirects to
+  the unprefixed, English page (confirmed: visiting
+  `/fr/docs/hive/overview/getting-started` redirects to the English page), and
+  the documentation layout hardcodes `lang="en"`. Credit the infrastructure
+  investment, but the documentation itself is English-only today.
 - **Is there a documented method for versioning content?** Yes, a version
   registry (`src/config/versions.ts`) tracks Hive's `latest` (v5, rendered on
   the docs site), `v6` ("Edge," links externally to GitHub for unreleased docs),
@@ -293,13 +307,20 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   social convention rather than a CI-enforced check (no evidence of an automated
   route/doc-drift check for the API reference, unlike the docs sync drift-check
   which is CI-enforced).
-- **Who reviews and approves documentation PRs?** Clearly documented via
-  `CODEOWNERS`/`OWNERS` files in each repo. `hivecommons/docs` is single-owner
-  (`@clubanderson`), which is a bus-factor risk worth noting.
-  `hivecommons.github.io` has two owners (`@clubanderson`, `@kellyaa`).
-- **Does the website have a clear owner/maintainer?** Yes, documented, though
-  concentrated in one or two individuals for the docs/website repos specifically
-  (as distinct from the `hive` repo's five-person maintainer roster).
+- **Who reviews and approves documentation PRs?** Documented via
+  `CODEOWNERS`/`OWNERS` files in each repo, but these are not fully reconciled
+  with `hivecommons/.project/maintainers.yaml`, the source of truth for
+  project ownership and maintainership (five maintainers: `@clubanderson`,
+  `@hanthor`, `@Danathar`, `@nicholasjackson`, `@kellyaa`).
+  `hivecommons/docs`'s `OWNERS` names only `@clubanderson` (a bus-factor risk),
+  while its `CODEOWNERS` also names `@KPRoche`, who is not on the maintainer
+  roster and whose entry is currently rejected by GitHub's CODEOWNERS
+  validator. `hivecommons.github.io` has two owners (`@clubanderson`,
+  `@kellyaa`), both of whom are on the roster.
+- **Does the website have a clear owner/maintainer?** Documented, though
+  concentrated in one or two individuals for the docs/website repos
+  specifically, and those files need reconciling against the official
+  five-person maintainer roster (see above and Recommendations).
 
 #### Inclusive language
 
@@ -332,9 +353,10 @@ clean bill across the whole corpus.
 
 #### New user content
 
-No significant gaps identified; this area already exceeds the Sandbox and
-Incubating bar. Continue the current practice of maintaining install guides per
-deployment target as new ones are added.
+Install-path coverage is strong, but the Docker Compose quickstart's
+required configuration changes are embedded as comments inside one large
+command block rather than presented as numbered steps. Revise that section to
+use numbered, step-by-step instructions before treating this area as gap-free.
 
 #### Content maintainability & site mechanics
 
@@ -350,10 +372,13 @@ deployment target as new ones are added.
 
 #### Content creation processes
 
-- Consider adding a second owner/approver to `hivecommons/docs`'s
-  `CODEOWNERS`/`OWNERS` (currently `@clubanderson` alone) to reduce
-  single-point-of-failure risk for docs-site reviews, matching the two-owner
-  pattern already used in `hivecommons.github.io`.
+- Reconcile `hivecommons/docs`'s `CODEOWNERS` and `OWNERS` with
+  `hivecommons/.project/maintainers.yaml` (the source of truth for project
+  ownership): either replace `@KPRoche` (not on the maintainer roster, and
+  currently rejected by GitHub's CODEOWNERS validator) with a maintainer from
+  the roster, or add `@KPRoche` to the roster if that reflects an intended
+  docs-review responsibility. Either way, align the files with the official
+  roster rather than simply adding a second approver.
 - Add a lightweight CI check (even a `grep`-based one) that fails if
   `src/docs/api-reference.md`'s stated route-count or page list has not been
   touched in the same PR that modifies route registrations, to make the existing
@@ -474,14 +499,19 @@ No significant gaps identified.
 | Criterion                                   | Rating (1-5)                   |
 | ------------------------------------------- | ------------------------------ |
 | Single-source for all files                 | 4 - Meets or exceeds standards |
-| Meets min website req. (for maturity level) | 5 - Exemplary                  |
-| Usability, accessibility, and design        | 3 - Meets standards            |
+| Meets min website req. (for maturity level) | 3 - Meets standards (see note) |
+| Usability, accessibility, and design        | Not assessed                   |
 | Branding and design                         | 4 - Meets or exceeds standards |
-| Case studies & social proof                 | 2 - Needs improvement          |
-| SEO, Analytics, and site-local search       | 4 - Meets or exceeds standards |
+| Case studies & social proof                 | 4 - Meets or exceeds standards |
+| SEO, Analytics, and site-local search       | 3 - Meets standards            |
 | Maintenance planning                        | 4 - Meets or exceeds standards |
-| AI agent readiness                          | 4 - Meets or exceeds standards |
+| AI agent readiness                          | 3 - Meets standards            |
 | HTTPS access & HTTP redirect                | 5 - Exemplary                  |
+
+Note: "Meets min website req." reflects a confirmed Sandbox
+rudimentary-documentation bar; the licensing, community, copyright,
+trademark, and branding guidelines were not independently assessed (see
+Minimal website requirements comments below).
 
 ### Comments
 
@@ -495,32 +525,42 @@ but the project has implemented exactly the kind of "clearly documented strategy
 for managing mirrored files" the criteria call for as the alternative to true
 single-sourcing: automated prebuild sync scripts, a 30-second fetch timeout with
 fail-the-build-if- unreachable semantics (so stale content is never silently
-deployed), a CI drift-detection test suite, and an explicit "do not edit
-`docs/content/` directly, edit the canonical source" convention stated in both
-`README.md` and `CONTRIBUTING.md`. This is a materially stronger answer to the
-single-source requirement than most CNCF projects provide, even though it is not
-literally single-sourced.
+deployed), and a CI drift-detection test suite. The project describes this
+mirroring strategy explicitly in both `README.md` and `CONTRIBUTING.md` ("do
+not edit `docs/content/` directly, edit the canonical source"), which is a
+documented answer to the single-source requirement's alternative, even though
+it is not literally single-sourced.
 
 #### Minimal website requirements
 
-For a Sandbox project, the bar is "rudimentary project documentation, or a
-placeholder." Hive Commons' documentation is already deep enough to clear the
-_Incubating_ bar in most respects (hosted directly, single-source strategy
-addressed as above, broad stakeholder coverage via the layered
-Overview/Getting-started/Reference structure) - well beyond what Sandbox
-requires.
+For a Sandbox project, the project-documentation bar is "rudimentary project
+documentation, or a placeholder," which Hive Commons' documentation clearly
+exceeds (hosted directly, single-source strategy addressed as above, broad
+stakeholder coverage via the layered Overview/Getting-started/Reference
+structure). However, the Sandbox bar also requires a majority of the
+[Website guidelines][website-guidelines] to be satisfied - mandatory standards
+on open source status, IP licensing, corporate sponsorship, copyright and
+trademark, and community standards. This pass did not independently assess
+those guidelines item by item, so this criterion reflects the confirmed
+documentation depth only; the licensing/community/copyright/trademark/branding
+guidelines should be assessed explicitly (see Recommendations) before any
+claim of Incubating-level website-requirement coverage.
+
+[website-guidelines]: https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
 
 #### Usability, accessibility and devices
 
-Not independently browser-tested as part of this pass (see Scope note in the
-accompanying research). The docs site uses Tailwind CSS 4 (a
-responsive-by-default utility framework); the marketing site's hand-written CSS
-includes `prefers-color-scheme` media queries, suggesting attention to adaptive
-rendering, but neither a live mobile-viewport check nor a formal accessibility
-audit (contrast ratios, screen-reader pass, keyboard-only navigation) was
-performed. Rated "meets standards" provisionally; a follow-up manual or
+Not assessed. No scan was performed or supplied for this assessment, and
+neither a live mobile-viewport check nor a formal accessibility audit
+(contrast ratios, screen-reader pass, keyboard-only navigation) was
+performed. The docs site uses Tailwind CSS 4 (a responsive-by-default utility
+framework) and the marketing site's hand-written CSS includes
+`prefers-color-scheme` media queries, but these indicate attention to
+adaptive rendering, not confirmed keyboard usability, contrast, screen-reader
+usability, or mobile navigation. This criterion should be marked "not
+assessed" rather than given a provisional pass; a follow-up manual or
 automated (e.g. axe-core/Lighthouse) accessibility pass is recommended before
-this criterion can be rated with confidence.
+it can be rated with confidence.
 
 #### Branding and design
 
@@ -533,30 +573,38 @@ third-party CDN, which is a good practice for both performance and privacy.
 
 #### Case studies and social proof
 
-This is the weakest area found in the website assessment. No user testimonials,
-logo wall of adopters, or dedicated case-studies page was identified in the
-research pass; the marketing site's `sitemap.xml` lists only two URLs (`/` and
-`/stories/`), and the `/stories/` page's content was not independently verified
-as populated. An "Adopters" section is listed in `llms.txt`, which suggests the
-project is tracking adopters somewhere, but this has not obviously surfaced as a
-human-readable case-studies or testimonial page on the main site. Given this is
-appropriate - and arguably expected - for a project that reached CNCF Sandbox
-status in the same month this assessment was requested (October 2026), this is
-flagged as an area to revisit at the next maturity-level review rather than an
-urgent gap today.
+This area was assessed too negatively in an earlier draft of this analysis,
+which rated it "Needs improvement" without inspecting the homepage and
+`/stories/` content. The [homepage](https://hivecommons.dev/) has an "Adopted
+by" logo strip (KubeStellar Console, tunaos.org, Project Bluefin, Frostyard,
+Open Horizon, Open Horizon Services, and an individual adopter), linking to
+`ADOPTERS.md` for detail. The `/stories/` page is populated, including a
+first-person contributor testimonial with supporting GitHub links. An
+"Adopters" section is also listed in `llms.txt`. The main gap is
+discoverability rather than absence of content: there is no dedicated,
+prominently linked case-studies page distinct from `/stories/`, and the
+homepage's "Adopted by" strip and the stories page are not obviously
+cross-linked from the top-level navigation. Treat this as a navigation/
+cross-linking improvement rather than a content-creation gap.
 
 #### SEO, Analytics and site-local search
 
 Both `robots.txt` files are fully open to crawlers and point to generated
-sitemaps. Google Analytics (GA4) is wired into the docs site via a dedicated
-component with a custom-event helper; no analytics tag was found on the
-marketing site, whose Content-Security-Policy (`default-src 'none'` with
-SHA-256-pinned inline scripts) would not currently permit a third-party
-analytics script to load even if one were added without a CSP update - worth
-noting if analytics on the marketing site is ever desired. Both sites carry
-extensive Open Graph/Twitter-card meta tags and `schema.org` JSON-LD structured
-data for the whole project family. In-site search works via a dedicated API
-route on the docs site.
+sitemaps. A `GoogleAnalytics` component with a custom-event helper exists in
+the docs codebase, but it is mounted only in the separate locale layout
+(`src/app/[locale]/layout.tsx`), not in the documentation layout
+(`src/app/docs/layout.tsx`) that actually renders `/docs` pages; a fetch of
+production documentation HTML contained none of the component's
+measurement-ID, `ga4-init`, or `googletagmanager` markers. GA4 should be
+recorded as implemented but not currently active on documentation pages,
+distinct from analytics on the rest of the docs site. No analytics tag was
+found on the marketing site, whose Content-Security-Policy (`default-src
+'none'` with SHA-256-pinned inline scripts) would not currently permit a
+third-party analytics script to load even if one were added without a CSP
+update - worth noting if analytics on the marketing site is ever desired.
+Both sites carry extensive Open Graph/Twitter-card meta tags and `schema.org`
+JSON-LD structured data for the whole project family. In-site search works
+via a dedicated API route on the docs site.
 
 #### Maintenance planning
 
@@ -565,25 +613,47 @@ Tailwind, Netlify) for the docs site and a deliberately minimal hand-written
 static site for the marketing page, each sized appropriately to its complexity.
 CI gates (build, link-check, markdown lint, TypeScript/lint, Vitest with
 coverage, DCO) and a changelog-fragment system suggest active, disciplined
-maintenance. The one bus-factor risk noted above (`@clubanderson` as sole code
-owner of `hivecommons/docs`) is the main maintenance-planning concern
-identified.
+maintenance. The code-ownership drift noted above (`hivecommons/docs`'s
+`OWNERS`/`CODEOWNERS` not reconciled with the official maintainer roster) is
+the main maintenance-planning concern identified.
 
 #### AI Agent Readiness
 
-This is a standout area. `llms.txt` exists on both domains
-(`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`), each kept in
-sync with on-page content by dedicated, CI-enforced tests rather than hand
-maintenance - directly satisfying the criterion's "stay in sync with the
-published site" bar. Both sites are confirmed server-rendered/static, with
-substantive content present in the raw HTML payload rather than behind
-client-side hydration - confirmed by a raw (non-JS) fetch of both a marketing
-page and a docs page. `robots.txt` imposes no crawler restrictions, and no CDN
-bot-challenge gating was observed. The one gap: there is no per-page Markdown
-mirror (appending `.md` to a docs URL returns 404), so `llms.txt` is currently
-the only machine-readable summary surface rather than a full parallel Markdown
-version of every page, which the criteria call out as a distinct, additional
-practice from `llms.txt` itself.
+This area has real strengths but was rated too positively in an earlier draft
+of this analysis, which called it "a standout area." `llms.txt` exists on both
+domains (`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`), and
+the docs site's copy is kept in sync with on-page content by dedicated,
+CI-enforced tests rather than hand maintenance. Both sites are confirmed
+server-rendered/static, with substantive content present in the raw HTML
+payload rather than behind client-side hydration - confirmed by a raw (non-JS)
+fetch of both a marketing page and a docs page. `robots.txt` imposes no
+crawler restrictions, and no CDN bot-challenge gating was observed.
+
+Several gaps go beyond "the one gap" claimed in an earlier draft:
+
+- The docs `llms.txt` does not include the blockquoted summary the
+  llmstxt.org structure (and the criteria) call for; it goes straight from the
+  H1 title to H2 sections.
+- Its links point to HTML pages on `docs.hivecommons.dev`, not Markdown
+  versions of those pages.
+- There is no per-page Markdown mirror: appending `.md` to a sampled
+  getting-started URL returned 404, confirmed directly.
+- The `llms.txt` community-link test (`scripts/llms-txt-community.test.ts`)
+  only asserts that a fixed list of URLs is present in the file; it does not
+  check content parity or synchronization with the published pages those
+  links point to, so "kept in sync... by dedicated, CI-enforced tests" should
+  not be read as full content-parity verification.
+
+The CLOMonitor Agent-readiness score cited during review
+(https://clomonitor.io/projects/cncf/hive#hive_agent_readiness) scans the
+hosted Hive application (`hive.hivecommons.dev`), not the documentation site
+in scope for this assessment (`docs.hivecommons.dev`); it should not be used
+as evidence for this criterion. An independent `afdocs check`-style scorecard
+run against `docs.hivecommons.dev` during review reported an overall score of
+70/100 (C), with Content Discoverability at 59/100 (F), consistent with the
+gaps above. This criterion should be rated against `docs.hivecommons.dev`
+directly rather than carried over from a CLOMonitor score scoped to a
+different domain.
 
 #### HTTPS access & HTTP redirect
 
@@ -605,13 +675,17 @@ project family grows.
 
 #### Minimal website requirements
 
-None; already well above the Sandbox bar.
+- Assess the project against the full
+  [Website guidelines checklist][website-guidelines] (licensing, community,
+  copyright, trademark, branding) item by item, as the KubeVirt assessment
+  does, rather than inferring majority satisfaction from documentation depth
+  alone.
 
 #### Usability, accessibility and devices
 
 - Run an automated accessibility scan (axe-core or Lighthouse) against both
   sites and record the results (even informally, as a comment on the tracking
-  issue for this analysis) so this criterion can move from "provisional" to a
+  issue for this analysis) so this criterion can move from "not assessed" to a
   confirmed rating at the next review.
 
 #### Branding and design
@@ -620,27 +694,40 @@ No recommendation; this area is strong.
 
 #### Case studies and social proof
 
-- Populate (or link to) a case-studies/adopters page from the main site
-  navigation, reusing the adopter list already maintained for `llms.txt` as a
-  starting point, once early adopters are willing to be named publicly.
+- Add a prominent, top-level navigation link (or a dedicated case-studies
+  page) that surfaces the existing "Adopted by" logo strip and `/stories/`
+  testimonial content together, since the material already exists but is not
+  easy to discover from the main navigation.
 
 #### SEO, Analytics and site-local search
 
+- Mount the existing `GoogleAnalytics` component in the documentation layout
+  (`src/app/docs/layout.tsx`), not only the locale layout, so page views on
+  `/docs` pages are actually collected rather than only on non-documentation
+  pages.
 - If analytics on the marketing site is ever desired, update its CSP
   `script-src` allowlist (SHA-256 pin or nonce) rather than relaxing it broadly,
   to preserve the current strict CSP posture.
 
 #### Maintenance planning
 
-- Add a second code owner to `hivecommons/docs` (see Content creation processes
-  recommendation above) to reduce single-maintainer risk.
+- Reconcile `hivecommons/docs`'s code-ownership files against the maintainer
+  roster (see Content creation processes recommendation above) to resolve the
+  rejected `@KPRoche` CODEOWNERS entry and the single-owner `OWNERS` file.
 
 #### AI Agent Readiness
 
-- Consider adding a per-page Markdown mirror (for example, serving the
-  underlying MDX/Markdown source at the same path with `.md` appended) for the
-  docs site, complementing the already-strong `llms.txt` implementation, per the
-  full AI Agent Readiness criterion.
+- Add the llmstxt.org-required blockquoted summary to `llms.txt` on the docs
+  site.
+- Point `llms.txt` links at Markdown versions of pages rather than HTML pages,
+  once a Markdown mirror exists.
+- Add a per-page Markdown mirror (for example, serving the underlying
+  MDX/Markdown source at the same path with `.md` appended) for the docs site.
+- Extend the `llms.txt` community-link test to check content parity with the
+  linked pages, not just URL presence.
+- Re-run the CLOMonitor / `afdocs check` assessment against
+  `docs.hivecommons.dev` specifically, since the current CLOMonitor score is
+  scoped to `hive.hivecommons.dev`.
 
 #### References and notes
 
@@ -658,4 +745,5 @@ The numeric rating values used in this document are as follows:
 [implementation]: ./implementation.md
 [issues list]: ./issues.md
 [issue-395]: https://github.com/cncf/techdocs/issues/395
+[sandbox-545]: https://github.com/cncf/sandbox/issues/545
 [project-website]: https://hivecommons.dev

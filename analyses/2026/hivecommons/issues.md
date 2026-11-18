@@ -25,10 +25,12 @@ The CNCF Tech Docs effort is tracked in the CNCF Tech Docs repo:
 
 ## Umbrella issue
 
-> To be filed in `hivecommons/hive` (or the org-level `.github` repo, per
-> maintainer preference) once this analysis is reviewed and accepted by project
-> maintainers. Link each sub-issue below to it with a Markdown checkbox once
-> filed.
+> To be filed in `hivecommons/docs` (the primary implementation destination
+> named in [cncf/techdocs#395][issue-395], alongside `hivecommons.github.io`)
+> once this analysis is reviewed and accepted by project maintainers. Link
+> each sub-issue below to it with a Markdown checkbox once filed.
+
+[issue-395]: https://github.com/cncf/techdocs/issues/395
 
 ## Issues
 
@@ -67,16 +69,22 @@ has to infer this indirectly via cross-references in `hive`'s own
 - [ ] `https://github.com/hivecommons/docs/issues/NNN`
 - [ ] `https://github.com/hivecommons/hivecommons.github.io/issues/NNN`
 
-### Issue: Add a second code owner to hivecommons/docs
+### Issue: Reconcile hivecommons/docs code ownership with the maintainer roster
 
-Audience: Project maintainers (bus-factor/maintenance planning).
+Audience: Project maintainers (bus-factor/maintenance planning, governance
+accuracy).
 
 Type: Process.
 
-`hivecommons/docs`'s `CODEOWNERS` and `OWNERS` files currently list only
-`@clubanderson` as approver/reviewer, unlike `hivecommons.github.io`, which
-already has two. Add a second approver to reduce single-maintainer risk for
-docs-site reviews.
+`hivecommons/docs`'s `OWNERS` file lists only `@clubanderson` as
+approver/reviewer, while its `CODEOWNERS` also lists `@KPRoche`, who is not on
+the project's maintainer roster (`hivecommons/.project/maintainers.yaml`:
+`@clubanderson`, `@hanthor`, `@Danathar`, `@nicholasjackson`, `@kellyaa`) and
+whose entry is currently rejected by GitHub's CODEOWNERS validator. Reconcile
+these files with the official roster: either add a roster maintainer as a
+second `docs` approver/reviewer, or add `@KPRoche` to the roster if they hold
+an intended docs-review responsibility, so the code-ownership files and the
+governance record agree.
 
 - [ ] `https://github.com/hivecommons/docs/issues/NNN`
 
@@ -87,11 +95,14 @@ Audience: Hive maintainers and contributors adding/renaming API routes.
 Type: Process / Reference accuracy.
 
 `src/docs/api-reference.md` states "There is no generator; update this page in
-the same change that adds or renames a route," but nothing currently enforces
-this. Add a lightweight CI check (even a simple diff/grep-based script comparing
-route registrations in the Go source against the documented route list in
-`src/docs/api-reference/*`) that flags a PR touching routes without a
-corresponding doc update.
+the same change that adds or renames a route," and no automated enforcement
+of that convention was found within `src/docs/` (the scope of this
+assessment); this analysis did not review `hivecommons/hive`'s source or
+tests outside `src/docs/`, so it cannot assert that no enforcement exists
+anywhere in the repository. Add (or confirm) a lightweight CI check (even a
+simple diff/grep-based script comparing route registrations in the Go source
+against the documented route list in `src/docs/api-reference/*`) that flags a
+PR touching routes without a corresponding doc update.
 
 Suggested changes:
 
@@ -116,12 +127,13 @@ Audience: Project maintainers; informs a future documentation re-assessment.
 
 Type: Task.
 
-Neither `hivecommons.dev` nor `docs.hivecommons.dev` has had a recorded,
-automated accessibility scan. Run axe-core or Lighthouse against both sites and
-record the results (for example, as a comment on the tracking issue for this
-analysis, or a short doc under `src/docs/`), so the "Usability, accessibility
-and devices" rating in [analysis.md](analysis.md) can move from provisional to
-confirmed at the next review.
+No scan was performed or supplied for this assessment to confirm the
+"Usability, accessibility and devices" rating in [analysis.md](analysis.md)
+for either `hivecommons.dev` or `docs.hivecommons.dev`. Run axe-core or
+Lighthouse against both sites and record the results (for example, as a
+comment on the tracking issue for this analysis, or a short doc under
+`src/docs/`), so that rating can move from "not assessed" to confirmed at the
+next review.
 
 - [ ] `https://github.com/hivecommons/hivecommons.github.io/issues/NNN`
 

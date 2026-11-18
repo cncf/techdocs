@@ -45,17 +45,31 @@ restructuring program. The top-level actions are:
 
 ### Issue 1
 
-File the issues from the accompanying [issues list](issues.md) directly in
-`hivecommons/docs` (and one in `hivecommons.github.io`), each pre-labeled
-`good first issue` and `documentation`, so first-time contributors have
-something to claim immediately.
+File the small, self-contained documentation issues from the accompanying
+[issues list](issues.md) - the CLI reference landing page and the
+governance-pointer additions - directly in `hivecommons/docs` (and
+`hivecommons.github.io` for the governance pointer there), each pre-labeled
+`good first issue` and `documentation`, with prerequisites and completion
+criteria stated per issue, so first-time contributors have something they can
+claim immediately without maintainer-level context.
+
+Do not apply `good first issue` to the code-ownership reconciliation or the
+API route/doc drift-check issues (see High-level action 2): choosing approvers
+is a maintainer decision, and extracting Go routes and wiring a CI check
+requires specialist context that a first-time contributor is unlikely to have.
+The accessibility-scan issue (High-level action 3) can carry the label if it
+states the scanning tool and a clear pass/fail recording step as its
+completion criteria.
 
 ## High-level action 2: Reduce bus-factor and content-drift risk
 
 ### Issue 1
 
-Add a second approver/reviewer to `hivecommons/docs`'s `CODEOWNERS` and `OWNERS`
-files, mirroring the two-owner pattern already used in `hivecommons.github.io`.
+Reconcile `hivecommons/docs`'s `CODEOWNERS` and `OWNERS` files against
+`hivecommons/.project/maintainers.yaml` (the source of truth for project
+maintainership): add a roster maintainer as a second approver/reviewer, or add
+the currently non-roster `@KPRoche` to the roster if they hold an intended
+docs-review responsibility.
 
 ### Issue 2
 
