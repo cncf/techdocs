@@ -36,9 +36,10 @@ reword a criterion in one file without making the same change in the other.
 ## Introduction
 
 This document is an analysis of the effectiveness and completeness of the
-[_PROJECT_][project-website] open source software (OSS) project's documentation
-and website. It is funded by the CNCF Foundation as part of its overall effort
-to incubate, grow, and graduate open source cloud native software projects.
+[_PROJECT_]`(PROJECT-WEBSITE)` open source software (OSS) project's
+documentation and website. It is funded by the CNCF Foundation as part of its
+overall effort to incubate, grow, and graduate open source cloud native software
+projects.
 
 According to CNCF best practices guidelines, effective documentation is a
 prerequisite for program graduation. The documentation analysis is the first
@@ -155,22 +156,23 @@ and suggests possible improvements. In most cases there is more than one way to
 do things. Few recommendations here are meant to be prescriptive. Rather, the
 recommended implementations represent the reviewers' experience with how to
 apply documentation best practices. In other words, borrowing terminology from
-the lexicon of [RFCs][rfc-spec], the changes described here should be understood
-as "recommended" or "should" at the strongest, and "optional" or "may" in many
-cases. Any "must" or "required" actions are clearly denoted as such, and pertain
-to legal requirements such as copyright and licensing issues.
+the lexicon of [RFCs](https://www.rfc-editor.org/rfc/rfc2119), the changes
+described here should be understood as "recommended" or "should" at the
+strongest, and "optional" or "may" in many cases. Any "must" or "required"
+actions are clearly denoted as such, and pertain to legal requirements such as
+copyright and licensing issues.
 
 ## Project documentation
 
 > Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
+have [_very high_] criteria standards for documentation.
 
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
+should be [_developing_] criteria professional-quality documentation alongside
 the project code.
 
 | Criterion                  | [Rating (1-5)] |
@@ -257,12 +259,12 @@ We evaluate on the following:
 > Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
+have [_very high_] criteria standards for documentation.
 
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
+should be [_developing_] criteria professional-quality documentation alongside
 the project code.
 
 | Criterion                                 | [Rating (1-5)] |
@@ -340,12 +342,12 @@ We evaluate on the following:
 > Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_][criteria] standards for documentation.
+have [_very high_] criteria standards for documentation.
 
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_][criteria] professional-quality documentation alongside
+should be [_developing_] criteria professional-quality documentation alongside
 the project code.
 
 | Criterion                             | [Rating (1-5)] |
