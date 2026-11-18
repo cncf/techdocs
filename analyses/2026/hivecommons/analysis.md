@@ -89,7 +89,7 @@ GitHub Pages.
 - Website source repository:
   <https://github.com/hivecommons/hivecommons.github.io> (source for
   hivecommons.dev)
-- <https://github.com/hivecommons/hive> — `src/docs/` only (in-repo reference
+- <https://github.com/hivecommons/hive> - `src/docs/` only (in-repo reference
   docs: api-reference, design, env-vars, agent-configuration)
 
 #### Out of scope
@@ -161,7 +161,7 @@ level: the
 for Sandbox only ask for "rudimentary project documentation, or a placeholder or
 substitute," with a note that it is acceptable to link out to documentation that
 hasn't yet been integrated into a website. Hive Commons' documentation
-substantially **exceeds** the Sandbox bar across the board — the ratings below
+substantially **exceeds** the Sandbox bar across the board - the ratings below
 should be read in that light; most gaps noted here are standard-setting for an
 _Incubating_-level bar, not deficiencies relative to Sandbox.
 
@@ -184,7 +184,7 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
 - **Is there high level conceptual content?** Yes. The docs site separates an
   "Overview" section (introduction, architecture, roadmap, landscape) from
   "Getting started"/"Operations" (instructional) and "Reference" (ADRs,
-  env-vars, API reference, design docs) for the flagship Hive project — a
+  env-vars, API reference, design docs) for the flagship Hive project - a
   Diátaxis-like split.
 - **Is every product feature documented?** For Hive, apparently yes at a deep
   level: the docs nav includes Dashboard, Integrating with Hive, Security, and a
@@ -196,7 +196,7 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   Hive's ~100+ pages. These are out of scope for ratings here but affect the
   overall impression of the Hive Commons docs site as a whole.
 - **Is there a complete API reference?** Yes, and unusually thorough for a
-  Sandbox project — 16 hand-maintained pages covering ~650 routes. The page
+  Sandbox project - 16 hand-maintained pages covering ~650 routes. The page
   itself documents its own maintenance risk: "There is no generator; update this
   page in the same change that adds or renames a route," and explicitly excludes
   request/response schemas ("see the handler source"). This is a process gap
@@ -210,7 +210,7 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   which helps prevent staleness from leaking into user-facing pages. However,
   roughly half of the ~30 in-repo design docs are not synced to the live nav
   (`page-map.ts`), so there is in-repo content a reader browsing the repository
-  will find that is absent from the published site — not necessarily a problem
+  will find that is absent from the published site - not necessarily a problem
   (the README frames design docs as developer-facing), but worth a one-line note
   on the design-docs index.
 - **Does the documentation separate conceptual, instructional, and reference
@@ -234,14 +234,14 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   Podman, Kubernetes, and a hosted option. Each has its own guide
   (`quickstart-docker-compose.md`, `quickstart-podman.md`,
   `kubernetes-deployment.md`, `hosted-hub.md`).
-- **Are different types of installation documented if necessary?** Yes — Docker
+- **Are different types of installation documented if necessary?** Yes, Docker
   Compose, Podman (explicitly described as "a parallel supported choice, not an
   experiment"), Kubernetes, and hosted are all first-class options, which is
   more install-path coverage than most Sandbox or even Incubating projects
   provide.
-- **Are multiple OSes documented?** Yes — the Docker Compose quickstart states
+- **Are multiple OSes documented?** Yes, the Docker Compose quickstart states
   explicit support for "Linux, macOS, or Windows (WSL2) host on amd64 or arm64."
-- **Is there guidance for what to read next?** Yes — the getting-started page
+- **Is there guidance for what to read next?** Yes, the getting-started page
   links onward to the documentation map, architecture doc, agent-configuration
   reference, the ACMM policy matrix, and a named "first-session route."
 - **Is there easily copy-pastable sample code?** Yes, confirmed in the Docker
@@ -250,7 +250,7 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
 
 #### Content maintainability & site mechanics
 
-- **Is the documentation searchable?** Yes — the docs site has a working
+- **Is the documentation searchable?** Yes, the docs site has a working
   `/api/search` route backing in-site search. The marketing site
   (`hivecommons.dev`) has no search, but it is a single static page, so this is
   appropriate for its scope.
@@ -259,12 +259,12 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   de, fr, it, Simplified Chinese, Traditional Chinese, pt), with message files
   per locale and a language-switcher component. This is well beyond what most
   Sandbox or Incubating projects have in place.
-- **Is there a documented method for versioning content?** Yes — a version
+- **Is there a documented method for versioning content?** Yes, a version
   registry (`src/config/versions.ts`) tracks Hive's `latest` (v5, rendered on
   the docs site), `v6` ("Edge," links externally to GitHub for unreleased docs),
   and `v4` ("Frozen," links externally). Sibling projects are pinned to `main`
   only (unversioned), which is reasonable given their current scope.
-- **Is release-specific information documented in release notes?** Yes — a
+- **Is release-specific information documented in release notes?** Yes, a
   `CHANGELOG.md` plus a fragment-based changelog system (`changelog.d/*.md`)
   with CI enforcement of fragment format.
 - **Is the documentation free of duplicate or near-duplicate content?** The
@@ -276,7 +276,7 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   drift-detection test suite and a documented "do not edit the synced copy"
   convention. This is a well-engineered answer to the single-source requirement
   (see the Website section below) rather than an uncontrolled duplication
-  problem — but it does mean the _canonical_ source for most content a visitor
+  problem - but it does mean the _canonical_ source for most content a visitor
   reads on `docs.hivecommons.dev` is not actually in the `hivecommons/docs`
   repository, which is worth stating plainly for anyone auditing "where do I
   file a docs bug."
@@ -317,7 +317,7 @@ clean bill across the whole corpus.
 
 - Add a short top-level "CLI reference" nav entry/landing page that links
   `hivectl.md` and `crux-cli.md` together, rather than leaving them scattered
-  under "Operations" with no single entry point — a quick win for
+  under "Operations" with no single entry point - a quick win for
   discoverability.
 - Consider an automated check (even a simple CI script that diffs route
   registrations in the Go source against `api-reference.md`'s route list) to
@@ -325,7 +325,7 @@ clean bill across the whole corpus.
   has no generator today.
 - Add a one-line note to `src/docs/design/README.md` (or the design-docs index)
   explaining that only a subset of design docs is synced to the public docs
-  site, with a pointer to the repository for the rest — this avoids surprising a
+  site, with a pointer to the repository for the rest - this avoids surprising a
   reader who finds a design doc in-repo that is not on the website.
 
 #### New user content
@@ -339,7 +339,7 @@ deployment target as new ones are added.
 - Document, in one visible place (for example the top of
   `hivecommons/docs:README.md`'s "How content is sourced" section, which already
   covers most of this), a short FAQ answer to "I found a typo/bug on
-  docs.hivecommons.dev — where do I file it?" pointing readers to the correct
+  docs.hivecommons.dev - where do I file it?" pointing readers to the correct
   upstream repository based on which project's page they were reading. The sync
   architecture is well documented for contributors who already know to look in
   `README.md`/`CONTRIBUTING.md`, but a documentation bug reporter coming in from
@@ -428,11 +428,11 @@ governance section (agents are tooling, not members; every agent has a named
 responsible human; every merge needs a human approver). A documented consistency
 mechanism requires the maintainer roster recorded in three different places (org
 `MAINTAINERS.md`, root `OWNERS`, and `hive`'s `GOVERNANCE.md`) to agree,
-explicitly calling drift between them "a governance bug" — and the three were
+explicitly calling drift between them "a governance bug" - and the three were
 found consistent at assessment time. `hivecommons/docs` and
 `hivecommons.github.io` do not duplicate a `GOVERNANCE.md` of their own; they
 defer to the org-level document, which is a reasonable choice for support
-repositories but is not stated explicitly in either repo's own README — a reader
+repositories but is not stated explicitly in either repo's own README - a reader
 starting from one of those two repos has to infer that governance applies
 org-wide.
 
@@ -445,7 +445,7 @@ No recommendation; this area is already exemplary.
 #### Beginner friendly issue backlog
 
 - Seed a small number (3-5) of `good first issue`-labeled documentation tasks in
-  `hivecommons/docs` and `hivecommons.github.io` — the [issues list][]
+  `hivecommons/docs` and `hivecommons.github.io` - the [issues list][]
   accompanying this analysis is a ready-made source for this, since
   documentation-improvement issues are, by nature, well suited to a
   newcomer-friendly backlog.
@@ -505,7 +505,7 @@ For a Sandbox project, the bar is "rudimentary project documentation, or a
 placeholder." Hive Commons' documentation is already deep enough to clear the
 _Incubating_ bar in most respects (hosted directly, single-source strategy
 addressed as above, broad stakeholder coverage via the layered
-Overview/Getting-started/Reference structure) — well beyond what Sandbox
+Overview/Getting-started/Reference structure) - well beyond what Sandbox
 requires.
 
 #### Usability, accessibility and devices
@@ -538,7 +538,7 @@ research pass; the marketing site's `sitemap.xml` lists only two URLs (`/` and
 as populated. An "Adopters" section is listed in `llms.txt`, which suggests the
 project is tracking adopters somewhere, but this has not obviously surfaced as a
 human-readable case-studies or testimonial page on the main site. Given this is
-appropriate — and arguably expected — for a project that reached CNCF Sandbox
+appropriate - and arguably expected - for a project that reached CNCF Sandbox
 status in the same month this assessment was requested (October 2026), this is
 flagged as an area to revisit at the next maturity-level review rather than an
 urgent gap today.
@@ -550,7 +550,7 @@ sitemaps. Google Analytics (GA4) is wired into the docs site via a dedicated
 component with a custom-event helper; no analytics tag was found on the
 marketing site, whose Content-Security-Policy (`default-src 'none'` with
 SHA-256-pinned inline scripts) would not currently permit a third-party
-analytics script to load even if one were added without a CSP update — worth
+analytics script to load even if one were added without a CSP update - worth
 noting if analytics on the marketing site is ever desired. Both sites carry
 extensive Open Graph/Twitter-card meta tags and `schema.org` JSON-LD structured
 data for the whole project family. In-site search works via a dedicated API
@@ -572,10 +572,10 @@ identified.
 This is a standout area. `llms.txt` exists on both domains
 (`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`), each kept in
 sync with on-page content by dedicated, CI-enforced tests rather than hand
-maintenance — directly satisfying the criterion's "stay in sync with the
+maintenance - directly satisfying the criterion's "stay in sync with the
 published site" bar. Both sites are confirmed server-rendered/static, with
 substantive content present in the raw HTML payload rather than behind
-client-side hydration — confirmed by a raw (non-JS) fetch of both a marketing
+client-side hydration - confirmed by a raw (non-JS) fetch of both a marketing
 page and a docs page. `robots.txt` imposes no crawler restrictions, and no CDN
 bot-challenge gating was observed. The one gap: there is no per-page Markdown
 mirror (appending `.md` to a docs URL returns 404), so `llms.txt` is currently
