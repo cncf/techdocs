@@ -17,7 +17,8 @@ This issue tracks recommended changes resulting from an analysis of the Hive
 Commons documentation requested in
 [cncf/techdocs#395](https://github.com/cncf/techdocs/issues/395). The analysis
 and supporting documents are here:
-[https://github.com/cncf/techdocs/tree/main/analyses/2026/hivecommons](https://github.com/cncf/techdocs/tree/main/analyses/2026/hivecommons).
+[https://github.com/cncf/techdocs/tree/main/analyses](https://github.com/cncf/techdocs/tree/main/analyses)
+under `2026/hivecommons`.
 
 The CNCF Tech Docs effort is tracked in the CNCF Tech Docs repo:
 [https://github.com/cncf/techdocs/issues](https://github.com/cncf/techdocs/issues).
