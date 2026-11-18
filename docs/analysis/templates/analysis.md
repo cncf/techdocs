@@ -196,39 +196,14 @@ Documentation rubric.
 The overall structure (pages/subpages/sections/subsections) of the project
 documentation. We evaluate on the following:
 
-- Is there high level conceptual/“About” content? Is the documentation feature
-  complete? (i.e., each product feature is documented)
-- Do instructions (tasks, tutorials) cover the intended purposes of all
-  user-facing features?
-- Are there any features that are documented (for example, described
-  conceptually) but are missing task documentation?
-- Is the “happy path”/most common use case documented? Does task and tutorial
-  content demonstrate atomicity and isolation of concerns? (Are tasks clearly
-  named according to user goals?)
-- If the documentation does not suffice, is there a clear escalation path for
-  users needing more help? (FAQ, Troubleshooting)
-- If the product exposes an API, is there a complete reference?
-- Is content up to date and accurate?
-- If the product builds on or incorporates another product (such as Kubernetes),
-  are there external references where needed to install and configure those
-  products?
-- Does the documentation organization and navigation need a high-level
-  restructuring?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#information-architecture-questions).
 
 #### New user content
 
 New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
-- Is “getting started” clearly labeled? (“Getting started”, “Installation”,
-  “First steps”, etc.)
-- Is installation documented step-by-step?
-- If needed, are multiple OSes documented?
-- Is there guidance for what to read next after reading the getting started
-  guide?
-- Is the new user content clearly signposted on the site’s homepage or at the
-  top of the information architecture?
-- Is there sample code or other example content that can easily be copy-pasted?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
 
 #### Content maintainability & site mechanics
 
@@ -237,10 +212,8 @@ become large maintenance burdens, particularly if you don’t plan for them.
 
 We evaluate on the following:
 
-- Is the documentation searchable?
-- Are you planning for localization/internationalization with regards to site
-  directory structure? Is a localization framework present?
-- Do you have a clearly documented method for versioning the content?
+
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
 
 #### Content creation processes
 
@@ -249,11 +222,7 @@ requires the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
-- Is there a clear path to the contributor documentation for new users who want
-  to contribute to the project?
-- Does the code release process account for documentation creation & updates?
-- Who reviews and approves documentation pull requests?
-- Does the website have a clear owner/maintainer?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#content-creation-processes-questions).
 
 #### Inclusive language
 
@@ -261,10 +230,7 @@ Creating inclusive project communities is a key goal for all CNCF projects.
 
 We evaluate on the following:
 
-- Are there any customer-facing utilities, endpoints, class names, or feature
-  names that use non-recommended words as documented by the
-  [Inclusive Naming Initiative](https://inclusivenaming.org) website?
-- Does the project use language like "simple", "easy", etc.?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#inclusive-language-questions).
 
 ### Recommendations
 
@@ -321,26 +287,13 @@ to reach you.
 
 We evaluate on the following:
 
-- Is there a Slack/Discord/Discourse/etc. community and is it prominently linked
-  from the website?
-- Is there a direct link to the GitHub organization/repository?
-- Are weekly/monthly project meetings documented? Is it clear how someone can
-  join those meetings?
-- Are mailing lists documented?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#communication-methods-documented-questions).
 
 #### Beginner friendly issue backlog
 
 We evaluate on the following:
 
-- Are docs issues triaged with respect to effort level and required expertise?
-- Is there a clearly marked way for new contributors to make code or
-  documentation contributions (i.e. a “good first issue” label)?
-- Are issues documented with:
-  - What is missing, incorrect, or improperly presented?
-  - What impact the issue has on documentation users?
-  - A suggested remedy?
-  - An estimate of the effort required to address the issue?
-- Are issues maintained for staleness?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
 
 #### New contributor getting started content
 
@@ -350,9 +303,7 @@ in easily?
 
 We evaluate on the following:
 
-- Do you have a community repository or section on the website?
-- Is there a document specifically for new contributors/the first contribution?
-- Are there prominently displayed resources for new users to find help?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
 
 #### Project governance documentation
 
@@ -360,7 +311,7 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-- Is project governance clearly documented?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#project-governance-documentation-questions).
 
 ### Recommendations
 
@@ -390,21 +341,14 @@ the project code.
 
 | Criterion                                   | [Rating (1-5)] |
 | ------------------------------------------- | -------------- |
-| Single-source for all files                 | [rating (1-5)] |
-| Meets min website req. (for maturity level) | [rating (1-5)] |
+| Core website requirements                   | [rating (1-5)] |
 | Usability, accessibility, and design        | [rating (1-5)] |
 | Branding and design                         | [rating (1-5)] |
-| Case studies & social proof                 | [rating (1-5)] |
+| Case studies and social proof               | [rating (1-5)] |
 | SEO, Analytics, and site-local search       | [rating (1-5)] |
 | Maintenance planning                        | [rating (1-5)] |
 | AI agent readiness                          | [rating (1-5)] |
-| A11y plan & implementation                  | [rating (1-5)] |
-| Mobile-first plan & impl.                   | [rating (1-5)] |
-| HTTPS access & HTTP redirect                | [rating (1-5)] |
-| Google Analytics 4 for production only      | [rating (1-5)] |
-| Indexing allowed for production server only | [rating (1-5)] |
-| Intra-site / local search                   | [rating (1-5)] |
-| Account custodians are documented           | [rating (1-5)] |
+
 
 ### Comments
 
@@ -421,10 +365,9 @@ and documentation infrastructure rubric.
 > governance, etc.) used to produce the documentation. (Criteria are copied from
 > criteria.md)
 
-#### Single-source requirement
+#### Core website requirements
 
-Source files for _all website pages_ should reside in a single repo. Among other
-problems, keeping source files in two places:
+The core, or minimal, set of requirements include a check that source files for _all website pages_ should reside in a single repo. Among other problems, keeping source files in two places:
 
 - confuses contributors
 - requires you to keep two sources in sync
@@ -438,38 +381,11 @@ submodules][git-submodules].
 If a project chooses to keep source files in multiple repos, they need a clearly
 documented strategy for managing mirrored files and new contributions.
 
-We evaluate on the following:
-
-- Does the project have a single source for its documentation? If not, is there
-  a reason?
-
-#### Minimal website requirements
-
-Listed here are the minimal website requirements for projects based on their
-[maturity level][maturity-level], either incubating or graduated. (These are the
-only two levels for which a tech docs analysis can be requested.)
-
-<!-- markdownlint-disable line-length -->
-
-| Criterion                     | Incubating Requirement                                  | Graduated Requirement                     |
-| ----------------------------- | ------------------------------------------------------- | ----------------------------------------- |
-| [Website guidelines]          | All guidelines satisfied                                | All guidelines satisfied                  |
-| **Docs analysis** (this)      | Requested through CNCF [service desk][cncf-servicedesk] | All follow-up actions addressed           |
-| **Project doc**: stakeholders | Roles identified and doc needs documented               | All stakeholder need identified           |
-| **Project doc**: hosting      | Hosted directly                                         | Hosted directly                           |
-| **Project doc**: user docs    | Comprehensive, addressing most stakeholder needs        | Fully addresses needs of key stakeholders |
-
-<!-- markdownlint-enable line-length -->
-
-[git-submodules]: https://git-scm.com/book/en/v2/Git-Tools-Submodules
-[maturity-level]:
-  https://github.com/cncf/toc/tree/main/process#ii-stages---definitions--expectations
-[cncf-servicedesk]: https://servicedesk.cncf.io
+The core requirements also include criteria for maturity levels but are applicable to all maturity levels.
 
 We evaluate on the following:
 
-- Are all of the applicable guidelines satisfied as described in the Website
-  guidelines and checklist?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#core-website-requirements-questions).
 
 #### Usability, accessibility and devices
 
@@ -477,36 +393,24 @@ Most CNCF websites are accessed from mobile and other non-desktop devices at
 least 10-20% of the time. Planning for this early in the website's design will
 be much less effort than retrofitting a desktop-first design.
 
-- Is the website usable from mobile?
-- Are doc pages readable?
-- Are all or most website features accessible from mobile -- such as the
-  top-nav, site search, and in-page table of contents?
-- Might a [mobile-first] design make sense for the project?
-
-[mobile-first]:
-  https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first
-
-Plan for suitable [accessibility][] measures for the website. For example:
-
-- Are color contrasts significant enough for color-impaired readers?
-- Are all vital website features usable using a keyboard only?
-- Does text-to-speech offer listeners a usable experience?
+See also:
+- [mobile-first](
+  https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
+  
+- [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility) measures for the website. 
 
 It is up to each project to set their own guidelines.
 
-[accessibility]: https://developer.mozilla.org/en-US/docs/Web/Accessibility
+We evaluate on the following:
+
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
 
 #### Branding and design
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
 
-We evaluate on the following:
-
-- Is there an easily recognizable brand for the project (logo + color scheme)
-  clearly identifiable?
-- Is the brand used across the website consistently?
-- Is the website’s typography clean and well-suited for reading?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#core-website-requirements-questions).
 
 #### Case studies and social proof
 
@@ -515,12 +419,9 @@ organizations using it.
 
 We evaluate on the following:
 
-- Are there case studies available for the project and are they documented on
-  the website?
-- Are there user testimonials available?
-- Is there an active project blog?
-- Are there community talks for the project and are they present on the website?
-- Is there a logo wall of users/participating organizations?
+We evaluate on the following:
+
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
 
 #### SEO, Analytics and site-local search
 
@@ -530,17 +431,7 @@ while optional, can offer the readers a site-focused search results.
 
 We evaluate on the following:
 
-- Analytics:
-  - Is analytics enabled for the production server?
-  - Is analytics disabled for all other deploys?
-  - If the project used Google Analytics, have you migrated to GA4?
-  - Can Page-not-found (404) reports easily be generated from you site
-    analytics?
-- Is site indexing supported for the production server, while disabled for
-  website previews and builds for non-default branches?
-- Is local intra-site search available from the website?
-- Are the current custodian(s) of the following accounts clearly documented:
-  analytics, Google Search Console, site-search (such as Google CSE or Algolia)
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
 
 #### Maintenance planning
 
@@ -549,11 +440,7 @@ project maintainers aren’t web developers.
 
 We evaluate on the following:
 
-- Is the website tooling well supported by the community (i.e., Hugo with the
-  Docsy theme) or commonly used by CNCF projects (our recommended tech stack?)
-- Are you actively cultivating website maintainers from within the community?
-- Are site build times reasonable?
-- Do site maintainers have adequate permissions?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#maintenance-planning-questions).
 
 #### AI Agent Readiness
 
@@ -568,25 +455,7 @@ portable, and easier to maintain.
 
 We evaluate on the following:
 
-- Does the documentation site publish an `llms.txt` file at the site or docs
-  root that follows the llmstxt.org structure (H1 title, blockquote summary, H2
-  sections of link lists)?
-- Do all links in `llms.txt` resolve, point to Markdown versions of pages, and
-  stay in sync with the published site (for example, generated at build time)?
-- Do HTML and Markdown pages include a directive near the top pointing agents to
-  `llms.txt`?
-- Is a clean Markdown version of each page served at the same URL with `.md`
-  appended or substituted, with content matching the HTML version?
-- Are pages rendered server-side or statically generated, with the main content
-  starting near the top of the response rather than behind large navigation or
-  script payloads?
-- Are pages small enough to avoid truncation in an agent's context window, and
-  do tabbed components and code fences serialize cleanly to Markdown?
-- Is the documentation publicly reachable without authentication gates or CDN
-  bot challenges, and do pages use correct HTTP status codes and standard HTTP
-  redirects?
-- Does the project monitor its CLOMonitor "Agent readiness" checks or run
-  `afdocs check` against the site, ideally in CI?
+> Author's Note: Copy and answer the [Evaluation questions](../criteria.md#ai-agent-readiness-questions).
 
 #### Other
 
