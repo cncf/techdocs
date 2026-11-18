@@ -62,3 +62,52 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
     );
   });
 });
+
+// The production build above always resolves to the `main` branch/repo
+// because `BUILD_ENV=dev` + a cleared `DEPLOY_PRIME_URL` keeps
+// getBuildContext() out of deploy-preview mode. getCurrentBranch() and
+// getGitHubRepoUrl() are 100% unit-covered in isolation
+// (lib/getCurrentBranch.test.mts, lib/getGitHubRepoUrl.test.mts), but no
+// suite asserted that docusaurus.config.ts's assetBaseUrl actually wires
+// their deploy-preview output into the rewritten .csv link during a real
+// build. This suite exercises exactly that path with deterministic env
+// vars, so a regression in that wiring fails here even when the unit
+// tests for each helper still pass in isolation.
+describe('deploy-preview build wires branch/repo detection into the rewritten .csv link', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-preview-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        BUILD_ENV: 'deploy-preview',
+        DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+        // Pin branch/repo detection to deterministic values instead of
+        // relying on the sandbox's ambient git checkout/remote state,
+        // matching the env vars getCurrentBranch()/getGitHubRepoUrl()
+        // already read for Netlify/GitHub Actions deploy-preview builds.
+        GITHUB_REF_NAME: 'e2e-preview-branch',
+        REPOSITORY_URL: 'https://github.com/example-org/example-repo',
+      },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('rewrites the .csv asset link to the preview branch and repo, not main', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /https:\/\/github\.com\/example-org\/example-repo\/blob\/e2e-preview-branch\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
+    );
+    assert.doesNotMatch(html, /\/blob\/main\//);
+  });
+});
