@@ -47,11 +47,25 @@ restructuring program. The top-level actions are:
 
 File the small, self-contained documentation issues from the accompanying
 [issues list](issues.md) - the CLI reference landing page and the
-governance-pointer additions - directly in `hivecommons/docs` (and
-`hivecommons.github.io` for the governance pointer there), each pre-labeled
-`good first issue` and `documentation`, with prerequisites and completion
-criteria stated per issue, so first-time contributors have something they can
-claim immediately without maintainer-level context.
+governance-pointer additions - each pre-labeled `good first issue` and
+`documentation`, with prerequisites and completion criteria stated per issue,
+so first-time contributors have something they can claim immediately without
+maintainer-level context.
+
+File the governance-pointer issues directly in `hivecommons/docs` and
+`hivecommons.github.io`, matching [cncf/techdocs#395][issue-395]'s primary
+destination, since each README edited is native to that repository (not
+synced content).
+
+File the CLI reference landing page in `hivecommons/hive` instead, as an
+explicit exception to issue-395's default destination: the page content itself
+(`hivectl.md` and `crux-cli.md` already live in `hivecommons/hive:src/docs/`,
+and a new landing page joining them is new canonical content) must be authored
+there per the docs README's "edit the canonical source, not the synced
+copies" rule, even though it will ultimately render on `docs.hivecommons.dev`.
+If a dedicated top-level nav entry (rather than just a new page) is wanted,
+file a small follow-up issue in `hivecommons/docs` for the `page-map.ts`
+change, since navigation structure is native to that repo and not synced.
 
 Do not apply `good first issue` to the code-ownership reconciliation or the
 API route/doc drift-check issues (see High-level action 2): choosing approvers
@@ -60,6 +74,8 @@ requires specialist context that a first-time contributor is unlikely to have.
 The accessibility-scan issue (High-level action 3) can carry the label if it
 states the scanning tool and a clear pass/fail recording step as its
 completion criteria.
+
+[issue-395]: https://github.com/cncf/techdocs/issues/395
 
 ## High-level action 2: Reduce bus-factor and content-drift risk
 

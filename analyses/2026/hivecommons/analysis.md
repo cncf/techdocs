@@ -202,13 +202,19 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
 - **Is there a complete API reference?** Partially. 16 hand-maintained pages
   cover ~650 routes, but the page itself frames this as a "pragmatic v1
   endpoint index," not a complete reference, and explicitly excludes
-  request/response schemas ("see the handler source"). A separate, machine-
-  generated OpenAPI spec (`dashboard/openapi.json`) is linked from the
-  documentation map alongside the hand-written index, so the combined
-  reference may cover payloads more completely than the hand-written index
-  alone suggests; this combination was not independently assessed for
-  completeness. The hand-written index's lack of a generator and drift risk
-  remains a process gap worth flagging (see Recommendations).
+  request/response schemas ("see the handler source"). A separate OpenAPI spec
+  (`dashboard/openapi.json`) is linked from the documentation map alongside the
+  hand-written index, so the combined reference may cover payloads more
+  completely than the hand-written index alone suggests; this combination was
+  not independently assessed for completeness. There is no generator for
+  `openapi.json` (it is maintained directly), but drift against the actual Go
+  routes is guarded by a dedicated route-parity test
+  (`hivecommons/hive:src/pkg/dashboard/openapi_route_parity_test.go`) that
+  parses route-registration call sites with `go/ast` and compares them against
+  the spec. The hand-written API-reference index has no comparable drift
+  guard, and the recommended drift check for it (see Recommendations) should
+  build on the existing route-parity test's approach rather than invent a
+  parallel one.
 - **Are there CLI references?** Partial. `hivectl.md` and `crux-cli.md` exist
   under "Operations," but there is no discrete, top-level "CLI reference" nav
   entry comparable to the API reference section.
@@ -273,8 +279,9 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   (`src/proxy.ts`) strips locale prefixes from any `/docs` URL and redirects to
   the unprefixed, English page (confirmed: visiting
   `/fr/docs/hive/overview/getting-started` redirects to the English page), and
-  the documentation layout hardcodes `lang="en"`. Credit the infrastructure
-  investment, but the documentation itself is English-only today.
+  the documentation layout hardcodes `lang="en"`. The localization
+  infrastructure investment is real, but the documentation itself is
+  English-only today.
 - **Is there a documented method for versioning content?** Yes, a version
   registry (`src/config/versions.ts`) tracks Hive's `latest` (v5, rendered on
   the docs site), `v6` ("Edge," links externally to GitHub for unreleased docs),
@@ -450,7 +457,7 @@ CONTRIBUTING guides.
 status, lists all five current maintainers with handles and affiliations,
 documents a lazy-consensus decision process with maintainer-committee
 escalation, links to the org-level maintainer-promotion ladder with explicit,
-numeric criteria, and includes an unusually detailed "AI Agents and Automation"
+numeric criteria, and includes an "AI Agents and Automation"
 governance section (agents are tooling, not members; every agent has a named
 responsible human; every merge needs a human approver). A documented consistency
 mechanism requires the maintainer roster recorded in three different places (org
@@ -499,7 +506,7 @@ No significant gaps identified.
 | Criterion                                   | Rating (1-5)                   |
 | ------------------------------------------- | ------------------------------ |
 | Single-source for all files                 | 4 - Meets or exceeds standards |
-| Meets min website req. (for maturity level) | 3 - Meets standards (see note) |
+| Meets min website req. (for maturity level) | Partially assessed (see note)  |
 | Usability, accessibility, and design        | Not assessed                   |
 | Branding and design                         | 4 - Meets or exceeds standards |
 | Case studies & social proof                 | 4 - Meets or exceeds standards |
@@ -508,10 +515,12 @@ No significant gaps identified.
 | AI agent readiness                          | 3 - Meets standards            |
 | HTTPS access & HTTP redirect                | 5 - Exemplary                  |
 
-Note: "Meets min website req." reflects a confirmed Sandbox
-rudimentary-documentation bar; the licensing, community, copyright,
-trademark, and branding guidelines were not independently assessed (see
-Minimal website requirements comments below).
+Note: "Meets min website req." is partially assessed. The Sandbox
+rudimentary-documentation bar is confirmed (and exceeded), but the Sandbox
+requirement is a majority of the Website guidelines being satisfied; the
+licensing, community, copyright, trademark, and branding guidelines were not
+independently assessed (see Minimal website requirements comments below), so
+this criterion cannot yet carry a numeric rating.
 
 ### Comments
 
@@ -557,10 +566,9 @@ performed. The docs site uses Tailwind CSS 4 (a responsive-by-default utility
 framework) and the marketing site's hand-written CSS includes
 `prefers-color-scheme` media queries, but these indicate attention to
 adaptive rendering, not confirmed keyboard usability, contrast, screen-reader
-usability, or mobile navigation. This criterion should be marked "not
-assessed" rather than given a provisional pass; a follow-up manual or
-automated (e.g. axe-core/Lighthouse) accessibility pass is recommended before
-it can be rated with confidence.
+usability, or mobile navigation. A follow-up manual or automated (e.g.
+axe-core/Lighthouse) accessibility pass is recommended before this criterion
+can be rated with confidence.
 
 #### Branding and design
 
@@ -573,38 +581,48 @@ third-party CDN, which is a good practice for both performance and privacy.
 
 #### Case studies and social proof
 
-This area was assessed too negatively in an earlier draft of this analysis,
-which rated it "Needs improvement" without inspecting the homepage and
-`/stories/` content. The [homepage](https://hivecommons.dev/) has an "Adopted
-by" logo strip (KubeStellar Console, tunaos.org, Project Bluefin, Frostyard,
-Open Horizon, Open Horizon Services, and an individual adopter), linking to
-`ADOPTERS.md` for detail. The `/stories/` page is populated, including a
-first-person contributor testimonial with supporting GitHub links. An
-"Adopters" section is also listed in `llms.txt`. The main gap is
-discoverability rather than absence of content: there is no dedicated,
-prominently linked case-studies page distinct from `/stories/`, and the
-homepage's "Adopted by" strip and the stories page are not obviously
-cross-linked from the top-level navigation. Treat this as a navigation/
-cross-linking improvement rather than a content-creation gap.
+Answering each rubric question directly: Are there case studies, and are they
+on the website? Yes - the `/stories/` page is populated, including a
+first-person contributor testimonial with supporting GitHub links, and it is
+linked from both the top navigation (`Stories`) and the footer (`Contributor
+Stories`) on every page of `hivecommons.dev`. Are there user testimonials?
+Yes, in `/stories/`. Is there an active project blog? No blog was found
+(`/blog` returns 404). Are there community talks, and are they on the
+website? Yes - the homepage's "Hive in practice" section embeds a recorded
+conference talk ("Jorge Castro, GitHub Universe 2026") via YouTube, with
+links to watch on YouTube directly. Is there a logo wall? Yes, the
+[homepage](https://hivecommons.dev/)'s "Adopted by" strip (KubeStellar
+Console, tunaos.org, Project Bluefin, Frostyard, Open Horizon, Open Horizon
+Services, and an individual adopter) links to `ADOPTERS.md` for detail, and an
+"Adopters" section is also listed in `llms.txt`. The only rubric gap is the
+absence of a blog; the rest of the criterion - testimonials, community talks,
+and a logo wall, all discoverable from top-level navigation - is well
+covered.
 
 #### SEO, Analytics and site-local search
 
 Both `robots.txt` files are fully open to crawlers and point to generated
 sitemaps. A `GoogleAnalytics` component with a custom-event helper exists in
-the docs codebase, but it is mounted only in the separate locale layout
-(`src/app/[locale]/layout.tsx`), not in the documentation layout
-(`src/app/docs/layout.tsx`) that actually renders `/docs` pages; a fetch of
-production documentation HTML contained none of the component's
-measurement-ID, `ga4-init`, or `googletagmanager` markers. GA4 should be
-recorded as implemented but not currently active on documentation pages,
-distinct from analytics on the rest of the docs site. No analytics tag was
-found on the marketing site, whose Content-Security-Policy (`default-src
-'none'` with SHA-256-pinned inline scripts) would not currently permit a
-third-party analytics script to load even if one were added without a CSP
-update - worth noting if analytics on the marketing site is ever desired.
-Both sites carry extensive Open Graph/Twitter-card meta tags and `schema.org`
-JSON-LD structured data for the whole project family. In-site search works
-via a dedicated API route on the docs site.
+the docs codebase, mounted in the separate locale layout
+(`src/app/[locale]/layout.tsx`) rather than the documentation layout
+(`src/app/docs/layout.tsx`) that renders `/docs` pages. In production,
+however, every path checked - the docs root (`/`), `/en`, and a direct docs
+page - redirects into `/docs/...`, and none of the resulting HTML contains the
+component's measurement-ID, `ga4-init`, or `googletagmanager` markers
+(confirmed: `curl -sL https://docs.hivecommons.dev/ | grep -c -E
+'G-PXWNVQ8D1T|ga4-init|googletagmanager'` returns 0, as does the same check
+against `/en` and a docs page directly). GA4 is implemented in code but not
+observed active anywhere in current production traffic, since the one layout
+that mounts it is not reachable through normal navigation. Whether and where
+to mount it is a project decision for maintainers, not a documentation defect
+to "fix" - see Recommendations. No analytics tag was found on the marketing
+site, whose Content-Security-Policy (`default-src 'none'` with SHA-256-pinned
+inline scripts) would not currently permit a third-party analytics script to
+load even if one were added without a CSP update - worth noting if analytics
+on the marketing site is ever desired. Both sites carry extensive Open
+Graph/Twitter-card meta tags and `schema.org` JSON-LD structured data for the
+whole project family. In-site search works via a dedicated API route on the
+docs site.
 
 #### Maintenance planning
 
@@ -619,21 +637,23 @@ the main maintenance-planning concern identified.
 
 #### AI Agent Readiness
 
-This area has real strengths but was rated too positively in an earlier draft
-of this analysis, which called it "a standout area." `llms.txt` exists on both
-domains (`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`), and
-the docs site's copy is kept in sync with on-page content by dedicated,
-CI-enforced tests rather than hand maintenance. Both sites are confirmed
-server-rendered/static, with substantive content present in the raw HTML
-payload rather than behind client-side hydration - confirmed by a raw (non-JS)
-fetch of both a marketing page and a docs page. `robots.txt` imposes no
-crawler restrictions, and no CDN bot-challenge gating was observed.
+This area has real strengths. `llms.txt` exists on both
+domains (`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`).
+Both sites are confirmed server-rendered/static, with substantive content
+present in the raw HTML payload rather than behind client-side hydration -
+confirmed by a raw (non-JS) fetch of both a marketing page and a docs page.
+`robots.txt` imposes no crawler restrictions, and no CDN bot-challenge gating
+was observed.
 
-Several gaps go beyond "the one gap" claimed in an earlier draft:
+The following gaps were found:
 
-- The docs `llms.txt` does not include the blockquoted summary the
-  llmstxt.org structure (and the criteria) call for; it goes straight from the
-  H1 title to H2 sections.
+- The docs `llms.txt` does not include the blockquoted summary that the
+  criteria call for (H1 title, blockquote summary, H2 sections); it goes
+  straight from the H1 title to H2 sections. The upstream llmstxt.org spec
+  itself only requires the H1 ("This is the only required section") and
+  describes the blockquote as a recommended, not mandated, structural
+  element, so this is a gap against this project's criteria specifically,
+  not against llmstxt.org.
 - Its links point to HTML pages on `docs.hivecommons.dev`, not Markdown
   versions of those pages.
 - There is no per-page Markdown mirror: appending `.md` to a sampled
@@ -641,8 +661,22 @@ Several gaps go beyond "the one gap" claimed in an earlier draft:
 - The `llms.txt` community-link test (`scripts/llms-txt-community.test.ts`)
   only asserts that a fixed list of URLs is present in the file; it does not
   check content parity or synchronization with the published pages those
-  links point to, so "kept in sync... by dedicated, CI-enforced tests" should
-  not be read as full content-parity verification.
+  links point to. No test or build step was found that generates or
+  verifies the docs `llms.txt` against the live page set, so it should not
+  be described as "kept in sync" by CI; its link list is otherwise confirmed
+  to resolve by direct spot-check (sampled links returned HTTP 200, with a
+  couple of expected redirects).
+- No directive pointing agents to `llms.txt` was found near the top of the
+  HTML or Markdown-equivalent content on sampled docs pages.
+- The docs `llms.txt` file itself is small (under 3 KB for the whole file at
+  assessment time), well within an agent's context window; this assessment
+  did not separately check individual page size or how tabbed components and
+  code fences serialize to Markdown, since no Markdown mirror exists to
+  check.
+- No CLOMonitor or `afdocs check` run against `docs.hivecommons.dev` was
+  found wired into CI; the only score available at review time was an
+  independently run, one-off `afdocs check` (see below), not a CI-enforced
+  gate.
 
 The CLOMonitor Agent-readiness score cited during review
 (https://clomonitor.io/projects/cncf/hive#hive_agent_readiness) scans the
@@ -651,7 +685,7 @@ in scope for this assessment (`docs.hivecommons.dev`); it should not be used
 as evidence for this criterion. An independent `afdocs check`-style scorecard
 run against `docs.hivecommons.dev` during review reported an overall score of
 70/100 (C), with Content Discoverability at 59/100 (F), consistent with the
-gaps above. This criterion should be rated against `docs.hivecommons.dev`
+gaps above. This criterion is rated against `docs.hivecommons.dev`
 directly rather than carried over from a CLOMonitor score scoped to a
 different domain.
 
@@ -694,17 +728,17 @@ No recommendation; this area is strong.
 
 #### Case studies and social proof
 
-- Add a prominent, top-level navigation link (or a dedicated case-studies
-  page) that surfaces the existing "Adopted by" logo strip and `/stories/`
-  testimonial content together, since the material already exists but is not
-  easy to discover from the main navigation.
+No recommendation; this area is strong. The one rubric gap (no project blog)
+is a content-creation decision for maintainers, not a documentation-structure
+fix.
 
 #### SEO, Analytics and site-local search
 
-- Mount the existing `GoogleAnalytics` component in the documentation layout
-  (`src/app/docs/layout.tsx`), not only the locale layout, so page views on
-  `/docs` pages are actually collected rather than only on non-documentation
-  pages.
+- Decide whether documentation page views should be collected at all; the
+  `GoogleAnalytics` component currently is not reachable through normal
+  navigation. If the project wants that data, mount the existing component in
+  the documentation layout (`src/app/docs/layout.tsx`) in addition to the
+  locale layout. This is a project decision, not a defect to fix outright.
 - If analytics on the marketing site is ever desired, update its CSP
   `script-src` allowlist (SHA-256 pin or nonce) rather than relaxing it broadly,
   to preserve the current strict CSP posture.
@@ -717,17 +751,22 @@ No recommendation; this area is strong.
 
 #### AI Agent Readiness
 
-- Add the llmstxt.org-required blockquoted summary to `llms.txt` on the docs
-  site.
+- Add the blockquoted summary this project's criteria call for to `llms.txt`
+  on the docs site (llmstxt.org itself only requires the H1, but the
+  blockquote is still recommended practice and this project's own criteria
+  require it).
 - Point `llms.txt` links at Markdown versions of pages rather than HTML pages,
   once a Markdown mirror exists.
 - Add a per-page Markdown mirror (for example, serving the underlying
   MDX/Markdown source at the same path with `.md` appended) for the docs site.
-- Extend the `llms.txt` community-link test to check content parity with the
-  linked pages, not just URL presence.
-- Re-run the CLOMonitor / `afdocs check` assessment against
-  `docs.hivecommons.dev` specifically, since the current CLOMonitor score is
-  scoped to `hive.hivecommons.dev`.
+- Add a build step or test that generates or verifies `llms.txt` against the
+  live page set, not just the fixed community-link list, so the file can
+  accurately be described as kept in sync by CI.
+- Add a directive near the top of docs pages pointing agents to `llms.txt`.
+- Wire a CLOMonitor or `afdocs check` run against `docs.hivecommons.dev`
+  specifically into CI, since the current CLOMonitor score is scoped to
+  `hive.hivecommons.dev` and no equivalent check currently runs in CI for the
+  docs site.
 
 #### References and notes
 

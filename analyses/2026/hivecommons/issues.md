@@ -44,8 +44,18 @@ Type: Reference / Information architecture.
 `hivectl.md` and `crux-cli.md` exist under "Operations" on
 `docs.hivecommons.dev` but have no shared landing page or top-level nav entry
 comparable to the existing API reference section. Add a short "CLI reference"
-page (or a nav grouping) that links both, so a reader looking for "the CLI docs"
-has one obvious starting point.
+page that links both, so a reader looking for "the CLI docs" has one obvious
+starting point.
+
+File this in `hivecommons/hive`, not `hivecommons/docs`, as an explicit
+exception to [cncf/techdocs#395][issue-395]'s default destination: the new
+page is canonical content joining two pages that already live in
+`hivecommons/hive:src/docs/`, and per the docs README's sync rule, canonical
+content must be authored there rather than in the synced copies under
+`hivecommons/docs:docs/content/`. If a dedicated top-level nav entry is also
+wanted (rather than just a linked page under "Operations"), file a small
+follow-up issue in `hivecommons/docs` for the `page-map.ts` change, since
+navigation structure is native to that repo and not synced.
 
 Related material: `hivecommons/hive:src/docs/hivectl.md`,
 `hivecommons/hive:src/docs/crux-cli.md`,
@@ -99,18 +109,22 @@ the same change that adds or renames a route," and no automated enforcement
 of that convention was found within `src/docs/` (the scope of this
 assessment); this analysis did not review `hivecommons/hive`'s source or
 tests outside `src/docs/`, so it cannot assert that no enforcement exists
-anywhere in the repository. Add (or confirm) a lightweight CI check (even a
-simple diff/grep-based script comparing route registrations in the Go source
-against the documented route list in `src/docs/api-reference/*`) that flags a
-PR touching routes without a corresponding doc update.
+anywhere in the repository. A comparable drift guard already exists for the
+sibling `dashboard/openapi.json` spec:
+`src/pkg/dashboard/openapi_route_parity_test.go` parses Go route-registration
+call sites with `go/ast` and fails if they drift from the spec. Add (or
+confirm) a similar lightweight check for the hand-written API reference,
+reusing that test's route-extraction approach rather than building a separate
+one from scratch.
 
 Suggested changes:
 
 - Prerequisites: familiarity with the Go route-registration pattern used in
-  `hivecommons/hive`.
+  `hivecommons/hive`, and with the existing
+  `openapi_route_parity_test.go` approach.
 - Procedure:
-  1. Write a script that extracts registered route paths from the relevant Go
-     source files.
+  1. Reuse (or factor out) the route-extraction logic from
+     `openapi_route_parity_test.go` to get the list of registered route paths.
   2. Compare the extracted list against the routes documented in
      `src/docs/api-reference/*.md`.
   3. Fail CI (or post a PR comment) when a new/changed/removed route has no
@@ -146,8 +160,14 @@ Type: Process / Community.
 At assessment time, zero open issues carry the `good first issue` label in any
 of `hivecommons/docs`, `hivecommons/hive`, or `hivecommons.github.io`, even
 though the label and its supporting onboarding documentation exist and are
-actively referenced. File the issues above (and any other small, independent
-documentation tasks maintainers identify) with `good first issue` and
-`documentation` labels to give new contributors something to claim immediately.
+actively referenced. File the CLI reference landing page, governance-pointer,
+and accessibility-scan issues above with `good first issue` and
+`documentation` labels (the accessibility-scan issue only if it states the
+scanning tool and a clear pass/fail recording step as its completion
+criteria) to give new contributors something to claim immediately. Do not
+apply `good first issue` to the code-ownership reconciliation or the API
+route/doc drift-check issues above: choosing approvers is a maintainer
+decision, and extracting Go routes and wiring a CI check requires specialist
+context a first-time contributor is unlikely to have.
 
 - [ ] `https://github.com/hivecommons/docs/issues/NNN`
