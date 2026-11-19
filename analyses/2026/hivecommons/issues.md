@@ -27,8 +27,8 @@ The CNCF Tech Docs effort is tracked in the CNCF Tech Docs repo:
 
 > To be filed in `hivecommons/docs` (the primary implementation destination
 > named in [cncf/techdocs#395][issue-395], alongside `hivecommons.github.io`)
-> once this analysis is reviewed and accepted by project maintainers. Link
-> each sub-issue below to it with a Markdown checkbox once filed.
+> once this analysis is reviewed and accepted by project maintainers. Link each
+> sub-issue below to it with a Markdown checkbox once filed.
 
 [issue-395]: https://github.com/cncf/techdocs/issues/395
 
@@ -48,8 +48,8 @@ page that links both, so a reader looking for "the CLI docs" has one obvious
 starting point.
 
 File this in `hivecommons/hive`, not `hivecommons/docs`, as an explicit
-exception to [cncf/techdocs#395][issue-395]'s default destination: the new
-page is canonical content joining two pages that already live in
+exception to [cncf/techdocs#395][issue-395]'s default destination: the new page
+is canonical content joining two pages that already live in
 `hivecommons/hive:src/docs/`, and per the docs README's sync rule, canonical
 content must be authored there rather than in the synced copies under
 `hivecommons/docs:docs/content/`. If a dedicated top-level nav entry is also
@@ -91,9 +91,9 @@ approver/reviewer, while its `CODEOWNERS` also lists `@KPRoche`, who is not on
 the project's maintainer roster (`hivecommons/.project/maintainers.yaml`:
 `@clubanderson`, `@hanthor`, `@Danathar`, `@nicholasjackson`, `@kellyaa`) and
 whose entry is currently rejected by GitHub's CODEOWNERS validator. Reconcile
-these files with the official roster: either add a roster maintainer as a
-second `docs` approver/reviewer, or add `@KPRoche` to the roster if they hold
-an intended docs-review responsibility, so the code-ownership files and the
+these files with the official roster: either add a roster maintainer as a second
+`docs` approver/reviewer, or add `@KPRoche` to the roster if they hold an
+intended docs-review responsibility, so the code-ownership files and the
 governance record agree.
 
 - [ ] `https://github.com/hivecommons/docs/issues/NNN`
@@ -105,23 +105,22 @@ Audience: Hive maintainers and contributors adding/renaming API routes.
 Type: Process / Reference accuracy.
 
 `src/docs/api-reference.md` states "There is no generator; update this page in
-the same change that adds or renames a route," and no automated enforcement
-of that convention was found within `src/docs/` (the scope of this
-assessment); this analysis did not review `hivecommons/hive`'s source or
-tests outside `src/docs/`, so it cannot assert that no enforcement exists
-anywhere in the repository. A comparable drift guard already exists for the
-sibling `dashboard/openapi.json` spec:
-`src/pkg/dashboard/openapi_route_parity_test.go` parses Go route-registration
-call sites with `go/ast` and fails if they drift from the spec. Add (or
-confirm) a similar lightweight check for the hand-written API reference,
-reusing that test's route-extraction approach rather than building a separate
-one from scratch.
+the same change that adds or renames a route," and no automated enforcement of
+that convention was found within `src/docs/` (the scope of this assessment);
+this analysis did not review `hivecommons/hive`'s source or tests outside
+`src/docs/`, so it cannot assert that no enforcement exists anywhere in the
+repository. A comparable drift guard already exists for the sibling
+`dashboard/openapi.json` spec: `src/pkg/dashboard/openapi_route_parity_test.go`
+parses Go route-registration call sites with `go/ast` and fails if they drift
+from the spec. Add (or confirm) a similar lightweight check for the hand-written
+API reference, reusing that test's route-extraction approach rather than
+building a separate one from scratch.
 
 Suggested changes:
 
 - Prerequisites: familiarity with the Go route-registration pattern used in
-  `hivecommons/hive`, and with the existing
-  `openapi_route_parity_test.go` approach.
+  `hivecommons/hive`, and with the existing `openapi_route_parity_test.go`
+  approach.
 - Procedure:
   1. Reuse (or factor out) the route-extraction logic from
      `openapi_route_parity_test.go` to get the list of registered route paths.
@@ -141,13 +140,12 @@ Audience: Project maintainers; informs a future documentation re-assessment.
 
 Type: Task.
 
-No scan was performed or supplied for this assessment to confirm the
-"Usability, accessibility and devices" rating in [analysis.md](analysis.md)
-for either `hivecommons.dev` or `docs.hivecommons.dev`. Run axe-core or
-Lighthouse against both sites and record the results (for example, as a
-comment on the tracking issue for this analysis, or a short doc under
-`src/docs/`), so that rating can move from "not assessed" to confirmed at the
-next review.
+No scan was performed or supplied for this assessment to confirm the "Usability,
+accessibility and devices" rating in [analysis.md](analysis.md) for either
+`hivecommons.dev` or `docs.hivecommons.dev`. Run axe-core or Lighthouse against
+both sites and record the results (for example, as a comment on the tracking
+issue for this analysis, or a short doc under `src/docs/`), so that rating can
+move from "not assessed" to confirmed at the next review.
 
 - [ ] `https://github.com/hivecommons/hivecommons.github.io/issues/NNN`
 
@@ -161,13 +159,13 @@ At assessment time, zero open issues carry the `good first issue` label in any
 of `hivecommons/docs`, `hivecommons/hive`, or `hivecommons.github.io`, even
 though the label and its supporting onboarding documentation exist and are
 actively referenced. File the CLI reference landing page, governance-pointer,
-and accessibility-scan issues above with `good first issue` and
-`documentation` labels (the accessibility-scan issue only if it states the
-scanning tool and a clear pass/fail recording step as its completion
-criteria) to give new contributors something to claim immediately. Do not
-apply `good first issue` to the code-ownership reconciliation or the API
-route/doc drift-check issues above: choosing approvers is a maintainer
-decision, and extracting Go routes and wiring a CI check requires specialist
-context a first-time contributor is unlikely to have.
+and accessibility-scan issues above with `good first issue` and `documentation`
+labels (the accessibility-scan issue only if it states the scanning tool and a
+clear pass/fail recording step as its completion criteria) to give new
+contributors something to claim immediately. Do not apply `good first issue` to
+the code-ownership reconciliation or the API route/doc drift-check issues above:
+choosing approvers is a maintainer decision, and extracting Go routes and wiring
+a CI check requires specialist context a first-time contributor is unlikely to
+have.
 
 - [ ] `https://github.com/hivecommons/docs/issues/NNN`

@@ -21,13 +21,18 @@ ignorePaths:
 #       - CodeBlock
 words:
   - backstore
+  - blockquoted
   - Chalin
   - CLOTributor
   - CNCF
+  - Danathar
   - Docsy
   - dwelsch
   - fluxcd
+  - Frostyard
   - github
+  - googletagmanager
+  - hanthor
   - keda
   - knative
   - kedacore
@@ -35,14 +40,17 @@ words:
   - krook
   - mkdocs
   - nate
+  - nicholasjackson
   - nvmrc
   - Obasi
   - Pagefind
+  - PXWNVQ
   - subpages
   - techdocs
   - toolkits
   - toto
   - triaging
+  - tunaos
   - Uchechukwu
   - webdev
   - Welsch

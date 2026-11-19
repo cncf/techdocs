@@ -27,15 +27,14 @@ efforts.
 
 This analysis is a **pilot run** of the `cncf-techdocs-assessment` AI-assisted
 assessment workflow model (see [cncf/techdocs#395][issue-395]). This is a pilot
-of the assessment *process*, not a question of CNCF membership: Hive Commons is
+of the assessment _process_, not a question of CNCF membership: Hive Commons is
 already a CNCF Sandbox project (see [cncf/sandbox#545][sandbox-545]), and the
-project volunteered to be the first end-to-end test case for the intake →
-accept → draft → verify → stakeholder review → approval loop, before the
-workflow is run against other CNCF projects undergoing a documentation
-assessment. Hive Commons' own maintainers are also the authors of the workflow
-model being piloted (see
-`hivecommons/hive:src/docs/workflows/techdocs-assessment.md`), so this
-assessment doubles as dogfooding of their own tooling.
+project volunteered to be the first end-to-end test case for the intake → accept
+→ draft → verify → stakeholder review → approval loop, before the workflow is
+run against other CNCF projects undergoing a documentation assessment. Hive
+Commons' own maintainers are also the authors of the workflow model being
+piloted (see `hivecommons/hive:src/docs/workflows/techdocs-assessment.md`), so
+this assessment doubles as dogfooding of their own tooling.
 
 ### AI assisted analysis
 
@@ -200,9 +199,9 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   Hive's ~100+ pages. These are out of scope for ratings here but affect the
   overall impression of the Hive Commons docs site as a whole.
 - **Is there a complete API reference?** Partially. 16 hand-maintained pages
-  cover ~650 routes, but the page itself frames this as a "pragmatic v1
-  endpoint index," not a complete reference, and explicitly excludes
-  request/response schemas ("see the handler source"). A separate OpenAPI spec
+  cover ~650 routes, but the page itself frames this as a "pragmatic v1 endpoint
+  index," not a complete reference, and explicitly excludes request/response
+  schemas ("see the handler source"). A separate OpenAPI spec
   (`dashboard/openapi.json`) is linked from the documentation map alongside the
   hand-written index, so the combined reference may cover payloads more
   completely than the hand-written index alone suggests; this combination was
@@ -211,10 +210,9 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   routes is guarded by a dedicated route-parity test
   (`hivecommons/hive:src/pkg/dashboard/openapi_route_parity_test.go`) that
   parses route-registration call sites with `go/ast` and compares them against
-  the spec. The hand-written API-reference index has no comparable drift
-  guard, and the recommended drift check for it (see Recommendations) should
-  build on the existing route-parity test's approach rather than invent a
-  parallel one.
+  the spec. The hand-written API-reference index has no comparable drift guard,
+  and the recommended drift check for it (see Recommendations) should build on
+  the existing route-parity test's approach rather than invent a parallel one.
 - **Are there CLI references?** Partial. `hivectl.md` and `crux-cli.md` exist
   under "Operations," but there is no discrete, top-level "CLI reference" nav
   entry comparable to the API reference section.
@@ -250,8 +248,7 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   quickstart places several required configuration changes inside comments
   within one large shell command block (lines 25-53) rather than as separate
   numbered steps, which does not fully meet the criteria's "numbered
-  step-by-step instructions" bar; a Flatcar assessment flagged the same
-  pattern.
+  step-by-step instructions" bar; a Flatcar assessment flagged the same pattern.
 - **Are different types of installation documented if necessary?** Yes, Docker
   Compose, Podman (explicitly described as "a parallel supported choice, not an
   experiment"), Kubernetes, and hosted are all first-class options, giving
@@ -272,16 +269,15 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   (`hivecommons.dev`) has no search, but it is a single static page, so this is
   appropriate for its scope.
 - **Is the project planning for localization?** A localization framework is
-  installed, but published documentation is not actually served in 10
-  languages. The docs site uses `next-intl` with message files for 10 locales
-  (en, hi, ja, es, de, fr, it, Simplified Chinese, Traditional Chinese, pt) and
-  a language-switcher component, but a routing rule
-  (`src/proxy.ts`) strips locale prefixes from any `/docs` URL and redirects to
-  the unprefixed, English page (confirmed: visiting
-  `/fr/docs/hive/overview/getting-started` redirects to the English page), and
-  the documentation layout hardcodes `lang="en"`. The localization
-  infrastructure investment is real, but the documentation itself is
-  English-only today.
+  installed, but published documentation is not actually served in 10 languages.
+  The docs site uses `next-intl` with message files for 10 locales (en, hi, ja,
+  es, de, fr, it, Simplified Chinese, Traditional Chinese, pt) and a
+  language-switcher component, but a routing rule (`src/proxy.ts`) strips locale
+  prefixes from any `/docs` URL and redirects to the unprefixed, English page
+  (confirmed: visiting `/fr/docs/hive/overview/getting-started` redirects to the
+  English page), and the documentation layout hardcodes `lang="en"`. The
+  localization infrastructure investment is real, but the documentation itself
+  is English-only today.
 - **Is there a documented method for versioning content?** Yes, a version
   registry (`src/config/versions.ts`) tracks Hive's `latest` (v5, rendered on
   the docs site), `v6` ("Edge," links externally to GitHub for unreleased docs),
@@ -316,14 +312,13 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   which is CI-enforced).
 - **Who reviews and approves documentation PRs?** Documented via
   `CODEOWNERS`/`OWNERS` files in each repo, but these are not fully reconciled
-  with `hivecommons/.project/maintainers.yaml`, the source of truth for
-  project ownership and maintainership (five maintainers: `@clubanderson`,
-  `@hanthor`, `@Danathar`, `@nicholasjackson`, `@kellyaa`).
-  `hivecommons/docs`'s `OWNERS` names only `@clubanderson` (a bus-factor risk),
-  while its `CODEOWNERS` also names `@KPRoche`, who is not on the maintainer
-  roster and whose entry is currently rejected by GitHub's CODEOWNERS
-  validator. `hivecommons.github.io` has two owners (`@clubanderson`,
-  `@kellyaa`), both of whom are on the roster.
+  with `hivecommons/.project/maintainers.yaml`, the source of truth for project
+  ownership and maintainership (five maintainers: `@clubanderson`, `@hanthor`,
+  `@Danathar`, `@nicholasjackson`, `@kellyaa`). `hivecommons/docs`'s `OWNERS`
+  names only `@clubanderson` (a bus-factor risk), while its `CODEOWNERS` also
+  names `@KPRoche`, who is not on the maintainer roster and whose entry is
+  currently rejected by GitHub's CODEOWNERS validator. `hivecommons.github.io`
+  has two owners (`@clubanderson`, `@kellyaa`), both of whom are on the roster.
 - **Does the website have a clear owner/maintainer?** Documented, though
   concentrated in one or two individuals for the docs/website repos
   specifically, and those files need reconciling against the official
@@ -360,10 +355,10 @@ clean bill across the whole corpus.
 
 #### New user content
 
-Install-path coverage is strong, but the Docker Compose quickstart's
-required configuration changes are embedded as comments inside one large
-command block rather than presented as numbered steps. Revise that section to
-use numbered, step-by-step instructions before treating this area as gap-free.
+Install-path coverage is strong, but the Docker Compose quickstart's required
+configuration changes are embedded as comments inside one large command block
+rather than presented as numbered steps. Revise that section to use numbered,
+step-by-step instructions before treating this area as gap-free.
 
 #### Content maintainability & site mechanics
 
@@ -457,18 +452,17 @@ CONTRIBUTING guides.
 status, lists all five current maintainers with handles and affiliations,
 documents a lazy-consensus decision process with maintainer-committee
 escalation, links to the org-level maintainer-promotion ladder with explicit,
-numeric criteria, and includes an "AI Agents and Automation"
-governance section (agents are tooling, not members; every agent has a named
-responsible human; every merge needs a human approver). A documented consistency
-mechanism requires the maintainer roster recorded in three different places (org
-`MAINTAINERS.md`, root `OWNERS`, and `hive`'s `GOVERNANCE.md`) to agree,
-explicitly calling drift between them "a governance bug" - and the three were
-found consistent at assessment time. `hivecommons/docs` and
-`hivecommons.github.io` do not duplicate a `GOVERNANCE.md` of their own; they
-defer to the org-level document, which is a reasonable choice for support
-repositories but is not stated explicitly in either repo's own README - a reader
-starting from one of those two repos has to infer that governance applies
-org-wide.
+numeric criteria, and includes an "AI Agents and Automation" governance section
+(agents are tooling, not members; every agent has a named responsible human;
+every merge needs a human approver). A documented consistency mechanism requires
+the maintainer roster recorded in three different places (org `MAINTAINERS.md`,
+root `OWNERS`, and `hive`'s `GOVERNANCE.md`) to agree, explicitly calling drift
+between them "a governance bug" - and the three were found consistent at
+assessment time. `hivecommons/docs` and `hivecommons.github.io` do not duplicate
+a `GOVERNANCE.md` of their own; they defer to the org-level document, which is a
+reasonable choice for support repositories but is not stated explicitly in
+either repo's own README - a reader starting from one of those two repos has to
+infer that governance applies org-wide.
 
 ### Recommendations
 
@@ -503,13 +497,13 @@ No significant gaps identified.
 
 ## Website and infrastructure
 
-| Criterion                                   | Rating (1-5)                   |
+| Criterion                                   | Rating/status                  |
 | ------------------------------------------- | ------------------------------ |
 | Single-source for all files                 | 4 - Meets or exceeds standards |
 | Meets min website req. (for maturity level) | Partially assessed (see note)  |
 | Usability, accessibility, and design        | Not assessed                   |
 | Branding and design                         | 4 - Meets or exceeds standards |
-| Case studies & social proof                 | 4 - Meets or exceeds standards |
+| Case studies & social proof                 | 3 - Meets standards            |
 | SEO, Analytics, and site-local search       | 3 - Meets standards            |
 | Maintenance planning                        | 4 - Meets or exceeds standards |
 | AI agent readiness                          | 3 - Meets standards            |
@@ -535,10 +529,10 @@ for managing mirrored files" the criteria call for as the alternative to true
 single-sourcing: automated prebuild sync scripts, a 30-second fetch timeout with
 fail-the-build-if- unreachable semantics (so stale content is never silently
 deployed), and a CI drift-detection test suite. The project describes this
-mirroring strategy explicitly in both `README.md` and `CONTRIBUTING.md` ("do
-not edit `docs/content/` directly, edit the canonical source"), which is a
-documented answer to the single-source requirement's alternative, even though
-it is not literally single-sourced.
+mirroring strategy explicitly in both `README.md` and `CONTRIBUTING.md` ("do not
+edit `docs/content/` directly, edit the canonical source"), which is a
+documented answer to the single-source requirement's alternative, even though it
+is not literally single-sourced.
 
 #### Minimal website requirements
 
@@ -546,29 +540,29 @@ For a Sandbox project, the project-documentation bar is "rudimentary project
 documentation, or a placeholder," which Hive Commons' documentation clearly
 exceeds (hosted directly, single-source strategy addressed as above, broad
 stakeholder coverage via the layered Overview/Getting-started/Reference
-structure). However, the Sandbox bar also requires a majority of the
-[Website guidelines][website-guidelines] to be satisfied - mandatory standards
-on open source status, IP licensing, corporate sponsorship, copyright and
-trademark, and community standards. This pass did not independently assess
-those guidelines item by item, so this criterion reflects the confirmed
-documentation depth only; the licensing/community/copyright/trademark/branding
-guidelines should be assessed explicitly (see Recommendations) before any
-claim of Incubating-level website-requirement coverage.
+structure). However, the Sandbox bar also requires a majority of the [Website
+guidelines][website-guidelines] to be satisfied - mandatory standards on open
+source status, IP licensing, corporate sponsorship, copyright and trademark, and
+community standards. This pass did not independently assess those guidelines
+item by item, so this criterion reflects the confirmed documentation depth only;
+the licensing/community/copyright/trademark/branding guidelines should be
+assessed explicitly (see Recommendations) before any claim of Incubating-level
+website-requirement coverage.
 
-[website-guidelines]: https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
+[website-guidelines]:
+  https://github.com/cncf/techdocs/blob/main/docs/website-guidelines-checklist.md
 
 #### Usability, accessibility and devices
 
-Not assessed. No scan was performed or supplied for this assessment, and
-neither a live mobile-viewport check nor a formal accessibility audit
-(contrast ratios, screen-reader pass, keyboard-only navigation) was
-performed. The docs site uses Tailwind CSS 4 (a responsive-by-default utility
-framework) and the marketing site's hand-written CSS includes
-`prefers-color-scheme` media queries, but these indicate attention to
-adaptive rendering, not confirmed keyboard usability, contrast, screen-reader
-usability, or mobile navigation. A follow-up manual or automated (e.g.
-axe-core/Lighthouse) accessibility pass is recommended before this criterion
-can be rated with confidence.
+Not assessed. No scan was performed or supplied for this assessment, and neither
+a live mobile-viewport check nor a formal accessibility audit (contrast ratios,
+screen-reader pass, keyboard-only navigation) was performed. The docs site uses
+Tailwind CSS 4 (a responsive-by-default utility framework) and the marketing
+site's hand-written CSS includes `prefers-color-scheme` media queries, but these
+indicate attention to adaptive rendering, not confirmed keyboard usability,
+contrast, screen-reader usability, or mobile navigation. A follow-up manual or
+automated (e.g. axe-core/Lighthouse) accessibility pass is recommended before
+this criterion can be rated with confidence.
 
 #### Branding and design
 
@@ -581,48 +575,56 @@ third-party CDN, which is a good practice for both performance and privacy.
 
 #### Case studies and social proof
 
-Answering each rubric question directly: Are there case studies, and are they
-on the website? Yes - the `/stories/` page is populated, including a
-first-person contributor testimonial with supporting GitHub links, and it is
-linked from both the top navigation (`Stories`) and the footer (`Contributor
-Stories`) on every page of `hivecommons.dev`. Are there user testimonials?
-Yes, in `/stories/`. Is there an active project blog? No blog was found
-(`/blog` returns 404). Are there community talks, and are they on the
-website? Yes - the homepage's "Hive in practice" section embeds a recorded
-conference talk ("Jorge Castro, GitHub Universe 2026") via YouTube, with
-links to watch on YouTube directly. Is there a logo wall? Yes, the
-[homepage](https://hivecommons.dev/)'s "Adopted by" strip (KubeStellar
-Console, tunaos.org, Project Bluefin, Frostyard, Open Horizon, Open Horizon
-Services, and an individual adopter) links to `ADOPTERS.md` for detail, and an
-"Adopters" section is also listed in `llms.txt`. The only rubric gap is the
-absence of a blog; the rest of the criterion - testimonials, community talks,
-and a logo wall, all discoverable from top-level navigation - is well
-covered.
+Answering each rubric question directly, with case studies and testimonials
+assessed separately as the rubric requires. Are there case studies, and are they
+on the website? Not as written narratives. The `/stories/` page (see below) is a
+testimonial, not a case study. `ADOPTERS.md` is the other candidate source: it
+lists seven adopters with a one-line description, a maturity tier
+(Production/Pre-production/Evaluation), and, for three entries (`tunaos.org`,
+Project Bluefin, KubeStellar Console), a link to supporting GitHub issues or the
+adopter's own docs as evidence of production use. That is useful, sourced
+adopter evidence, but it is still a table of brief descriptions rather than a
+case study - no entry walks through an organization's problem, adoption process,
+and measured outcome the way a case study typically does. Are there user
+testimonials? Yes - `/stories/` is populated with a first-person contributor
+testimonial with supporting GitHub links, and it is linked from both the top
+navigation (`Stories`) and the footer (`Contributor Stories`) on every page of
+`hivecommons.dev`. Is there an active project blog? No blog was found (`/blog`
+returns 404). Are there community talks, and are they on the website? Yes - the
+homepage's "Hive in practice" section embeds a recorded conference talk ("Jorge
+Castro, GitHub Universe 2026") via YouTube, with links to watch on YouTube
+directly. Is there a logo wall? Yes, the [homepage](https://hivecommons.dev/)'s
+"Adopted by" strip (KubeStellar Console, tunaos.org, Project Bluefin, Frostyard,
+Open Horizon, Open Horizon Services, and an individual adopter) links to
+`ADOPTERS.md` for detail, and an "Adopters" section is also listed in
+`llms.txt`. The rubric gaps are the absence of both a blog and written case
+studies; testimonials, community talks, and a logo wall, all discoverable from
+top-level navigation, are well covered.
 
 #### SEO, Analytics and site-local search
 
 Both `robots.txt` files are fully open to crawlers and point to generated
-sitemaps. A `GoogleAnalytics` component with a custom-event helper exists in
-the docs codebase, mounted in the separate locale layout
+sitemaps. A `GoogleAnalytics` component with a custom-event helper exists in the
+docs codebase, mounted in the separate locale layout
 (`src/app/[locale]/layout.tsx`) rather than the documentation layout
-(`src/app/docs/layout.tsx`) that renders `/docs` pages. In production,
-however, every path checked - the docs root (`/`), `/en`, and a direct docs
-page - redirects into `/docs/...`, and none of the resulting HTML contains the
-component's measurement-ID, `ga4-init`, or `googletagmanager` markers
-(confirmed: `curl -sL https://docs.hivecommons.dev/ | grep -c -E
-'G-PXWNVQ8D1T|ga4-init|googletagmanager'` returns 0, as does the same check
-against `/en` and a docs page directly). GA4 is implemented in code but not
-observed active anywhere in current production traffic, since the one layout
-that mounts it is not reachable through normal navigation. Whether and where
-to mount it is a project decision for maintainers, not a documentation defect
-to "fix" - see Recommendations. No analytics tag was found on the marketing
-site, whose Content-Security-Policy (`default-src 'none'` with SHA-256-pinned
-inline scripts) would not currently permit a third-party analytics script to
-load even if one were added without a CSP update - worth noting if analytics
-on the marketing site is ever desired. Both sites carry extensive Open
-Graph/Twitter-card meta tags and `schema.org` JSON-LD structured data for the
-whole project family. In-site search works via a dedicated API route on the
-docs site.
+(`src/app/docs/layout.tsx`) that renders `/docs` pages. In production, the docs
+root (`/`) and `/en` redirect into `/docs/...`, while a direct docs page (for
+example `/docs/hive/overview/getting-started`) returns `200` with no redirect.
+In all three cases, the resulting HTML contains none of the component's
+measurement-ID, `ga4-init`, or `googletagmanager` markers (confirmed:
+`curl -sL https://docs.hivecommons.dev/ | grep -c -E 'G-PXWNVQ8D1T|ga4-init|googletagmanager'`
+returns 0, as does the same check against `/en` and a docs page directly). GA4
+is implemented in code but not observed active anywhere in current production
+traffic, since the one layout that mounts it is not reachable through normal
+navigation. Whether and where to mount it is a project decision for maintainers,
+not a documentation defect to "fix" - see Recommendations. No analytics tag was
+found on the marketing site, whose Content-Security-Policy (`default-src 'none'`
+with SHA-256-pinned inline scripts) would not currently permit a third-party
+analytics script to load even if one were added without a CSP update - worth
+noting if analytics on the marketing site is ever desired. Both sites carry
+extensive Open Graph/Twitter-card meta tags and `schema.org` JSON-LD structured
+data for the whole project family. In-site search works via a dedicated API
+route on the docs site.
 
 #### Maintenance planning
 
@@ -632,62 +634,57 @@ static site for the marketing page, each sized appropriately to its complexity.
 CI gates (build, link-check, markdown lint, TypeScript/lint, Vitest with
 coverage, DCO) and a changelog-fragment system suggest active, disciplined
 maintenance. The code-ownership drift noted above (`hivecommons/docs`'s
-`OWNERS`/`CODEOWNERS` not reconciled with the official maintainer roster) is
-the main maintenance-planning concern identified.
+`OWNERS`/`CODEOWNERS` not reconciled with the official maintainer roster) is the
+main maintenance-planning concern identified.
 
 #### AI Agent Readiness
 
-This area has real strengths. `llms.txt` exists on both
-domains (`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`).
-Both sites are confirmed server-rendered/static, with substantive content
-present in the raw HTML payload rather than behind client-side hydration -
-confirmed by a raw (non-JS) fetch of both a marketing page and a docs page.
-`robots.txt` imposes no crawler restrictions, and no CDN bot-challenge gating
-was observed.
+This area has real strengths. `llms.txt` exists on both domains
+(`hivecommons.dev/llms.txt` and `docs.hivecommons.dev/llms.txt`). Both sites are
+confirmed server-rendered/static, with substantive content present in the raw
+HTML payload rather than behind client-side hydration - confirmed by a raw
+(non-JS) fetch of both a marketing page and a docs page. `robots.txt` imposes no
+crawler restrictions, and no CDN bot-challenge gating was observed.
 
 The following gaps were found:
 
-- The docs `llms.txt` does not include the blockquoted summary that the
-  criteria call for (H1 title, blockquote summary, H2 sections); it goes
-  straight from the H1 title to H2 sections. The upstream llmstxt.org spec
-  itself only requires the H1 ("This is the only required section") and
-  describes the blockquote as a recommended, not mandated, structural
-  element, so this is a gap against this project's criteria specifically,
-  not against llmstxt.org.
-- Its links point to HTML pages on `docs.hivecommons.dev`, not Markdown
-  versions of those pages.
+- The docs `llms.txt` does not include the blockquoted summary that the criteria
+  call for (H1 title, blockquote summary, H2 sections); it goes straight from
+  the H1 title to H2 sections. The upstream llmstxt.org spec itself only
+  requires the H1 ("This is the only required section") and describes the
+  blockquote as a recommended, not mandated, structural element, so this is a
+  gap against this project's criteria specifically, not against llmstxt.org.
+- Its links point to HTML pages on `docs.hivecommons.dev`, not Markdown versions
+  of those pages.
 - There is no per-page Markdown mirror: appending `.md` to a sampled
   getting-started URL returned 404, confirmed directly.
-- The `llms.txt` community-link test (`scripts/llms-txt-community.test.ts`)
-  only asserts that a fixed list of URLs is present in the file; it does not
-  check content parity or synchronization with the published pages those
-  links point to. No test or build step was found that generates or
-  verifies the docs `llms.txt` against the live page set, so it should not
-  be described as "kept in sync" by CI; its link list is otherwise confirmed
-  to resolve by direct spot-check (sampled links returned HTTP 200, with a
-  couple of expected redirects).
-- No directive pointing agents to `llms.txt` was found near the top of the
-  HTML or Markdown-equivalent content on sampled docs pages.
+- The `llms.txt` community-link test (`scripts/llms-txt-community.test.ts`) only
+  asserts that a fixed list of URLs is present in the file; it does not check
+  content parity or synchronization with the published pages those links point
+  to. No test or build step was found that generates or verifies the docs
+  `llms.txt` against the live page set, so it should not be described as "kept
+  in sync" by CI; its link list is otherwise confirmed to resolve by direct
+  spot-check (sampled links returned HTTP 200, with a couple of expected
+  redirects).
+- No directive pointing agents to `llms.txt` was found near the top of the HTML
+  or Markdown-equivalent content on sampled docs pages.
 - The docs `llms.txt` file itself is small (under 3 KB for the whole file at
-  assessment time), well within an agent's context window; this assessment
-  did not separately check individual page size or how tabbed components and
-  code fences serialize to Markdown, since no Markdown mirror exists to
-  check.
-- No CLOMonitor or `afdocs check` run against `docs.hivecommons.dev` was
-  found wired into CI; the only score available at review time was an
-  independently run, one-off `afdocs check` (see below), not a CI-enforced
-  gate.
+  assessment time), well within an agent's context window; this assessment did
+  not separately check individual page size or how tabbed components and code
+  fences serialize to Markdown, since no Markdown mirror exists to check.
+- No CLOMonitor or `afdocs check` run against `docs.hivecommons.dev` was found
+  wired into CI; the only score available at review time was an independently
+  run, one-off `afdocs check` (see below), not a CI-enforced gate.
 
 The CLOMonitor Agent-readiness score cited during review
-(https://clomonitor.io/projects/cncf/hive#hive_agent_readiness) scans the
-hosted Hive application (`hive.hivecommons.dev`), not the documentation site
-in scope for this assessment (`docs.hivecommons.dev`); it should not be used
-as evidence for this criterion. An independent `afdocs check`-style scorecard
-run against `docs.hivecommons.dev` during review reported an overall score of
-70/100 (C), with Content Discoverability at 59/100 (F), consistent with the
-gaps above. This criterion is rated against `docs.hivecommons.dev`
-directly rather than carried over from a CLOMonitor score scoped to a
-different domain.
+(https://clomonitor.io/projects/cncf/hive#hive_agent_readiness) scans the hosted
+Hive application (`hive.hivecommons.dev`), not the documentation site in scope
+for this assessment (`docs.hivecommons.dev`); it should not be used as evidence
+for this criterion. An independent `afdocs check`-style scorecard run against
+`docs.hivecommons.dev` during review reported an overall score of 70/100 (C),
+with Content Discoverability at 59/100 (F), consistent with the gaps above. This
+criterion is rated against `docs.hivecommons.dev` directly rather than carried
+over from a CLOMonitor score scoped to a different domain.
 
 #### HTTPS access & HTTP redirect
 
@@ -709,11 +706,10 @@ project family grows.
 
 #### Minimal website requirements
 
-- Assess the project against the full
-  [Website guidelines checklist][website-guidelines] (licensing, community,
-  copyright, trademark, branding) item by item, as the KubeVirt assessment
-  does, rather than inferring majority satisfaction from documentation depth
-  alone.
+- Assess the project against the full [Website guidelines
+  checklist][website-guidelines] (licensing, community, copyright, trademark,
+  branding) item by item, as the KubeVirt assessment does, rather than inferring
+  majority satisfaction from documentation depth alone.
 
 #### Usability, accessibility and devices
 
@@ -728,17 +724,16 @@ No recommendation; this area is strong.
 
 #### Case studies and social proof
 
-No recommendation; this area is strong. The one rubric gap (no project blog)
-is a content-creation decision for maintainers, not a documentation-structure
-fix.
+No recommendation; this area is strong. The one rubric gap (no project blog) is
+a content-creation decision for maintainers, not a documentation-structure fix.
 
 #### SEO, Analytics and site-local search
 
 - Decide whether documentation page views should be collected at all; the
   `GoogleAnalytics` component currently is not reachable through normal
   navigation. If the project wants that data, mount the existing component in
-  the documentation layout (`src/app/docs/layout.tsx`) in addition to the
-  locale layout. This is a project decision, not a defect to fix outright.
+  the documentation layout (`src/app/docs/layout.tsx`) in addition to the locale
+  layout. This is a project decision, not a defect to fix outright.
 - If analytics on the marketing site is ever desired, update its CSP
   `script-src` allowlist (SHA-256 pin or nonce) rather than relaxing it broadly,
   to preserve the current strict CSP posture.
@@ -751,10 +746,9 @@ fix.
 
 #### AI Agent Readiness
 
-- Add the blockquoted summary this project's criteria call for to `llms.txt`
-  on the docs site (llmstxt.org itself only requires the H1, but the
-  blockquote is still recommended practice and this project's own criteria
-  require it).
+- Add the blockquoted summary this project's criteria call for to `llms.txt` on
+  the docs site (llmstxt.org itself only requires the H1, but the blockquote is
+  still recommended practice and this project's own criteria require it).
 - Point `llms.txt` links at Markdown versions of pages rather than HTML pages,
   once a Markdown mirror exists.
 - Add a per-page Markdown mirror (for example, serving the underlying
