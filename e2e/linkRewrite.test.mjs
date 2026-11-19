@@ -84,9 +84,6 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
 
   it('sets og:url to the localhost fallback in a non-production, non-preview build', async () => {
     const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
-    assert.match(
-      html,
-      /property="og:url" content="http:\/\/localhost:3000\/"/,
-    );
+    assert.match(html, /property="og:url" content="http:\/\/localhost:3000\/"/);
   });
 });
