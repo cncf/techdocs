@@ -1,4 +1,4 @@
-// cSpell:ignore keda litmuschaos
+// cSpell:ignore extensionless howto keda litmuschaos
 import assert from 'node:assert/strict';
 import { after, before, describe, it } from 'node:test';
 import { execFileSync } from 'node:child_process';
@@ -49,6 +49,22 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
       'utf-8',
     );
     assert.match(html, /href="\/docs\/analysis\/criteria\/"/);
+  });
+
+  // `lib/remarkRewriteLinks/index.test.mts` unit-tests the "bare
+  // extensionless cross-plugin link with no sub-path" branch (no `.md`
+  // extension, visited as a `definition` node) in isolation. The existing
+  // cross-plugin e2e assertion above only exercises a `.md`-suffixed
+  // `link` node, so a regression confined to the extensionless-or-definition
+  // combination would pass every existing e2e assertion. `howto.md`'s
+  // `[analyses]: ../../analyses` reference-style definition exercises both
+  // gaps at once.
+  it('rewrites a bare extensionless cross-plugin reference link to a trailing slash', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/analysis/howto/index.html'),
+      'utf-8',
+    );
+    assert.match(html, /href="\/analyses\/">analyses</);
   });
 
   // The keda assertion above only exercises inline `[text](url)` links,
