@@ -42,6 +42,8 @@ KubeVirt issues backlog: YAML front matter with `title`, `labels`, and the
 destination `repo`, followed by the issue body. Labels listed below are
 confirmed to already exist in the destination repository.
 
+<!-- markdownlint-disable line-length -->
+
 | File                                                                                                   | Title                                                                | Labels                              | Destination repo                    |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- |
 | [`issues/01-cli-reference-landing-page.md`](issues/01-cli-reference-landing-page.md)                   | Add a CLI reference landing page                                     | `good first issue`, `documentation` | `hivecommons/hive`                  |
@@ -54,3 +56,5 @@ confirmed to already exist in the destination repository.
 | [`issues/08-seed-good-first-issue-backlog.md`](issues/08-seed-good-first-issue-backlog.md)             | Seed a beginner-friendly documentation issue backlog                 | (none)                              | `hivecommons/docs`                  |
 | [`issues/09-assess-website-guidelines-checklist.md`](issues/09-assess-website-guidelines-checklist.md) | Assess the full Website Guidelines checklist against the Sandbox bar | (none)                              | `hivecommons/hivecommons.github.io` |
 | [`issues/10-strengthen-agent-readiness.md`](issues/10-strengthen-agent-readiness.md)                   | Strengthen docs.hivecommons.dev's AI Agent Readiness                 | (none)                              | `hivecommons/docs`                  |
+
+<!-- markdownlint-enable line-length -->
