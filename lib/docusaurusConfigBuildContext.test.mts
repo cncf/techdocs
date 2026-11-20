@@ -144,16 +144,18 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
   });
 
   // Every case above pins HEAD/BRANCH/GITHUB_HEAD_REF/GITHUB_REF_NAME and
-  // REPOSITORY_URL so getCurrentBranch()/getGitHubRepoUrl()'s real `git
-  // branch --show-current` / `git remote get-url origin` fallbacks never
-  // run during a build. Those fallbacks are 100% unit-covered in isolation
+  // REPOSITORY_URL, which the production code (and getCurrentBranch()/
+  // getGitHubRepoUrl()) treat as equivalent to "unset" because it checks
+  // truthiness, not key presence. That keeps every case above deterministic
+  // by skipping the real `git branch --show-current` / `git remote get-url
+  // origin` fallbacks. Those fallbacks are 100% unit-covered in isolation
   // (lib/getCurrentBranch.test.mts, lib/getGitHubRepoUrl.test.mts), but no
   // suite asserted they're actually wired into docusaurus.config.ts's
-  // assetBaseUrl when a deploy-preview build runs with none of those env
-  // vars set at all, e.g. a bare `netlify build` outside CI. A regression
-  // that stopped passing their return values through to assetBaseUrl would
-  // pass every unit test above while still breaking that real build.
-  it('wires the real git branch/remote into the asset URL for a deploy-preview build with no env overrides', () => {
+  // assetBaseUrl when a deploy-preview build runs with those vars cleared,
+  // e.g. a bare `netlify build` outside CI. A regression that stopped
+  // passing their return values through to assetBaseUrl would pass every
+  // unit test above while still breaking that real build.
+  it('wires the real git branch/remote into the asset URL for a deploy-preview build with branch/repo env vars cleared', (t) => {
     const keys = [
       'HEAD',
       'BRANCH',
@@ -167,19 +169,39 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
       delete process.env[key];
     }
 
-    let expectedBranch: string;
-    let expectedRepo: string;
+    let realBranch: string | undefined;
+    let realRepo: string | undefined;
+    const savedCwd = process.cwd();
     try {
+      // readConfigUrls spawns the harness with cwd: repoRoot, so the real
+      // `git` fallback it exercises reads repoRoot's git state. Match that
+      // here (rather than this process's own cwd) so both sides agree
+      // regardless of where the test runner was invoked from.
+      process.chdir(repoRoot);
       // Computed via the same already-unit-tested helpers docusaurus.config.ts
       // calls, not reimplemented here: this test proves the *wiring*, not the
       // helpers' own git-fallback correctness.
-      expectedBranch = getCurrentBranch() || 'main';
-      expectedRepo = getGitHubRepoUrl() || 'https://github.com/cncf/techdocs';
+      realBranch = getCurrentBranch();
+      realRepo = getGitHubRepoUrl();
     } finally {
+      process.chdir(savedCwd);
       for (const key of keys) {
         if (saved[key] === undefined) delete process.env[key];
         else process.env[key] = saved[key];
       }
+    }
+
+    // If this environment can't produce a real branch/remote (detached HEAD,
+    // no origin, no .git directory), both getCurrentBranch()/
+    // getGitHubRepoUrl() and docusaurus.config.ts collapse to the same
+    // hardcoded defaults, so the assertion below would pass vacuously
+    // without ever exercising the git fallback. Skip rather than claim a
+    // pass that proves nothing.
+    if (!realBranch || !realRepo) {
+      t.skip(
+        'no real git branch/remote available in this environment; cannot prove the fallback wiring here',
+      );
+      return;
     }
 
     const { assetBaseUrl } = readConfigUrls({
@@ -192,6 +214,6 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
       REPOSITORY_URL: '',
     });
 
-    assert.equal(assetBaseUrl, `${expectedRepo}/blob/${expectedBranch}`);
+    assert.equal(assetBaseUrl, `${realRepo}/blob/${realBranch}`);
   });
 });
