@@ -233,6 +233,8 @@ Example:
 
 ## Website
 
+<a id="minimal-website-requirements"></a> <a id="single-source-requirement"></a>
+
 ### Core website requirements
 
 This area of focus includes the single-source requirement and requirements based
@@ -281,8 +283,8 @@ more information and context.
   randomized on load?
 - Is the CNCF logo displayed near the bottom of the project homepage?
 - Is the website free of links or forms that capture enterprise support leads?
-- Is the website free of references to the origin company other than a statement
-  of the project's origin?
+- Is the project homepage free of references to the origin company other than a
+  statement of the project's origin?
 - Is the website repository hosted in the same GitHub organization as the main
   project?
 - Is the website source hosted in an open source repository?

@@ -207,8 +207,8 @@ documentation. We evaluate on the following:
 New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
+> Author's Note: Copy and answer the [Evaluation
+> questions](../criteria.md#[Evaluation questions](../criteria.md#new-user-content-questions)).
 
 #### Content maintainability & site mechanics
 
@@ -426,7 +426,7 @@ CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
 
 > Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#core-website-requirements-questions).
+> [Evaluation questions](../criteria.md#../criteria.md#branding-and-design-questions)).
 
 #### Case studies and social proof
 
@@ -487,9 +487,7 @@ We evaluate on the following:
 > Author's Note: Write general recommendations based on the comments from the
 > previous section.
 
-#### Single-source requirement
-
-#### Minimal website requirements
+#### Core website requirements
 
 #### Usability, accessibility and devices
 
@@ -517,10 +515,12 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
+- [criteria]: ../criteria.md
+- [implementation]: ./implementation.md
+- [Rating (1-5)]: #rating-values
+
 #### Links
 
-- [criteria](../criteria.md)
-- [implementation](implementation.md)
 - [issues list](issues-list.md)
 - [rfc-spec](https://www.rfc-editor.org/rfc/rfc2119)
 - [website guidelines](../../website-guidelines-checklist.md)
