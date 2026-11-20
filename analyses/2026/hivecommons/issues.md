@@ -36,7 +36,7 @@ The CNCF Tech Docs effort is tracked in the CNCF Tech Docs repo:
 
 ## Issues
 
-Each issue below is its own file under [`issues/`](issues/), formatted the way
+Each issue below is its own file under [`issues/`](.), formatted the way
 [cncf/techdocs#385](https://github.com/cncf/techdocs/pull/385) formatted the
 KubeVirt issues backlog: YAML front matter with `title`, `labels`, and the
 destination `repo`, followed by the issue body. Labels listed below are
