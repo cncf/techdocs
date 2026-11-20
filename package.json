@@ -40,7 +40,7 @@
     "report:coverage-summary": "node scripts/coverage-summary.mjs",
     "test:e2e": "node --test 'e2e/**/*.test.mjs'",
     "test:unit": "node --experimental-strip-types --experimental-test-module-mocks --test 'lib/**/*.test.mts' 'scripts/**/*.test.mjs'",
-    "test": "npm run check && npm run test:unit",
+    "test": "npm run check && npm run test:unit && npm run test:e2e",
     "typecheck": "tsc",
     "update:packages": "npx npm-check-updates -u"
   },
