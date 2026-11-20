@@ -49,8 +49,7 @@ the `page-map.ts` follow-up is also filed and done. A merged source file in
 `hivecommons/docs:src/app/docs/page-map.ts`.
 
 This issue tracks recommended changes resulting from an analysis of the Hive
-Commons documentation requested in
-[cncf/techdocs#395][issue-395].
+Commons documentation requested in [cncf/techdocs#395][issue-395].
 
 [issue-395]: https://github.com/cncf/techdocs/issues/395
 

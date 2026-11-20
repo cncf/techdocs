@@ -42,15 +42,15 @@ KubeVirt issues backlog: YAML front matter with `title`, `labels`, and the
 destination `repo`, followed by the issue body. Labels listed below are
 confirmed to already exist in the destination repository.
 
-| File | Title | Labels | Destination repo |
-| ---- | ----- | ------ | ----------------- |
-| [`issues/01-cli-reference-landing-page.md`](issues/01-cli-reference-landing-page.md) | Add a CLI reference landing page | `good first issue`, `documentation` | `hivecommons/hive` |
-| [`issues/02-governance-pointer-docs-readme.md`](issues/02-governance-pointer-docs-readme.md) | State the org-level governance pointer in the docs README | `good first issue`, `documentation` | `hivecommons/docs` |
-| [`issues/03-governance-pointer-website-readme.md`](issues/03-governance-pointer-website-readme.md) | State the org-level governance pointer in the website README | `good first issue`, `documentation` | `hivecommons/hivecommons.github.io` |
-| [`issues/04-reconcile-codeowners-with-roster.md`](issues/04-reconcile-codeowners-with-roster.md) | Reconcile hivecommons/docs code ownership with the maintainer roster | (none) | `hivecommons/docs` |
-| [`issues/05-add-api-route-doc-drift-check.md`](issues/05-add-api-route-doc-drift-check.md) | Add a drift check between API routes and the API reference | (none) | `hivecommons/hive` |
-| [`issues/06-run-accessibility-scan.md`](issues/06-run-accessibility-scan.md) | Run and record an accessibility scan for both sites | `good first issue`, `documentation` | `hivecommons/hivecommons.github.io` |
-| [`issues/07-rewrite-docker-compose-quickstart.md`](issues/07-rewrite-docker-compose-quickstart.md) | Rewrite the Docker Compose quickstart as numbered steps | (none) | `hivecommons/hive` |
-| [`issues/08-seed-good-first-issue-backlog.md`](issues/08-seed-good-first-issue-backlog.md) | Seed a beginner-friendly documentation issue backlog | (none) | `hivecommons/docs` |
-| [`issues/09-assess-website-guidelines-checklist.md`](issues/09-assess-website-guidelines-checklist.md) | Assess the full Website Guidelines checklist against the Sandbox bar | (none) | `hivecommons/hivecommons.github.io` |
-| [`issues/10-strengthen-agent-readiness.md`](issues/10-strengthen-agent-readiness.md) | Strengthen docs.hivecommons.dev's AI Agent Readiness | (none) | `hivecommons/docs` |
+| File                                                                                                   | Title                                                                | Labels                              | Destination repo                    |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- |
+| [`issues/01-cli-reference-landing-page.md`](issues/01-cli-reference-landing-page.md)                   | Add a CLI reference landing page                                     | `good first issue`, `documentation` | `hivecommons/hive`                  |
+| [`issues/02-governance-pointer-docs-readme.md`](issues/02-governance-pointer-docs-readme.md)           | State the org-level governance pointer in the docs README            | `good first issue`, `documentation` | `hivecommons/docs`                  |
+| [`issues/03-governance-pointer-website-readme.md`](issues/03-governance-pointer-website-readme.md)     | State the org-level governance pointer in the website README         | `good first issue`, `documentation` | `hivecommons/hivecommons.github.io` |
+| [`issues/04-reconcile-codeowners-with-roster.md`](issues/04-reconcile-codeowners-with-roster.md)       | Reconcile hivecommons/docs code ownership with the maintainer roster | (none)                              | `hivecommons/docs`                  |
+| [`issues/05-add-api-route-doc-drift-check.md`](issues/05-add-api-route-doc-drift-check.md)             | Add a drift check between API routes and the API reference           | (none)                              | `hivecommons/hive`                  |
+| [`issues/06-run-accessibility-scan.md`](issues/06-run-accessibility-scan.md)                           | Run and record an accessibility scan for both sites                  | `good first issue`, `documentation` | `hivecommons/hivecommons.github.io` |
+| [`issues/07-rewrite-docker-compose-quickstart.md`](issues/07-rewrite-docker-compose-quickstart.md)     | Rewrite the Docker Compose quickstart as numbered steps              | (none)                              | `hivecommons/hive`                  |
+| [`issues/08-seed-good-first-issue-backlog.md`](issues/08-seed-good-first-issue-backlog.md)             | Seed a beginner-friendly documentation issue backlog                 | (none)                              | `hivecommons/docs`                  |
+| [`issues/09-assess-website-guidelines-checklist.md`](issues/09-assess-website-guidelines-checklist.md) | Assess the full Website Guidelines checklist against the Sandbox bar | (none)                              | `hivecommons/hivecommons.github.io` |
+| [`issues/10-strengthen-agent-readiness.md`](issues/10-strengthen-agent-readiness.md)                   | Strengthen docs.hivecommons.dev's AI Agent Readiness                 | (none)                              | `hivecommons/docs`                  |

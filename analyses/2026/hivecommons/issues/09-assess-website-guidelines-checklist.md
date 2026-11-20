@@ -20,8 +20,7 @@ KubeVirt assessment did, and record the results so the rating can move from
 "partially assessed" to confirmed.
 
 This issue tracks recommended changes resulting from an analysis of the Hive
-Commons documentation requested in
-[cncf/techdocs#395][issue-395].
+Commons documentation requested in [cncf/techdocs#395][issue-395].
 
 [issue-395]: https://github.com/cncf/techdocs/issues/395
 

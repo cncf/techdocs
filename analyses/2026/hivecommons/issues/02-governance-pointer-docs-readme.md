@@ -6,19 +6,18 @@ repo: https://github.com/hivecommons/docs/issues
 
 ## Description
 
-Audience: New contributors and auditors starting from `hivecommons/docs`
-rather than `hivecommons/hive`.
+Audience: New contributors and auditors starting from `hivecommons/docs` rather
+than `hivecommons/hive`.
 
 Type: Conceptual / Governance.
 
-`hivecommons/docs:README.md` does not state that project governance is
-defined at the organization level. A reader has to infer this indirectly via
-cross-references in `hive`'s own `GOVERNANCE.md`. Add one sentence to the top
-of the README linking to `hivecommons/.github:GOVERNANCE.md`.
+`hivecommons/docs:README.md` does not state that project governance is defined
+at the organization level. A reader has to infer this indirectly via
+cross-references in `hive`'s own `GOVERNANCE.md`. Add one sentence to the top of
+the README linking to `hivecommons/.github:GOVERNANCE.md`.
 
 This issue tracks recommended changes resulting from an analysis of the Hive
-Commons documentation requested in
-[cncf/techdocs#395][issue-395].
+Commons documentation requested in [cncf/techdocs#395][issue-395].
 
 [issue-395]: https://github.com/cncf/techdocs/issues/395
 
