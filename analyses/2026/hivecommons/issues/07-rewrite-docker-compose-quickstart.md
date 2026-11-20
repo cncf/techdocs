@@ -15,7 +15,7 @@ required configuration changes as comments inside one large shell command block
 rather than presenting them as numbered, step-by-step instructions, which does
 not meet the documentation criteria's step-by-step bar - the same gap a Flatcar
 assessment flagged (see
-[analyses/2026/flatcar/analysis.md](https://github.com/cncf/techdocs/blob/main/analyses/2026/flatcar/analysis.md#L195-L201)).
+[analyses/2026/flatcar/analysis.md](../../flatcar/analysis.md#comments)).
 Revise that section into clearly numbered steps.
 
 This issue tracks recommended changes resulting from an analysis of the Hive
