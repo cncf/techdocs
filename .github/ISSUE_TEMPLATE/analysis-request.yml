@@ -104,8 +104,7 @@ body:
       label: Project contacts
       description:
         List the GitHub handles of project community members who can help with
-        the analysis, one per line. TechDocs notifies them on this issue before
-        drafting begins.
+        the analysis, one per line.
       placeholder: '@community-member'
     validations:
       required: true
@@ -133,7 +132,6 @@ body:
       label: AI involvement disclosure
       options:
         - label:
-            I understand that an AI agent will draft the analysis, a technical
-            writer will review it, and TechDocs will notify the project contacts
-            before drafting begins.
+            I understand that an AI agent will draft the analysis and a technical
+            writer will review it.
           required: true
