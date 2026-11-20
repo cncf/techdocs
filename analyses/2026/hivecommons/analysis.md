@@ -831,4 +831,3 @@ The numeric rating values used in this document are as follows:
 [issue-395]: https://github.com/cncf/techdocs/issues/395
 [sandbox-545]: https://github.com/cncf/sandbox/issues/545
 [project-website]: https://hivecommons.dev
-[kubevirt-project-docs]: ../kubevirt/analysis.md#project-documentation
