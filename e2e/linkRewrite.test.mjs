@@ -109,10 +109,15 @@ describe('deploy-preview build wires branch/repo detection into the rewritten .c
         ...process.env,
         BUILD_ENV: 'deploy-preview',
         DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
-        // Pin branch/repo detection to deterministic values instead of
-        // relying on the sandbox's ambient git checkout/remote state,
-        // matching the env vars getCurrentBranch()/getGitHubRepoUrl()
-        // already read for Netlify/GitHub Actions deploy-preview builds.
+        // Clear the higher-priority inputs getCurrentBranch() checks
+        // (HEAD, BRANCH, GITHUB_HEAD_REF) so this pinned GITHUB_REF_NAME
+        // can't be overridden by the inherited environment, e.g. a real
+        // GitHub Actions pull-request job setting GITHUB_HEAD_REF to the
+        // actual PR branch. Matches the pattern used by the config
+        // integration harness (docusaurusConfigBuildContext.test.mts).
+        HEAD: '',
+        BRANCH: '',
+        GITHUB_HEAD_REF: '',
         GITHUB_REF_NAME: 'e2e-preview-branch',
         REPOSITORY_URL: 'https://github.com/example-org/example-repo',
       },
