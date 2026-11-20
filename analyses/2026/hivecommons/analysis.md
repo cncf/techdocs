@@ -198,10 +198,10 @@ Website-guidelines half remains unverified.
 
 | Criterion                  | Rating (1-5)                   |
 | -------------------------- | ------------------------------ |
-| Information architecture   | 4 - Meets or exceeds standards |
-| New user content           | 4 - Meets or exceeds standards |
+| Information architecture   | 3 - Meets standards            |
+| New user content           | 2 - Needs improvement          |
 | Content maintainability    | 4 - Meets or exceeds standards |
-| Content creation processes | 4 - Meets or exceeds standards |
+| Content creation processes | 3 - Meets standards            |
 | Inclusive language         | 3 - Meets standards            |
 
 ### Comments
@@ -443,9 +443,9 @@ exhaustive.
 | Criterion                                 | Rating (1-5)                   |
 | ----------------------------------------- | ------------------------------ |
 | Communication methods documented          | 5 - Exemplary                  |
-| Beginner friendly issue backlog           | 3 - Meets standards            |
+| Beginner friendly issue backlog           | 2 - Needs improvement          |
 | "New contributor" getting started content | 4 - Meets or exceeds standards |
-| Project governance documentation          | 5 - Exemplary                  |
+| Project governance documentation          | 4 - Meets or exceeds standards |
 
 ### Comments
 
@@ -550,10 +550,10 @@ No significant gaps identified.
 | Usability, accessibility, and design        | Not assessed                   |
 | Branding and design                         | 4 - Meets or exceeds standards |
 | Case studies & social proof                 | 3 - Meets standards            |
-| SEO, Analytics, and site-local search       | 3 - Meets standards            |
-| Maintenance planning                        | 4 - Meets or exceeds standards |
+| SEO, Analytics, and site-local search       | 2 - Needs improvement          |
+| Maintenance planning                        | 3 - Meets standards            |
 | AI agent readiness                          | 2 - Needs improvement          |
-| HTTPS access & HTTP redirect                | 5 - Exemplary                  |
+| HTTPS access & HTTP redirect                | 3 - Meets standards            |
 
 Note: "Meets min website req." is partially assessed. The Sandbox
 rudimentary-documentation bar is confirmed (and exceeded), but the Sandbox
