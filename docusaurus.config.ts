@@ -89,7 +89,7 @@ const config: Config = {
         path: 'analyses',
         routeBasePath: 'analyses',
         sidebarPath: './sidebarsAnalyses.ts',
-        editUrl: isProd ? `${repo}/tree/main/analyses` : undefined,
+        editUrl: isProd ? `${repo}/tree/main` : undefined,
         beforeDefaultRemarkPlugins: [rewriteLinks],
       },
     ],
