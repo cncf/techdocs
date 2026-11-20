@@ -111,6 +111,63 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
   });
 });
 
+// `lib/docusaurusConfigBuildContext.test.mts` unit-tests the
+// BUILD_ENV=production branch of `getBuildContext()`/`docusaurus.config.ts`
+// (production site `url`, and `editUrl` set on both docs plugins) in
+// isolation, but no build anywhere in the suite above actually runs with
+// `BUILD_ENV=production` — the real Netlify production context
+// (`npm run build:production` -> `npm run _build`, which never sets
+// BUILD_ENV, so `getBuildContext.ts` defaults to 'production'). This build
+// reproduces that context so a wiring regression (e.g. editUrl silently
+// omitted, or url pointing at the wrong domain) fails here instead of only
+// surfacing on the live site.
+describe('production build wires isProd-dependent editUrl/url end-to-end', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-prod-build-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: { ...process.env, BUILD_ENV: 'production', DEPLOY_PRIME_URL: '' },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('renders the GitHub edit-this-page link for a docs page', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/assistance/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/docs\/assistance\.md"/,
+    );
+  });
+
+  it('renders the GitHub edit-this-page link for an analyses page', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/analyses\/2023\/backstage\/index\.md"/,
+    );
+  });
+
+  it('sets og:url to the production site domain', async () => {
+    const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
+    assert.match(
+      html,
+      /property="og:url" content="https:\/\/cncf-techdocs\.netlify\.app\/"/,
+    );
+  });
+});
+
 // The production build above always resolves to the `main` branch/repo
 // because `BUILD_ENV=dev` + a cleared `DEPLOY_PRIME_URL` keeps
 // getBuildContext() out of deploy-preview mode. getCurrentBranch() and
