@@ -51,6 +51,24 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
     assert.match(html, /href="\/docs\/analysis\/criteria\/"/);
   });
 
+  // The keda assertion above only exercises inline `[text](url)` links,
+  // which the remark plugin rewrites via its `link` visitor. Reference-style
+  // links (`[text][ref]` resolved through a separate `[ref]: url` line, as
+  // litmuschaos/analysis.md uses) are resolved by the same plugin's
+  // `definition` visitor instead - a distinct branch that
+  // lib/remarkRewriteLinks/index.test.mts already unit-tests in isolation
+  // ("rewrites inline, reference, image and angle-bracketed destinations")
+  // but that no e2e assertion had exercised against a real build, so a
+  // regression confined to the `definition` branch would pass every
+  // existing suite while still shipping broken reference-style links.
+  it('rewrites a reference-style cross-plugin analyses -> docs .md link', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2024/litmuschaos/analysis/index.html'),
+      'utf-8',
+    );
+    assert.match(html, /href="\/docs\/analysis\/criteria\/"/);
+  });
+
   // `lib/remarkRewriteLinks/index.test.mts` already unit-tests the `image`
   // visitor branch in isolation ("leaves cross-plugin image assets
   // untouched", asserted both directly against rewriteHref() and through the
