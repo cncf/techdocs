@@ -56,7 +56,9 @@ body:
     id: docs-url
     attributes:
       label: Documentation site
-      description: Leave blank if the documentation lives on the website above.
+      description:
+        Provide the documentation URL, including its path. Leave blank only if
+        it is identical to the project website URL.
     validations:
       required: false
   - type: input
