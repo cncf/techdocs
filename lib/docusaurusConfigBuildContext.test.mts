@@ -73,7 +73,7 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
     assert.equal(docsEditUrl, 'https://github.com/cncf/techdocs/tree/main');
     assert.equal(
       analysesEditUrl,
-      'https://github.com/cncf/techdocs/tree/main/analyses',
+      'https://github.com/cncf/techdocs/tree/main',
     );
     assert.equal(assetBaseUrl, 'https://github.com/cncf/techdocs/blob/main');
   });

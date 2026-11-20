@@ -132,7 +132,7 @@ describe('production build wires isProd-dependent editUrl/url end-to-end', () =>
     );
     assert.match(
       html,
-      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/analyses\/analyses\/2023\/backstage\/index\.md"/,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/analyses\/2023\/backstage\/index\.md"/,
     );
   });
 
