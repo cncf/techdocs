@@ -552,7 +552,7 @@ No significant gaps identified.
 | Case studies & social proof                 | 3 - Meets standards            |
 | SEO, Analytics, and site-local search       | 3 - Meets standards            |
 | Maintenance planning                        | 4 - Meets or exceeds standards |
-| AI agent readiness                          | 3 - Meets standards            |
+| AI agent readiness                          | 2 - Needs improvement          |
 | HTTPS access & HTTP redirect                | 5 - Exemplary                  |
 
 Note: "Meets min website req." is partially assessed. The Sandbox
