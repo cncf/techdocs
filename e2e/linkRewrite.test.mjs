@@ -61,4 +61,83 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
       /https:\/\/github\.com\/cncf\/techdocs\/blob\/main\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
     );
   });
+
+  // `lib/docusaurusConfigBuildContext.test.mts` unit-tests the
+  // "neither production nor deploy-preview" branch of getBuildContext()'s
+  // isProd/isDeployPreview fields (localhost `url`, omitted `editUrl`) in
+  // isolation via a child-process harness, but no build in this suite
+  // asserted that the real Docusaurus build output above (BUILD_ENV=dev)
+  // actually wires those fields into the rendered pages. This build already
+  // runs with BUILD_ENV=dev, so a regression that started emitting an
+  // edit-this-page link or a non-localhost og:url in that build would pass
+  // the unit tests while still failing here.
+  it('omits the edit-this-page link for a docs page in a non-production, non-preview build', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/assistance/index.html'),
+      'utf-8',
+    );
+    assert.doesNotMatch(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/docs\/assistance\.md"/,
+    );
+  });
+
+  it('sets og:url to the localhost fallback in a non-production, non-preview build', async () => {
+    const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
+    assert.match(html, /property="og:url" content="http:\/\/localhost:3000\/"/);
+  });
+});
+
+// The production build above always resolves to the `main` branch/repo
+// because `BUILD_ENV=dev` + a cleared `DEPLOY_PRIME_URL` keeps
+// getBuildContext() out of deploy-preview mode. getCurrentBranch() and
+// getGitHubRepoUrl() are 100% unit-covered in isolation
+// (lib/getCurrentBranch.test.mts, lib/getGitHubRepoUrl.test.mts), but no
+// suite asserted that docusaurus.config.ts's assetBaseUrl actually wires
+// their deploy-preview output into the rewritten .csv link during a real
+// build. This suite exercises exactly that path with deterministic env
+// vars, so a regression in that wiring fails here even when the unit
+// tests for each helper still pass in isolation.
+describe('deploy-preview build wires branch/repo detection into the rewritten .csv link', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-preview-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        BUILD_ENV: 'deploy-preview',
+        DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+        // Clear the higher-priority inputs getCurrentBranch() checks
+        // (HEAD, BRANCH, GITHUB_HEAD_REF) so this pinned GITHUB_REF_NAME
+        // can't be overridden by the inherited environment, e.g. a real
+        // GitHub Actions pull-request job setting GITHUB_HEAD_REF to the
+        // actual PR branch. Matches the pattern used by the config
+        // integration harness (docusaurusConfigBuildContext.test.mts).
+        HEAD: '',
+        BRANCH: '',
+        GITHUB_HEAD_REF: '',
+        GITHUB_REF_NAME: 'e2e-preview-branch',
+        REPOSITORY_URL: 'https://github.com/example-org/example-repo',
+      },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('rewrites the .csv asset link to the preview branch and repo, not main', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /https:\/\/github\.com\/example-org\/example-repo\/blob\/e2e-preview-branch\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
+    );
+    assert.doesNotMatch(html, /\/blob\/main\//);
+  });
 });
