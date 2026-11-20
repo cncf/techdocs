@@ -1,0 +1,137 @@
+name: Documentation analysis request
+description: Request a CNCF TechDocs analysis of your project's documentation.
+title: '[Analysis request]: '
+labels:
+  - Docs analysis
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to tell CNCF TechDocs which documentation to analyze.
+        A technical writer reviews each request. Work begins only after the
+        writer accepts the request and notifies the project contacts on this issue.
+
+        An AI agent drafts the analysis. A technical writer reviews every
+        finding before publication.
+  - type: input
+    id: project-name
+    attributes:
+      label: Project name
+      description: Which CNCF project's documentation should TechDocs analyze?
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Current CNCF maturity level
+      description: The project's level today.
+      options:
+        - Sandbox
+        - Incubating
+        - Graduated
+    validations:
+      required: true
+  - type: dropdown
+    id: moving-levels
+    attributes:
+      label: Is this project applying to move levels?
+      description:
+        If yes, TechDocs uses the criteria for the next maturity level.
+        Otherwise, TechDocs uses the criteria for the current level.
+      options:
+        - 'No'
+        - 'Yes'
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Project website
+      placeholder: https://example.io
+    validations:
+      required: true
+  - type: input
+    id: docs-url
+    attributes:
+      label: Documentation site
+      description: Leave blank if the documentation lives on the website above.
+    validations:
+      required: false
+  - type: input
+    id: repo
+    attributes:
+      label: Website or documentation repository
+      placeholder: https://github.com/org/repo
+    validations:
+      required: true
+  - type: textarea
+    id: other-scope
+    attributes:
+      label: Other repositories or sites in scope
+      description:
+        List any other repositories or sites the analysis should cover, one per
+        line. Include demo or governance sites if relevant.
+    validations:
+      required: false
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What should TechDocs exclude from the analysis, and why?
+    validations:
+      required: false
+  - type: textarea
+    id: domains
+    attributes:
+      label: Documentation domains
+      description:
+        List every domain the drafting agent needs to read, one per line.
+        Include documentation, demo, and governance sites. The agent can only
+        reach domains on its allowlist. These domains are added when TechDocs
+        accepts the request and removed afterward.
+      placeholder: |
+        docs.example.io
+        demo.example.io
+    validations:
+      required: true
+  - type: textarea
+    id: contacts
+    attributes:
+      label: Project contacts
+      description:
+        List the GitHub handles of project community members who can help with
+        the analysis, one per line. TechDocs notifies them on this issue before
+        drafting begins.
+      placeholder: '@community-member'
+    validations:
+      required: true
+  - type: input
+    id: tooling
+    attributes:
+      label: Site tooling
+      description:
+        Static site generator, theme, and hosting, if you know them, for example
+        Hugo with Docsy on Netlify.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else
+      description:
+        Share context for the analysis, such as known problem areas or recent
+        documentation work.
+    validations:
+      required: false
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: AI involvement disclosure
+      options:
+        - label:
+            I understand that an AI agent will draft the analysis, a technical
+            writer will review it, and TechDocs will notify the project contacts
+            before drafting begins.
+          required: true
