@@ -3,6 +3,8 @@ import { describe, it } from 'node:test';
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
 import url from 'node:url';
+import getCurrentBranch from './getCurrentBranch.ts';
+import getGitHubRepoUrl from './getGitHubRepoUrl.ts';
 
 // docusaurus.config.ts is excluded from the c8 coverage gate (it can't be
 // imported into a running test process without reloading its top-level
@@ -142,5 +144,57 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
       assetBaseUrl,
       'https://github.com/some-fork/techdocs/blob/my-feature-branch',
     );
+  });
+
+  // Every case above pins HEAD/BRANCH/GITHUB_HEAD_REF/GITHUB_REF_NAME and
+  // REPOSITORY_URL so getCurrentBranch()/getGitHubRepoUrl()'s real `git
+  // branch --show-current` / `git remote get-url origin` fallbacks never
+  // run during a build. Those fallbacks are 100% unit-covered in isolation
+  // (lib/getCurrentBranch.test.mts, lib/getGitHubRepoUrl.test.mts), but no
+  // suite asserted they're actually wired into docusaurus.config.ts's
+  // assetBaseUrl when a deploy-preview build runs with none of those env
+  // vars set at all, e.g. a bare `netlify build` outside CI. A regression
+  // that stopped passing their return values through to assetBaseUrl would
+  // pass every unit test above while still breaking that real build.
+  it('wires the real git branch/remote into the asset URL for a deploy-preview build with no env overrides', () => {
+    const keys = [
+      'HEAD',
+      'BRANCH',
+      'GITHUB_HEAD_REF',
+      'GITHUB_REF_NAME',
+      'REPOSITORY_URL',
+    ] as const;
+    const saved: Record<string, string | undefined> = {};
+    for (const key of keys) {
+      saved[key] = process.env[key];
+      delete process.env[key];
+    }
+
+    let expectedBranch: string;
+    let expectedRepo: string;
+    try {
+      // Computed via the same already-unit-tested helpers docusaurus.config.ts
+      // calls, not reimplemented here: this test proves the *wiring*, not the
+      // helpers' own git-fallback correctness.
+      expectedBranch = getCurrentBranch() || 'main';
+      expectedRepo = getGitHubRepoUrl() || 'https://github.com/cncf/techdocs';
+    } finally {
+      for (const key of keys) {
+        if (saved[key] === undefined) delete process.env[key];
+        else process.env[key] = saved[key];
+      }
+    }
+
+    const { assetBaseUrl } = readConfigUrls({
+      BUILD_ENV: 'deploy-preview',
+      DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+      HEAD: '',
+      BRANCH: '',
+      GITHUB_HEAD_REF: '',
+      GITHUB_REF_NAME: '',
+      REPOSITORY_URL: '',
+    });
+
+    assert.equal(assetBaseUrl, `${expectedRepo}/blob/${expectedBranch}`);
   });
 });
