@@ -85,6 +85,31 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
     assert.match(html, /href="\/docs\/analysis\/criteria\/"/);
   });
 
+  // `lib/remarkRewriteLinks/index.test.mts` already unit-tests the `image`
+  // visitor branch in isolation ("leaves cross-plugin image assets
+  // untouched", asserted both directly against rewriteHref() and through the
+  // full remark pipeline): rewriteHref() returns a cross-plugin `.png` image
+  // href unchanged because only `.md`/`.mdx`/extensionless cross-plugin
+  // paths get rewritten, leaving non-Markdown assets to Docusaurus's own
+  // asset resolver. A regression in that rewrite logic would already be
+  // caught by those unit tests. What no suite had asserted is that this real
+  // analyses/2021/kubernetes-gateway-api/analysis.md image actually resolves
+  // in a real build: the remark plugin's `link` and `definition` node
+  // handling is already e2e-asserted elsewhere in this file, but the `image`
+  // node the visitor also walks was not. This test verifies the Docusaurus
+  // integration and hashed-asset resolution end-to-end, not a rewrite
+  // regression the unit tests would miss.
+  it('leaves a cross-plugin image href untouched so Docusaurus resolves it to a hashed asset URL', async () => {
+    const html = await readFile(
+      path.join(
+        outDir,
+        'analyses/2021/kubernetes-gateway-api/analysis/index.html',
+      ),
+      'utf-8',
+    );
+    assert.match(html, /src="\/assets\/images\/gapi_info_arch-[0-9a-f]+\.png"/);
+  });
+
   it('rewrites an unbundled .csv asset link to its GitHub blob URL', async () => {
     const html = await readFile(
       path.join(outDir, 'analyses/2023/backstage/index.html'),
