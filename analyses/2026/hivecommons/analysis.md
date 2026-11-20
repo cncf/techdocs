@@ -4,10 +4,8 @@ created: 2026-11-17
 modified: 2026-11-18
 toc_max_heading_level: 4
 author:
-  AI-assisted draft (pilot). Has had multiple rounds of TechDocs (CNCF
-  cncf/techdocs) review; Hive Commons maintainer review is still pending.
-  (@clubanderson) is a Hive Commons project maintainer and has not yet reviewed
-  this draft.
+  Hive Commons Hive <280983584+hivecommons-hive[bot]@users.noreply.github.com>
+  Nate W <natew@cncf.io>
 ---
 
 <!-- markdownlint-disable no-duplicate-heading -->
