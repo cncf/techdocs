@@ -61,6 +61,31 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
       /https:\/\/github\.com\/cncf\/techdocs\/blob\/main\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
     );
   });
+
+  // `lib/docusaurusConfigBuildContext.test.mts` unit-tests the
+  // "neither production nor deploy-preview" branch of getBuildContext()'s
+  // isProd/isDeployPreview fields (localhost `url`, omitted `editUrl`) in
+  // isolation via a child-process harness, but no build in this suite
+  // asserted that the real Docusaurus build output above (BUILD_ENV=dev)
+  // actually wires those fields into the rendered pages. This build already
+  // runs with BUILD_ENV=dev, so a regression that started emitting an
+  // edit-this-page link or a non-localhost og:url in that build would pass
+  // the unit tests while still failing here.
+  it('omits the edit-this-page link for a docs page in a non-production, non-preview build', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/assistance/index.html'),
+      'utf-8',
+    );
+    assert.doesNotMatch(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/docs\/assistance\.md"/,
+    );
+  });
+
+  it('sets og:url to the localhost fallback in a non-production, non-preview build', async () => {
+    const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
+    assert.match(html, /property="og:url" content="http:\/\/localhost:3000\/"/);
+  });
 });
 
 // The production build above always resolves to the `main` branch/repo
