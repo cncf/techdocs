@@ -71,10 +71,7 @@ describe('docusaurus.config.ts (isProd-dependent branches)', () => {
 
     assert.equal(siteUrl, 'https://cncf-techdocs.netlify.app');
     assert.equal(docsEditUrl, 'https://github.com/cncf/techdocs/tree/main');
-    assert.equal(
-      analysesEditUrl,
-      'https://github.com/cncf/techdocs/tree/main/analyses',
-    );
+    assert.equal(analysesEditUrl, 'https://github.com/cncf/techdocs/tree/main');
     assert.equal(assetBaseUrl, 'https://github.com/cncf/techdocs/blob/main');
   });
 
