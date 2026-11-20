@@ -37,7 +37,8 @@ body:
     attributes:
       label: Is this project applying to move levels?
       description:
-        Tell us whether this analysis will support an application to the next CNCF maturity level.
+        Tell us whether this analysis will support an application to the next
+        CNCF maturity level.
       options:
         - 'No'
         - 'Yes'
@@ -131,6 +132,6 @@ body:
       label: AI involvement disclosure
       options:
         - label:
-            I understand that an AI agent will draft the analysis and a technical
-            writer will review it.
+            I understand that an AI agent will draft the analysis and a
+            technical writer will review it.
           required: true
