@@ -25,3 +25,21 @@ test('test:coverage enforces 100% coverage thresholds', async () => {
     );
   }
 });
+
+// docusaurus.config.ts is fully exercised by
+// lib/docusaurusConfigPreprocessor.test.mts and
+// lib/docusaurusConfigBuildContext.test.mts (both import the real file via
+// testHelpers/resolveExtensionlessTs.mjs), so excluding it from the c8 gate
+// is a stale blind spot: new untested code added to that file would pass
+// `npm run test:coverage` silently instead of failing it.
+test('test:coverage does not exclude docusaurus.config.ts from the gate', async () => {
+  const packageJsonPath = path.resolve('package.json');
+  const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf-8'));
+  const script = packageJson.scripts['test:coverage'];
+
+  assert.ok(script, 'test:coverage script must exist in package.json');
+  assert.ok(
+    !script.includes('docusaurus.config.ts'),
+    'test:coverage should not --exclude docusaurus.config.ts; it is unit-tested and should be gated',
+  );
+});
