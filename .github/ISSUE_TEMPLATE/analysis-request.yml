@@ -37,8 +37,7 @@ body:
     attributes:
       label: Is this project applying to move levels?
       description:
-        If yes, TechDocs uses the criteria for the next maturity level.
-        Otherwise, TechDocs uses the criteria for the current level.
+        Tell us whether this analysis will support an application to the next CNCF maturity level.
       options:
         - 'No'
         - 'Yes'
