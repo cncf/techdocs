@@ -426,7 +426,7 @@ CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
 
 > Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#../criteria.md#branding-and-design-questions)).
+> [Evaluation questions](../criteria.md#branding-and-design-questions).
 
 #### Case studies and social proof
 
