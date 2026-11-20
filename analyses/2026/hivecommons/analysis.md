@@ -229,19 +229,19 @@ which makes up the great majority of the content on `docs.hivecommons.dev`.
   effectively stub-level next to Hive's ~100+ pages. These are out of scope for
   ratings here but affect the overall impression of the Hive Commons docs site
   as a whole.
-- **Do user roles, use cases, and the happy path have documented coverage?** `getting-started.md`'s "Obtain a hive and check
-  access" table identifies three starting points, not four user roles: no hive
-  and seeking hosting, no hive and self-operating, or an existing dashboard
-  URL. Its "First-session route" states a sequence: connect the App,
-  authenticate and set limits, set cadences, then read findings. This assessment
-  did not follow that route end to end. For a self-hosting operator, the table
-  links to a deployment quickstart, but its "Continue when" condition says only
-  that the container is running and the dashboard opens. The Docker Compose
-  quickstart does not link back to Step 0 or the first-session route. So while
-  the docs describe an entry point and a sequence, successful cross-page
-  completion through first findings is not established here. The other two
-  starting points and whether user-facing features map to numbered tasks were
-  not assessed.
+- **Do user roles, use cases, and the happy path have documented coverage?**
+  `getting-started.md`'s "Obtain a hive and check access" table identifies three
+  starting points, not four user roles: no hive and seeking hosting, no hive and
+  self-operating, or an existing dashboard URL. Its "First-session route" states
+  a sequence: connect the App, authenticate and set limits, set cadences, then
+  read findings. This assessment did not follow that route end to end. For a
+  self-hosting operator, the table links to a deployment quickstart, but its
+  "Continue when" condition says only that the container is running and the
+  dashboard opens. The Docker Compose quickstart does not link back to Step 0 or
+  the first-session route. So while the docs describe an entry point and a
+  sequence, successful cross-page completion through first findings is not
+  established here. The other two starting points and whether user-facing
+  features map to numbered tasks were not assessed.
 - **Is there a complete API reference?** Partially. 16 hand-maintained pages
   cover ~650 routes, but the page itself frames this as a "pragmatic v1 endpoint
   index," not a complete reference, and explicitly excludes request/response
