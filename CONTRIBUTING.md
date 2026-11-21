@@ -23,5 +23,5 @@ suite: how to run it and how to extend it when you add code.
   coverage gate, so an uncovered line, branch, or function fails CI locally
   before you open a PR.
 - If your change affects the production build pipeline (plugins,
-  `docusaurus.config.ts`, sidebars), prefer adding or extending an end-to-end
+  `docusaurus.config.ts`, sidebars), consider adding or extending an end-to-end
   test in `e2e/` that runs the real build, in addition to any unit tests.
