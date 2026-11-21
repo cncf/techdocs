@@ -1,4 +1,4 @@
-// cSpell:ignore keda litmuschaos
+// cSpell:ignore extensionless howto keda litmuschaos
 import assert from 'node:assert/strict';
 import { after, before, describe, it } from 'node:test';
 import { execFileSync } from 'node:child_process';
@@ -51,6 +51,65 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
     assert.match(html, /href="\/docs\/analysis\/criteria\/"/);
   });
 
+  // `lib/remarkRewriteLinks/index.test.mts` unit-tests the "bare
+  // extensionless cross-plugin link with no sub-path" branch (no `.md`
+  // extension, visited as a `definition` node) in isolation. The existing
+  // cross-plugin e2e assertion above only exercises a `.md`-suffixed
+  // `link` node, so a regression confined to the extensionless-or-definition
+  // combination would pass every existing e2e assertion. `howto.md`'s
+  // `[analyses]: ../../analyses` reference-style definition exercises both
+  // gaps at once.
+  it('rewrites a bare extensionless cross-plugin reference link to a trailing slash', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/analysis/howto/index.html'),
+      'utf-8',
+    );
+    assert.match(html, /href="\/analyses\/">analyses</);
+  });
+
+  // The keda assertion above only exercises inline `[text](url)` links,
+  // which the remark plugin rewrites via its `link` visitor. Reference-style
+  // links (`[text][ref]` resolved through a separate `[ref]: url` line, as
+  // litmuschaos/analysis.md uses) are resolved by the same plugin's
+  // `definition` visitor instead - a distinct branch that
+  // lib/remarkRewriteLinks/index.test.mts already unit-tests in isolation
+  // ("rewrites inline, reference, image and angle-bracketed destinations")
+  // but that no e2e assertion had exercised against a real build, so a
+  // regression confined to the `definition` branch would pass every
+  // existing suite while still shipping broken reference-style links.
+  it('rewrites a reference-style cross-plugin analyses -> docs .md link', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2024/litmuschaos/analysis/index.html'),
+      'utf-8',
+    );
+    assert.match(html, /href="\/docs\/analysis\/criteria\/"/);
+  });
+
+  // `lib/remarkRewriteLinks/index.test.mts` already unit-tests the `image`
+  // visitor branch in isolation ("leaves cross-plugin image assets
+  // untouched", asserted both directly against rewriteHref() and through the
+  // full remark pipeline): rewriteHref() returns a cross-plugin `.png` image
+  // href unchanged because only `.md`/`.mdx`/extensionless cross-plugin
+  // paths get rewritten, leaving non-Markdown assets to Docusaurus's own
+  // asset resolver. A regression in that rewrite logic would already be
+  // caught by those unit tests. What no suite had asserted is that this real
+  // analyses/2021/kubernetes-gateway-api/analysis.md image actually resolves
+  // in a real build: the remark plugin's `link` and `definition` node
+  // handling is already e2e-asserted elsewhere in this file, but the `image`
+  // node the visitor also walks was not. This test verifies the Docusaurus
+  // integration and hashed-asset resolution end-to-end, not a rewrite
+  // regression the unit tests would miss.
+  it('leaves a cross-plugin image href untouched so Docusaurus resolves it to a hashed asset URL', async () => {
+    const html = await readFile(
+      path.join(
+        outDir,
+        'analyses/2021/kubernetes-gateway-api/analysis/index.html',
+      ),
+      'utf-8',
+    );
+    assert.match(html, /src="\/assets\/images\/gapi_info_arch-[0-9a-f]+\.png"/);
+  });
+
   it('rewrites an unbundled .csv asset link to its GitHub blob URL', async () => {
     const html = await readFile(
       path.join(outDir, 'analyses/2023/backstage/index.html'),
@@ -85,6 +144,63 @@ describe('production build applies the link-rewrite plugins end-to-end', () => {
   it('sets og:url to the localhost fallback in a non-production, non-preview build', async () => {
     const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
     assert.match(html, /property="og:url" content="http:\/\/localhost:3000\/"/);
+  });
+});
+
+// `lib/docusaurusConfigBuildContext.test.mts` unit-tests the
+// BUILD_ENV=production branch of `getBuildContext()`/`docusaurus.config.ts`
+// (production site `url`, and `editUrl` set on both docs plugins) in
+// isolation, but no build anywhere in the suite above actually runs with
+// `BUILD_ENV=production` — the real Netlify production context
+// (`npm run build:production` -> `npm run _build`, which never sets
+// BUILD_ENV, so `getBuildContext.ts` defaults to 'production'). This build
+// reproduces that context so a wiring regression (e.g. editUrl silently
+// omitted, or url pointing at the wrong domain) fails here instead of only
+// surfacing on the live site.
+describe('production build wires isProd-dependent editUrl/url end-to-end', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-prod-build-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: { ...process.env, BUILD_ENV: 'production', DEPLOY_PRIME_URL: '' },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('renders the GitHub edit-this-page link for a docs page', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/assistance/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/docs\/assistance\.md"/,
+    );
+  });
+
+  it('renders the GitHub edit-this-page link for an analyses page', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/analyses\/2023\/backstage\/index\.md"/,
+    );
+  });
+
+  it('sets og:url to the production site domain', async () => {
+    const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
+    assert.match(
+      html,
+      /property="og:url" content="https:\/\/cncf-techdocs\.netlify\.app\/"/,
+    );
   });
 });
 
