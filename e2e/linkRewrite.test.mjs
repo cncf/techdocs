@@ -7,6 +7,27 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import url from 'node:url';
 
+function currentGitBranch(cwd) {
+  return execFileSync('git', ['branch', '--show-current'], {
+    cwd,
+    encoding: 'utf8',
+  }).trim();
+}
+
+function currentGitHubRemote(cwd) {
+  const remoteUrl = execFileSync('git', ['remote', 'get-url', 'origin'], {
+    cwd,
+    encoding: 'utf8',
+  }).trim();
+  const ssh = remoteUrl.match(/^git@github\.com:([^/]+\/[^/]+?)(?:\.git)?$/);
+  if (ssh) return `https://github.com/${ssh[1]}`;
+  const https = remoteUrl.match(
+    /^https:\/\/github\.com\/([^/]+\/[^/]+?)(?:\.git)?$/,
+  );
+  if (https) return `https://github.com/${https[1]}`;
+  throw new Error(`unexpected origin remote URL: ${remoteUrl}`);
+}
+
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.join(__dirname, '..');
 
@@ -255,5 +276,62 @@ describe('deploy-preview build wires branch/repo detection into the rewritten .c
       /https:\/\/github\.com\/example-org\/example-repo\/blob\/e2e-preview-branch\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
     );
     assert.doesNotMatch(html, /\/blob\/main\//);
+  });
+});
+
+// The deploy-preview suite above always pins GITHUB_REF_NAME and
+// REPOSITORY_URL, so getCurrentBranch() and getGitHubRepoUrl() only ever
+// take their env-var branches during a real build. Both helpers'
+// `execSync('git ...')` fallbacks (reached only when every relevant env var
+// is unset) are 100% unit-covered in isolation
+// (lib/getCurrentBranch.test.mts, lib/getGitHubRepoUrl.test.mts), but no
+// build in this suite ever wires that fallback output into a rendered page.
+// This suite clears every env var the two helpers check and asserts the
+// rewritten .csv link reflects this checkout's real branch and remote, so a
+// regression confined to the git-fallback branches fails here even when
+// the env-var unit tests still pass in isolation.
+describe('deploy-preview build falls back to real git branch/remote detection when no env vars are set', () => {
+  let outDir;
+  let expectedBranch;
+  let expectedRepo;
+
+  before(async () => {
+    expectedBranch = currentGitBranch(repoRoot);
+    expectedRepo = currentGitHubRemote(repoRoot);
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-git-fallback-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        BUILD_ENV: 'deploy-preview',
+        DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+        // Clear every env var getCurrentBranch()/getGitHubRepoUrl() check so
+        // both fall through to their `execSync('git ...')` branches instead
+        // of an env-provided value.
+        HEAD: '',
+        BRANCH: '',
+        GITHUB_HEAD_REF: '',
+        GITHUB_REF_NAME: '',
+        REPOSITORY_URL: '',
+      },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it("rewrites the .csv asset link to this checkout's real git branch and remote", async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      new RegExp(
+        `${expectedRepo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/blob/${expectedBranch}/analyses/2023/backstage/backstage-doc-survey\\.csv`,
+      ),
+    );
   });
 });
