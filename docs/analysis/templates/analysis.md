@@ -208,7 +208,7 @@ New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
 > Author's Note: Copy and answer the [Evaluation
-> questions](../criteria.md#[Evaluation questions](../criteria.md#new-user-content-questionss).
+> questions](../criteria.md#[Evaluation questions](../criteria.md#new-user-content-questions).
 
 #### Content maintainability & site mechanics
 
@@ -515,7 +515,6 @@ The numeric rating values used in this document are as follows
 
 - [criteria](../criteria.md)
 - [implementation](./implementation.md)
-- [Rating (1-5)](./rating-values)
 
 #### Links
 
