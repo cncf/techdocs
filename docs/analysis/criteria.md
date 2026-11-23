@@ -36,10 +36,10 @@ expectations.
 - If the product builds on or incorporates another product, does the
   documentation link to instructions for installing and configuring that
   product?
-- If the product exposes an API, is there an API reference that is complete or
-  automatically generated?
-- If the product provides a CLI, is there a CLI reference that is complete or
-  automatically generated?
+- If the product exposes an API, is there a complete API reference, whether
+  written manually or generated automatically?
+- If the product provides a CLI, is there a complete CLI reference, whether
+  written manually or generated automatically?
 - If the project serves more than one user role, are tasks organized by role or
   audience?
 - Is the documentation organized or labeled by content type (conceptual,
@@ -261,8 +261,9 @@ more information and context.
 
 #### Core website requirements questions
 
-- Does the project have a single source for its documentation, or a documented
-  reason for having more than one?
+- Does the project have a single source for its documentation, or, if it uses
+  multiple repositories, a documented strategy for managing mirrored files and
+  new contributions?
 - Do links to companies that offer support go to pages that mention support for
   the project?
 - Does each page have a copyright notice at the bottom that names the project
@@ -281,6 +282,8 @@ more information and context.
   statement "Copyright © $PROJECT_NAME a Series of LF Projects, LLC."?
 - If the website lists companies that offer support, is the list alphabetized or
   randomized on load?
+- If the website lists companies that offer support, has their vetting been
+  completed?
 - Is the CNCF logo displayed near the bottom of the project homepage?
 - Is the website free of links or forms that capture enterprise support leads?
 - Is the project homepage free of references to the origin company other than a
@@ -309,6 +312,10 @@ It is up to each project to set their own guidelines.
 - Do images have alt text?
 - Do pages use semantic HTML, such as ordered headings and landmarks, that
   screen readers and text-to-speech tools can navigate?
+- Are all essential website features usable with a keyboard alone?
+- Do text and interface controls have sufficient contrast against their
+  backgrounds?
+
 - Is the website layout responsive, so that pages are readable on a mobile
   device without horizontal scrolling?
 
@@ -416,16 +423,6 @@ portable, and easier to maintain.
   redirects?
 - Does the project monitor its CLOMonitor "Agent readiness" checks or run
   `afdocs check` against the site, ideally in CI?
-
-### Other
-
-- Is your website accessible via HTTPS?
-- Does HTTP access, if any, redirect to HTTPS?
-- Are links working and current?
-  - Internal documentation
-  - External documentation
-  - External websites
-  - Web applications
 
 ## Appendix A - Maturity levels
 

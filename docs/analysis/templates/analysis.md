@@ -36,9 +36,9 @@ reword a criterion in one file without making the same change in the other.
 ## Introduction
 
 This document is an analysis of the effectiveness and completeness of the
-[_PROJECT_] open source software (OSS) project's documentation and website:
-[_PROJECT_WEBSITE_]. It is funded by the CNCF Foundation as part of its overall
-effort to incubate, grow, and graduate open source cloud native software
+[_PROJECT_](_PROJECT-WEBSITE_) open source software (OSS) project's
+documentation and website. It is funded by the CNCF Foundation as part of its
+overall effort to incubate, grow, and graduate open source cloud native software
 projects.
 
 According to CNCF best practices guidelines, effective documentation is a
@@ -172,8 +172,8 @@ have (_very high_) criteria standards for documentation.
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be (_developing_) criteria professional-quality documentation alongside
-the project code.
+should be _developing_ criteria professional-quality documentation alongside the
+project code.
 
 | Criterion                  | [Rating (1-5)] |
 | -------------------------- | -------------- |
@@ -196,19 +196,19 @@ Documentation rubric.
 
 #### Information architecture
 
-The overall structure (pages/subpages/sections/subsections) of the project
-documentation. We evaluate on the following:
+> overall structure (pages/subpages/sections/subsections) of the project
+> documentation. We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#information-architecture-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#information-architecture-questions).
 
 #### New user content
 
 New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#new-user-content-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#new-user-content-questions).
 
 #### Content maintainability & site mechanics
 
@@ -217,8 +217,8 @@ become large maintenance burdens, particularly if you don’t plan for them.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
 
 #### Content creation processes
 
@@ -227,8 +227,8 @@ requires the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#content-creation-processes-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#content-creation-processes-questions).
 
 #### Inclusive language
 
@@ -236,8 +236,8 @@ Creating inclusive project communities is a key goal for all CNCF projects.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#inclusive-language-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#inclusive-language-questions).
 
 ### Recommendations
 
@@ -264,8 +264,8 @@ have (_very high_) criteria standards for documentation.
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be (_developing_) criteria professional-quality documentation alongside
-the project code.
+should be _developing_ criteria professional-quality documentation alongside the
+project code.
 
 | Criterion                                 | [Rating (1-5)] |
 | ----------------------------------------- | -------------- |
@@ -294,15 +294,15 @@ to reach you.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#communication-methods-documented-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#communication-methods-documented-questions).
 
 #### Beginner friendly issue backlog
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
 
 #### New contributor getting started content
 
@@ -312,8 +312,8 @@ in easily?
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
 
 #### Project governance documentation
 
@@ -321,8 +321,8 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#project-governance-documentation-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#project-governance-documentation-questions).
 
 ### Recommendations
 
@@ -347,8 +347,8 @@ have (_very high_) criteria standards for documentation.
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be (_developing_) criteria professional-quality documentation alongside
-the project code.
+should be _developing_ criteria professional-quality documentation alongside the
+project code.
 
 | Criterion                             | [Rating (1-5)] |
 | ------------------------------------- | -------------- |
@@ -397,8 +397,8 @@ applicable to all maturity levels.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#core-website-requirements-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#core-website-requirements-questions).
 
 #### Usability, accessibility and devices
 
@@ -415,16 +415,16 @@ It is up to each project to set their own guidelines.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
 
 #### Branding and design
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#branding-and-design-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#branding-and-design-questions).
 
 #### Case studies and social proof
 
@@ -433,8 +433,8 @@ organizations using it.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
 
 #### SEO, Analytics and site-local search
 
@@ -444,8 +444,8 @@ while optional, can offer the readers a site-focused search results.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
 
 #### Maintenance planning
 
@@ -454,8 +454,8 @@ project maintainers aren’t web developers.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#maintenance-planning-questions).
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#maintenance-planning-questions).
 
 #### AI Agent Readiness
 
@@ -470,13 +470,8 @@ portable, and easier to maintain.
 
 We evaluate on the following:
 
-> Author's Note: Copy and answer the
-> [Evaluation questions](../criteria.md#ai-agent-readiness-questions).
-
-#### Other
-
-- Is the website accessible via HTTPS?
-- Does HTTP access, if any, redirect to HTTPS?
+> Author's Note: Copy from the source template and answer the
+> [evaluation questions](../criteria.md#ai-agent-readiness-questions).
 
 ### Recommendations
 
