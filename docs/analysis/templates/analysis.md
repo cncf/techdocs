@@ -36,9 +36,9 @@ reword a criterion in one file without making the same change in the other.
 ## Introduction
 
 This document is an analysis of the effectiveness and completeness of the
-[_PROJECT_]`(PROJECT-WEBSITE)` open source software (OSS) project's
-documentation and website. It is funded by the CNCF Foundation as part of its
-overall effort to incubate, grow, and graduate open source cloud native software
+[_PROJECT_] open source software (OSS) project's documentation and website:
+[_PROJECT_WEBSITE_]. It is funded by the CNCF Foundation as part of its overall
+effort to incubate, grow, and graduate open source cloud native software
 projects.
 
 According to CNCF best practices guidelines, effective documentation is a
@@ -207,8 +207,8 @@ documentation. We evaluate on the following:
 New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
-> Author's Note: Copy and answer the [Evaluation
-> questions](../criteria.md#[Evaluation questions](../criteria.md#new-user-content-questions).
+> Author's Note: Copy and answer the
+> [Evaluation questions](../criteria.md#new-user-content-questions).
 
 #### Content maintainability & site mechanics
 
