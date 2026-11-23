@@ -14,6 +14,10 @@ function currentGitBranch(cwd) {
   }).trim();
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 function currentGitHubRemote(cwd) {
   const remoteUrl = execFileSync('git', ['remote', 'get-url', 'origin'], {
     cwd,
@@ -296,7 +300,11 @@ describe('deploy-preview build falls back to real git branch/remote detection wh
   let expectedRepo;
 
   before(async () => {
-    expectedBranch = currentGitBranch(repoRoot);
+    // getBuildContext.ts falls back to 'main' when getCurrentBranch()
+    // returns undefined, which is what happens on a detached-HEAD checkout
+    // (git branch --show-current prints ''). Mirror that fallback here so
+    // this test also passes on detached-HEAD CI checkouts.
+    expectedBranch = currentGitBranch(repoRoot) || 'main';
     expectedRepo = currentGitHubRemote(repoRoot);
     outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-git-fallback-'));
     execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
@@ -330,7 +338,7 @@ describe('deploy-preview build falls back to real git branch/remote detection wh
     assert.match(
       html,
       new RegExp(
-        `${expectedRepo.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/blob/${expectedBranch}/analyses/2023/backstage/backstage-doc-survey\\.csv`,
+        `${escapeRegExp(expectedRepo)}/blob/${escapeRegExp(expectedBranch)}/analyses/2023/backstage/backstage-doc-survey\\.csv`,
       ),
     );
   });
