@@ -409,9 +409,7 @@ be much less effort than retrofitting a desktop-first design.
 See also:
 
 - [mobile-first](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Responsive/Mobile_first)
-
 - [accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
-  measures for the website.
 
 It is up to each project to set their own guidelines.
 
