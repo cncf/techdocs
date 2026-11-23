@@ -327,7 +327,10 @@ describe('production build rewrites .mdx link destinations end-to-end', () => {
       path.join(outDir, 'analyses/2024/keda/e2e-mdx-fixture/index.html'),
       'utf-8',
     );
-    assert.match(html, /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/);
+    assert.match(
+      html,
+      /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/,
+    );
   });
 
   it('strips .mdx from a site-absolute /docs link to a trailing slash', async () => {
@@ -335,6 +338,9 @@ describe('production build rewrites .mdx link destinations end-to-end', () => {
       path.join(outDir, 'docs/analysis/e2e-mdx-fixture/index.html'),
       'utf-8',
     );
-    assert.match(html, /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/);
+    assert.match(
+      html,
+      /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/,
+    );
   });
 });
