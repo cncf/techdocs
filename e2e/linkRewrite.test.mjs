@@ -18,6 +18,20 @@ function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// Docusaurus serializes href attributes as HTML, so characters valid in a
+// branch name (e.g. `&`) are entity-encoded in the rendered output (`&amp;`).
+// Decode the handful of entities HTML attribute serialization can produce
+// before comparing against the raw branch name, otherwise a correct build
+// fails the assertion for any branch containing one of these characters.
+function decodeHtmlEntities(value) {
+  return value
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'");
+}
+
 function currentGitHubRemote(cwd) {
   const remoteUrl = execFileSync('git', ['remote', 'get-url', 'origin'], {
     cwd,
@@ -331,9 +345,11 @@ describe('deploy-preview build falls back to real git branch/remote detection wh
   });
 
   it("rewrites the .csv asset link to this checkout's real git branch and remote", async () => {
-    const html = await readFile(
-      path.join(outDir, 'analyses/2023/backstage/index.html'),
-      'utf-8',
+    const html = decodeHtmlEntities(
+      await readFile(
+        path.join(outDir, 'analyses/2023/backstage/index.html'),
+        'utf-8',
+      ),
     );
     assert.match(
       html,
