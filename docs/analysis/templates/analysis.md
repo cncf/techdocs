@@ -167,12 +167,12 @@ copyright and licensing issues.
 > Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_] criteria standards for documentation.
+have (_very high_) criteria standards for documentation.
 
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_] criteria professional-quality documentation alongside
+should be (_developing_) criteria professional-quality documentation alongside
 the project code.
 
 | Criterion                  | [Rating (1-5)] |
@@ -208,7 +208,7 @@ New users are the most avid users of documentation, and need content
 specifically for them. We evaluate on the following:
 
 > Author's Note: Copy and answer the [Evaluation
-> questions](../criteria.md#[Evaluation questions](../criteria.md#new-user-content-questions)).
+> questions](../criteria.md#[Evaluation questions](../criteria.md#new-user-content-questionss).
 
 #### Content maintainability & site mechanics
 
@@ -259,12 +259,12 @@ We evaluate on the following:
 > Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_] criteria standards for documentation.
+have (_very high_) criteria standards for documentation.
 
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_] criteria professional-quality documentation alongside
+should be (_developing_) criteria professional-quality documentation alongside
 the project code.
 
 | Criterion                                 | [Rating (1-5)] |
@@ -342,12 +342,12 @@ We evaluate on the following:
 > Author's Note: Pick the CNCF maturity level of the project:
 
 _PROJECT_ is a **graduated** project of CNCF. This means that the project should
-have [_very high_] criteria standards for documentation.
+have (_very high_) criteria standards for documentation.
 
 > Author's Note: or
 
 _PROJECT_ is an **incubating** project of CNCF. This means that the project
-should be [_developing_] criteria professional-quality documentation alongside
+should be (_developing_) criteria professional-quality documentation alongside
 the project code.
 
 | Criterion                             | [Rating (1-5)] |
@@ -435,8 +435,6 @@ organizations using it.
 
 We evaluate on the following:
 
-We evaluate on the following:
-
 > Author's Note: Copy and answer the
 > [Evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
 
@@ -515,9 +513,9 @@ The numeric rating values used in this document are as follows
 4. Meets or exceeds standards
 5. Exemplary
 
-- [criteria]: ../criteria.md
-- [implementation]: ./implementation.md
-- [Rating (1-5)]: #rating-values
+- [criteria](../criteria.md)
+- [implementation](./implementation.md)
+- [Rating (1-5)](./rating-values)
 
 #### Links
 

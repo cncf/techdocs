@@ -429,8 +429,13 @@ portable, and easier to maintain.
 
 ## Appendix A - Maturity levels
 
-Requirements are cumulative through project maturity levels so, for example,
-incubating projects must satisfy the requirements for sandbox projects.
+The criteria questions are not directly aligned with project maturity levels.
+Except for archived projects, requirements are cumulative through project
+maturity levels so, for example, incubating projects must satisfy the
+requirements for sandbox projects.
+
+Listed here are the minimal website requirements for projects based on their
+maturity level: sandbox, incubating, graduated and archived.
 
 ### Sandbox
 
@@ -474,3 +479,12 @@ incubating projects must satisfy the requirements for sandbox projects.
 
 - Are follow-through actions from the Docs assessment complete?
 - Does **project documentation** fully addresses the needs of stakeholders?
+
+### Archived
+
+- Is the website repo in an
+  [archived state](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)?
+- Is the archived status of the project obvious to those visiting the website,
+  such as through the use of a prominent banner?
+- If a successor project exists, are there links to its website and/or migration
+  documentation?
