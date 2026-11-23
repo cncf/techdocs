@@ -18,10 +18,10 @@ suite: how to run it and how to extend it when you add code.
 
 ## Adding tests for new code
 
-- New files under `lib/` (`.mts`) or `scripts/` (`.mjs`) require a shared location with a 
-  `*.test.mts` / `*.test.mjs` file. `npm run test:coverage` enforces a 100%
-  coverage gate, so an uncovered line, branch, or function fails that gate when
-  you run it locally before opening a PR. CI itself only runs
+- New files under `lib/` (`.mts`) or `scripts/` (`.mjs`) require a shared
+  location with a `*.test.mts` / `*.test.mjs` file. `npm run test:coverage`
+  enforces a 100% coverage gate, so an uncovered line, branch, or function fails
+  that gate when you run it locally before opening a PR. CI itself only runs
   format/link/markdown/spelling checks today; it does not yet run `test:unit`,
   `test:coverage`, or `test:e2e` (see #415).
 - If your change affects the production build pipeline (plugins,
