@@ -153,3 +153,201 @@ labels:
   - name: skip-implementation
     description: Phase B skipped; phase A merge opens phase C
     color: 'D4C5F9'
+  # Whose-turn status labels on deliverable PRs. The hive applies and swaps
+  # them from the model state (cncf-techdocs-assessment 2026.11.4 or later);
+  # names, colors and descriptions must match the model.
+  - name: ready-for-techdocs-review
+    description:
+      'Draft is open. TechDocs reviewer: run /verify, refine, then /ready.'
+    color: 'FEF2C0'
+  - name: ready-for-stakeholder-review
+    description:
+      'Ready for the project. Named stakeholders: review for accuracy and
+      comment /confirm.'
+    color: 'FBCA04'
+  - name: ready-for-approver
+    description:
+      Stakeholder confirmed and checks green. An independent approver merges.
+    color: '5319E7'
+  # Hive-managed labels. Mirror of what the hive creates on bind; the hive is
+  # the source of truth for this section. Declared here only so the Settings
+  # app sync does not delete them: the hive does not re-create a label deleted
+  # while it runs. Update when the hive adds or renames one.
+  - name: agent/quality
+    description: Created by Hive for agent-filed issue provenance
+    color: '8250df'
+  - name: author/clanker
+    description: "A contributor's own hive authored this PR under their login"
+    color: '8250df'
+  - name: author/hive
+    description:
+      "This repository's own hive (the App or one of its agent lanes) authored
+      this PR"
+    color: '1d76db'
+  - name: author/human
+    description: A person pushed this PR themselves
+    color: '6e7781'
+  - name: dco
+    description: All commits are DCO signed-off
+    color: '0e8a16'
+  - name: decision-needed
+    description:
+      "Hive is blocked on a human decision; a maintainer decides (see hive's
+      comment)."
+    color: 'd93f0b'
+  - name: hive/likely-done
+    description:
+      Hive verified that a merged PR references or claims this issue; pending
+      confirmation
+    color: '0e8a16'
+  - name: hive/partially-addressed
+    description:
+      A merged PR addressed only part of this issue; remainder still actionable
+    color: 'fbca04'
+  - name: hive/verified-open
+    color: 'ededed'
+  - name: hold
+    color: 'ededed'
+  - name: merge-method/merge
+    description:
+      'Hive merges this PR with a merge commit (mixed authorship, each commit
+      self-signed); never squash'
+    color: 'f5a623'
+  - name: no-dco
+    description:
+      'A commit is missing Signed-off-by — run `git rebase --signoff`'
+    color: 'd73a4a'
+  - name: quality
+    color: 'ededed'
+  - name: ready-for-review
+    description:
+      "Hive's work is done; a maintainer reviews, then removes this label to let
+      it merge."
+    color: '0e8a16'
+  - name: role/contributor
+    description:
+      "Author holds the contributor tier in this hive's registry; a human must
+      lgtm/approve"
+    color: '6e7781'
+  - name: role/newcomer
+    description:
+      Author holds the newcomer tier (self-registered); a human must
+      lgtm/approve
+    color: '6e7781'
+  - name: role/trusted
+    description:
+      Author is trusted for unattended merge (trusted-author role or
+      registry/claim tier in require_tiers)
+    color: '0e8a16'
+  - name: role/untrusted
+    description:
+      Author has no registry profile or verified hive claim (or is revoked);
+      never auto-merged
+    color: '6e7781'
+  - name: stage/010-actionable
+    description: Triaged; eligible for the hive to pick up
+    color: 'f5a623'
+  - name: stage/015-triage-needed
+    description:
+      "Actionable but held by the reporter-trust gate: awaiting a maintainer's
+      triage label"
+    color: 'f5a623'
+  - name: stage/017-possible-existing
+    description:
+      'Possibly exists · needs author: prior art found; confirm the gap or close
+      before an agent takes it'
+    color: 'f5a623'
+  - name: stage/018-open-for-discussion
+    description:
+      'Open for discussion: proposal / design issue with no live claim;
+      claimable, no agent work queued'
+    color: 'f5a623'
+  - name: stage/020-accepted
+    description: Accepted
+    color: 'f5a623'
+  - name: stage/020-claimed
+    description: Claimed by the scanner or a relay contributor
+    color: 'f5a623'
+  - name: stage/030-pr-in-progress
+    description:
+      An agent has a PR under way for this issue (branch pushed or PR request in
+      flight)
+    color: 'f5a623'
+  - name: stage/040-covered-by-pr
+    description: An open PR covers this issue
+    color: 'f5a623'
+  - name: stage/045-needs-decision
+    description:
+      'Issue parked on a person: needs-human or a maintainer decision is owed; a
+      hold label outranks it'
+    color: 'f5a623'
+  - name: stage/050-review-pending
+    description: Review swarm requested; awaiting a verdict for the current head
+    color: 'f5a623'
+  - name: stage/050-reviewer-check
+    description: Reviewer check
+    color: 'f5a623'
+  - name: stage/060-reviewed
+    description:
+      'Review swarm verdict approve; a gate is still pending (CI running, or
+      soak on an unadmitted head)'
+    color: 'f5a623'
+  - name: stage/060-stakeholder-review
+    description: Stakeholder review
+    color: 'f5a623'
+  - name: stage/070-drafting
+    description: Drafting
+    color: 'f5a623'
+  - name: stage/070-fixing
+    description:
+      'Hive-authored PR: CI red, changes requested or needs rebase; a hive agent
+      is fixing it'
+    color: 'f5a623'
+  - name: stage/071-needs-author
+    description:
+      'Human-authored PR: CI red, changes requested or conflicting; diagnosis
+      posted, the author must act'
+    color: 'f5a623'
+  - name: stage/072-returned-to-contributor
+    description:
+      'Clanker PR: CI red, changes requested or conflicting; diagnosis posted,
+      its hive must act'
+    color: 'f5a623'
+  - name: stage/074-adopted-by-hive
+    description:
+      'Contributor PR adopted: author unavailable after red CI; the hive is
+      finishing it (takeover path)'
+    color: 'f5a623'
+  - name: stage/080-awaiting-merge-admission
+    description:
+      'CI green, verdict approve, no modifiers; the automerge lane has not
+      admitted it yet'
+    color: 'f5a623'
+  - name: stage/085-needs-decision
+    description:
+      'PR parked on a human decision: sentinel alert, hold/needs-decision label
+      or human-only rule'
+    color: 'f5a623'
+  - name: stage/090-ready-for-human-merge
+    description:
+      "Hive would merge this but trust/role blocks it; a maintainer's /lgtm
+      /approve is all that is missing"
+    color: 'f5a623'
+  - name: stage/095-pre-merge-soak
+    description:
+      Lane admitted; the pre-merge soak window is running before the merge is
+      attempted
+    color: 'f5a623'
+  - name: stage/100-merge-queue
+    description:
+      'Lane admitted and soak complete: merge-eligible, waiting for tide / the
+      merge window'
+    color: 'f5a623'
+  - name: stage/stalled
+    description:
+      'No activity (head, comment, review, CI, label) longer than the stage
+      expects; nobody is working it'
+    color: 'd73a4a'
+  - name: testing
+    description: Created by Hive for agent-filed issue provenance
+    color: '8250df'
