@@ -204,6 +204,59 @@ describe('production build wires isProd-dependent editUrl/url end-to-end', () =>
   });
 });
 
+// The suite above reproduces the *string* `BUILD_ENV=production`, not the
+// real Netlify production context described in its own comment: that
+// context (`npm run build:production` -> `npm run _build`) never sets
+// `BUILD_ENV` at all, relying on `getBuildContext.ts`'s
+// `process.env.BUILD_ENV || 'production'` default. That default is
+// 100% unit-covered in isolation (`lib/getBuildContext.test.mts`: "defaults
+// to production when BUILD_ENV is unset"), but no build anywhere else in
+// this file leaves `BUILD_ENV` unset, so the default branch itself was
+// never reached end-to-end — only the equivalent explicit-string branch
+// was. This build deletes `BUILD_ENV` from the child env instead of
+// setting it, so a regression that broke the default (e.g. a typo in the
+// fallback literal) fails here even though the explicit-`production` suite
+// above would still pass.
+describe('production build falls back to BUILD_ENV default when unset end-to-end', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(
+      path.join(tmpdir(), 'techdocs-e2e-prod-default-build-'),
+    );
+    const env = { ...process.env, DEPLOY_PRIME_URL: '' };
+    delete env.BUILD_ENV;
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env,
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('renders the GitHub edit-this-page link for a docs page', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/assistance/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /href="https:\/\/github\.com\/cncf\/techdocs\/tree\/main\/docs\/assistance\.md"/,
+    );
+  });
+
+  it('sets og:url to the production site domain', async () => {
+    const html = await readFile(path.join(outDir, 'index.html'), 'utf-8');
+    assert.match(
+      html,
+      /property="og:url" content="https:\/\/cncf-techdocs\.netlify\.app\/"/,
+    );
+  });
+});
+
 // The production build above always resolves to the `main` branch/repo
 // because `BUILD_ENV=dev` + a cleared `DEPLOY_PRIME_URL` keeps
 // getBuildContext() out of deploy-preview mode. getCurrentBranch() and
