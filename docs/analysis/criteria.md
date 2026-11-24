@@ -268,11 +268,11 @@ more information and context.
   the project?
 - Does each page have a copyright notice at the bottom that names the project
   authors or CNCF rather than the origin company?
-- Does the footer include the trademark guidelines, either as a link to the
-  Linux Foundation Trademark Usage page (directly or through a "Terms of
-  Service" page) or as the text "The Linux Foundation® (TLF) has registered
-  trademarks and uses trademarks? (For a list of TLF trademarks, see
-  [Trademark Usage](https://www.linuxfoundation.org/trademark-usage/).)?
+- Does the footer include the trademark guidelines as a link to the Linux
+  Foundation Trademark Usage page, directly through a "Terms of Service" page,
+  or as the text: "The Linux Foundation® (TLF) has registered trademarks and
+  uses trademarks."? (For a list of TLF trademarks, see
+  [Trademark Usage](https://www.linuxfoundation.org/trademark-usage/)).
 - Does the website repository contain a license file in its root?
 - Does the website repository enforce the DCO (Developer Certificate of Origin)
   or a CLA (Contributor License Agreement)?
