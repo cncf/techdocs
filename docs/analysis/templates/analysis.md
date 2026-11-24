@@ -499,8 +499,6 @@ We evaluate on the following:
 
 #### AI Agent Readiness
 
-#### Other
-
 #### References
 
 ##### Rating values
