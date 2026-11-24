@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import { after, before, describe, it } from 'node:test';
 import { execFileSync } from 'node:child_process';
-import { mkdtemp, readFile, rm } from 'node:fs/promises';
+import { mkdtemp, readFile, rm, unlink, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import url from 'node:url';
@@ -255,5 +255,92 @@ describe('deploy-preview build wires branch/repo detection into the rewritten .c
       /https:\/\/github\.com\/example-org\/example-repo\/blob\/e2e-preview-branch\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
     );
     assert.doesNotMatch(html, /\/blob\/main\//);
+  });
+});
+
+// `lib/remarkRewriteLinks/index.test.mts` unit-tests the `.mdx`-specific
+// stripping branches in isolation ("maps (../)+docs/.../foo.mdx to
+// /docs/.../foo/" and "strips .mdx from site-absolute /docs/.../foo.mdx"),
+// but no suite asserted either branch against a real build: this repo's
+// docs/analyses content is entirely `.md`, so every other e2e build in this
+// file only exercises the `.md` half of `isCrossPage`'s and
+// `SITE_ABSOLUTE_MD_RE`'s branches. A regression confined to the `.mdx`
+// stripping logic (e.g. an `endsWith('.mdx')` check that silently fell
+// through to the `.md` slice length) would pass every existing suite. This
+// suite writes temporary `.mdx` fixtures into the real content tree so the
+// genuine Docusaurus build picks them up, removing them afterward so no
+// content change survives the test run.
+describe('production build rewrites .mdx link destinations end-to-end', () => {
+  const crossPluginFixture = path.join(
+    repoRoot,
+    'analyses/2024/keda/e2e-mdx-fixture.mdx',
+  );
+  const siteAbsoluteFixture = path.join(
+    repoRoot,
+    'docs/analysis/e2e-mdx-fixture.mdx',
+  );
+  let outDir;
+
+  before(async () => {
+    await writeFile(
+      crossPluginFixture,
+      [
+        '---',
+        'title: E2E .mdx cross-plugin fixture',
+        '---',
+        '',
+        '# E2E .mdx cross-plugin fixture',
+        '',
+        'See [criteria](../../docs/analysis/criteria.mdx) for details.',
+        '',
+      ].join('\n'),
+    );
+    await writeFile(
+      siteAbsoluteFixture,
+      [
+        '---',
+        'title: E2E .mdx site-absolute fixture',
+        '---',
+        '',
+        '# E2E .mdx site-absolute fixture',
+        '',
+        'See [criteria](/docs/analysis/criteria.mdx) for details.',
+        '',
+      ].join('\n'),
+    );
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-mdx-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: { ...process.env, BUILD_ENV: 'dev', DEPLOY_PRIME_URL: '' },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    await unlink(crossPluginFixture).catch(() => {});
+    await unlink(siteAbsoluteFixture).catch(() => {});
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('maps a cross-plugin .mdx link to a trailing slash without the extension', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2024/keda/e2e-mdx-fixture/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/,
+    );
+  });
+
+  it('strips .mdx from a site-absolute /docs link to a trailing slash', async () => {
+    const html = await readFile(
+      path.join(outDir, 'docs/analysis/e2e-mdx-fixture/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/,
+    );
   });
 });
