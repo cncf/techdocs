@@ -112,7 +112,7 @@ concern:
   includes branding, website structure, and maintainability.
 
 Each section begins with summary ratings based on a rubric with appropriate
-[criteria] for the section, then proceeds to:
+[criteria](#rating-values) ratings for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, including answers
   to questions from the criteria specification. Comments focus on how it does or
@@ -147,7 +147,7 @@ to their area of concern:
 - [Website and documentation infrastructure](#website-and-infrastructure)
 
 Examples of CNCF documentation that demonstrate the analysis criteria are linked
-from the [criteria] specification.
+from the [criteria](../criteria.md) specification.
 
 #### Recommendations, requirements, and best practices
 
@@ -175,13 +175,13 @@ _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be _developing_ criteria professional-quality documentation alongside the
 project code.
 
-| Criterion                  | [Rating (1-5)] |
-| -------------------------- | -------------- |
-| Information architecture   | [rating (1-5)] |
-| New user content           | [rating (1-5)] |
-| Content maintainability    | [rating (1-5)] |
-| Content creation processes | [rating (1-5)] |
-| Inclusive language         | [rating (1-5)] |
+| Criterion                  | [Rating (1-5)](#rating-values) |
+| -------------------------- | ------------------------------ |
+| Information architecture   | [rating (1-5)]                 |
+| New user content           | [rating (1-5)]                 |
+| Content maintainability    | [rating (1-5)]                 |
+| Content creation processes | [rating (1-5)]                 |
+| Inclusive language         | [rating (1-5)]                 |
 
 ### Comments
 
@@ -271,12 +271,12 @@ _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be _developing_ criteria professional-quality documentation alongside the
 project code.
 
-| Criterion                                 | [Rating (1-5)] |
-| ----------------------------------------- | -------------- |
-| Communication methods documented          | [rating (1-5)] |
-| Beginner friendly issue backlog           | [rating (1-5)] |
-| “New contributor” getting started content | [rating (1-5)] |
-| Project governance documentation          | [rating (1-5)] |
+| Criterion                                 | [Rating (1-5)](#rating-values) |
+| ----------------------------------------- | ------------------------------ |
+| Communication methods documented          | [rating (1-5)]                 |
+| Beginner friendly issue backlog           | [rating (1-5)]                 |
+| “New contributor” getting started content | [rating (1-5)]                 |
+| Project governance documentation          | [rating (1-5)]                 |
 
 ### Comments
 
@@ -354,15 +354,15 @@ _PROJECT_ is an **incubating** project of CNCF. This means that the project
 should be _developing_ criteria professional-quality documentation alongside the
 project code.
 
-| Criterion                             | [Rating (1-5)] |
-| ------------------------------------- | -------------- |
-| Core website requirements             | [rating (1-5)] |
-| Usability, accessibility, and design  | [rating (1-5)] |
-| Branding and design                   | [rating (1-5)] |
-| Case studies and social proof         | [rating (1-5)] |
-| SEO, Analytics, and site-local search | [rating (1-5)] |
-| Maintenance planning                  | [rating (1-5)] |
-| AI agent readiness                    | [rating (1-5)] |
+| Criterion                             | [Rating (1-5)](#rating-values) |
+| ------------------------------------- | ------------------------------ |
+| Core website requirements             | [rating (1-5)]                 |
+| Usability, accessibility, and design  | [rating (1-5)]                 |
+| Branding and design                   | [rating (1-5)]                 |
+| Case studies and social proof         | [rating (1-5)]                 |
+| SEO, Analytics, and site-local search | [rating (1-5)]                 |
+| Maintenance planning                  | [rating (1-5)]                 |
+| AI agent readiness                    | [rating (1-5)]                 |
 
 ### Comments
 

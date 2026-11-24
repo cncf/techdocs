@@ -315,7 +315,6 @@ It is up to each project to set their own guidelines.
 - Are all essential website features usable with a keyboard alone?
 - Do text and interface controls have sufficient contrast against their
   backgrounds?
-
 - Is the website layout responsive, so that pages are readable on a mobile
   device without horizontal scrolling?
 
