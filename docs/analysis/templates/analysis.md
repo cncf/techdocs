@@ -26,9 +26,10 @@ filename and search and replace the named placeholder IDs:
 
 For the analysis procedure, see [Analysis how-to](../howto.md).
 
-The criteria questions under each area heading are copied from
-[criteria.md](../criteria.md). Keep the two files in sync: don't add, remove, or
-reword a criterion in one file without making the same change in the other.
+The criteria questions under each area heading are to be obtained from
+[criteria.md](../criteria.md). Copy and paste those questions into the
+`analysis.md` file based on this template, and then answer them. Do not add any
+criteria questions that are not in `criteria.md`.
 
 > Author's Note: Delete this "About this template" section after you have
 > customized this template for a specific project. Create the link to the
