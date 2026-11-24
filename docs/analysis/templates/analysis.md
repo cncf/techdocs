@@ -113,7 +113,7 @@ concern:
   includes branding, website structure, and maintainability.
 
 Each section begins with summary ratings based on a rubric with appropriate
-[criteria](#rating-values) ratings for the section, then proceeds to:
+[criteria](../criteria.md) ratings for the section, then proceeds to:
 
 - **Comments**: observations about the existing documentation, including answers
   to questions from the criteria specification. Comments focus on how it does or
@@ -202,7 +202,7 @@ documentation.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#information-architecture-questions).
 
 #### New user content
@@ -212,7 +212,7 @@ specifically for them.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#new-user-content-questions).
 
 #### Content maintainability & site mechanics
@@ -222,7 +222,7 @@ become large maintenance burdens, particularly if you don’t plan for them.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
 
 #### Content creation processes
@@ -232,7 +232,7 @@ requires the same kind of review and approval processes as code.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#content-creation-processes-questions).
 
 #### Inclusive language
@@ -241,7 +241,7 @@ Creating inclusive project communities is a key goal for all CNCF projects.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#inclusive-language-questions).
 
 ### Recommendations
@@ -299,14 +299,14 @@ to reach you.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#communication-methods-documented-questions).
 
 #### Beginner friendly issue backlog
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
 
 #### New contributor getting started content
@@ -317,7 +317,7 @@ in easily?
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
 
 #### Project governance documentation
@@ -326,7 +326,7 @@ One of the CNCF’s core project values is open governance.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#project-governance-documentation-questions).
 
 ### Recommendations
@@ -402,7 +402,7 @@ applicable to all maturity levels.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#core-website-requirements-questions).
 
 #### Usability, accessibility and devices
@@ -420,7 +420,7 @@ It is up to each project to set their own guidelines.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
 
 #### Branding and design
@@ -430,7 +430,7 @@ this is branding and marketing.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#branding-and-design-questions).
 
 #### Case studies and social proof
@@ -440,7 +440,7 @@ organizations using it.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
 
 #### SEO, Analytics and site-local search
@@ -451,7 +451,7 @@ while optional, can offer the readers a site-focused search results.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
 
 #### Maintenance planning
@@ -461,7 +461,7 @@ project maintainers aren’t web developers.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#maintenance-planning-questions).
 
 #### AI Agent Readiness
@@ -477,7 +477,7 @@ portable, and easier to maintain.
 
 We evaluate on the following:
 
-> Author's Note: Copy from the source template and answer the
+> Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#ai-agent-readiness-questions).
 
 ### Recommendations
