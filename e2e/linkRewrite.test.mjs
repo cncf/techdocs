@@ -24,12 +24,15 @@ function escapeRegExp(value) {
 // before comparing against the raw branch name, otherwise a correct build
 // fails the assertion for any branch containing one of these characters.
 function decodeHtmlEntities(value) {
+  // Decode &amp; last: decoding it first would turn a literal "&lt;" (encoded
+  // as "&amp;lt;") into "&lt;", which the &lt; replacement below would then
+  // incorrectly decode a second time into "<".
   return value
-    .replace(/&amp;/g, '&')
     .replace(/&lt;/g, '<')
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
-    .replace(/&#39;/g, "'");
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&');
 }
 
 function currentGitHubRemote(cwd) {
@@ -48,6 +51,19 @@ function currentGitHubRemote(cwd) {
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 const repoRoot = path.join(__dirname, '..');
+
+describe('decodeHtmlEntities', () => {
+  it('decodes &amp; last so a literal "&lt;" sequence is not double-decoded', () => {
+    // A branch literally named "&lt;foo" is serialized by HTML attribute
+    // encoding as "&amp;lt;foo". Decoding &amp; before &lt; would turn that
+    // into "&lt;foo" and then incorrectly decode it again into "<foo".
+    assert.equal(decodeHtmlEntities('&amp;lt;foo'), '&lt;foo');
+  });
+
+  it('still decodes a genuine &amp; to a literal ampersand', () => {
+    assert.equal(decodeHtmlEntities('foo &amp; bar'), 'foo & bar');
+  });
+});
 
 // Unit tests (lib/docusaurusConfigPreprocessor.test.mts,
 // lib/remarkRewriteLinks/index.test.mts) cover the pure rewrite functions in
