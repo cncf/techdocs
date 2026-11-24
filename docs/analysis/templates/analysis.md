@@ -31,15 +31,15 @@ The criteria questions under each area heading are copied from
 reword a criterion in one file without making the same change in the other.
 
 > Author's Note: Delete this "About this template" section after you have
-> customized this template for a specific project.
+> customized this template for a specific project. Create the link to the
+> project website in the introduction.
 
 ## Introduction
 
 This document is an analysis of the effectiveness and completeness of the
-[_PROJECT_](_PROJECT-WEBSITE_) open source software (OSS) project's
-documentation and website. It is funded by the CNCF Foundation as part of its
-overall effort to incubate, grow, and graduate open source cloud native software
-projects.
+[_PROJECT_] open source software (OSS) project's documentation and website. It
+is funded by the CNCF Foundation as part of its overall effort to incubate,
+grow, and graduate open source cloud native software projects.
 
 According to CNCF best practices guidelines, effective documentation is a
 prerequisite for program graduation. The documentation analysis is the first
@@ -196,8 +196,10 @@ Documentation rubric.
 
 #### Information architecture
 
-> overall structure (pages/subpages/sections/subsections) of the project
-> documentation. We evaluate on the following:
+The overall structure (pages/subpages/sections/subsections) of the project
+documentation.
+
+We evaluate on the following:
 
 > Author's Note: Copy from the source template and answer the
 > [evaluation questions](../criteria.md#information-architecture-questions).
@@ -205,7 +207,9 @@ Documentation rubric.
 #### New user content
 
 New users are the most avid users of documentation, and need content
-specifically for them. We evaluate on the following:
+specifically for them.
+
+We evaluate on the following:
 
 > Author's Note: Copy from the source template and answer the
 > [evaluation questions](../criteria.md#new-user-content-questions).
@@ -422,6 +426,8 @@ We evaluate on the following:
 
 CNCF seeks to support enterprise-ready open source software. A key aspect of
 this is branding and marketing.
+
+We evaluate on the following:
 
 > Author's Note: Copy from the source template and answer the
 > [evaluation questions](../criteria.md#branding-and-design-questions).
