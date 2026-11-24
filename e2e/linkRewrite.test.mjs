@@ -258,6 +258,55 @@ describe('deploy-preview build wires branch/repo detection into the rewritten .c
   });
 });
 
+// The suite above only ever sets REPOSITORY_URL to an HTTPS-style value, so
+// getGitHubRepoUrl()'s SSH-style regex branch
+// (`normalizeGitHubUrl`'s `git@github.com:owner/repo(.git)?` match) is
+// 100% unit-covered in isolation (lib/getGitHubRepoUrl.test.mts: "normalizes
+// an SSH REPOSITORY_URL") but was never reached by a real build. Unlike the
+// git-remote/branch fallbacks covered elsewhere in this file, this branch
+// doesn't require faking the checkout's actual git state: REPOSITORY_URL is
+// an overridable input the production code reads directly, so setting it to
+// an SSH-style string here exercises the exact same code path a real
+// deploy-preview build would take if Netlify ever populated REPOSITORY_URL
+// with an SSH remote.
+describe('deploy-preview build normalizes an SSH-style REPOSITORY_URL end-to-end', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-preview-ssh-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        BUILD_ENV: 'deploy-preview',
+        DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+        HEAD: '',
+        BRANCH: '',
+        GITHUB_HEAD_REF: '',
+        GITHUB_REF_NAME: 'e2e-preview-ssh-branch',
+        REPOSITORY_URL: 'git@github.com:example-org/example-repo.git',
+      },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('rewrites the .csv asset link using the normalized HTTPS form of the SSH remote', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /https:\/\/github\.com\/example-org\/example-repo\/blob\/e2e-preview-ssh-branch\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
+    );
+    assert.doesNotMatch(html, /git@github\.com/);
+  });
+});
+
 // The deploy-preview suite above always has either an env var
 // (GITHUB_REF_NAME/REPOSITORY_URL) or a working `git` fallback available, so
 // `getCurrentBranch()`/`getGitHubRepoUrl()` always return a truthy value.
