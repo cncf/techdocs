@@ -12,8 +12,10 @@ Sandbox bar also depends on the Website-guidelines majority, which that analysis
 rates "partially assessed," not confirmed - so the issues below are independent,
 low-effort, high-value items rather than a large restructuring program. Several
 are explicitly suited to first-time contributors and are intended to be filed
-with a `good first issue` label, since the analysis found that label currently
-unused on open issues in all three in-scope repositories.
+with a `good first issue` label where that label exists; `hivecommons/docs` and
+`hivecommons/hivecommons.github.io` both have it unused on open issues, but
+`hivecommons/hive` currently has no `good first issue` label (only
+`documentation`), so issue 01 below omits that label pending its creation there.
 
 This issue tracks recommended changes resulting from an analysis of the Hive
 Commons documentation requested in
@@ -46,7 +48,7 @@ confirmed to already exist in the destination repository.
 
 | File                                                                                                   | Title                                                                | Labels                              | Destination repo                    |
 | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------- | ----------------------------------- |
-| [`issues/01-cli-reference-landing-page.md`](issues/01-cli-reference-landing-page.md)                   | Add a CLI reference landing page                                     | `good first issue`, `documentation` | `hivecommons/hive`                  |
+| [`issues/01-cli-reference-landing-page.md`](issues/01-cli-reference-landing-page.md)                   | Add a CLI reference landing page                                     | `documentation`                     | `hivecommons/hive`                  |
 | [`issues/02-governance-pointer-docs-readme.md`](issues/02-governance-pointer-docs-readme.md)           | State the org-level governance pointer in the docs README            | `good first issue`, `documentation` | `hivecommons/docs`                  |
 | [`issues/03-governance-pointer-website-readme.md`](issues/03-governance-pointer-website-readme.md)     | State the org-level governance pointer in the website README         | `good first issue`, `documentation` | `hivecommons/hivecommons.github.io` |
 | [`issues/04-reconcile-codeowners-with-roster.md`](issues/04-reconcile-codeowners-with-roster.md)       | Reconcile hivecommons/docs code ownership with the maintainer roster | (none)                              | `hivecommons/docs`                  |

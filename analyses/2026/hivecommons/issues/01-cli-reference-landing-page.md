@@ -1,6 +1,6 @@
 ---
 title: Add a CLI reference landing page
-labels: [good first issue, documentation]
+labels: [documentation]
 repo: https://github.com/hivecommons/hive/issues
 ---
 
