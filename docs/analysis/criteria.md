@@ -271,8 +271,8 @@ more information and context.
 - Does the footer include the trademark guidelines, either as a link to the
   Linux Foundation Trademark Usage page (directly or through a "Terms of
   Service" page) or as the text "The Linux Foundation® (TLF) has registered
-  trademarks and uses trademarks. For a list of TLF trademarks, see Trademark
-  Usage"?
+  trademarks and uses trademarks? (For a list of TLF trademarks, see
+  [Trademark Usage](https://www.linuxfoundation.org/trademark-usage/).)?
 - Does the website repository contain a license file in its root?
 - Does the website repository enforce the DCO (Developer Certificate of Origin)
   or a CLA (Contributor License Agreement)?
