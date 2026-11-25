@@ -18,6 +18,15 @@ function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// The Markdown-to-HTML pipeline percent-encodes characters that are unsafe
+// in a URI (e.g. `<` becomes `%3C`), the same normalization `encodeURI`
+// applies, while leaving `/` and already-escaped `%XX` sequences alone. A
+// branch name containing such a character would otherwise produce an
+// expected regex that never matches the real rendered href.
+function encodeHrefSegment(value) {
+  return encodeURI(value);
+}
+
 // Docusaurus serializes href attributes as HTML, so characters valid in a
 // branch name (e.g. `&`) are entity-encoded in the rendered output (`&amp;`).
 // Decode the handful of entities HTML attribute serialization can produce
@@ -32,21 +41,31 @@ function decodeHtmlEntities(value) {
     .replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'")
+    .replace(/&#x27;/gi, "'")
     .replace(/&amp;/g, '&');
 }
 
 function currentGitHubRemote(cwd) {
-  const remoteUrl = execFileSync('git', ['remote', 'get-url', 'origin'], {
-    cwd,
-    encoding: 'utf8',
-  }).trim();
+  let remoteUrl;
+  try {
+    remoteUrl = execFileSync('git', ['remote', 'get-url', 'origin'], {
+      cwd,
+      encoding: 'utf8',
+    }).trim();
+  } catch {
+    // No `origin` remote (e.g. a shallow clone without one configured):
+    // mirror getBuildContext.ts's `getGitHubRepoUrl() || repo` fallback
+    // instead of failing the suite outright.
+    return null;
+  }
   const ssh = remoteUrl.match(/^git@github\.com:([^/]+\/[^/]+?)(?:\.git)?$/);
   if (ssh) return `https://github.com/${ssh[1]}`;
   const https = remoteUrl.match(
     /^https:\/\/github\.com\/([^/]+\/[^/]+?)(?:\.git)?$/,
   );
   if (https) return `https://github.com/${https[1]}`;
-  throw new Error(`unexpected origin remote URL: ${remoteUrl}`);
+  // Origin exists but isn't a recognized github.com URL: same fallback.
+  return null;
 }
 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
@@ -62,6 +81,33 @@ describe('decodeHtmlEntities', () => {
 
   it('still decodes a genuine &amp; to a literal ampersand', () => {
     assert.equal(decodeHtmlEntities('foo &amp; bar'), 'foo & bar');
+  });
+
+  it('decodes both the decimal and hexadecimal apostrophe entities', () => {
+    // React's server renderer uses the hexadecimal form (&#x27;); some other
+    // encoders use the decimal form (&#39;). A branch like "feature/o'brien"
+    // must round-trip through either.
+    assert.equal(decodeHtmlEntities("feature/o&#39;brien"), "feature/o'brien");
+    assert.equal(
+      decodeHtmlEntities("feature/o&#x27;brien"),
+      "feature/o'brien",
+    );
+    assert.equal(
+      decodeHtmlEntities('feature/o&#X27;brien'),
+      "feature/o'brien",
+    );
+  });
+});
+
+describe('encodeHrefSegment', () => {
+  it('percent-encodes characters the Markdown-to-HTML pipeline treats as unsafe in a URI', () => {
+    // `<` is not in encodeURI's unescaped set, matching the percent-encoding
+    // micromark's URI normalization applies to link destinations.
+    assert.equal(encodeHrefSegment('feature/a<b'), 'feature/a%3Cb');
+  });
+
+  it('leaves path separators and already-safe characters untouched', () => {
+    assert.equal(encodeHrefSegment('feature/foo-bar_1'), 'feature/foo-bar_1');
   });
 });
 
@@ -335,7 +381,11 @@ describe('deploy-preview build falls back to real git branch/remote detection wh
     // (git branch --show-current prints ''). Mirror that fallback here so
     // this test also passes on detached-HEAD CI checkouts.
     expectedBranch = currentGitBranch(repoRoot) || 'main';
-    expectedRepo = currentGitHubRemote(repoRoot);
+    // getBuildContext.ts falls back to the `repo` constant when
+    // getGitHubRepoUrl() returns undefined (no origin, or origin isn't a
+    // github.com URL). Mirror that fallback here too.
+    expectedRepo =
+      currentGitHubRemote(repoRoot) || 'https://github.com/cncf/techdocs';
     outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-git-fallback-'));
     execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
       cwd: repoRoot,
@@ -370,7 +420,7 @@ describe('deploy-preview build falls back to real git branch/remote detection wh
     assert.match(
       html,
       new RegExp(
-        `${escapeRegExp(expectedRepo)}/blob/${escapeRegExp(expectedBranch)}/analyses/2023/backstage/backstage-doc-survey\\.csv`,
+        `${escapeRegExp(expectedRepo)}/blob/${escapeRegExp(encodeHrefSegment(expectedBranch))}/analyses/2023/backstage/backstage-doc-survey\\.csv`,
       ),
     );
   });
