@@ -258,6 +258,60 @@ describe('deploy-preview build wires branch/repo detection into the rewritten .c
   });
 });
 
+// The deploy-preview suite above always has either an env var
+// (GITHUB_REF_NAME/REPOSITORY_URL) or a working `git` fallback available, so
+// `getCurrentBranch()`/`getGitHubRepoUrl()` always return a truthy value.
+// `getBuildContext.ts`'s own `getCurrentBranch() || 'main'` and
+// `getGitHubRepoUrl() || repo` fallbacks (lines 15-16) only run when those
+// helpers return `undefined`, which is 100% unit-covered in isolation
+// (lib/getBuildContext.test.mts) but never exercised by a real build, since
+// no suite here invokes `docusaurus build` with every env-var input cleared
+// *and* the `git` fallback broken. This suite forces that by pointing
+// GIT_DIR/GIT_WORK_TREE at a nonexistent path, so `git branch --show-current`
+// and `git remote get-url origin` both fail safely (without touching this
+// checkout's real `.git`), making getCurrentBranch()/getGitHubRepoUrl()
+// return `undefined` and asserting the build falls back to `repo`/`main`.
+describe('deploy-preview build falls back to repo/main when branch and remote detection both fail', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(
+      path.join(tmpdir(), 'techdocs-e2e-preview-fallback-'),
+    );
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        BUILD_ENV: 'deploy-preview',
+        DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+        HEAD: '',
+        BRANCH: '',
+        GITHUB_HEAD_REF: '',
+        GITHUB_REF_NAME: '',
+        REPOSITORY_URL: '',
+        GIT_DIR: '/nonexistent-dir-techdocs-e2e',
+        GIT_WORK_TREE: '/nonexistent-dir-techdocs-e2e',
+      },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('rewrites the .csv asset link to the hard-coded repo and main branch', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /https:\/\/github\.com\/cncf\/techdocs\/blob\/main\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
+    );
+  });
+});
+
 // `lib/remarkRewriteLinks/index.test.mts` unit-tests the `.mdx`-specific
 // stripping branches in isolation ("maps (../)+docs/.../foo.mdx to
 // /docs/.../foo/" and "strips .mdx from site-absolute /docs/.../foo.mdx"),
@@ -342,5 +396,62 @@ describe('production build rewrites .mdx link destinations end-to-end', () => {
       html,
       /<a class="" href="\/docs\/analysis\/criteria\/">criteria<\/a>/,
     );
+  });
+});
+
+// `lib/remarkRewriteLinks/index.test.mts` unit-tests rewriteHref()'s bare
+// query/fragment branch directly ("leaves a bare query/fragment href (empty
+// path) untouched", asserting `rewriteHref('?view=raw', source) ===
+// '?view=raw'`), but no suite had exercised that branch through the real
+// remark pipeline wired into a Docusaurus build: splitHref() returns an
+// empty `path` only when the href is a query string with no leading path
+// segment, so `if (!original) return href;` short-circuits before the
+// cross-plugin/asset rewrite logic runs. Every other e2e link in this file
+// has a non-empty path, so a regression that dropped or mis-handled this
+// early return (e.g. one that started stripping the query string instead of
+// leaving the href untouched) would pass every existing unit and e2e
+// assertion. This suite writes a temporary fixture containing such a link
+// into the real content tree so the genuine build exercises it, removing
+// the fixture afterward so no content change survives the test run.
+describe('production build leaves a bare query-string link destination untouched end-to-end', () => {
+  const fixture = path.join(
+    repoRoot,
+    'analyses/2024/keda/e2e-bare-query-fixture.md',
+  );
+  let outDir;
+
+  before(async () => {
+    await writeFile(
+      fixture,
+      [
+        '---',
+        'title: E2E bare query-string fixture',
+        '---',
+        '',
+        '# E2E bare query-string fixture',
+        '',
+        'See [raw view](?view=raw) for details.',
+        '',
+      ].join('\n'),
+    );
+    outDir = await mkdtemp(path.join(tmpdir(), 'techdocs-e2e-bare-query-'));
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: { ...process.env, BUILD_ENV: 'dev', DEPLOY_PRIME_URL: '' },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    await unlink(fixture).catch(() => {});
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('leaves the bare query-string href unchanged instead of rewriting or stripping it', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2024/keda/e2e-bare-query-fixture/index.html'),
+      'utf-8',
+    );
+    assert.match(html, /<a class="" href="\/\?view=raw">raw view<\/a>/);
   });
 });
