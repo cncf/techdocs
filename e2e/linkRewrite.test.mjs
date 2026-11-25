@@ -312,6 +312,65 @@ describe('deploy-preview build falls back to repo/main when branch and remote de
   });
 });
 
+// The suites above only ever set REPOSITORY_URL to a well-formed GitHub URL
+// (HTTPS or, once #455 lands, SSH) or clear it entirely, so
+// `normalizeGitHubUrl`'s final `return undefined` (reached when a
+// REPOSITORY_URL is present but matches neither the SSH nor HTTPS regex) is
+// 100% unit-covered in isolation (lib/getGitHubRepoUrl.test.mts: "falls back
+// to the git remote when REPOSITORY_URL does not parse") but never reached
+// by a real build. Unlike the branches covered in #451 (which can only be
+// reached by rewiring the plugin outside docusaurus.config.ts), this one
+// doesn't require faking any config: REPOSITORY_URL is an overridable input
+// the production code reads directly, so pointing it at a non-GitHub host
+// here exercises the exact same code path a real deploy-preview build would
+// take if Netlify (or a GitHub/GitLab mirror setup) ever populated
+// REPOSITORY_URL with a URL that isn't github.com-shaped. GIT_DIR/GIT_WORK_TREE
+// are also pointed at a nonexistent path so the subsequent git-remote
+// fallback can't mask the malformed REPOSITORY_URL with this checkout's real
+// (github.com-shaped) origin, letting the build fall all the way back to the
+// hard-coded repo/main.
+describe('deploy-preview build falls back to repo/main when REPOSITORY_URL does not parse as a GitHub URL', () => {
+  let outDir;
+
+  before(async () => {
+    outDir = await mkdtemp(
+      path.join(tmpdir(), 'techdocs-e2e-preview-unparseable-'),
+    );
+    execFileSync('npx', ['docusaurus', 'build', '--out-dir', outDir], {
+      cwd: repoRoot,
+      env: {
+        ...process.env,
+        BUILD_ENV: 'deploy-preview',
+        DEPLOY_PRIME_URL: 'https://deploy-preview-1--cncf-techdocs.netlify.app',
+        HEAD: '',
+        BRANCH: '',
+        GITHUB_HEAD_REF: '',
+        GITHUB_REF_NAME: '',
+        REPOSITORY_URL: 'https://gitlab.com/example-org/example-repo',
+        GIT_DIR: '/nonexistent-dir-techdocs-e2e',
+        GIT_WORK_TREE: '/nonexistent-dir-techdocs-e2e',
+      },
+      stdio: 'inherit',
+    });
+  });
+
+  after(async () => {
+    if (outDir) await rm(outDir, { recursive: true, force: true });
+  });
+
+  it('rewrites the .csv asset link to the hard-coded repo and main branch, not the gitlab.com URL', async () => {
+    const html = await readFile(
+      path.join(outDir, 'analyses/2023/backstage/index.html'),
+      'utf-8',
+    );
+    assert.match(
+      html,
+      /https:\/\/github\.com\/cncf\/techdocs\/blob\/main\/analyses\/2023\/backstage\/backstage-doc-survey\.csv/,
+    );
+    assert.doesNotMatch(html, /gitlab\.com/);
+  });
+});
+
 // `lib/remarkRewriteLinks/index.test.mts` unit-tests the `.mdx`-specific
 // stripping branches in isolation ("maps (../)+docs/.../foo.mdx to
 // /docs/.../foo/" and "strips .mdx from site-absolute /docs/.../foo.mdx"),
