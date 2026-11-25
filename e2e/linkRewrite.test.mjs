@@ -87,15 +87,9 @@ describe('decodeHtmlEntities', () => {
     // React's server renderer uses the hexadecimal form (&#x27;); some other
     // encoders use the decimal form (&#39;). A branch like "feature/o'brien"
     // must round-trip through either.
-    assert.equal(decodeHtmlEntities("feature/o&#39;brien"), "feature/o'brien");
-    assert.equal(
-      decodeHtmlEntities("feature/o&#x27;brien"),
-      "feature/o'brien",
-    );
-    assert.equal(
-      decodeHtmlEntities('feature/o&#X27;brien'),
-      "feature/o'brien",
-    );
+    assert.equal(decodeHtmlEntities('feature/o&#39;brien'), "feature/o'brien");
+    assert.equal(decodeHtmlEntities('feature/o&#x27;brien'), "feature/o'brien");
+    assert.equal(decodeHtmlEntities('feature/o&#X27;brien'), "feature/o'brien");
   });
 });
 
