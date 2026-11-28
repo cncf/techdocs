@@ -237,8 +237,10 @@ Example:
 
 ### Core website requirements
 
-This area of focus includes the single-source requirement and requirements based
-on maturity level but are applicable for all projects.
+This area of focus includes the single-source requirement and requirements that
+are applicable to all projects regardless of their maturity levels. See
+[Appendix A - Maturity Levels](#appendix-a---maturity-levels) for information on
+requirements needed for each level.
 
 Source files for _all website pages_ should reside in a single repo. Among other
 problems, keeping source files in two places:
@@ -461,9 +463,9 @@ maturity level: sandbox, incubating, graduated and archived.
 
 ### Incubating
 
-- Are all Website guidelines satisfied?
-- Has a Docs assessment or reassessment been requested through the CNCF service
-  desk?
+- Are all [Website guidelines](../website-guidelines-checklist.md) satisfied?
+- Has a [Docs assessment](./howto.md) or reassessment been requested through the
+  CNCF [service desk](https://servicedesk.cncf.io)?
 - Does **project documentation** meet these standards?:
   - Stakeholders / personas are identified and their core needs (in terms of
     docs) documented.

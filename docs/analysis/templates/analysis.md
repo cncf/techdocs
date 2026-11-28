@@ -152,16 +152,17 @@ from the [criteria](../criteria.md) specification.
 
 #### Recommendations, requirements, and best practices
 
-This analysis measures documentation against CNCF project maturity standards,
-and suggests possible improvements. In most cases there is more than one way to
-do things. Few recommendations here are meant to be prescriptive. Rather, the
-recommended implementations represent the reviewers' experience with how to
-apply documentation best practices. In other words, borrowing terminology from
-the lexicon of [RFCs](https://www.rfc-editor.org/rfc/rfc2119), the changes
-described here should be understood as "recommended" or "should" at the
-strongest, and "optional" or "may" in many cases. Any "must" or "required"
-actions are clearly denoted as such, and pertain to legal requirements such as
-copyright and licensing issues.
+This analysis measures documentation against CNCF standards applicable to all
+maturity levels, and suggests possible improvements. In most cases there is more
+than one way to do things. Few recommendations here are meant to be
+prescriptive. Rather, the recommended implementations represent the reviewers'
+experience with how to apply documentation best practices. In other words,
+borrowing terminology from the lexicon of
+[RFCs](https://www.rfc-editor.org/rfc/rfc2119), the changes described here
+should be understood as "recommended" or "should" at the strongest, and
+"optional" or "may" in many cases. Any "must" or "required" actions are clearly
+denoted as such, and pertain to legal requirements such as copyright and
+licensing issues.
 
 ## Project documentation
 
@@ -192,8 +193,7 @@ The following sections contain brief assessments of each element of the Project
 Documentation rubric.
 
 > Author's Note: For each heading below, discuss how well the in-scope items,
-> and especially the technical documentation, meet these criteria. (Criteria are
-> copied from criteria.md)
+> and especially the technical documentation, meet these criteria.
 
 #### Information architecture
 
@@ -204,6 +204,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#information-architecture-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### New user content
 
@@ -213,7 +215,9 @@ specifically for them.
 We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
-> [evaluation questions](../criteria.md#new-user-content-questions).
+> [evaluation questions](../criteria.md#new-user-content-questions). Follow with
+> any general comments about the area which can include strengths and
+> weaknesses.
 
 #### Content maintainability & site mechanics
 
@@ -224,6 +228,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#content-maintainability-and-site-mechanics-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Content creation processes
 
@@ -234,6 +240,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#content-creation-processes-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Inclusive language
 
@@ -242,7 +250,9 @@ Creating inclusive project communities is a key goal for all CNCF projects.
 We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
-> [evaluation questions](../criteria.md#inclusive-language-questions).
+> [evaluation questions](../criteria.md#inclusive-language-questions). Follow
+> with any general comments about the area which can include strengths and
+> weaknesses.
 
 ### Recommendations
 
@@ -289,8 +299,7 @@ Contributor Documentation rubric.
 
 > Author's Note: For each heading below, discuss how well the in-scope items
 > meet these criteria. Keep in mind that much of the contributor documentation
-> might be contained in the documentation repository. (Criteria are copied from
-> criteria.md)
+> might be contained in the documentation repository.
 
 #### Communication methods documented
 
@@ -301,6 +310,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#communication-methods-documented-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Beginner friendly issue backlog
 
@@ -308,6 +319,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#beginner-friendly-issue-backlog-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### New contributor getting started content
 
@@ -319,6 +332,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#new-contributor-getting-started-content-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Project governance documentation
 
@@ -328,6 +343,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#project-governance-documentation-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 ### Recommendations
 
@@ -377,8 +394,7 @@ and documentation infrastructure rubric.
 > meet these criteria. Keep in mind that much of the website infrastructure
 > criteria depend on the tools (static site generator, website framework and
 > hosting, analytics tools, etc.) and processes (project CI, release procedures,
-> governance, etc.) used to produce the documentation. (Criteria are copied from
-> criteria.md)
+> governance, etc.) used to produce the documentation.
 
 #### Core website requirements
 
@@ -404,6 +420,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#core-website-requirements-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Usability, accessibility and devices
 
@@ -422,6 +440,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#usability-accessibility-and-devices-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Branding and design
 
@@ -431,7 +451,9 @@ this is branding and marketing.
 We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
-> [evaluation questions](../criteria.md#branding-and-design-questions).
+> [evaluation questions](../criteria.md#branding-and-design-questions). Follow
+> with any general comments about the area which can include strengths and
+> weaknesses.
 
 #### Case studies and social proof
 
@@ -442,6 +464,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#case-studies-and-social-proof-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### SEO, Analytics and site-local search
 
@@ -453,6 +477,8 @@ We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
 > [evaluation questions](../criteria.md#seo-analytics-and-site-local-search-questions).
+> Follow with any general comments about the area which can include strengths
+> and weaknesses.
 
 #### Maintenance planning
 
@@ -462,7 +488,9 @@ project maintainers aren’t web developers.
 We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
-> [evaluation questions](../criteria.md#maintenance-planning-questions).
+> [evaluation questions](../criteria.md#maintenance-planning-questions). Follow
+> with any general comments about the area which can include strengths and
+> weaknesses.
 
 #### AI Agent Readiness
 
@@ -478,7 +506,9 @@ portable, and easier to maintain.
 We evaluate on the following:
 
 > Author's Note: Copy evaluation questions from criteria.md and answer them.
-> [evaluation questions](../criteria.md#ai-agent-readiness-questions).
+> [evaluation questions](../criteria.md#ai-agent-readiness-questions). Follow
+> with any general comments about the area which can include strengths and
+> weaknesses.
 
 ### Recommendations
 
